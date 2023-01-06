@@ -1,0 +1,126 @@
+\chapter{Metodolog\'ia}
+\label{Metodologia}
+
+
+\section{Teror\'ia Molecular}
+Para la presente tesis se utiliza una teoria molecular la cual tiene diferentes niveles de desarrollo, como se ver\'a en los capitulos...
+
+Esta teor\'ia aborda el efecto de la distribución espacial de los grupos sensibles al pH en la termodinámica de la adsorción de proteínas en los sistemas poliméricos
+
+
+This theory was developed in other works see \addcite[nap2006weak,longo2011molecular] and has been useful for the study of systems such as polymeric films with response to pH \addcite[longo2011molecular,longo2019protonation], study if ligand-receptor binding \addcite[longo2005ligand], and adsorption of different proteins \addcite[hagemann2018use,cathcarth2022competitive] or other molecules: glyphosate and polyamides \addcite[perez2020triggering, perez2018using]
+
+
+
+Este método consiste en minimizar una energía libre generalizada que incluye toda la termodinamica relevante.
+Simultáneamente, el método permite una descripción molecular de grano grueso de las diferentes especies químicas que componen el sistema.
+Dicha descripción incluye forma, tamaño, distribución de carga y estado de protonación de cada componente molecular.
+El sistema en estudio se encuentra en  equilibrio con una solución acuosa que tiene una composición  definida externamente.
+Es decir, el pH, la concentración de sal y la concentración de adsorbatos son variables independientes.
+La red polimérica que da estructura a los geles pueden contener distintos tipos de segmentos: una unidad sensible al pH, ya sea ácida (MAA) o básica (AH), segmentos neutros (VA) o bien segmentos termosencibles (NIPAm)
+Las unidades de que representan los entrecruzamientos de cadena se describen como segmentos de carga neutral.
+El semi-gran potencial de este sistema contiene las siguientes contribuciones:
+\begin{align}
+\begin{aligned}
+\Omega_{NG}=& -TS_{mez} -TS_{conf,nw} + F_{chem,nw} + F_{chem,pro}\\
+& + U_{elec} + U_{ste} + U_{VDW} - {\sum_{\gamma}{\mu_\gamma N_\gamma}}
+\end{aligned}
+\label{eq:semicano}
+\end{align}
+\noindent donde $S_{mez}$ es la entropía de traslación (mezcla) de las especies de la solución: moléculas de agua (H$_2$O), iones de hidronio (H$_3$O$^+$), iones de hidróxido (OH$^- $), cationes de sal, aniones de sal y otros adsorbaatos presentes: como drogas o proteinas terapeuticas.
+Aquí, consideramos una sal monovalente, NaCl o KCl, y se asueme que está completamente disociada en iones cloruro (Cl$^-$) y sodio ($Na^+$) o potasio ($K^+$) respecticamente. 
+
+$S_{conf,nw}$ representa la entropía conformacional que resulta de la flexibilidad de la red de polímeros, que puede asumir muchas conformaciones diferentes.
+$F_{chem,nw}$, es la energía química libre que describe el equilibrio entre las especies protonadas y desprotonadas de unidades funcionales (ácidas/básicas) en el polímero.
+De manera similar, $F_{chem,pro}$ describe la protonación de residuos titulables de la proteína.
+$U_{elec}$ y $U_{ste}$ representan, respectivamente, las interacciones electrostáticas y las repulsiones estéricas.
+Las interacciones no electrostaticas son representadas en $U_{VDW}$ en las cuales se puede mencionar la interaccino NIPam-agua.
+Finalmente, la suma de $\gamma$ expresa el equilibrio químico entre nuestro sistema y la solución  que representa el bulk para las partículas libres, donde $\mu_\gamma$ y $N_\gamma$ son el potencial químico y el número de moléculas de especie $\gamma$, respectivamente;
+el subíndice $\gamma$ recorre las especies químicas libres, incluidas las proteínas.
+En este punto, tenga en cuenta que $\Omega_{NG}$ es un semi-gran potencial porque el sitema polimerico puede intercambiar cada una de estas moléculas libres con la solución , mientras que la red de polímeros está confinada dentro de nuestro sistema.
+
+Las expresiones explicitas de eq. \ref{eq:semicano} pueden describirse... segun el tipo de modelo elegido y la simetria considerada.. vease modelado...
+
+Como primer termino tenemos la entrop\'ia de mezcla de  las especies mobiles, es decir no se toma en cuenta el sistema polim\'erico.
+
+\begin{equation}
+   \frac{S_{mez}}{\beta}= \sum_{\gamma}\int_S{dr G(r)\rho_\gamma(r)\left(\ln \left(\rho_\gamma (r)v_w\right) -1 + \beta\mu^0_\gamma\right)}
+\end{equation}
+\noindent en donde $\beta = \frac{1}{kT}$ y $G(r) = 4\pi r^2$ lo cual corresponde a uns simetria radial. El subindice $\gamma$ tiene en cuenta las moleculas de agua, sus iones y los iones dados por la disociaci\'on de la sal.
+
+Otra especie mobil y que no ha sido considerada en la expresi\'on anterior es los adosrbatos. Para ellos se ha considerado su contribuci\'on energetica como:
+
+\begin{equation}
+    \frac{1}{\beta}\sum_{\theta}\int_S{dr G(r)\rho_{pro}(\theta,r)\left(\ln \left(\rho_{pro}(\theta,r)v_w\right) -1 + \beta\mu^0_{pro} \right)}
+\end{equation}
+
+Subindice $\theta$ puede interpretarse de dos maneras: en primer instancia como un conjunto de configuraciones para un solo adosrbato, tambi\'en puede considerarse a cada configuraci\'on como adsrobatos diferentes, pero con las mismas propiedades qi\'imicas.
+Estamos asumiendo que no hay cambios en el potencial qu\'imico  $\mu^0_{pro}$ al cambiar sobre $\theta$ 
+
+Now $S_{conf,nw}$ represents the conformational entropy that results from the flexibility of the polymer network, which can assume many different conformations denoted by the set $\{\alpha\}$. 
+\begin{equation}
+    \frac{S_{conf,nw}}{\beta} = \sum_{\alpha}{P(\alpha)\ln P(\alpha)}
+\end{equation}
+
+The next term describes the free energy for the acid-base equilibrium:
+For the MAA segments:
+\begin{align}
+\begin{aligned}
+\frac{F_{chem,nw}}{\beta} &= \int_S drG(r) \frac{\left<\phi_{MAA}(r)\right>}{v_{MAA}} \left[f(r)(\ln f(r)+ \beta\mu^0_{MAA^-})\right.\\
+&\left.+(1-f(r))(\ln (1-f(r))+\beta\mu^0_{MAAH})\right]    
+\end{aligned}
+\end{align} 
+
+ In the same way the proteins segments equilibrium is writing as:
+ \begin{align}
+\begin{aligned}
+\frac{F_{chem,pro}}{\beta} &=\int_S drG(r) \left<\rho_{pro,\tau}(r)\right> \left[g(r)(\ln g(r)+ \beta\mu^0_{\tau p})\right.\\
+&\qquad\left.+(1-g(r))(\ln (1-g(r))+\beta\mu^0_{\tau d})\right]   
+\end{aligned}
+\end{align} 
+
+Titratable units are represented by  $\tau$ subdix \textit{p} and \textit{d} are protonated and deprotonated states respectively. 
+\begin{enumerate}
+\item for an unit acid case: $g(r) = f(r)$
+\item basic case: $g(r) = 1-f(r)$
+\end{enumerate}
+
+The electrostatic contributions of the free energy $\frac{U_{elec}}{\beta}$ :
+ \begin{align}
+\begin{aligned}
+\int_S drG(r)\left[\left(\sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\psi(r) -\frac{1}{2}\beta\epsilon(\nabla\psi(r))^2 \right]\\
+\end{aligned}
+\end{align} 
+\noindent where $\psi(r)$ is the position-dependent electrostatic potential, and $\epsilon$ the medium permittivity. 
+%%%%%%%%%%%%%%%%
+
+Finally the energy due the steric repulsion  take account the volume incompressibility
+\textcolor{red}{ejemplo para poner la ecuaci\'on en dos reglones}
+\begin{align*}
+    \begin{aligned}
+    +  &\int_0^\infty drG(r)\left[\left(\sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\psi(r) \right.\\  &\left. \hspace{6em}-\frac{1}{2}\beta\epsilon(\nabla\psi(r))^2 \right]
+    \end{aligned}
+\end{align*}
+
+\section{Modelado}
+
+Se utiliza un modelo de grano grueso en el cual las unidades consideradas son representativas de las moleculas y contienen la informaci\'on molecular.
+
+\subsection{Generaci\'on de configuraciones}
+
+\subsubsection{Modelo RIS}
+Las distintas configuraciones de las cadenas del polímero son generadas utilizando un modelo de isomeros rotacionas (RIS por sus siglas en inglés) donde cada segmento puede tomar cualquiera de las tres posibles orientaciones isoenergéticas que le corresponden \addcite[Flory]
+La longitud del segmento entre monomeros es $0.5 nm$ y su volumen es $v_{AH}= 0.065 nm^3$. Se generaron cadenas con 25, 50 y 100 segmentos. Para cada uno de estos largos de cadenas se generaron aleatoriamente un total de $10^6$ configuraciones distintas. Este número de configuraciones es suficientemente grande como para describir las propiedades del polímero adecuadamente, pero al mismo tiempo permite el cálculo de resultados en un tiempo razonable.
+
+\subsubsection{gromacs}
+Para la generaci\'on del modelo, en concreto de las configuracines, de nuestro migroles se partir\'a de una celda base, la cual se expander\'a en el espacio de tal forma de obtener las dimensiones que necesitemos.
+La estrucutura obtenida  ser\'a truncada/cortada para obtener una esfera que dará origen a la topología inicial del gel.
+
+Las simulaciones de, din\'amica molecular, y sus respectivos an\'alisis se harán haciendo uso del Software GROMACS. \addcite[11] 
+Finalmente todas las configuraciones serán  ponderadas dada la energía libre atribuida a cada una. \addcite[12]
+
+La estrucutura base que se utilizar\'a es la celda unitaria del diamanate ...\textcolor{red}{ por qu\'e ??}...
+Dada la arquitectura de los geles, cadenas entrelazadas, es necesario definir los nodos o crosslinks del gel,  en nuestro modelo los crosslinks corresponden a la posici\'on de lo \'atomos de carbono en la estructura base (celda de diamante).
+expansion y el corte esféricos, el cual es el punto de partida para la topolog\'ia de nuestro gel.
+
+Para nuestro esquema, trabajaremos con geles con un radio de corte de 109,\textcolor{red}{en unidades arbitrarias... sigma}, además se utilizarán cadenas de 25 segmentos cada una\footnote{Dado el corte esférico realizado, las cadenas externas poseen menor cantidad}. Nuestro gel finalmente estará compuesto por aproximadamente 10 mil segmentos (10054).
