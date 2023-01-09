@@ -17,64 +17,58 @@
 
 \section{Modelo sencillo: 2 fases}
 
-Microgels are soft particles made of crosslinked polymer chains that can display both colloidal and macromolecular behavior \addcite[plamper2017,lyon2012].
-Immersed in aqueous solutions, these particles incorporate and retain large amounts of water within their polymeric structure.
-Typically, their diameters range from tens of nanometers (nanogels) up to several microns.
-However, the most striking feature of these particles is their ability to uptake or release solvent and change size in response to a variety of external stimuli.
-Such responsive behavior is reversible and depends on the chemical composition of the polymer network.
+Los microgeles son part\'iculas blandas hechas de cadenas de pol\'imeros reticulados que pueden mostrar un comportamiento tanto coloidal como macromolecular \addcite[plamper2017,lyon2012].
+Inmersas en soluciones acuosas, estas part\'iculas incorporan y retienen grandes cantidades de agua dentro de su estructura polim\'erica.
+Por lo general, sus di\'ametros van desde decenas de nan\'ometros (nanogeles) hasta varias micras.
+Sin embargo, la caracter\'istica m\'as llamativa de estas part\'iculas es su capacidad para absorber o liberar solventes y cambiar de tama\~no en respuesta a una variedad de est\'imulos externos.
+Este comportamiento de respuesta es reversible y depende de la composici\'on qu\'imica de la red polim\'erica.
 
 
-Microgels composed of polymer chains having acidic segments such acrylic or methacrylic acid (AA and MAA, respectively) swell/deswell many-times fold in response to changes in the solution pH \addcite[snowden1996,Zhou1998].
-The particular pH that marks the onset and characterizes this transition is the apparent pKa of the microgel, which depends on the solution salt concentration and frequently differ from the intrinsic pKa of the acidic monomer.
-These microgels also adjust their size in response to changes in the salt concentration of the solution \addcite[snowden1996].
+Los microgeles compuestos por cadenas polim\'ericas que tienen segmentos \'acidos como el \'acido acr\'ilico o metacr\'ilico (AA y MAA, respectivamente) se hinchan/deshinchan muchas veces en respuesta a cambios en el pH de la soluci\'on \addcite[snowden1996,Zhou1998].
+El pH particular que marca el inicio y caracteriza esta transici\'on es el pKa aparente del microgel, que depende de la concentraci\'on de sal de la soluci\'on y frecuentemente difiere del pKa intrínseco del mon\'omero \'acido.
+Estos microgeles tambi\'en ajustan su tama\~no en respuesta a cambios en la concentraci\'on de sal de la soluci\'on \addcite[snowden1996].
+
+An\'alogamente, los microgeles de algunos pol\'imeros termosensibles experimentan una transici\'on de fase de volumen (VPT) cuando se calientan por encima de una temperatura caracter\'istica (VPTT o $T_{pt}$)\addcite[Pelton1986,Pelton2000].
+Este comportamiento se origina porque tales pol\'imeros son insolubles en agua por encima de cierta temperatura de soluci\'on cr\'itica m\'as baja (LCST) \addcite[Kawaguch2020].
+Normalmente, la LCST del pol\'imero y la VPTT de la red reticulada son aproximadamente id\'enticas. 
+Este es el caso de las part\'iculas de microgel de poli(N-isopropilacrilamida) (PNIPAm) \addcite[Pelton1986], cuyo volumen colapsa por encima de $32 C$, el LCST del pol\'imero lineal \addcite[Schild1992].
+
+Al tener un VPTT alrededor de la temperatura corporal, los microgeles de PNIPAm han generado un gran inter\'es para aplicaciones biom\'edicas \addcite[Guan2011].
+Las estrategias para controlar el VPTT de los microgeles incluyen la s\'intesis de nuevos mon\'omeros termosensibles\addcite[Cai2007, Macchion2019], as\'i como la copolimerizaci\'on con un mon\'omero i\'onico o ionizable \addcite[Hirose1987, Lopez2010].
+Este \'ultimo enfoque produce microgeles de respuesta m\'ultiple que son susceptibles a cambios en la temperatura, el pH y la concentraci\'on de sal \addcite[snowden1996, Farooqi2017].
+Los microgeles de NIPAm y AA han sido ampliamente estudiados \addcite[Morris1997, Jones2000, Bradley2005, Begum2016];
+Tambi\'en se han investigado microgeles de copol\'imeros de NIPAm y MAA \addcite[Dowding2000, Hoare2004, Giussi2015].
+El VPTT de estos microgeles de respuesta m\'ultiple depende del pH de la soluci\'on y la concentraci\'on de sal, y la fracci\'on de mon\'omero ionizable en las cadenas de pol\'imero \addcite[Morris1997, Jones2000, Hoare2004, Bradley2005, Lee2008, Wong2009, Hamzavi2016].
+Adem\'as, la incorporaci\'on del comon\'omero \'acido proporciona un mecanismo controlado por el pH para la captaci\'on/liberaci\'on de mol\'eculas con carga opuesta, lo que hace que los microgeles de respuesta m\'ultiple sean atractivos para el dise\~no de sistemas funcionales de administraci\'on de f\'armacos \addcite[Liu2017].
+
+Las aplicaciones basadas en microgeles polim\'ericos son cada vez m\'as diversas y cada vez m\'as importantes en diferentes \'areas de la tecnolog\'ia \addcite[plamper2017].
+Los nanocompuestos hechos de microgeles de poli(NIPAm-\emph{co}-MAA) que incorporan nanopart\'iculas de oro o plata o redes metal organicas tienen aplicaciones potenciales en el desarrollo de materiales con actividad catal\'itica  para la degradación de contaminantes industriales \addcite[Khan2013, Shi2014, Allegretto2020].
+Estos microgeles tambi\'en se pueden aplicar para el desarrollo de emulsiones sensibles al pH, la sal y la temperatura \addcite[Ngai2005, Ngai2006, Brugger2008, Schmidt2011] o como plantillas para el ensamblaje de nanomateriales \addcite[Wong2009].
+Los geles polim\'ericos de tama\~no nano/micro de respuesta m\'ultiple son excelentes candidatos para el desarrollo de aplicaciones biom\'edicas m\'inimamente invasivas, incluida la ingeniería de tejidos \addcite[Daly2020].
+\addcite[citet:Culver2017A] han utilizado nanogeles de poli(NIPAm-co-MAA) funcionalizados para la uni\'on y detecci\'on de diferentes prote\'inas.
+Recientemente se investigaron dispositivos basados en microgeles de poli(NIPAm-co-MAA) para la encapsulación/liberaci\'on del f\'armaco quimioterap\'eutico Doxorrubicina \addcite[Giussi2020, MartinesMoro2020, Pergushov2020].
+
+En este contexto, en este cap\'itulo mostramos el desarrollo de una teor\'ia de equilibrio de dos fases y realizamos una investigaci\'on sistem\'atica del comportamiento termodin\'amico de microgeles compuestos de copol\'imeros aleatorios de NIPAm y un comon\'omero \'acido (MAA).
+Este modelo describe la qu\'imica f\'isica detr\'as de todos los siguientes fen\'omenos: el hinchamiento del microgel impulsado por el pH, la dependencia no monot\'onica del tama\~no de part\'icula de la concentraci\'on de sal y el colapso de la red al aumentar la temperatura por encima del VPTT.
+Nuestras predicciones brindan una imagen clara de los efectos de la composici\'on de la soluci\'on (pH, concentración de sal) y la qu\'imica del pol\'imero (contenido de MAA, grado de entrecruzamiento) en el VPT.
+Tambi\'en investigamos las mejores condiciones para la encapsulaci\'on de doxorrubicina y daunorrubicina dentro de estos microgeles.
+Los c\'alculos  ac\'a mostrados son espec\'ificos para el \'acido metacr\'ilico con $pKa = 4,65$, pero el comportamiento fisicoqu\'imico informado puede describir cualitativamente una variedad de microgeles basados en NIPAm que se han modificado con otros monómeros \'acidos que tienen diferente pka y diferente solubilidad a pH bajo.
 
 
+El comportamiento de los microgeles de poli(NIPAm-co-MAA), incluido su VPT y la interacci\'on con pol\'imeros de carga opuesta, se ha descrito utilizando una variedad de t\'ecnicas experimentales \addcite[Hoare2004,Dowding2000, Kleinen2008, Kleinen2010, Giussi2015, Su2016, Giussi2020].
+Tambi\'en se han aplicado teor\'ias  y simulaciones moleculares de grano grueso para investigar el comportamiento de los microgeles polim\'ericos sensibles a est\'imulos \addcite[quesada2011gel, ahualli2016coarse, Landsgesell2019SM].
+Estos trabajos se han centrado principalmente en el hinchamiento y otras propiedades de las part\'iculas que tienen una red de pol\'imero permanentemente cargada , y algunos han abordado el efecto de la temperatura y la calidad del solvente \addcite[Jha2011,QuesadaPerez2013,QuesadaPerez2014,moncho-jorda2016a,ahualli2016coarse,AdroherBenitez2017PCCP].
+Recientemente, estudios  con simulaciones han considerado la respuesta al pH de microgeles compuestos de pol\'imeros reguladores de carga\addcite[Schroeder2015, Rudov2017, Sean2018, Hofzumahaus2018, Lu2019].
+Sin embargo, solo unos pocos trabajos te\'oricos han investigado las propiedades de los microgeles de respuesta m\'ultiple en funci\'on de la temperatura, el pH y la concentración de sal \addcite[CaprilesGonzalez2008, polotsky2013collapse].
 
 
-Analogously, microgels of some thermoresponsive polymers undergo a volume phase transition (VPT) when heated above a characteristic temperature (VPTT or Tpt)\addcite[Pelton1986,Pelton2000].
-This behavior originates because such polymers are insoluble in water above a certain lower critical solution temperature (LCST) \addcite[Kawaguch2020].
-Typically, the LCST of the polymer and the VPTT of the crosslinked network are roughly identical.
-This is the case for microgel particles of crosslinked poly(N-isopropylacrylamide) (PNIPAm) \addcite[Pelton1986], whose volume collapse above $32 C$, the LCST of the linear polymer \addcite[Schild1992].
-
-Having a VPTT around body temperature, PNIPAm microgels have generated great interest for biomedical applications \addcite[Guan2011].
-Strategies for controlling the VPTT of microgels include the synthesis of novel thermoresponsive monomers\addcite[Cai2007,Macchion2019] as well as copolymerization of with an ionic or ionizable monomer \addcite[Hirose1987, Lopez2010].
-This latter approach yields multiresponsive microgels that are susceptible to changes in temperature, pH and salt concentration \addcite[snowden1996, Farooqi2017].
-Microgels of N-isopropylacrylamide (NIPAm) and AA have been widely studied \addcite[Morris1997, Jones2000, Bradley2005, Begum2016]; 
-microgels of NIPAm and MAA copolymers have also been investigated \addcite[Dowding2000, Hoare2004, Giussi2015].
-The VPTT of these multiresponsive microgels depends on the solution pH and salt concentration, and the fraction of ionizable monomer in the polymer chains \addcite[Morris1997, Jones2000, Hoare2004, Bradley2005, Lee2008, Wong2009, Hamzavi2016].
-In addition, the incorporation of the acidic comonomer provides a pH-controlled mechanism for the uptake/release of oppositely charged molecules, which makes multiresponsive microgels attractive for the design of functional drug delivery systems \addcite[Liu2017].
-
-
-
-Applications based on polymer microgels are becoming more diverse and increasingly important in different areas of technology \addcite[plamper2017].
-Nanocomposites made of poly(NIPAm-\emph{co}-MAA) microgels that incorporate gold or silver nanoparticles or metal organic frameworks have potential applications 
-in the development of materials with tunable catalytic activity
-for the degradation of industrial pollutants \addcite[Khan2013, Shi2014, Allegretto2020].
-These microgels can also be applied for the development of pH, salt and temperature-responsive emulsions  \addcite[Ngai2005, Ngai2006, Brugger2008, Schmidt2011] or as templates for the assembly of nanomaterials \addcite[Wong2009].
-Multiresponsive nano/micro-sized polymer gels are excellent candidates for the development of minimally invasive biomedical applications, including granular scaffolds for tissue engineering \addcite[Daly2020].
-\addcite[citet:Culver2017A] have used functionalized poly(NIPAm-co-MAA) nanogels for the binding and sensing of different proteins.
-Devices based on poly(NIPAm-co-MAA) microgels have been recently investigated for the encapsulation/release of the chemotherapeutic drug Doxorubicin \addcite[Giussi2020, MartinesMoro2020, Pergushov2020].
-
-In this context, here we derive a two-phase equilibrium theory and perform a systematic investigation of the thermodynamic behavior of microgels composed of random copolymers of NIPAm and an acidic comonomer.
-This model describes the physical chemistry behind all of the following phenomena: the pH-driven microgel swelling, the nonmonotonic dependence of particle size on the salt concentration, and the network collapse when increasing the temperature above the VPTT.
-Our predictions provide a clear picture of the effects of solution composition (pH, salt concentration) and polymer chemistry (MAA content, degree of crosslinking) on the VPT.
-We also investigate the best conditions for Doxorubicin and Daunorubicin encapsulation within these microgels.
-Our calculations are specific to methacrylic acid with $pKa = 4.65$, but the physicochemical behavior reported can qualitatively describe a variety of NIPAm-based microgels that have been modified with other acidic monomers having different pka and different solubility at low pH.
-
-
-The behavior of poly(NIPAm-co-MAA) microgels, including their VPT and interaction with oppositely charged polymers, has been described using a variety of experimental techniques \addcite[Hoare2004,Dowding2000, Kleinen2008, Kleinen2010, Giussi2015, Su2016, Giussi2020].
-Theory and coarse grained molecular simulations have also been applied to investigate the behavior stimuli-responsive polymer microgels \addcite[quesada2011gel, ahualli2016coarse, Landsgesell2019SM].
-These works have mainly focused on the swelling and other properties of particles having a permanently charged polymer network \addcite[Levin2002,Claudio2009,Colla2014,Jha2011,jha2012understanding,QuesadaPerez2013,QuesadaPerez2014,Kobayashi2014,Kobayashi2016,Rizzi2016,moncho-jorda2016a,Kobayashi2017,AdroherBenitez2017PCCP], and some have addressed the effect of temperature and solvent quality \addcite[Jha2011,QuesadaPerez2013,QuesadaPerez2014,moncho-jorda2016a,ahualli2016coarse,AdroherBenitez2017PCCP]. 
-Recently, simulation studies have considered the pH-response of microgels composed of charge-regulating polymers\addcite[Schroeder2015, Rudov2017, Sean2018, Hofzumahaus2018, Lu2019].
-Only a few theoretical works, however, have investigated the properties of  multiresponsive microgels as a function of temperature, pH and salt concentration \addcite[CaprilesGonzalez2008, polotsky2013collapse].
-
-\subsection{Microgel Phase}\label{sec:theory}
+\subsection{Fase Microgel}\label{sec:theory}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-Let us consider a model of two phases: a poly(NIPAm-\emph{co}-MAA) (P(NIPAm-MAA)) microgel (phase $1$, denoted by $MG$) in contact with an embedding aqueous solution (phase $2$, denoted by $s$).
-Externally, we can control the temperature $T$, the pH and salt concentration of this solution, which result in the microgel having radius $R$ and volume $V=\frac{4}{3}\pi R^3$.
-The thermodynamic potential whose minimum yields the equilibrium conditions inside the microgel phase is the semi-grand canonical potential, $\Omega_{MG}$, which contains the following contributions:
+Consideremos un modelo de dos fases: un microgel de poli(NIPAm-\emph{co}-MAA) (P(NIPAm-MAA)) (fase $1$, denotada por $MG$) en contacto con una soluci\'on acuosa ( fase $2$, denotada por $s$).
+Externamente, podemos controlar la temperatura $T$, el pH y la concentraci\'on de sal de esta soluci\'on, lo que da como resultado que el microgel tenga un radio $R$ y un volumen $V=\frac{4}{3}\pi R^3$.
+El potencial termodin\'amico cuyo m\'inimo produce las condiciones de equilibrio dentro de la fase de microgel es el semi-gran potencial can\'onico, $\Omega_{MG}$, que contiene las siguientes contribuciones:
 %
 \begin{align}
     \begin{aligned}
@@ -85,17 +79,22 @@ The thermodynamic potential whose minimum yields the equilibrium conditions insi
     \label{eq:free-energy-implicit}
 \end{align}
 %
-\noindent where $S_{mix}$ is the translational (mixing) entropy of the free species in the microgel phase: water molecules ($w$), hydronium ($H_3O^+$) and hydroxyde  ions ($OH^-$), and salt cations ($+$) and anions ($-$). 
-Here we consider a monovalent salt, $KCl$, and assume it is completely dissociated into potassium and chloride ions.
-$F_{chem,MAA}$ is the chemical free energy that describes the equilibrium protonation of MAA units.
-$F_{ela}$ is the elastic free energy that accounts for the conformational freedom of the polymer network.
-$U_{elec}$ and $U_{ste}$ account respectively for the electrostatic interactions and steric repulsions.
-$U_{VDW}$ is the contribution that describes the polymer-solvent effective interactions; it incorporates the hydrophilic-hydrophobic transition of NIPAm upon increasing the temperature above its LCST.
-Finally, the sum over $\gamma$ expresses the chemical equilibrium with the solution phase, where $\mu_\gamma$ and $N_\gamma$ are the chemical potential and number of molecules of species $\gamma$, respectively.
-Herein, the subindex $\gamma$ runs over the free chemical species, $\gamma \in \left\{ w, H_3O^+, OH^-, +,- \right\}$.
-Note that $\Omega_{MG}$ is a semi-grand canonical potential because the microgel phase can exchange each of these molecules with the solution phase, while the polymer network is confined within the former.
 
-The explicit form of the thermodynamic potential is: 
+\noindent donde $S_{mix}$ es la entropí\'i de traslaci\'on (mezcla) de las especies libres en la fase de microgel: mol\'eculas de agua ($w$), hidronio ($H_3O^+$) e iones de hidr\'oxido ($OH^-$ ), y cationes de sal ($+$) y aniones ($-$).
+Aqu\'i consideramos una sal monovalente, $KCl$, y asumimos que est\'a completamente disociada en iones de potasio y cloruro.
+$F_{chem,MAA}$ es la energ\'ia química libre que describe la protonación de equilibrio de las unidades MAA.
+$F_{ela}$ es la energía libre el\'astica que explica la libertad conformacional de la red polim\'erica.
+$U_{elec}$ y $U_{ste}$ representan respectivamente las interacciones electrost\'aticas y las repulsiones est\'ericas.
+$U_{VDW}$ es la contribuci\'on que describe las interacciones efectivas pol\'imero-disolvente; incorpora la transici\'on hidrofílica-hidrof\'obica de NIPAm al aumentar la temperatura por encima de su LCST.
+Finalmente, la suma de $\gamma$ expresa el equilibrio qu\'imico con la fase de soluci\'on, donde $\mu_\gamma$ y $N_\gamma$ son el potencial qu\'imico y el n\'umero de mol\'eculas de la especie $\gamma$, respectivamente.
+Aqu\'i, el subíndice $\gamma$ es  sobre las especies qu\'imicas libres, $\gamma \in \left\{ w, H_3O^+, OH^-, +,- \right\}$.
+Hay que tener en cuenta que $\Omega_{MG}$ es un potencial semi grancan\'onico porque la fase de microgel puede intercambiar cada una de estas mol\'eculas con la fase de soluci\'on, mientras que la red de pol\'imero está confinada dentro de la primera.
+
+La forma expl\'icita del potencial termodin\'amico es:
+
+
+
+
 %
 \begin{align}
 \begin{aligned}
@@ -116,31 +115,31 @@ The explicit form of the thermodynamic potential is:
 \label{eq:free-energy}
 \end{align}
 
-
-\noindent where the first term (second line) arises from $S_{mix}$; $\beta=\frac{1}{k_BT}$ and $k_B$ is the Boltzmann constant.
-The number density of species $\gamma$ is $\rho_\gamma$ and $\mu^0_\gamma$ is its  standard chemical potencial, which is also included in this first contribution; $v_w$ is the volume of a water molecule.
-
+\noindent donde el primer t\'ermino (segunda l\'inea) de $S_{mix}$; $\beta=\frac{1}{k_BT}$ y $k_B$ es la constante de Boltzmann.
+La densidad num\'erica de la especie $\gamma$ es $\rho_\gamma$ y $\mu^0_\gamma$ es su potencial qu\'imico est\'andar, que tambi\'en se incluye en esta primera contribución; $v_w$ es el volumen de una mol\'ecula de agua.
 
 
-The second and third line of eq. \ref{eq:free-energy} (right-hand side) incorporate the acid-base equilibrium of MAA units, where $\phi_{MAA}$ is the volume fraction that these segments occupy, $v_{MAA}$ is the volume of this segment, and $f$ is the degree of dissociation or the fraction of these units that are charged.
-The volume fraction of charged MAA segments is $f\phi_{MAA}$, and that of protonated or uncharged units is $(1-f)\phi_{MAA}$.
-The standard chemical potentials are $\mu^0_{MAA^-}$ and $\mu^0_{MAAH}$ for the charged and protonated species, respectively.
-Note that here we use the term segment to identify the chemical units (monomers) that compose the polymer chains (MAA and NIPAm).
+La segunda y tercera l\'inea de la ec. \ref{eq:free-energy} (lado derecho) incorporan el equilibrio \'acido-base de las unidades MAA, donde $\phi_{MAA}$ es la fracci\'on de volumen que ocupan estos segmentos, $v_{MAA}$ es la volumen de este segmento, y $f$ es el grado de disociaci\'on o la fracci\'on de estas unidades que se cargan.
+La fracci\'on de volumen de los segmentos MAA cargados es $f\phi_{MAA}$, y la de las unidades protonadas o sin carga es $(1-f)\phi_{MAA}$.
+Los potenciales qu\'imicos est\'andar son $\mu^0_{MAA^-}$ y $\mu^0_{MAAH}$ para las especies cargadas y protonadas, respectivamente.
+Hay qye tener en cuenta que aqu\'i usamos el t\'ermino segmento para identificar las unidades qu\'imicas (monómeros) que componen las cadenas polim\'ericas (MAA y NIPAm).
 
 
-The next contribution to eq. \ref{eq:free-energy} is the electrostatic energy, where $q_\gamma$ and  $q_{MAA}$ are the electric charge of molecules $\gamma$ and MAA segments, respectively. 
-The electrostatic potential inside the microgel phase is $\psi_{MG}$.
+La siguiente contribuci\'on a la ec. \ref{eq:free-energy} es la energ\'ia electrost\'atica, donde $q_\gamma$ y $q_{MAA}$ son la carga el\'ectrica de las moléculas $\gamma$ y los segmentos MAA, respectivamente.
+El potencial electrost\'atico dentro de la fase de microgel es $\psi_{MG}$.
 
 
-The following contribution (line 6 of eq.\ref{eq:free-energy}) reinforces the chemical equilibrium between the microgel and the solution phase, where the second term accounts for those protons bound to uncharged MAA units; 
-namely, $\mu_{H^+}\equiv\mu_{H_3O^+}$ is conjugated to the total number of protons,
+La siguiente contribución (l\'inea 6 de eq.\ref{eq:free-energy}) refuerza el equilibrio qu\'imico entre el microgel y la fase de soluci\'on, donde el segundo t\'ermino representa esos protones unidos a unidades MAA sin carga;
+a saber, $\mu_{H^+}\equiv\mu_{H_3O^+}$ se conjuga con el n\'umero total de protones,
 $N_{H_3O^+}+N_{MAAH}=V\left(\rho_{H_3O^+}+(1-f)\dfrac{\phi_{MAA}}{v_{MAA}}\right)$.
 
 
-The next term in the thermodynamic potential accounts for PNIPAm response to temperature changes through a polymer solvent interaction parameter, $\chi$, which depends on the temperature and the volume fraction of NIPAm, $\phi_{NIPAm}$.
-According to \addcite[afroze2000], this Flory-Huggins parameter can be expressed as:
+El siguiente t\'ermino en el potencial termodin\'amico explica la respuesta de PNIPAm a los cambios de temperatura a trav\'es de un par\'ametro de interacci\'on pol\'imero solvente, $\chi$, que depende de la temperatura y la fracci\'on de volumen de NIPAm, $\phi_{NIPAm}$.
+Seg\'un \addcite[afroze2000], este par\'ametro de Flory-Huggins se puede expresar como:
 %
 %
+
+
 \begin{align}
 \begin{aligned}
 \chi (T, \phi_{NIPAm}) &=g_0(T) +g_1(T)\phi_{NIPAm} \\
@@ -148,7 +147,7 @@ According to \addcite[afroze2000], this Flory-Huggins parameter can be expressed
 \end{aligned}
 \end{align}
 
-\noindent with
+\noindent con
 %
 %
 \begin{align}
@@ -158,14 +157,15 @@ g_k(T)=g_{k0} + \frac{g_{k1}}{T} + g_{k2}T
 \end{align}
 
 
-\noindent for $k=0,1,2$, where the coefficients are $g_{00}= -12.947$, $g_{02}=0.044959\,$K$^{-1}$, $g_{10}= 17.920$, $g_{12}= -0.056944$\,K$^{-1}$, $g_{20}= 14.814$, $g_{22}= -0.051419$\,K$^{-1}$ and $g_{k1}\equiv 0$ \addcite[afroze2000]. 
+\noindent para  $k=0,1,2$, los coeficinetes son: $g_{00}= -12.947$, $g_{02}=0.044959\,$K$^{-1}$, $g_{10}= 17.920$, $g_{12}= -0.056944$\,K$^{-1}$, $g_{20}= 14.814$, $g_{22}= -0.051419$\,K$^{-1}$  y $g_{k1}\equiv 0$ \addcite[afroze2000]. 
 
 
-The last term in eq. \ref{eq:free-energy} is the contribution resulting from the elasticity of the crosslinked polymer network that makes the microgel backbone.
-This expression is described in \addcite[mocho-jorda2016a] and comes from the model of rubber elasticity, 
-where $N_{seg}$ is the total number of segments in the polymer network, and $n_{ch}$ is number of segments per polymer chain or \emph{chain length}.
-Note that the spring constant in the elastic free energy is proportional to the quotient $\dfrac{N_{seg}}{n_{ch}}$, which represents the (total) number of polymer chains in the microgel.
-The radius of the dry microgel is $R_0$, which satisfies:
+El \'utimo t\'ermino en eq. \ref{eq:free-energy} es la contribuci\'on resultante de la elasticidad de la red de pol\'imero entrecruzado que forma la columna vertebral del microgel.
+Esta expresi\'on se describe en \addcite[mocho-jorda2016a] y proviene del modelo de elasticidad del caucho,
+donde $N_{seg}$ es el n\'umero total de segmentos en la red de pol\'imero y $n_{ch}$ es el n\'umero de segmentos por cadena de pol\'imero o \emph{longitud de cadena}.
+Se tiene en cuenta que la constante de resorte en la energ\'ia libre el\'astica es proporcional al cociente $\dfrac{N_{seg}}{n_{ch}}$, que representa el n\'umero (total) de cadenas de pol\'imero en el microgel.
+El radio del microgel seco es $R_0$, lo que satisface con la expresi\'on:
+
 %
 %
 \begin{align}
@@ -175,14 +175,17 @@ The radius of the dry microgel is $R_0$, which satisfies:
 \end{aligned}
 \end{align}
 
-\noindent where $V_0$ is the volume of the dry particle; $x_{MAA}$ and $x_{NIPAm}$ are the fraction of MAA and NIPAm segments, respectively.
-Then, the total number MAA segments is $x_{MAA}N_{seg}$ and that of NIPAm units is $x_{NIPAm}N_{seg}$, each having a volume $v_{NIPAm}$.
-The microgels we consider here satisfy $x_{NIPAm}=1-x_{MAA}$.
+
+\noindent donde $V_0$ es el volumen de la part\'icula seca; $x_{MAA}$ y $x_{NIPAm}$ son la fracci\'on de los segmentos MAA y NIPAm, respectivamente.
+Entonces, el n\'umero total de segmentos MAA es $x_{MAA}N_{seg}$ y el de unidades NIPAm es $x_{NIPAm}N_{seg}$, cada uno con un volumen $v_{NIPAm}$.
+Los microgeles que consideramos aqu\'i satisfacen $x_{NIPAm}=1-x_{MAA}$.
 
 
-Two physical constraints must be imposed to the thermodynamic potential given by eq. \ref{eq:free-energy}.
-The microgel volume is fully occupied by network segments and the free chemical species.
-This incompressibility constraint incorporates the steric repulsions (excluded volume) and can be expressed as:
+Deben imponerse dos restricciones f\'isicas al potencial termodin\'amico dado por la ec. \ref{eq:free-energy}.
+El volumen del microgel est\'a completamente ocupado por los segmentos de la red y las especies quí\'icas libres.
+Esta restricci\'on de incompresibilidad incorpora las repulsiones est\'ericas (volumen excluido) y se puede expresar como:
+%
+
 %
 %
 \begin{align}
@@ -194,8 +197,7 @@ This incompressibility constraint incorporates the steric repulsions (excluded v
 
 
 
-\noindent where $v_\gamma$ is the molecular volume of specie $\gamma$, and
-the volume fractions of network components are: 
+\noindent donde $v_\gamma$  es el volumen molecular de la especie $\gamma$, y la fracci\'on de volumen de cada componente de la red son: 
 %
 %
 \begin{align}
@@ -204,8 +206,7 @@ the volume fractions of network components are:
 \end{align}
 
 
-
-The second constraint that we impose to the microgel phase is charge neutrality, which can  be expressed as: 
+La segunda restricci\'on  que se impone es la electroneutralidad del microgel, que puede expresarse como:
 %
 %
 \begin{align}
@@ -216,8 +217,8 @@ The second constraint that we impose to the microgel phase is charge neutrality,
 \end{align}
 
 
-Now, the thermodynamic potential is an explicit function of the densities of all free species, the degree of charge of MAA segments and the radius of the microgel, $\Omega_{MG}(R)\equiv\Omega_{MG}(\{\rho_\gamma\},f,R)$.
-To obtain the expressions of $\{\rho_\gamma\}$ and $f$ that are consistent with the thermodynamic equilibrium, we minimize $\Omega_{MG}$ with respect to these quantities, subject to the constraints eq. \ref{eq:packing} and eq. \ref{eq:charge-neutrality}; such procedure leads to
+Ahora, el potencial termodin\'amica esta explicitamente en funci\'on de las densidades de todas las especies, el grado de carga del MAA y el radio del microgel, $\Omega_{MG}(R)\equiv\Omega_{MG}(\{\rho_\gamma\},f,R)$.
+Para obtener las expresiones de $\{\rho_\gamma\}$ y $f$ que sean consistentes con el equilibrio termodin\'amico, minimizamos $\Omega_{MG}$ con respecto a estas cantidades, sujeto a las restricciones ec. \ref{eq:packing} y ec. \ref{eq:charge-neutrality}; dicho procedimiento conduce a: 
 %
 %
 \begin{align}
@@ -225,28 +226,25 @@ To obtain the expressions of $\{\rho_\gamma\}$ and $f$ that are consistent with 
 \frac{f}{1-f}&= \frac{K^0_{MAA}}{a_{H^+}}\exp(-\beta\psi_{MG}q_{MAA})\label{eq:fcharge}
 \end{align}
 
-
-\noindent where $a_\gamma = e^{\beta\mu_\gamma-\beta\mu_\gamma^0}$ is the activity of species $\gamma$, and $\pi_{MG}$ is the osmotic pressure of the microgel phase, introduced as a Lagrange multiplier to impose the incompressibility constraint, eq. \ref{eq:packing}.
-The thermodynamic equilibrium constant that describes MAA protonation/deprotonation is
+\noindent donde $a_\gamma = e^{\beta\mu_\gamma-\beta\mu_\gamma^0}$ es la actividad de la especie $\gamma$, y $\pi_{MG}$ es la presi\'on osm\'otica de la fase de microgel, introducido como un multiplicador de Lagrange para imponer la restricci\'on de incompresibilidad, ec. \ref{eq:packing}.
+La constante de equilibrio termodin\'amico que describe la protonaci\'on/desprotonaci\'on MAA es
 %
 %
 \begin{align}
 K^0_{MAA}= e^{\beta\mu^0_{MAAH}-\beta\mu^0_{MAA}-\beta\mu^0_{H^+}}
 \end{align}
 
-\noindent This quantity can be directly calculated from the pKa of the acid.
+\noindent Esta cantidad se puede calcular directamente a partir del pKa del \'acido.
 
 
+Para un $R$ dado, las \'unicas inc\'ognitas restantes para determinar $\Omega_{MG}(R)$ son la presi\'on osm\'otica, $\pi_{MG}$ y el potencial electrost\'atico, $\psi_{MG}$.
+Estas dos cantidades se pueden calcular resolviendo num\'ericamente la incompresibilidad y la electroneutralidad de la fase de microgel, ec. \ref{eq:packing} y ec. \ref{eq:charge-neutrality}, respectivamente.
+Para resolver estas ecuaciones utilizamos un m\'etodo h\'ibrido de Powell sin jacobiano y un c\'odigo FORTRAN desarrollado internamente.
 
 
-For a given $R$, the only remaining unknowns to determine $\Omega_{MG}(R)$ are the osmotic pressure, $\pi_{MG}$ and the electrostatic potential, $\psi_{MG}$.
-These two quantities can be calculated through numerically solving the incompressibility and the electroneutrality of the microgel phase, eq. \ref{eq:packing} and eq. \ref{eq:charge-neutrality}, respectively. 
-To solve these equations we use a Jacobian-free Powell hybrid method and a FORTRAN code developed in-house.
-
-
-All other quantities involved in the calculation of $\Omega_{MG}(R)$ are inputs, including the properties of the different chemical species considered, which are summarized in table \ref{table:molecules}.
-We use $pK_w=14$ to describe water self-dissociation equilibrium.
-The activities of all free chemical species can be calculated from the concentration of these molecules in the solution phase as discussed next.
+Todas las dem\'as cantidades involucradas en el c\'alculo de $\Omega_{MG}(R)$ son entradas, incluidas las propiedades de las diferentes especies qu\'imicas consideradas, que se resumen en la tabla \ref{table:molecules}.
+Usamos $pK_w=14$ para describir el equilibrio de autodisociaci\'on del agua.
+Las actividades de todas las especies qu\'imicas libres se pueden calcular a partir de la concentración de estas mol\'eculas en la fase de soluci\'on, como se analiza a continuaci\'on.
 
 
 \begin{table}
@@ -266,17 +264,17 @@ $MAA$ & 4.65 & -1$^\ast$ & 0.09\\
 $NIPAm$ & ~ & ~ & 0.12\\
     \hline
   \end{tabular}
- \caption{Molecular properties of the different chemical species considered.
- \footnotesize ($^\ast$For the deprotonated species.)}
+ \caption{Propiedades moleculares de las diferentes especies qu\'imicas consideradas.
+ 	\footnotesize ($^\ast$Para las especies desprotonadas).}
 \label{table:molecules} 
 \end{table}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Solution Phase}
+\subsection{Fase soluci\'on}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In the solution, the thermodynamic potential is:
+En la soluci\'on, el potencial termodin\'amico es:
 %
 %
 \begin{align}
@@ -286,13 +284,11 @@ In the solution, the thermodynamic potential is:
 \label{eq:bulk}
 \end{align}
 
-\noindent where the superscript $s$ indicate solution densities.
-In writing eq. \ref{eq:bulk}, we have considered a reference volume equal to that of the microgel, $V$, and set the electrostatic potential in the solution phase equal to zero.
+\noindent el subindice  $s$  indica las densidades en la soluci\'on.
+Al escribir la ec. \ref{eq:bulk}, hemos considerado un volumen de referencia igual al del microgel, $V$, y se ha considerado como cero el potencial electrost\'atico en la fase de soluci\'on.
 
 
-
-
-Once the solution composition is set (pH and salt concentration), we know the densities of all chemical species in this phase, which must satisfy both the incompressibility and charge neutrality constraints: 
+Una vez que se establece la composición de la solución (pH y concentraci\'on de sal), conocemos las densidades de todas las especies qu\'imicas en esta fase, que deben satisfacer tanto las restricciones de incompresibilidad como de neutralidad de carga:
 %
 %
 \begin{align}
@@ -300,7 +296,7 @@ Once the solution composition is set (pH and salt concentration), we know the de
 \sum_{\gamma  } \rho_\gamma^s q_\gamma  &=0
 \end{align}
 
-\noindent with
+\noindent con
 %
 %
 \begin{align}
@@ -310,19 +306,19 @@ Once the solution composition is set (pH and salt concentration), we know the de
 
 
 
-\noindent for $\gamma \in \left\{ w, H_3O^+, OH^-, +,- \right\}$, where $\pi_s$ is the osmotic pressure of the solution phase introduced as a Lagrange multiplier to reinforced eq. \ref{eq:bulk-packing}.
-After $\pi_s$ is known, we can determine the activities of all free chemical species.
+\noindent para $\gamma \in \left\{ w, H_3O^+, OH^-, +,- \right\}$, donde $\pi_s$ es la presión osmótica de la fase de solución introducida como un multiplicador de Lagrange por la ecuaci\'on \ref{eq:bulk-packing}.
+Despu\'es de conocer $\pi_s$, podemos determinar las actividades de todas las especies qu\'imicas libres.
 
-\subsection{Graphical Minimization}
+\subsection{Minimizaci\'on gr\'afica}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure*}[!htb]
 \centering
 \includegraphics[width=1.\linewidth]{Figures/graph-gel/graph-min.png}
-\caption{Thermodynamic potential as a function of the microgel radius at different temperatures, $pH~4.65$ and $cs=10^{-2}M$.
-Each panel corresponds to a different MG100 microgel (chain length, $n_{ch}=100$) with $10\%$ (A), $35\%$ (B), and $50\%$ (C) MAA.
-The plots present the thermodynamic potential in excess of the solution contribution, $\Omega=\Omega_{MG}-\Omega_s$, in some convenient units, where $V_0=\frac{4}{3}\pi R_0^3$ is the volume of the dry polymeric particle.
-In panel B, a color circle marks the optimal radius for each temperature, which is the local/global minimum of the corresponding curve (see tabla \ref{table:optimal-R}).}
+\caption{Potencial termodin\'amico en funci\'on del radio del microgel a diferentes temperaturas, $pH~4.65$ y $cs=10^{-2}M$.
+	Cada panel corresponde a un microgel MG100 diferente (longitud de cadena, $n_{ch}=100$) con $10\%$ (A), $35\%$ (B) y $50\%$ (C) MAA.
+	Las curvas presentan el potencial termodin\'amico en exceso de la contribuci\'on de la soluci\'on, $\Omega=\Omega_{MG}-\Omega_s$, en algunas unidades convenientes, donde $V_0=\frac{4}{3}\pi R_0^3$ es el volumen de la part\'icula polim\'erica seca.
+	En el panel B, los puntos  marcan el radio \'optimo para cada temperatura, que es el m\'inimo local/global de la curva correspondiente (ver tabla \ref{table:optimal-R}).}
 \label{fig:graph-min}
 \end{figure*}
 
