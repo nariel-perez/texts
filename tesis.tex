@@ -43,10 +43,12 @@
 %\usepackage{subfig}
 %\usepackage{multirow}
 \usepackage{amsmath}
+\usepackage[spanish]{babel}
 
 
 \newcommand{\addcite}[1][]{\def\tst{#1}\ifx\tst\empty\textcolor{red}{[{\footnotesize REFs}]} \else\textcolor{red}{[{\footnotesize REFs: #1}]} \fi}
-
+\renewcommand{\figurename}{Figura}
+\renewcommand{\tablename}{Tabla} 
 %% # Datos del documento #
 %% Nota que los acentos se deben escribir: \'a, \'e, \'i, etc.
 %% La letra n con tilde es: \~n.
