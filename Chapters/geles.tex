@@ -322,11 +322,9 @@ Despu\'es de conocer $\pi_s$, podemos determinar las actividades de todas las es
 \label{fig:graph-min}
 \end{figure*}
 
-
-At this point, we can completely determine the free energy of the microgel phase for any given $R$.
-The independent variables of a calculation are the temperature, the pH and salt concentration of the embedding solution.
-The number of segments in the polymer network $N_{seg}$, the chain length $n_{ch}$, and the fraction of MAA segments, $x_{MAA}$, fully characterize the microgel.
-
+En este punto, es posible determinar completamente la energí\'i libre de la fase de microgel para cualquier $R$ dado.
+Las variables independientes de un c\'alculo son la temperatura, el pH y la concentraci\'on de sal de la soluci\'on en contacto con la fase microgel.
+El n\'umero de segmentos en la red de pol\'imero $N_{seg}$, la longitud de la cadena $n_{ch}$ y la fracci\'on de segmentos MAA, $x_{MAA}$, caracterizan completamente el microgel.
 
 We consider microgels with $N_{seg}=10^7$ segments and $n_{ch}=50$, $100$, and $200$, having either $x_{MAA}=0.1$, $0.35$ or $0.5$.
 Our goal is to evaluate the effect of increasing or reducing the amount of acidic monomer with respect to poly(NIPAm-\emph{co}-MAA) microgels having $35\%$ MAA, which are typically synthesized in our lab \addcite[Giussi2015,Giussi2020].
@@ -334,7 +332,10 @@ These microgels are labeled MG$n_{ch}$-$p_{MAA}$, where $p_{MAA}$ is the percent
 For example, MG100-10 is the microgel with  $n_{ch}=100$ and $x_{MAA}=0.1$.
 
 
-
+Consideramos microgeles con $N_{seg}=10^7$ segmentos y $n_{ch}=50$, $100$ y $200$, que tienen $x_{MAA}=0,1$, $0,35$ o $0,5$.
+El objetivo es evaluar el efecto de aumentar o reducir la cantidad de mon\'omero \'acido con respecto a los microgeles de poli(NIPAm-\emph{co}-MAA) que tienen $35\%$ MAA. % que normalmente se sintetizan en nuestro laboratorio \addcite[Giussi2015 ,Giussi2020].
+Estos microgeles est\'an etiquetados como MG$n_{ch}$-$p_{MAA}$, donde $p_{MAA}$ es el porcentaje de MAA.
+Por ejemplo, MG100-10 corresponde a un  microgel con $n_{ch}=100$ y $x_{MAA}=0,1$.
 
 
 
@@ -343,7 +344,10 @@ For each set of conditions (pH, salt, and $T$), we construct $\Omega(R)=\Omega_{
 As an example, this procedure is illustrated in figura \ref{fig:graph-min} for MG100 microgels.
 The results obtained from the graphical minimization of figura \ref{fig:graph-min} curves are summarized in tabla \ref{table:optimal-R}.
 
-
+Para determinar el tama\~no del microgel para un conjunto dado de condiciones, recurrimos a una minimizaci\'on gr\'afica del mismo.
+Para cada conjunto de condiciones (pH, sal y $T$), construimos $\Omega(R)=\Omega_{MG}(R)-\Omega_{s}(R)$, y encontramos $R_{opt }$, siedo este el radio \'optimo, tal que la curva tenga un m\'inimo local (y global).
+Como ejemplo, este procedimiento se ilustra en la figura \ref{fig:graph-min} para microgeles MG100.
+Los resultados obtenidos de la minimizaci\'on de las curvas figura \ref{fig:graph-min} se resumen en la tabla \ref{table:optimal-R}.
 
 \begin{table}[!htb]
 \centering
@@ -360,20 +364,19 @@ The results obtained from the graphical minimization of figura \ref{fig:graph-mi
     50\% MAA &  213 & 199 &  172 & 85 & 63\\
     \hline
   \end{tabular}
- \caption{Graphical minimization of figura \ref{fig:graph-min} curves.
- This table summarizes the optimal radii of three MG100 microgels at different temperatures, $pH\,4.65$ and $cs=10^{-2}M$.}
+ \caption{Minimizaci\'on de las curvas de la  figura \ref{fig:graph-min}.
+ 	Esta tabla resume los radios \'optimos de tres microgeles MG100 a diferentes temperaturas, $pH\,4.65$ y $cs=10^{-2}M$.}
 \label{table:optimal-R} 
 \end{table}
 
 
-\subsection{Absorption}
+\subsection{Absroci\'on}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-
-To describe the absorption of an analyte to the microgel phase, 
-the thermodynamic potential of eq. \ref{eq:free-energy} adds the following terms:
+Para describir la absorci\'on de un analito a la fase de microgel,
+el potencial termodin\'amico de la ec. \ref{eq:free-energy} agrega los siguientes t\'erminos:
+%
 %
 %
 \begin{align}
@@ -388,36 +391,33 @@ the thermodynamic potential of eq. \ref{eq:free-energy} adds the following terms
 \label{eq:ads}
 \end{align}
 %
-\noindent The first line (right-hand side) accounts for the translational degrees of freedom,
-where $\rho_a$ is the number density of the analyte and $\mu_a^0$ its standard chemical potential.
-The next two lines describe the acid-base equilibrium of titratable units of the analyte;
-subscript $\tau$ runs over such molecular units having degree of protonation $g_\tau$ and volume $v_\tau$.
-The analyte has $n_\tau$ of these segments;
-$\mu^0_{\tau H}$ and $\mu^0_\tau$ are the standard chemical potential of the protonated and deprotonated species, respectively, which relate to the acid dissociation constant:
+\noindent La primera l\'inea (lado derecho) representa los grados de libertad de traslaci\'on,
+donde $\rho_a$ es la densidad num\'erica del analito y $\mu_a^0$ su potencial qu\'imico est\'andar.
+Las siguientes dos l\'ineas describen el equilibrio \'acido-base de las unidades titulables del analito;
+el sub\'indice $\tau$ recorre dichas unidades moleculares que tienen un grado de protonaci\'on $g_\tau$ y un volumen $v_\tau$.
+El analito tiene $n_\tau$ de estos segmentos;
+$\mu^0_{\tau H}$ y $\mu^0_\tau$ son el potencial qu\'imico est\'andar de las especies protonadas y desprotonadas, respectivamente, que se relacionan con la constante de disociaci\'on \'acida:
 %
 \begin{align}
 K^0_{\tau}= e^{\beta\mu^0_{\tau H}-\beta\mu^0_{\tau}-\beta\mu^0_{H^+}}
 \end{align}
 %
 
-The next line in eq. \ref{eq:ads} describes the analyte contribution to the electrostatic energy, where $f_\tau$ is the degree of charge of $\tau$ units, which is either equal to $g_\tau$ if $\tau$ is a basic group, or $(1-g_\tau)$ if the unit is acidic; $q_\tau$ is the charge of the ionized species.
-The last two terms account for the chemical equilibrium between the microgel and the solution phase, where $\mu_a$ is the chemical potential of the analyte.
+La siguiente l\'inea en la ec. \ref{eq:ads} describe la contribuci\'on del analito a la energ\'ia electrost\'atica, donde $f_\tau$ es el grado de carga de las unidades $\tau$, que es igual a $g_\tau$ si $\tau$ es un grupo b\'asico, o $(1-g_\tau)$ si la unidad es \'acida; $q_\tau$ es la carga de las especies ionizadas.
+Los dos \'ultimos t\'erminos dan cuenta del equilibrio qu\'imico entre el microgel y la fase de soluci\'on, donde $\mu_a$ es el potencial qu\'imico del analito.
 
+Adem\'as, la ec. \ref{eq:packing} debe incorporar la fracci\'on total de volumen ocupada por el analito: $\rho_a \sum_\lambda n_\lambda v_\lambda$, donde $\lambda$ recorre todos los tipos de segmentos que forman la mol\'ecula, incluyendo unidades titulables $\{\tau\}\in\{\lambda\}$.
+La presencia del analito en la fase de soluci\'on tambi\'en representa contribuciones adicionales al potencial termodin\'amico $\Omega_s$ de ec. \ref{eq:bulk}, que contienen los mismos componentes que ec. \ref{eq:ads}.
 
-
-In addition, eq. \ref{eq:packing} must incorporate the total fraction of volume occupied by the analyte: $\rho_a \sum_\lambda n_\lambda v_\lambda$, where $\lambda$ runs over all types of segments that make the molecule, including titratable units $\{\tau\}\in\{\lambda\}$.
-The presence of the analyte in the solution phase also represents additional contributions to the thermodynamic potential $\Omega_s$ of eq. \ref{eq:bulk}, which contain the same components as eq. \ref{eq:ads}. 
-
-
-Optimization of $\Omega_{MG}$  leads to:
+De la optimizaci\'on de  $\Omega_{MG}$  se obtiene:
 %
 \begin{equation}
 \frac{f_\tau}{1-f_\tau}=\left(\frac{K^0_\tau}{a_{H^+}}\right)^{\pm 1} e^{-\beta \psi_{MG} q_\tau}
 \label{eq:f_ads}
 \end{equation}
 %
-\noindent for the degree of charge of $\tau$ units, where the $\pm$ sign differentiates the case of an acid ($+$) from a basic ($-$) group.
-For the analyte density we obtain:
+\noindent para el grado de carga de las unidades $\tau$, donde el signo $\pm$ diferencia el caso de un grupo \'acido ($+$) de uno b\'asico ($-$).
+Para la densidad del analito obtenemos:
 %
 \begin{align}
     \begin{aligned}
@@ -438,8 +438,8 @@ Similar expressions to eq. \ref{eq:rho_ads} and eq. \ref{eq:f_ads} are derived f
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.35\linewidth]{Figures/graph-gel/dauno-doxo.png}
-\caption{Chemical structure (top) and coarse grained model (bottom) applied to describe Daunorubicin and Doxorubicin.
-The coarse grained segments $D1-D4$ are described in tabla \ref{table:drugs}.}
+\caption{Estructura quí\'imica (arriba) y modelo de grano grueso (abajo) aplicado para describir daunorrubicina y doxorrubicina.
+	Los segmentos de grano grueso $D1-D4$ se describen en la tabla \ref{table:drugs}.}
 \label{fig:dauno-doxo}
 \end{figure}
 
@@ -448,6 +448,8 @@ The coarse grained segments $D1-D4$ are described in tabla \ref{table:drugs}.}
 We will consider the absorption of the chemotherapeutic drugs Daunorubicin (Dauno) and Doxorubicin (Doxo) to the P(NIPAm-MAA) microgels under different conditions.
 The molecular model applied to describe these analytes is illustrated in figura  \ref{fig:dauno-doxo} and the parametrization is presented in tabla \ref{table:drugs}.\addcite[PerezChavez2020]
 
+Consideraremos la absorci\'on de los f\'armacos quimioterap\'euticos Daunorrubicina (Dauno) y Doxorrubicina (Doxo) a los microgeles P(NIPAm-MAA) en diferentes condiciones.
+El modelo molecular aplicado para describir estos analitos se ilustra en la figura \ref{fig:dauno-doxo} y la parametrizaci\'on se presenta en la tabla \ref{table:drugs}.\addcite[PerezChavez2020]
 
 \begin{table}
 %\small
@@ -464,59 +466,57 @@ $D4$ (Doxo) & 8.46 & -1$^\ast$ & 0.035\\
 $D4$ (Dauno) & - & 0 & 0.035 \\
     \hline
   \end{tabular}
- \caption{Molecular properties of the different coarse grained units used to model Daunorubicin and Doxorubicin (see figura \ref{fig:dauno-doxo}).
-\footnotesize ($^\ast$For the ionized unit.)}
+ \caption{Porpediades moleculares para las distintas unidades de grano grueso usadas para el modelado de las drogas Daunorubicina y Doxorubicina. (ver figura \ref{fig:dauno-doxo}).
+\footnotesize ($^\ast$ Para unidades ionizables.)}
 \label{table:drugs} 
 \end{table}
 
 
 
 
-\section{Results and Discussion}
+\section{Resultados y discusi\'on}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Response to pH and Salt Concentration}\label{sec:pH_salt}
+\subsection{Respuesta al pH y la concentraci\'on de sal}\label{sec:pH_salt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.5\linewidth]{Figures/graph-gel/R-pH.png}
-\caption{Plot of microgel size (A) and degree of charge (B) as a function of pH for solutions having different salt concentrations and $T=25 ^\circ C$.
-Polymer chains in the MG100-35 microgel are $n_{ch}=100$-long having $35\% $ MAA.
-The dashed-line curve in panel B is the ideal dissociation of methacrylic acid ($pKa=4.65$).
-Color circles on the curves of panel A mark the microgel apparent pKa.}
+\caption{Gr\'afico de tama\~no de microgel (A) y grado de carga (B) en funci\'on del pH para soluciones que tienen diferentes concentraciones de sal y $T=25 ^\circ C$.
+	Las cadenas de pol\'imero en el microgel MG100-35 son $n_{ch}=100$-long y tienen $35\% $ MAA.
+	La curva de línea punteada en el panel B es la disociaci\'on ideal del \'acido metacr\'ilico ($pKa=4.65$).
+	Los c\'irculos de color en las curvas del panel A marcan el pKa aparente del microgel.}
 \label{fig:R-pH}
 \end{figure}
 
-
-In this section, we will describe the behavior of the microgels in response to changes in the composition of the embedding solution.
-We concentrate on temperatures below that of PNIPAm LCST;
-the effect of temperature will be evaluated in \ref{sec:temperature}.
-
-Figura \ref{fig:R-pH}A shows the microgel size (radius, $R$) as a function of pH for different salt concentrations.
-P(NIPAm-MAA) microgels swell with increasing pH.
-As the pH is raised, an increasing number of MAA units deprotonate and become charged.
-fihura \ref{fig:R-pH}B shows how the fraction of charged MAAs ($f$: degree of charge; see eq. \ref{eq:fcharge}) depends on the solution pH.
-The microgel swelling observed in panel A as pH rises is the response to the growing intra-network repulsions that result from the increasing electric charge on the polymer seen in panel B.
+En esta secci\'on, describiremos el comportamiento de los microgeles en respuesta a cambios en la composici\'on de la soluci\'on.
+Nos concentramos en temperaturas por debajo de la LCST del PNIPAm;
+el efecto de la temperatura se evaluar\'a en \ref{sec:temperature}.
 
 
+La Figura \ref{fig:R-pH}A muestra el tama\~no del microgel (radio, $R$) en funci\'on del pH para diferentes concentraciones de sal.
+Los microgeles P(NIPAm-MAA) se hinchan al aumentar el pH.
+A medida que aumenta el pH, un n\'umero creciente de unidades MAA se desprotona y se carga.
+Figura \ref{fig:R-pH}B muestra c\'omo la fracci\'on de MAA cargados ($f$: grado de carga; ver ec. \ref{eq:fcharge}) depende del pH de la soluci\'on.
+La hinchaz\'on del microgel observada en el panel A a medida que aumenta el pH es la respuesta a las crecientes repulsiones dentro de la red que resultan del aumento de la carga el\'ectrica en el pol\'imero que se ve en el panel B.
 
-The onset of the swelling transition displaces to higher pH values when lowering the salt concentration (salt, fig. \ref{fig:R-pH}A).
-The proton dissociation curves of panel B present the same displacement to higher pHs, with respect to the ideal behavior of an isolated MAA monomer in dilute solution.
-The apparent pKa of a microgel is the pH at which half of MAA segments are deprotonated;
-it quantifies the microgel charging behavior, fig. \ref{fig:R-pH}B, but also the swelling transition as we see in panel A (see circles at $pH=pKa$).
-The apparent pKa's of fig. \ref{fig:R-pH}B are displayed in tabla \ref{table:pKa_app}.
 
+El inicio de la transici\'on de hinchamiento se desplaza a valores de pH m\'as altos cuando se reduce la concentraci\'on de sal (ver fig. \ref{fig:R-pH}A).
+Las curvas de disociaci\'on de protones del panel B presentan el mismo desplazamiento a pHs m\'as altos, con respecto al comportamiento ideal de un mon\'omero MAA aislado en soluci\'on diluida.
+El pKa aparente de un microgel es el pH al que se desprotonan la mitad de los segmentos MAA;
+cuantifica el comportamiento de carga del microgel, fig. \ref{fig:R-pH}B, pero tambi\'en la transici\'on de expansi\'on como vemos en el panel A (ver circulos en $pH=pKa$).
+Los pKa aparentes de la fig. \ref{fig:R-pH}B se muestran en la tabla \ref{table:pKa_app}.
 
 \begin{table}[!htb]
 \small
   \begin{tabular}{|cc|}
     \hline
-      [salt] (M)& App. pKa ($25 ^\circ C$)  \\
+      [NaCl] (M)&  pKa app. ($25 ^\circ C$)  \\
       \hline
     $10^{-5}$ & 8.10  \\
     $10^{-4}$ & 7.15 \\
@@ -526,58 +526,52 @@ The apparent pKa's of fig. \ref{fig:R-pH}B are displayed in tabla \ref{table:pKa
     ideal (pKa) &  $4.65$  \\
     \hline
   \end{tabular}
- \caption{Apparent pKa's of fig. \ref{fig:R-pH} for a MG100-35 at $25 ^\circ C$.}
+ \caption{ pka's aprente de la fig. \ref{fig:R-pH} para un gel MG100-35 a $25 ^\circ C$.}
 \label{table:pKa_app} 
 \end{table}
 
 
-
-A relatively high concentration of salt ions inside the microgel, results in the screening of the electrostatic repulsions between charged MAA segments;
-effectively, these repulsive interactions become short range.
-When the solution pH increases, MAA dissociation proceeds without a high energetic cost of electrostatic repulsions.
-Under these conditions MAA deprotonation, induced by the chemical free energy (acid-base equilibrium), approaches the ideal or dilute solution behavior (compare the high-[salt] cases with the dashed-line curve in fig. \ref{fig:R-pH}B).
+Una concentraci\'on relativamente alta de iones de sal dentro del microgel da como resultado la detecci\'on de las repulsiones electrost\'aticas entre los segmentos MAA cargados; estas interacciones repulsivas se vuelven de corto alcance.
+Cuando el pH de la soluci\'on aumenta, la disociación de MAA sucede sin un alto costo energ\'etico de repulsiones electrost\'aticas.
+En estas condiciones, la desprotonaci\'on de MAA, inducida por la energ\'ia qu\'imica libre (equilibrio \'acido-base), se aproxima al comportamiento ideal o de soluci\'on diluida (compare los casos de alta [sal] con la curva de l\'inea punteada en la fig. \ref{fig:R -pH}B).
 
 
 
-On the contrary, the screening effect weakens and intra-network electrostatic repulsions are effectively longer range for low salt concentration solutions.
-Even if few distant charges appear on the network, they will interact with each other.
-To reduce the energetic contribution of such electrostatic repulsions, MAA units are significantly less likely to be charged under low salt conditions;
-the apparent pKa increases.
-The price to pay instead is increasing the chemical free energy, whose contribution is minimized when the degree of protonation is ideal.
+Por el contrario, el efecto de apantallamiento se debilita y las repulsiones electrost\'aticas dentro de la red son de mayor alcance para soluciones con baja concentraci\'on de sal.
+Incluso si aparecen pocas cargas distantes en la red, interactuar\'an entre s\'i.
+Para reducir la contribuci\'on energ\'etica de tales repulsiones electrost\'aticas, es significativamente menos probable que las unidades MAA se carguen en condiciones de baja salinidad;
+el pKa aparente aumenta.
+El precio a pagar en cambio es aumentar la energ\'ia química libre, cuya contribuci\'on se minimiza cuando el grado de protonaci\'on es ideal.
+
 
 
 \begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{Figures/graph-gel/R-cs.png}
-	\caption{Plot of the microgel size as a function of the salt concentrations for different pH solutions and $T=25 ^\circ C$.
-		The panels correspond to MG-100 microgels (chain length, $n_{ch}=100$) having MAA fractions: $10\%$ (A), $35\%$ (B) and $50\%$ (C).}
+	\caption{Gr\'afico del tama\~no del microgel en funci\'on de las concentraciones de sal para diferentes soluciones de pH y $T=25 ^\circ C$.
+		Los paneles corresponden a microgeles MG-100 (longitud de cadena, $n_{ch}=100$) que tienen fracciones MAA: $10\%$ (A), $35\%$ (B) y $50\%$ (C).}
 	\label{fig:R-cs}
 \end{figure*}
 
+La figura \ref{fig:R-cs} ilustra c\'omo el tama\~no de los microgeles de P(NIPAm-MAA) depende de la concentraci\'on de sal para diferentes valores de pH.
+A una salinidad relativamente alta, estos microgeles se hinchan con el aumento de la concentraci\'on de sal, lo que es consistente con los resultados de dispersi\'on de luz din\'amica (DLS) de \addcite[citet:Wong2009] para microgeles P(NIPAm-MAA) y concentraciones de NaCl en el rango de $0.1-0.5 M$.
+
+Las curvas de la Figura \ref{fig:R-cs} muestran un comportamiento reentrante, en el que el tama\~no primero aumenta y luego disminuye al aumentar la concentración de sal.
+Esta respuesta no monot\'onica es m\'as prominente cuando la carga del pol\'imero aumenta debido a un mayor contenido de pH o MAA (compare diferentes paneles de firgura \ref{fig:R-cs}).
 
 
 
-Figura \ref{fig:R-cs} illustrates how the size of P(NIPAm-MAA) microgels depends on the salt concentration for different values of pH.
-At relatively high salinity, these microgels deswell with increasing salt concentration, which is consistent with the dynamic light scattering (DLS) results of \addcite[citet:Wong2009]  for P(NIPAm-MAA) microgels and NaCl concentrations in the range $0.1-0.5 M$.
+Se han informado transiciones de hinchamiento-deshinchamiento con concentraciones de sal variables para una variedad de sistemas polim\'ericos reguladores de carga.
+El grosor de las capas de poli\'acidos d\'ebiles anclados es una funci\'on no monot\'onica de la concentraci\'on de sal de la soluci\'on seg\'un lo predicho por la teor\'ia del campo medio autoconsistente \addcite[Israels1994,Lyatskaya1995,Zhulina1995,Gong2007], que ha sido confirmada por resultados experimentales \addcite [Wu2007].
+De manera similar, los resultados te\'oricos predicen que el tama\~no de los polielectrolitos d\'ebiles ramificados en estrella muestra un m\'aximo en funci\'on de la concentraci\'on de sal en la soluci\'on \addcite[Borisov1998,KleinWolterink2002];
+Tambi\'en se ha predicho que el espesor de las pel\'iculas de poliácidos d\'ebiles entrecruzados mostrar\'a este comportamiento de hinchamiento reentrante \addcite[Longo2014JCP].
 
-The curves of Figura \ref{fig:R-cs} display a re-entrant behavior, in which the size first increases and then decreases when raising the salt concentration.
-This nonmonotonic response is more prominent when the polymer charge increases due to either a higher pH or MAA content (compare different panels of firgura \ref{fig:R-cs}).
-
-
-
-Swelling-deswelling transitions with varying salt concentration have been reported for a variety of charge-regulating polymeric systems.
-The thickness of layers of grafted weak polyacids is a nonmonotonic function of the solution salt concentration as predicted by scaling and self-consistent mean-field theory \addcite[Israels1994,Lyatskaya1995,Zhulina1995,Gong2007], which has been confirmed by experimental results \addcite[Wu2007].
-Similarly, theoretical results predict that the size of star-branched weak polyelectrolytes displays a maximum as function of the solution salt concentration \addcite[Borisov1998,KleinWolterink2002]; 
-the thickness of grafted films of crosslinked weak polyacids has also been predicted to show this re-entrant swelling behavior \addcite[Longo2014JCP].
-
-
-
-A salt-driven deswelling to swelling transition has been predicted for strong polyelectrolyte nanogels \addcite[jha2012understanding];
-this behavior, in the case of quenched polyelectrolytes, was attributed to excluded volume effects of absorbed ions at high salt concentrations.
-More relevant to our study, a re-entrant swelling-to-collapse transition was theoretically predicted for pH- and thermoresponsive microgels \addcite[polotsky2013collapse].
-\addcite[citet:polotsky2013collapse] explain that increasing salt concentration first promotes charge dissociation of the weak acid groups until saturation is achieved when the degree of dissociation reaches the ideal value. 
-Beyond this point, increasing the salt concentration of the solution only enhances the screening of the electrostatic repulsions, and thus the microgel deswells.
-Experimentally, the nonmonotonic swelling of poly(NIPAm-\emph{co}-AA) (P(NIPAm-AA)) microgels as a function of NaCl concentration was reported by \addcite[citet:CaprilesGonzalez2008] using DLS.
+Se ha predicho una transici\'on deshinchaz\'on a hinchaz\'on impulsada por la sal para los nanogeles de polielectrolitos fuertes \addcite[jha2012understanding];
+este comportamiento, en el caso de los polielectrolitos quencheados, se atribuy\'o a los efectos de volumen excluidos de los iones absorbidos a altas concentraciones de sal.
+M\'as relevante para nuestro estudio, se predijo te\'oricamente una transici\'on de hinchaz\'on a colapso reentrante para microgeles sensibles al pH y al calor \addcite[polotsky2013collapse].
+\addcite[citet:polotsky2013collapse] explica que el aumento de la concentraci\'on de sal primero promueve la disociaci\'on de carga de los grupos \'acidos d\'ebiles hasta que se alcanza la saturaci\'on cuando el grado de disociaci\'on alcanza el valor ideal.
+M\'as all\'a de este punto, el aumento de la concentraci\'on de sal de la soluci\'on solo mejora la detecci\'on de las repulsiones electrost\'aticas y, por lo tanto, el microgel se deshincha.
+Experimentalmente, \addcite[citet:CaprilesGonzalez2008] inform\'o el hinchamiento no mon\'otónico de los microgeles de poli(NIPAm-\emph{co}-AA) (P(NIPAm-AA)) en funci\'on de la concentraci\'on de NaCl usando DLS.
 
 \begin{figure}[!tb]
 	\centering
