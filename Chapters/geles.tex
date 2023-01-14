@@ -284,11 +284,11 @@ En la soluci\'on, el potencial termodin\'amico es:
 \label{eq:bulk}
 \end{align}
 
-\noindent el subindice  $s$  indica las densidades en la soluci\'on.
+\noindent el subindice  $s$  indica las densidades en la fase soluci\'on.
 Al escribir la ec. \ref{eq:bulk}, hemos considerado un volumen de referencia igual al del microgel, $V$, y se ha considerado como cero el potencial electrost\'atico en la fase de soluci\'on.
 
 
-Una vez que se establece la composición de la solución (pH y concentraci\'on de sal), conocemos las densidades de todas las especies qu\'imicas en esta fase, que deben satisfacer tanto las restricciones de incompresibilidad como de neutralidad de carga:
+Una vez que se establece la composición de la soluci\'on (pH y concentraci\'on de sal), conocemos las densidades de todas las especies qu\'imicas en esta fase, que deben satisfacer tanto las restricciones de incompresibilidad como de neutralidad de carga:
 %
 %
 \begin{align}
@@ -306,7 +306,7 @@ Una vez que se establece la composición de la solución (pH y concentraci\'on d
 
 
 
-\noindent para $\gamma \in \left\{ w, H_3O^+, OH^-, +,- \right\}$, donde $\pi_s$ es la presión osmótica de la fase de solución introducida como un multiplicador de Lagrange por la ecuaci\'on \ref{eq:bulk-packing}.
+\noindent para $\gamma \in \left\{ w, H_3O^+, OH^-, +,- \right\}$, donde $\pi_s$ es la presi\'on osm\'otica de la fase de soluci\'on introducida como un multiplicador de Lagrange por la ecuaci\'on \ref{eq:bulk-packing}.
 Despu\'es de conocer $\pi_s$, podemos determinar las actividades de todas las especies qu\'imicas libres.
 
 \subsection{Minimizaci\'on gr\'afica}
@@ -322,14 +322,9 @@ Despu\'es de conocer $\pi_s$, podemos determinar las actividades de todas las es
 \label{fig:graph-min}
 \end{figure*}
 
-En este punto, es posible determinar completamente la energí\'i libre de la fase de microgel para cualquier $R$ dado.
+En este punto, es posible determinar completamente la energí\'ia libre de la fase de microgel para cualquier $R$ dado.
 Las variables independientes de un c\'alculo son la temperatura, el pH y la concentraci\'on de sal de la soluci\'on en contacto con la fase microgel.
 El n\'umero de segmentos en la red de pol\'imero $N_{seg}$, la longitud de la cadena $n_{ch}$ y la fracci\'on de segmentos MAA, $x_{MAA}$, caracterizan completamente el microgel.
-
-We consider microgels with $N_{seg}=10^7$ segments and $n_{ch}=50$, $100$, and $200$, having either $x_{MAA}=0.1$, $0.35$ or $0.5$.
-Our goal is to evaluate the effect of increasing or reducing the amount of acidic monomer with respect to poly(NIPAm-\emph{co}-MAA) microgels having $35\%$ MAA, which are typically synthesized in our lab \addcite[Giussi2015,Giussi2020].
-These microgels are labeled MG$n_{ch}$-$p_{MAA}$, where $p_{MAA}$ is the percentage of MAA.
-For example, MG100-10 is the microgel with  $n_{ch}=100$ and $x_{MAA}=0.1$.
 
 
 Consideramos microgeles con $N_{seg}=10^7$ segmentos y $n_{ch}=50$, $100$ y $200$, que tienen $x_{MAA}=0,1$, $0,35$ o $0,5$.
@@ -337,12 +332,6 @@ El objetivo es evaluar el efecto de aumentar o reducir la cantidad de mon\'omero
 Estos microgeles est\'an etiquetados como MG$n_{ch}$-$p_{MAA}$, donde $p_{MAA}$ es el porcentaje de MAA.
 Por ejemplo, MG100-10 corresponde a un  microgel con $n_{ch}=100$ y $x_{MAA}=0,1$.
 
-
-
-To determine the size of the microgel for a given set of conditions, we resource to a graphical minimization procedure.
-For each set of conditions (pH, salt, and $T$), we construct $\Omega(R)=\Omega_{MG}(R)-\Omega_{s}(R)$, and find $R_{opt}$, the optimal radius, such that the curve has a local (and global) minimum.
-As an example, this procedure is illustrated in figura \ref{fig:graph-min} for MG100 microgels.
-The results obtained from the graphical minimization of figura \ref{fig:graph-min} curves are summarized in tabla \ref{table:optimal-R}.
 
 Para determinar el tama\~no del microgel para un conjunto dado de condiciones, recurrimos a una minimizaci\'on gr\'afica del mismo.
 Para cada conjunto de condiciones (pH, sal y $T$), construimos $\Omega(R)=\Omega_{MG}(R)-\Omega_{s}(R)$, y encontramos $R_{opt }$, siedo este el radio \'optimo, tal que la curva tenga un m\'inimo local (y global).
@@ -370,12 +359,12 @@ Los resultados obtenidos de la minimizaci\'on de las curvas figura \ref{fig:grap
 \end{table}
 
 
-\subsection{Absroci\'on}
+\subsection{Absorci\'on}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 Para describir la absorci\'on de un analito a la fase de microgel,
-el potencial termodin\'amico de la ec. \ref{eq:free-energy} agrega los siguientes t\'erminos:
+al potencial termodin\'amico de la ec. \ref{eq:free-energy} se le adicionan los siguientes t\'erminos:
 %
 %
 %
@@ -426,12 +415,9 @@ Para la densidad del analito obtenemos:
     \end{aligned}\label{eq:rho_ads}
 \end{align}
 %
-\noindent where this last equation requires a redefinition of $\mu_a$ and $\mu_a^0$.
-Similar expressions to eq. \ref{eq:rho_ads} and eq. \ref{eq:f_ads} are derived for the solution phase.
 
-
-
-
+\noindent donde esta \'ultima ecuaci\'on requiere una redefinici\'on de $\mu_a$ y $\mu_a^0$.
+Expresiones similares a la ec. \ref{eq:rho_ads} y ec. \ref{eq:f_ads} se derivan para la fase de soluci\'on.
 
 
 
@@ -443,10 +429,6 @@ Similar expressions to eq. \ref{eq:rho_ads} and eq. \ref{eq:f_ads} are derived f
 \label{fig:dauno-doxo}
 \end{figure}
 
-
-
-We will consider the absorption of the chemotherapeutic drugs Daunorubicin (Dauno) and Doxorubicin (Doxo) to the P(NIPAm-MAA) microgels under different conditions.
-The molecular model applied to describe these analytes is illustrated in figura  \ref{fig:dauno-doxo} and the parametrization is presented in tabla \ref{table:drugs}.\addcite[PerezChavez2020]
 
 Consideraremos la absorci\'on de los f\'armacos quimioterap\'euticos Daunorrubicina (Dauno) y Doxorrubicina (Doxo) a los microgeles P(NIPAm-MAA) en diferentes condiciones.
 El modelo molecular aplicado para describir estos analitos se ilustra en la figura \ref{fig:dauno-doxo} y la parametrizaci\'on se presenta en la tabla \ref{table:drugs}.\addcite[PerezChavez2020]
