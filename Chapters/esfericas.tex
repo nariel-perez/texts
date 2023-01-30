@@ -162,6 +162,8 @@ these special cases are described in the SI.
 \small
 \begin{tabular}{|lcc|lcc|}
 \hline
+grupo & v($nm^{-3}$) & pka & grupo & v($nm^{-3}$) & pka \\
+\hline
 Ala & 0.067 &  & Pro & 0.090 & \\
 Arg & 0.148 & $12.5 (+)$& Ser & 0.073 &\\
 Asn & 0.096 &  & Thr & 0.093 & \\
@@ -280,26 +282,22 @@ We consider different pH-responsive nanogels, containing either acid (MAA) or ba
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Nanogel response}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-First, we will examine the nanogels behavior as a function of pH when no proteins are present.
-To  quantify the size of a nanogel, we use the ensemble average radius of the particle, $R$, which can be calculated using:
+Primero, examinaremos el comportamiento de los nanogeles en funci\'on del pH cuando no hay prote\'inas presentes.
+Para cuantificar el tama\~no de un nanogel, usamos el radio promedio conjunto de la partí\'icula, $R$, que se puede calcular usando:
 \begin{align}
     R= \frac{4}{3}\frac{\int_0^\infty{dr\,G(r)\,r \left<\phi(r)\right>}}{\int_0^\infty{dr\,G(r)\left<\phi(r)\right>}}
 \end{align}
-where $r$ is distance from the center of mass of the polymer network (our theory assumes radial symmetry);
-$\left<\phi(r)\right>$ is the local volume fraction of  polymer including all types of segments, ionizable and charge neutral ones;
-angle brackets indicate ensemble average over the different network conformations;
-$G(r)=4\pi r^2$ is the surface area of the sphere of radius $r$.
-
-
-
+donde $r$ es la distancia desde el centro de masa de la red polim\'erica (nuestra teor\'ia asume simetr\'ia radial);
+$\left<\phi(r)\right>$ es la fracci\'on de volumen local del pol\'imero que incluye todos los tipos de segmentos, ionizables y de carga neutra;
+los corchetes angulares indican el promedio del conjunto sobre las diferentes conformaciones de la red;
+$G(r)=4\pi r^2$ es el \'area superficial de la esfera de radio $r$.
 
 \begin{figure}[!htb]
      \centering
      \includegraphics[width=0.9\textwidth]{Figures/graphs-gel2/rr.png}
-     \caption{Ensemble average radius, R, as a function of pH for MAA-VA (panel A) and AH-VA (panel B) copolymer nanogels. 
-     Three different structures are considered in each case where the functional units (MAA/AH) are either distributed randomly throughout the polymer network (RF), they occupy the center of the network (CF), or they modify the dangling chains within the polymer-solution interface (SF).
-     In all cases, $22\%$ of the segments in these networks are pH-sensitive; NaCl concentration is $10^{-3}M$.}
+     \caption{Conjunto de radio promedio, R, en funci\'on del pH para nanogeles de copo\'imero MAA-VA (panel A) y AH-VA (panel B).
+     	Se consideran tres estructuras diferentes en cada caso donde las unidades funcionales (MAA/AH) se distribuyen aleatoriamente a lo largo de la red polim\'erica (RF), ocupan el centro de la red (CF), o modifican las cadenas colgantes dentro del pol\'imero. interfaz de soluci\'on (SF).
+     	En todos los casos, el $22\%$ de los segmentos de estas redes son sensibles al pH; La concentraci\'on de NaCl es $10^{-3}M$.}
      \label{fig:gel-charge-MAA-AH}
 \end{figure}
 
