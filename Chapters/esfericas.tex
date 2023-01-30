@@ -1,0 +1,683 @@
+\chapter{esfericas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+    
+
+
+%%%%% Functional vehicles 
+
+The design of functional vehicles for the encapsulation, transport and release on target of therapeutic agents is one of the major challenges of bionanotechnology \addcite[ye2018review].
+Despite being formulated to specifically treat certain diseases, many drugs fail to capitalize on their design properties due to  unwanted interactions with the environment surrounding the target \addcite[ibraheem2014administration].
+Nanoparticles are being explored as a solution to these limitations, serving as smart carriers that can  protect drugs against harmful environmental factors.
+Various nanocarriers, including liposomes, polymeric micelles, and inorganic particles have been investigated for their potential to effectively transport and release molecular cargo \addcite.
+These nanocarriers can increase circulation time while conferring stealth properties to the complex, helping evade the immune or digestive systems \addcite.
+By increasing the circulation time, nanocarries can also help reduce the need for frequent dosing.
+
+
+
+
+
+
+
+
+Nanogels, in particular, are soft nanoparticles with diameters smaller than 200\,nm that can uptake and release relatively large quantities of solvent in response to changes in the surrounding environment.
+Depending on the chemical composition of the crosslinked polymer that makes the nanogel skeleton, these particles can reversibly swell or deswell as a result of changes in temperature \addcite[agnihotri2021temperature], pH \addcite[sharma2022modulating], salt concentration \addcite[saraydin2022calculations] and a variety of external stimuli \addcite[jung2020responsive,plamper2017functional, yang2022co].
+These unique properties of polymer nanogels can be exploited to target drug delivery to specific microenvironments, such as the acidic surroundings of tumors \addcite[zhang2020construction] or wounded or inflamed tissue with higher temperatures \addcite[wu2010core].
+Besides, moieties can be incorporated on its polymeric surface to enhance specificity of the delivery, allowing the nanogel to selectively bind receptors on the target \addcite.
+The ability of nanogels to release medication in a controlled manner to specific environments can help prevent the emergence of drug resistance \addcite.
+
+
+
+
+
+
+
+A significant and growing fraction of newly developed drugs to treat different diseases are proteins \addcite.
+The stability of these proteins is an issue, as they are easily denatured by changes in pH or temperature \addcite.
+Polymer hydrogels have been shown to help prevent protein denaturation and loss of activity under these conditions \addcite
+The potential to maintain the native conformation of proteins, combined with the stimuli-responsive behavior of nanogels, makes them suitable candidates to develop functional vehicles for the encapsulation, transport and targeted release of therapeutic proteins.
+Additionally, the polymer network of nanogels can be tailored with different functional groups to control both the specific or non-specific  interactions with proteins, thereby increasing the efficacy of encapsulation/delivery.
+
+
+Despite their many advantages, the development of nanogel-based drug delivery systems is still in its early stages, and there are still many questions that need to be addressed before this technology can be fully realized.
+In particular, as they are required to function in various biological fluids, understanding how nanogels behave and interact with proteins in terms of the composition of its polymer network and that of the  protein solution is crucial for their successful application.
+In this work, we use a theoretical approach to study how the chemical identity and the spatial distribution of functional groups on the polymer network modify nanogel response and its interaction with specific proteins, with a specific focus on electrostatically driven protein adsorption/desorption.
+Our goal is to provide a better basic understanding of the factors that influence the performance of these systems and to identify strategies to improve their effectiveness in the context of drug delivery nanovehicles.
+
+
+
+
+
+
+We consider nanogels made of copolymer networks containing both a hydrophilic, charge-neutral monomer and a pH-responsive one, and their interactions with small globular proteins, such as cytochrome c, insulin, and myoglobin, which have different isoelectric points.
+ROJO
+The interaction of these proteins with polymeric systems have been studied previously \addcite[hagemann2018use,oberle2015competitive].
+These polymeric systems have also been studied using the theory and molecular simulations.\addcite[sharma2022modulating,hofzumahaus2021monte,polotsky2013collapse, walkowiak2020thermodynamic]
+ROJO
+In particular, the search for more effective and less invasive means of insulin administration has presently immense importance in biomedical research \addcite[lowman1999oral,wong2018microparticles,chaturvedi2013polymeric].
+
+
+
+
+We study nanogels based on copolymers of vinyl alcohol (VA) and either a methacrylic acid (MAA; proton donor) or allylaimine (AH; proton acceptor).
+Due to their biocompatibility these monomers are widely used for potential drug delivery applications \addcite[]asadi2020common,sarwar2020smart,lowman1999oral].
+With the goal of gaining a deeper understanding of the factors that affect the performance of these systems and identifying strategies for adjusting their interactions with different proteins, we derive and apply a statistical thermodynamic theory that allows for a molecular-level description of all chemical species.
+This method incorporates an explicit description of network conformations that result in elasticity, ion and solvent confinement entropic effects, acid-base equilibrium chemistry as well as electrostatic interactions and steric repulsions.
+Specifically, we investigate the effect of the spatial distribution of pH-sensitive units through the polymer network on the nanogel swelling and protein adsorption.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Method: Molecular Theory}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Theoretical Framework}\label{sect:theory}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+ 
+
+This study presents a self-consistent molecular theory to address the effect of the spatial distribution of pH-responsive groups on the thermodynamics of  protein adsorption to polymer nanogels.
+This theory is based on the developments of Szleifer and collaborators to study weak polyelectrolyte surfaces \addcite[nap2006weak,Gong2007PRL].
+We have previously extended this method to investigate the adsorption of proteins to pH-responsive hydrogel films \addcite[hagemann2018use,longo2019protonation].
+Here, we generalize the approach to describe the behavior of nanogels made of crosslinked pH-responsive copolymer chains in contact with a protein solution.
+ 
+
+
+This method involves minimizing a generalized free energy that includes all relevant physical chemistry.
+Additionally, it incorporates a coarse-grained molecular characterization of the various chemical species present in the system, including their shape, size, charge distribution, and protonation state.
+The system under study is a single nanogel in equilibrium with an aqueous solution having externally defined bulk composition.
+Namely, the pH, salt concentration and protein concentration are the independent variables.
+The polymer network that gives structure to the nanogel  contains two types of segments: a pH-sensitive unit, either acidic (MAA) or basic (AH), and neutral segment (VA); 
+crosslinks are described as charge neutral segments.
+The semi-grand potential of this system contains the following contributions:
+\begin{align}
+\begin{aligned}
+\Omega_{NG}=& -TS_{mix} -TS_{conf,nw} + F_{chem,nw} + F_{chem,pro}\\
+& + U_{elec} + U_{ste}  - {\sum_{\gamma}{\mu_\gamma N_\gamma}}
+\end{aligned}
+\label{eq:semicano}
+\end{align}
+\noindent where $S_{mix}$ is the translational (mixing) entropy of the solution species: water molecules (H$_2$O), hydronium ions (H$_3$O$^+$), hydroxide ions (OH$^-$), salt cations, salt anions and proteins.
+We consider a monovalent salt, NaCl, and assume it is completely dissociated into sodium (Na$^+$) and chloride ions (Cl$^-$).
+$S_{conf,nw}$ represents the conformational entropy that results from the flexibility of the polymer network, which can assume many different conformations. 
+$F_{chem,nw}$ is the chemical free energy that describes the equilibrium between the protonated and deprotonated species of functional (acid/basic) units on the polymer. 
+Similarly, $F_{chem,pro}$ describes the protonation of titratable residues of the protein.
+$U_{elec}$ and $U_{ste}$ account, respectively, for the electrostatic interactions and steric repulsions.
+Finally, the sum over $\gamma$ expresses the chemical equilibrium between our system and the bulk solution that represent a bath for the free particles, where $\mu_\gamma$ and $N_\gamma$ are the chemical potential and number of molecules of species $\gamma$, respectively;
+the subindex $\gamma$ runs over the free chemical species, including proteins.
+Note that $\Omega_{NG}$ is a semi-grand potential because the nanogel  can exchange each of these free molecules with the bulk solution, while the polymer network is confined within our system.
+A detailed derivation of the theory can is presented in the SI.
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Molecular Model: Proteins}\label{sect:protein}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+We consider three different proteins:  cytochrome c, insulin and myoglobin.
+To describe these molecules we use a coarse-grained model where each amino acid residue is described by a single particle centered at the position of the $\alpha$-carbon.
+The sequence and position of all $\alpha$-carbons are taken from the crystallographic structure in the corresponding protein data bank entry \addcite[berman2000protein]: 2B4Z for cytochrome c \addcite[mirkin2008high], IZNI for insulin \addcite[bentley1976structure], and 3RGK for myoglobin \addcite[hubbard1990x]. 
+ 
+ 
+
+The coarse-grained particles in this model are each assigned a volume and a pKa (if the unit is titratable) according to the amino acid that they represent; 
+this is summarized in  tabla \ref{table:Coarse-grain}.
+These pKa's are taken from experimental data and represent average values over a large number of proteins \addcite[grimsley2009summary].
+In most occurrences of a residue, its pKa does not significantly deviate from the average value.
+In  specific instances, however, some residues display a different pKa;
+these special cases are described in the SI.
+
+
+\begin{table}
+\centering
+\small
+\begin{tabular}{|lcc|lcc|}
+\hline
+Ala & 0.067 &  & Pro & 0.090 & \\
+Arg & 0.148 & $12.5 (+)$& Ser & 0.073 &\\
+Asn & 0.096 &  & Thr & 0.093 & \\
+Asp & 0.091 & $3.5 (-)$ & Trp & 0.163 &\\
+Cys & 0.086 &  & Tyr & 0.141 & $10.3 (-)$\\
+Gln & 0.114 & & Val & 0.105 &\\  
+Glu & 0.109 & $4.2 (-)$ & H$_2$O & 0.033 & \\ 
+Gly & 0.048 &  & OH$^-$ & 0.033 & \\
+His & 0.118 & $6.6 (+)$& H$_3$O$^+$ & 0.033 &  \\ 
+Ile & 0.124 &  & Na$^+$ & 0.043 & \\ %
+Leu & 0.124 &  & Cl$^-$ & 0.047 & \\
+Lys & 0.135 & $10.5 (+)$ & AH & 0.068 &  9.5(+)\\
+Met & 0.124 & & MAA & 0.085 & $4.65(-)$\\
+Phe & 0.135 &   & VA & 0.085 & \\
+\hline
+\end{tabular}
+\caption{Volume and pKa of the coarse-grained particles (amino acid residues, small ions, solvent molecules and polymer segments)  considered in our molecular model.}
+\label{table:Coarse-grain} 
+\end{table}
+
+
+Using this molecular model,  figura \ref{fig:protein-charge} shows the charge (number) of the three proteins in dilute solution as a function of  pH.
+The isoelectric point (pI) is the pH at which the net charge of a protein is zero.
+From the graph, we obtain the values  9.65 (9.6 \addcite[hristova2019isoelectric]), 5.5 (5.3 \addcite[guckeisen2019isoelectric]), 7.15 (7.2 \addcite[batys2020myoglobin]) for the pI of cytochrome c, insulin, and myoglobin respectively;
+the values in parentheses are the pI of the proteins reported experimentally. 
+
+
+ \begin{figure}[!htb]
+     \centering
+     \includegraphics[width=0.65\textwidth]{Figures/graphs-gel2/protein-model.png}
+     \caption{Left: Charge number of the proteins in a dilute solution as a function of  pH (solid-line curves);
+     filled circles mark  the isoelectric point,
+     where the net charge of the protein is zero.
+     The coarse-grained representation of the proteins is illustrated on the right, where amino acid residues are represented by a single sphere (red: acidic; blue: basic; gray: charge-neutral residues).}
+     \label{fig:protein-charge}
+ \end{figure}
+
+
+
+
+
+
+ 
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Molecular model: Nanogel Network}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Besides the protein model presented in sec.  \ref{sect:protein},   we need to specify a molecular model to describe the polymer network that makes the nanogel backbone.
+Such model must provide  a set of molecular configurations of the polymer network that is representative of the whole conformational space.
+A particular network conformation is given by the spacial position of all its segments.
+
+
+The nanogel network is composed of 25 segment-long  crosslinked polymer chains. 
+In total this network contains 10054 segments.
+Each segment is a coarse-grained   representation of either a crosslink, a charge neutral unit (VA) or an acid/basic monomer (MAA/AH). 
+tabla \ref{table:Coarse-grain} includes the volume and pKa (if the unit is titratable) used to describe these coarse-grained units.
+
+The polymer network has diamond-like topology, where  crosslinks are placed at the original position of carbon atoms and connected to four polymer chains.
+To build this network, we first construct a three-dimensional structure where all the polymer chains are elongated, to then only keep the segments contained within a sphere of radius $R_{cut}$ placed at the center of mass of the structure; $R_{cut}$ is selected such that the network will have 10000 segments approximately.
+Originally, all polymer chains connect two crosslinks, but as a result of this procedure some will be left dangling on the network surface,  connected to a single crosslink.
+Most of these superficial \emph{dangling} chains are shorter than 25 segments.
+Altogether these chains contain 22\% of the total number of segments.
+To generate the different molecular conformations of the polymer network, we have performed Molecular Dynamics simulations using GROMACS 5.1.2 \addcite[indahl2001gromacs] (details are given in the SI).
+
+ \begin{figure}[!htb]
+     \centering
+     \includegraphics[width=0.99\textwidth]{Figures/graphs-gel2/paper2.png}
+     \caption{A: The nanogel network consists of crosslinked copolymer chains of a charge-neutral segment (VA: vinyl alcohol) and a functional unit (either MAA: methacrylic acid or AH: allylamine).
+    This scheme illustrates the three different comonomer distributions considered;  from left to right: RF: a random distribution of functional groups throughout the network; CF: the functional units occupy the center/core of the network; SF: only the free-end dangling chains on the network surface are functionalized with pH-responsive units.
+B: Plot of the ideal pH-dependent degree of charge of the isolated functional unit in dilute solution.}
+     \label{fig:gel-topologies}
+ \end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+We consider different pH-responsive nanogels, containing either acid (MAA) or basic (AH) groups, and evaluate three different topologies for the spatial distribution of these functional  segments, which are schematized in figura \ref{fig:gel-topologies}: 
+(i) a \emph{randomly functionalized} (RF) structure where the pH-responsive segments are spread throughout the network  at random,
+(ii) a \emph{core functionalized} (CF) structure, where the  pH-sensitive units occupy the center of the network, and 
+(iii) a \emph{surface functionalized} (SF) structure in which only the dangling chains on the network surface  are ionizable. 
+
+ 
+ 
+  
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results and discussion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Nanogel response}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+First, we will examine the nanogels behavior as a function of pH when no proteins are present.
+To  quantify the size of a nanogel, we use the ensemble average radius of the particle, $R$, which can be calculated using:
+\begin{align}
+    R= \frac{4}{3}\frac{\int_0^\infty{dr\,G(r)\,r \left<\phi(r)\right>}}{\int_0^\infty{dr\,G(r)\left<\phi(r)\right>}}
+\end{align}
+where $r$ is distance from the center of mass of the polymer network (our theory assumes radial symmetry);
+$\left<\phi(r)\right>$ is the local volume fraction of  polymer including all types of segments, ionizable and charge neutral ones;
+angle brackets indicate ensemble average over the different network conformations;
+$G(r)=4\pi r^2$ is the surface area of the sphere of radius $r$.
+
+
+
+
+\begin{figure}[!htb]
+     \centering
+     \includegraphics[width=0.9\textwidth]{Figures/graphs-gel2/rr.png}
+     \caption{Ensemble average radius, R, as a function of pH for MAA-VA (panel A) and AH-VA (panel B) copolymer nanogels. 
+     Three different structures are considered in each case where the functional units (MAA/AH) are either distributed randomly throughout the polymer network (RF), they occupy the center of the network (CF), or they modify the dangling chains within the polymer-solution interface (SF).
+     In all cases, $22\%$ of the segments in these networks are pH-sensitive; NaCl concentration is $10^{-3}M$.}
+     \label{fig:gel-charge-MAA-AH}
+\end{figure}
+
+
+
+Figura \ref{fig:gel-charge-MAA-AH} shows $R$  as a function of  pH for the  three different structures considered: RF, CF and SF. 
+Panel A describes a MAA-based nanogel, while  panel B a AH-based nanogel.
+In both cases, the salt concentration is 1\,mM, and the fraction of functional monomer (MAA or AH) is  $22\%$.
+The randomly and core functionalized MAA-based nanogels both swell with increasing pH (panel A).
+This is because MAA segments deprotonate and become electrically charged as the pH increases (see figura \ref{fig:gel-topologies}B), which results in intra-network electrostatic repulsions.
+The distance between charged MAA units must increase to reduce these repulsive interactions, and the network swells to place these segments further apart.
+To decrease the repulsion between charged MAA units, the their spatial distance must increase, resulting in a net expansion of the network.
+
+
+
+The surface functionalized MAA network, on the other hand, displays a completely different swelling behavior in figura \ref{fig:gel-charge-MAA-AH}A.
+This nanogel deswells as the titratable units become charged with increasing pH.
+To explain this counterintuitive behavior, we need to look at the local polymer distribution inside these structures under different conditions.
+To do this, we use the radial distribution of functional monomers.
+For MAA nanogels, such quantity is  defined as:
+%
+\begin{align}
+    \lambda_{MAA}(r)= 4\pi r^2\left<\phi_{MAA}(r)\right>
+\end{align}
+%
+\noindent where $\left<\phi_{MAA}(r)\right>$ gives the local volume fraction of methacrylic acid segments.
+Note that  $\lambda_{MAA}(r) dr$ gives the number of MAA segments in the spherical shell between $r$ and $r+dr$ measured from the center of the nanogel.
+Moreover, the integral $\int_0^\infty \lambda_{MAA}(r) dr$ gives the total number of MAA monomers in the network.
+
+
+
+
+\begin{figure}[!htb]
+     \centering
+     \includegraphics[width=0.45\textwidth]{Figures/graphs-gel2/dist-MAA.png}
+     \caption{Radial distribution of MAA segments, $\lambda_{MAA}(r)$,  at pH 3 and 7, and $10^{-3}M$ NaCl; each panel corresponds to a different MAA-VA nanogel having a particular network functionalization, and 22\% MAA.
+     These functional groups are fully protonated (uncharged) at pH 3 and fully dissociated (charged) at pH 7.}
+     \label{fig:MAA-vs-r-distribution}
+ \end{figure}
+ %\FloatBarrier
+
+figura \ref{fig:MAA-vs-r-distribution} shows the radial distribution of MAA segments for the different networks considered.
+In each case we include results for a pH 3 solution, where MAA segments are charge-neutral, and  pH  7  where they are fully charged;
+the intrinsic pKa of MAA is 4.65.
+For a random functionalization (panel A), the distribution of MAA segments is displaced towards the nanogel-solution interface as the network becomes electrically charged when pH increases.
+As aforementioned, this displacement occurs to reduce  the electrostatic repulsions between charged MAA segments.
+%Note that the volume of the shell that contains these segments increases with $r$.
+As a result, the whole polymer distribution stretches out as well %(see \cref*{fig:allseg_si}\hl{A and B in the SI})
+, including charge neutral VA units.
+The same behavior takes place for a core functionalization (panel B),
+although by design MAA segments in this network, whether charged or not, are more likely to occur at shorter distances from the nanogel center as compared to the other structures.
+The segment displacement to higher $r$'s observed in panels figura  \ref{fig:MAA-vs-r-distribution}A and B  explain the increase of the average nanogel size with pH  seen in  figura \ref{fig:gel-charge-MAA-AH}A for the RF and CF structures.
+
+
+On the other hand, 
+Figura \ref{fig:MAA-vs-r-distribution}C shows that the MAA distribution of the surface-functionalized nanogel  displaces inwards when the network becomes charged with pH.
+To reduce intra-network repulsions, the dangling PMAA chains, which sit at the nanogel surface at low pH, also try to also occupy the volume inside the network when they are charged.
+This  inwards shift of the distribution of polymer segments %(\hl{see also} \cref*{fig:allseg_si}C) 
+explains the deswelling behavior of the SF MAA nanogel with increasing pH seen in  figura \ref{fig:gel-charge-MAA-AH}A.
+Note, however, that despite this partial displacement towards the interior of the network, the most likely position of MAA segments is always the polymer-solution interface for low and high pH solutions.
+
+
+
+The behavior of AH-based nanogels is analogous to that of MAA-based networks, but in response to  pH changing in the opposite direction.
+AH groups protonate and become positively charged with decreasing pH (see figura  \ref{fig:gel-topologies}B).
+For randomly and core-functionalized AH-nanogels, this increase in electric charge with decreasing pH drives an outwards displacement of the segment distribution %(see \cref*{fig:AHseg_si}A and B)
+, which accounts for the swelling of figura \ref{fig:gel-charge-MAA-AH}B;
+for the SF structure, meanwhile,  the deswelling with decreasing pH seen in figura \ref{fig:gel-charge-MAA-AH}B is consistent with an inward displacement of polymer %(see \cref*{fig:AHseg_si}C).
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Protein adsorption to MAA-based nanogels}\label{sec:MAA-NGs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Define Gamma and N(r)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The preceding section evaluates the impact of network functionalization and chemical composition on the nanogel response to pH variations in the absence of proteins.
+The reorganization of polymer segments in as a result of pH changes is contingent upon a design choice: the distribution of functional units within the network.
+We will now examine the impact of this polymer reorganization on the level of protein adsorption to different nanogels and the spatial distribution of adsorbed proteins
+This section discusses the adsorption of cytochome c and myoglobin to different MAA-based nanogel structures.
+Results for insulin are omitted in this section because, due to its low isoelectric point, this protein does not adsorb to MAA-based nanogels % (see fig. \cref*{fig:adsoprtion-vs-pH-insulinMAA_si} in the SI).
+
+
+
+
+
+Consider a polymer nanogel centered at $r=0$ in contact with a aqueous protein solution.
+The number of proteins adsorbed within the spherical shell between $r$ and $r+dr$ is given by the excess quantity
+%
+\begin{align}
+     \langle N(r)\rangle dr = 4\pi r^2 \left(\langle\rho(r)\rangle - \rho_{bulk}\right) dr
+\end{align}
+%
+where $\left<\rho(r)\right>$ and $\rho_{bulk}=\lim\limits_{r\to \infty } \langle\rho(r)\rangle$ are respectively the local and bulk (number) density of protein.
+Integrating $\langle N(r)\rangle$ yields the \emph{excess adsorption} (henceforth, simply the adsorption) that quantifies the number of proteins incorporated to the polymer network,
+%
+\begin{align}
+    \Gamma =  \int_0^\infty{  \langle N(r)\rangle dr}
+\end{align}
+%
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Adsorption to MAA NGs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure}[!htb]
+\includegraphics[width=0.9\textwidth]{Figures/graphs-gel2/abcd.png}
+\caption{Plots of the excess adsorption $\Gamma$ of cytochrome c (panels A and B) and myoglobin (panels C and D) to MAA-VA nanogels as a function of pH. 
+The salt concentration is $10^{-3}M$ on the left-side panels (A and C) and $10^{-2}M$ on the right-side panels
+(B and D); the insets in these latter panels are zoom-in representations of the main plots.
+These nanogels have 22\% MAA; protein concentration is $10^{-6}M$.}
+\label{fig:adsorption-vs-pH-cyto-myo}
+\end{figure}
+
+
+
+Figura \ref{fig:adsorption-vs-pH-cyto-myo} shows the adsorption from single protein solutions of cytochrome c (top panels, A and B) and myoglobin (bottom panels, C and D) to MAA-VA nanogels having different network functionalizations;
+pH is the independent variable of these calculations, but we also evaluate the effect of NaCl concentration by comparing different panels in the same line.
+The nanogels of Figura \ref{fig:adsorption-vs-pH-cyto-myo} contain $22\%$ MAA, which means that all the segments in the superficial dangling chains of the SF network are MAA.
+First, we will discuss the features of Figura \ref{fig:adsorption-vs-pH-cyto-myo} common to all panels to later concentrate on the effect of network functionalization.
+
+
+
+Protein adsorption is a nonmonotonic function of pH with a maximum in the region between pH 5-7, which depends on the salt concentration and the specific protein.
+This pH response can be explained in terms of the electrostatic interactions and the protonation behavior of both MAA segments and that of the proteins.
+The acidic units in the polymer dissociate and the network becomes negatively charged when the pH increases above their intrinsic pKa (4.65 for MAA).
+Above this pH, but below its isoelectric point, the protein is positively charged.
+Under these conditions, the attractive protein-network interactions drive adsorption.
+At both sides of the pH scale, however, these interactions are either negligible (low pH) because MAA is protonated and charge-neutral or repulsive (high pH) because the proteins are negatively charged.
+Either situation leads to no protein adsorption ($\Gamma\approx 0$) or desorption ($\Gamma< 0$).
+
+
+
+Overall, cytochrome c and myoglobin adsorptions are qualitatively similar.
+There are two main differences: (i) the magnitude of the adsorption (cythochrome c adsorbs significantly more), and (ii) cytochrome c adsorbs in a wider pH-range, which is due to its higher isoelectric point (9.65 as compared to 7.15 for myoglobin).
+This also implies that, when other conditions are the same, the maximum level of cytochrome c adsorption takes place at a slightly higher pH.
+
+Relative to the other configurations, Figura \ref{fig:adsorption-vs-pH-cyto-myo} shows that the core distribution of MAA segments leads to significant more adsorption under most conditions. 
+We will show that this behavior occurs because such distribution of MAA segments allows for a more effective embedding of the adsorbed protein with opposite electric charge.
+On the other hand, the adsorption behavior of randomly and surface functionalized networks is strikingly similar within the pH and salt concentrations studied, and for the different proteins as well.
+The distribution of functional units between RF and SF structures differs greatly at low pH.
+However, upon polymer reorganization at higher pH as MAA units charge, these distributions become relatively similar to each other  (compare panels A and C of Figura \ref{fig:MAA-vs-r-distribution}), accounting for the comparable protein adsorption observed in RF and SF nanogels.
+
+ 
+ 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Protein localization
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!htb]
+     \centering
+     \includegraphics[width=0.45\textwidth]{Figures/graphs-gel2/cyto-adsr-pmf.png}
+     \caption{Panel A: Plot of the radial distribution  of cytochrome c molecules, $\langle N(r)\rangle$, as a function of position for MAA-VA nanogels having different functionalizations.
+     These networks have 22\% MAA, pH is 7, protein concentration is $10^{-6}M$, and NaCl concentration is $10^{-3}M$.
+     Panel B shows the potential of mean force, ${PMF}(r)$, acting on cytochrome c for the same conditions as panel A.}
+     \label{fig:adsorption-vs-r-cyto}
+ \end{figure}
+
+To explain the better performance of the core-functionalized MAA nanogels in incorporating proteins, 
+Figura \ref{fig:adsorption-vs-r-cyto}A shows the radial distribution of cytochrome c molecules as a function of the distance $r$ to the nanogel center of mass.
+The solution has pH 7 and 1\,mM NaCl, roughly corresponding to the conditions of maximum  adsorption of this protein in Figura \ref{fig:adsorption-vs-pH-cyto-myo}A.
+There is a clear correlation between the  distribution of functional groups throughout the polymer network and the location of adsorbed cytochrome c.
+
+When the center of the network is functionalized, the highest probability of finding the proteins occurs deep inside the nanogel between 20-30\,nm.
+In Figura \ref{fig:adsorption-vs-r-cyto}A the maximum number of adsorbed proteins occurs at $r=28$\,nm for $1$\,mM NaCl, and at $r=25$\,nm for 10\,mM NaCl% (\hl{see} \cref*{fig:cyto-vs-r-1d-2_si}).
+Congruently, the distribution profile of charged MAA displays a shallow maximum in this spatial region (see figura \ref{fig:MAA-vs-r-distribution}B, red curve).
+Namely, adsorbed proteins sit where they can be surrounded by oppositely charged network segments.
+Interestingly, the same phenomenon takes place in the adsorption to RF and SF nanogels.
+The distributions of charged MAA display a sharp maximum near the nanogel surface, between 45-50\,nm (see red curves in  figura \ref{fig:MAA-vs-r-distribution}, panels A and C).
+Fig 6A shows that cytochrome c is most likely to adsorb next to these  regions of high MAA (charge) density.
+
+
+
+When comparing the distributions of cytochrome c inside RF and SF nanogels in figura \ref{fig:adsorption-vs-r-cyto}A, we observe that the profiles are relatively similar to each other.
+As expected, if only the surface is functionalized, the protein profile shifts towards the polymer-solution interface.
+To further quantify the interaction with the nanogels, we use the potential of mean force acting on a protein at a distance $r$ from the center of the polymer network, defined as:
+\begin{align}
+   {PMF} (r) = -k_B T \ln \frac{\langle \rho(r)\rangle}{\rho_{bulk}}
+\end{align}
+where $\lim\limits_{r\to \infty}{PMF}(r)=0$, which means that the nanogel-protein interaction vanishes when they are sufficiently far apart.
+
+
+
+
+
+Figura \ref{fig:adsorption-vs-r-cyto}B shows ${PMF}(r)$ acting on cytochrome c at the same conditions of panel A, and for the three different nanogel functionalizations.
+Deep inside the nanogel, protein interaction with the CF structure is the strongest: $-8k_B T$ approximately in the spatial range from $r=0$ to 30\,nm.
+This interaction is relatively short-ranged because it decreases significantly above $r approx 40$\,nm.
+On the other hand,  cytochrome c interactions with RF and SF nanogels extend longer, up to $55-60$\,nm.
+Inside the nanogel, these interactions are weaker than that with the CF structure.
+The adsorption free energy is $\sim -6 k_BT$ and it remains roughly constant inside the RF nanogel.
+For the surface-functionalized nanogel, on the other hand, the minimum of ${PMF}(r)$ is also $\sim -6 k_BT$, occuring next to the polymer-solution interface ($r\approx 50$\,nm).
+As opposed to the RF structure, this interaction is not constant inside the nanogel, but it increases monotonously as $r$ decreases and the protein gets further away from the functionalized superficial dangling chains.
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%
+%%%% change in salt
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.45\textwidth]{Figures/graphs-gel2/gamma-salts-cyto.png}
+     \caption{Plot of the excess adsorption $\Gamma$ of cytochrome c as a function of salt concentration at pH 7 for MAA-VA nanogels with different network functionalizations having 22\% MAA; protein concentration is $10^{-6}M$.}
+     \label{fig:Adsorption-vs-Salt-cyto}
+ \end{figure}
+ 
+
+A feature of protein adsorption that we have not fully discussed yet is the effect of salt concentration.
+For both cytochrome c and myoglobin, figura \ref{fig:adsorption-vs-pH-cyto-myo} shows that the incorporation of proteins inside the different nanogels is significantly enhanced by decreasing the solution salt concentration.
+In order further characterize this behavior in  figura \ref{fig:Adsorption-vs-Salt-cyto} presents cytochrome c adsorption as a function of NaCl concentration at pH 7. 
+This graph shows that all network functionalizations display a qualitatively similar behavior, with a dramatic decrease in adsorption between 1 and 10\,mM NaCl.
+At 100\,mM all nanogels show negligible or negative adsorption.
+
+When the solution salt concentration is high, both Na$^+$ and Cl$^-$ ions are found in high concentrations inside the nanogel.
+These ions screen the electrostatic attractions between the positive charges of the protein and the negative charges on the polymer, which are the driving force for protein adsorption.
+Effectively, these attractions become short range and are not strong enough to result in significant if any protein adsorption.
+If the concentration of NaCl is lower, on the other hand, these electrostatic interactions are less screened and effectively longer ranged, which allows for protein adsorption.
+Thus, decreasing the salt concentration enhances adsorption.
+ROJO 
+{Such behavior has been observed in experiments, which show that there is an increase in protein adsorption at low salt concentration \addcite[becker2012proteins, henzler2010adsorption,xu2018interaction].
+Adsorption to planar and spherical polyelectrolyte brushes is significantly favored at lower salt concentrations, as demonstrated using isothermal titration calorimetry. ROJO
+
+
+
+
+In considering carriers for protein delivery applications our results suggest that the best conditions for encapsulation correspond to low salt.
+The adsorption profiles of figura \ref{fig:Adsorption-vs-Salt-cyto} are qualitatively similar for the three functionalizations,
+but the number of proteins inside the nanogel is always significantly larger for the CF structure.
+This feature may be critical in designing delivery vehicles for a target having intermediate salt concentrations.
+The CF incorporates more proteins at the same conditions, but it may not be able to release them if the target has intermediate salt concentration.
+For these conditions the random functionalization will be able to release all its cargo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Insulin adsorption AH-based nanogels} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+Insulin does not adsorb to the MAA nanogels of sec.  \ref{sec:MAA-NGs} %(see \cref*{fig:adsoprtion-vs-pH-insulinMAA_si} in SI).
+This is because the isoelectric point of insulin and the pKa of MAA are close to each other, meaning that for solutions where the protein is positively charged, the nanogel is charge neutral, and if the nanogel is negatively charged so is the protein.
+In this context, we decided to investigate insulin adsorption to an allylamine nanogel, which is positively charged below its pKa of 9.5, overlapping with the range where insulin is negatively charged.
+Other than the functional monomers, the structure of these AH-VA copolymer networks is the same as that of the MAA-VA nanogels previously described.
+
+
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Figures/graphs-gel2/insu-PAH.png}
+    \caption{Plots of adsorbed insulin molecules, $\Gamma$, as a function of pH for  AH-VA nanogels having different functionalizations.
+    The AH content is 22\% for the polymer networks of panel A and 35\% for those of panel B (this latter degree of functionalization cannot be achieved for the SF nanogel).
+    Other conditions are $10^{-3}$\,M NaCl, and [Insulin] = $10^{-6}$\,M.}
+    \label{fig:adsorption-vs-pH-insulin}
+\end{figure}
+
+
+
+
+
+
+Figura \ref{fig:adsorption-vs-pH-insulin}A shows the adsorption of insulin to AH-based nanogels having different spatial functionalizations.
+Again we have considered networks with 22\% of pH-sensitive monomers so that we can include results for the SF nanogel, whose dangling chains are AH homo-polymers.
+The main features of this plot are qualitatively similar to those of cytochrome c and myoglobin adsorption to the MAA nanogels (see Figura \ref{fig:adsorption-vs-pH-cyto-myo}).
+Namely, insulin displays a  nonmonotonic adsorption as a function of the solution pH.
+Moreover, we see that the core distribution of AH segments captures more insuline than either the random or the surface functionalizations.
+The RF and SF nanogels display relatively similar pH-dependent adsorption profiles.
+Finally, a rising salt concentration has a critical effect on the magnitude of insulin adsorption, which is because of the increasing shielding of network-protein electrostatic attractions by mobile ions (see  figura \ref{fig:adsoprtion-AH-1d-2-insu}).
+
+
+
+Despite the qualitative similarities between the adsorptions profiles of
+Figura \ref{fig:adsorption-vs-pH-insulin}A and those of cytochrome c and myoglobin (Figura \ref{fig:adsorption-vs-pH-cyto-myo}A and C), we see that the number of insulin molecules captured by the AH-networks is significantly less than that of the other proteins by the MAA-based nanogels.
+For this reason, we  will next evaluate the effect of the degree of functionalization of the polymer network to enhance protein adsorption.
+Figura \ref{fig:adsorption-vs-pH-insulin}B presents insulin adsorption for nanogels having 35\% of AH segments.
+Here, the surface functionalized structure is not included because there are not enough segments in the dangling chains.
+A higher HA content drives more adsorption, which results from comparing both panels of Figura \ref{fig:adsorption-vs-pH-insulin}.
+Once again, the CF nanogel adsorbs more insulin than the RF network (more than twice as many proteins for the conditions of this calculations).
+
+
+
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.45\textwidth]{Figures/graphs-gel2/insu-ads-pmf.png}
+    \caption{A: Plot of the local distribution of insulin molecules, $\langle N(r)\rangle$, as a function of position for AH-VA nanogels having 22\% pH-sensitive segments in different network configurations.
+    pH is 7.5, $10^{-6}$\,M insulin and  $10^{-3}$\,M NaCl.
+    B: Potential of mean force,  ${PMF}(r)$, as a function of position for the same conditions as panel A.}
+    \label{fig:adsorption-vs-r-insulin}
+\end{figure}
+
+
+
+Figura \ref{fig:adsorption-vs-r-insulin}A shows how adsorbed proteins are spatially distributed inside the different AH-based nanogels with \%22 degree of functionalization.
+The pH of these results corresponds to the adsorption maximum of Figura \ref{fig:adsorption-vs-pH-insulin}A.
+Insulin adsorption to the CF nanogel is not only significantly higher than the adsorption to the RF and SF nanogels, but it also occurs deeper inside the structure.
+The most likely position of an insulin molecule occurs around $r=25$\,nm for the CF nanogel,
+while this position moves to around $40-45$ and 50\,nm for the RF and SF structures respectively.
+
+
+
+
+For MAA-based nanogels, Figura \ref{fig:adsorption-vs-r-cyto}A shows relatively minor differences between the distributions of cytochrome c inside RF and SF networks.
+Such are differences slightly accentuated for insulin adsorption to the AH-VA nanogels, as seen in Figura \ref{fig:adsorption-vs-r-insulin}A.
+Insulin distribution is displaced to the interior of the network in the randomly modified nanogel as compared to the surface functionalization, where proteins are more likely to occupy the very vicinity of polymer-solution interface.
+Overall insulin distribution profiles are still relatively similar for these two structures.
+These results show, once again, that network design (polymer synthesis) provides a tool to control the distribution of proteins inside the nanogel.
+
+
+
+
+
+
+Panel B of figura \ref{fig:adsorption-vs-r-insulin} shows the potential of mean force acting on insulin molecules at the same conditions as panel A.
+The attractive interaction on adsorbed insulin ranges from $-8$ to $-6 k_B T$ inside the CF structure and from $-5$ to $-4 k_B T$ inside RF nanogel.
+Inside the SF nanogel the potential presents a minimum of $-4 k_B T$  at the surface and then increases monotonously as $r$ decreases inside the gel.
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+We have presented a study of protein adsorption to polymer nanogels having  different pH-responsive functionalizations.
+We have derived and applied a thermodynamic theory that can be informed by a coarse-grained molecular model.
+
+The 
+
+
+
