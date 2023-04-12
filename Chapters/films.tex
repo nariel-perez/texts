@@ -10,7 +10,106 @@
 Los films polim\'ericos o hidrogeles  consisten en una red de pol\'imeros entrecruzados altamente hidratados, generalmente biocompatibles, dependendiendo de su composici\'on qu\'imca. El ambiente acuoso dentro de los hidrogeles puede proteger a las prote\'inas de la desnaturalización y la agregaci\'on [11e13], mientras permanecen activas y estructuradas cuando se liberan de los hidrogeles [14]. En la administraci\'on oral de f\'armacos, los hidrogeles con respuesta de pH se han investigado en gran medida como veh\'iculos funcionales que pueden encapsular y administrar prote\'inas, evitando su degradaci\'on en el entorno gastrointestinal [15-17].
 
 
-En este capitulo mostraremos un estudio  de estos sistemas polim\'ericos haciendo uso de de la te\'oria molecular mostrada en el capitulo anterior. 
+En este capitulo mostraremos un estudio  de estos sistemas polim\'ericos haciendo uso de de la te\'oria molecular.
+
+
+
+\subsection{Te\'oria Molecular en films polim\'ericos}
+
+
+Este método consiste en minimizar una energía libre generalizada que incluye toda la termodinamica relevante.
+Simultáneamente, el método permite una descripción molecular de grano grueso de las diferentes especies químicas que componen el sistema.
+Dicha descripción incluye forma, tamaño, distribución de carga y estado de protonación de cada componente molecular.
+El sistema en estudio se encuentra en  equilibrio con una solución acuosa que tiene una composición  definida externamente.
+Es decir, el pH, la concentración de sal y la concentración de adsorbatos son variables independientes.
+La red polimérica que da estructura a los geles, en este casi un film, pueden contener distintos tipos de segmentos: una unidad sensible al pH, ya sea ácida (MAA) o básica (AH), segmentos neutros (VA) o bien segmentos termosencibles (NIPAm), entre otros. \addcite[para-cada-segemento]
+
+Para este capitulo consideraremos un film polim\'erico compuesto por unidades \'acidad de $MAA$.
+El mismo se encuentra en equilibrio con una soluci\'on con una temperatura, pH y concentraci\'on de sal y adsorbatos(llamese proteinas, drogas terapeuticas, etc) definidos en el seno de la soluci\'on.
+
+
+Bajo estas consideraciones es posible definir una energ\'ia libre:
+
+\begin{align}
+ 	F = -TS_{mez} -TS_{conf,nw} + F_{chem,nw} + F_{chem,pro} + U_{elec} + U_{ste} + U_{VDW} 
+\end{align}
+ 
+\noindent En donde $S_{mez}$ es la entropía de traslación (mezcla) de las especies de la solución: moléculas de agua (H$_2$O), iones de hidronio (H$_3$O$^+$), iones de hidróxido (OH$^- $), cationes de sal, aniones de sal y otros adsorbaatos presentes: como drogas o proteinas terapeuticas.
+Aquí, consideramos una sal monovalente, NaCl o KCl, y se asueme que está completamente disociada en iones cloruro (Cl$^-$) y sodio ($Na^+$) o potasio ($K^+$) respecticamente. 
+
+$S_{conf,nw}$ representa la entrop\'ia conformacional que resulta de la flexibilidad de la red de polim\'erica, la cual viene dada por todas las conformaciones diferentes que puede asumir la misma.
+
+$F_{chem,nw}$, es la energ\'ia qu\'imica libre que describe el equilibrio entre las especies protonadas y desprotonadas de unidades funcionales (\'acidas/b\'asicas), para nuestro film solo se consideran unidades \'acidas.
+
+De manera similar, $F_{chem,pro}$ describe la protonaci\'on de residuos titulables de los adsorbatos.
+
+$U_{elec}$ y $U_{ste}$ representan, respectivamente, las interacciones electrost\'aticas y las repulsiones est\'ericas.
+Las interacciones no electrost\'aticas son representadas en $U_{VDW}$.
+
+
+Las expresiones explicitas de eq. \ref{eq:semicano} pueden describirse... segun el tipo de modelo elegido y la simetria considerada.. vease modelado...
+
+Como primer termino tenemos la entrop\'ia de mezcla de  las especies mobiles, es decir no se toma en cuenta el sistema polim\'erico.
+
+\begin{equation}
+\frac{S_{mez}}{\beta}= \sum_{\gamma}\int_S{dr G(r)\rho_\gamma(r)\left(\ln \left(\rho_\gamma (r)v_w\right) -1 + \beta\mu^0_\gamma\right)}
+\end{equation}
+\noindent en donde $\beta = \frac{1}{kT}$ y $G(r) = 4\pi r^2$ lo cual corresponde a uns simetria radial. El subindice $\gamma$ tiene en cuenta las moleculas de agua, sus iones y los iones dados por la disociaci\'on de la sal.
+
+Otra especie mobil y que no ha sido considerada en la expresi\'on anterior es los adosrbatos. Para ellos se ha considerado su contribuci\'on energetica como:
+
+\begin{equation}
+\frac{1}{\beta}\sum_{\theta}\int_S{dr G(r)\rho_{pro}(\theta,r)\left(\ln \left(\rho_{pro}(\theta,r)v_w\right) -1 + \beta\mu^0_{pro} \right)}
+\end{equation}
+
+Subindice $\theta$ puede interpretarse de dos maneras: en primer instancia como un conjunto de configuraciones para un solo adosrbato, tambi\'en puede considerarse a cada configuraci\'on como adsrobatos diferentes, pero con las mismas propiedades qi\'imicas.
+Estamos asumiendo que no hay cambios en el potencial qu\'imico  $\mu^0_{pro}$ al cambiar sobre $\theta$ 
+
+Now $S_{conf,nw}$ represents the conformational entropy that results from the flexibility of the polymer network, which can assume many different conformations denoted by the set $\{\alpha\}$. 
+\begin{equation}
+\frac{S_{conf,nw}}{\beta} = \sum_{\alpha}{P(\alpha)\ln P(\alpha)}
+\end{equation}
+
+The next term describes the free energy for the acid-base equilibrium:
+For the MAA segments:
+\begin{align}
+\begin{aligned}
+\frac{F_{chem,nw}}{\beta} &= \int_S drG(r) \frac{\left<\phi_{MAA}(r)\right>}{v_{MAA}} \left[f(r)(\ln f(r)+ \beta\mu^0_{MAA^-})\right.\\
+&\left.+(1-f(r))(\ln (1-f(r))+\beta\mu^0_{MAAH})\right]    
+\end{aligned}
+\end{align} 
+
+In the same way the proteins segments equilibrium is writing as:
+\begin{align}
+\begin{aligned}
+\frac{F_{chem,pro}}{\beta} &=\int_S drG(r) \left<\rho_{pro,\tau}(r)\right> \left[g(r)(\ln g(r)+ \beta\mu^0_{\tau p})\right.\\
+&\qquad\left.+(1-g(r))(\ln (1-g(r))+\beta\mu^0_{\tau d})\right]   
+\end{aligned}
+\end{align} 
+
+Titratable units are represented by  $\tau$ subdix \textit{p} and \textit{d} are protonated and deprotonated states respectively. 
+\begin{enumerate}
+	\item for an unit acid case: $g(r) = f(r)$
+	\item basic case: $g(r) = 1-f(r)$
+\end{enumerate}
+
+The electrostatic contributions of the free energy $\frac{U_{elec}}{\beta}$ :
+\begin{align}
+\begin{aligned}
+\int_S drG(r)\left[\left(\sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\psi(r) -\frac{1}{2}\beta\epsilon(\nabla\psi(r))^2 \right]\\
+\end{aligned}
+\end{align} 
+\noindent where $\psi(r)$ is the position-dependent electrostatic potential, and $\epsilon$ the medium permittivity. 
+%%%%%%%%%%%%%%%%
+
+Finally the energy due the steric repulsion  take account the volume incompressibility
+\textcolor{red}{ejemplo para poner la ecuaci\'on en dos reglones}
+\begin{align*}
+\begin{aligned}
++  &\int_0^\infty drG(r)\left[\left(\sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\psi(r) \right.\\  &\left. \hspace{6em}-\frac{1}{2}\beta\epsilon(\nabla\psi(r))^2 \right]
+\end{aligned}
+\end{align*}
+
 
 
 
@@ -41,7 +140,7 @@ Estas consideraciones de soluci\'on ideal usualmente se utilizan para estimar el
 
 \textbf{Red polim\'erica} \\
 
-A continuaci\'on describiremos el comportamiento de el grado de  carga de estos sistemas confinados, hidrogeles sensibles al pH.  A diferencia de las soluciones diluidas, las unidades \'acidas en una red de pol\'imeros experimentan repulsiones electrost\'aticas cuando estas se encuentran cargadas. Para reducir la fuerza de las repulsiones dentro de la red, estos grupos se disocian significativamente menos que en condiciones ideales. En la figura \ref{fig:degree-film} se ilustra este comportamiento y muestra el grado medio de carga de los segmentos de una pel\'icula de hidrogel de \'acido poli(metacr\'ilico) (PMAA), que est\'a en contacto con soluciones que tienen diferentes concentraciones de sal.
+A continuaci\'on describiremos el comportamiento de estos sistemas confinados, hidrogeles sensibles al pH.  A diferencia de las soluciones diluidas, las unidades \'acidas en una red de pol\'imeros experimentan repulsiones electrost\'aticas cuando estas se encuentran cargadas. Para reducir la fuerza de las repulsiones dentro de la red, estos grupos se disocian significativamente menos que en condiciones ideales. En la figura \ref{fig:degree-film} se ilustra este comportamiento y muestra el grado medio de carga de los segmentos de una pel\'icula de hidrogel de \'acido poli(metacr\'ilico) (PMAA), que est\'a en contacto con soluciones que tienen diferentes concentraciones de sal.
 \begin{figure}
     \centering
     \includegraphics[width=0.9\textwidth]{Figures/graph-film/charge_degree-film.png}
@@ -51,18 +150,23 @@ A continuaci\'on describiremos el comportamiento de el grado de  carga de estos 
 
 
 
-A un pH dado es significativamente menos probable que se cargue una unidad \'acida de la red de lo que se espera seg\'un las consideraciones ideales. La concentraci\'on de sal de la soluci\'on resulta ser una variable cr\'itica que modula este comportamiento de regulación de carga. A una salinidad relativamente alta, la cantidad de los contraiones dentro del hidrogel crece, lo que da como resultado el apantallamiento de interacciones electrost\'aticas. Las interacciones son ahora de corto alcance. Este apantallamiento de repulsiones dentro de la red permite que el pol\'imero aumente su grado de carga para reducir la energ\'ia libre descripta por el equilibrio \'acido-base de los segmentos de la cadena. El aumento en la salinidad genera una protonaci\'on que se aproxima al comportamiento ideal. En condiciones de baja concentraci\'on de sal, por otro lado, aumenta el costo entr\'opico de confinar iones dentro del hidrogel. Solo se encuentran los suficientes contraiones dentro de la red para neutralizar la carga el\'ectrica del pol\'imero. Bajo tales condiciones, el efecto de apantallamiento de los iones de sal se debilita y las interacciones electrost\'aticas se vuelven efectivamente de mayor alcance. Como resultado, la red se carga menos para prevenir o reducir las repulsiones dentro de la red.
+A un pH dado es significativamente menos probable que se cargue una unidad \'acida de la red de lo que se espera seg\'un las consideraciones ideales. La concentraci\'on de sal de la soluci\'on resulta ser una variable cr\'itica que modula este comportamiento de regulación de carga.
 
-Como se ha mostrado el grado de carga de los film polim\'ericos cambia respecto a monomeros aislados. Las condiciones del medio son diferentes a las que se esperar\'ia para el seno de la soluci]\'on. Hay una regualci\'on de carga, lo que conlleva a pensar en una regulaci\'on del pH.
+A una salinidad relativamente alta, la cantidad de los contraiones dentro del hidrogel crece, lo que da como resultado el apantallamiento de interacciones electrost\'aticas. Las interacciones son ahora de corto alcance. Este apantallamiento de repulsiones dentro de la red permite que el pol\'imero aumente su grado de carga. Se observa que un aumento en la salinidad genera una protonaci\'on que se aproxima al comportamiento ideal. 
+
+En condiciones de baja concentraci\'on de sal solo se encuentran los suficientes contraiones dentro de la red para neutralizar la carga el\'ectrica del pol\'imero. Bajo tales condiciones, el efecto de apantallamiento de los iones de sal se debilita y las interacciones electrost\'aticas se vuelven efectivamente de mayor alcance. Como resultado, la red se carga menos para prevenir o reducir las repulsiones dentro de la red.
+
+Hemos visto que el grado de carga de los film polim\'ericos cambia respecto a monomeros aislados. Esto nos induce a pesnar que las condiciones de ese entorno son diferentes a las que se esperar\'ia para el seno de la soluci]\'on. Exite una una regualci\'on de carga, lo que conlleva a pensar en una regulaci\'on del pH.
 Definimos as\'i el pH local que nos proporciona la concentraci\'on de protones  en la posición espacial $r$:
 \begin{equation}
     pH(r) = -\log_{10}([H^+](r))
     \label{eq:pH-local}
 \end{equation}
 
-Una baja disociaci\'on (un nivel de protonaci\'on alto) de las unidades \'acidas del pol\'imero puede explicarse en terminos del pH local dentro del material. Se define el $pH_{gel}$ como el promedio del pH local dentro del film. Resultados previos han mostrado que esta cantidad esta bien definida \addcite. En esta secci\'on enfatizaremos la importancia de estos dos terminos $pH_{gel}$ y $pH(r)$ por la informaci\'on que proveen: el estado de carga/protonaci\'on de las unidades titulables en la red polim\'erica. 
+Una baja disociaci\'on (un nivel de protonaci\'on alto) de las unidades \'acidas del pol\'imero puede explicarse en terminos del pH local dentro del material. Se define el $pH_{gel}$ como el promedio del pH local dentro del film. Resultados previos han mostrado que esta cantidad esta bien definida \addcite. 
+Enfatizaremos la importancia de estos dos terminos $pH_{gel}$ y $pH(r)$ por la informaci\'on que proveen: el estado de carga/protonaci\'on de las unidades titulables en la red polim\'erica. 
 
-Haciendo uso de la eq. \ref{eq:diso} es posible calcular el grado de disoci\'on de la estructura polim\'erica. El uso del $pH_{gel}$ es indispensable para cuando el pH es distinto al  del seno de la soluci\'on \addcite. El mismo procedimiento se realiza para calcular el estado de protonaci\'on local de las unidades titulables de las especies que se adsorben en el film (ver figura \ref{fig:protein-charge}).
+Haciendo uso de la eq. \ref{eq:diso} es posible calcular el grado de disoci\'on de la estructura polim\'erica de nuestro hidrogel. El uso del $pH_{gel}$ es indispensable para cuando el pH es distinto al  del seno de la soluci\'on \addcite. El mismo procedimiento se realiza para calcular el estado de protonaci\'on local de las unidades titulables de las especies que se adsorben en el film (ver figura \ref{fig:protein-charge}).
 
 \begin{figure}
     \centering
