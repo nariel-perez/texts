@@ -31,10 +31,11 @@ El mismo se encuentra en equilibrio con una soluci\'on con una temperatura, pH y
 Bajo estas consideraciones es posible definir una energ\'ia libre:
 
 \begin{align}
- 	F = -TS_{mez} -TS_{conf,nw} + F_{chem,nw} + F_{chem,pro} + U_{elec} + U_{ste} + U_{VDW} 
+ 	F = -TS_{mez} -TS_{conf,nw} + F_{chem,nw} + F_{chem,pro} + U_{elec} + U_{ste} + U_{VDW}
+ 	\label{eq:libre-film}
 \end{align}
  
-\noindent En donde $S_{mez}$ es la entropía de traslación (mezcla) de las especies de la solución: moléculas de agua (H$_2$O), iones de hidronio (H$_3$O$^+$), iones de hidróxido (OH$^- $), cationes de sal, aniones de sal y otros adsorbaatos presentes: como drogas o proteinas terapeuticas.
+\noindent En donde $S_{mez}$ es la entropía de traslación (mezcla) de las especies de la solución: moléculas de agua (H$_2$O), iones de hidronio (H$_3$O$^+$), iones de hidróxido (OH$^- $), cationes de sal, aniones de sal y otros adsorbatos presentes: como drogas o proteinas terapeuticas.
 Aquí, consideramos una sal monovalente, NaCl o KCl, y se asueme que está completamente disociada en iones cloruro (Cl$^-$) y sodio ($Na^+$) o potasio ($K^+$) respecticamente. 
 
 $S_{conf,nw}$ representa la entrop\'ia conformacional que resulta de la flexibilidad de la red de polim\'erica, la cual viene dada por todas las conformaciones diferentes que puede asumir la misma.
@@ -47,14 +48,15 @@ $U_{elec}$ y $U_{ste}$ representan, respectivamente, las interacciones electrost
 Las interacciones no electrost\'aticas son representadas en $U_{VDW}$.
 
 
-Las expresiones explicitas de eq. \ref{eq:semicano} pueden describirse... segun el tipo de modelo elegido y la simetria considerada.. vease modelado...
+Las expresiones explicitas de la ecuaci\'on \ref{eq:libre-film} las describimos acontinuaci\'on.
 
 Como primer termino tenemos la entrop\'ia de mezcla de  las especies mobiles, es decir no se toma en cuenta el sistema polim\'erico.
 
 \begin{equation}
 \frac{S_{mez}}{\beta}= \sum_{\gamma}\int_S{dr G(r)\rho_\gamma(r)\left(\ln \left(\rho_\gamma (r)v_w\right) -1 + \beta\mu^0_\gamma\right)}
 \end{equation}
-\noindent en donde $\beta = \frac{1}{kT}$ y $G(r) = 4\pi r^2$ lo cual corresponde a uns simetria radial. El subindice $\gamma$ tiene en cuenta las moleculas de agua, sus iones y los iones dados por la disociaci\'on de la sal.
+
+\noindent en donde $\beta = \frac{1}{k_BT}$  el subindice $\gamma$ tiene en cuenta las moleculas de agua, sus iones y los iones dados por la disociaci\'on de la sal.
 
 Otra especie mobil y que no ha sido considerada en la expresi\'on anterior es los adosrbatos. Para ellos se ha considerado su contribuci\'on energetica como:
 
