@@ -51,68 +51,138 @@ Las interacciones de Van der Waals son representadas en $U_{VdW}$.
 
 Las expresiones explicitas de la ecuaci\'on \ref{eq:libre-film} las describimos acontinuaci\'on.
 
-Como primer termino tenemos la entrop\'ia de mezcla de  las especies mobiles, es decir no se toma en cuenta el sistema polim\'erico.
+Como primer termino tenemos la entrop\'ia de mezcla de  las especies mobiles, entre ellas consideramos a nuestra prote\'ina modelo:
 
-\begin{equation}
-\frac{S_{mez}}{\beta}= \sum_{\gamma}\int_S{dr G(r)\rho_\gamma(r)\left(\ln \left(\rho_\gamma (r)v_w\right) -1 + \beta\mu^0_\gamma\right)}
-\end{equation}
-
-\noindent en donde $\beta = \frac{1}{k_BT}$  el subindice $\gamma$ tiene en cuenta las moleculas de agua, sus iones y los iones dados por la disociaci\'on de la sal.
-
-Otra especie mobil y que no ha sido considerada en la expresi\'on anterior es los adosrbatos. Para ellos se ha considerado su contribuci\'on energetica como:
-
-\begin{equation}
-\frac{1}{\beta}\sum_{\theta}\int_S{dr G(r)\rho_{pro}(\theta,r)\left(\ln \left(\rho_{pro}(\theta,r)v_w\right) -1 + \beta\mu^0_{pro} \right)}
-\end{equation}
-
-Subindice $\theta$ puede interpretarse de dos maneras: en primer instancia como un conjunto de configuraciones para un solo adosrbato, tambi\'en puede considerarse a cada configuraci\'on como adsrobatos diferentes, pero con las mismas propiedades qi\'imicas.
-Estamos asumiendo que no hay cambios en el potencial qu\'imico  $\mu^0_{pro}$ al cambiar sobre $\theta$ 
-
-Now $S_{conf,nw}$ represents the conformational entropy that results from the flexibility of the polymer network, which can assume many different conformations denoted by the set $\{\alpha\}$. 
-\begin{equation}
-\frac{S_{conf,nw}}{\beta} = \sum_{\alpha}{P(\alpha)\ln P(\alpha)}
-\end{equation}
-
-The next term describes the free energy for the acid-base equilibrium:
-For the MAA segments:
 \begin{align}
-\begin{aligned}
-\frac{F_{chem,nw}}{\beta} &= \int_S drG(r) \frac{\left<\phi_{MAA}(r)\right>}{v_{MAA}} \left[f(r)(\ln f(r)+ \beta\mu^0_{MAA^-})\right.\\
-&\left.+(1-f(r))(\ln (1-f(r))+\beta\mu^0_{MAAH})\right]    
-\end{aligned}
+	\begin{aligned}
+		-\frac{S_{mez}}{k_B}= &A\sum_{\gamma}\int_0^\infty{dz\rho_\gamma(z)\left(\ln \left(\rho_\gamma (z)v_w\right) -1 + \beta\mu^0_\gamma\right)} \\
+		&+ A\sum_{\theta}\int_0^\infty{dz\rho_{pro}(\theta,z)\left(\ln \left(\rho_{pro}(\theta,z)\right) -1 + \beta\mu^0_{pro} \right)}
+	\end{aligned}
+\end{align}
+
+\noindent en donde $\frac{1}{k_B T}$, y $k_B$ es la constante de Boltzmann, $T$ es la temperatura absoluta del sistema. La variable $z$ es la coordenada que mide la distancia a la superficie de soporte de nuestro film, el \'ara total de esta superficies es $A$. $\rho_\gamma(z)$ y $\mu_\gamma$ es densidad local, a un $z$ dado, y potencial qu\'imico estadar de la especie $\gamma$ respectivamente.
+El subinidice $\gamma$ toma en cuenta la mol\'ecula de agua y sus respectivos ione (hidronio e hidr\'oxido), adem'as de los iones provenientes de la sal ($K^+$ y $Cl^-$). 
+
+
+El segundo t\'ermino de esta ecuaci\'on corresponde a la entrop\'ia de mezcla de la prote\'ina. $\rho_{pro}(\theta,z)$ es la densidad local de la prote\'ina en la conformaci\'on $\theta$. Es decir $\theta$ recorre sobre las configuraciones de la misma.
+Esta conformaciones incluyen rotaciones espaciales de la prote\'ina.
+De este modo la densidad local media de la prote\'ia puede expresarse como:
+
+
+\begin{align}
+	\left<\rho_{pro}(z)\right> = \sum_\theta{\rho_{pro}(\theta,z)}
+\end{align}
+
+
+La entrop\'ia conformational que resutla de la flexibilidad de la red polim\'erica de nuestro film se representa en $S_{conf, nw}$, esta tiene en cuenta todas las configuraciones de un set $\{\alpha\}$.
+
+\begin{equation}
+	\frac{S_{conf,nw}}{k_B} = - \sum_{\alpha}{P(\alpha)\ln P(\alpha)}
+\end{equation}
+
+\noindent en donce $P(\alpha)$ denota la probabilidad de que el film se encuentre en la configuraci\'on $\alpha$.
+
+El siguiente t\'ermino de eq \ref{eq:libre-film} describe  la energ\'ia libre dada por  el equilibrio \'acido-base de los segmentos de MAA que componen nuestra red. 
+
+\begin{align}
+	\begin{aligned}
+		\beta F_{chem,nw} &= A\int_0^\infty dz \frac{\left<\phi_{MAA}(z)\right>}{v_{MAA}} \left[f(z)(\ln f(z)+ \beta\mu^0_{MAA^-})\right.\\
+		&\left.+(1-f(z))(\ln (1-f(z))+\beta\mu^0_{MAAH})\right]    
+	\end{aligned}
 \end{align} 
 
-In the same way the proteins segments equilibrium is writing as:
+\noindent en donde $f(z)$ es el grado de carga de los segmentos de MAA entre las capaz $z$ y $z + dz$. 
+$\mu^0_{MAA^-}$ y $\mu^0_{MAAH}$ son los potenciales qu\'imoc estandar  de las especies protonadas y desprotonadas respectivamente.
+$v_{MAA}$ es el volumen molecular del segmento de MAA. El subindice $i$ recorre los tipos de segmentos que componen al film ($i = MAA/VA/crosslink$), para los cuales se define:
+
 \begin{align}
-\begin{aligned}
-\frac{F_{chem,pro}}{\beta} &=\int_S drG(r) \left<\rho_{pro,\tau}(r)\right> \left[g(r)(\ln g(r)+ \beta\mu^0_{\tau p})\right.\\
-&\qquad\left.+(1-g(r))(\ln (1-g(r))+\beta\mu^0_{\tau d})\right]   
-\end{aligned}
+	\left< \phi_i(z)\right> = \sum_\alpha{P(\alpha)\phi_i(\alpha,z)}
+\end{align}
+\noindent en el cual $\phi_i(\alpha,z)$  es el ensamble promedio. El cual es una variable de entrada que cuantifica la fracci\'on de volumen ocupado en una capa $z$ cuando la red se encuentra en la conformaci\'on $\alpha$.
+
+
+%%%%%%%%%%%%%%%%%%%
+El equilibrio qu\'imico de las unidades titulables de la prote\'ina es considerada en el siguiente t\'ermino de la energ\'ia libre:
+
+\begin{align}
+	\begin{aligned}
+		\beta F_{chem,pro} = A\int_0^\infty dz& \sum_\tau \left<\rho_{pro,\tau}(z)\right> \left[g_\tau(z)(\ln g_\tau(z)+ \beta\mu^0_{\tau p})\right.\\
+		&\qquad\left.+(1-g_\tau(z))(\ln (1-g_\tau(z))+\beta\mu^0_{\tau d})\right]   
+	\end{aligned}
 \end{align} 
 
-Titratable units are represented by  $\tau$ subdix \textit{p} and \textit{d} are protonated and deprotonated states respectively. 
+\noindent en donde $\left<\rho_{pro,\tau}(z)\right>$ representa la densidad local promedio del segmento protonable $\tau$ de la prote\'ina.
+
+Que se define como:
+\begin{align}
+	\left<\rho_{pro,\tau}(z)\right> = A\sum_\theta \int dz^\prime  \rho_{pro}(\theta,z^\prime)n_\tau(\theta,z^\prime, z)
+	\label{eq:segments_pro_si}
+\end{align}
+\noindent en donde $n_\tau(\theta,r^\prime, r)$ es un par\'ametro de entrada que nos da el n\'umero de segmentos $\tau$ entre las capas $z$ and $z+ dz$ cuando el centro de masa de la prote\'ina se encuentra en el a configuraci\'on $\theta$ y en la posici\'on $z^\prime$.
+
+Las unidades titullables pueden estar en esta protonado $\tau p$ o desprotonado $\tau d$, los cuales poseen su potenciales qu\'imicos est\'andar $\mu^0_{\tau,p}$ y $\mu^0_{\tau,d}$ respectivamente. 
+Adm\'as definimos el grado de asociaci\'on $g_\tau$ para segmento $\tau$ como:
+
+
 \begin{enumerate}
-	\item for an unit acid case: $g(r) = f(r)$
-	\item basic case: $g(r) = 1-f(r)$
+	\item para unidades \'acidas: $g_\tau(r) = 1-f_\tau(r)$ ( las unidades $\tau$ se cargan negativamente)
+	\item para unidades b\'asicas: $g_\tau(r) = f_\tau(r)$ (las  unidades $\tau$ se cargan positivamente  )
 \end{enumerate}
+en donde  $f_\tau(r)$ es el grado de disosiac\'on de cada segmento $\tau$.
+%%%%%%%%%%
 
-The electrostatic contributions of the free energy $\frac{U_{elec}}{\beta}$ :
+La energ\'ia electr\'ostatica se define como:
 \begin{align}
-\begin{aligned}
-\int_S drG(r)\left[\left(\sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\psi(r) -\frac{1}{2}\beta\epsilon(\nabla\psi(r))^2 \right]\\
-\end{aligned}
+	\begin{aligned}
+		\beta U_{elecc}= A\int_0^\infty dz&\left[\left(\sum_{\gamma } {\rho_\gamma(z) q_\gamma + \sum_\tau{f_\tau(z) \left<\rho_{pro,\tau}(z)\right> q_\tau} +  f(z)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\Psi(z) \right. \\ &\left.-\frac{1}{2}\beta\epsilon(\nabla\Psi(z))^2 \right]
+	\end{aligned}
 \end{align} 
-\noindent where $\psi(r)$ is the position-dependent electrostatic potential, and $\epsilon$ the medium permittivity. 
+
+\noindent en donde $\Psi(z)$ es el potencial elestr\'ostatico dependiente de la posici\'on, $\epsilon$ es la constante de permitividad del medio, $q_\gamma$ es la carga correspondiente a la especiel m\'obil $\gamma$, $q_\tau$ es la carga que adquieren los segmentos titulables de la prote\'ina. Finalmente $q_{MAA}$ es la carga que adquiere el segmento de $MAA$ al desprotonarse.
+
+
+En este contexto, la densidad de carga media es:
+
+\begin{align}
+	\left<\rho_q(r)\right> = \sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}
+	\label{si:eq:rho_charge}
+\end{align}
 %%%%%%%%%%%%%%%%
 
-Finally the energy due the steric repulsion  take account the volume incompressibility
-\textcolor{red}{ejemplo para poner la ecuaci\'on en dos reglones}
-\begin{align*}
-\begin{aligned}
-+  &\int_0^\infty drG(r)\left[\left(\sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\psi(r) \right.\\  &\left. \hspace{6em}-\frac{1}{2}\beta\epsilon(\nabla\psi(r))^2 \right]
-\end{aligned}
-\end{align*}
+The next term is the  thermodynamic potential, due the steric repulsion which can be incorporated through the following constraint:
+\begin{align}
+	\begin{aligned}
+		1=  {\left[\sum_{\gamma}\rho_\gamma(r) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(r)\right>v_\lambda} + \sum_i{\left<\phi_i(r)\right>}\right]},~ \forall r
+	\end{aligned}
+	\label{si:eq:constraint}
+\end{align}
+\noindent where $v_\lambda$ is the molecular volume of segment $\lambda$ in the protein.
+$\left<\rho_{pro,\lambda}(r)\right>$ is defined in the same way as %\cref{eq:segments_pro_si}.
+Note that the subindex $\lambda$ considers all segments of the protein, that is $ \tau \in \lambda$.
+Subindex \textit{i} runs over $MAA$ and $VA$ segment in the nanogel.
 
+%%%%%%%%%%%%%%%
+$U_{VdW}$ is the energy of the Van der Waals interaction ($VdW$). In this work it has been assumed that all segments have a hydrophilic character. Namely, $VdW$ interactions between different pair of segments, and those with water molecules are similar. As a result the net $VdW$ interaction energy represent an additive constant to the total free energy.
+Thus, this contribution can be ignored.
+
+
+To complete the gran potential of eq:semicano , the exchange of mobile species is taken into account:
+
+The first two terms on the left side of the equation account for the chemical equilibrium of the mobile species $\gamma$ and of the proteins within the solution.
+The last two terms consider the hydrogen ions from the protonatable segments of the protein and the MAA segments of the polymer network that makes up the nanogel.
+
+
+\begin{align}
+	\begin{aligned}
+		\mu_\gamma N_\gamma + \mu_{pro} N_{pro} =\int_0^\infty drG(r)&\left[\sum_{\gamma }{\rho_\gamma(r)\mu_\gamma}
+		+ \mu_{pro} \left<\rho_{pro}(r)\right> \right. \\
+		& \left. +\mu_{H^+}\sum_{\tau}{g_\tau\left<\rho_{pro,\tau}(r)\right> } +\mu_{H^+}(1-f(r))\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}\right]
+	\end{aligned}
+\end{align}
+
+
+%%%%%%%%%%
+The explicit form of the grand potential is expressed as:
 
 
 
