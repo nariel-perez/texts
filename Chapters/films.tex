@@ -155,39 +155,93 @@ La contribuci\'on siguiente en la energ\'ia libre viene dada por la repulsi\'on 
 	\begin{aligned}
 		1=  {\left[\sum_{\gamma}\rho_\gamma(z) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(z)\right>v_\lambda} + \sum_i{\left<\phi_i(z)\right>}\right]},~ \forall z
 	\end{aligned}
-	\label{si:eq:constraint}
+	\label{eq:constraint}
 \end{align}
 \noindent en donde  $v_\lambda$ es el volumen molecular del segmento $\lambda$  en la prote\'ina.
 $\left<\rho_{pro,\lambda}(z)\right>$ es definimo de la misma forma que en la eq.  \ref{eq:segments_pro_si}.
 Cabe destacar que el subidice $\lambda$ considera a todos los segmentos de la prote\'ina, es decir $ \tau \in \lambda$.
-El subindice $i$ tiene en cuenta los segmentos del film.
+El subindice $i$ tiene en cuenta los segmentos del film ($MAA$).
 
 %%%%%%%%%%%%%%%
-$U_{VdW}$ is the energy of the Van der Waals interaction ($VdW$). In this work it has been assumed that all segments have a hydrophilic character. Namely, $VdW$ interactions between different pair of segments, and those with water molecules are similar. As a result the net $VdW$ interaction energy represent an additive constant to the total free energy.
-Thus, this contribution can be ignored.
+La energ\'ia proveniente de las interacciones de Van der Waals se expresa en el t\'ermino $U_{VdW}$. En este trabajo se ha considerado que todos los segmentos del sistema poseen un caracter hidrofilico. Es decir la interacci\'on entre cada par de segmentos es similar a su interacci\'on con las mol\'eculas de agua. Como resultado la energ\'ia de interacci\'on de $VdW$ se considera una constante aditiva a la energ\'ia libre, por lo cual puede ser ignorada.
 
+En este punto la energ\'ia libre, eq \ref{eq:libre-film}, puede escribir como una funcional de funciones, esta ultimas est\'an compuesta por la probabilidad de distribuci\'on de segmentos de nuestra red polim\'erica. las densidades locales de cada una de las especies libres, incluidas la densidad de conformaciones de la prote\'ina, los grados de protonaci\'on/disociaci\'on y el potencial elestrost\'atico local. Es decir:
 
-To complete the gran potential of eq:semicano , the exchange of mobile species is taken into account:
+\begin{align}
+	F = \sum_\alpha \sum_\theta \int_0^\infty dz f(\alpha, \theta,z)
+\end{align}
 
-The first two terms on the left side of the equation account for the chemical equilibrium of the mobile species $\gamma$ and of the proteins within the solution.
-The last two terms consider the hydrogen ions from the protonatable segments of the protein and the MAA segments of the polymer network that makes up the nanogel.
+\noindent en donde:
 
+\begin{align}
+	 f=  f \left( P(\alpha), \rho_\gamma(z),\rho_{pro}(z), f_\tau(z), f(z), \Psi(z)  \right)
+	 \label{eq:funcionales}
+ \end{align}
+
+de forma m\'as explicita:
 
 \begin{align}
 	\begin{aligned}
-		\mu_\gamma N_\gamma + \mu_{pro} N_{pro} =\int_0^\infty drG(r)&\left[\sum_{\gamma }{\rho_\gamma(r)\mu_\gamma}
-		+ \mu_{pro} \left<\rho_{pro}(r)\right> \right. \\
-		& \left. +\mu_{H^+}\sum_{\tau}{g_\tau\left<\rho_{pro,\tau}(r)\right> } +\mu_{H^+}(1-f(r))\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}\right]
-	\end{aligned}
+		\beta F=  & A\sum_{\gamma}\int_0^\infty{dz\rho_\gamma(z)\left(\ln \left(\rho_\gamma (z)v_w\right) -1 + \beta\mu^0_\gamma\right)} \\
+		&+ A\sum_{\theta}\int_0^\infty{dz\rho_{pro}(\theta,z)\left(\ln \left(\rho_{pro}(\theta,z)\right) -1 + \beta\mu^0_{pro} \right)} \\
+		&+ \sum_\alpha{P(\alpha)\ln P(\alpha)} \\
+		& + A\int_0^\infty dz \frac{\left<\phi_{MAA}(z)\right>}{v_{MAA}} \left[f(z)(\ln f(z)+ \beta\mu^0_{MAA^-})\right.\\
+		& \qquad\qquad\qquad \left.+(1-f(z))(\ln (1-f(z))+\beta\mu^0_{MAAH})\right] \\
+		& + A\int_0^\infty dz \sum_\tau \left<\rho_{pro,\tau}(z)\right> \left[g_\tau(z)(\ln g_\tau(z)+ \beta\mu^0_{\tau p})\right.\\
+		&\qquad \qquad \qquad\qquad \qquad\quad \left.+(1-g_\tau(z))(\ln (1-g_\tau(z))+\beta\mu^0_{\tau d})\right]   \\
+		 & +A\int_0^\infty dz \left[\left(\sum_{\gamma } {\rho_\gamma(z) q_\gamma + \sum_\tau{f_\tau(z) \left<\rho_{pro,\tau}(z)\right> q_\tau} +  f(z)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\Psi(z) \right. \\ & \qquad \qquad \left.-\frac{1}{2}\beta\epsilon(\nabla\Psi(z))^2 \right]
+		\end{aligned}
 \end{align}
 
 
-%%%%%%%%%%
-The explicit form of the grand potential is expressed as:
+Nuestro film esta el equilibrio con el bulk de la soluci\'on, la cual posee una composici\'on bien definida (pH, Temperatura, concnentraci\'on salina,  concentraci\'on de prote\'ina). Estas cantidades proveen un potencial qu\'imco el cual debe estar en equilibrio con la soluci\'on cercana a nuestro film. En particular son los potenciales de las especies libres, $\mu_\gamma$, y de la prote\'ina, $\mu_{pro}$.
+De esta forma nuestra energ\'ia libre se convierte un un gran potencial termodin\'amico:
+
+\begin{align}
+	\begin{aligned}
+		\Omega = &F - \sum_\gamma \mu_\gamma N_\gamma -  \mu_{pro} N_{pro} \\
+			= &F -\sum_\gamma A\int_0^\infty dz \mu_\gamma \rho_\gamma(z) -  \mu_{pro} N_{pro}  \\
+			& \qquad -A\int_0^\infty \mu_{H^+} \left( \sum_\tau\left< \rho_{pro,\tau}(z) \right>g_\tau(z) + (1-f(z))\frac{\left< \phi_{MAA}(z) \right>}{v_{MAA}} \right )
+			\end{aligned}
+		\label{eq:equil-qco}
+\end{align}
+
+\noindent $N_\gamma$ y $ N_{pro}$ son el n'umero total de mol\'eculas. En la \'ultima linea de la expresi\'on de \ref{eq:equil-qco} se tiene en cuenta los protones, y con ello su potencial $\mu_{H^+}$, provenientes de las especies con segmentos titulables: prot\'ina y red polim\'erica respectivamente.
 
 
+Adicionalmente las condiciones de equilibrio deben satifacer la condición de incompresibilidad del sistema: eq \ref{eq:constraint}.  Esta restricci\'on se incorpora como:
 
-\subsection{Respuesta al pH}
+\begin{align}
+	\Phi = \Omega +A \int_0^\infty dz\Pi(z){\left[\sum_{\gamma}\rho_\gamma(z) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(z)\right>v_\lambda} + \sum_i{\left<\phi_i(z)\right>} -1 \right]}
+\end{align}
+
+
+\noindent en donde $\Pi(z)$ es un multiplicador local de Lagrange. Finalmente el potencial obtenido para nuestro sistema se escribe de forma explicita:
+ 
+\begin{align}
+	\begin{aligned}
+		\beta \Phi=  & A\sum_{\gamma}\int_0^\infty{dz\rho_\gamma(z)\left(\ln \left(\rho_\gamma (z)v_w\right) -1 + \beta\mu^0_\gamma\right)} \\
+		&+ A\sum_{\theta}\int_0^\infty{dz\rho_{pro}(\theta,z)\left(\ln \left(\rho_{pro}(\theta,z)\right) -1 + \beta\mu^0_{pro} \right)} \\
+		&+ \sum_\alpha{P(\alpha)\ln P(\alpha)} \\
+		& + A\int_0^\infty dz \frac{\left<\phi_{MAA}(z)\right>}{v_{MAA}} \left[f(z)(\ln f(z)+ \beta\mu^0_{MAA^-})\right.\\
+		& \qquad\qquad\qquad \left.+(1-f(z))(\ln (1-f(z))+\beta\mu^0_{MAAH})\right] \\
+		& + A\int_0^\infty dz \sum_\tau \left<\rho_{pro,\tau}(z)\right> \left[g_\tau(z)(\ln g_\tau(z)+ \beta\mu^0_{\tau p})\right.\\
+		&\qquad \qquad \qquad\qquad \qquad\quad \left.+(1-g_\tau(z))(\ln (1-g_\tau(z))+\beta\mu^0_{\tau d})\right]   \\
+		& +A\int_0^\infty dz \left[\left(\sum_{\gamma } {\rho_\gamma(z) q_\gamma + \sum_\tau{f_\tau(z) \left<\rho_{pro,\tau}(z)\right> q_\tau} +  f(z)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\Psi(z) \right. \\ & \qquad \qquad \left.-\frac{1}{2}\beta\epsilon(\nabla\Psi(z))^2 \right] \\
+		& +A \int_0^\infty dz\Pi(z){\left[\sum_{\gamma}\rho_\gamma(z) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(z)\right>v_\lambda} + \sum_i{\left<\phi_i(z)\right>} -1 \right]} \\
+		&   -\sum_\gamma A\int_0^\infty dz \left(\beta \mu_\gamma \rho_\gamma(z) - \beta \mu_{pro} \left<\rho_{pro}(z)\right> \right)  \\
+		&  -A\int_0^\infty \beta\mu_{H^+} \left( \sum_\tau\left< \rho_{pro,\tau}(z) \right>g_\tau(z) + (1-f(z))\frac{\left< \phi_{MAA}(z) \right>}{v_{MAA}} \right )
+	\end{aligned}
+\end{align}
+ 
+\textcolor{red}{Todos los subdindices utlizados se encuentran en la tabla.... hacer tabla (?)}
+
+A continuaci\'on se mostrara la optimizaci\'on de este gran potencial respecto de los funcionales de  eq. \ref{eq:funcionales}, ahora adicionando el potencial $\Pi(z)$.
+
+Resultando la optimizaci\'on respecto a la probabilidad de conformaci\'on del film, $P(\alpha)$:
+\textcolor{blue}{TRABAJAR CON LA DENSIDAD DEL FILM, TODO ES DE MAA, NO ES NECESARIO USAR VOLUME FRACTION}
+
+
 \textbf{pH} \\
 Hidrogeles  compuestos por cadenas de poli\'acidos son sensibles a los cambios de pH. Esta respuesta se debe a la equilibrio qu\'imico de protonaci\'on/desprotonaci\'on de las unidades \'acidas que componen la red. 
 Para enteneder el funcionamiento de esta respuesta recordaremos algunos conceptos sobre el comportamiento \'acido/base de moleculas bajo condiciones ideales. 
