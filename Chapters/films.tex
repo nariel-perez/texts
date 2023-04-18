@@ -93,7 +93,7 @@ El siguiente t\'ermino de eq \ref{eq:libre-film} describe  la energ\'ia libre da
 
 \noindent en donde $f(z)$ es el grado de carga de los segmentos de MAA entre las capaz $z$ y $z + dz$. 
 $\mu^0_{MAA^-}$ y $\mu^0_{MAAH}$ son los potenciales qu\'imoc estandar  de las especies protonadas y desprotonadas respectivamente.
-$v_{MAA}$ es el volumen molecular del segmento de MAA. El subindice $i$ recorre los tipos de segmentos que componen al film ($i = MAA/VA/crosslink$), para los cuales se define:
+$v_{MAA}$ es el volumen molecular del segmento de MAA. El subindice $i$ recorre los tipos de segmentos que componen al film ( en nuestro caso $i = MAA$), pero en forma generica se define:
 
 \begin{align}
 	\left< \phi_i(z)\right> = \sum_\alpha{P(\alpha)\phi_i(\alpha,z)}
@@ -120,7 +120,7 @@ Que se define como:
 \end{align}
 \noindent en donde $n_\tau(\theta,r^\prime, r)$ es un par\'ametro de entrada que nos da el n\'umero de segmentos $\tau$ entre las capas $z$ and $z+ dz$ cuando el centro de masa de la prote\'ina se encuentra en el a configuraci\'on $\theta$ y en la posici\'on $z^\prime$.
 
-Las unidades titullables pueden estar en esta protonado $\tau p$ o desprotonado $\tau d$, los cuales poseen su potenciales qu\'imicos est\'andar $\mu^0_{\tau,p}$ y $\mu^0_{\tau,d}$ respectivamente. 
+Las unidades titulables pueden estar en esta protonado $\tau p$ o desprotonado $\tau d$, los cuales poseen su potenciales qu\'imicos est\'andar $\mu^0_{\tau,p}$ y $\mu^0_{\tau,d}$ respectivamente. 
 Adm\'as definimos el grado de asociaci\'on $g_\tau$ para segmento $\tau$ como:
 
 
@@ -144,22 +144,23 @@ La energ\'ia electr\'ostatica se define como:
 En este contexto, la densidad de carga media es:
 
 \begin{align}
-	\left<\rho_q(r)\right> = \sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}
+	\left<\rho_q(z)\right> = \sum_{\gamma } {\rho_\gamma(z) q_\gamma + \sum_\tau{f_\tau(z) \left<\rho_{pro,\tau}(z)\right> q_\tau} +  f(z)\dfrac{\left<\phi_{MAA}(z)\right>}{v_{MAA}}q_{MAA}}
 	\label{si:eq:rho_charge}
 \end{align}
 %%%%%%%%%%%%%%%%
 
-The next term is the  thermodynamic potential, due the steric repulsion which can be incorporated through the following constraint:
+La contribuci\'on siguiente en la energ\'ia libre viene dada por la repulsi\'on esterica entre  todos los segmentos que componen  el sistema. Esta contribuci\'on se incorpora a travez del siguiente restricci\'on:  
+
 \begin{align}
 	\begin{aligned}
-		1=  {\left[\sum_{\gamma}\rho_\gamma(r) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(r)\right>v_\lambda} + \sum_i{\left<\phi_i(r)\right>}\right]},~ \forall r
+		1=  {\left[\sum_{\gamma}\rho_\gamma(z) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(z)\right>v_\lambda} + \sum_i{\left<\phi_i(z)\right>}\right]},~ \forall z
 	\end{aligned}
 	\label{si:eq:constraint}
 \end{align}
-\noindent where $v_\lambda$ is the molecular volume of segment $\lambda$ in the protein.
-$\left<\rho_{pro,\lambda}(r)\right>$ is defined in the same way as %\cref{eq:segments_pro_si}.
-Note that the subindex $\lambda$ considers all segments of the protein, that is $ \tau \in \lambda$.
-Subindex \textit{i} runs over $MAA$ and $VA$ segment in the nanogel.
+\noindent en donde  $v_\lambda$ es el volumen molecular del segmento $\lambda$  en la prote\'ina.
+$\left<\rho_{pro,\lambda}(z)\right>$ es definimo de la misma forma que en la eq.  \ref{eq:segments_pro_si}.
+Cabe destacar que el subidice $\lambda$ considera a todos los segmentos de la prote\'ina, es decir $ \tau \in \lambda$.
+El subindice $i$ tiene en cuenta los segmentos del film.
 
 %%%%%%%%%%%%%%%
 $U_{VdW}$ is the energy of the Van der Waals interaction ($VdW$). In this work it has been assumed that all segments have a hydrophilic character. Namely, $VdW$ interactions between different pair of segments, and those with water molecules are similar. As a result the net $VdW$ interaction energy represent an additive constant to the total free energy.
