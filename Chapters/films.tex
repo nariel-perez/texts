@@ -86,19 +86,19 @@ El siguiente t\'ermino de eq \ref{eq:libre-film} describe  la energ\'ia libre da
 
 \begin{align}
 	\begin{aligned}
-		\beta F_{chem,nw} &= A\int_0^\infty dz \frac{\left<\phi_{MAA}(z)\right>}{v_{MAA}} \left[f(z)(\ln f(z)+ \beta\mu^0_{MAA^-})\right.\\
+		\beta F_{chem,nw} &= A\int_0^\infty dz \left<\rho_{MAA}(z)\right> \left[f(z)(\ln f(z)+ \beta\mu^0_{MAA^-})\right.\\
 		&\left.+(1-f(z))(\ln (1-f(z))+\beta\mu^0_{MAAH})\right]    
 	\end{aligned}
 \end{align} 
 
 \noindent en donde $f(z)$ es el grado de carga de los segmentos de MAA entre las capaz $z$ y $z + dz$. 
-$\mu^0_{MAA^-}$ y $\mu^0_{MAAH}$ son los potenciales qu\'imoc estandar  de las especies protonadas y desprotonadas respectivamente.
-$v_{MAA}$ es el volumen molecular del segmento de MAA. El subindice $i$ recorre los tipos de segmentos que componen al film ( en nuestro caso $i = MAA$), pero en forma generica se define:
+$\mu^0_{MAA^-}$ y $\mu^0_{MAAH}$ son los potenciales qu\'imico estandar  de las especies protonadas y desprotonadas respectivamente.
+Adem\'as se define:
 
 \begin{align}
-	\left< \phi_i(z)\right> = \sum_\alpha{P(\alpha)\phi_i(\alpha,z)}
+	\left< \rho_i(z)\right> = \sum_\alpha{P(\alpha)\rho_i(\alpha,z)}
 \end{align}
-\noindent en el cual $\phi_i(\alpha,z)$  es el ensamble promedio. El cual es una variable de entrada que cuantifica la fracci\'on de volumen ocupado en una capa $z$ cuando la red se encuentra en la conformaci\'on $\alpha$.
+\noindent en el cual $\rho_i(\alpha,z)$  es el ensamble de densidad  promedio local del film. El cual es una variable de entrada que cuantifica la desnidad de segmentos del film que  ocupan una capa $z$ cuando la red se encuentra en la conformaci\'on $\alpha$.
 
 
 %%%%%%%%%%%%%%%%%%%
@@ -120,7 +120,7 @@ Que se define como:
 \end{align}
 \noindent en donde $n_\tau(\theta,r^\prime, r)$ es un par\'ametro de entrada que nos da el n\'umero de segmentos $\tau$ entre las capas $z$ and $z+ dz$ cuando el centro de masa de la prote\'ina se encuentra en el a configuraci\'on $\theta$ y en la posici\'on $z^\prime$.
 
-Las unidades titulables pueden estar en esta protonado $\tau p$ o desprotonado $\tau d$, los cuales poseen su potenciales qu\'imicos est\'andar $\mu^0_{\tau,p}$ y $\mu^0_{\tau,d}$ respectivamente. 
+Las unidades titulables pueden estar en esta protonado $\tau, p$ o desprotonado $\tau, d$, los cuales poseen su potenciales qu\'imicos est\'andar $\mu^0_{\tau,p}$ y $\mu^0_{\tau,d}$ respectivamente. 
 Adm\'as definimos el grado de asociaci\'on $g_\tau$ para segmento $\tau$ como:
 
 
@@ -134,7 +134,7 @@ en donde  $f_\tau(r)$ es el grado de disosiac\'on de cada segmento $\tau$.
 La energ\'ia electr\'ostatica se define como:
 \begin{align}
 	\begin{aligned}
-		\beta U_{elecc}= A\int_0^\infty dz&\left[\left(\sum_{\gamma } {\rho_\gamma(z) q_\gamma + \sum_\tau{f_\tau(z) \left<\rho_{pro,\tau}(z)\right> q_\tau} +  f(z)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\Psi(z) \right. \\ &\left.-\frac{1}{2}\beta\epsilon(\nabla\Psi(z))^2 \right]
+		\beta U_{elec}= A\int_0^\infty dz&\left[\left(\sum_{\gamma } {\rho_\gamma(z) q_\gamma + \sum_\tau{f_\tau(z) \left<\rho_{pro,\tau}(z)\right> q_\tau} +  f(z)\left<\rho_{MAA}(r)\right>q_{MAA}}\right)\beta\Psi(z) \right. \\ &\left.-\frac{1}{2}\beta\epsilon(\nabla\Psi(z))^2 \right]
 	\end{aligned}
 \end{align} 
 
@@ -153,14 +153,13 @@ La contribuci\'on siguiente en la energ\'ia libre viene dada por la repulsi\'on 
 
 \begin{align}
 	\begin{aligned}
-		1=  {\left[\sum_{\gamma}\rho_\gamma(z) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(z)\right>v_\lambda} + \sum_i{\left<\phi_i(z)\right>}\right]},~ \forall z
+		1=  {\left[\sum_{\gamma}\rho_\gamma(z) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(z)\right>v_\lambda} + \left<\rho_{MAA}(z)\right>v_{MAA} \right]},~ \forall z
 	\end{aligned}
 	\label{eq:constraint}
 \end{align}
-\noindent en donde  $v_\lambda$ es el volumen molecular del segmento $\lambda$  en la prote\'ina.
+\noindent en donde $v_\gamma$ , $v_\lambda$ y $v_{MAA}$ son los volumenes moleculares de los segmentos $\gamma$ de las especiesl libres, $\lambda$  en la prote\'ina y los segmentos de $MAA$ del film respectivamente.
 $\left<\rho_{pro,\lambda}(z)\right>$ es definimo de la misma forma que en la eq.  \ref{eq:segments_pro_si}.
 Cabe destacar que el subidice $\lambda$ considera a todos los segmentos de la prote\'ina, es decir $ \tau \in \lambda$.
-El subindice $i$ tiene en cuenta los segmentos del film ($MAA$).
 
 %%%%%%%%%%%%%%%
 La energ\'ia proveniente de las interacciones de Van der Waals se expresa en el t\'ermino $U_{VdW}$. En este trabajo se ha considerado que todos los segmentos del sistema poseen un caracter hidrofilico. Es decir la interacci\'on entre cada par de segmentos es similar a su interacci\'on con las mol\'eculas de agua. Como resultado la energ\'ia de interacci\'on de $VdW$ se considera una constante aditiva a la energ\'ia libre, por lo cual puede ser ignorada.
@@ -183,36 +182,41 @@ de forma m\'as explicita:
 \begin{align}
 	\begin{aligned}
 		\beta F=  & A\sum_{\gamma}\int_0^\infty{dz\rho_\gamma(z)\left(\ln \left(\rho_\gamma (z)v_w\right) -1 + \beta\mu^0_\gamma\right)} \\
+		%%%%%
 		&+ A\sum_{\theta}\int_0^\infty{dz\rho_{pro}(\theta,z)\left(\ln \left(\rho_{pro}(\theta,z)\right) -1 + \beta\mu^0_{pro} \right)} \\
+		%%%%%
 		&+ \sum_\alpha{P(\alpha)\ln P(\alpha)} \\
-		& + A\int_0^\infty dz \frac{\left<\phi_{MAA}(z)\right>}{v_{MAA}} \left[f(z)(\ln f(z)+ \beta\mu^0_{MAA^-})\right.\\
+		%%%%
+		& + A\int_0^\infty dz \left<\rho_{MAA}(z)\right> \left[f(z)(\ln f(z)+ \beta\mu^0_{MAA^-})\right.\\
 		& \qquad\qquad\qquad \left.+(1-f(z))(\ln (1-f(z))+\beta\mu^0_{MAAH})\right] \\
+		%%%%%
 		& + A\int_0^\infty dz \sum_\tau \left<\rho_{pro,\tau}(z)\right> \left[g_\tau(z)(\ln g_\tau(z)+ \beta\mu^0_{\tau p})\right.\\
 		&\qquad \qquad \qquad\qquad \qquad\quad \left.+(1-g_\tau(z))(\ln (1-g_\tau(z))+\beta\mu^0_{\tau d})\right]   \\
-		 & +A\int_0^\infty dz \left[\left(\sum_{\gamma } {\rho_\gamma(z) q_\gamma + \sum_\tau{f_\tau(z) \left<\rho_{pro,\tau}(z)\right> q_\tau} +  f(z)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\Psi(z) \right. \\ & \qquad \qquad \left.-\frac{1}{2}\beta\epsilon(\nabla\Psi(z))^2 \right]
+		%%%%%%%
+		 & +A\int_0^\infty dz \left[\left(\sum_{\gamma } {\rho_\gamma(z) q_\gamma + \sum_\tau{f_\tau(z) \left<\rho_{pro,\tau}(z)\right> q_\tau} +  f(z)\left<\rho_{MAA}(r)\right>q_{MAA}}\right)\beta\Psi(z) \right. \\ & \qquad \qquad \left.-\frac{1}{2}\beta\epsilon(\nabla\Psi(z))^2 \right]
 		\end{aligned}
 \end{align}
 
 
-Nuestro film esta el equilibrio con el bulk de la soluci\'on, la cual posee una composici\'on bien definida (pH, Temperatura, concnentraci\'on salina,  concentraci\'on de prote\'ina). Estas cantidades proveen un potencial qu\'imco el cual debe estar en equilibrio con la soluci\'on cercana a nuestro film. En particular son los potenciales de las especies libres, $\mu_\gamma$, y de la prote\'ina, $\mu_{pro}$.
-De esta forma nuestra energ\'ia libre se convierte un un gran potencial termodin\'amico:
+Nuestro film esta el equilibrio con el bulk de la soluci\'on, la cual posee una composici\'on bien definida (pH, Temperatura, concnentraci\'on salina,  concentraci\'on de prote\'ina). Estas cantidades proveen un potencial qu\'imico el cual debe estar en equilibrio con nuestro sistema polim\'erico. En particularestos potenciales corresponden a las especies libres, $\mu_\gamma$, y de la prote\'ina, $\mu_{pro}$.
+De esta forma al considerar esta condici\'on de equilibrio nuestra energ\'ia libre se convierte un un gran potencial termodin\'amico:
 
 \begin{align}
 	\begin{aligned}
 		\Omega = &F - \sum_\gamma \mu_\gamma N_\gamma -  \mu_{pro} N_{pro} \\
 			= &F -\sum_\gamma A\int_0^\infty dz \mu_\gamma \rho_\gamma(z) -  \mu_{pro} N_{pro}  \\
-			& \qquad -A\int_0^\infty \mu_{H^+} \left( \sum_\tau\left< \rho_{pro,\tau}(z) \right>g_\tau(z) + (1-f(z))\frac{\left< \phi_{MAA}(z) \right>}{v_{MAA}} \right )
+			& \qquad -A\int_0^\infty \mu_{H^+} \left( \sum_\tau\left< \rho_{pro,\tau}(z) \right>g_\tau(z) + (1-f(z))\left< \rho_{MAA}(z) \right> \right )
 			\end{aligned}
 		\label{eq:equil-qco}
 \end{align}
 
-\noindent $N_\gamma$ y $ N_{pro}$ son el n'umero total de mol\'eculas. En la \'ultima linea de la expresi\'on de \ref{eq:equil-qco} se tiene en cuenta los protones, y con ello su potencial $\mu_{H^+}$, provenientes de las especies con segmentos titulables: prot\'ina y red polim\'erica respectivamente.
+\noindent $N_\gamma$ y $ N_{pro}$ son el n\'umero total de mol\'eculas de las especies libres y la prote\'ina respectivamente. En la \'ultima linea de la expresi\'on eq. \ref{eq:equil-qco} se tiene en cuenta los protones asociados que  provienen de las especies con segmentos titulables: prot\'ina y red polim\'erica respectivamente.
 
 
 Adicionalmente las condiciones de equilibrio deben satifacer la condición de incompresibilidad del sistema: eq \ref{eq:constraint}.  Esta restricci\'on se incorpora como:
 
 \begin{align}
-	\Phi = \Omega +A \int_0^\infty dz\Pi(z){\left[\sum_{\gamma}\rho_\gamma(z) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(z)\right>v_\lambda} + \sum_i{\left<\phi_i(z)\right>} -1 \right]}
+	\Phi = \Omega +A \int_0^\infty dz\Pi(z){\left[\sum_{\gamma}\rho_\gamma(z) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(z)\right>v_\lambda} + \left<\rho_{MAA}(z)\right>v_{MAA} -1 \right]}
 \end{align}
 
 
@@ -221,26 +225,92 @@ Adicionalmente las condiciones de equilibrio deben satifacer la condición de in
 \begin{align}
 	\begin{aligned}
 		\beta \Phi=  & A\sum_{\gamma}\int_0^\infty{dz\rho_\gamma(z)\left(\ln \left(\rho_\gamma (z)v_w\right) -1 + \beta\mu^0_\gamma\right)} \\
+		%%%%
 		&+ A\sum_{\theta}\int_0^\infty{dz\rho_{pro}(\theta,z)\left(\ln \left(\rho_{pro}(\theta,z)\right) -1 + \beta\mu^0_{pro} \right)} \\
+		%%%%%%
 		&+ \sum_\alpha{P(\alpha)\ln P(\alpha)} \\
-		& + A\int_0^\infty dz \frac{\left<\phi_{MAA}(z)\right>}{v_{MAA}} \left[f(z)(\ln f(z)+ \beta\mu^0_{MAA^-})\right.\\
+		%%%%%%%
+		& + A\int_0^\infty dz \left<\rho_{MAA}(z)\right> \left[f(z)(\ln f(z)+ \beta\mu^0_{MAA^-})\right.\\
 		& \qquad\qquad\qquad \left.+(1-f(z))(\ln (1-f(z))+\beta\mu^0_{MAAH})\right] \\
+		%%%%%%%
 		& + A\int_0^\infty dz \sum_\tau \left<\rho_{pro,\tau}(z)\right> \left[g_\tau(z)(\ln g_\tau(z)+ \beta\mu^0_{\tau p})\right.\\
 		&\qquad \qquad \qquad\qquad \qquad\quad \left.+(1-g_\tau(z))(\ln (1-g_\tau(z))+\beta\mu^0_{\tau d})\right]   \\
-		& +A\int_0^\infty dz \left[\left(\sum_{\gamma } {\rho_\gamma(z) q_\gamma + \sum_\tau{f_\tau(z) \left<\rho_{pro,\tau}(z)\right> q_\tau} +  f(z)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\Psi(z) \right. \\ & \qquad \qquad \left.-\frac{1}{2}\beta\epsilon(\nabla\Psi(z))^2 \right] \\
-		& +A \int_0^\infty dz\Pi(z){\left[\sum_{\gamma}\rho_\gamma(z) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(z)\right>v_\lambda} + \sum_i{\left<\phi_i(z)\right>} -1 \right]} \\
+		%%%%%%%
+		& +A\int_0^\infty dz \left[\left(\sum_{\gamma } {\rho_\gamma(z) q_\gamma + \sum_\tau{f_\tau(z) \left<\rho_{pro,\tau}(z)\right> q_\tau} +  f(z) \left<\rho_{MAA}(r)\right>q_{MAA}}\right)\beta\Psi(z) \right. \\ & \qquad \qquad \left.-\frac{1}{2}\beta\epsilon(\nabla\Psi(z))^2 \right] \\ 
+		%%%%%%%%
+		& +A \int_0^\infty dz\beta\Pi(z){\left[\sum_{\gamma}\rho_\gamma(z) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(z)\right>v_\lambda} + \left<\rho_{MAA}(z)\right>v_{MAA} -1 \right]} \\
+		%%%%%%%%%%%
 		&   -\sum_\gamma A\int_0^\infty dz \left(\beta \mu_\gamma \rho_\gamma(z) - \beta \mu_{pro} \left<\rho_{pro}(z)\right> \right)  \\
-		&  -A\int_0^\infty \beta\mu_{H^+} \left( \sum_\tau\left< \rho_{pro,\tau}(z) \right>g_\tau(z) + (1-f(z))\frac{\left< \phi_{MAA}(z) \right>}{v_{MAA}} \right )
+		&  -A\int_0^\infty \beta\mu_{H^+} \left( \sum_\tau\left< \rho_{pro,\tau}(z) \right>g_\tau(z) + (1-f(z)) \left< \rho_{MAA}(z) \right> \right )
 	\end{aligned}
 \end{align}
  
 \textcolor{red}{Todos los subdindices utlizados se encuentran en la tabla.... hacer tabla (?)}
 
-A continuaci\'on se mostrara la optimizaci\'on de este gran potencial respecto de los funcionales de  eq. \ref{eq:funcionales}, ahora adicionando el potencial $\Pi(z)$.
+A continuaci\'on se mostrara la optimizaci\'on de este gran potencial respecto de los funcionales de  eq. \ref{eq:funcionales}, a los cuales se debe adicionar el potencial $\Pi(z)$.
 
-Resultando la optimizaci\'on respecto a la probabilidad de conformaci\'on del film, $P(\alpha)$:
-\textcolor{blue}{TRABAJAR CON LA DENSIDAD DEL FILM, TODO ES DE MAA, NO ES NECESARIO USAR VOLUME FRACTION}
+En part\'icular la optimizaci\'on respecto a la densidad de las especies libres, $\rho_\gamma$ resulta en:
 
+\begin{align}
+	\rho_\gamma(z)v_w = a_\gamma \exp\left[-\beta q_\gamma\Psi(z)\right] \exp\left[-\beta v_\gamma\Pi(z)\right]
+\end{align}
+
+\noindent en donde la actividad de la especie $\gamma$ se define como:
+\begin{align}
+	a_\gamma = \exp[\beta\mu_\gamma - \beta\mu^0_\gamma]
+\end{align}
+
+En esta expresi\'on se ve la influencia de los potenciales qu\'imicos de las especies libres,  $\mu_\gamma$, los cuales  deben estar en equilibrio con el bulk de la soluci\'on. Las actividades qu\'imicas estan completamente determinadas por la composici\'on (pH, T, concentraci\'on salina) del seno de la soluci\'on.
+ 
+El grado de disociaci\'on de los segmentos de $MAA$ viene dado por:
+
+\begin{align}
+	\frac{f(z)}{1-f(z)} = \frac{K^0_a}{a_{H^+}} \exp[-\beta q_{MAA}\Psi(z)]
+\end{align}
+
+\noindent en donde se define la constante termodin\'amica del equilibrio \'acido-base para los segmentos de $MAA$ como:
+
+\begin{align}
+	K_{a,MAA}^0 = \exp[-\beta\mu^0_{MAAH} -\beta\mu^0_{MAA^-} -\beta\mu^0_{H^+}]
+	\label{eq:ka-acido-base}
+\end{align}
+
+Del mismo modo el grado de disoci\'on de los segmentos titulables $\tau$:
+
+\begin{align}
+	\frac{f_\tau(z)}{1-f_\tau(z)} = \left(\frac{a_{H^+}}{K^0_{a,\tau}}\right)^{\mp 1} \exp[-\beta q_\tau \Psi(z)]
+\end{align}
+
+
+\noindent la constante termodin\'amica para el quilibrio de los segmentos $\tau$ se define de igual forma que en eq. \ref{eq:ka-acido-base}. el exponente,$\mp 1$, cambia si se trata de segmentos \'acidos o b\'asicos respectivamente.
+
+Optimizando respecto a la probabilidad de las conformaciones de la red polim\'erica se obtiene:
+
+\begin{align}
+	\begin{aligned}
+	P(\alpha) = &\frac{1}{Q}\exp\left[ -A \int^\infty_0 \rho_{MAA}(\alpha, z) \ln f(z)\right] \\
+	%%%%
+	&\exp\left[ -A \int^\infty_0 \rho_{MAA}(\alpha, z) \beta q_{MAA} \Psi(z)\right] \\
+	& \exp\left[ -A \int^\infty_0 \rho_{MAA}(\alpha, z) \beta v_{MAA} \Pi(z)\right] 
+	\end{aligned}
+\end{align}
+
+\noindent en donde:
+\begin{align}
+	\begin{aligned}
+		Q = &\sum_\alpha \left\{ \exp\left[ -A \int^\infty_0 \rho_{MAA}(\alpha, z) \ln f(z)\right]\right\} \\
+		%%%
+		& + \sum_\alpha\left\{ \exp\left[ -A \int^\infty_0 \rho_{MAA}(\alpha, z) \beta q_{MAA} \Psi(z)\right]  \right\} \\
+		%%%
+		& + \sum_\alpha\left\{ \exp\left[ -A \int^\infty_0 \rho_{MAA}(\alpha, z) \beta v_{MAA} \Pi(z)\right]  \right\} 
+	\end{aligned}
+\end{align}
+
+Constante con la cual se tiene en cuenta que la sumatoria de las probabilidades de cada conformaci\'on de la red polim\'erica sea 1:
+
+\begin{align}
+	\sum_\alpha P(\alpha) = 1
+\end{align}
 
 \textbf{pH} \\
 Hidrogeles  compuestos por cadenas de poli\'acidos son sensibles a los cambios de pH. Esta respuesta se debe a la equilibrio qu\'imico de protonaci\'on/desprotonaci\'on de las unidades \'acidas que componen la red. 
