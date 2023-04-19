@@ -23,13 +23,17 @@ This theory was developed in other works see \addcite[nap2006weak,longo2011molec
 
 
 
-Este método consiste en minimizar una energía libre generalizada que incluye toda la termodinamica relevante.
-Simultáneamente, el método permite una descripción molecular de grano grueso de las diferentes especies químicas que componen el sistema.
-Dicha descripción incluye forma, tamaño, distribución de carga y estado de protonación de cada componente molecular.
-El sistema en estudio se encuentra en  equilibrio con una solución acuosa que tiene una composición  definida externamente.
-Es decir, el pH, la concentración de sal y la concentración de adsorbatos son variables independientes.
-La red polimérica que da estructura a los geles pueden contener distintos tipos de segmentos: una unidad sensible al pH, ya sea ácida (MAA) o básica (AH), segmentos neutros (VA) o bien segmentos termosencibles (NIPAm)
+Este m\'etodo consiste en minimizar una energ\'ia libre generalizada que incluye toda la termodin\'amica relevante de cada sistema.
+Simult\'aneamente, el m\'etodo permite una descripci\'on molecular de , utilizando modelos de grano grueso, de las diferentes especies qu\'imicas que componen el sistema.
+Dicha descripci\'on incluye forma, tama\~no, distribuci\'on de carga y/o estado de protonaci\'on de cada componente molecular.
+
+En esta teor\'ia se trabaja en condiciones de equilibro por lo cual nuestro  sistema en estudio se encuentra en  equilibrio con una soluci\'on acuosa (bulk o ba\~no de la soluci\'on) que tiene una composici\'on  definida externamente.
+Es decir, el pH, la concentraci\'on de sal y la concentraci\'on de adsorbatos son variables independientes.
+
+Otro aspecto que tiene en cuenta  es la estructura de la red polim\'erica de los geles. Estos pueden contener distintos tipos de segmentos, los cuales son los que le dan la respuesta a est\'imulo y por ello considerados como materiales inteligentes. Dichas unidades qu\'imcas pueden ser sencibles al pH. Para este trabajo se estudian monomero de \'acido metacr\'ilico (MAA) y alilamida (AH) los cuales tiene comportamientos \'acido y b\'asico respectivamente. Como veremos en los resultado la respuesta en el pH es tambi\'en influenciada por la concentrac\'on salina del medio. 
+Otro tipo de segmentos son los  neutros, como el alcholo vinilico (VA),  o bien segmentos termosencibles (NIPAm)
 Las unidades de que representan los entrecruzamientos de cadena se describen como segmentos de carga neutral.
+
 El semi-gran potencial de este sistema contiene las siguientes contribuciones:
 \begin{align}
 \begin{aligned}
@@ -50,68 +54,6 @@ Finalmente, la suma de $\gamma$ expresa el equilibrio químico entre nuestro sis
 el subíndice $\gamma$ recorre las especies químicas libres, incluidas las proteínas.
 En este punto, tenga en cuenta que $\Omega_{NG}$ es un semi-gran potencial porque el sitema polimerico puede intercambiar cada una de estas moléculas libres con la solución , mientras que la red de polímeros está confinada dentro de nuestro sistema.
 
-Las expresiones explicitas de eq. \ref{eq:semicano} pueden describirse... segun el tipo de modelo elegido y la simetria considerada.. vease modelado...
-
-Como primer termino tenemos la entrop\'ia de mezcla de  las especies mobiles, es decir no se toma en cuenta el sistema polim\'erico.
-
-\begin{equation}
-   \frac{S_{mez}}{\beta}= \sum_{\gamma}\int_S{dr G(r)\rho_\gamma(r)\left(\ln \left(\rho_\gamma (r)v_w\right) -1 + \beta\mu^0_\gamma\right)}
-\end{equation}
-\noindent en donde $\beta = \frac{1}{kT}$ y $G(r) = 4\pi r^2$ lo cual corresponde a uns simetria radial. El subindice $\gamma$ tiene en cuenta las moleculas de agua, sus iones y los iones dados por la disociaci\'on de la sal.
-
-Otra especie mobil y que no ha sido considerada en la expresi\'on anterior es los adosrbatos. Para ellos se ha considerado su contribuci\'on energetica como:
-
-\begin{equation}
-    \frac{1}{\beta}\sum_{\theta}\int_S{dr G(r)\rho_{pro}(\theta,r)\left(\ln \left(\rho_{pro}(\theta,r)v_w\right) -1 + \beta\mu^0_{pro} \right)}
-\end{equation}
-
-Subindice $\theta$ puede interpretarse de dos maneras: en primer instancia como un conjunto de configuraciones para un solo adosrbato, tambi\'en puede considerarse a cada configuraci\'on como adsrobatos diferentes, pero con las mismas propiedades qi\'imicas.
-Estamos asumiendo que no hay cambios en el potencial qu\'imico  $\mu^0_{pro}$ al cambiar sobre $\theta$ 
-
-Now $S_{conf,nw}$ represents the conformational entropy that results from the flexibility of the polymer network, which can assume many different conformations denoted by the set $\{\alpha\}$. 
-\begin{equation}
-    \frac{S_{conf,nw}}{\beta} = \sum_{\alpha}{P(\alpha)\ln P(\alpha)}
-\end{equation}
-
-The next term describes the free energy for the acid-base equilibrium:
-For the MAA segments:
-\begin{align}
-\begin{aligned}
-\frac{F_{chem,nw}}{\beta} &= \int_S drG(r) \frac{\left<\phi_{MAA}(r)\right>}{v_{MAA}} \left[f(r)(\ln f(r)+ \beta\mu^0_{MAA^-})\right.\\
-&\left.+(1-f(r))(\ln (1-f(r))+\beta\mu^0_{MAAH})\right]    
-\end{aligned}
-\end{align} 
-
- In the same way the proteins segments equilibrium is writing as:
- \begin{align}
-\begin{aligned}
-\frac{F_{chem,pro}}{\beta} &=\int_S drG(r) \left<\rho_{pro,\tau}(r)\right> \left[g(r)(\ln g(r)+ \beta\mu^0_{\tau p})\right.\\
-&\qquad\left.+(1-g(r))(\ln (1-g(r))+\beta\mu^0_{\tau d})\right]   
-\end{aligned}
-\end{align} 
-
-Titratable units are represented by  $\tau$ subdix \textit{p} and \textit{d} are protonated and deprotonated states respectively. 
-\begin{enumerate}
-\item for an unit acid case: $g(r) = f(r)$
-\item basic case: $g(r) = 1-f(r)$
-\end{enumerate}
-
-The electrostatic contributions of the free energy $\frac{U_{elec}}{\beta}$ :
- \begin{align}
-\begin{aligned}
-\int_S drG(r)\left[\left(\sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\psi(r) -\frac{1}{2}\beta\epsilon(\nabla\psi(r))^2 \right]\\
-\end{aligned}
-\end{align} 
-\noindent where $\psi(r)$ is the position-dependent electrostatic potential, and $\epsilon$ the medium permittivity. 
-%%%%%%%%%%%%%%%%
-
-Finally the energy due the steric repulsion  take account the volume incompressibility
-\textcolor{red}{ejemplo para poner la ecuaci\'on en dos reglones}
-\begin{align*}
-    \begin{aligned}
-    +  &\int_0^\infty drG(r)\left[\left(\sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\psi(r) \right.\\  &\left. \hspace{6em}-\frac{1}{2}\beta\epsilon(\nabla\psi(r))^2 \right]
-    \end{aligned}
-\end{align*}
 
 \section{Modelado}
 

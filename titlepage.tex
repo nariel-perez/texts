@@ -30,7 +30,7 @@
 %% en el archivo principal "tesis.tex" se puede accesar aqu'i usando:
 %%   \insertauthor
 %%   \inserttitle
-%%   \insertsupervisor
+%%  \insertsupervisor
 %%   \insertinstitution
 %%   \insertdegree
 %%   \insertfaculty
@@ -43,7 +43,10 @@
   \TitleBlock{\Huge\scshape\inserttitle}
   \TitleBlock{\scshape
     Tesis presentada por \insertauthor \\
-    para obtener el grado de \insertdegree}
+    para obtener el grado de \insertdegree\\
+dirigado por:\\
+\insertsupervisor}
+
   \TitleBlock{\insertsubmitdate}
   \TitleBlock[\bigskip]{\insertdepartment}
 \end{titlepage}
