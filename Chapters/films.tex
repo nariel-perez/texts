@@ -145,7 +145,7 @@ En este contexto, la densidad de carga media es:
 
 \begin{align}
 	\left<\rho_q(z)\right> = \sum_{\gamma } {\rho_\gamma(z) q_\gamma + \sum_\tau{f_\tau(z) \left<\rho_{pro,\tau}(z)\right> q_\tau} +  f(z)\dfrac{\left<\phi_{MAA}(z)\right>}{v_{MAA}}q_{MAA}}
-	\label{si:eq:rho_charge}
+	\label{eq:rho_charge}
 \end{align}
 %%%%%%%%%%%%%%%%
 
@@ -213,14 +213,14 @@ De esta forma al considerar esta condici\'on de equilibrio nuestra energ\'ia lib
 \noindent $N_\gamma$ y $ N_{pro}$ son el n\'umero total de mol\'eculas de las especies libres y la prote\'ina respectivamente. En la \'ultima linea de la expresi\'on eq. \ref{eq:equil-qco} se tiene en cuenta los protones asociados que  provienen de las especies con segmentos titulables: prot\'ina y red polim\'erica respectivamente.
 
 
-Adicionalmente las condiciones de equilibrio deben satifacer la condición de incompresibilidad del sistema: eq \ref{eq:constraint}.  Esta restricci\'on se incorpora como:
+Adicionalmente las condiciones de equilibrio deben satifacer la condici\'on de incompresibilidad del sistema: eq \ref{eq:constraint}.  Esta restricci\'on se incorpora como:
 
 \begin{align}
 	\Phi = \Omega +A \int_0^\infty dz\Pi(z){\left[\sum_{\gamma}\rho_\gamma(z) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(z)\right>v_\lambda} + \left<\rho_{MAA}(z)\right>v_{MAA} -1 \right]}
 \end{align}
 
 
-\noindent en donde $\Pi(z)$ es un multiplicador local de Lagrange. Finalmente el potencial obtenido para nuestro sistema se escribe de forma explicita:
+\noindent en donde $\Pi(z)$ es un multiplicador local de Lagrange.  Este multiplicar se traduce o puede ser pensado como un potencial que define la presi\'on osm\'otica local. Finalmente el potencial obtenido para nuestro sistema se escribe de forma explicita:
  
 \begin{align}
 	\begin{aligned}
@@ -247,12 +247,13 @@ Adicionalmente las condiciones de equilibrio deben satifacer la condición de in
  
 \textcolor{red}{Todos los subdindices utlizados se encuentran en la tabla.... hacer tabla (?)}
 
-A continuaci\'on se mostrara la optimizaci\'on de este gran potencial respecto de los funcionales de  eq. \ref{eq:funcionales}, a los cuales se debe adicionar el potencial $\Pi(z)$.
+A continuaci\'on se mostrara la optimizaci\'on de este gran potencial respecto de los funcionales presentados en  eq. \ref{eq:funcionales}.
 
 En part\'icular la optimizaci\'on respecto a la densidad de las especies libres, $\rho_\gamma$ resulta en:
 
 \begin{align}
 	\rho_\gamma(z)v_w = a_\gamma \exp\left[-\beta q_\gamma\Psi(z)\right] \exp\left[-\beta v_\gamma\Pi(z)\right]
+	\label{eq:film:free-species}
 \end{align}
 
 \noindent en donde la actividad de la especie $\gamma$ se define como:
@@ -266,6 +267,7 @@ El grado de disociaci\'on de los segmentos de $MAA$ viene dado por:
 
 \begin{align}
 	\frac{f(z)}{1-f(z)} = \frac{K^0_a}{a_{H^+}} \exp[-\beta q_{MAA}\Psi(z)]
+	\label{eq:film:degree-film}
 \end{align}
 
 \noindent en donde se define la constante termodin\'amica del equilibrio \'acido-base para los segmentos de $MAA$ como:
@@ -279,6 +281,7 @@ Del mismo modo el grado de disoci\'on de los segmentos titulables $\tau$:
 
 \begin{align}
 	\frac{f_\tau(z)}{1-f_\tau(z)} = \left(\frac{a_{H^+}}{K^0_{a,\tau}}\right)^{\mp 1} \exp[-\beta q_\tau \Psi(z)]
+	\label{eq:film:degree-protein}
 \end{align}
 
 
@@ -293,6 +296,7 @@ Optimizando respecto a la probabilidad de las conformaciones de la red polim\'er
 	&\exp\left[ -A \int^\infty_0 \rho_{MAA}(\alpha, z) \beta q_{MAA} \Psi(z)\right] \\
 	& \exp\left[ -A \int^\infty_0 \rho_{MAA}(\alpha, z) \beta v_{MAA} \Pi(z)\right] 
 	\end{aligned}
+	\label{eq:film:probabilidad}
 \end{align}
 
 \noindent en donde:
@@ -311,6 +315,69 @@ Constante con la cual se tiene en cuenta que la sumatoria de las probabilidades 
 \begin{align}
 	\sum_\alpha P(\alpha) = 1                 
 \end{align}
+
+La densidad local de nuestra prote\'ina en una conformaci\'on $\theta$ se deriva de la expresi\'on:
+
+\begin{align}
+	\begin{aligned}
+	\rho_{pro}(\theta, z)v_w = &\tilde{a}_{pro} \exp\left[-A\int_0^\infty dz^\prime n_\tau(\theta,z,z^\prime) \ln f_\tau(z^\prime)\right] \\
+	& \exp \left[-A\int^\infty\_0 dz^\prime n_\lambda(\theta,z, z^\prime)[v_\lambda\beta\Pi(z^\prime) + q_\lambda \Psi(z^\prime)] \right]
+	\end{aligned}
+\label{eq:film:proteina}
+\end{align}
+
+En esta expres\'ion se ha redefinido el potencial qu\'imico estandar de la prote\'ina y si los segmentos son de naturaleza \'acida o b\'asica:
+\begin{align}
+	 \left\{ \begin{array}{lr} \beta\tilde{\mu}^0_{pro} = \beta ^0_{pro}  + n_t\beta( \mu^0_{\tau,d})& : \acute{a}cido \\
+	 	 \beta\tilde{\mu}^0_{pro} = \beta ^0_{pro}  + n_t\beta(\mu_{H^+} - \mu^0_{\tau,p}) & : base \end{array} \right. 
+\end{align}
+
+\noindent en donde $n_t$ es el n\'umero de segmentos titulables dados por:
+\begin{align}
+	n_t = A\int_0^\infty dz n_\tau(\theta, z^\prime, z)
+\end{align}
+
+La variaci\'on de nuestro gran potencial respecto del potencial electrost\'atico que da orgien a la ecuaci\'on de Poisson:
+
+\begin{align}
+	\epsilon \nabla^2 \Psi(z) = - \left< \rho_q (z)\right>
+\end{align}
+
+En esta expresi\'on en conjunto con  la densidad de carga definida en eq. \ref{eq:rho_charge}, nos muestra el acoplamiento local entre las interacciones f\'isicas, la organizaci\'on molecular, los grados de libertad, conformaciones y equilibrios qu\'imcos. 
+
+Para la resoluci\'on de nuestro sistema, que se encuentre en equilibrio, se han impuesto ciertas restricciones, como la incompresibilidad o equilibrio de poteciales qu\'imicos eqs. \ref{eq:constraint} y \ref{eq:equil-qco} respectivamente. De este modo otra restrici\'on que se impone es la electroneutralidad de la soluci\'on: 
+
+\begin{align}
+	\int_0^\infty dz \left< \rho_q (z)\right> = 0
+\end{align}
+
+Esta restricci\'on se satiface en la ecuaci\'on de Poisson al considerar las condiciones de contorno adecuadas, las cuales definimos:
+
+\begin{align}
+	\begin{aligned}
+		&i)  \lim_{z\to\infty}\Psi(z) = 0 \\
+		&ii) \left.\frac{d\Psi(z)}{dr}\right|_{z=0} = 0
+		\label{eq:si:contorno}
+	\end{aligned}
+\end{align}
+
+Estas condiciones significan que el potencial electrost\'atico se desvanece a medida que nos alejamos de nuestro film polim\'ercio,  y que el medio dielectrico en el cual se encuentra el film  se extiende desde su superficie de soporte, respectivamente. 
+
+En este punto hemos mostrados las expresiones que optimizan a nuestro gran potencial, y c\'omo cada uno de estos funcionales: $P(\alpha), \rho_\gamma(z),\rho_{pro}(z), f_\tau(z), f(z), \Psi(z) $ a su vez  terminan siendo definidos por dos potenciales locales: Electrost\'atico $\Psi(z)$ y Presi\'on osm\'otica $\Pi(z)$. 
+Como primera conclusi\'on de esta teor\'ia es que es posible calcular y describir la termodin\'amica del sistema dadas las condiciones de laboratorio: pH, concentraci\'on de sal y adsorbatos, temperatura. Utilizando y resolviendo las ecuaciones de incompresibilidad y de electroneutralidad, adem\'as de otros par\'ametros de entrada: volumenes moleculares, cargas y constantes de disociaci\'on. as\'i como la distintas conformaci\'on que pueden adquirir cada elemento del sistema, es decir la distribuci\'on espacial de cada segemento cada una conformaci\'on.
+Estas par\'ametros de entrada son provisto al c\'odigo mediante el uso de un modelo molecular. Los tipos de modelo usados son explicados en detalle en la secci\'on \ref{sec:theory}. 
+
+La forma de obtener estas variables desconocidas, $\Psi(z)$ y $\Pi(z)$  es realizando una soluci\'on n\'umerica por sustituci\'on en la diferentes ecuaciones en las que interactuan: la densidad de las especies libres eq. \ref{eq:film:free-species}, los grados de disociaci\'on de los segmentos del film y de los segmentos titulables de la prote\'ina ecuaciones \ref{eq:film:degree-film} y \ref{eq:film:degree-protein} respectivamente, la probabilidad de las conformaciones de la red polim\'erica ecu. \ref{eq:film:probabilidad} y la densidad local de la prote\'ina ecu. \ref{eq:film:proteina}.
+
+Una vez obtendos los potenciales $\Pi(z)$ y $\Psi(z)$ es posible derivar  cualquier cantidad termodin\'amica de inter\'es  a partir de la energ\'ia libre o haciendo uso de alguna expresi\'on explicita. 
+
+Por ejemplificar la fracci\'on de volumen local ocupada por la prote\'ina puede ser calculada como:
+
+\begin{align}
+	\left< \phi_{pro}(z) \right> = A\int_0^\infty dz^\prime \sum_\theta \rho(\theta, z^\prime)\sum_\lambda n_\lambda(\theta, z^\prime, z)v_\lambda
+\end{align}
+
+Con esta cantidad es posible cuantificar la adsorci\'on de la prote\'ina en el film.
 
 \textbf{pH} \\
 Hidrogeles  compuestos por cadenas de poli\'acidos son sensibles a los cambios de pH. Esta respuesta se debe a la equilibrio qu\'imico de protonaci\'on/desprotonaci\'on de las unidades \'acidas que componen la red. 
