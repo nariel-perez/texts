@@ -328,13 +328,20 @@ La densidad local de nuestra prote\'ina en una conformaci\'on $\theta$ se deriva
 
 En esta expres\'ion se ha redefinido el potencial qu\'imico estandar de la prote\'ina y si los segmentos son de naturaleza \'acida o b\'asica:
 \begin{align}
-	 \left\{ \begin{array}{lr} \beta\tilde{\mu}^0_{pro} = \beta ^0_{pro}  + n_t\beta( \mu^0_{\tau,d})& : \acute{a}cido \\
-	 	 \beta\tilde{\mu}^0_{pro} = \beta ^0_{pro}  + n_t\beta(\mu_{H^+} - \mu^0_{\tau,p}) & : base \end{array} \right. 
+	 \left\{ \begin{array}{lr} \beta\tilde{\mu}^0_{pro} = \beta ^0_{pro}  + cn_\tau\beta( \mu^0_{\tau,d})& : \acute{a}cido \\
+	 	 \beta\tilde{\mu}^0_{pro} = \beta ^0_{pro}  + cn_\tau\beta(\mu_{H^+} - \mu^0_{\tau,p}) & : base \end{array} \right. 
 \end{align}
 
-\noindent en donde $n_t$ es el n\'umero de segmentos titulables dados por:
+\noindent en donde se define el n\'umero de composici\'on, $cn_j$, para un segmento $j$:
 \begin{align}
-	n_t = A\int_0^\infty dz n_\tau(\theta, z^\prime, z)
+	cn_j = A\int_0^\infty dz n_j(\theta, z^\prime, z)
+	\label{eq:film:n-coord}
+\end{align}
+
+ resultando:
+\begin{align}
+	\tilde{a}^0_{pro} = \exp[\beta\mu_{pro} - \beta\tilde{\mu}^0_{pro}]
+	\label{eq:film:actividad-pro}
 \end{align}
 
 La variaci\'on de nuestro gran potencial respecto del potencial electrost\'atico que da orgien a la ecuaci\'on de Poisson:
@@ -377,8 +384,103 @@ Por ejemplificar la fracci\'on de volumen local ocupada por la prote\'ina puede 
 	\left< \phi_{pro}(z) \right> = A\int_0^\infty dz^\prime \sum_\theta \rho(\theta, z^\prime)\sum_\lambda n_\lambda(\theta, z^\prime, z)v_\lambda
 \end{align}
 
-Con esta cantidad es posible cuantificar la adsorci\'on de la prote\'ina en el film.
+Con esta cantidad es posible cuantificar la adsorci\'on de la prote\'ina en el film. 
 
+\section{Soluci\'on Bulk}
+
+Como mencionamos en la secci\'on anterior, el potencial usado es un potencial gran canonico el cual proviene de un ensamble gran canonico, en el cual el sistema de estudio  esta en equilibrio con un ``ba\~no t\'ermico". Traducido a nuestro trabajo significa que el film y sus alrededores se encuentran en constante equilibrioi con el bulk de la soluci\'on en la que estan bien definidas las variables como pH, temperatura y concentraci\'on de sal y/o prote\'ina. 
+Dadas estas condiciones la resoluci\'on del bulk de la soluci\'on es indispensable para llevar a cabo nuestras simulaciones. Las soluciones nos proporcionan la informaci\'on de las actividades de las especies mobiles, y con ella sus potenciales qu\'imicos. Informaci\'on que como vimo anteriormente es necesaria para la resolución de las ecuaciones de incompresibilidad y de Poisson.
+
+El procedimiento te\'orico es en esencia el mismo: escritura de la energ\'ia libre (y su respectivo potencial) y minimizaci\'on respecto de las funcionales  que lo componen.
+
+De esta forma el potencial dado por el bulk de la soluci\'on se escribe:
+
+\begin{align}
+	\begin{aligned}
+		\beta \Phi^b=  & A\sum_{\gamma}{\rho^b_\gamma\left(\ln \left(\rho^b_\gamma v_w\right) -1 + \beta\mu^0_\gamma\right)} \\
+		%%%%
+		&+ A\sum_{\theta}{\rho^b_{pro}(\theta)\left(\ln \left(\rho^b_{pro}(\theta)\right) -1 + \beta\mu^0_{pro} \right)} \\
+		%%%%%%
+		& + A \sum_\tau \left<\rho^b_{pro,\tau}\right> \left[g^b_\tau(\ln g^b_\tau+ \beta\mu^0_{\tau p}) +(1-g^b_\tau)(\ln (1-g^b_\tau)+\beta\mu^0_{\tau d})\right]   \\
+		%%%%%%%
+		& +A \left[\left(\sum_{\gamma } {\rho^b_\gamma q_\gamma + \sum_\tau{f^b_\tau \left<\rho^b_{pro,\tau}\right> q_\tau} }\right)\beta\Psi^b -\frac{1}{2}\beta\epsilon(\nabla\Psi^b)^2 \right] \\ 
+		%%%%%%%%
+		& +A \beta\Pi^b{\left[\sum_{\gamma}\rho^b_\gamma v_\gamma + \sum_\lambda{\left<\rho^b_{pro,\lambda}\right>v_\lambda}  -1 \right]} \\
+		%%%%%%%%%%%
+		&   -\sum_\gamma A \left(\beta \mu_\gamma \rho^b_\gamma - \beta \mu_{pro} \left<\rho^b_{pro}\right> \right)   -A \beta\mu_{H^+} \left( \sum_\tau\left< \rho^b_{pro,\tau} \right>g_\tau  \right )
+	\end{aligned}
+	\label{eq:film:pot-bulk}
+\end{align}
+
+\noindent en donde El superidice $b$ denota el Bulk de la soluci\'on. 
+ Los ensambles, expresiones entre brackets ($\left<\rho\right>$)se definen de la misma forma que en la secci\'on anterior. Teniendo las salvedades que no hay dependencia sobre la coordenada $z$:
+ \begin{align}
+ 	\left<\rho^b_{pro}\right> = \sum_{\theta}\rho^b_{pro}(\theta)
+ \end{align}
+ Adem\'as se ha considerado las condiciones a $z \to \infty$:
+
+\begin{align}
+	\begin{aligned}
+		& i)\rho^b_i =\rho(z \rightarrow \infty)_i   \\
+		& ii)  \Pi^b = \Pi(z \rightarrow \infty) \\
+		& iii) g_\tau^b = g_\tau(z \rightarrow \infty)  
+	\end{aligned}
+\end{align}
+\noindent en donde $i$ hace referencia a las especies libres y la prote\'ina. 
+
+en consecuencia para las especies libres $\gamma$ resulta:
+\begin{align}
+	\rho^b_\gamma v_w = a_\gamma \exp\left[ -\beta q_\gamma \Psi^b -\beta \Pi^b v_\gamma \right]
+	\label{eq:rhofree-bulk}
+\end{align}
+
+El grado de disosiaci\'on de los segmentos $\tau$ titulables de la prote\'ina:
+
+\begin{align}
+		\frac{f^b_\tau}{1-f^b_\tau} = \left(\frac{a_{H^+}}{K^0_{a,\tau}}\right)^{\mp 1} \exp[-\beta q_\tau \Psi^b]
+\end{align}
+
+
+finalmente para la densidad de prote\'ina se obtiene:
+
+\begin{align}
+	\begin{aligned}
+		\rho_{pro}(\theta)v_w = &\tilde{a}_{pro} \exp\left[-cn_\tau \ln f^b_\tau\right] \\
+		& \exp \left[-cn_\lambda (v_\lambda\beta\Pi^b + q_\lambda \Psi^b) \right]
+	\end{aligned}
+	\label{eq:rhopro-bulk}
+\end{align}
+
+\noindent en donde $\tilde{a}_{pro}$ y $cn_\tau$ (y $cn_\lambda$) son definidos en las ecuaciones  \ref{eq:film:actividad-pro} y \ref{eq:film:n-coord} respectivamente. 
+
+De nuevo podemos observar que nuestros funcionales quedan dependiendo por la presi\'on osm\'otica $\Pi^b$ y el potencial electrost\'atico $\Psi^b$
+Sin embargo si consideramo las condiciones de contorno dada en la ec. \ref{eq:si:contorno} para la ecuaci\'on de Poisson, vemos que en el bulk de la soluci\'on $\Psi^b = 0$. 
+
+Esto nos muestra que para nuestro ba\~no t\'ermico la principal inc\'ognicta es la presi\'on osm\'otica: $\Pi^b$.
+La cual es posible obtenerla por resoluci\'on num\'erica al sustituir las ecuaciones  \ref{eq:rhofree-bulk} y \ref{eq:rhopro-bulk} en la nueva condici\'on de incompresibilidad dada por:
+
+\begin{align}
+	\sum_\gamma \rho^b_\gamma v_\gamma + \sum_\lambda\left< \rho^b_{pro}\right> = 1
+	\label{eq:incom-bulk}
+\end{align}
+
+Como se mencion\'o al inicio de esta secci\'on la resoluci\'on del bulk de la soluci\'on, en concreto el c\'alculo de $\Pi^b$, nos provee la informaci\'on para las actividades de las especies m\'oviles:
+
+\begin{align}
+	a_\gamma =\frac{\rho^b_\gamma v_w}{\exp\left[-\beta \Pi^b v_\gamma - \beta q_\gamma\Psi^b\right]}
+\end{align}
+
+ y para la prote\'ina:
+
+\begin{align}
+	\begin{aligned}
+		\tilde{a}_{pro} = & \rho_{pro}(\theta)v_w\exp\left[cn_\tau \ln f^b_\tau\right] \\
+		& \exp \left[cn_\lambda (v_\lambda\beta\Pi^b + q_\lambda \Psi^b) \right]
+	\end{aligned}
+\end{align}
+
+
+\section{resultados}
 \textbf{pH} \\
 Hidrogeles  compuestos por cadenas de poli\'acidos son sensibles a los cambios de pH. Esta respuesta se debe a la equilibrio qu\'imico de protonaci\'on/desprotonaci\'on de las unidades \'acidas que componen la red. 
 Para enteneder el funcionamiento de esta respuesta recordaremos algunos conceptos sobre el comportamiento \'acido/base de moleculas bajo condiciones ideales. 
