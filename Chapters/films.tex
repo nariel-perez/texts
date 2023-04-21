@@ -14,7 +14,7 @@ En este capitulo mostraremos un estudio  de estos sistemas polim\'ericos haciend
 
 
 
-\section{Te\'oria Molecular en films polim\'ericos}
+\section{Te\'oria Molecular en films polim\'ericos} \label{sec:film-teoria}
 
 
 Este m\'etodo consiste en minimizar una energ\'ia libre generalizada que incluye toda la termodinamica relevante que engloba los procesos del film contacto con una soluci\'on.
@@ -334,7 +334,7 @@ En esta expres\'ion se ha redefinido el potencial qu\'imico estandar de la prote
 
 \noindent en donde se define el n\'umero de composici\'on, $cn_j$, para un segmento $j$:
 \begin{align}
-	cn_j = A\int_0^\infty dz n_j(\theta, z^\prime, z)
+	cn_j = A\int_0^\infty dz \, n_j(\theta, z^\prime, z), \forall z^\prime
 	\label{eq:film:n-coord}
 \end{align}
 
@@ -397,17 +397,17 @@ De esta forma el potencial dado por el bulk de la soluci\'on se escribe:
 
 \begin{align}
 	\begin{aligned}
-		\beta \Phi^b=  & A\sum_{\gamma}{\rho^b_\gamma\left(\ln \left(\rho^b_\gamma v_w\right) -1 + \beta\mu^0_\gamma\right)} \\
+		\beta\frac{ \Phi^b}{V}=  & \sum_{\gamma}{\rho^b_\gamma\left(\ln \left(\rho^b_\gamma v_w\right) -1 + \beta\mu^0_\gamma\right)} \\
 		%%%%
-		&+ A\sum_{\theta}{\rho^b_{pro}(\theta)\left(\ln \left(\rho^b_{pro}(\theta)\right) -1 + \beta\mu^0_{pro} \right)} \\
+		&+ \sum_{\theta}{\rho^b_{pro}(\theta)\left(\ln \left(\rho^b_{pro}(\theta)\right) -1 + \beta\mu^0_{pro} \right)} \\
 		%%%%%%
-		& + A \sum_\tau \left<\rho^b_{pro,\tau}\right> \left[g^b_\tau(\ln g^b_\tau+ \beta\mu^0_{\tau p}) +(1-g^b_\tau)(\ln (1-g^b_\tau)+\beta\mu^0_{\tau d})\right]   \\
+		& + \sum_\tau \left<\rho^b_{pro,\tau}\right> \left[g^b_\tau(\ln g^b_\tau+ \beta\mu^0_{\tau p}) +(1-g^b_\tau)(\ln (1-g^b_\tau)+\beta\mu^0_{\tau d})\right]   \\
 		%%%%%%%
-		& +A \left[\left(\sum_{\gamma } {\rho^b_\gamma q_\gamma + \sum_\tau{f^b_\tau \left<\rho^b_{pro,\tau}\right> q_\tau} }\right)\beta\Psi^b -\frac{1}{2}\beta\epsilon(\nabla\Psi^b)^2 \right] \\ 
+		& +\left[\left(\sum_{\gamma } {\rho^b_\gamma q_\gamma + \sum_\tau{f^b_\tau \left<\rho^b_{pro,\tau}\right> q_\tau} }\right)\beta\Psi^b -\frac{1}{2}\beta\epsilon(\nabla\Psi^b)^2 \right] \\ 
 		%%%%%%%%
-		& +A \beta\Pi^b{\left[\sum_{\gamma}\rho^b_\gamma v_\gamma + \sum_\lambda{\left<\rho^b_{pro,\lambda}\right>v_\lambda}  -1 \right]} \\
+		& +\beta\Pi^b{\left[\sum_{\gamma}\rho^b_\gamma v_\gamma + \sum_\lambda{\left<\rho^b_{pro,\lambda}\right>v_\lambda}  -1 \right]} \\
 		%%%%%%%%%%%
-		&   -\sum_\gamma A \left(\beta \mu_\gamma \rho^b_\gamma - \beta \mu_{pro} \left<\rho^b_{pro}\right> \right)   -A \beta\mu_{H^+} \left( \sum_\tau\left< \rho^b_{pro,\tau} \right>g_\tau  \right )
+		&   -\sum_\gamma \left(\beta \mu_\gamma \rho^b_\gamma - \beta \mu_{pro} \left<\rho^b_{pro}\right> \right)   -\beta\mu_{H^+} \left( \sum_\tau\left< \rho^b_{pro,\tau} \right>g_\tau  \right )
 	\end{aligned}
 	\label{eq:film:pot-bulk}
 \end{align}
@@ -457,7 +457,7 @@ De nuevo podemos observar que nuestros funcionales quedan dependiendo por la pre
 Sin embargo si consideramo las condiciones de contorno dada en la ec. \ref{eq:si:contorno} para la ecuaci\'on de Poisson, vemos que en el bulk de la soluci\'on $\Psi^b = 0$. 
 
 Esto nos muestra que para nuestro ba\~no t\'ermico la principal inc\'ognicta es la presi\'on osm\'otica: $\Pi^b$.
-La cual es posible obtenerla por resoluci\'on num\'erica al sustituir las ecuaciones  \ref{eq:rhofree-bulk} y \ref{eq:rhopro-bulk} en la nueva condici\'on de incompresibilidad dada por:
+La cual es posible obtenerla por resoluci\'on num\'erica al sustituir las ecuaciones  \ref{eq:rhofree-bulk} ,  \ref{eq:rhopro-bulk}  y sus respectivas actividades (ecuaciones \ref{eq:film:act-bulk-free} y \ref{eq:film:act-bulk-pro} )en la nueva condici\'on de incompresibilidad dada por:
 
 \begin{align}
 	\sum_\gamma \rho^b_\gamma v_\gamma + \sum_\lambda\left< \rho^b_{pro}\right> = 1
@@ -468,6 +468,7 @@ Como se mencion\'o al inicio de esta secci\'on la resoluci\'on del bulk de la so
 
 \begin{align}
 	a_\gamma =\frac{\rho^b_\gamma v_w}{\exp\left[-\beta \Pi^b v_\gamma - \beta q_\gamma\Psi^b\right]}
+	\label{eq:film:act-bulk-free}
 \end{align}
 
  y para la prote\'ina:
@@ -477,8 +478,101 @@ Como se mencion\'o al inicio de esta secci\'on la resoluci\'on del bulk de la so
 		\tilde{a}_{pro} = & \rho_{pro}(\theta)v_w\exp\left[cn_\tau \ln f^b_\tau\right] \\
 		& \exp \left[cn_\lambda (v_\lambda\beta\Pi^b + q_\lambda \Psi^b) \right]
 	\end{aligned}
+\label{eq:film:act-bulk-pro}
 \end{align}
 
+\section{resoluci\'on num\'erica}
+
+La obtenci\'on de resultados a partir de la teor\'ia planteada en estas secciones requiere la soluci\'on n\'umerica de ecuaciones integro-diferenciales. Para tal prop\'osito es conveniente pasar de un sistema continuo a uno discreto. 
+La discretizaci\'on del sistema se realiza en capaz de espesor $\delta$. La suma sobre cada uno de estas capaz reemplazan a las integrales a lo largo del eje $z$.
+
+Por ejemplificar este cambio, la ecuaci\'on de incompresibilidad expresada en ec. \ref{eq:constraint} es reescrita como:
+
+
+\begin{align}
+	\begin{aligned}
+		1=  {\left[\sum_{\gamma}\rho_\gamma(i_z) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(i_z)\right>v_\lambda} + \left<\rho_{MAA}(i_z)\right>v_{MAA} \right]},~ with \quad  i_z =1,2,3.., n_z
+	\end{aligned}
+\label{eq:film:discreto-constraint}
+\end{align}
+
+Esta expresi\'on nos permite resolverla en cada una de las capaz $i_z$, cuya posición es descrita usando la coordenada $z_i = (i_z -0.5)\delta$, lo cual las ubica en el centro de cada capa. $i_z$ toma los valores de 1 a $n_z$, donde se toma a $n_z$ lo suficientemente grande para que las densidades de cada una de las especies involucradas, as\'i como tambi\'en el potencial electrost\'atico, convergan a sus valores en el ba\~no t\'ermico (el bulk de la soluci\'on).
+Es decir: $\rho_gamma(n_z) = \rho^b_\gamma$, $\rho_{pro}(\theta,n_z) = \rho^b_{pro}(\theta)$ y $\Psi(n_z) = \Psi^b =0$.
+Para valores de $n_z \geq 500$ es posible obtener estas condiciones (dado que no son impuestas per se en la teor\'ia).
+
+Reescribiendo las expresiones de los funcionales de la secci\'on \ref{sec:film-teoria}, obtenemos para la densidad discreta de las especies libres:
+
+\begin{align}
+	\rho_\gamma(i_z)v_w = a_\gamma \exp\left[-\beta q_\gamma\Psi(i_z)\right] \exp\left[-\beta v_\gamma\Pi(i_z)\right]
+\end{align}
+
+
+El grado de disociaci\'on:
+
+\begin{align}
+	\frac{f_j(i_z)}{1-f_j(i_z)} = \left(\frac{a_{H^+}}{K^0_{a,\tau}}\right)^{\mp 1} \exp[-\beta q_\tau \Psi(i_z)]
+\end{align}
+
+\noindent en donde $j$ hace referencia a los segmentos de $MAA$ del film y los segmentos titulables $\tau$ de la prote\'ina. Y en la que nuevamente se tiene encuenta que el exponente $-1$ o $+1$ discrimina si el segmento $j$ es \'acido o b\'asico
+
+
+La densidad de los segmentos que compone la red polim\'erica se expresa como:
+\begin{align}
+	\left< \rho_{MAA}(i_z)\right> = \sum_\alpha P(\alpha)\rho_{MAA}(\alpha, i_z)
+\end{align}
+
+En donde se redefine $P(\alpha)$:
+
+
+\begin{align}
+	\begin{aligned}
+		P(\alpha) = &\frac{1}{Q}\exp\left[ -A \delta \sum^{n_z}_{i_z = 1} \rho_{MAA}(\alpha, i_z) \ln f(i_z)\right] \\
+		%%%%
+		&\exp\left[ -A\delta \sum^{n_z}_{i_z = 1}  \rho_{MAA}(\alpha, i_z) \beta q_{MAA} \Psi(i_z)\right] \\
+		& \exp\left[ -A\delta \sum^{n_z}_{i_z = 1}  \rho_{MAA}(\alpha, i_z) \beta v_{MAA} \Pi(i_z)\right] 
+	\end{aligned}
+\end{align}
+
+\noindent en donde $\Psi(i_z)$ y $\Pi(i_z)$ son los valores discretos de la interacci\'on de estos potenciales. Adem\'as $\rho_{MAA}(\alpha, i_z)$ es la distribuci\'on discreta para una conformaci\'on $\alpha$ la cual son provistas por el tipo de modelo molecular a usar.
+
+La densidad discreta de la prote\'ina se expresa:
+
+
+\begin{align}
+	\begin{aligned}
+		\rho_{pro}(\theta, i_z)v_w = &\tilde{a}_{pro} \exp\left[-A \delta \sum^{n_z}_{j_z = 1} n_\tau(\theta,i_z,j_z) \ln f_\tau(j_z)\right] \\
+		& \exp \left[-A \delta \sum^{n_z}_{j_z = 1}  n_\lambda(\theta,i_z, j_z)[v_\lambda\beta\Pi(j_z) + q_\lambda \Psi(j_z)] \right]
+	\end{aligned}
+\end{align}
+
+Finalmente discretizando la ecuaci\'on de Poisson, para el pontencial electrost\'atico, obtenemos:
+
+\begin{align}
+	\epsilon \frac{\Psi(i_z +1) + \Psi(i_z -1) +2\Psi(i_z)}{\delta^2} = \left< \rho_q(i_z)\right>
+	\label{eq:film:discreto-poisson}
+\end{align}
+
+\noindent en esta expresi\'on se ha reemplazado la derivada segunda el potencial por su diferencia finita. Adem\'as la densidad discreta de carga se define:
+
+
+\begin{align}
+	\left<\rho_q(i_z)\right> = \sum_{\gamma } {\rho_\gamma(i_z) q_\gamma + \sum_\tau{f_\tau(i_z) \left<\rho_{pro,\tau}(i_z)\right> q_\tau} +  f(i_z)\dfrac{\left<\phi_{MAA}(i_z)\right>}{v_{MAA}}q_{MAA}}
+	\label{eq:rho_charge}
+\end{align}
+
+
+As\'i como fueron definas las condiciones de contorno en la ecuaci\'on \ref{eq:si:contorno} es necesario redefinirla para el sistema discreto. Estas condiciones deben satisfacer el desvanecimiento del potencial electrost\'atico, $\Psi(n_z) =0 $. Adem\'as se debe cumplir que la derivada del mismo entre la superficie de soporte y el film se anule.
+Para ello es necesario agregar una capa $i_z = 0$.
+Y resultando:
+\begin{align}
+	\frac{\Psi(1) - \Psi(0)}{\delta} = 0
+\end{align}
+
+\noindent lo que implica que $\Psi(0) =  \Psi(1)$.
+
+En resumen dadas las condiciones del bulk de la soluci\'on, o condiciones de laboratorio, compuestas por el pH, concentraci\'on de sal y prote\'ina. temperatura, restar\'ia conocer las cantidades $\Psi(i_z)$ y $\Pi(i_z)$ para cada capa $i_z$. Variables que pueden ser obtenidas al resolver en cada capa las ecuaciones \ref{eq:film:discreto-constraint} y \ref{eq:film:discreto-poisson}.
+De esta forma el n\'umero de ecuaciones totales a resolver es $2n_z$ (dos por cada capa). el n\'umero de t\'erminos de cada ecuaci\'on es dependiente de la cantidad de especies involucradas con sus respectivas conformaciones. 
+Estes sistema de ecuaciones es resuleto usando el m\'etodo de Newton con Jacobiano libre, implementado en c\'odigos Fortran desarrollados en el grupo de trabajo.
 
 \section{resultados}
 \textbf{pH} \\
