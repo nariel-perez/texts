@@ -320,21 +320,21 @@ La densidad local de nuestra prote\'ina en una conformaci\'on $\theta$ se deriva
 
 \begin{align}
 	\begin{aligned}
-	\rho_{pro}(\theta, z)v_w = &\tilde{a}_{pro} \exp\left[-A\int_0^\infty dz^\prime n_\tau(\theta,z,z^\prime) \ln f_\tau(z^\prime)\right] \\
-	& \exp \left[-A\int^\infty_0 dz^\prime n_\lambda(\theta,z, z^\prime)[v_\lambda\beta\Pi(z^\prime) + q_\lambda \Psi(z^\prime)] \right]
+	\rho_{pro}(\theta, z)v_w = &\tilde{a}_{pro} \prod_\tau\exp\left[-A\int_0^\infty dz^\prime n_\tau(\theta,z,z^\prime) \ln f_\tau(z^\prime)\right] \\
+	& \prod_\lambda \exp \left[-A\int^\infty_0 dz^\prime n_\lambda(\theta,z, z^\prime)[v_\lambda\beta\Pi(z^\prime) + q_\lambda \Psi(z^\prime)] \right]
 	\end{aligned}
 \label{eq:film:proteina}
 \end{align}
 
 En esta expres\'ion se ha redefinido el potencial qu\'imico estandar de la prote\'ina y si los segmentos son de naturaleza \'acida o b\'asica:
 \begin{align}
-	 \left\{ \begin{array}{lr} \beta\tilde{\mu}^0_{pro} = \beta ^0_{pro}  + cn_\tau\beta( \mu^0_{\tau,d})& : \acute{a}cido \\
-	 	 \beta\tilde{\mu}^0_{pro} = \beta ^0_{pro}  + cn_\tau\beta(\mu_{H^+} - \mu^0_{\tau,p}) & : base \end{array} \right. 
+	 \left\{ \begin{array}{lr} \beta\tilde{\mu}^0_{pro} = \beta ^0_{pro}  +\sum_\tau C_{n,\tau}\beta( \mu^0_{\tau,d})& : \acute{a}cido \\
+	 	 \beta\tilde{\mu}^0_{pro} = \beta ^0_{pro}  + \sum_\tau C_{n,\tau}\beta(\mu_{H^+} - \mu^0_{\tau,p}) & : base \end{array} \right. 
 \end{align}
 
-\noindent en donde se define el n\'umero de composici\'on, $cn_j$, para un segmento $j$:
+\noindent en donde se define el n\'umero de composici\'on, $C_{n,j}$, para un segmento $j$:
 \begin{align}
-	cn_j = A\int_0^\infty dz \, n_j(\theta, z^\prime, z), \forall z^\prime
+	C_{n,j} = A\int_0^\infty dz \, n_j(\theta, z^\prime, z), \forall z^\prime
 	\label{eq:film:n-coord}
 \end{align}
 
