@@ -460,7 +460,7 @@ Esto nos muestra que para nuestro ba\~no t\'ermico la principal inc\'ognicta es 
 La cual es posible obtenerla por resoluci\'on num\'erica al sustituir las ecuaciones  \ref{eq:rhofree-bulk} ,  \ref{eq:rhopro-bulk}  y sus respectivas actividades (ecuaciones \ref{eq:film:act-bulk-free} y \ref{eq:film:act-bulk-pro} )en la nueva condici\'on de incompresibilidad dada por:
 
 \begin{align}
-	\sum_\gamma \rho^b_\gamma v_\gamma + \sum_\lambda\left< \rho^b_{pro}\right> = 1
+	\sum_\gamma \rho^b_\gamma v_\gamma + \sum_\lambda\left< \rho^b_{pro,\lambda}\right> v_\lambda = 1
 	\label{eq:incom-bulk}
 \end{align}
 
@@ -480,6 +480,9 @@ Como se mencion\'o al inicio de esta secci\'on la resoluci\'on del bulk de la so
 	\end{aligned}
 \label{eq:film:act-bulk-pro}
 \end{align}
+
+
+Hay que tener en cuenta que las densidades en el bulk de la soluci\'on son p\'arametro de entrada en cada c\'alculo. Una vez que se establecen el pH, la concentraci\'on de sal y la concentraci\'on de nuestra prote\'ina, estas densidades se determinan completamente (usando la electroneutralidad de la soluci\'on del bulk y la autodisociaci\'on de equilibrio del agua).
 
 \section{resoluci\'on num\'erica}
 
