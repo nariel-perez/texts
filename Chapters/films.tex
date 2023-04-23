@@ -445,16 +445,16 @@ finalmente para la densidad de prote\'ina se obtiene:
 
 \begin{align}
 	\begin{aligned}
-		\rho_{pro}(\theta)v_w = &\tilde{a}_{pro} \exp\left[-cn_\tau \ln f^b_\tau\right] \\
-		& \exp \left[-cn_\lambda (v_\lambda\beta\Pi^b + q_\lambda \Psi^b) \right]
+		\rho_{pro}(\theta)v_w = &\tilde{a}_{pro} \prod_\tau \exp\left[-cn_\tau \ln f^b_\tau\right] \\
+		& \prod_\lambda \exp \left[-cn_\lambda (v_\lambda\beta\Pi^b + q_\lambda \Psi^b) \right]
 	\end{aligned}
 	\label{eq:rhopro-bulk}
 \end{align}
 
 \noindent en donde $\tilde{a}_{pro}$ y $cn_\tau$ (y $cn_\lambda$) son definidos en las ecuaciones  \ref{eq:film:actividad-pro} y \ref{eq:film:n-coord} respectivamente. 
 
-De nuevo podemos observar que nuestros funcionales quedan dependiendo por la presi\'on osm\'otica $\Pi^b$ y el potencial electrost\'atico $\Psi^b$
-Sin embargo si consideramo las condiciones de contorno dada en la ec. \ref{eq:si:contorno} para la ecuaci\'on de Poisson, vemos que en el bulk de la soluci\'on $\Psi^b = 0$. 
+Podemos observar nuevamebte que nuestros funcionales quedan en funci\'on, valga la redundancia, por la presi\'on osm\'otica $\Pi^b$ y el potencial electrost\'atico $\Psi^b$
+Sin embargo si consideramo las condiciones de contorno dada en la ec. \ref{eq:si:contorno} para la ecuaci\'on de Poisson, vemos que en la soluci\'on bulk se debe cumplir: $\Psi^b = 0$. 
 
 Esto nos muestra que para nuestro ba\~no t\'ermico la principal inc\'ognicta es la presi\'on osm\'otica: $\Pi^b$.
 La cual es posible obtenerla por resoluci\'on num\'erica al sustituir las ecuaciones  \ref{eq:rhofree-bulk} ,  \ref{eq:rhopro-bulk}  y sus respectivas actividades (ecuaciones \ref{eq:film:act-bulk-free} y \ref{eq:film:act-bulk-pro} )en la nueva condici\'on de incompresibilidad dada por:
@@ -540,8 +540,8 @@ La densidad discreta de la prote\'ina se expresa:
 
 \begin{align}
 	\begin{aligned}
-		\rho_{pro}(\theta, i_z)v_w = &\tilde{a}_{pro} \exp\left[-A \delta \sum^{n_z}_{j_z = 1} n_\tau(\theta,i_z,j_z) \ln f_\tau(j_z)\right] \\
-		& \exp \left[-A \delta \sum^{n_z}_{j_z = 1}  n_\lambda(\theta,i_z, j_z)[v_\lambda\beta\Pi(j_z) + q_\lambda \Psi(j_z)] \right]
+		\rho_{pro}(\theta, i_z)v_w = &\tilde{a}_{pro} \prod_\tau\exp\left[-A \delta \sum^{n_z}_{j_z = 1} n_\tau(\theta,i_z,j_z) \ln f_\tau(j_z)\right] \\
+		& \prod_\lambda \exp \left[-A \delta \sum^{n_z}_{j_z = 1}  n_\lambda(\theta,i_z, j_z)[v_\lambda\beta\Pi(j_z) + q_\lambda \Psi(j_z)] \right]
 	\end{aligned}
 \end{align}
 
