@@ -5,76 +5,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-The design of functional vehicles for the encapsulation, transport and release on target of therapeutic agents is one of the major challenges of bionanotechnology \addcite[ye2018review].
-Despite being formulated to specifically treat certain diseases, many drugs fail to capitalize on their design properties due to  unwanted interactions with the environment surrounding the target \addcite[ibraheem2014administration].
-Nanoparticles are being explored as a solution to these limitations, serving as smart carriers that can  protect drugs against harmful environmental factors.
-Various nanocarriers, including liposomes, polymeric micelles, and inorganic particles have been investigated for their potential to effectively transport and release molecular cargo \addcite[chamundeeswari2019nanocarriers, lopez2012organic].
-These nanocarriers can increase circulation time while conferring stealth properties to the complex, helping evade the immune or digestive systems \addcite[gaucher2010polymeric].
-By increasing the circulation time, nanocarries can also help reduce the need for frequent dosing.
-
-
-
-
-
-
-Nanogels, in particular, are soft nanoparticles with diameters smaller than 200\,nm that can uptake and release relatively large quantities of solvent in response to changes in the surrounding environment.
-Depending on the chemical composition of the crosslinked polymer that makes the nanogel skeleton, these particles can reversibly swell or deswell as a result of changes in temperature \addcite[agnihotri2021temperature], pH \addcite[sharma2022modulating], salt concentration \addcite[saraydin2022calculations] and a variety of external stimuli \addcite[jung2020responsive,plamper2017functional, yang2022co].
-These unique properties of polymer nanogels can be exploited to target drug delivery to specific microenvironments, such as the acidic surroundings of tumors \addcite[zhang2020construction] or wounded or inflamed tissue with higher temperatures \addcite[wu2010core].
-Besides, moieties can be incorporated on its polymeric surface to enhance specificity of the delivery, allowing the nanogel to selectively bind receptors on the target \addcite[ahadian2020micro, mukherjee2019lipid, torchilin2007micellar, farokhzad2006targeted].
-The ability of nanogels to release medication in a controlled manner to specific environments can help prevent the emergence of drug resistance \addcite[mukherjee2019lipid].
-
-
-
-
-
-
-
-A significant and growing fraction of newly developed drugs to treat different diseases are proteins \addcite[mahmood2023recent].
-The stability of these proteins is an issue, as they are easily denatured by changes in pH or temperature \addcite[frokjaer2005protein].
-Polymer hydrogels and nanogels have been shown to help prevent protein denaturation and loss of activity under these conditions \addcite[macdougall2021charged, peppas2004hydrogels].
-The potential to maintain the native conformation of proteins, combined with the stimuli-responsive behavior of nanogels, makes them suitable candidates to develop functional vehicles for the encapsulation, transport and targeted release of therapeutic proteins.
-Additionally, the polymer network of nanogels can be tailored with different functional groups to control both the specific or non-specific  interactions with proteins, thereby increasing the efficacy of encapsulation/delivery.
-
-
-
-Despite their many advantages, the development of nanogel-based drug delivery systems is still in its early stages, and there are still many questions that need to be addressed before this technology can be fully realized.
-In particular, as they are required to function in various biological fluids, understanding how nanogels behave and interact with proteins in terms of the composition of its polymer network and that of the  protein solution is crucial for their successful application.
-In this work, we use a theoretical approach to study how the chemical identity and the spatial distribution of functional groups on the polymer network modify nanogel response and its interaction with specific proteins, with a specific focus on electrostatically driven protein adsorption/desorption.
-Our goal is to provide a better basic understanding of the factors that influence the performance of these systems and to identify strategies to improve their effectiveness in the context of drug delivery nanovehicles.
-
-
-
-
-
-
-We consider nanogels made of copolymer networks containing both a hydrophilic, charge-neutral monomer and a pH-responsive one, and their interactions with small globular proteins, such as cytochrome c, insulin, and myoglobin, which have different isoelectric points.
-ROJO
-	The interaction of these proteins with polymeric systems have been studied previously \addcite[hagemann2018use,oberle2015competitive].
-	These polymeric systems have also been studied using the theory and molecular simulations.\addcite[sharma2022modulating,hofzumahaus2021monte,polotsky2013collapse, walkowiak2020thermodynamic]
-ROJO
-In particular, the search for more effective and less invasive means of insulin administration has presently immense importance in biomedical research \addcite[lowman1999oral,wong2018microparticles,chaturvedi2013polymeric].
-
-
-
-
-We study nanogels based on copolymers of vinyl alcohol (VA) and either a methacrylic acid (MAA; proton donor) or allylaimine (AH; proton acceptor).
-Due to their biocompatibility these monomers are widely used for potential drug delivery applications \addcite[asadi2020common,sarwar2020smart,lowman1999oral].
-With the goal of gaining a deeper understanding of the factors that affect the performance of these systems and identifying strategies for adjusting their interactions with different proteins, we derive and apply a statistical thermodynamic theory that allows for a molecular-level description of all chemical species.
-This method incorporates an explicit description of network conformations that result in elasticity, ion and solvent confinement entropic effects, acid-base equilibrium chemistry as well as electrostatic interactions and steric repulsions.
-Specifically, we investigate the effect of the spatial distribution of pH-sensitive units through the polymer network on the nanogel swelling and protein adsorption.
-
-
-
-
-
-
-
-
-
-
-
-
-
+En estas secci\'on... geles polim\'ericos... perspectiva m\'as compleja... estrucutra interna del nanogel se vuelve un factor importante...
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -109,7 +40,7 @@ The semi-grand potential of this system contains the following contributions:
 \Omega_{NG}=& -TS_{mix} -TS_{conf,nw} + F_{chem,nw} + F_{chem,pro}\\
 & + U_{elec} + U_{ste}  - {\sum_{\gamma}{\mu_\gamma N_\gamma}}
 \end{aligned}
-\label{eq:semicano}
+\label{eq:esf:semicano}
 \end{align}
 \noindent where $S_{mix}$ is the translational (mixing) entropy of the solution species: water molecules (H$_2$O), hydronium ions (H$_3$O$^+$), hydroxide ions (OH$^-$), salt cations, salt anions and proteins.
 We consider a monovalent salt, NaCl, and assume it is completely dissociated into sodium (Na$^+$) and chloride ions (Cl$^-$).
@@ -120,7 +51,274 @@ $U_{elec}$ and $U_{ste}$ account, respectively, for the electrostatic interactio
 Finally, the sum over $\gamma$ expresses the chemical equilibrium between our system and the bulk solution that represent a bath for the free particles, where $\mu_\gamma$ and $N_\gamma$ are the chemical potential and number of molecules of species $\gamma$, respectively;
 the subindex $\gamma$ runs over the free chemical species, including proteins.
 Note that $\Omega_{NG}$ is a semi-grand potential because the nanogel  can exchange each of these free molecules with the bulk solution, while the polymer network is confined within our system.
-A detailed derivation of the theory can is presented in the SI.
+A detailed derivation of the theory can is presentada a continuaci\'on...
+
+
+Next we will describe the explicit form of each of these terms, where the protonable segments of the nanogel will be considered as methacrylic acid (MAA) segments. However the same equations apply for nanogels having  basic segments. The differences are found in the use of the sign of the degree of dissociation.
+
+First:  the translational and mixing entropy of the mobile species including the protein, is
+\begin{align}
+	\begin{aligned}
+		-\frac{S_{mix}}{k_B}= &\sum_{\gamma}\int_0^\infty{dr G(r)\rho_\gamma(r)\left(\ln \left(\rho_\gamma (r)v_w\right) -1 + \beta\mu^0_\gamma\right)} \\
+		&+ \sum_{\theta}\int_0^\infty{dr G(r)\rho_{pro}(\theta,r)\left(\ln \left(\rho_{pro}(\theta,r)\right) -1 + \beta\mu^0_{pro} \right)}
+	\end{aligned}
+\end{align}
+
+\noindent where $\beta = \frac{1}{k_BT}$, $k_B$ is the Boltzmann constant and $T$ the temperature of the system,$\rho_\gamma(r)$ and $\mu_\gamma$ is the local, at $r$ position, density and chemical potential of the species $\gamma$ respectively. 
+Subindex $\gamma$ runs over water molecules and its ions (hydronium and hydroxyde), and the salt dissociated ions ($K^+$, $Cl^-$). $G(r)$ is the symmetry constant for the shell $r$: $4\pi r^2$.
+
+The second term of the entropy of mixing considers the contributions for the protein.
+$\rho_{pro}(\theta,r)$ is the local density of the protein in $\theta$ conformation.
+$\theta$ runs over different protein conformation. 
+This contributions also include spatial rotation.
+The total local density of proteins is:
+
+\begin{align}
+	\left<\rho_{pro}(r)\right> = \sum_\theta{\rho_{pro}(\theta,r)}
+\end{align}
+
+$S_{conf,nw}$ represents the conformational entropy that results from the flexibility of the polymer network, which can assume many different conformations denoted by the set $\{\alpha\}$. 
+\begin{equation}
+	\frac{S_{conf,nw}}{k_B} = - \sum_{\alpha}{P(\alpha)\ln P(\alpha)}
+\end{equation}
+
+\noindent Where $P(\alpha)$ denotes the probability that the nanogel network is in the configuration $\alpha$.
+
+The next term describes the free energy for the acid-base equilibrium:
+For $MAA$ segments:
+\begin{align}
+	\begin{aligned}
+		\beta F_{chem,nw} &= \int_0^\infty drG(r) \frac{\left<\phi_{MAA}(r)\right>}{v_{MAA}} \left[f(r)(\ln f(r)+ \beta\mu^0_{MAA^-})\right.\\
+		&\left.+(1-f(r))(\ln (1-f(r))+\beta\mu^0_{MAAH})\right]    
+	\end{aligned}
+\end{align} 
+
+
+\noindent where $f(r)$ is the degree of charge $MAA$ segments in the spherical shell between $r$ and $r + dr$. 
+$\mu^0_{MAA^-}$ and $\mu^0_{MAAH}$ are the standard chemical potentials of the deprotonated and protonated species respectively. $v_{MAA}$ is the molecular volume for the $MAA$ segment.
+Also for a segment \textit{i} in the network ($i = MAA/VA/crosslink$): 
+
+\begin{align}
+	\left< \phi_i(r)\right> = \sum_\alpha{P(\alpha)\phi_i(\alpha,r)}
+\end{align}
+\noindent in which $\phi_i(\alpha,r)$ is the ensemble average, is an input quantity that gives the local volume fraction occupied by the segments locally at $r$, when the network is in conformation $\alpha$.
+
+
+%%%%%%%%%%%%%%%%%%%
+The chemical equilibrium of titratable protein units is considered in the following free energy term:
+
+\begin{align}
+	\begin{aligned}
+		\beta F_{chem,pro} =\int_0^\infty dr &G(r) \sum_\tau \left<\rho_{pro,\tau}(r)\right> \left[g_\tau(r)(\ln g_\tau(r)+ \beta\mu^0_{\tau p})\right.\\
+		&\qquad\left.+(1-g_\tau(r))(\ln (1-g_\tau(r))+\beta\mu^0_{\tau d})\right]   
+	\end{aligned}
+\end{align} 
+
+\noindent where $\left<\rho_{pro,\tau}(r)\right>$ represents the local average density of protonable $\tau$ segments of the protein.
+
+Which is defined as:
+\begin{align}
+	\left<\rho_{pro,\tau}(r)\right> = \sum_\theta \int_o^\infty dr^\prime G(r^\prime) \rho_{pro}(\theta,r^\prime)n_\tau(\theta,r,r^\prime)
+	\label{eq:segments-pro-si}
+\end{align}
+\noindent where $n_\tau(\theta,r,r^\prime)$ is an input quantity that gives the number $\tau$ segments  between $r^\prime$ and $r^\prime+ dr^\prime$ when the center of mass of a protein in configuration $\theta$ is at $r$.
+
+Titratable units are represented by $\tau$  adh the subindexs  $p$ and $d$ are protonated and deprotonated states respectively.
+$\mu^0_{\tau,p}$ and $\mu^0_{\tau,d}$ are the standar chemical potentials of the protonated and deprotonated $\tau$ segments respectively.
+In addition, $g_\tau(r)$ is the degree of proton association of $\tau$ segments. It follows that: 
+\begin{enumerate}
+	\item for an acid unit: $g_\tau(r) = 1-f_\tau(r)$ ($\tau$ unit become negatively charged)
+	\item for a basic unit: $g_\tau(r) = f_\tau(r)$ ($\tau$ unit become positively charged)
+\end{enumerate}
+where $f_\tau(r)$ is the degree of charge for the segment $\tau$.
+%%%%%%%%%%
+
+The electrostatic  energy is:
+\begin{align}
+	\begin{aligned}
+		\beta U_{elecc}= \int_0^\infty drG(r)&\left[\left(\sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\Psi(r) \right. \\ &\left.-\frac{1}{2}\beta\epsilon(\nabla\Psi(r))^2 \right]
+	\end{aligned}
+\end{align} 
+
+\noindent where $\Psi(r)$ is the position-dependent electrostatic potential, and $\epsilon$ the medium permittivity, $q_\gamma$ is the charge of the mobile species, $q_\tau$ corresponds to the charge of the titratable segments of the adsorbate. Finally $q_{MAA}$ is the charge of a $MAA$ segment.
+
+In this context, the average charge density is:
+\begin{align}
+	\left<\rho_q(r)\right> = \sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}
+	\label{eq:esf:rho-charge}
+\end{align}
+%%%%%%%%%%%%%%%%
+
+The next term is the  thermodynamic potential, due the steric repulsion which can be incorporated through the following constraint:
+\begin{align}
+	\begin{aligned}
+		1=  {\left[\sum_{\gamma}\rho_\gamma(r) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(r)\right>v_\lambda} + \sum_i{\left<\phi_i(r)\right>}\right]},~ \forall r
+	\end{aligned}
+	\label{eq:esf:constraint}
+\end{align}
+\noindent where $v_\lambda$ is the molecular volume of segment $\lambda$ in the protein.
+$\left<\rho_{pro,\lambda}(r)\right>$ is defined in the same way as  eq. \ref{eq:segments-pro-si}.
+Note that the subindex $\lambda$ considers all segments of the protein, that is $ \tau \in \lambda$.
+Subindex \textit{i} runs over $MAA$ and $VA$ segment in the nanogel.
+
+%%%%%%%%%%%%%%%
+$U_{VdW}$ is the energy of the Van der Waals interaction ($VdW$). In this work it has been assumed that all segments have a hydrophilic character. Namely, $VdW$ interactions between different pair of segments, and those with water molecules are similar. As a result the net $VdW$ interaction energy represent an additive constant to the total free energy.
+Thus, this contribution can be ignored.
+
+
+To complete the gran potential of \ref{eq:esf:semicano}, the exchange of mobile species is taken into account:
+
+The first two terms on the left side of the equation account for the chemical equilibrium of the mobile species $\gamma$ and of the proteins within the solution.
+The last two terms consider the hydrogen ions from the protonatable segments of the protein and the MAA segments of the polymer network that makes up the nanogel.
+
+
+\begin{align}
+	\begin{aligned}
+		\mu_\gamma N_\gamma + \mu_{pro} N_{pro} =\int_0^\infty drG(r)&\left[\sum_{\gamma }{\rho_\gamma(r)\mu_\gamma}
+		+ \mu_{pro} \left<\rho_{pro}(r)\right> \right. \\
+		& \left. +\mu_{H^+}\sum_{\tau}{g_\tau\left<\rho_{pro,\tau}(r)\right> } +\mu_{H^+}(1-f(r))\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}\right]
+	\end{aligned}
+\end{align}
+
+
+%%%%%%%%%%
+The explicit form of the grand potential is expressed as:
+
+%%%%%%%%%%%%
+\begin{align}
+	\begin{aligned}
+		\beta&\Omega_{NG}=\\&  \sum_{\gamma}\int_0^\infty{dr G(r)\rho_\gamma(r)\left(\ln \left(\rho_\gamma (r)v_w\right) -1 + \beta\mu^0_\gamma\right)} \\
+		%
+		& +\sum_\theta \int_0^\infty{dr G(r)\rho_{pro}(r)\left(\ln (\rho_{pro}(\theta,r)v_w)-1 + \beta\mu^0_{pro} \right)} \\
+		%
+		& + \sum_{\alpha}{P(\alpha)\ln P(\alpha)} \\
+		%
+		& +\int_0^\infty drG(r) \frac{\left<\phi_{MAA}(r)\right>}{v_{MAA}} \left[f(r)(\ln f(r)+ \beta\mu^0_{MAA^-})\right.\\
+		&\qquad \qquad \qquad\qquad \qquad \quad \left.+(1-f(r))(\ln (1-f(r))+\beta\mu^0_{MAAH})\right] \\
+		%
+		& +\int_0^\infty drG(r)\sum_\tau \left<\rho_{pro,\tau}(r)\right> \left[g_\tau(r)(\ln g_\tau(r)+ \beta\mu^0_{\tau p})\right.\\
+		&\qquad\qquad \qquad\qquad \qquad \qquad\left.+(1-g_\tau(r))(\ln (1-g_\tau(r))+\beta\mu^0_{\tau d})\right] \\
+		%
+		& +  \int_0^\infty drG(r)\left[\left(\sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\Psi(r) \right.\\  &\left. \hspace{6em}-\frac{1}{2}\beta\epsilon(\nabla\Psi(r))^2 \right]\\
+		%
+		&+ \int_0^\infty \beta\Pi(r) drG(r){\left(\sum_{\gamma}\rho_\gamma(r) v_\gamma + \sum_{\lambda}{\left<\rho_{pro,\lambda}(r)\right>}{v_\lambda} + \sum_i\left<\phi_i(r)\right> -1\right)}\\
+		%
+		& -\int_0^\infty drG(r)\left[\sum_{\gamma }{\rho_\gamma(r)\beta\mu_\gamma}
+		+ \beta\mu_{pro} \left<\rho_{pro}(r)\right>
+		+\beta\mu_{H^+}\sum_{\tau}{g_\tau(r)\left<\rho_{pro,\tau}(r)\right> } \right.\\
+		& \left. \hspace{6em} +\beta\mu_{H^+}(1-f(r))\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}\right]%\\
+	\end{aligned}
+	\label{eq:esf:free-energy}
+\end{align}
+
+In this expression, \ref{eq:esf:free-energy}, the Lagrange multiplier $\Pi(r)$ has been introduced as  the constraint on volume incompresibility, eq. \ref{eq:esf:constraint}.
+
+
+Minimization of $\beta\Omega_{NG}$ with respect to the local densities, $\rho_\gamma(r)$, the electrostatic potential, $\Psi(r)$, the degrees of dissociation of the protonable species (in the network and proteins segments) $f(r)$,  and with respect to the probabilities of the different conformations of the polymer network $P(\alpha)$.
+
+In other words, we can write $\Omega = \sum P(\alpha) \int{G(r) dV\omega}$,  where $\omega$ is  a functional which represent the density of the grand potential: 
+
+\begin{align}
+	\omega=\omega(\rho_\gamma(r), \rho_{pro}(r),\Psi(r),f(r),P(\alpha))
+\end{align}
+
+
+In particular, the expressions obtained for the degree of dissociation $f_j(r)$ of tritiable segments of the nanogel and the protein is:
+
+\begin{align}
+	\frac{f_j(r)}{1-f_j(r)}= \left(\frac{a_{H^+}}{k^0_{a,j}}\right)^{\mp 1} e^{-\beta q_{MAA^-}\Psi(r)}
+	\label{eq:esf:f-degree}
+\end{align}
+\noindent where $a_{H^+}=e^{\beta\Delta\mu_{H^+}}=e^{\beta(\mu_{H^+} -\mu^0_{H^+})}$ is the activity of the $H^+$. Subindex $j$ runs over the titulable segments in the network and the protein, $j =\{MAA , \, \tau \}$. Exponent $\mp \, 1$ discriminates between acid or basic segments respectively.
+
+In the previous expression, \ref{eq:esf:f-degree}, the thermodynamic equilimrium  constant of  acid-base:
+
+\begin{align}
+	\begin{aligned}
+		& \left[HA\right] \Longleftrightarrow [H^+] +[A^-] \\
+		& k_{a,HA}^0=\frac{[H^+][A^-]}{[HA]} \\
+		& k_{a,HA}^0=\exp\left(\beta\mu_{HA}^0 - \beta \mu_{A^-}^0 - \beta \mu^0_{H^+} \right)
+	\end{aligned}
+	\label{eq:esf:dis-rxn}
+\end{align}
+%%%%%%%%%%%%%%%
+%represent de protonable and deprotonable state of the segment $\iota
+For the small mobiles species:
+
+\begin{align}
+	\rho_\gamma(r)v_w = a_\gamma \exp{\left(-\beta \Psi(r)q_\gamma\right)} \exp{\left(-\beta\Pi(r) v_w\right)}
+\end{align}
+
+
+	
+For the density of the protein $\rho(\theta,r)$:
+	
+	
+	
+	\begin{align}
+		\begin{aligned}
+			\rho_{pro}(\theta, r)v_w = & \tilde{a}_{pro} \prod_\tau \exp\left[ -\int_0^\infty dr^\prime G(r^\prime) n_\tau(\theta,r,r^\prime) \ln f_\tau(r^\prime)\right] \\
+			& \times \prod_\lambda \exp\left[ -\int_0^\infty dr^\prime G(r^\prime) n_\lambda(\theta,r,r^\prime)\left(q_\lambda \beta\psi(r^\prime) + v_\lambda \beta \Pi(r^\prime)\right)\right]
+		\end{aligned}
+	\end{align}
+	
+	\noindent where the activity of the protein is redefined as:
+	
+	\begin{align}
+		\tilde{a}_{pro} = \exp[\beta\mu_{pro} - \beta\tilde{\mu}^0_{pro}]
+	\end{align}
+	
+	with:
+\begin{align}
+	\beta\tilde{\mu}^0_{pro} =  \beta \mu^0_{pro}  + \sum_{\tau,a} C_{n,\tau}\beta\mu^0_{\tau,d} 
+	+ \sum_{\tau,b} C_{n,\tau}\beta(\mu_{H^+} - \mu^0_{\tau,p})
+\end{align}
+
+
+\noindent $\tau,a$ and $\tau,b$ sum over acid or basic segments respectively. And the composition number for a segment $k$ in the protein, $C_{n,k}$:
+	\begin{align}
+		\left[\int_0^\infty dr^\prime G(r^\prime) n_k(\theta,r,r^\prime) = C_{n,k}\right] \quad \forall \, r
+		\label{eq:esf:composition}
+	\end{align}
+	
+	
+	The probability of a configuration $\alpha$ is expressed as:
+	
+	\begin{align}
+		\begin{aligned}
+			P(\alpha)&=\frac{1}{Q}\exp\left[- \sum_i{\int{drG(r)\beta\Pi(r)\phi_i(\alpha,r)}}\right] \\
+			& \times \exp\left[\int{\ln(1-f(r))drG(r)\frac{\phi(\alpha,r)}{v_{MAA}}}\right], \\
+		\end{aligned}
+	\end{align}
+	
+	\noindent Where $Q$ is a constant that satisfies $\sum_\alpha P(\alpha) = 1$
+	
+	The variation with respect to the electrostatic potential results in the Poisson equation:
+	
+	\begin{align}
+		\epsilon\Delta\psi(r) = -\left<\rho_q(r)\right>
+		\label{eq:esf:poisson}
+	\end{align}
+	
+	This last expression considers eq. \ref{eq:esf:rho-charge}. Another physical constraint to take into account is the electroneutrality of the solution, which is:
+	\begin{align}
+		\int_0^\infty{drG(r) \left<\rho_q(r)\right>} = 0
+	\end{align}
+	
+	satisfaction of such constraint can be achievement considering the appropriate boundary condition.
+	When solving the Poisson's equation. These boundary condition are:
+	\begin{align}
+		\begin{aligned}
+			&i)  \lim_{r\to\infty}\psi(r) = 0 \\
+			&ii) \left.\frac{d\psi(r)}{dr}\right|_{r=0} = 0
+			\label{eq:esf:contorno}
+		\end{aligned}
+	\end{align}
+	
+	
+	We can observe that all of the components that determine the thermodynamic potential $\Omega$ have now been expressed in terms of the local electrostatic potential $\Psi(r)$, the position-dependent osmotic pressure $\Pi(r)$, the activities of the free species, and some other input quantities. Given the salt concentration, the pH and the concentration of each adsorbate in the bath solution, all these activities can be calculated from imposing the incompressibility and charge neutrality constraint to such solution and using the equilibrium condition of water self-dissociation. 
+	
+	The solutions for the potentials $\Pi(r)$ and $\Psi(r)$ are obtained by numerically solving equations \ref{eq:esf:constraint} and \ref{eq:esf:poisson} respectively for each shell r.
 
 
 
