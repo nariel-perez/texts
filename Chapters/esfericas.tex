@@ -53,10 +53,6 @@ Las expresiones explicitas de cada uno de estos componentes, as\'i como la minim
 
 \subsection{Theoretical Framework}\label{sect:theory}
 
-Next we will describe the explicit form of each of these terms, where the protonable segments of the nanogel will be considered as methacrylic acid (MAA) segments. However the same equations apply for nanogels having  basic segments. The differences are found in the use of the sign of the degree of dissociation.
-
-First:  the translational and mixing entropy of the mobile species including the protein, is
-
 A continuaci\'on describiremos la forma expl\'icita de cada uno de estos t\'erminos, donde los segmentos protonables del nanogel ser\'an considerados como segmentos de \'acido metacrílico (MAA). Sin embargo, las mismas ecuaciones se aplican a los nanogeles que tienen segmentos b\'asicos. Las diferencias se encuentran en el uso del signo del grado de disociaci\'on.
 
 En primera instancia tenemos la entrop\'ia de traslaci\'on y de mezcla de las especies m\'oviles, incluida la prote\'ina:
@@ -71,13 +67,12 @@ En primera instancia tenemos la entrop\'ia de traslaci\'on y de mezcla de las es
 
 
 
-\noindent donde $\beta = \frac{1}{k_BT}$, $k_B$ es la constante de Boltzmann y $T$ la temperatura absoluta del sistema, $\rho_\gamma(r)$ y $\mu_\gamma$ es la densidad local, en la posición $r$, y potencial qu\'imico de la especie $\gamma$ respectivamente.
-El sub\'indice $\gamma$ toma en cuenta las mol\'eculas de agua y sus iones (hidronio e hidr\'oxido), y los iones disociados de la sal ($K^+$, $Cl^-$). $G(r)$ es la constante de simetr\'ia de nuestro sistema, en particular para cada para $r$: $G(r) =4\pi r^2$.
+\noindent donde $\beta = \frac{1}{k_BT}$, $k_B$ es la constante de Boltzmann y $T$ la temperatura absoluta del sistema, $\rho_\gamma(r)$ y $\mu_\gamma$ es la densidad local, en la posici\'on $r$, y potencial qu\'imico de la especie $\gamma$ respectivamente.
+El sub\'indice $\gamma$ toma en cuenta las mol\'eculas de agua y sus iones (hidronio e hidr\'oxido), y los iones disociados de la sal ($K^+$, $Cl^-$). $G(r)$ es la constante de simetr\'ia de nuestro sistema, en particular para cada para $r$: $G(r) =4\pi r^2$. Esta \'utima se ejemplificara de mejor forma en la secci\'on del modelado molecular.
 
 El segundo t\'ermino de la entrop\'ia de mezcla que considera los aportes entr\'opicos de la prote\'ina.
-$\rho_{pro}(\theta,r)$ es la densidad local de la prote\'ina en la conformaci\'on  $\theta$.
-$\theta$ es el set de conformaciones que la prote\'ia puede tomar.
-Esta contribuci\'on tambi\'en incluye la rotación espacial.
+$\rho_{pro}(\theta,r)$ es la densidad local de la prote\'ina en la conformaci\'on  $\theta$.  La prot\'ina puede tomar cualquier conformaci\'on presenten en su set de conformaciones $\{\theta \}$
+La contribuci\'on entr\'opica tambi\'en incluye la rotación espacial.
 La densidad media local total de prote\'ina es: 
 
 
@@ -129,23 +124,23 @@ El equilibrio qu\'imico de las unidades proteicas titulables se considera en el 
 El cual es definido como:
 
 \begin{align}
-	\left<\rho_{pro,\tau}(r)\right> = \sum_\theta \int_o^\infty dr^\prime G(r^\prime) \rho_{pro}(\theta,r)n_\tau(\theta,r,r^\prime)
+	\left<\rho_{pro,\tau}(r)\right> = \sum_\theta \int_o^\infty dr^\prime G(r^\prime) \rho_{pro}(\theta,r)n_\tau(\theta,r^\prime,r)
 	\label{eq:esf:segments-pro}
 \end{align}
 
-\noindent en donde $n_\tau(\theta,r,r^\prime)$  es un par\'ametro de entrada que nos cuantifica el n\'umero de segmentos $\tau$ entre $r^\prime$ y $r^\prime+ dr^\prime$ cuando el centro de masa de la prote\'ina en la configuraci\'on $\theta$ esta en $r$.
+\noindent en donde $n_\tau(\theta,r^\prime,r)$  es un par\'ametro de entrada que nos cuantifica el n\'umero de segmentos $\tau$ entre $r$ y $r + dr$ cuando el centro de masa de la prote\'ina en la configuraci\'on $\theta$ esta en $r^\prime$.
 
 Las unidades titulables son denotadas por el subindice $\tau$  y los subindices $p$ y $d$ representan su estado protonado y desprotonado respectivamente. 
-De este modo$\mu^0_{\tau,p}$ y $\mu^0_{\tau,d}$  son los potenciales qu\'imocs est\'andar de estos estados respectivamente.
+De este modo$\mu^0_{\tau,p}$ y $\mu^0_{\tau,d}$  son los potenciales qu\'imicos est\'andar de estos estados respectivamente.
 
-Hemos definido el grado de asosiaci\'on de protonesa los segmentos $\tau$
+Hemos definido el grado de asosiaci\'on de protones a los segmentos $\tau$
 como: 
  
 \begin{enumerate}
 	\item Para unidades \'acidas: $g_\tau(r) = 1-f_\tau(r)$ ($\tau$ se carga negativamente)
 	\item Para unidades b\'asicas: $g_\tau(r) = f_\tau(r)$ ($\tau$ se carga positivamente)
 \end{enumerate}
-\noindent en donde $f_\tau(r)$  es el grado de disociaci\'on (o grado de carga) para el segmento $\tau$.
+\noindent en donde $f_\tau(r)$  es el grado de disociaci\'on  para el segmento $\tau$.
 %%%%%%%%%%
 
 La energ\'ia electrost\'atica se define:
@@ -193,7 +188,7 @@ Esto es posible por los segmentos considerados en la estructura del nanogel, com
 Para completar el gran potencial de ec. \ref{eq:esf:semicano}, se tiene en cuenta el intercambio de especies m\'oviles:
 
 Los primeros dos t\'erminos del lado izquierdo de la ecuaci\'on explican el equilibrio qu\'imico de las especies m\'oviles $\gamma$ y de las prote\'inas dentro de la soluci\'on.
-Los dos \'ultimos t\'erminos consideran los iones de hidr\'ogeno de los segmentos protonables de la prote\'ina y los segmentos $MAA$ de la red polim\'erica que forma el nanogel.
+Los dos \'ultimos t\'erminos consideran los iones de hidr\'ogeno de los segmentos protonables de la prote\'ina y los segmentos $MAA$ de la red polim\'erica que forma el nanogel. Notese que se van de la mano con el grado de asociaci\'on $g_\tau$ y $1-f$ para la prote\'ina y la red polim\'erica respectivamente. 
 
 
 \begin{align}
@@ -235,27 +230,29 @@ Finalment la forma explicita de nuestro gran potencial es expresado:
 	\label{eq:esf:potential-energy}
 \end{align}
 
-In this expression, \ref{eq:esf:potential-energy}, the Lagrange multiplier $\Pi(r)$ has been introduced as  the constraint on volume incompresibility, eq. \ref{eq:esf:constraint}.
 
+Para esta expresion,  \ref{eq:esf:potential-energy}, se ha introducido nuestra restricci\'on de la incompresibilidad del volumen (ec. \ref{eq:esf:constraint} ), como un  multiplicador  de  Lagrange $\Pi(r)$, este veremos cumple la funci\'on de una presi\'on osm\'otica del sistema. 
 
-Minimization of $\beta\Omega_{NG}$ with respect to the local densities, $\rho_\gamma(r)$, the electrostatic potential, $\Psi(r)$, the degrees of dissociation of the protonable species (in the network and proteins segments) $f(r)$,  and with respect to the probabilities of the different conformations of the polymer network $P(\alpha)$.
+Como se menciono al inicio de este capitulo, el siguiente paso es la busqueda de las condiciones que minimizen la energ\'ia total. Esto se logra al derivar respecto de las denidades locales $\rho_\gamma(r)$, el potencial electrost\'atico $\Psi(r)$, el grado de disosiaci\'on, tanto de los segmentos provenientes de la prote\'ina como del nanogel, $f(r)$, adem\'as de la probabilidad de las diferentes conformaciones de la red polim\'erica $P(\alpha)$
 
-In other words, we can write $\Omega = \sum P(\alpha) \int{G(r) dV\omega}$,  where $\omega$ is  a functional which represent the density of the grand potential: 
+En sint\'esis podemos escribir $\Omega = \sum P(\alpha) \int{G(r) dV\omega}$,  con $\omega$ es el funcional que contempla los funcionales que definen a nuestro gran potencial: 
 
 \begin{align}
 	\omega=\omega(\rho_\gamma(r), \rho_{pro}(r),\Psi(r),f(r),P(\alpha))
+	\label{eq:esf:funcionales-omega}
 \end{align}
 
 
-In particular, the expressions obtained for the degree of dissociation $f_j(r)$ of tritiable segments of the nanogel and the protein is:
+En particular la expresi\'on obtenida para el grado de disociaci\'on, $f_j(r)$ de los segmentos titulables tanto de la prote\'ina como de la red polim\'erica que compone al nanogel:
 
 \begin{align}
 	\frac{f_j(r)}{1-f_j(r)}= \left(\frac{a_{H^+}}{k^0_{a,j}}\right)^{\mp 1} e^{-\beta q_{MAA^-}\Psi(r)}
 	\label{eq:esf:f-degree}
 \end{align}
-\noindent where $a_{H^+}=e^{\beta\Delta\mu_{H^+}}=e^{\beta(\mu_{H^+} -\mu^0_{H^+})}$ is the activity of the $H^+$. Subindex $j$ runs over the titulable segments in the network and the protein, $j =\{MAA , \, \tau \}$. Exponent $\mp \, 1$ discriminates between acid or basic segments respectively.
 
-In the previous expression, \ref{eq:esf:f-degree}, the thermodynamic equilimrium  constant of  acid-base:
+\noindent En donde  $a_{H^+}=e^{\beta\Delta\mu_{H^+}}=e^{\beta(\mu_{H^+} -\mu^0_{H^+})}$ es la actividad del $H^+$. El subindice  $j$ se define tal que  $j =\{MAA , \, \tau \}$. El exponente $\mp \, 1$ hace la diferencia sobre segmentos \'acidos o b'asicos respectivamente.
+
+En la expresi\'on anterior, \ref{eq:esf:f-degree}, $K^0_{a,j}$ es la constante termodin\'amica del equilibrio \'acido-base:
 
 \begin{align}
 	\begin{aligned}
@@ -267,15 +264,15 @@ In the previous expression, \ref{eq:esf:f-degree}, the thermodynamic equilimrium
 \end{align}
 %%%%%%%%%%%%%%%
 %represent de protonable and deprotonable state of the segment $\iota
-For the small mobiles species:
+Para las especiel libres, su densidad local se expresa como:
+
 
 \begin{align}
 	\rho_\gamma(r)v_w = a_\gamma \exp{\left(-\beta \Psi(r)q_\gamma\right)} \exp{\left(-\beta\Pi(r) v_w\right)}
 \end{align}
 
 
-	
-For the density of the protein $\rho(\theta,r)$:
+En el mismo sentido, para la prote\'ina $\rho(\theta,r)$:
 	
 	
 	
@@ -286,27 +283,26 @@ For the density of the protein $\rho(\theta,r)$:
 		\end{aligned}
 	\end{align}
 	
-	\noindent where the activity of the protein is redefined as:
+	\noindent en donde se ha redefinido la activdiad de la prote\'ina como:
 	
 	\begin{align}
 		\tilde{a}_{pro} = \exp[\beta\mu_{pro} - \beta\tilde{\mu}^0_{pro}]
 	\end{align}
 	
-	with:
+	En donde:
 \begin{align}
 	\beta\tilde{\mu}^0_{pro} =  \beta \mu^0_{pro}  + \sum_{\tau,a} C_{n,\tau}\beta\mu^0_{\tau,d} 
 	+ \sum_{\tau,b} C_{n,\tau}\beta(\mu_{H^+} - \mu^0_{\tau,p})
 \end{align}
 
 
-\noindent $\tau,a$ and $\tau,b$ sum over acid or basic segments respectively. And the composition number for a segment $k$ in the protein, $C_{n,k}$:
+\noindent $\tau,a$ y  $\tau,b$ suman obre segmentos \'acidos o b\'asicos respectivamente. Adem\'as hemos definido el n\'umero de composici\'on para un segmento $k$, $C_{n,k}$:
 	\begin{align}
 		\left[\int_0^\infty dr^\prime G(r^\prime) n_k(\theta,r,r^\prime) = C_{n,k}\right] \quad \forall \, r
 		\label{eq:esf:composition}
 	\end{align}
-	
-	
-	The probability of a configuration $\alpha$ is expressed as:
+
+	La probabilidad de una conformaci\'on $\alpha$ es expresada como:
 	
 	\begin{align}
 		\begin{aligned}
@@ -315,22 +311,24 @@ For the density of the protein $\rho(\theta,r)$:
 		\end{aligned}
 	\end{align}
 	
-	\noindent Where $Q$ is a constant that satisfies $\sum_\alpha P(\alpha) = 1$
+	\noindent en donde  $Q$ es una constante que satisface: $\sum_\alpha P(\alpha) = 1$
 	
-	The variation with respect to the electrostatic potential results in the Poisson equation:
+	La variaci\'on respecto al potencial electrost\'atico deriva en la ecuaci\'on de Poisson:
 	
 	\begin{align}
 		\epsilon\Delta\psi(r) = -\left<\rho_q(r)\right>
 		\label{eq:esf:poisson}
 	\end{align}
 	
-	This last expression considers eq. \ref{eq:esf:rho-charge}. Another physical constraint to take into account is the electroneutrality of the solution, which is:
+	En la ecuaci\'on anterio se considera la densidad de carga media, la cual definimos en la ecuaci\'on  \ref{eq:esf:rho-charge}.  Para nuestro sistema, adem\'as de la restricci\'on en el volumen, se incluye la electroneutralidad de la soluci\'on, definida por:
+
 	\begin{align}
 		\int_0^\infty{drG(r) \left<\rho_q(r)\right>} = 0
 	\end{align}
 	
-	satisfaction of such constraint can be achievement considering the appropriate boundary condition.
-	When solving the Poisson's equation. These boundary condition are:
+	
+Para que las condiciones de electroneutralidad y ecuaci\'on se cumplan, es necesario el uso de ciertas condiciones de contorno:	
+
 	\begin{align}
 		\begin{aligned}
 			&i)  \lim_{r\to\infty}\psi(r) = 0 \\
@@ -339,13 +337,68 @@ For the density of the protein $\rho(\theta,r)$:
 		\end{aligned}
 	\end{align}
 	
-	
-	We can observe that all of the components that determine the thermodynamic potential $\Omega$ have now been expressed in terms of the local electrostatic potential $\Psi(r)$, the position-dependent osmotic pressure $\Pi(r)$, the activities of the free species, and some other input quantities. Given the salt concentration, the pH and the concentration of each adsorbate in the bath solution, all these activities can be calculated from imposing the incompressibility and charge neutrality constraint to such solution and using the equilibrium condition of water self-dissociation. 
-	
-	The solutions for the potentials $\Pi(r)$ and $\Psi(r)$ are obtained by numerically solving equations \ref{eq:esf:constraint} and \ref{eq:esf:poisson} respectively for each shell r.
+Al observar las expresiones de todos los funcionales presentados en ec. \ref{eq:esf:funcionales-omega}
+notamos que  todos son definidos por dos potenciales locales: Electrost\'atico $\Psi(r)$ y Presi\'on osm\'otica $\Pi(r)$. Entre otros par\'ametros como las actividades de cada especie y otras cantidades proporcionadas con el modelo molecular a usar.
+En la siguiente secci\'on veremos como las actividades de cada componente quedan determinadas con las condiciones iniciales del bulk de la soluci\'on: pH, temperatura, y concentraci\'on de adsorbatos y sal.
+Con la determinaci\'on de las activdades es posible resolver el sistema completo haciendo uso de las ecuaciones \ref{eq:esf:constraint} y \ref{eq:esf:poisson} por sustituci\'on de cada una de las expresiones para las densidades locales y el grado de disociaci\'on, as\'i como tambi\'en de la probabilidad de la conformaci\'on de la red polim\'erica. 
+
+\subsection{Soluci\'on Bulk}
+
+La composici\'on qu\'imica de la soluci\'on a bulk en encuentra en equilibrio termodin\'amico con nuestro nanogel. Qu\'imicamente hablando nos indica que los potenciales qu\'imocos de las especies con m\'obilidad son iguales en cualquier punto del sistema. 
+El calculo de estos potenciales, y con ello sus actividades nos proveen  las soluciones iniciales para la resoluci\'on de todo el sistema.
+En esta secci\'on, expresamos esas actividades en t\'erminos de la composici\'on qu\'imica de la soluci\'on bulk.
+
+La soluci\'on bulk  puede considerarse como el límite $r \rightarrow \infty$:
+\begin{align}
+	\begin{aligned}
+		& i)\rho^b_\gamma =\rho_\gamma (r \rightarrow \infty) \\
+		& ii) \Pi^b = \Pi(r \rightarrow \infty) \\
+		& iii) f_\tau^b = f_\tau(r \rightarrow \infty)
+	\end{aligned}
+\end{align}
+
+Adem\'ass, las condiciones de contorno expresadas en ec. \ref{eq:esf:contorno} implican que:
+\begin{align}
+	\Psi(r \rightarrow \infty) = 0
+\end{align}
+
+En este contexto, para las especies libres (excluyendo la prote\'ina):
+\begin{align}
+	\rho_\gamma^b v_w = a_\gamma e^{-\beta\Pi^bv_w}
+	\label{eq:esf:free-bulk}
+\end{align}
+
+El grado de disociaci\'on $f_j$ de la prote\'ina y los segmentos de la red pueden escribirse como:
+
+\begin{align}
+	\frac{f_j^b}{1-f_j^b} = \left(\frac{a_{H^+}}{K^0_{a,j}}\right)^{\mp 1}
+\end{align}
+
+Finalmente, la densidad de la prote\'ina $\rho_{pro}^b(\theta)$ es:
+
+\begin{align}
+	\begin{aligned}
+		\rho^b_{pro}(\theta)v_w = &\tilde{a}_{pro} \prod_\tau\exp\left[-C_{n,\tau} \ln f^b_\tau\right] \\
+		&\prod_\lambda \exp \left[-C_{n,\lambda} (v_\lambda\beta\Pi^b ) \right]
+	\end{aligned}
+	\label{eq:esf:bulk-protein}
+\end{align}
+
+donde $C_{n,\lambda}$ es el n\'umero de composici\'on para el segmento $\lambda$, definido en ec.  \ref{eq:esf:composition}.
+
+Para la soluci\'on bulk, la restricci\'on de incompresibilidad est\'a dada por:
+
+\begin{align}
+	\begin{aligned}
+		1= {\sum_{\gamma}\rho^b_\gamma v_\gamma + \sum_\lambda{\left<\rho^b_{pro,\lambda}\right>v_\lambda} }
+	\end{aligned}
+	\label{eq:esf:bulk-constraint}
+\end{align}
 
 
+En esta ocaci\'on, dado que $\Psi^b = 0$, se observa que los funcionales en el bulk de la soluci\'on se encuentran establecidos por el potencial de presi\'on $\Pi^b$, siendo esta nuestra variable a resolver.
 
+Lo que se puede calcular utilizando las ecuaciones de densidad de las especies libres en soluci\'on, ec.  \ref{eq:esf:free-bulk} y la prote\'ina ec. \ref{eq:esf:bulk-protein} en la nueva restricci\'on, \ref{eq:esf:bulk-constraint}.
 
 
 
