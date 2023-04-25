@@ -5,58 +5,63 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-En estas secci\'on... geles polim\'ericos... perspectiva m\'as compleja... estrucutra interna del nanogel se vuelve un factor importante...
-
+En estas secci\'on... geles polim\'ericos... 
+Se aborda una perspectiva diferente con informaci\'on a la que no era posible acceder con el modelo anterior.
+El conocimiento  de la estructura interna, o una aproximaci\'on de ella nos abre las puertas al dise\~no de m\'as y mejores materiales...
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Method: Molecular Theory}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+El estudio de estos nanogeles conlleva un formalismo similar al visto en el capitulo de los films polim\'ericos y al modelo de dos fases.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Theoretical Framework}\label{sect:theory}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Es decir buscamos con este m\'etodo  minimizar una energ\'ia libre del sistema.
+Incorporaando una caracterizaci\'on molecular de grano grueso de las diversas especies qu\'imicas presentes.
 
+El sistema en estudio es un solo nanogel en equilibrio con una solución acuosa que tiene una composici\'on de bulk definida externamente.
+Es decir, el pH, la concentraci\'on de sal y la concentració'o de prote\'ina son las variables independientes.
+La red polim\'erica que da estructura al nanogel contiene dos tipos de segmentos: una unidad sensible al pH, ya sea \'acida (MAA) o b\'asica (AH), y un segmento neutro (VA);
+los segmentos que componene al entrecruzante en nuestra red se describen como segmentos de carga neutral.
 
- 
+Como vimos en... la energ\'ia libre se convierte en un gran potencial el cual nos permite un mejor manejo y resoluci]'on del sistema.
+Este potencial contiene las siguientes contribuciones:
 
-This study presents a self-consistent molecular theory to address the effect of the spatial distribution of pH-responsive groups on the thermodynamics of  protein adsorption to polymer nanogels.
-This theory is based on the developments of Szleifer and collaborators to study weak polyelectrolyte surfaces \addcite[nap2006weak,Gong2007PRL].
-We have previously extended this method to investigate the adsorption of proteins to pH-responsive hydrogel films \addcite[hagemann2018use,longo2019protonation].
-Here, we generalize the approach to describe the behavior of nanogels made of crosslinked pH-responsive copolymer chains in contact with a protein solution.
- 
-
-
-This method involves minimizing a generalized free energy that includes all relevant physical chemistry.
-Additionally, it incorporates a coarse-grained molecular characterization of the various chemical species present in the system, including their shape, size, charge distribution, and protonation state.
-The system under study is a single nanogel in equilibrium with an aqueous solution having externally defined bulk composition.
-Namely, the pH, salt concentration and protein concentration are the independent variables.
-The polymer network that gives structure to the nanogel  contains two types of segments: a pH-sensitive unit, either acidic (MAA) or basic (AH), and neutral segment (VA); 
-crosslinks are described as charge neutral segments.
-The semi-grand potential of this system contains the following contributions:
 \begin{align}
 \begin{aligned}
 \Omega_{NG}=& -TS_{mix} -TS_{conf,nw} + F_{chem,nw} + F_{chem,pro}\\
-& + U_{elec} + U_{ste}  - {\sum_{\gamma}{\mu_\gamma N_\gamma}}
+& + U_{elec} + U_{ste} + U_{vdw} - \sum_{\gamma}{\mu_\gamma N_\gamma} - \mu_{pro} N_{pro}
 \end{aligned}
 \label{eq:esf:semicano}
 \end{align}
-\noindent where $S_{mix}$ is the translational (mixing) entropy of the solution species: water molecules (H$_2$O), hydronium ions (H$_3$O$^+$), hydroxide ions (OH$^-$), salt cations, salt anions and proteins.
-We consider a monovalent salt, NaCl, and assume it is completely dissociated into sodium (Na$^+$) and chloride ions (Cl$^-$).
-$S_{conf,nw}$ represents the conformational entropy that results from the flexibility of the polymer network, which can assume many different conformations. 
-$F_{chem,nw}$ is the chemical free energy that describes the equilibrium between the protonated and deprotonated species of functional (acid/basic) units on the polymer. 
-Similarly, $F_{chem,pro}$ describes the protonation of titratable residues of the protein.
-$U_{elec}$ and $U_{ste}$ account, respectively, for the electrostatic interactions and steric repulsions.
-Finally, the sum over $\gamma$ expresses the chemical equilibrium between our system and the bulk solution that represent a bath for the free particles, where $\mu_\gamma$ and $N_\gamma$ are the chemical potential and number of molecules of species $\gamma$, respectively;
-the subindex $\gamma$ runs over the free chemical species, including proteins.
-Note that $\Omega_{NG}$ is a semi-grand potential because the nanogel  can exchange each of these free molecules with the bulk solution, while the polymer network is confined within our system.
-A detailed derivation of the theory can is presentada a continuaci\'on...
 
+
+\noindent donde $S_{mix}$ es la entrop\'ia de traslaci\'on (y de mezcla) de las especies de la soluci\'on: mol\'eculas de agua (H$_2$O), iones de hidronio (H$_3$O$^+$), iones de hidr\'oxido (OH$^- $), cationes de sal, aniones de sal y prote\'ina.
+Consideramos una sal monovalente, NaCl completamente disociada en iones de sodio (Na$^+$) y cloruro (Cl$^-$).
+$S_{conf,nw}$ representa la entrop\'ia conformacional que resulta de la flexibilidad de la red de pol\'imeros, que puede asumir muchas conformaciones diferentes.
+$F_{chem,nw}$ es la energ\'ia qu\'imica libre que describe el equilibrio entre las especies protonadas y desprotonadas de unidades funcionales (\'acidas/b\'asicas) en el pol\'imero.
+De manera similar, $F_{chem,pro}$ describe la protonaci\'on de residuos titulables de la prote\'ina.
+$U_{elec}$ y $U_{ste}$ representan, respectivamente, las interacciones electrost\'aticas y las repulsiones est\'ericas.
+$U_{Vdw}$ contiene las interacciones de Van der Waals entre los distintos segmentos y el solvente.
+Finalmente, la suma de $\gamma$ expresa el equilibrio qu\'imico entre nuestro sistema y la soluci\'on bulk que representa un ``ba\~no t\'ermico" para las part\'iculas libres, donde $\mu_\gamma$ y $N_\gamma$ son el potencial qu\'imico y el n\'umero de mol\'eculas de especie $\gamma$, respectivamente;
+el sub\'indice $\gamma$ recorre las especies qu\'imicas libres.
+El siguiente t\'ermino tiene en cuenta el equilibrio descrito anteriormente, pero en esta ocasi\'on para la prote\'ina.
+
+Las expresiones explicitas de cada uno de estos componentes, as\'i como la minimizaci\'on de nuestro gran potencial es descrita en la siguiente secci\'on.
+
+
+
+\subsection{Theoretical Framework}\label{sect:theory}
 
 Next we will describe the explicit form of each of these terms, where the protonable segments of the nanogel will be considered as methacrylic acid (MAA) segments. However the same equations apply for nanogels having  basic segments. The differences are found in the use of the sign of the degree of dissociation.
 
 First:  the translational and mixing entropy of the mobile species including the protein, is
+
+A continuaci\'on describiremos la forma expl\'icita de cada uno de estos t\'erminos, donde los segmentos protonables del nanogel ser\'an considerados como segmentos de \'acido metacrílico (MAA). Sin embargo, las mismas ecuaciones se aplican a los nanogeles que tienen segmentos b\'asicos. Las diferencias se encuentran en el uso del signo del grado de disociaci\'on.
+
+En primera instancia tenemos la entrop\'ia de traslaci\'on y de mezcla de las especies m\'oviles, incluida la prote\'ina:
+
+
 \begin{align}
 	\begin{aligned}
 		-\frac{S_{mix}}{k_B}= &\sum_{\gamma}\int_0^\infty{dr G(r)\rho_\gamma(r)\left(\ln \left(\rho_\gamma (r)v_w\right) -1 + \beta\mu^0_\gamma\right)} \\
@@ -64,28 +69,31 @@ First:  the translational and mixing entropy of the mobile species including the
 	\end{aligned}
 \end{align}
 
-\noindent where $\beta = \frac{1}{k_BT}$, $k_B$ is the Boltzmann constant and $T$ the temperature of the system,$\rho_\gamma(r)$ and $\mu_\gamma$ is the local, at $r$ position, density and chemical potential of the species $\gamma$ respectively. 
-Subindex $\gamma$ runs over water molecules and its ions (hydronium and hydroxyde), and the salt dissociated ions ($K^+$, $Cl^-$). $G(r)$ is the symmetry constant for the shell $r$: $4\pi r^2$.
 
-The second term of the entropy of mixing considers the contributions for the protein.
-$\rho_{pro}(\theta,r)$ is the local density of the protein in $\theta$ conformation.
-$\theta$ runs over different protein conformation. 
-This contributions also include spatial rotation.
-The total local density of proteins is:
+
+\noindent donde $\beta = \frac{1}{k_BT}$, $k_B$ es la constante de Boltzmann y $T$ la temperatura absoluta del sistema, $\rho_\gamma(r)$ y $\mu_\gamma$ es la densidad local, en la posición $r$, y potencial qu\'imico de la especie $\gamma$ respectivamente.
+El sub\'indice $\gamma$ toma en cuenta las mol\'eculas de agua y sus iones (hidronio e hidr\'oxido), y los iones disociados de la sal ($K^+$, $Cl^-$). $G(r)$ es la constante de simetr\'ia de nuestro sistema, en particular para cada para $r$: $G(r) =4\pi r^2$.
+
+El segundo t\'ermino de la entrop\'ia de mezcla que considera los aportes entr\'opicos de la prote\'ina.
+$\rho_{pro}(\theta,r)$ es la densidad local de la prote\'ina en la conformaci\'on  $\theta$.
+$\theta$ es el set de conformaciones que la prote\'ia puede tomar.
+Esta contribuci\'on tambi\'en incluye la rotación espacial.
+La densidad media local total de prote\'ina es: 
+
 
 \begin{align}
 	\left<\rho_{pro}(r)\right> = \sum_\theta{\rho_{pro}(\theta,r)}
 \end{align}
 
-$S_{conf,nw}$ represents the conformational entropy that results from the flexibility of the polymer network, which can assume many different conformations denoted by the set $\{\alpha\}$. 
+$S_{conf,nw}$ representa la entrop\'ia conformacional resultante de la flexibilidad de la red polim\'erica que forma al nanogel. Conformaciones denotadas por el set $\{\alpha\}$. 
 \begin{equation}
 	\frac{S_{conf,nw}}{k_B} = - \sum_{\alpha}{P(\alpha)\ln P(\alpha)}
 \end{equation}
 
-\noindent Where $P(\alpha)$ denotes the probability that the nanogel network is in the configuration $\alpha$.
+\noindent En donde $P(\alpha)$ muestra la probabilidad que el nanogles se encuentre un a configuraci\'on $\alpha$.
 
-The next term describes the free energy for the acid-base equilibrium:
-For $MAA$ segments:
+El siguiente t\'ermino describe la energ\'ia qu\'imica libre originada por el equilibrio \'acido-base de los segmentos de $MAA$ presentes en el nanogel.
+
 \begin{align}
 	\begin{aligned}
 		\beta F_{chem,nw} &= \int_0^\infty drG(r) \frac{\left<\phi_{MAA}(r)\right>}{v_{MAA}} \left[f(r)(\ln f(r)+ \beta\mu^0_{MAA^-})\right.\\
@@ -94,18 +102,20 @@ For $MAA$ segments:
 \end{align} 
 
 
-\noindent where $f(r)$ is the degree of charge $MAA$ segments in the spherical shell between $r$ and $r + dr$. 
-$\mu^0_{MAA^-}$ and $\mu^0_{MAAH}$ are the standard chemical potentials of the deprotonated and protonated species respectively. $v_{MAA}$ is the molecular volume for the $MAA$ segment.
-Also for a segment \textit{i} in the network ($i = MAA/VA/crosslink$): 
+\noindent donde $f(r)$ es el grado de carga de los segmentos $MAA$ en la capa esf\'erica entre $r$ y $r + dr$.
+$\mu^0_{MAA^-}$ y $\mu^0_{MAAH}$ son los potenciales qu\'imicos est\'andar de las especies desprotonadas y protonadas respectivamente. $v_{MAA}$ es el volumen molecular del segmento de $MAA$.
+Definimos aden\'as para un tipo de segmento $i$ en la red ($i = MAA/VA/crosslink$):
+ 
 
 \begin{align}
 	\left< \phi_i(r)\right> = \sum_\alpha{P(\alpha)\phi_i(\alpha,r)}
 \end{align}
-\noindent in which $\phi_i(\alpha,r)$ is the ensemble average, is an input quantity that gives the local volume fraction occupied by the segments locally at $r$, when the network is in conformation $\alpha$.
+
+\noindent en el cual $\left< \phi_i(r)\right> $ es la fracci\'on en volumen promedio, dado por $\phi_i(\alpha,r)$ la cual es una cantidad de entrada en nuestros c\'odigos que muestra la fracci\'on en volumen ocupada localmente en $r$, cuando la red polim\'erica se encuentra en la conformaci\'on $\alpha$.
 
 
 %%%%%%%%%%%%%%%%%%%
-The chemical equilibrium of titratable protein units is considered in the following free energy term:
+El equilibrio qu\'imico de las unidades proteicas titulables se considera en el siguiente t\'ermino del potencial:
 
 \begin{align}
 	\begin{aligned}
@@ -114,62 +124,76 @@ The chemical equilibrium of titratable protein units is considered in the follow
 	\end{aligned}
 \end{align} 
 
-\noindent where $\left<\rho_{pro,\tau}(r)\right>$ represents the local average density of protonable $\tau$ segments of the protein.
+\noindent en donde $\left<\rho_{pro,\tau}(r)\right>$ representa la densida local promedio del segmento titulable $\tau$ de la prote\'ina.
 
-Which is defined as:
+El cual es definido como:
+
 \begin{align}
-	\left<\rho_{pro,\tau}(r)\right> = \sum_\theta \int_o^\infty dr^\prime G(r^\prime) \rho_{pro}(\theta,r^\prime)n_\tau(\theta,r,r^\prime)
-	\label{eq:segments-pro-si}
+	\left<\rho_{pro,\tau}(r)\right> = \sum_\theta \int_o^\infty dr^\prime G(r^\prime) \rho_{pro}(\theta,r)n_\tau(\theta,r,r^\prime)
+	\label{eq:esf:segments-pro}
 \end{align}
-\noindent where $n_\tau(\theta,r,r^\prime)$ is an input quantity that gives the number $\tau$ segments  between $r^\prime$ and $r^\prime+ dr^\prime$ when the center of mass of a protein in configuration $\theta$ is at $r$.
 
-Titratable units are represented by $\tau$  adh the subindexs  $p$ and $d$ are protonated and deprotonated states respectively.
-$\mu^0_{\tau,p}$ and $\mu^0_{\tau,d}$ are the standar chemical potentials of the protonated and deprotonated $\tau$ segments respectively.
-In addition, $g_\tau(r)$ is the degree of proton association of $\tau$ segments. It follows that: 
+\noindent en donde $n_\tau(\theta,r,r^\prime)$  es un par\'ametro de entrada que nos cuantifica el n\'umero de segmentos $\tau$ entre $r^\prime$ y $r^\prime+ dr^\prime$ cuando el centro de masa de la prote\'ina en la configuraci\'on $\theta$ esta en $r$.
+
+Las unidades titulables son denotadas por el subindice $\tau$  y los subindices $p$ y $d$ representan su estado protonado y desprotonado respectivamente. 
+De este modo$\mu^0_{\tau,p}$ y $\mu^0_{\tau,d}$  son los potenciales qu\'imocs est\'andar de estos estados respectivamente.
+
+Hemos definido el grado de asosiaci\'on de protonesa los segmentos $\tau$
+como: 
+ 
 \begin{enumerate}
-	\item for an acid unit: $g_\tau(r) = 1-f_\tau(r)$ ($\tau$ unit become negatively charged)
-	\item for a basic unit: $g_\tau(r) = f_\tau(r)$ ($\tau$ unit become positively charged)
+	\item Para unidades \'acidas: $g_\tau(r) = 1-f_\tau(r)$ ($\tau$ se carga negativamente)
+	\item Para unidades b\'asicas: $g_\tau(r) = f_\tau(r)$ ($\tau$ se carga positivamente)
 \end{enumerate}
-where $f_\tau(r)$ is the degree of charge for the segment $\tau$.
+\noindent en donde $f_\tau(r)$  es el grado de disociaci\'on (o grado de carga) para el segmento $\tau$.
 %%%%%%%%%%
 
-The electrostatic  energy is:
+La energ\'ia electrost\'atica se define:
+
 \begin{align}
 	\begin{aligned}
 		\beta U_{elecc}= \int_0^\infty drG(r)&\left[\left(\sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\Psi(r) \right. \\ &\left.-\frac{1}{2}\beta\epsilon(\nabla\Psi(r))^2 \right]
 	\end{aligned}
 \end{align} 
 
-\noindent where $\Psi(r)$ is the position-dependent electrostatic potential, and $\epsilon$ the medium permittivity, $q_\gamma$ is the charge of the mobile species, $q_\tau$ corresponds to the charge of the titratable segments of the adsorbate. Finally $q_{MAA}$ is the charge of a $MAA$ segment.
+\noindent donde $\Psi(r)$ es el potencial electrost\'atico dependiente de la posici\'on, y $\epsilon$ la permitividad del medio, $q_\gamma$ es la carga de la especie m\'ovil $\gamma$, $q_\tau$ corresponde a la carga del segmento titulable de la prote\'ina . Finalmente $q_{MAA}$ es la de un segmento de $MAA$.
 
-In this context, the average charge density is:
+En este contexto, podemos definir la densidad de carga promedio: 
+
 \begin{align}
 	\left<\rho_q(r)\right> = \sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}
 	\label{eq:esf:rho-charge}
-\end{align}
+\end{align}  
 %%%%%%%%%%%%%%%%
+             
+El siguiente t\'ermino en el potencial termodin\'amico se debe a la repulsi\'on est\'erica, el cual se puede incorporar a trav\'es de la siguiente restricci\'on:
 
-The next term is the  thermodynamic potential, due the steric repulsion which can be incorporated through the following constraint:
 \begin{align}
 	\begin{aligned}
 		1=  {\left[\sum_{\gamma}\rho_\gamma(r) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(r)\right>v_\lambda} + \sum_i{\left<\phi_i(r)\right>}\right]},~ \forall r
 	\end{aligned}
 	\label{eq:esf:constraint}
 \end{align}
-\noindent where $v_\lambda$ is the molecular volume of segment $\lambda$ in the protein.
-$\left<\rho_{pro,\lambda}(r)\right>$ is defined in the same way as  eq. \ref{eq:segments-pro-si}.
-Note that the subindex $\lambda$ considers all segments of the protein, that is $ \tau \in \lambda$.
-Subindex \textit{i} runs over $MAA$ and $VA$ segment in the nanogel.
+
+
+\noindent en donde $v_\lambda$  es el volumen molecular de cada segmento $\lambda$  que compone a la prote\'ina.
+$\left<\rho_{pro,\lambda}(r)\right>$  es definido de la misma forma que se hizo en la ecuaci\'on \ref{eq:esf:segments-pro}.
+Es conveniente notar que el subindice $\lambda$ considera a todos los segmentos de la prote\'ia, es decir: $ \tau \in \lambda$.
+Finalmente, como se mencion\'o anteriormente el subindice $i$  contempla a todos los tipos de segmentos que componen al nanogel.
+
 
 %%%%%%%%%%%%%%%
-$U_{VdW}$ is the energy of the Van der Waals interaction ($VdW$). In this work it has been assumed that all segments have a hydrophilic character. Namely, $VdW$ interactions between different pair of segments, and those with water molecules are similar. As a result the net $VdW$ interaction energy represent an additive constant to the total free energy.
-Thus, this contribution can be ignored.
+
+$U_{VdW}$ es la energ\'ia de interacci\'on de Van der Waals ($VdW$). En este sistema se ha asumido que todos los segmentos tienen un car\'acter hidrof\'ilico. Es decir, las interacciones $VdW$ entre diferentes pares de segmentos y \'estas con mol\'eculas de agua son similares. Como resultado, la energ\'ia de interacci\'on neta $VdW$ representa una constante aditiva a la energ\'ia total del potencial.
+Por lo tanto, esta contribuci\'on puede ser ignorada. 
+Esto es posible por los segmentos considerados en la estructura del nanogel, como se mostr\'o en el capitulo anterior, en el modelo de dos fases, se consider\'o la interacci\'on entre los segmentos de NIPAm como un potencial aparte. Por lo que las interacciones de Van der Waals fueron tenidas en cuenta.
 
 
-To complete the gran potential of \ref{eq:esf:semicano}, the exchange of mobile species is taken into account:
 
-The first two terms on the left side of the equation account for the chemical equilibrium of the mobile species $\gamma$ and of the proteins within the solution.
-The last two terms consider the hydrogen ions from the protonatable segments of the protein and the MAA segments of the polymer network that makes up the nanogel.
+Para completar el gran potencial de ec. \ref{eq:esf:semicano}, se tiene en cuenta el intercambio de especies m\'oviles:
+
+Los primeros dos t\'erminos del lado izquierdo de la ecuaci\'on explican el equilibrio qu\'imico de las especies m\'oviles $\gamma$ y de las prote\'inas dentro de la soluci\'on.
+Los dos \'ultimos t\'erminos consideran los iones de hidr\'ogeno de los segmentos protonables de la prote\'ina y los segmentos $MAA$ de la red polim\'erica que forma el nanogel.
 
 
 \begin{align}
@@ -182,7 +206,7 @@ The last two terms consider the hydrogen ions from the protonatable segments of 
 
 
 %%%%%%%%%%
-The explicit form of the grand potential is expressed as:
+Finalment la forma explicita de nuestro gran potencial es expresado:
 
 %%%%%%%%%%%%
 \begin{align}
@@ -208,10 +232,10 @@ The explicit form of the grand potential is expressed as:
 		+\beta\mu_{H^+}\sum_{\tau}{g_\tau(r)\left<\rho_{pro,\tau}(r)\right> } \right.\\
 		& \left. \hspace{6em} +\beta\mu_{H^+}(1-f(r))\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}\right]%\\
 	\end{aligned}
-	\label{eq:esf:free-energy}
+	\label{eq:esf:potential-energy}
 \end{align}
 
-In this expression, \ref{eq:esf:free-energy}, the Lagrange multiplier $\Pi(r)$ has been introduced as  the constraint on volume incompresibility, eq. \ref{eq:esf:constraint}.
+In this expression, \ref{eq:esf:potential-energy}, the Lagrange multiplier $\Pi(r)$ has been introduced as  the constraint on volume incompresibility, eq. \ref{eq:esf:constraint}.
 
 
 Minimization of $\beta\Omega_{NG}$ with respect to the local densities, $\rho_\gamma(r)$, the electrostatic potential, $\Psi(r)$, the degrees of dissociation of the protonable species (in the network and proteins segments) $f(r)$,  and with respect to the probabilities of the different conformations of the polymer network $P(\alpha)$.
