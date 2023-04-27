@@ -76,10 +76,10 @@ El potencial termodin\'amico cuyo m\'inimo produce las condiciones de equilibrio
 \begin{align}
     \begin{aligned}
        \Omega_{MG}=& -TS_{mez} + F_{qca,MAA} +  F_{ela}\\
-       & + U_{elec}+  U_{ste} + U_{VDW} -{\sum_{\gamma}
+       & + U_{elec}+  U_{ste} + U_{VdW} -{\sum_{\gamma}
         {\mu_\gamma N_\gamma}}
     \end{aligned}
-    \label{eq:free-energy-implicit}
+    \label{eq:gel:free-energy-implicit}
 \end{align}
 %
 
@@ -90,16 +90,142 @@ Hemos considerado una sal monovalente, $KCl$,  completamente disociada en iones 
 -\frac{S_{mez}}{k_B}	= \sum_{\gamma} \rho_\gamma\left(\ln\left(\rho_\gamma v_w\right) -1 + \beta\mu^0_\gamma\right) 
 \end{align}
 
+\noindent en donde  $\beta=\frac{1}{k_BT}$ , $T$ es la temperatura del sisteman y  $k_B$ es la constante de Boltzmann.
+La densidad num\'erica de la especie $\gamma$ es $\rho_\gamma$ y $\mu^0_\gamma$ es su potencial qu\'imico est\'andar,  $v_w$ es el volumen de una mol\'ecula de agua.
 
 $F_{qca,MAA}$ es la energ\'ia química libre que describe la protonaci\'on de equilibrio de las unidades de MAA.
+
+
+\begin{align}
+	\beta F_{qca, MAA} =  \frac{\phi_{MAA}}{v_{MAA}} \left[f(\ln f+ \beta\mu^0_{MAA^-}) +(1-f)(\ln (1-f)+\beta\mu^0_{MAAH})\right]
+\end{align}
+
+
+\noindent donde $\phi_{MAA}$ es la fracci\'on de volumen que ocupan estos segmentos, $v_{MAA}$ es el volumen de este segmento, y $f$ es el grado de disociaci\'on del mismo. 
+La fracci\'on de volumen de los segmentos MAA cargados es $f\phi_{MAA}$, y la de las unidades protonadas (o sin carga) es $(1-f)\phi_{MAA}$.
+Los potenciales qu\'imicos est\'andar son $\mu^0_{MAA^-}$ y $\mu^0_{MAAH}$ para las especies desprotonadas(cargadas) y protonadas, respectivamente.
+Utilizamos el t\'ermino segmento para identificar las unidades qu\'imicas que componen las cadenas polim\'ericas (MAA y NIPAm).
+
+
 $F_{ela}$ es la energ\'ia libre el\'astica que explica la libertad conformacional de la red polim\'erica.
+
+\begin{align}
+	\beta F_{ela} = \dfrac{3}{2}\dfrac{N_{seg}}{n_{ch} V}\left[\left(\dfrac{R}{R_0}\right)^2 - \ln\dfrac{R}{R_0} -1\right]
+\end{align}
+
+Esta expresi\'on se describe en \cite{moncho-jorda2016a} y proviene del modelo de elasticidad del caucho,
+donde $N_{seg}$ es el n\'umero total de segmentos en la red de pol\'imero y $n_{ch}$ es el n\'umero de segmentos por cadena de pol\'imero o \emph{longitud de cadena}.
+La constante de elasticidad en esta energ\'ia es proporcional al cociente $\dfrac{N_{seg}}{n_{ch}}$, que representa el n\'umero (total) de cadenas de pol\'imero en el microgel.
+El radio del microgel seco es $R_0$, lo que satisface con la expresi\'on:
+
+%
+%
+\begin{align}
+	\begin{aligned} 
+		\dfrac{4}{3}\pi R_0^3=V_0&=N_{seg}\Big( x_{MAA} v_{MAA}\\
+		&\qquad+x_{NIPAm} v_{NIPAm}\Big)
+	\end{aligned}
+\end{align}
+
+
+\noindent donde $V_0$ es el volumen de la part\'icula seca; $x_{MAA}$ y $x_{NIPAm}$ son la fracci\'on de los segmentos MAA y NIPAm, respectivamente.
+Entonces, el n\'umero total de segmentos MAA es $x_{MAA}N_{seg}$ y el de unidades NIPAm es $x_{NIPAm}N_{seg}$, cada uno con un volumen $v_{NIPAm}$.
+Los microgeles que consideramos aqu\'i satisfacen $x_{NIPAm}=1-x_{MAA}$.
+
+
+
 $U_{elec}$ y $U_{ste}$ representan respectivamente las interacciones electrost\'aticas y las repulsiones est\'ericas.
-$U_{VDW}$ es la contribuci\'on que describe las interacciones efectivas pol\'imero-disolvente; incorpora la transici\'on hidrofílica-hidrof\'obica de NIPAm al aumentar la temperatura por encima de su LCST.
+
+\begin{align}
+	  \beta U_{elec} =\left(\sum_{\gamma } {\rho_\gamma q_\gamma + f\dfrac{\phi_{MAA}}{v_{MAA}}q_{MAA}}\right)\beta\psi_{MG}
+\end{align}
+
+\noindent donde $q_\gamma$ y $q_{MAA}$ son la carga el\'ectrica de las moléculas $\gamma$ y los segmentos MAA, respectivamente.
+El potencial electrost\'atico dentro de la fase de microgel es $\psi_{MG}$.
+
+En donde se impone una restriccio\'on de electroneutralidad del microgel, que puede expresarse como:
+%
+%
+\begin{align}
+	\begin{aligned}
+		\sum_{\gamma  } \rho_\gamma q_\gamma + f\frac{\phi_{MAA}}{v_{MAA}}q_{MAA}=0
+	\end{aligned}
+	\label{eq:gel:charge-neutrality}
+\end{align}
+
+Las interacciones stericas se incorporan como una segunda restricci\'on al sistema, la cual consiste en que  el volumen del microgel est\'a completamente ocupado por los segmentos de la red y las especies quí\'icas libres.
+
+%
+\begin{align}
+	\begin{aligned}
+		\sum_{\gamma } \rho_\gamma v_\gamma  + \phi_{MAA} + \phi_{NIPAm} = 1
+	\end{aligned}
+	\label{eq:gel:packing}
+\end{align}
+
+
+
+\noindent donde $v_\gamma$  es el volumen molecular de la especie $\gamma$, y la fracci\'on de volumen de cada componente de la red son: 
+%
+%
+\begin{align}
+	\phi_{MAA}&=N_{seg}\dfrac{x_{MAA}v_{MAA}}{\frac{4}{3}\pi R^3}\\
+	\phi_{NIPAm}&=N_{seg}\dfrac{x_{NIPAm}v_{NIPAm}}{\frac{4}{3}\pi R^3}
+\end{align}
+
+
+
+$U_{VdW}$ es la contribuci\'on que describe las interacciones efectivas pol\'imero-disolvente; incorpora la transici\'on hidrofílica-hidrof\'obica de NIPAm al aumentar la temperatura por encima de su LCST.
+
+\begin{align}
+	\beta U_{VdW} =  \chi (T, \phi_{NIPAm})\rho_w \phi_{NIPAm}
+\end{align}
+
+
+Este  t\'ermino en el potencial termodin\'amico explica la respuesta de PNIPAm a los cambios de temperatura a trav\'es de un par\'ametro de interacci\'on pol\'imero solvente, $\chi$, que depende de la temperatura y la fracci\'on de volumen de NIPAm, $\phi_{NIPAm}$.
+Seg\'un  \cite{afroze2000}, este par\'ametro de Flory-Huggins se puede expresar como:
+%
+%
+
+
+\begin{align}
+	\begin{aligned}
+		\chi (T, \phi_{NIPAm}) &=g_0(T) +g_1(T)\phi_{NIPAm} \\
+		&~+ g_2(T)\phi_{NIPAm}^2
+	\end{aligned}
+\end{align}
+
+\noindent con
+%
+%
+\begin{align}
+	\begin{aligned} 
+		g_k(T)=g_{k0} + \frac{g_{k1}}{T} + g_{k2}T
+	\end{aligned}
+\end{align}
+
+
+\noindent para  $k=0,1,2$, los coeficinetes son: $g_{00}= -12.947$, $g_{02}=0.044959\,$K$^{-1}$, $g_{10}= 17.920$, $g_{12}= -0.056944$\,K$^{-1}$, $g_{20}= 14.814$, $g_{22}= -0.051419$\,K$^{-1}$  y $g_{k1}\equiv 0$ \cite{afroze2000}
+
+
+
+
 Finalmente, la suma sobre  $\gamma$ expresa el equilibrio qu\'imico con la fase de soluci\'on, donde $\mu_\gamma$ y $N_\gamma$ son el potencial qu\'imico y el n\'umero de mol\'eculas de la especie $\gamma$, respectivamente.
 Aqu\'i, el subíndice $\gamma$ identifica  las especies qu\'imicas libres, $\gamma \in \left\{ w, H_3O^+, OH^-, +,- \right\}$.
 Hay que tener en cuenta que $\Omega_{MG}$ es un potencial semi-gran can\'onico porque la fase de microgel puede intercambiar cada una de estas mol\'eculas con la fase de soluci\'on, mientras que la red de pol\'imero está confinada dentro de la primera.
 
-La forma expl\'icita del potencial termodin\'amico es:
+
+\begin{align}
+	\sum_\gamma N_\gamma \mu_\gamma = \sum_{\gamma }{\rho_\gamma\beta\mu_\gamma}
+	+ \beta\mu_{H^+}(1-f)\dfrac{\phi_{MAA}}{v_{MAA}}
+\end{align}
+
+Esta contribuci\'on muestra el equilibrio qu\'imico entre el microgel y la fase de soluci\'on, donde el segundo t\'ermino representa a los protones asociados a unidades de MAA;
+a saber, $\mu_{H^+}\equiv\mu_{H_3O^+}$ se conjuga con el n\'umero total de protones,
+$N_{H_3O^+}+N_{MAAH}=V\left(\rho_{H_3O^+}+(1-f)\dfrac{\phi_{MAA}}{v_{MAA}}\right)$.
+
+
+Finalmente, la forma expl\'icita del potencial termodin\'amico es:
 
 
 
@@ -111,123 +237,30 @@ La forma expl\'icita del potencial termodin\'amico es:
 & + \frac{\phi_{MAA}}{v_{MAA}} \left[f(\ln f+ \beta\mu^0_{MAA^-})\right.\\
 &\qquad\left.+(1-f)(\ln (1-f)+\beta\mu^0_{MAAH})\right] \\
 %
+& + \dfrac{3}{2}\dfrac{N_{seg}}{n_{ch} V}\left[\left(\dfrac{R}{R_0}\right)^2 - \ln\dfrac{R}{R_0} -1\right] \\
+%
 & +  \left(\sum_{\gamma } {\rho_\gamma q_\gamma + f\dfrac{\phi_{MAA}}{v_{MAA}}q_{MAA}}\right)\beta\psi_{MG}\\
+%
+& +\beta\pi_{MG} \left[ \sum_{\gamma } \rho_\gamma v_\gamma  + \phi_{MAA} + \phi_{NIPAm} -1 \right] \\
+%
+& + \chi (T, \phi_{NIPAm})\rho_w \phi_{NIPAm} \\
 %
 & -\sum_{\gamma }{\rho_\gamma\beta\mu_\gamma}
  -\beta\mu_{H^+}(1-f)\dfrac{\phi_{MAA}}{v_{MAA}}\\
 %
-& + \chi (T, \phi_{NIPAm})\rho_w \phi_{NIPAm} \\
-%
-& + \dfrac{3}{2}\dfrac{N_{seg}}{n_{ch} V}\left[\left(\dfrac{R}{R_0}\right)^2 - \ln\dfrac{R}{R_0} -1\right]
 %
 \end{aligned}
-\label{eq:free-energy}
-\end{align}
-
-\noindent donde el primer t\'ermino (segunda l\'inea) corresponde a la  $S_{mez}$; $\beta=\frac{1}{k_BT}$ y $k_B$ es la constante de Boltzmann.
-La densidad num\'erica de la especie $\gamma$ es $\rho_\gamma$ y $\mu^0_\gamma$ es su potencial qu\'imico est\'andar, que tambi\'en se incluye en esta primera contribuci\'on; $v_w$ es el volumen de una mol\'ecula de agua.
-
-
-La segunda y tercera l\'inea de la ec. \ref{eq:free-energy} (lado derecho) incorporan el equilibrio \'acido-base de las unidades MAA, donde $\phi_{MAA}$ es la fracci\'on de volumen que ocupan estos segmentos, $v_{MAA}$ es la volumen de este segmento, y $f$ es el grado de disociaci\'on o la fracci\'on de estas unidades que se cargan.
-La fracci\'on de volumen de los segmentos MAA cargados es $f\phi_{MAA}$, y la de las unidades protonadas o sin carga es $(1-f)\phi_{MAA}$.
-Los potenciales qu\'imicos est\'andar son $\mu^0_{MAA^-}$ y $\mu^0_{MAAH}$ para las especies desprotonadas(cargadas) y protonadas, respectivamente.
-Hay que tener en cuenta que aqu\'i usamos el t\'ermino segmento para identificar las unidades qu\'imicas (monómeros) que componen las cadenas polim\'ericas (MAA y NIPAm).
-
-
-La siguiente contribuci\'on a la ec. \ref{eq:free-energy} es la energ\'ia electrost\'atica, donde $q_\gamma$ y $q_{MAA}$ son la carga el\'ectrica de las moléculas $\gamma$ y los segmentos MAA, respectivamente.
-El potencial electrost\'atico dentro de la fase de microgel es $\psi_{MG}$.
-
-
-La siguiente contribución (l\'inea 6 de eq.\ref{eq:free-energy}) refuerza el equilibrio qu\'imico entre el microgel y la fase de soluci\'on, donde el segundo t\'ermino representa a los protones unidos a unidades MAA;
-a saber, $\mu_{H^+}\equiv\mu_{H_3O^+}$ se conjuga con el n\'umero total de protones,
-$N_{H_3O^+}+N_{MAAH}=V\left(\rho_{H_3O^+}+(1-f)\dfrac{\phi_{MAA}}{v_{MAA}}\right)$.
-
-
-El siguiente t\'ermino en el potencial termodin\'amico explica la respuesta de PNIPAm a los cambios de temperatura a trav\'es de un par\'ametro de interacci\'on pol\'imero solvente, $\chi$, que depende de la temperatura y la fracci\'on de volumen de NIPAm, $\phi_{NIPAm}$.
-Seg\'un  \cite{afroze2000}, este par\'ametro de Flory-Huggins se puede expresar como:
-%
-%
-
-
-\begin{align}
-\begin{aligned}
-\chi (T, \phi_{NIPAm}) &=g_0(T) +g_1(T)\phi_{NIPAm} \\
- &~+ g_2(T)\phi_{NIPAm}^2
-\end{aligned}
-\end{align}
-
-\noindent con
-%
-%
-\begin{align}
-\begin{aligned} 
-g_k(T)=g_{k0} + \frac{g_{k1}}{T} + g_{k2}T
-\end{aligned}
-\end{align}
-
-
-\noindent para  $k=0,1,2$, los coeficinetes son: $g_{00}= -12.947$, $g_{02}=0.044959\,$K$^{-1}$, $g_{10}= 17.920$, $g_{12}= -0.056944$\,K$^{-1}$, $g_{20}= 14.814$, $g_{22}= -0.051419$\,K$^{-1}$  y $g_{k1}\equiv 0$ \cite{afroze2000}
-
-
-El \'utimo t\'ermino en eq. \ref{eq:free-energy} es la contribuci\'on resultante de la elasticidad de la red de pol\'imero entrecruzado que forma la columna vertebral del microgel.
-Esta expresi\'on se describe en \cite{moncho-jorda2016a} y proviene del modelo de elasticidad del caucho,
-donde $N_{seg}$ es el n\'umero total de segmentos en la red de pol\'imero y $n_{ch}$ es el n\'umero de segmentos por cadena de pol\'imero o \emph{longitud de cadena}.
-Se tiene en cuenta que la constante de resorte en la energ\'ia libre el\'astica es proporcional al cociente $\dfrac{N_{seg}}{n_{ch}}$, que representa el n\'umero (total) de cadenas de pol\'imero en el microgel.
-El radio del microgel seco es $R_0$, lo que satisface con la expresi\'on:
-
-%
-%
-\begin{align}
-\begin{aligned} 
-\dfrac{4}{3}\pi R_0^3=V_0&=N_{seg}\Big( x_{MAA} v_{MAA}\\
-&\qquad+x_{NIPAm} v_{NIPAm}\Big)
-\end{aligned}
-\end{align}
-
-
-\noindent donde $V_0$ es el volumen de la part\'icula seca; $x_{MAA}$ y $x_{NIPAm}$ son la fracci\'on de los segmentos MAA y NIPAm, respectivamente.
-Entonces, el n\'umero total de segmentos MAA es $x_{MAA}N_{seg}$ y el de unidades NIPAm es $x_{NIPAm}N_{seg}$, cada uno con un volumen $v_{NIPAm}$.
-Los microgeles que consideramos aqu\'i satisfacen $x_{NIPAm}=1-x_{MAA}$.
-
-
-Deben imponerse dos restricciones f\'isicas al potencial termodin\'amico dado por la ec. \ref{eq:free-energy}.
-El volumen del microgel est\'a completamente ocupado por los segmentos de la red y las especies quí\'icas libres.
-Esta restricci\'on de incompresibilidad incorpora las repulsiones est\'ericas (volumen excluido) y se puede expresar como:
-%
-
-%
-%
-\begin{align}
-\begin{aligned}
-\sum_{\gamma } \rho_\gamma v_\gamma  + \phi_{MAA} + \phi_{NIPAm} = 1
-\end{aligned}
-\label{eq:packing}
+\label{eq:gel:free-energy}
 \end{align}
 
 
 
-\noindent donde $v_\gamma$  es el volumen molecular de la especie $\gamma$, y la fracci\'on de volumen de cada componente de la red son: 
-%
-%
-\begin{align}
-\phi_{MAA}&=N_{seg}\dfrac{x_{MAA}v_{MAA}}{\frac{4}{3}\pi R^3}\\
-\phi_{NIPAm}&=N_{seg}\dfrac{x_{NIPAm}v_{NIPAm}}{\frac{4}{3}\pi R^3}
-\end{align}
+
+\noindent En donde $\pi_{MG}$ es la presi\'on osm\'otica de la fase de microgel, introducido como un multiplicador de Lagrange para imponer la restricci\'on de incompresibilidad, ec. \ref{eq:packing}.
 
 
-La segunda restricci\'on  que se impone es la electroneutralidad del microgel, que puede expresarse como:
-%
-%
-\begin{align}
-\begin{aligned}
-\sum_{\gamma  } \rho_\gamma q_\gamma + f\frac{\phi_{MAA}}{v_{MAA}}q_{MAA}=0
-\end{aligned}
-\label{eq:charge-neutrality}
-\end{align}
-
-
-Ahora, el potencial termodin\'amica esta explicitamente en funci\'on de las densidades de todas las especies, el grado de carga del MAA y el radio del microgel, $\Omega_{MG}(R)\equiv\Omega_{MG}(\{\rho_\gamma\},f,R)$.
-Para obtener las expresiones de $\{\rho_\gamma\}$ y $f$ que sean consistentes con el equilibrio termodin\'amico, minimizamos $\Omega_{MG}$ con respecto a estas cantidades, sujeto a las restricciones ec. \ref{eq:packing} y ec. \ref{eq:charge-neutrality}; dicho procedimiento conduce a: 
+Nuestro potencial termodin\'amico esta explicitamente en funci\'on de las densidades de todas las especies, el grado de carga del MAA y el radio del microgel, $\Omega_{MG}(R)\equiv\Omega_{MG}(\{\rho_\gamma\},f,R)$.
+Para obtener las expresiones de $\{\rho_\gamma\}$ y $f$ de tal forma que sean consistentes con el equilibrio termodin\'amico, minimizamos $\Omega_{MG}$ respecto a estas cantidades, y  sujeto a las restricciones ec. \ref{eq:gel:packing} y ec. \ref{eq:gel:charge-neutrality}; dicho procedimiento conduce a: 
 %
 %
 \begin{align}
@@ -235,7 +268,7 @@ Para obtener las expresiones de $\{\rho_\gamma\}$ y $f$ que sean consistentes co
 \frac{f}{1-f}&= \frac{K^0_{MAA}}{a_{H^+}}\exp(-\beta\psi_{MG}q_{MAA})\label{eq:fcharge}
 \end{align}
 
-\noindent donde $a_\gamma = e^{\beta\mu_\gamma-\beta\mu_\gamma^0}$ es la actividad de la especie $\gamma$, y $\pi_{MG}$ es la presi\'on osm\'otica de la fase de microgel, introducido como un multiplicador de Lagrange para imponer la restricci\'on de incompresibilidad, ec. \ref{eq:packing}.
+\noindent donde $a_\gamma = e^{\beta\mu_\gamma-\beta\mu_\gamma^0}$ es la actividad de la especie $\gamma$. 
 La constante de equilibrio termodin\'amico que describe la protonaci\'on/desprotonaci\'on MAA es
 %
 %
@@ -243,13 +276,13 @@ La constante de equilibrio termodin\'amico que describe la protonaci\'on/desprot
 K^0_{MAA}= e^{\beta\mu^0_{MAAH}-\beta\mu^0_{MAA}-\beta\mu^0_{H^+}}
 \end{align}
 
-\noindent Esta cantidad se puede calcular directamente a partir del pKa del \'acido.
+\noindent Esta cantidad es posible calcularla directamente a partir del pKa del \'acido.
 
 
-Para un $R$ dado, las \'unicas inc\'ognitas restantes para determinar $\Omega_{MG}(R)$ son la presi\'on osm\'otica, $\pi_{MG}$ y el potencial electrost\'atico, $\psi_{MG}$.
-Estas dos cantidades se pueden calcular resolviendo num\'ericamente la incompresibilidad y la electroneutralidad de la fase de microgel, ec. \ref{eq:packing} y ec. \ref{eq:charge-neutrality}, respectivamente.
+Si se considera  un valor de  $R$, las \'unicas inc\'ognitas restantes para determinar $\Omega_{MG}(R)$ son la presi\'on osm\'otica, $\pi_{MG}$ y el potencial electrost\'atico, $\psi_{MG}$.
+Estas dos cantidades se pueden calcular resolviendo num\'ericamente la incompresibilidad y la electroneutralidad de la fase de microgel, ec. \ref{eq:gel:packing} y ec. \ref{eq:gel:charge-neutrality}, respectivamente.
 Para resolver estas ecuaciones utilizamos un m\'etodo h\'ibrido de Powell sin jacobiano y un c\'odigo FORTRAN desarrollado internamente.
-
+En resumen, es posible calcular la variaci\'on de energ\'ia potencial respecto del radio del microgel $R$, y con ello calcular el valor del radio \'optimo del gel para unas condiciones dadas( pH, temperatura, concentraci\'on de sal). Esto se ilustra en la secci\'on \ref{sec:gel:minimi}.
 
 Todas las dem\'as cantidades involucradas en el c\'alculo de $\Omega_{MG}(R)$ son valores de  entradas, incluidas las propiedades de las diferentes especies qu\'imicas consideradas, que se resumen en la tabla \ref{table:molecules}.
 Usamos $pK_w=14$ para describir el equilibrio de disociaci\'on del agua.
@@ -318,7 +351,7 @@ Una vez que se establece la composición de la soluci\'on (pH y concentraci\'on 
 \noindent para $\gamma \in \left\{ w, H_3O^+, OH^-, +,- \right\}$, donde $\pi_s$ es la presi\'on osm\'otica de la fase de soluci\'on introducida como un multiplicador de Lagrange por la ecuaci\'on \ref{eq:bulk-packing}.
 Despu\'es de conocer $\pi_s$, podemos determinar las actividades de todas las especies qu\'imicas libres.
 
-\subsection{Minimizaci\'on gr\'afica}
+\subsection{Minimizaci\'on gr\'afica}\label{sec:gel:minimi}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure*}[!htb]
@@ -373,7 +406,7 @@ Los resultados obtenidos de la minimizaci\'on de las curvas figura \ref{fig:grap
 
 
 Para describir la absorci\'on de un analito a la fase de microgel,
-al potencial termodin\'amico de la ec. \ref{eq:free-energy} se le adicionan los siguientes t\'erminos:
+al potencial termodin\'amico de la ec. \ref{eq:gel:free-energy} se le adicionan los siguientes t\'erminos:
 %
 %
 %

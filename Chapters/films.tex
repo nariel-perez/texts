@@ -32,7 +32,7 @@ El uso de una prote\'ina modelo como adsorbato nos beneficia dado que poseen dis
 Considerando los aspectos anteriores es posible definir una energ\'ia libre:
 
 \begin{align}
- 	F = -TS_{mez} -TS_{conf,nw} + F_{chem,nw} + F_{chem,pro} + U_{elec} + U_{ste} + U_{VDW}
+ 	F = -TS_{mez} -TS_{conf,net} + F_{qca,net} + F_{qca,pro} + U_{elec} + U_{ste} + U_{VDW}
  	\label{eq:libre-film}
 \end{align}
  
@@ -41,9 +41,9 @@ Aqu\'i, consideramos una sal monovalente, NaCl, la cual est\'a completamente dis
 
 $S_{conf,nw}$ representa la entrop\'ia conformacional que resulta de la flexibilidad de la red de polim\'erica, la cual viene dada por todas las conformaciones diferentes que puede asumir la misma.
 
-$F_{chem,nw}$, es la energ\'ia qu\'imica libre que describe el equilibrio entre las especies protonadas y desprotonadas de unidades funcionales (\'acidas/b\'asicas), para nuestro film solo se consideran unidades \'acidas.
+$F_{qca,net}$, es la energ\'ia qu\'imica libre que describe el equilibrio entre las especies protonadas y desprotonadas de unidades funcionales (\'acidas/b\'asicas), para nuestro film solo se consideran unidades \'acidas.
 
-De manera similar, $F_{chem,pro}$ describe la protonaci\'on de residuos titulables de la prote\'ina.
+De manera similar, $F_{qca,net}$ describe la protonaci\'on de residuos titulables de la prote\'ina.
 
 $U_{elec}$ y $U_{ste}$ representan, respectivamente, las interacciones electrost\'aticas y las repulsiones est\'ericas.
 Las interacciones de Van der Waals son representadas en $U_{VdW}$.
@@ -77,7 +77,7 @@ De este modo la densidad local media de la prote\'ia puede expresarse como:
 La entrop\'ia conformational que resutla de la flexibilidad de la red polim\'erica de nuestro film se representa en $S_{conf, nw}$, esta tiene en cuenta todas las configuraciones de un set $\{\alpha\}$.
 
 \begin{equation}
-	\frac{S_{conf,nw}}{k_B} = - \sum_{\alpha}{P(\alpha)\ln P(\alpha)}
+	\frac{S_{conf,net}}{k_B} = - \sum_{\alpha}{P(\alpha)\ln P(\alpha)}
 \end{equation}
 
 \noindent en donce $P(\alpha)$ denota la probabilidad de que el film se encuentre en la configuraci\'on $\alpha$.
@@ -86,7 +86,7 @@ El siguiente t\'ermino de eq \ref{eq:libre-film} describe  la energ\'ia libre da
 
 \begin{align}
 	\begin{aligned}
-		\beta F_{chem,nw} &= A\int_0^\infty dz \left<\rho_{MAA}(z)\right> \left[f(z)(\ln f(z)+ \beta\mu^0_{MAA^-})\right.\\
+		\beta F_{qca,net} &= A\int_0^\infty dz \left<\rho_{MAA}(z)\right> \left[f(z)(\ln f(z)+ \beta\mu^0_{MAA^-})\right.\\
 		&\left.+(1-f(z))(\ln (1-f(z))+\beta\mu^0_{MAAH})\right]    
 	\end{aligned}
 \end{align} 
@@ -106,7 +106,7 @@ El equilibrio qu\'imico de las unidades titulables de la prote\'ina es considera
 
 \begin{align}
 	\begin{aligned}
-		\beta F_{chem,pro} = A\int_0^\infty dz& \sum_\tau \left<\rho_{pro,\tau}(z)\right> \left[g_\tau(z)(\ln g_\tau(z)+ \beta\mu^0_{\tau p})\right.\\
+		\beta F_{qca,pro} = A\int_0^\infty dz& \sum_\tau \left<\rho_{pro,\tau}(z)\right> \left[g_\tau(z)(\ln g_\tau(z)+ \beta\mu^0_{\tau p})\right.\\
 		&\qquad\left.+(1-g_\tau(z))(\ln (1-g_\tau(z))+\beta\mu^0_{\tau d})\right]   
 	\end{aligned}
 \end{align} 

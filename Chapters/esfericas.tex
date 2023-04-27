@@ -29,18 +29,18 @@ Este potencial contiene las siguientes contribuciones:
 
 \begin{align}
 \begin{aligned}
-\Omega_{NG}=& -TS_{mix} -TS_{conf,nw} + F_{chem,nw} + F_{chem,pro}\\
+\Omega_{NG}=& -TS_{mez} -TS_{conf,net} + F_{qca,net} + F_{qca,pro}\\
 & + U_{elec} + U_{ste} + U_{vdw} - \sum_{\gamma}{\mu_\gamma N_\gamma} - \mu_{pro} N_{pro}
 \end{aligned}
 \label{eq:esf:semicano}
 \end{align}
 
 
-\noindent donde $S_{mix}$ es la entrop\'ia de traslaci\'on (y de mezcla) de las especies de la soluci\'on: mol\'eculas de agua (H$_2$O), iones de hidronio (H$_3$O$^+$), iones de hidr\'oxido (OH$^- $), cationes de sal, aniones de sal y prote\'ina.
+\noindent donde $S_{mez}$ es la entrop\'ia de traslaci\'on (y de mezcla) de las especies de la soluci\'on: mol\'eculas de agua (H$_2$O), iones de hidronio (H$_3$O$^+$), iones de hidr\'oxido (OH$^- $), cationes de sal, aniones de sal y prote\'ina.
 Consideramos una sal monovalente, NaCl completamente disociada en iones de sodio (Na$^+$) y cloruro (Cl$^-$).
-$S_{conf,nw}$ representa la entrop\'ia conformacional que resulta de la flexibilidad de la red de pol\'imeros, que puede asumir muchas conformaciones diferentes.
-$F_{chem,nw}$ es la energ\'ia qu\'imica libre que describe el equilibrio entre las especies protonadas y desprotonadas de unidades funcionales (\'acidas/b\'asicas) en el pol\'imero.
-De manera similar, $F_{chem,pro}$ describe la protonaci\'on de residuos titulables de la prote\'ina.
+$S_{conf,net}$ representa la entrop\'ia conformacional que resulta de la flexibilidad de la red de pol\'imeros, que puede asumir muchas conformaciones diferentes.
+$F_{qca,net}$ es la energ\'ia qu\'imica libre que describe el equilibrio entre las especies protonadas y desprotonadas de unidades funcionales (\'acidas/b\'asicas) en el pol\'imero.
+De manera similar, $F_{qca,pro}$ describe la protonaci\'on de residuos titulables de la prote\'ina.
 $U_{elec}$ y $U_{ste}$ representan, respectivamente, las interacciones electrost\'aticas y las repulsiones est\'ericas.
 $U_{Vdw}$ contiene las interacciones de Van der Waals entre los distintos segmentos y el solvente.
 Finalmente, la suma de $\gamma$ expresa el equilibrio qu\'imico entre nuestro sistema y la soluci\'on bulk que representa un ``ba\~no t\'ermico" para las part\'iculas libres, donde $\mu_\gamma$ y $N_\gamma$ son el potencial qu\'imico y el n\'umero de mol\'eculas de especie $\gamma$, respectivamente;
@@ -60,7 +60,7 @@ En primera instancia tenemos la entrop\'ia de traslaci\'on y de mezcla de las es
 
 \begin{align}
 	\begin{aligned}
-		-\frac{S_{mix}}{k_B}= &\sum_{\gamma}\int_0^\infty{dr G(r)\rho_\gamma(r)\left(\ln \left(\rho_\gamma (r)v_w\right) -1 + \beta\mu^0_\gamma\right)} \\
+		-\frac{S_{mez}}{k_B}= &\sum_{\gamma}\int_0^\infty{dr G(r)\rho_\gamma(r)\left(\ln \left(\rho_\gamma (r)v_w\right) -1 + \beta\mu^0_\gamma\right)} \\
 		&+ \sum_{\theta}\int_0^\infty{dr G(r)\rho_{pro}(\theta,r)\left(\ln \left(\rho_{pro}(\theta,r)\right) -1 + \beta\mu^0_{pro} \right)}
 	\end{aligned}
 \end{align}
@@ -80,7 +80,7 @@ La densidad media local total de prote\'ina es:
 	\left<\rho_{pro}(r)\right> = \sum_\theta{\rho_{pro}(\theta,r)}
 \end{align}
 
-$S_{conf,nw}$ representa la entrop\'ia conformacional resultante de la flexibilidad de la red polim\'erica que forma al nanogel. Conformaciones denotadas por el set $\{\alpha\}$. 
+$S_{conf,net}$ representa la entrop\'ia conformacional resultante de la flexibilidad de la red polim\'erica que forma al nanogel. Conformaciones denotadas por el set $\{\alpha\}$. 
 \begin{equation}
 	\frac{S_{conf,nw}}{k_B} = - \sum_{\alpha}{P(\alpha)\ln P(\alpha)}
 \end{equation}
@@ -91,7 +91,7 @@ El siguiente t\'ermino describe la energ\'ia qu\'imica libre originada por el eq
 
 \begin{align}
 	\begin{aligned}
-		\beta F_{chem,nw} &= \int_0^\infty drG(r) \frac{\left<\phi_{MAA}(r)\right>}{v_{MAA}} \left[f(r)(\ln f(r)+ \beta\mu^0_{MAA^-})\right.\\
+		\beta F_{qca,net} &= \int_0^\infty drG(r) \frac{\left<\phi_{MAA}(r)\right>}{v_{MAA}} \left[f(r)(\ln f(r)+ \beta\mu^0_{MAA^-})\right.\\
 		&\left.+(1-f(r))(\ln (1-f(r))+\beta\mu^0_{MAAH})\right]    
 	\end{aligned}
 \end{align} 
@@ -114,7 +114,7 @@ El equilibrio qu\'imico de las unidades proteicas titulables se considera en el 
 
 \begin{align}
 	\begin{aligned}
-		\beta F_{chem,pro} =\int_0^\infty dr &G(r) \sum_\tau \left<\rho_{pro,\tau}(r)\right> \left[g_\tau(r)(\ln g_\tau(r)+ \beta\mu^0_{\tau p})\right.\\
+		\beta F_{qca,pro} =\int_0^\infty dr &G(r) \sum_\tau \left<\rho_{pro,\tau}(r)\right> \left[g_\tau(r)(\ln g_\tau(r)+ \beta\mu^0_{\tau p})\right.\\
 		&\qquad\left.+(1-g_\tau(r))(\ln (1-g_\tau(r))+\beta\mu^0_{\tau d})\right]   
 	\end{aligned}
 \end{align} 
