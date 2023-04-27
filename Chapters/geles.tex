@@ -141,7 +141,7 @@ $U_{elec}$ y $U_{ste}$ representan respectivamente las interacciones electrost\'
 \end{align}
 
 \noindent donde $q_\gamma$ y $q_{MAA}$ son la carga el\'ectrica de las moléculas $\gamma$ y los segmentos MAA, respectivamente.
-El potencial electrost\'atico dentro de la fase de microgel es $\psi_{MG}$.
+El potencial electrost\'atico dentro de la fase de microgel es $\psi_{MG}$. Fuera de esta fase el potencial es nulo $\psi_s = 0$
 
 En donde se impone una restriccio\'on de electroneutralidad del microgel, que puede expresarse como:
 %
@@ -175,14 +175,20 @@ Las interacciones stericas se incorporan como una segunda restricci\'on al siste
 
 
 
-$U_{VdW}$ es la contribuci\'on que describe las interacciones efectivas pol\'imero-disolvente; incorpora la transici\'on hidrofílica-hidrof\'obica de NIPAm al aumentar la temperatura por encima de su LCST.
+$U_{VdW}$ es la contribuci\'on que describe las interacciones efectivas pol\'imero-disolvente; para este trabajo hemos realizado la siguiente aproximaci\'on: 
+\begin{align}
+	U_{VdW} = U_{NIPAm-w} + U_{MAA-w}
+\end{align}
+\noindent en donde $U_{NIPAm-w}$ incorpora la transici\'on hidrofílica-hidrof\'obica de NIPAm al aumentar la temperatura por encima de su temperatura de transici\'on cr\'itica. 
+Del mismo modo $U_{MAA-w}$ hace cuenta de la interacci\'on entre los segmentos de MAA y agua.
+Los resultados presentes en este cap\'itulo consideran a los segmentos de $MAA$ completamente hidrofilicos y por tanto $U_{MAA-w} = 0$
 
 \begin{align}
-	\beta U_{VdW} =  \chi (T, \phi_{NIPAm})\rho_w \phi_{NIPAm}
+	\beta U_{VdW} = U_{NIPAm-w} = \chi (T, \phi_{NIPAm})\rho_w \phi_{NIPAm}
 \end{align}
 
 
-Este  t\'ermino en el potencial termodin\'amico explica la respuesta de PNIPAm a los cambios de temperatura a trav\'es de un par\'ametro de interacci\'on pol\'imero solvente, $\chi$, que depende de la temperatura y la fracci\'on de volumen de NIPAm, $\phi_{NIPAm}$.
+Este  t\'ermino explica la respuesta de PNIPAm a los cambios de temperatura a trav\'es de un par\'ametro de interacci\'on pol\'imero solvente, $\chi$, que depende de la temperatura y la fracci\'on de volumen de NIPAm, $\phi_{NIPAm}$.
 Seg\'un  \cite{afroze2000}, este par\'ametro de Flory-Huggins se puede expresar como:
 %
 %
@@ -225,7 +231,7 @@ a saber, $\mu_{H^+}\equiv\mu_{H_3O^+}$ se conjuga con el n\'umero total de proto
 $N_{H_3O^+}+N_{MAAH}=V\left(\rho_{H_3O^+}+(1-f)\dfrac{\phi_{MAA}}{v_{MAA}}\right)$.
 
 
-Finalmente, la forma expl\'icita del potencial termodin\'amico es:
+La forma expl\'icita del potencial termodin\'amico es:
 
 
 
@@ -256,7 +262,7 @@ Finalmente, la forma expl\'icita del potencial termodin\'amico es:
 
 
 
-\noindent En donde $\pi_{MG}$ es la presi\'on osm\'otica de la fase de microgel, introducido como un multiplicador de Lagrange para imponer la restricci\'on de incompresibilidad, ec. \ref{eq:packing}.
+\noindent En donde $\pi_{MG}$ es la presi\'on osm\'otica de la fase de microgel, introducido como un multiplicador de Lagrange para imponer la restricci\'on de incompresibilidad, ec. \ref{eq:gel:packing}.
 
 
 Nuestro potencial termodin\'amico esta explicitamente en funci\'on de las densidades de todas las especies, el grado de carga del MAA y el radio del microgel, $\Omega_{MG}(R)\equiv\Omega_{MG}(\{\rho_\gamma\},f,R)$.
@@ -321,14 +327,15 @@ En la soluci\'on, el potencial termodin\'amico es:
 %
 \begin{align}
 \begin{aligned}
-\beta&\frac{\Omega_s}{V}=\\& \sum_{\gamma   } {\rho^s_\gamma\left(\ln(\rho_\gamma^sv_w) -1 + \beta\mu_\gamma^0 - \beta\mu_\gamma\right)}
+\beta&\frac{\Omega_s}{V}=\\& \sum_{\gamma   } {\rho^s_\gamma\left(\ln(\rho_\gamma^sv_w) -1 + \beta\mu_\gamma^0 - \beta\mu_\gamma\right)} \\
+& +\beta\pi_{s} \left[ \sum_{\gamma } \rho_\gamma v_\gamma + \rho_a \sum_\lambda n_\lambda v_\lambda -1 \right] \\
 \end{aligned}
-\label{eq:bulk}
+\label{eq:gel:bulk}
 \end{align}
 
 \noindent el subindice  $s$  indica las densidades en la fase soluci\'on.
-Al escribir la ec. \ref{eq:bulk}, hemos considerado un volumen de referencia igual al del microgel, $V$, y se ha considerado como cero el potencial electrost\'atico en la fase de soluci\'on.
-
+Al escribir la ec. \ref{eq:gel:bulk}, hemos considerado un volumen de referencia igual al del microgel, $V$, y se ha considerado, como se mencion\'o con anterioridad, cero el potencial electrost\'atico en la fase de soluci\'on.
+Adem\'as en la ultima l\'inea de la ecuaci\'on \ref{eq:gel:bulk} se ha incorporado la restricci\'on para la incompresibilidad del sistema, con $pi_s$ como la presi\'on osm\'otica en la fase soluci\'on.
 
 Una vez que se establece la composición de la soluci\'on (pH y concentraci\'on de sal), conocemos las densidades de todas las especies qu\'imicas en esta fase, que deben satisfacer tanto las restricciones de incompresibilidad como de neutralidad de carga:
 %
@@ -349,7 +356,8 @@ Una vez que se establece la composición de la soluci\'on (pH y concentraci\'on 
 
 
 \noindent para $\gamma \in \left\{ w, H_3O^+, OH^-, +,- \right\}$, donde $\pi_s$ es la presi\'on osm\'otica de la fase de soluci\'on introducida como un multiplicador de Lagrange por la ecuaci\'on \ref{eq:bulk-packing}.
-Despu\'es de conocer $\pi_s$, podemos determinar las actividades de todas las especies qu\'imicas libres.
+Al conocer $\pi_s$, podemos determinar las actividades de todas las especies qu\'imicas libres, y con las mismas resolver el sistema de la fase microgel.
+Los resultados de la minimizaci\'on de la energ\'ia con un dado valor de R es presentada en la siguiente secci\'on.
 
 \subsection{Minimizaci\'on gr\'afica}\label{sec:gel:minimi}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -366,7 +374,7 @@ Despu\'es de conocer $\pi_s$, podemos determinar las actividades de todas las es
 
 En este punto, es posible determinar completamente la energí\'ia libre de la fase de microgel para cualquier $R$ dado.
 Las variables independientes de un c\'alculo son la temperatura, el pH y la concentraci\'on de sal de la soluci\'on en contacto con la fase microgel.
-El n\'umero de segmentos en la red de pol\'imero $N_{seg}$, la longitud de la cadena $n_{ch}$ y la fracci\'on de segmentos MAA, $x_{MAA}$, caracterizan completamente el microgel.
+El n\'umero de segmentos en la red de pol\'imero $N_{seg}$, la longitud de la cadena $n_{ch}$ y la fracci\'on de segmentos MAA, $x_{MAA}$, caracterizan completamente a nuestro microgel.
 
 
 Consideramos microgeles con $N_{seg}=10^7$ segmentos y $n_{ch}=50$, $100$ y $200$, que tienen $x_{MAA}=0,1$, $0,35$ o $0,5$.
@@ -404,6 +412,7 @@ Los resultados obtenidos de la minimizaci\'on de las curvas figura \ref{fig:grap
 \subsection{Absorci\'on}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Nuestro objetivos es poder utilizar estos microgeles como dispositivos inteligentes, entre los que se destaca su uso como trasnportadores de mecidamentos. Para ello es necesario analizar su factibiliad de su la absorci\'on de drogas terapeuticas. En el presente cap\'itulo realizamos el an\'alisis usando como droga modelo a la Doxorubicina y un derivado de ella Daunorubicina. Ambas drogas muy fuertemente empleadas en tratamientos anticancerigenos. 
 
 Para describir la absorci\'on de un analito a la fase de microgel,
 al potencial termodin\'amico de la ec. \ref{eq:gel:free-energy} se le adicionan los siguientes t\'erminos:
@@ -413,34 +422,91 @@ al potencial termodin\'amico de la ec. \ref{eq:gel:free-energy} se le adicionan 
 \begin{align}
 \begin{aligned}
 \beta&\frac{\Omega_{MG}(R)}{V}= \cdots\\&+ \rho_a\left(\ln\left(\rho_a v_w\right) -1 + \beta\mu^0_a\right) \\
-& + \rho_a \sum_\tau n_\tau  \left[g_\tau(\ln g_\tau+ \beta\mu^0_{\tau})\right.\\
-&\qquad\left.+(1-g_\tau)(\ln (1-g_\tau)+\beta\mu^0_{\tau H})\right] \\
+& + \rho_a \sum_\tau n_\tau  \left[g_\tau(\ln g_\tau+ \beta\mu^0_{\tau,p})\right.\\
+&\qquad\left.+(1-g_\tau)(\ln (1-g_\tau)+\beta\mu^0_{\tau, d})\right] \\
 & +  \left( \rho_a \sum_\tau n_\tau f_\tau q_\tau\right)\beta\psi_{MG}\\
 & -\rho_a\beta\mu_a
  -\beta\mu_{H^+} \rho_a \sum_\tau n_\tau g_\tau
 \end{aligned}
-\label{eq:ads}
+\label{eq:gel:ads}
 \end{align}
 %
-\noindent La primera l\'inea (lado derecho) representa los grados de libertad de traslaci\'on,
+\noindent en donde primera l\'inea (lado derecho) representa los grados de libertad de traslaci\'on,
 donde $\rho_a$ es la densidad num\'erica del analito y $\mu_a^0$ su potencial qu\'imico est\'andar.
 Las siguientes dos l\'ineas describen el equilibrio \'acido-base de las unidades titulables del analito;
 el sub\'indice $\tau$ recorre dichas unidades moleculares que tienen un grado de protonaci\'on $g_\tau$ y un volumen $v_\tau$.
 El analito tiene $n_\tau$ de estos segmentos;
-$\mu^0_{\tau H}$ y $\mu^0_\tau$ son el potencial qu\'imico est\'andar de las especies protonadas y desprotonadas, respectivamente, que se relacionan con la constante de disociaci\'on \'acida:
+$\mu^0_{\tau, p}$ y $\mu^0_{\tau,d}$ son el potencial qu\'imico est\'andar de las especies protonadas y desprotonadas, respectivamente, que se relacionan con la constante de disociaci\'on \'acida:
 %
 \begin{align}
-K^0_{\tau}= e^{\beta\mu^0_{\tau H}-\beta\mu^0_{\tau}-\beta\mu^0_{H^+}}
+K^0_{a,\tau}= e^{\beta\mu^0_{\tau, p}-\beta\mu^0_{\tau,d}-\beta\mu^0_{H^+}}
 \end{align}
 %
 
-La siguiente l\'inea en la ec. \ref{eq:ads} describe la contribuci\'on del analito a la energ\'ia electrost\'atica, donde $f_\tau$ es el grado de carga de las unidades $\tau$, que es igual a $g_\tau$ si $\tau$ es un grupo b\'asico, o $(1-g_\tau)$ si la unidad es \'acida; $q_\tau$ es la carga de las especies ionizadas.
+La siguiente l\'inea en la ec. \ref{eq:gel:ads} describe la contribuci\'on del analito a la energ\'ia electrost\'atica, donde $f_\tau$ es el grado de carga de las unidades $\tau$, que es igual a $g_\tau$ si $\tau$ es un grupo b\'asico, o $(1-g_\tau)$ si la unidad es \'acida; $q_\tau$ es la carga de las especies ionizadas.
 Los dos \'ultimos t\'erminos dan cuenta del equilibrio qu\'imico entre el microgel y la fase de soluci\'on, donde $\mu_a$ es el potencial qu\'imico del analito.
 
-Adem\'as, la ec. \ref{eq:packing} debe incorporar la fracci\'on total de volumen ocupada por el analito: $\rho_a \sum_\lambda n_\lambda v_\lambda$, donde $\lambda$ recorre todos los tipos de segmentos que forman la mol\'ecula, incluyendo unidades titulables $\{\tau\}\in\{\lambda\}$.
-La presencia del analito en la fase de soluci\'on tambi\'en representa contribuciones adicionales al potencial termodin\'amico $\Omega_s$ de ec. \ref{eq:bulk}, que contienen los mismos componentes que ec. \ref{eq:ads}.
+Adem\'as, la ec. \ref{eq:gel:packing} debe incorporar la fracci\'on total de volumen ocupada por el analito: $\rho_a \sum_\lambda n_\lambda v_\lambda$, donde $\lambda$ recorre todos los tipos de segmentos que forman la mol\'ecula, incluyendo unidades titulables $\{\tau\}\in\{\lambda\}$.
+La presencia del analito en la fase de soluci\'on tambi\'en representa contribuciones adicionales al potencial termodin\'amico $\Omega_s$ de ec. \ref{eq:gel:bulk}, que contienen los mismos componentes que ec. \ref{eq:gel:ads}.
 
-De la optimizaci\'on de  $\Omega_{MG}$  se obtiene:
+De estas \'ultimas dos ecuaciones se reescriben como:
+
+Para la fase gel:
+\begin{align}
+	\begin{aligned}
+		\beta&\frac{\Omega_{MG}(R)}{V}=\\
+		& ~ \sum_{\gamma} \rho_\gamma\left(\ln\left(\rho_\gamma v_w\right) -1 + \beta\mu^0_\gamma\right) \\
+		%%%
+		&+ \rho_a\left(\ln\left(\rho_a v_w\right) -1 + \beta\mu^0_a\right) \\
+		%%%
+		& + \frac{\phi_{MAA}}{v_{MAA}} \left[f(\ln f+ \beta\mu^0_{MAA^-})\right.\\
+		&\qquad\left.+(1-f)(\ln (1-f)+\beta\mu^0_{MAAH})\right] \\
+		%
+		& + \rho_a \sum_\tau n_\tau  \left[g_\tau(\ln g_\tau+ \beta\mu^0_{\tau,p})\right.\\
+		&\qquad\left.+(1-g_\tau)(\ln (1-g_\tau)+\beta\mu^0_{\tau,d})\right] \\
+		%%
+		& + \dfrac{3}{2}\dfrac{N_{seg}}{n_{ch} V}\left[\left(\dfrac{R}{R_0}\right)^2 - \ln\dfrac{R}{R_0} -1\right] \\
+		%
+		& +  \left(\sum_{\gamma } {\rho_\gamma q_\gamma + f\dfrac{\phi_{MAA}}{v_{MAA}}q_{MAA}} + \rho_a \sum_\tau n_\tau f_\tau q_\tau \right)\beta\psi_{MG}\\
+		%
+		& +\beta\pi_{MG} \left[ \sum_{\gamma } \rho_\gamma v_\gamma  + \phi_{MAA} + \phi_{NIPAm} + \rho_a \sum_\lambda n_\lambda v_\lambda -1 \right] \\
+		%
+		& + \chi (T, \phi_{NIPAm})\rho_w \phi_{NIPAm} \\
+		%
+		& -\sum_{\gamma }{\rho_\gamma\beta\mu_\gamma} -\rho_a\beta\mu_a
+		-\beta\mu_{H^+}(1-f)\dfrac{\phi_{MAA}}{v_{MAA}} 
+		-\beta\mu_{H^+} \rho_a \sum_\tau n_\tau g_\tau\\
+		%
+		%
+	\end{aligned}
+	\label{eq:gel:total}
+\end{align}
+En las cuales las nuevas restricciones para la fase gel son:
+
+\begin{align}
+	1 = \sum_{\gamma } \rho_\gamma v_\gamma  + \phi_{MAA} + \phi_{NIPAm} + \rho_a \sum_\lambda n_\lambda v_\lambda
+	\label{eq:gel:packing-s-total}
+\end{align}
+
+y 
+
+\begin{align}
+	\sum_{\gamma } {\rho_\gamma q_\gamma + f\dfrac{\phi_{MAA}}{v_{MAA}}q_{MAA}} + \rho_a \sum_\tau n_\tau f_\tau q_\tau = 0
+\end{align}
+Para la fase soluci\'on:
+
+
+\begin{align}
+	\begin{aligned}
+		\beta&\frac{\Omega_s}{V}=\\& \sum_{\gamma   } {\rho^s_\gamma\left(\ln(\rho_\gamma^sv_w) -1 + \beta\mu_\gamma^0 - \beta\mu_\gamma\right)} \\
+		& + \rho^s_a \left( \ln \rho^s_a v_w -1 +\beta\mu^0_a - \beta\mu_a\right)
+	\end{aligned}
+	\label{eq:gel:bulk-total}
+\end{align}
+
+
+
+De la optimizaci\'on de nuestro nuevo gran potencial $\Omega_{MG}$  se obtiene:
 %
 \begin{equation}
 \frac{f_\tau}{1-f_\tau}=\left(\frac{K^0_\tau}{a_{H^+}}\right)^{\pm 1} e^{-\beta \psi_{MG} q_\tau}
