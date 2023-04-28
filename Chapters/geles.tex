@@ -485,7 +485,7 @@ En las cuales las nuevas restricciones para la fase gel son:
 
 \begin{align}
 	1 = \sum_{\gamma } \rho_\gamma v_\gamma  + \phi_{MAA} + \phi_{NIPAm} + \rho_a \sum_\lambda n_\lambda v_\lambda
-	\label{eq:gel:packing-s-total}
+	\label{eq:gel:packing-g-total}
 \end{align}
 
 y 
@@ -493,8 +493,8 @@ y
 \begin{align}
 	\sum_{\gamma } {\rho_\gamma q_\gamma + f\dfrac{\phi_{MAA}}{v_{MAA}}q_{MAA}} + \rho_a \sum_\tau n_\tau f_\tau q_\tau = 0
 \end{align}
-Para la fase soluci\'on:
 
+Para la fase soluci\'on:
 
 \begin{align}
 	\begin{aligned}
@@ -504,16 +504,28 @@ Para la fase soluci\'on:
 	\label{eq:gel:bulk-total}
 \end{align}
 
+y sus respectivas restricciones:
+
+\begin{align}
+	1 = \sum_{\gamma } \rho_\gamma v_\gamma  + \rho_a \sum_\lambda n_\lambda v_\lambda
+\end{align}
+
+y 
+
+\begin{align}
+	\sum_\gamma \rho_\gamma q_\gamma + \rho_a \sum_\tau n_\tau f_\tau q_\tau = 0
+\end{align}
+
 
 
 De la optimizaci\'on de nuestro nuevo gran potencial $\Omega_{MG}$  se obtiene:
 %
 \begin{equation}
-\frac{f_\tau}{1-f_\tau}=\left(\frac{K^0_\tau}{a_{H^+}}\right)^{\pm 1} e^{-\beta \psi_{MG} q_\tau}
+\frac{f_\tau}{1-f_\tau}=\left(\frac{a_{H^+}}{K^0_\tau}\right)^{\mp 1} e^{-\beta \psi_{MG} q_\tau}
 \label{eq:f_ads}
 \end{equation}
 %
-\noindent para el grado de carga de las unidades $\tau$, donde el signo $\pm$ diferencia el caso de un grupo \'acido ($+$) de uno b\'asico ($-$).
+\noindent para el grado de carga de las unidades $\tau$, donde el signo $\mp$ diferencia el caso de un grupo \'acido ($-$) de uno b\'asico ($+$).
 Para la densidad del analito obtenemos:
 %
 \begin{align}
@@ -524,8 +536,8 @@ Para la densidad del analito obtenemos:
 \end{align}
 %
 
-\noindent donde esta \'ultima ecuaci\'on requiere una redefinici\'on de $\mu_a$ y $\mu_a^0$.
-Expresiones similares a la ec. \ref{eq:rho_ads} y ec. \ref{eq:f_ads} se derivan para la fase de soluci\'on.
+\noindent donde esta \'ultima ecuaci\'on requiere una redefinici\'on de $\mu_a$ y $\mu_a^0$. Similar a las expresiones presentadas en el cap\'itulo de films.
+Expresiones similares a la ec. \ref{eq:rho_ads} y ec. \ref{eq:f_ads} se derivan para la fase de soluci\'on; y con ellas la obteci\'on de los potenciales (y sus respectivas actividades) de los analitos y especies libres. 
 
 
 
