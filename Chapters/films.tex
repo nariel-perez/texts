@@ -579,70 +579,85 @@ De esta forma el n\'umero de ecuaciones totales a resolver es $2n_z$ (dos por ca
 Este sistema de ecuaciones es resuelto usando el m\'etodo de Newton con Jacobiano libre, implementado en c\'odigos FORTRAN desarrollados en el grupo de trabajo.
 
 \section{resultados}
-\textbf{pH} \\
+
+
+
 Hidrogeles  compuestos por cadenas de poli\'acidos son sensibles a los cambios de pH. Esta respuesta se debe a la equilibrio qu\'imico de protonaci\'on/desprotonaci\'on de las unidades \'acidas que componen la red. 
 Para enteneder el funcionamiento de esta respuesta recordaremos algunos conceptos sobre el comportamiento \'acido/base de moleculas bajo condiciones ideales. 
 Estos conceptos nos serviran para entener el equilibrio que ocurre cuando se confinan los monomeros en una red polim\'erica. Los mismos principios ser\'a utilizados para los sistemas  de estudio de los pr\'oximos capitulos.
 
-Si consideramos una soluci\'on diluida de moleculas titulables, estas pueden exhibir dos estados posibles: protonado o desprotonado. En este sentido se define el grado de disoción, $f_d$, el cual  proporciona la fraci\'on de moleculas que se encuentran en estado desprotonado:
+\subsection{Respuesta al pH}
+
+Si consideramos una soluci\'on diluida de moleculas titulables, estas pueden exhibir dos estados posibles: protonado o desprotonado. En este sentido se define el grado de disoción, $f$, el cual  proporciona la fraci\'on de moleculas que se encuentran en estado desprotonado:
 
 
 \begin{equation}
-    f_d = \frac{1}{1+10^{pk_a -pH}}
+    f = \frac{1}{1+10^{pk_a -pH}}
     \label{eq:diso}
 \end{equation}
 
 si consideramos moleculas \'acidas su estado protonado no posee carga, es  neutro, por otro lado su estado desprotonado posee carga. 
 Al considerar esto el grado de disociaci\'on, adem\'as nos indica el grado de carga de estas moleculas, $f_c$.
-Para molecualas b\'asicas su estado de carga es contrario a las moleculas \'acidas, en consecuencia el grado de carga viene dado por: $f_c =1- f_d$.
+Para molecualas b\'asicas su estado de carga es contrario a las moleculas \'acidas, en consecuencia el grado de carga viene dado por: $f_c =1- f$.
 
-En soluciones diluidas el grado de disociaci\'on $f_d$ (y el de carga $f_c$) son completamente determinados por el pH de la soluci\'on y el $pK_a$ intrinseco del par \'acido/base. 
-Cuando el pH =$pK_a$ la mitad de los grupos titulables se encuentran en disosiados ($f_d = 0.5$). Para valores de $\pm 1$ coresponden a estados con 90\% y 10\% de disociaci\'on respectivamente.
+En soluciones diluidas el grado de disociaci\'on $f$ (y el de carga $f_c$) son completamente determinados por el pH de la soluci\'on y el $pK_a$ intrinseco del par \'acido/base. 
+Cuando el pH =$pK_a$ la mitad de los grupos titulables se encuentran en disosiados ($f = 0.5$). Para valores de $\pm 1$ coresponden a estados con 90\% y 10\% de disociaci\'on respectivamente.
 Es decir, cuando el pH aumenta alrededor del pKa, la transici\'on del 10 al 90 \% de desprotonaci\'on ocurre dentro de dos unidades de pH de la soluci\'on ideal. 
 
-Estas consideraciones de soluci\'on ideal usualmente se utilizan para estimar el grado de carga de las unidades \'acidas dentro de cadenas pol\'imerias. Sin embargo, este comportamiento es diferente para sistemas  en confinamiento. Las unidades  protonables forman parte de una red polim\'erica son un ejemplo de ello, lo cual modifica significativamente su comportamiento de protonaci\'on.
+Estas consideraciones de soluci\'on ideal usualmente se utilizan para estimar el grado de carga de las unidades \'acidas dentro de cadenas pol\'imerias. Sin embargo, este comportamiento es diferente para sistemas  en confinamiento. Las unidades  protonables que forman parte de una red polim\'erica son un ejemplo de ello, lo cual modifica significativamente su comportamiento de protonaci\'on.
 
 
 \textbf{Red polim\'erica} \\
 
-A continuaci\'on describiremos el comportamiento de estos sistemas confinados, hidrogeles sensibles al pH.  A diferencia de las soluciones diluidas, las unidades \'acidas en una red de pol\'imeros experimentan repulsiones electrost\'aticas cuando estas se encuentran cargadas. Para reducir la fuerza de las repulsiones dentro de la red, estos grupos se disocian significativamente menos que en condiciones ideales. En la figura \ref{fig:degree-film} se ilustra este comportamiento y muestra el grado medio de carga de los segmentos de una pel\'icula de hidrogel de \'acido poli(metacr\'ilico) (PMAA), que est\'a en contacto con soluciones que tienen diferentes concentraciones de sal.
+A continuaci\'on describiremos el comportamiento de estos sistemas confinados, hidrogeles sensibles al pH. 
+Haciendo uso de la teor\'ia planteada anteriormente. 
+
+A diferencia de las soluciones diluidas, las unidades \'acidas en una red de pol\'imeros experimentan repulsiones electrost\'aticas cuando estas se encuentran cargadas. Para reducir la fuerza de las repulsiones dentro de la red, estos grupos se disocian significativamente menos que en condiciones ideales. En la figura \ref{fig:film:degree-film} se ilustra este comportamiento y muestra el grado medio de carga de los segmentos de un un film compuesto por una red cadenas de \'acido poli(metacr\'ilico) (PMAA), que est\'a en contacto con soluciones que tienen diferentes concentraciones de sal.
+
 \begin{figure}
     \centering
     \includegraphics[width=0.9\textwidth]{Figures/graph-film/charge_degree-film.png}
     \caption{Grado de carga del gel como funci\'on del pH. Grado de carga para un monomero aislado en presentado en curva a rayas, se compara para diferentes concentraciones de sal, a mayor concentraci\'on salina m\'as nos acercamos al sistema ideal.}
-    \label{fig:degree-film}
+    \label{fig:film:degree-film}
 \end{figure}
 
 
 
-A un pH dado es significativamente menos probable que se cargue una unidad \'acida de la red de lo que se espera seg\'un las consideraciones ideales. La concentraci\'on de sal de la soluci\'on resulta ser una variable cr\'itica que modula este comportamiento de regulación de carga.
+A un pH dado es significativamente menos probable que se cargue una unidad \'acida de la red polim\'erica de lo que se espera seg\'un las consideraciones ideales. La concentraci\'on de sal de la soluci\'on resulta ser una variable cr\'itica que modula este comportamiento de regulaci\'on de carga.
 
-A una salinidad relativamente alta, la cantidad de los contraiones dentro del hidrogel crece, lo que da como resultado el apantallamiento de interacciones electrost\'aticas. Las interacciones son ahora de corto alcance. Este apantallamiento de repulsiones dentro de la red permite que el pol\'imero aumente su grado de carga. Se observa que un aumento en la salinidad genera una protonaci\'on que se aproxima al comportamiento ideal. 
+A una salinidad relativamente alta, la cantidad de los contraiones dentro del film crece, lo que da como resultado el apantallamiento de interacciones electrost\'aticas. Las interacciones son ahora de corto alcance. Este apantallamiento de repulsiones dentro de la red permite que el pol\'imero aumente su grado de carga. En esta primera observaci\'on vemos que un aumento en la salinidad genera una protonaci\'on que se aproxima al comportamiento ideal. 
 
 En condiciones de baja concentraci\'on de sal solo se encuentran los suficientes contraiones dentro de la red para neutralizar la carga el\'ectrica del pol\'imero. Bajo tales condiciones, el efecto de apantallamiento de los iones de sal se debilita y las interacciones electrost\'aticas se vuelven efectivamente de mayor alcance. Como resultado, la red se carga menos para prevenir o reducir las repulsiones dentro de la red.
 
-Hemos visto que el grado de carga de los film polim\'ericos cambia respecto a monomeros aislados. Esto nos induce a pesnar que las condiciones de ese entorno son diferentes a las que se esperar\'ia para el seno de la soluci]\'on. Exite una una regualci\'on de carga, lo que conlleva a pensar en una regulaci\'on del pH.
-Definimos as\'i el pH local que nos proporciona la concentraci\'on de protones  en la posición espacial $r$:
+
+En la figura \ref{fig:film:degree-film} hemos visto que el grado de carga de los film polim\'ericos cambia respecto a monomeros aislados. Esto nos induce a pensar que las condiciones de ese entorno son diferentes a las que se esperar\'ia para el seno de la soluci\'on. Existe una una regualci\'on de carga, lo que conlleva a pensar en una regulaci\'on del pH.
+Definimos as\'i el pH local que nos proporciona la concentraci\'on de protones  en la posici\'on espacial $z$:
 \begin{equation}
-    pH(r) = -\log_{10}([H^+](r))
+    pH(z) = -\log_{10}([H^+](z))
     \label{eq:pH-local}
 \end{equation}
 
-Una baja disociaci\'on (un nivel de protonaci\'on alto) de las unidades \'acidas del pol\'imero puede explicarse en terminos del pH local dentro del material. Se define el $pH_{gel}$ como el promedio del pH local dentro del film. Resultados previos han mostrado que esta cantidad esta bien definida \addcite. 
-Enfatizaremos la importancia de estos dos terminos $pH_{gel}$ y $pH(r)$ por la informaci\'on que proveen: el estado de carga/protonaci\'on de las unidades titulables en la red polim\'erica. 
+Una baja disociaci\'on (un nivel de protonaci\'on alto) de las unidades \'acidas de las unidadades de $MAA$ en nuestra red polim\'erica puede explicarse en terminos del pH local dentro del material. Se define el $pH_{gel}$ como el promedio del pH local dentro del film. Resultados previos han mostrado que esta cantidad esta bien definida \addcite. 
 
-Haciendo uso de la eq. \ref{eq:diso} es posible calcular el grado de disoci\'on de la estructura polim\'erica de nuestro hidrogel. El uso del $pH_{gel}$ es indispensable para cuando el pH es distinto al  del seno de la soluci\'on \addcite. El mismo procedimiento se realiza para calcular el estado de protonaci\'on local de las unidades titulables de las especies que se adsorben en el film (ver figura \ref{fig:protein-charge}).
+Enfatizaremos la importancia de estos dos terminos $pH_{gel}$ y $pH(z)$ por la informaci\'on que proveen: el estado de carga/protonaci\'on de las unidades titulables en la red polim\'erica. 
+
+Haciendo uso de la eq. \ref{eq:diso} es posible calcular el grado de disoci\'on de la estructura polim\'erica de nuestro hidrogel. El uso del $pH_{gel}$ es indispensable en condiciones donde el pH es distinto al  del seno de la soluci\'on \addcite. El mismo procedimiento se realiza para calcular el estado de protonaci\'on local de las unidades titulables de las especies que se adsorben en el film (ver figura \ref{fig:film:protein-charge}).
 
 \begin{figure}
     \centering
     \includegraphics[width=0.9\textwidth]{Figures/graph-film/carga-proteinas.png}
     \caption{N\'umero de carga de las proteinas cytocromo c y myoglobina como  funci\'on del pH en el seno de la soluci\'on (bulk). La l\'inea a trazos muestra el cambio en el signo de la carga.}
-    \label{fig:protein-charge}
+    \label{fig:film:protein-charge}
 \end{figure}
 
 
 
-Sin embargo, aunque esto parece simplificar el problema de establecer la carga neta de cualquier especie dentro del material, incluida la red polim\'erica y las prote\'oinas adsorbidas, determinar los cambios en el pH local tiene la misma complejidad que el problema original (es decir, determinar la carga de la la red). El pH local que se establece dentro del material, as\'i como su valor en la interfaz entre el pol\'imero y la soluci\'on acuosa, es el resultado de la compleja interacci\'on entre la organizaci\'on molecular, los equilibrios qu\'imicos y las interacciones f\'isicas que determinan el equilibrio termodin\'amico a las condiciones impuestas externamente (pH, concentraci\'on de sal). Por ejemplo, la figura \ref{fig:pH-local} muestra el pH dentro de una pel\'icula de hidrogel de PMAA como una funci\'on del pH  y la concentraci\'on de sal, calculado usando teor\'ia molecular.
+Sin embargo, aunque esto parece simplificar el problema de establecer la carga neta de cualquier especie de nuestro sistema:
+en nuestro caso la red polim\'erica y las prote\'inas adsorbidas. 
+Determinar los cambios en el pH local tiene la misma complejidad que el problema original (es decir, determinar la carga del film). El pH local que se establece dentro del material, as\'i como su valor en la interfaz entre el film polim\'erico y la soluci\'on acuosa, es el resultado de la compleja interacci\'on entre la organizaci\'on molecular, los equilibrios qu\'imicos y las interacciones f\'isicas que determinan el equilibrio termodin\'amico a las condiciones impuestas externamente (pH, concentraci\'on de sal).
+Todas las variables expuestas en la secci\'on \ref{sec:film-teoria}.
+
+Para ejemplificar como es esta variaci\'on del pH respecto al pH y concentraci\'on salina dadas para el bulk de la soluci\'on, se puede observar la figura \ref{fig:pH-local} que muestra el pH dentro de nuestro film de cadenas de $PMAA$ como una funci\'on del pH, cada curva hace referencia a una concentraci\'on de sal diferente. Se agrega, a rayas, el comportamiento ``ideal" en donde el pH del bulk es igual al pH local, en particular al del film. calculado usando teor\'ia molecular.
 
 \begin{figure}
     \centering
@@ -652,24 +667,33 @@ Sin embargo, aunque esto parece simplificar el problema de establecer la carga n
 \end{figure}
 
 \subsection{Adsorci\'on}
-Como se mencion\'o al incio de este capitulo... poder usar estos sistemas de hidrogeles como carries de adsrobatos de utilidad terap\'eutica.
-Para ello nos valdremos de la teor\'ia molecular y haciendlo uso de ciertas prote\'inas modelo como lo son el cytocromo c y la myoglobina. estas dos presentan gran estabilidad en un amplio rango de pH y recientemente se ha  investigado la termodinámica  de su adsorci\'on en sistemas polim\'ericos similares. \addcite
 
-Para cuantificar la cantidad de adsrobato adsrobido en el hidrogel utilizamos la expresi\'on:
+El uso estos sistemas de hidrogeles como transportadores de adsrobatos de utilidad terap\'eutica, involucra el poder cuantificar y cualificar esta adsorci\'on.
+ 
+Para ello nos valdremos de la teor\'ia molecular ya expuesta y haciendlo uso de ciertas prote\'inas modelo como lo son el citocromo c y la mioglobina. El uso de estas dos porte\'inas presentan gran estabilidad en un amplio rango de pH, y contar con estudios experimentales en sistemas polim\'ericos similares.
+
+Para cuantificar la cantidad de prote\'ina adsrobida en el film utilizamos la expresi\'on:
 
 \begin{align}
-\Gamma = \int_V {dr(\rho(r) -\rho_{bulk}}  
+\Gamma_{pro} = \int^\infty_0 {dz(\rho_{pro}(z) -\rho^b_{pro}}  
 \label{adsor}
 \end{align}
 
-en donde $\rho(r)$ y $\rho_{bulk}$ son las densidades del  locales y en el seno de la soluci\'on del adsorbato respectivamente, V es el volumen de la soluci\'on. 
-Esta adsorci\'on proporciona la masa  en un volumen particular por exceso de la contribuci\'on del bulk. En particular dentro del hidrogel, $\Gamma$ proporciona la cantidad de adsorbato en exceso dentro del material, recibiendo tambi\'en contribuciones de la interfaz de soluci\'on de pol\'imero.
+en donde $\rho_{pro}(z)$ y $\rho^b_{pro}$ son las densidades locales y en el bulk de la soluci\'on de la prote\'ina respectivamente.
+$\Gamma_{pro}$ proporciona la cantidad de adsorbato por unidada de \'area en exceso dentro del material, recibiendo tambi\'en contribuciones de la interfaz de soluci\'on de pol\'imero.
 
-Para estas prote\'inas, la adsorci\'on es una funci\'on no monot\'onica del pH de la soluci\'on (ver Figura \ref{fig:ad-pro}). A pH bajo, estas prote\'inas tienen una carga alta y positiva, pero la red de poli\'acidos solo está d\'ebilmente ionizada (v\'eanse las Figuras \ref{fig:degree-film} y \ref{fig:protein-charge}). A un pH suficientemente alto, por otro lado, el pol\'imero est\'a fuertemente cargado negativamente, pero las prote\'inas tienen una carga d\'ebilmente positiva o incluso negativa. Bajo tales condiciones (muy) \'acidas o alcalinas, las interacciones electrost\'aticas son d\'ebilmente atractivas o repulsivas. No hay fuerza impulsora para la adsorci\'on. A valores de pH intermedios, por el contrario, donde tanto la prote\'ina como la red de poli\'acidos tienen cargas fuertes y opuestas, se produce una adsorci\'on significativa con un m\'aximo necesario en tales condiciones.
+Para estas prote\'inas, la adsorci\'on es una funci\'on no monot\'onica del pH de la soluci\'on (ver Figura \ref{fig:film:ad-pro}). A pH bajo, estas prote\'inas tienen una carga alta y positiva, pero la red de poli\'acidos ($PMAA$) solo est\'a d\'ebilmente ionizada (v\'eanse las Figuras \ref{fig:film:degree-film} y \ref{fig:film:protein-charge}). A un pH suficientemente alto, por otro lado, el pol\'imero est\'a fuertemente cargado negativamente, pero las prote\'inas tienen una carga d\'ebilmente positiva o incluso negativa. Bajo tales condiciones (muy) \'acidas o alcalinas, las interacciones electrost\'aticas son d\'ebilmente atractivas o repulsivas respectivamente. No hay fuerza impulsora para la adsorci\'on. A valores de pH intermedios, por el contrario, donde tanto la prote\'ina como la red polim\'erica tienen cargas fuertes y opuestas, se produce una adsorci\'on significativa con un m\'aximo necesario en tales condiciones.
 
-La adsorci\'on de prote\'inas depende cr\'iticamente de la concentraci\'on de sal de la soluci\'on. Este comportamiento se ilustra en la figura \ref{fig:ad-pro} que muestra la adsorci\'on de citocromo c  y mioglobina en una pel\'icula de hidrogel de PMAA. La disminuci\'on de las concentraciones de sal mejora la adsorci\'on y ampl\'ia el rango de pH de la adsorci\'on. Por ejemplo, ambos paneles de la \ref{fig:ad-pro} muestran una disminuci\'on de aproximadamente un orden de magnitud en la adsorci\'on cuando se comparan soluciones de NaCl 1 mM y 10 mM. El pH de m\'axima adsorci\'on tambi\'en depende de la salinidad de la soluci\'on. Este comportamiento es a\'un m\'as interesante cuando se considera que una concentraci\'on de sal m\'as baja conduce a una red con carga m\'as d\'ebil, como describimos con anterioridad. En otras palabras, la red de pol\'imero con carga m\'as d\'ebil, a medida que disminuye la concentraci\'on de sal, m\'as prote\'ina es adsorbida. Esta \'ultima afirmaci\'on es cierta en las concentraciones de prote\'ina ($10 \mu M$) y sal de la figura \ref{fig:ad-pro}, donde la adsorci\'on solo modifica ligeramente el grado de carga de la red.
+La adsorci\'on de prote\'inas depende cr\'iticamente de la concentraci\'on de sal de la soluci\'on. Este comportamiento se ilustra en la figura \ref{fig:film:ad-pro} que muestra la adsorci\'on de citocromo c  y mioglobina en un film compuesto por cadenas polim\'ericas de $PMAA$. La disminuci\'on de las concentraciones de sal mejora la adsorci\'on y ampl\'ia el rango de pH de la adsorci\'on. 
+Por ejemplo, ambos paneles de la \ref{fig:film:ad-pro} muestran una disminuci\'on de aproximadamente un orden de magnitud en la adsorci\'on cuando se comparan soluciones de NaCl 1 mM y 10 mM. 
+El pH de m\'axima adsorci\'on tambi\'en depende de la salinidad de la soluci\'on. Este comportamiento es a\'un m\'as interesante cuando se considera que una concentraci\'on de sal m\'as baja conduce a una red con carga m\'as d\'ebil, como describimos con anterioridad, fig. \ref{fig:film:degree-film}. 
+En otras palabras a medida que disminuye la concentraci\'on de sal, m\'as prote\'ina es adsorbida. Esta \'ultima afirmaci\'on es cierta en las concentraciones de prote\'ina ($10 \mu M$) y sal de la figura \ref{fig:film:ad-pro}, donde la adsorci\'on solo modifica ligeramente el grado de carga de la red.
 
-Esta dependencia de la adsorci\'on de la concentraci\'on de sal tiene tres razones principales: en primer lugar, existe el apantallamiento  de las atracciones electrost\'aticas de la red hacia la prote\'inas por parte de los iones de sal. Cuanto menor sea la concentraci\'on de sal, m\'as débil ser\'a el apantallamiento de las interacciones prote\'ina-red, lo que mejora la adsorci\'on. En segundo lugar, a medida que la concentraci\'on de sal disminuye, el pH dentro de las gotas de hidrogel (a un pH general dado). Esto implica que las prote\'inas adsorbidas tienen una carga m\'as positiva tras la adsorci\'on (a medida que disminuye [NaCl]). En tercer lugar, la ganancia entr\'opica de la liberaci\'on de contraiones de la red de pol\'imeros es mayor a medida que disminuye la concentraci\'on de sal, lo que tambi\'en favorece la adsorci\'on de prote\'inas.
+Esta dependencia de la adsorci\'on de la concentraci\'on de sal tiene tres razones principales: en primer lugar, existe el apantallamiento  de las atracciones electrost\'aticas de la red hacia la prote\'inas por parte de los iones de sal. 
+Cuanto menor sea la concentraci\'on de sal, m\'as débil ser\'a el apantallamiento de las interacciones prote\'ina-red, lo que mejora la adsorci\'on. 
+En segundo lugar, a medida que la concentraci\'on de sal disminuye, el pH dentro del film tambi\'em disminuye (a un pH de bulk dado). 
+Esto implica que las prote\'inas adsorbidas tienen una carga m\'as positiva tras la adsorci\'on. 
+En tercer lugar, la ganancia entr\'opica de la liberaci\'on de contraiones de la red de pol\'imeros es mayor a medida que disminuye la concentraci\'on de sal, lo que tambi\'en favorece la adsorci\'on de prote\'inas.
 
 
 
@@ -677,5 +701,5 @@ Esta dependencia de la adsorci\'on de la concentraci\'on de sal tiene tres razon
     \centering
     \includegraphics[width=0.99\textwidth]{Figures/graph-film/ad-proteins.png}
     \caption{Adsorci\'on de proteinas: cytocromo c y myoglobina en panel A y B respectivamente. La concentraci\'on de los adsorbatos es $10 \mu M$}
-    \label{fig:ad-pro}
+    \label{fig:film:ad-pro}
 \end{figure}
