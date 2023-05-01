@@ -2,12 +2,12 @@
 
 \chapter{Films polim\'ericos} % Main chapter title
 
-\label{Chapter2} % For referencing the chapter elsewhere, use \ref{Chapter1}
+\label{Chapter-film} % For referencing the chapter elsewhere, use \ref{Chapter1}
 
 %\section{papers of films}
 
 
-Los films polim\'ericos o hidrogeles  consisten en una red de pol\'imeros entrecruzados altamente hidratados, generalmente biocompatibles, dependendiendo de su composici\'on qu\'imca. El ambiente acuoso dentro de los hidrogeles puede proteger a las prote\'inas de la desnaturalización y la agregaci\'on [11e13], mientras permanecen activas y estructuradas cuando se liberan de los hidrogeles [14]. En la administraci\'on oral de f\'armacos, los hidrogeles con respuesta de pH se han investigado en gran medida como veh\'iculos funcionales que pueden encapsular y administrar prote\'inas, evitando su degradaci\'on en el entorno gastrointestinal [15-17].
+Los films polim\'ericos o hidrogeles  consisten en una red de pol\'imeros entrecruzados altamente hidratados, generalmente biocompatibles, dependendiendo de su composici\'on qu\'imca. El ambiente acuoso dentro de los hidrogeles puede proteger a las prote\'inas de la desnaturalización y la agregaci\'on [11y13], mientras permanecen activas y estructuradas cuando se liberan de los hidrogeles [14]. En la administraci\'on oral de f\'armacos, los hidrogeles con respuesta de pH se han investigado en gran medida como veh\'iculos funcionales que pueden encapsular y administrar prote\'inas, evitando su degradaci\'on en el entorno gastrointestinal [15-17].
 
 
 En este capitulo mostraremos un estudio  de estos sistemas polim\'ericos haciendo uso de de la te\'oria molecular.
@@ -33,7 +33,7 @@ Considerando los aspectos anteriores es posible definir una energ\'ia libre:
 
 \begin{align}
  	F = -TS_{mez} -TS_{conf,net} + F_{qca,net} + F_{qca,pro} + U_{elec} + U_{ste} + U_{VDW}
- 	\label{eq:libre-film}
+ 	\label{eq:film:libre-film}
 \end{align}
  
 \noindent En donde $S_{mez}$ es la entrop\'ia de traslaci\'on ( y de mezcla) de las especies libres en la soluci\'on: mol\'eculas de agua (H$_2$O), y sus respectivos iones:  hidronio (H$_3$O$^+$), e hidr\'oxido (OH$^- $), cationes y aniones de sal y nuestra prote\'ina modelo.
@@ -49,7 +49,7 @@ $U_{elec}$ y $U_{ste}$ representan, respectivamente, las interacciones electrost
 Las interacciones de Van der Waals son representadas en $U_{VdW}$.
 
 
-Las expresiones explicitas de la ecuaci\'on \ref{eq:libre-film} las describimos acontinuaci\'on.
+Las expresiones explicitas de la ecuaci\'on \ref{eq:film:libre-film} las describimos acontinuaci\'on.
 
 Como primer termino tenemos la entrop\'ia de mezcla de  las especies mobiles, entre ellas consideramos a nuestra prote\'ina modelo:
 
@@ -82,7 +82,7 @@ La entrop\'ia conformational que resutla de la flexibilidad de la red polim\'eri
 
 \noindent en donce $P(\alpha)$ denota la probabilidad de que el film se encuentre en la configuraci\'on $\alpha$.
 
-El siguiente t\'ermino de eq \ref{eq:libre-film} describe  la energ\'ia libre dada por  el equilibrio \'acido-base de los segmentos de MAA que componen nuestra red. 
+El siguiente t\'ermino de eq \ref{eq:film:libre-film} describe  la energ\'ia libre dada por  el equilibrio \'acido-base de los segmentos de MAA que componen nuestra red. 
 
 \begin{align}
 	\begin{aligned}
@@ -116,7 +116,7 @@ El equilibrio qu\'imico de las unidades titulables de la prote\'ina es considera
 Que se define como:
 \begin{align}
 	\left<\rho_{pro,\tau}(z)\right> = A\sum_\theta \int dz^\prime  \rho_{pro}(\theta,z^\prime)n_\tau(\theta,z^\prime, z)
-	\label{eq:segments_pro_si}
+	\label{eq:film:segments_pro_si}
 \end{align}
 \noindent en donde $n_\tau(\theta,r^\prime, r)$ es un par\'ametro de entrada que nos da el n\'umero de segmentos $\tau$ entre las capas $z$ and $z+ dz$ cuando el centro de masa de la prote\'ina se encuentra en el a configuraci\'on $\theta$ y en la posici\'on $z^\prime$.
 
@@ -145,7 +145,7 @@ En este contexto, la densidad de carga media es:
 
 \begin{align}
 	\left<\rho_q(z)\right> = \sum_{\gamma } {\rho_\gamma(z) q_\gamma + \sum_\tau{f_\tau(z) \left<\rho_{pro,\tau}(z)\right> q_\tau} +  f(z)\dfrac{\left<\phi_{MAA}(z)\right>}{v_{MAA}}q_{MAA}}
-	\label{eq:rho_charge}
+	\label{eq:film:rho_charge}
 \end{align}
 %%%%%%%%%%%%%%%%
 
@@ -155,16 +155,16 @@ La contribuci\'on siguiente en la energ\'ia libre viene dada por la repulsi\'on 
 	\begin{aligned}
 		1=  {\left[\sum_{\gamma}\rho_\gamma(z) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(z)\right>v_\lambda} + \left<\rho_{MAA}(z)\right>v_{MAA} \right]},~ \forall z
 	\end{aligned}
-	\label{eq:constraint}
+	\label{eq:film:constraint}
 \end{align}
 \noindent en donde $v_\gamma$ , $v_\lambda$ y $v_{MAA}$ son los volumenes moleculares de los segmentos $\gamma$ de las especiesl libres, $\lambda$  en la prote\'ina y los segmentos de $MAA$ del film respectivamente.
-$\left<\rho_{pro,\lambda}(z)\right>$ es definimo de la misma forma que en la eq.  \ref{eq:segments_pro_si}.
+$\left<\rho_{pro,\lambda}(z)\right>$ es definimo de la misma forma que en la eq.  \ref{eq:film:segments_pro_si}.
 Cabe destacar que el subidice $\lambda$ considera a todos los segmentos de la prote\'ina, es decir $ \tau \in \lambda$.
 
 %%%%%%%%%%%%%%%
 La energ\'ia proveniente de las interacciones de Van der Waals se expresa en el t\'ermino $U_{VdW}$. En este trabajo se ha considerado que todos los segmentos del sistema poseen un caracter hidrofilico. Es decir la interacci\'on entre cada par de segmentos es similar a su interacci\'on con las mol\'eculas de agua. Como resultado la energ\'ia de interacci\'on de $VdW$ se considera una constante aditiva a la energ\'ia libre, por lo cual puede ser ignorada.
 
-En este punto la energ\'ia libre, eq \ref{eq:libre-film}, puede escribir como una funcional de funciones, esta ultimas est\'an compuesta por la probabilidad de distribuci\'on de segmentos de nuestra red polim\'erica. las densidades locales de cada una de las especies libres, incluidas la densidad de conformaciones de la prote\'ina, los grados de protonaci\'on/disociaci\'on y el potencial elestrost\'atico local. Es decir:
+En este punto la energ\'ia libre, eq \ref{eq:film:libre-film}, puede escribir como una funcional de funciones, esta ultimas est\'an compuesta por la probabilidad de distribuci\'on de segmentos de nuestra red polim\'erica. las densidades locales de cada una de las especies libres, incluidas la densidad de conformaciones de la prote\'ina, los grados de protonaci\'on/disociaci\'on y el potencial elestrost\'atico local. Es decir:
 
 \begin{align}
 	F = \sum_\alpha \sum_\theta \int_0^\infty dz f(\alpha, \theta,z)
@@ -174,7 +174,7 @@ En este punto la energ\'ia libre, eq \ref{eq:libre-film}, puede escribir como un
 
 \begin{align}
 	 f=  f \left( P(\alpha), \rho_\gamma(z),\rho_{pro}(z), f_\tau(z), f(z), \Psi(z)  \right)
-	 \label{eq:funcionales}
+	 \label{eq:film:funcionales}
  \end{align}
 
 de forma m\'as explicita:
@@ -207,13 +207,13 @@ De esta forma al considerar esta condici\'on de equilibrio nuestra energ\'ia lib
 			= &F -\sum_\gamma A\int_0^\infty dz \mu_\gamma \rho_\gamma(z) -  \mu_{pro} N_{pro}  \\
 			& \qquad -A\int_0^\infty \mu_{H^+} \left( \sum_\tau\left< \rho_{pro,\tau}(z) \right>g_\tau(z) + (1-f(z))\left< \rho_{MAA}(z) \right> \right )
 			\end{aligned}
-		\label{eq:equil-qco}
+		\label{eq:film:equil-qco}
 \end{align}
 
-\noindent $N_\gamma$ y $ N_{pro}$ son el n\'umero total de mol\'eculas de las especies libres y la prote\'ina respectivamente. En la \'ultima linea de la expresi\'on eq. \ref{eq:equil-qco} se tiene en cuenta los protones asociados que  provienen de las especies con segmentos titulables: prot\'ina y red polim\'erica respectivamente.
+\noindent $N_\gamma$ y $ N_{pro}$ son el n\'umero total de mol\'eculas de las especies libres y la prote\'ina respectivamente. En la \'ultima linea de la expresi\'on eq. \ref{eq:film:equil-qco} se tiene en cuenta los protones asociados que  provienen de las especies con segmentos titulables: prot\'ina y red polim\'erica respectivamente.
 
 
-Adicionalmente las condiciones de equilibrio deben satifacer la condici\'on de incompresibilidad del sistema: eq \ref{eq:constraint}.  Esta restricci\'on se incorpora como:
+Adicionalmente las condiciones de equilibrio deben satifacer la condici\'on de incompresibilidad del sistema: eq \ref{eq:film:constraint}.  Esta restricci\'on se incorpora como:
 
 \begin{align}
 	\Phi = \Omega +A \int_0^\infty dz\Pi(z){\left[\sum_{\gamma}\rho_\gamma(z) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(z)\right>v_\lambda} + \left<\rho_{MAA}(z)\right>v_{MAA} -1 \right]}
@@ -247,7 +247,7 @@ Adicionalmente las condiciones de equilibrio deben satifacer la condici\'on de i
  
 \textcolor{red}{Todos los subdindices utlizados se encuentran en la tabla.... hacer tabla (?)}
 
-A continuaci\'on se mostrara la optimizaci\'on de este gran potencial respecto de los funcionales presentados en  eq. \ref{eq:funcionales}.
+A continuaci\'on se mostrara la optimizaci\'on de este gran potencial respecto de los funcionales presentados en  eq. \ref{eq:film:funcionales}.
 
 En part\'icular la optimizaci\'on respecto a la densidad de las especies libres, $\rho_\gamma$ resulta en:
 
@@ -274,7 +274,7 @@ El grado de disociaci\'on de los segmentos de $MAA$ viene dado por:
 
 \begin{align}
 	K_{a,MAA}^0 = \exp[-\beta\mu^0_{MAAH} -\beta\mu^0_{MAA^-} -\beta\mu^0_{H^+}]
-	\label{eq:ka-acido-base}
+	\label{eq:film:ka-acido-base}
 \end{align}
 
 Del mismo modo el grado de disoci\'on de los segmentos titulables $\tau$:
@@ -285,7 +285,7 @@ Del mismo modo el grado de disoci\'on de los segmentos titulables $\tau$:
 \end{align}
 
 
-\noindent la constante termodin\'amica para el quilibrio de los segmentos $\tau$ se define de igual forma que en eq. \ref{eq:ka-acido-base}. el exponente,$\mp 1$, cambia si se trata de segmentos \'acidos o b\'asicos respectivamente.
+\noindent la constante termodin\'amica para el quilibrio de los segmentos $\tau$ se define de igual forma que en eq. \ref{eq:film:ka-acido-base}. el exponente,$\mp 1$, cambia si se trata de segmentos \'acidos o b\'asicos respectivamente.
 
 Optimizando respecto a la probabilidad de las conformaciones de la red polim\'erica se obtiene:
 
@@ -351,9 +351,9 @@ La variaci\'on de nuestro gran potencial respecto del potencial electrost\'atico
 	\epsilon \nabla^2 \Psi(z) = - \left< \rho_q (z)\right>
 \end{align}
 
-En esta expresi\'on en conjunto con  la densidad de carga definida en eq. \ref{eq:rho_charge}, nos muestra el acoplamiento local entre las interacciones f\'isicas, la organizaci\'on molecular, los grados de libertad, conformaciones y equilibrios qu\'imcos. 
+En esta expresi\'on en conjunto con  la densidad de carga definida en eq. \ref{eq:film:rho_charge}, nos muestra el acoplamiento local entre las interacciones f\'isicas, la organizaci\'on molecular, los grados de libertad, conformaciones y equilibrios qu\'imcos. 
 
-Para la resoluci\'on de nuestro sistema, que se encuentre en equilibrio, se han impuesto ciertas restricciones, como la incompresibilidad o equilibrio de poteciales qu\'imicos eqs. \ref{eq:constraint} y \ref{eq:equil-qco} respectivamente. De este modo otra restrici\'on que se impone es la electroneutralidad de la soluci\'on: 
+Para la resoluci\'on de nuestro sistema, que se encuentre en equilibrio, se han impuesto ciertas restricciones, como la incompresibilidad o equilibrio de poteciales qu\'imicos ecuaciones \ref{eq:film:constraint} y \ref{eq:film:equil-qco} respectivamente. Otra restrici\'on que se impone es la electroneutralidad de la soluci\'on: 
 
 \begin{align}
 	\int_0^\infty dz \left< \rho_q (z)\right> = 0
@@ -365,7 +365,7 @@ Esta restricci\'on se satiface en la ecuaci\'on de Poisson al considerar las con
 	\begin{aligned}
 		&i)  \lim_{z\to\infty}\Psi(z) = 0 \\
 		&ii) \left.\frac{d\Psi(z)}{dr}\right|_{z=0} = 0
-		\label{eq:si:contorno}
+		\label{eq:film:contorno}
 	\end{aligned}
 \end{align}
 
@@ -373,7 +373,7 @@ Estas condiciones significan que el potencial electrost\'atico se desvanece a me
 
 En este punto hemos mostrados las expresiones que optimizan a nuestro gran potencial, y c\'omo cada uno de estos funcionales: $P(\alpha), \rho_\gamma(z),\rho_{pro}(z), f_\tau(z), f(z), \Psi(z) $ a su vez  terminan siendo definidos por dos potenciales locales: Electrost\'atico $\Psi(z)$ y Presi\'on osm\'otica $\Pi(z)$. 
 Como primera conclusi\'on de esta teor\'ia es que es posible calcular y describir la termodin\'amica del sistema dadas las condiciones de laboratorio: pH, concentraci\'on de sal y adsorbatos, temperatura. Utilizando y resolviendo las ecuaciones de incompresibilidad y de electroneutralidad, adem\'as de otros par\'ametros de entrada: volumenes moleculares, cargas y constantes de disociaci\'on. as\'i como la distintas conformaci\'on que pueden adquirir cada elemento del sistema, es decir la distribuci\'on espacial de cada segemento cada una conformaci\'on.
-Estas par\'ametros de entrada son provisto al c\'odigo mediante el uso de un modelo molecular. Los tipos de modelo usados son explicados en detalle en la secci\'on \ref{sec:theory}. 
+Estas par\'ametros de entrada son provisto al c\'odigo mediante el uso de un modelo molecular. 
 
 La forma de obtener estas variables desconocidas, $\Psi(z)$ y $\Pi(z)$  es realizando una soluci\'on n\'umerica por sustituci\'on en la diferentes ecuaciones en las que interactuan: la densidad de las especies libres eq. \ref{eq:film:free-species}, los grados de disociaci\'on de los segmentos del film y de los segmentos titulables de la prote\'ina ecuaciones \ref{eq:film:degree-film} y \ref{eq:film:degree-protein} respectivamente, la probabilidad de las conformaciones de la red polim\'erica ecu. \ref{eq:film:probabilidad} y la densidad local de la prote\'ina ecu. \ref{eq:film:proteina}.
 
@@ -387,7 +387,7 @@ Por ejemplificar la fracci\'on de volumen local ocupada por la prote\'ina puede 
 
 Con esta cantidad es posible cuantificar la adsorci\'on de la prote\'ina en el film. 
 
-\section{Soluci\'on Bulk}
+\section{Soluci\'on Bulk}\label{sec:film:bulk-solution}
 
 Como mencionamos en la secci\'on anterior, el potencial usado es un potencial gran canonico el cual proviene de un ensamble gran canonico, en el cual el sistema de estudio  esta en equilibrio con un ``ba\~no t\'ermico". Traducido a nuestro trabajo significa que el film y sus alrededores se encuentran en constante equilibrioi con el bulk de la soluci\'on en la que estan bien definidas las variables como pH, temperatura y concentraci\'on de sal y/o prote\'ina. 
 Dadas estas condiciones la resoluci\'on del bulk de la soluci\'on es indispensable para llevar a cabo nuestras simulaciones. Las soluciones nos proporcionan la informaci\'on de las actividades de las especies mobiles, y con ella sus potenciales qu\'imicos. Informaci\'on que como vimo anteriormente es necesaria para la resolución de las ecuaciones de incompresibilidad y de Poisson.
@@ -432,7 +432,7 @@ De esta forma el potencial dado por el bulk de la soluci\'on se escribe:
 en consecuencia para las especies libres $\gamma$ resulta:
 \begin{align}
 	\rho^b_\gamma v_w = a_\gamma \exp\left[ -\beta q_\gamma \Psi^b -\beta \Pi^b v_\gamma \right]
-	\label{eq:rhofree-bulk}
+	\label{eq:film:rhofree-bulk}
 \end{align}
 
 El grado de disosiaci\'on de los segmentos $\tau$ titulables de la prote\'ina:
@@ -449,16 +449,16 @@ finalmente para la densidad de prote\'ina se obtiene:
 		\rho_{pro}(\theta)v_w = &\tilde{a}_{pro} \prod_\tau \exp\left[-cn_\tau \ln f^b_\tau\right] \\
 		& \prod_\lambda \exp \left[-cn_\lambda (v_\lambda\beta\Pi^b + q_\lambda \Psi^b) \right]
 	\end{aligned}
-	\label{eq:rhopro-bulk}
+	\label{eq:film:rhopro-bulk}
 \end{align}
 
 \noindent en donde $\tilde{a}_{pro}$ y $cn_\tau$ (y $cn_\lambda$) son definidos en las ecuaciones  \ref{eq:film:actividad-pro} y \ref{eq:film:n-coord} respectivamente. 
 
 Podemos observar nuevamebte que nuestros funcionales quedan en funci\'on, valga la redundancia, por la presi\'on osm\'otica $\Pi^b$ y el potencial electrost\'atico $\Psi^b$
-Sin embargo si consideramo las condiciones de contorno dada en la ec. \ref{eq:si:contorno} para la ecuaci\'on de Poisson, vemos que en la soluci\'on bulk se debe cumplir: $\Psi^b = 0$. 
+Sin embargo si consideramo las condiciones de contorno dada en la ec. \ref{eq:film:contorno} para la ecuaci\'on de Poisson, vemos que en la soluci\'on bulk se debe cumplir: $\Psi^b = 0$. 
 
 Esto nos muestra que para nuestro ba\~no t\'ermico la principal inc\'ognicta es la presi\'on osm\'otica: $\Pi^b$.
-La cual es posible obtenerla por resoluci\'on num\'erica al sustituir las ecuaciones  \ref{eq:rhofree-bulk} ,  \ref{eq:rhopro-bulk}  y sus respectivas actividades (ecuaciones \ref{eq:film:act-bulk-free} y \ref{eq:film:act-bulk-pro} )en la nueva condici\'on de incompresibilidad dada por:
+La cual es posible obtenerla por resoluci\'on num\'erica al sustituir las ecuaciones  \ref{eq:film:rhofree-bulk} ,  \ref{eq:film:rhopro-bulk}  y sus respectivas actividades (ecuaciones \ref{eq:film:act-bulk-free} y \ref{eq:film:act-bulk-pro} ) en la nueva condici\'on de incompresibilidad dada por:
 
 \begin{align}
 	\sum_\gamma \rho^b_\gamma v_\gamma + \sum_\lambda\left< \rho^b_{pro,\lambda}\right> v_\lambda = 1
@@ -485,12 +485,12 @@ Como se mencion\'o al inicio de esta secci\'on la resoluci\'on del bulk de la so
 
 Hay que tener en cuenta que las densidades en el bulk de la soluci\'on son p\'arametro de entrada en cada c\'alculo. Una vez que se establecen el pH, la concentraci\'on de sal y la concentraci\'on de nuestra prote\'ina, estas densidades se determinan completamente (usando la electroneutralidad de la soluci\'on del bulk y la autodisociaci\'on de equilibrio del agua).
 
-\section{resoluci\'on num\'erica}
+\section{resoluci\'on num\'erica}\label{sec:film:reso-numerica}
 
 La obtenci\'on de resultados a partir de la teor\'ia planteada en estas secciones requiere la soluci\'on n\'umerica de ecuaciones integro-diferenciales. Para tal prop\'osito es conveniente pasar de un sistema continuo a uno discreto. 
 La discretizaci\'on del sistema se realiza en capaz de espesor $\delta$. La suma sobre cada uno de estas capaz reemplazan a las integrales a lo largo del eje $z$.
 
-Por ejemplificar este cambio, la ecuaci\'on de incompresibilidad expresada en ec. \ref{eq:constraint} es reescrita como:
+Por ejemplificar este cambio, la ecuaci\'on de incompresibilidad expresada en ec. \ref{eq:film:constraint} es reescrita como:
 
 
 \begin{align}
@@ -501,7 +501,7 @@ Por ejemplificar este cambio, la ecuaci\'on de incompresibilidad expresada en ec
 \end{align}
 
 Esta expresi\'on nos permite resolverla en cada una de las capaz $i_z$, cuya posición es descrita usando la coordenada $z_i = (i_z -0.5)\delta$, lo cual las ubica en el centro de cada capa. $i_z$ toma los valores de 1 a $n_z$, donde se toma a $n_z$ lo suficientemente grande para que las densidades de cada una de las especies involucradas, as\'i como tambi\'en el potencial electrost\'atico, convergan a sus valores en el ba\~no t\'ermico (el bulk de la soluci\'on).
-Es decir: $\rho_gamma(n_z) = \rho^b_\gamma$, $\rho_{pro}(\theta,n_z) = \rho^b_{pro}(\theta)$ y $\Psi(n_z) = \Psi^b =0$.
+Es decir: $\rho_\gamma(n_z) = \rho^b_\gamma$, $\rho_{pro}(\theta,n_z) = \rho^b_{pro}(\theta)$ y $\Psi(n_z) = \Psi^b =0$.
 Para valores de $n_z \geq 500$ es posible obtener estas condiciones (dado que no son impuestas per se en la teor\'ia).
 
 Reescribiendo las expresiones de los funcionales de la secci\'on \ref{sec:film-teoria}, obtenemos para la densidad discreta de las especies libres:
@@ -561,11 +561,11 @@ Finalmente discretizando la ecuaci\'on de Poisson, para el pontencial electrost\
 
 \begin{align}
 	\left<\rho_q(i_z)\right> = \sum_{\gamma } {\rho_\gamma(i_z) q_\gamma + \sum_\tau{f_\tau(i_z) \left<\rho_{pro,\tau}(i_z)\right> q_\tau} +  f(i_z)\dfrac{\left<\phi_{MAA}(i_z)\right>}{v_{MAA}}q_{MAA}}
-	\label{eq:rho_charge}
+	\label{eq:film:rho_charge-discreto}
 \end{align}
 
 
-As\'i como fueron definas las condiciones de contorno en la ecuaci\'on \ref{eq:si:contorno} es necesario redefinirla para el sistema discreto. Estas condiciones deben satisfacer el desvanecimiento del potencial electrost\'atico, $\Psi(n_z) =0 $. Adem\'as se debe cumplir que la derivada del mismo entre la superficie de soporte y el film se anule.
+As\'i como fueron definas las condiciones de contorno en la ecuaci\'on \ref{eq:film:contorno} es necesario redefinirla para el sistema discreto. Estas condiciones deben satisfacer el desvanecimiento del potencial electrost\'atico, $\Psi(n_z) =0 $. Adem\'as se debe cumplir que la derivada del mismo entre la superficie de soporte y el film se anule.
 Para ello es necesario agregar una capa $i_z = 0$.
 Y resultando:
 \begin{align}
@@ -578,7 +578,7 @@ En resumen dadas las condiciones del bulk de la soluci\'on, o condiciones de lab
 De esta forma el n\'umero de ecuaciones totales a resolver es $2n_z$ (dos por cada capa). el n\'umero de t\'erminos de cada ecuaci\'on es dependiente de la cantidad de especies involucradas con sus respectivas conformaciones. 
 Este sistema de ecuaciones es resuelto usando el m\'etodo de Newton con Jacobiano libre, implementado en c\'odigos FORTRAN desarrollados en el grupo de trabajo.
 
-\section{resultados}
+\section{resultados} \label{sec:film:resultados}
 
 
 
@@ -586,14 +586,14 @@ Hidrogeles  compuestos por cadenas de poli\'acidos son sensibles a los cambios d
 Para enteneder el funcionamiento de esta respuesta recordaremos algunos conceptos sobre el comportamiento \'acido/base de moleculas bajo condiciones ideales. 
 Estos conceptos nos serviran para entener el equilibrio que ocurre cuando se confinan los monomeros en una red polim\'erica. Los mismos principios ser\'a utilizados para los sistemas  de estudio de los pr\'oximos capitulos.
 
-\subsection{Respuesta al pH}
+\subsection{Respuesta al pH} \label{sec:film:respuesta-pH}
 
 Si consideramos una soluci\'on diluida de moleculas titulables, estas pueden exhibir dos estados posibles: protonado o desprotonado. En este sentido se define el grado de disoción, $f$, el cual  proporciona la fraci\'on de moleculas que se encuentran en estado desprotonado:
 
 
 \begin{equation}
     f = \frac{1}{1+10^{pk_a -pH}}
-    \label{eq:diso}
+    \label{eq:film:diso-ideal}
 \end{equation}
 
 si consideramos moleculas \'acidas su estado protonado no posee carga, es  neutro, por otro lado su estado desprotonado posee carga. 
@@ -612,7 +612,8 @@ Estas consideraciones de soluci\'on ideal usualmente se utilizan para estimar el
 A continuaci\'on describiremos el comportamiento de estos sistemas confinados, hidrogeles sensibles al pH. 
 Haciendo uso de la teor\'ia planteada anteriormente. 
 
-A diferencia de las soluciones diluidas, las unidades \'acidas en una red de pol\'imeros experimentan repulsiones electrost\'aticas cuando estas se encuentran cargadas. Para reducir la fuerza de las repulsiones dentro de la red, estos grupos se disocian significativamente menos que en condiciones ideales. En la figura \ref{fig:film:degree-film} se ilustra este comportamiento y muestra el grado medio de carga de los segmentos de un un film compuesto por una red cadenas de \'acido poli(metacr\'ilico) (PMAA), que est\'a en contacto con soluciones que tienen diferentes concentraciones de sal.
+A diferencia de las soluciones diluidas, las unidades \'acidas en una red de pol\'imeros experimentan repulsiones electrost\'aticas cuando estas se encuentran cargadas. Para reducir la fuerza de las repulsiones dentro de la red, estos grupos se disocian significativamente menos que en condiciones ideales. 
+En la figura \ref{fig:film:degree-film} se ilustra este comportamiento y muestra el grado medio de carga de los segmentos de un un film compuesto por una red cadenas de \'acido poli(metacr\'ilico) (PMAA), que est\'a en contacto con soluciones que tienen diferentes concentraciones de sal.
 
 \begin{figure}
     \centering
@@ -630,18 +631,18 @@ A una salinidad relativamente alta, la cantidad de los contraiones dentro del fi
 En condiciones de baja concentraci\'on de sal solo se encuentran los suficientes contraiones dentro de la red para neutralizar la carga el\'ectrica del pol\'imero. Bajo tales condiciones, el efecto de apantallamiento de los iones de sal se debilita y las interacciones electrost\'aticas se vuelven efectivamente de mayor alcance. Como resultado, la red se carga menos para prevenir o reducir las repulsiones dentro de la red.
 
 
-En la figura \ref{fig:film:degree-film} hemos visto que el grado de carga de los film polim\'ericos cambia respecto a monomeros aislados. Esto nos induce a pensar que las condiciones de ese entorno son diferentes a las que se esperar\'ia para el seno de la soluci\'on. Existe una una regualci\'on de carga, lo que conlleva a pensar en una regulaci\'on del pH.
+En la figura \ref{fig:film:degree-film} vemos que el grado de carga de los film polim\'ericos cambia respecto a monomeros aislados. Esto nos induce a pensar que las condiciones de ese entorno son diferentes a las que se esperar\'ia para el seno de la soluci\'on. Existe una una regualci\'on de carga, lo que conlleva a pensar en una regulaci\'on del pH.
 Definimos as\'i el pH local que nos proporciona la concentraci\'on de protones  en la posici\'on espacial $z$:
 \begin{equation}
     pH(z) = -\log_{10}([H^+](z))
-    \label{eq:pH-local}
+    \label{eq:film:pH-local}
 \end{equation}
 
 Una baja disociaci\'on (un nivel de protonaci\'on alto) de las unidades \'acidas de las unidadades de $MAA$ en nuestra red polim\'erica puede explicarse en terminos del pH local dentro del material. Se define el $pH_{gel}$ como el promedio del pH local dentro del film. Resultados previos han mostrado que esta cantidad esta bien definida \addcite. 
 
 Enfatizaremos la importancia de estos dos terminos $pH_{gel}$ y $pH(z)$ por la informaci\'on que proveen: el estado de carga/protonaci\'on de las unidades titulables en la red polim\'erica. 
 
-Haciendo uso de la eq. \ref{eq:diso} es posible calcular el grado de disoci\'on de la estructura polim\'erica de nuestro hidrogel. El uso del $pH_{gel}$ es indispensable en condiciones donde el pH es distinto al  del seno de la soluci\'on \addcite. El mismo procedimiento se realiza para calcular el estado de protonaci\'on local de las unidades titulables de las especies que se adsorben en el film (ver figura \ref{fig:film:protein-charge}).
+Haciendo uso de la eq. \ref{eq:film:diso-ideal} es posible calcular el grado de disoci\'on de la estructura polim\'erica de nuestro hidrogel. El uso del $pH_{gel}$ es indispensable en condiciones donde el pH es distinto al  del seno de la soluci\'on \addcite. El mismo procedimiento se realiza para calcular el estado de protonaci\'on local de las unidades titulables de las especies que se adsorben en el film (ver figura \ref{fig:film:protein-charge}).
 
 \begin{figure}
     \centering
@@ -657,16 +658,16 @@ en nuestro caso la red polim\'erica y las prote\'inas adsorbidas.
 Determinar los cambios en el pH local tiene la misma complejidad que el problema original (es decir, determinar la carga del film). El pH local que se establece dentro del material, as\'i como su valor en la interfaz entre el film polim\'erico y la soluci\'on acuosa, es el resultado de la compleja interacci\'on entre la organizaci\'on molecular, los equilibrios qu\'imicos y las interacciones f\'isicas que determinan el equilibrio termodin\'amico a las condiciones impuestas externamente (pH, concentraci\'on de sal).
 Todas las variables expuestas en la secci\'on \ref{sec:film-teoria}.
 
-Para ejemplificar como es esta variaci\'on del pH respecto al pH y concentraci\'on salina dadas para el bulk de la soluci\'on, se puede observar la figura \ref{fig:pH-local} que muestra el pH dentro de nuestro film de cadenas de $PMAA$ como una funci\'on del pH, cada curva hace referencia a una concentraci\'on de sal diferente. Se agrega, a rayas, el comportamiento ``ideal" en donde el pH del bulk es igual al pH local, en particular al del film. calculado usando teor\'ia molecular.
+Para ejemplificar como es esta variaci\'on del pH respecto al pH y concentraci\'on salina dadas para el bulk de la soluci\'on, se puede observar la figura \ref{fig:film:pH-local} que muestra el pH dentro de nuestro film de cadenas de $PMAA$ como una funci\'on del pH, cada curva hace referencia a una concentraci\'on de sal diferente. Se agrega, a rayas, el comportamiento ``ideal" en donde el pH del bulk es igual al pH local, en particular al del film. calculado usando teor\'ia molecular.
 
 \begin{figure}
     \centering
     \includegraphics[width=0.9\textwidth]{Figures/graph-film/pH-local.png}
     \caption{pH local del gel como funci\'on del pH en el seno de la soluci\'on (bulk). Cada curva corresponde a una concentraci\'on de sal diferente.}
-    \label{fig:pH-local}
+    \label{fig:film:pH-local}
 \end{figure}
 
-\subsection{Adsorci\'on}
+\subsection{Adsorci\'on}\label{sec:film:resu-absorcion}
 
 El uso estos sistemas de hidrogeles como transportadores de adsrobatos de utilidad terap\'eutica, involucra el poder cuantificar y cualificar esta adsorci\'on.
  
@@ -676,7 +677,7 @@ Para cuantificar la cantidad de prote\'ina adsrobida en el film utilizamos la ex
 
 \begin{align}
 \Gamma_{pro} = \int^\infty_0 {dz(\rho_{pro}(z) -\rho^b_{pro}}  
-\label{adsor}
+\label{eq:film:adsor-exceso}
 \end{align}
 
 en donde $\rho_{pro}(z)$ y $\rho^b_{pro}$ son las densidades locales y en el bulk de la soluci\'on de la prote\'ina respectivamente.
