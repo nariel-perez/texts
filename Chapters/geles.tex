@@ -65,7 +65,7 @@ Recientemente, estudios  con simulaciones han considerado la respuesta al pH de 
 Sin embargo, solo unos pocos trabajos te\'oricos han investigado las propiedades de los microgeles de respuesta m\'ultiple en funci\'on de la temperatura, el pH y la concentración de sal  \cite{CaprilesGonzalez2008,polotsky2013collapse}.
 
 
-\subsection{Fase Microgel}\label{sec:theory}
+\subsection{Fase Microgel}\label{sec:gel:theory}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -319,7 +319,7 @@ $NIPAm$ & ~ & ~ & 0.12\\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Fase soluci\'on}
+\subsection{Fase soluci\'on}\label{sec:gel:solucion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 En la soluci\'on, el potencial termodin\'amico es:
@@ -372,19 +372,20 @@ Los resultados de la minimizaci\'on de la energ\'ia con un dado valor de R es pr
 \label{fig:graph-min}
 \end{figure*}
 
-En este punto, es posible determinar completamente la energí\'ia libre de la fase de microgel para cualquier $R$ dado.
-Las variables independientes de un c\'alculo son la temperatura, el pH y la concentraci\'on de sal de la soluci\'on en contacto con la fase microgel.
-El n\'umero de segmentos en la red de pol\'imero $N_{seg}$, la longitud de la cadena $n_{ch}$ y la fracci\'on de segmentos MAA, $x_{MAA}$, caracterizan completamente a nuestro microgel.
+Como mencionamos en la secci\'on \ref{sec:gel:theory} es posible determinar completamente la energí\'ia libre de la fase de microgel para cualquier $R$ dado.
+Las variables independientes en este c\'alculo son la temperatura, el pH y la concentraci\'on de sal de la soluci\'on en contacto con la fase microgel.
+El n\'umero de segmentos en la red de pol\'imero $N_{seg}$, la longitud de la cadena $n_{ch}$ y la fracci\'on de segmentos MAA, $x_{MAA}$, caracterizan completamente a nuestro microgel, es decir son variables de entrada pre-establecidas.
 
 
 Consideramos microgeles con $N_{seg}=10^7$ segmentos y $n_{ch}=50$, $100$ y $200$, que tienen $x_{MAA}=0,1$, $0,35$ o $0,5$.
-El objetivo es evaluar el efecto de aumentar o reducir la cantidad de mon\'omero \'acido con respecto a los microgeles de poli(NIPAm-\emph{co}-MAA) que tienen $35\%$ MAA. % que normalmente se sintetizan en nuestro laboratorio \addcite[Giussi2015 ,Giussi2020].
+En esta primera instancia evaluamos el efecto de aumentar o reducir la cantidad de mon\'omero \'acido con respecto a los microgeles de poli(NIPAm-\emph{co}-MAA) que tienen $35\%$ MAA.
+
 Estos microgeles est\'an etiquetados como MG$n_{ch}$-$p_{MAA}$, donde $p_{MAA}$ es el porcentaje de MAA.
 Por ejemplo, MG100-10 corresponde a un  microgel con $n_{ch}=100$ y $x_{MAA}=0,1$.
 
 
 Para determinar el tama\~no del microgel para un conjunto dado de condiciones, recurrimos a una minimizaci\'on gr\'afica del mismo.
-Para cada conjunto de condiciones (pH, sal y $T$), construimos $\Omega(R)=\Omega_{MG}(R)-\Omega_{s}(R)$, y encontramos $R_{opt }$, siedo este el radio \'optimo, tal que la curva tenga un m\'inimo local (y global).
+Para cada conjunto de condiciones (pH, sal y $T$), obtenemos la energ\'ia $\Omega(R)=\Omega_{MG}(R)-\Omega_{s}(R)$, y encontramos $R_{opt }$, siedo este el radio \'optimo, tal que la curva tenga un m\'inimo local (y global).
 Como ejemplo, este procedimiento se ilustra en la figura \ref{fig:graph-min} para microgeles MG100.
 Los resultados obtenidos de la minimizaci\'on de las curvas figura \ref{fig:graph-min} se resumen en la tabla \ref{table:optimal-R}.
 
