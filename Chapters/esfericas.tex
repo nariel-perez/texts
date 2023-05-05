@@ -104,6 +104,7 @@ Definimos aden\'as para un tipo de segmento $i$ en la red ($i = MAA/VA/crosslink
 
 \begin{align}
 	\left< \phi_i(r)\right> = \sum_\alpha{P(\alpha)\phi_i(\alpha,r)}
+	\label{eq:esf:ensamble-gel}
 \end{align}
 
 \noindent en el cual $\left< \phi_i(r)\right> $ es la fracci\'on en volumen promedio, dado por $\phi_i(\alpha,r)$ la cual es una cantidad de entrada en nuestros c\'odigos que muestra la fracci\'on en volumen ocupada localmente en $r$, cuando la red polim\'erica se encuentra en la conformaci\'on $\alpha$.
@@ -620,17 +621,18 @@ We consider different pH-responsive nanogels, containing either acid (MAA) or ba
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Nanogel response}
+\subsection{Caraterizaci\'on del nanogel}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Primero, examinaremos el comportamiento de los nanogeles en funci\'on del pH cuando no hay prote\'inas presentes.
-Para cuantificar el tama\~no de un nanogel, usamos el radio promedio conjunto de la partí\'icula, $R$, que se puede calcular usando:
+En esta primera instancia y como venimos mostrando cap\'itulo a cap\'itulo examinaremos el comportamiento (la respuesta) de los nanogeles en funci\'on del pH cuando en ausencia de  prote\'inas.
+
+Para cuantificar el tama\~no de un nanogel, usaremos el radio  de la partí\'icula, $R$, que se puede calcular usando:
 \begin{align}
     R= \frac{4}{3}\frac{\int_0^\infty{dr\,G(r)\,r \left<\phi(r)\right>}}{\int_0^\infty{dr\,G(r)\left<\phi(r)\right>}}
 \end{align}
-donde $r$ es la distancia desde el centro de masa de la red polim\'erica (nuestra teor\'ia asume simetr\'ia radial);
-$\left<\phi(r)\right>$ es la fracci\'on de volumen local del pol\'imero que incluye todos los tipos de segmentos, ionizables y de carga neutra;
-los corchetes angulares indican el promedio del conjunto sobre las diferentes conformaciones de la red;
-$G(r)=4\pi r^2$ es el \'area superficial de la esfera de radio $r$.
+donde $r$ es la distancia desde el centro de masa de la red polim\'erica (en nuestra teor\'ia asume simetr\'ia radial);
+$\left<\phi(r)\right>$ es la fracci\'on de volumen local del pol\'imero (incluye todos los tipos de segmentos);
+los corchetes angulares indican el promedio de ensamble sobre las diferentes conformaciones de la red (ver ecuaci\'on \ref{eq:esf:ensamble-gel});
+$G(r)=4\pi r^2$ es la constante, a un $r$ dado, por la simetr\'ia radial del sistema.
 
 \begin{figure}[!htb]
      \centering
