@@ -51,7 +51,7 @@ Las expresiones explicitas de cada uno de estos componentes, as\'i como la minim
 
 
 
-\subsection{Theoretical Framework}\label{sec:esf:tm}
+\subsection{Teoria red polim\'erica}\label{sec:esf:tm}
 
 A continuaci\'on describiremos la forma expl\'icita de cada uno de estos t\'erminos, donde los segmentos protonables del nanogel ser\'an considerados como segmentos de \'acido metacrílico (MAA). Sin embargo, las mismas ecuaciones se aplican a los nanogeles que tienen segmentos b\'asicos. Las diferencias se encuentran en el uso del signo del grado de disociaci\'on.
 
@@ -80,18 +80,45 @@ La densidad media local total de prote\'ina es:
 	\left<\rho_{pro}(r)\right> = \sum_\theta{\rho_{pro}(\theta,r)}
 \end{align}
 
-$S_{conf,net}$ representa la entrop\'ia conformacional resultante de la flexibilidad de la red polim\'erica que forma al nanogel. Conformaciones denotadas por el set $\{\alpha\}$. 
+
+
+
+$S_{conf,net}$ representa la entrop\'ia conformacional resultante de la flexibilidad de la red polim\'erica que forma al nanogel. Estas 
+conformaciones son  denotadas por el set $\{\alpha\}$. 
 \begin{equation}
 	\frac{S_{conf,nw}}{k_B} = - \sum_{\alpha}{P(\alpha)\ln P(\alpha)}
 \end{equation}
 
+
 \noindent En donde $P(\alpha)$ muestra la probabilidad que el nanogles se encuentre un a configuraci\'on $\alpha$.
+Una conformaci\'on $\alpha$ viene especificada por la posici\'on de todos sus segmentos. 
+La fracci\'on en volumen de estos segmentos puede expresarse como:
+
+%%%%%% modificacion 1
+\begin{align}
+	\left< \phi^i(r)\right> = \sum_\alpha{P(\alpha)\phi^i_r(\alpha,r)} 
+	\label{eq:esf:ensamble-gel}
+\end{align}
+
+\noindent en donde $\frac{\phi^i_r(\alpha,r)}{v_i}$ define la densidad de segmentos entre las esferas de radio $\textbf{r}$ y $\textbf{r} + d\textbf{r}$. Este volumen de integraci\'on se denota por $VS_r$
+
+\begin{align}
+	\frac{\phi^i_r(\alpha,r)}{v_i} dr	=  \int_{VS_r} d^3\textbf{r}  \frac{\phi^i(\alpha,\textbf{r})}{v_i}
+	\label{eq:esf:vector-densidad}
+\end{align}
+
+En estas dos ultimas ecuaciones el indice $i$ indica el tipo de semgmento ($i = MAA/VA/crosslink$), y la notaci\'on entre brackets, $\left<\right>$,   hace referencia al promedio de ensamble sobre las conformaciones de la red polim\'ercia. 
+$\phi_i(\alpha,\textbf{r})$ es una variable de entrada que nos proporciona la fracci\'on de volumen local, $\textbf{r}$, ocupado por un segmento $i$ cuando la red polim\'erica se encuentra en la conformaci\'on $\alpha$.
+%%%% Fin modificacion 1
+%%%%%%%%%%%%%%%%
+
+
 
 El siguiente t\'ermino describe la energ\'ia qu\'imica libre originada por el equilibrio \'acido-base de los segmentos de $MAA$ presentes en el nanogel.
 
 \begin{align}
 	\begin{aligned}
-		\beta F_{qca,net} &= \int_0^\infty drG(r) \frac{\left<\phi_{MAA}(r)\right>}{v_{MAA}} \left[f(r)(\ln f(r)+ \beta\mu^0_{MAA^-})\right.\\
+		\beta F_{qca,net} &= \int_0^\infty drG(r) \frac{\left<\phi^{MAA}(r)\right>}{v_{MAA}} \left[f(r)(\ln f(r)+ \beta\mu^0_{MAA^-})\right.\\
 		&\left.+(1-f(r))(\ln (1-f(r))+\beta\mu^0_{MAAH})\right]    
 	\end{aligned}
 \end{align} 
@@ -99,15 +126,7 @@ El siguiente t\'ermino describe la energ\'ia qu\'imica libre originada por el eq
 
 \noindent donde $f(r)$ es el grado de carga de los segmentos $MAA$ en la capa esf\'erica entre $r$ y $r + dr$.
 $\mu^0_{MAA^-}$ y $\mu^0_{MAAH}$ son los potenciales qu\'imicos est\'andar de las especies desprotonadas y protonadas respectivamente. $v_{MAA}$ es el volumen molecular del segmento de $MAA$.
-Definimos aden\'as para un tipo de segmento $i$ en la red ($i = MAA/VA/crosslink$):
- 
 
-\begin{align}
-	\left< \phi_i(r)\right> = \sum_\alpha{P(\alpha)\phi_i(\alpha,r)}
-	\label{eq:esf:ensamble-gel}
-\end{align}
-
-\noindent en el cual $\left< \phi_i(r)\right> $ es la fracci\'on en volumen promedio, dado por $\phi_i(\alpha,r)$ la cual es una cantidad de entrada en nuestros c\'odigos que muestra la fracci\'on en volumen ocupada localmente en $r$, cuando la red polim\'erica se encuentra en la conformaci\'on $\alpha$.
 
 
 %%%%%%%%%%%%%%%%%%%
@@ -116,7 +135,8 @@ El equilibrio qu\'imico de las unidades proteicas titulables se considera en el 
 \begin{align}
 	\begin{aligned}
 		\beta F_{qca,pro} =\int_0^\infty dr &G(r) \sum_\tau \left<\rho_{pro,\tau}(r)\right> \left[g_\tau(r)(\ln g_\tau(r)+ \beta\mu^0_{\tau p})\right.\\
-		&\qquad\left.+(1-g_\tau(r))(\ln (1-g_\tau(r))+\beta\mu^0_{\tau d})\right]   
+		&\qquad\left.+(1-g_\tau(r))(\ln (1-g_\tau(r))+\beta\mu^0_{\tau d})\right]
+		\label{eq:esf:fca-pro}   
 	\end{aligned}
 \end{align} 
 
@@ -124,14 +144,36 @@ El equilibrio qu\'imico de las unidades proteicas titulables se considera en el 
 
 El cual es definido como:
 
+
 \begin{align}
-	\left<\rho_{pro,\tau}(r)\right> = \sum_\theta \int_o^\infty dr^\prime G(r^\prime) \rho_{pro}(\theta,r)n_\tau(\theta,r^\prime,r)
+	\left<\rho_{pro,\tau}(r)\right> = \sum_\theta \int_o^\infty dr^\prime \frac{G(r^\prime)}{G(r)} \rho_{pro}(\theta,r^\prime)m_\tau(\theta,r^\prime,r)
+	\label{eq:esf:segments-pro-vector}
+\end{align}
+
+
+\noindent donde $m_\tau(\theta,r^\prime,r)$ es definida como la densidad de segmentos es definida de forma similiar que en eq. \ref{eq:esf:vector-densidad}, expresandose: 
+
+\begin{align}
+	m_\tau(\theta, r^\prime, r)dr = \int_{VS_r} n(\theta,\textbf{r}^\prime, \textbf{r})d^3\textbf{r}
+\end{align}
+
+\noindent en esta expresi\'on $\textbf{r}$ y $\textbf{r}^\prime$ denotan la posici\'on del vector posici\'on $r$ y la del centro de masa de la prote\'ina $r^\prime$ respectivamente. Las diferentes conformaciones $\theta$ son consideradas de tal forma que $n(\theta,\textbf{r}^\prime, \textbf{r})$, es decir hay una simetria sobre los angulos s\'olidos de nuestro sistema.
+
+En estas expresiones $ n(\theta,\textbf{r}^\prime, \textbf{r})$ es el par\'ametro de entrada que nos da el n\'umero de segmentos $\tau$ de una prote\'ina en su configuraci\'on $theta$ y cuyo centro de masa se encuentra en $\textbf{r}^\prime$  entre las capaz $\textbf{r}$ and $\textbf{r}+d\textbf{r}$. 
+
+
+Notese ue el sub\'indice  $\tau$ hace referencia a las unidades/residuos titulables de la prote\'ina, pero estas expresiones son validas para todos los segmentos de la prote\'ina:
+
+\begin{align}
+	\left<\rho_{pro,\lambda}(r)\right> = \sum_\theta \int_o^\infty dr^\prime \frac{G(r^\prime)}{G(r)} \rho_{pro}(\theta,r^\prime)m_\lambda(\theta,r^\prime,r)
 	\label{eq:esf:segments-pro}
 \end{align}
 
-\noindent en donde $n_\tau(\theta,r^\prime,r)$  es un par\'ametro de entrada que nos cuantifica el n\'umero de segmentos $\tau$ entre $r$ y $r + dr$ cuando el centro de masa de la prote\'ina en la configuraci\'on $\theta$ esta en $r^\prime$.
 
-Las unidades titulables son denotadas por el subindice $\tau$  y los subindices $p$ y $d$ representan su estado protonado y desprotonado respectivamente. 
+
+\noindent donde $\lambda$  describe un segmento arbitrario de la prote\'ina ($\{\tau\}\in\{\lambda\}$).
+
+los subindices $p$ y $d$  de la ecuaci\'on \ref{eq:esf:fca-pro} representan estados protonado y desprotonado respectivamente de un segmento $\tau$. 
 De este modo$\mu^0_{\tau,p}$ y $\mu^0_{\tau,d}$  son los potenciales qu\'imicos est\'andar de estos estados respectivamente.
 
 Hemos definido el grado de asosiaci\'on de protones a los segmentos $\tau$
@@ -157,7 +199,7 @@ La energ\'ia electrost\'atica se define:
 En este contexto, podemos definir la densidad de carga promedio: 
 
 \begin{align}
-	\left<\rho_q(r)\right> = \sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}
+	\left<\rho_q(r)\right> = \sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi^{MAA}(r)\right>}{v_{MAA}}q_{MAA}}
 	\label{eq:esf:rho-charge}
 \end{align}  
 %%%%%%%%%%%%%%%%
@@ -166,16 +208,13 @@ El siguiente t\'ermino en el potencial termodin\'amico se debe a la repulsi\'on 
 
 \begin{align}
 	\begin{aligned}
-		1=  {\left[\sum_{\gamma}\rho_\gamma(r) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(r)\right>v_\lambda} + \sum_i{\left<\phi_i(r)\right>}\right]},~ \forall r
+		1=  {\left[\sum_{\gamma}\rho_\gamma(r) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(r)\right>v_\lambda} + \sum_i{\left<\phi^i(r)\right>}\right]},~ \forall r
 	\end{aligned}
 	\label{eq:esf:constraint}
 \end{align}
 
 
 \noindent en donde $v_\lambda$  es el volumen molecular de cada segmento $\lambda$  que compone a la prote\'ina.
-$\left<\rho_{pro,\lambda}(r)\right>$  es definido de la misma forma que se hizo en la ecuaci\'on \ref{eq:esf:segments-pro}.
-Es conveniente notar que el subindice $\lambda$ considera a todos los segmentos de la prote\'ia, es decir: $ \tau \in \lambda$.
-Finalmente, como se mencion\'o anteriormente el subindice $i$  contempla a todos los tipos de segmentos que componen al nanogel.
 
 
 %%%%%%%%%%%%%%%
@@ -187,18 +226,19 @@ Esto es posible por los segmentos considerados en la estructura del nanogel, com
 
 
 Para completar el gran potencial de ec. \ref{eq:esf:semicano}, se tiene en cuenta el intercambio de especies m\'oviles:
-
-Los primeros dos t\'erminos del lado izquierdo de la ecuaci\'on explican el equilibrio qu\'imico de las especies m\'oviles $\gamma$ y de las prote\'inas dentro de la soluci\'on.
-Los dos \'ultimos t\'erminos consideran los iones de hidr\'ogeno de los segmentos protonables de la prote\'ina y los segmentos $MAA$ de la red polim\'erica que forma el nanogel. Notese que se van de la mano con el grado de asociaci\'on $g_\tau$ y $1-f$ para la prote\'ina y la red polim\'erica respectivamente. 
-
+ 
 
 \begin{align}
 	\begin{aligned}
 		\mu_\gamma N_\gamma + \mu_{pro} N_{pro} =\int_0^\infty drG(r)&\left[\sum_{\gamma }{\rho_\gamma(r)\mu_\gamma}
 		+ \mu_{pro} \left<\rho_{pro}(r)\right> \right. \\
-		& \left. +\mu_{H^+}\sum_{\tau}{g_\tau\left<\rho_{pro,\tau}(r)\right> } +\mu_{H^+}(1-f(r))\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}\right]
+		& \left. +\mu_{H^+}\sum_{\tau}{g_\tau\left<\rho_{pro,\tau}(r)\right> } +\mu_{H^+}(1-f(r))\dfrac{\left<\phi^{MAA}(r)\right>}{v_{MAA}}\right]
 	\end{aligned}
 \end{align}
+
+
+Los primeros dos t\'erminos del lado izquierdo de la ecuaci\'on explican el equilibrio qu\'imico de las especies m\'oviles $\gamma$ y de las prote\'inas dentro de la soluci\'on.
+Los dos \'ultimos t\'erminos consideran los iones de hidr\'ogeno de los segmentos protonables de la prote\'ina y los segmentos $MAA$ de la red polim\'erica que forma el nanogel. Notese que se van de la mano con el grado de asociaci\'on $g_\tau$ y $1-f$ para la prote\'ina y la red polim\'erica respectivamente.
 
 
 %%%%%%%%%%
@@ -213,20 +253,20 @@ Finalment la forma explicita de nuestro gran potencial es expresado:
 		%
 		& + \sum_{\alpha}{P(\alpha)\ln P(\alpha)} \\
 		%
-		& +\int_0^\infty drG(r) \frac{\left<\phi_{MAA}(r)\right>}{v_{MAA}} \left[f(r)(\ln f(r)+ \beta\mu^0_{MAA^-})\right.\\
+		& +\int_0^\infty drG(r) \frac{\left<\phi^{MAA}(r)\right>}{v_{MAA}} \left[f(r)(\ln f(r)+ \beta\mu^0_{MAA^-})\right.\\
 		&\qquad \qquad \qquad\qquad \qquad \quad \left.+(1-f(r))(\ln (1-f(r))+\beta\mu^0_{MAAH})\right] \\
 		%
 		& +\int_0^\infty drG(r)\sum_\tau \left<\rho_{pro,\tau}(r)\right> \left[g_\tau(r)(\ln g_\tau(r)+ \beta\mu^0_{\tau p})\right.\\
 		&\qquad\qquad \qquad\qquad \qquad \qquad\left.+(1-g_\tau(r))(\ln (1-g_\tau(r))+\beta\mu^0_{\tau d})\right] \\
 		%
-		& +  \int_0^\infty drG(r)\left[\left(\sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\Psi(r) \right.\\  &\left. \hspace{6em}-\frac{1}{2}\beta\epsilon(\nabla\Psi(r))^2 \right]\\
+		& +  \int_0^\infty drG(r)\left[\left(\sum_{\gamma } {\rho_\gamma(r) q_\gamma + \sum_\tau{f_\tau(r) \left<\rho_{pro,\tau}(r)\right> q_\tau} +  f(r)\dfrac{\left<\phi^{MAA}(r)\right>}{v_{MAA}}q_{MAA}}\right)\beta\Psi(r) \right.\\  &\left. \hspace{6em}-\frac{1}{2}\beta\epsilon(\nabla\Psi(r))^2 \right]\\
 		%
-		&+ \int_0^\infty \beta\Pi(r) drG(r){\left(\sum_{\gamma}\rho_\gamma(r) v_\gamma + \sum_{\lambda}{\left<\rho_{pro,\lambda}(r)\right>}{v_\lambda} + \sum_i\left<\phi_i(r)\right> -1\right)}\\
+		&+ \int_0^\infty \beta\Pi(r) drG(r){\left(\sum_{\gamma}\rho_\gamma(r) v_\gamma + \sum_{\lambda}{\left<\rho_{pro,\lambda}(r)\right>}{v_\lambda} + \sum_i\left<\phi^i(r)\right> -1\right)}\\
 		%
 		& -\int_0^\infty drG(r)\left[\sum_{\gamma }{\rho_\gamma(r)\beta\mu_\gamma}
 		+ \beta\mu_{pro} \left<\rho_{pro}(r)\right>
 		+\beta\mu_{H^+}\sum_{\tau}{g_\tau(r)\left<\rho_{pro,\tau}(r)\right> } \right.\\
-		& \left. \hspace{6em} +\beta\mu_{H^+}(1-f(r))\dfrac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}\right]%\\
+		& \left. \hspace{6em} +\beta\mu_{H^+}(1-f(r))\dfrac{\left<\phi^{MAA}(r)\right>}{v_{MAA}}\right]%\\
 	\end{aligned}
 	\label{eq:esf:potential-energy}
 \end{align}
@@ -276,13 +316,14 @@ Para las especiel libres, su densidad local se expresa como:
 En el mismo sentido, para la prote\'ina $\rho(\theta,r)$:
 	
 	
-	
-	\begin{align}
-		\begin{aligned}
-			\rho_{pro}(\theta, r)v_w = & \tilde{a}_{pro} \prod_\tau \exp\left[ -\int_0^\infty dr^\prime G(r^\prime) n_\tau(\theta,r,r^\prime) \ln f_\tau(r^\prime)\right] \\
-			& \times \prod_\lambda \exp\left[ -\int_0^\infty dr^\prime G(r^\prime) n_\lambda(\theta,r,r^\prime)\left(q_\lambda \beta\psi(r^\prime) + v_\lambda \beta \Pi(r^\prime)\right)\right]
-		\end{aligned}
-	\end{align}
+
+\begin{align}
+	\begin{aligned}
+		\rho_{pro}(\theta, r)v_w = & \tilde{a}_{pro} \prod_\tau \exp\left[ -\int_0^\infty dr^\prime  m_\tau(\theta,r,r^\prime) \ln f_\tau(r^\prime)\right] \\
+		& \times \prod_\lambda \exp\left[ -\int_0^\infty dr^\prime  m_\lambda(\theta,r,r^\prime)\left( \beta\psi(r^\prime) q_\lambda + \beta \Pi(r^\prime) v_\lambda \right)\right]
+	\end{aligned}
+	\label{eq:esf:rho-pro}
+\end{align}
 	
 	\noindent en donde se ha redefinido la activdiad de la prote\'ina como:
 	
@@ -290,7 +331,8 @@ En el mismo sentido, para la prote\'ina $\rho(\theta,r)$:
 		\tilde{a}_{pro} = \exp[\beta\mu_{pro} - \beta\tilde{\mu}^0_{pro}]
 	\end{align}
 	
-	En donde:
+		
+En donde:
 \begin{align}
 	\beta\tilde{\mu}^0_{pro} =  \beta \mu^0_{pro}  + \sum_{\tau,a} C_{n,\tau}\beta\mu^0_{\tau,d} 
 	+ \sum_{\tau,b} C_{n,\tau}\beta(\mu_{H^+} - \mu^0_{\tau,p})
@@ -298,50 +340,62 @@ En el mismo sentido, para la prote\'ina $\rho(\theta,r)$:
 
 
 \noindent $\tau,a$ y  $\tau,b$ suman obre segmentos \'acidos o b\'asicos respectivamente. Adem\'as hemos definido el n\'umero de composici\'on para un segmento $k$, $C_{n,k}$:
+
 	\begin{align}
-		\left[\int_0^\infty dr^\prime G(r^\prime) n_k(\theta,r,r^\prime) = C_{n,k}\right] \quad \forall \, r
+		\int_0^\infty dr^\prime  m_\lambda(\theta,r,r^\prime) = C_{n,\lambda}\quad \forall \, r
 		\label{eq:esf:composition}
 	\end{align}
 
-	La probabilidad de una conformaci\'on $\alpha$ es expresada como:
-	
-	\begin{align}
-		\begin{aligned}
-			P(\alpha)&=\frac{1}{Q}\exp\left[- \sum_i{\int{drG(r)\beta\Pi(r)\phi_i(\alpha,r)}}\right] \\
-			& \times \exp\left[\int{\ln(1-f(r))drG(r)\frac{\phi(\alpha,r)}{v_{MAA}}}\right], \\
-		\end{aligned}
-	\end{align}
-	
-	\noindent en donde  $Q$ es una constante que satisface: $\sum_\alpha P(\alpha) = 1$
-	
-	La variaci\'on respecto al potencial electrost\'atico deriva en la ecuaci\'on de Poisson:
-	
-	\begin{align}
-		\epsilon\Delta\psi(r) = -\left<\rho_q(r)\right>
-		\label{eq:esf:poisson}
-	\end{align}
-	
-	En la ecuaci\'on anterio se considera la densidad de carga media, la cual definimos en la ecuaci\'on  \ref{eq:esf:rho-charge}.  Para nuestro sistema, adem\'as de la restricci\'on en el volumen, se incluye la electroneutralidad de la soluci\'on, definida por:
+La optimizaci\'on con respecto a la probabilidad de una configuraci\'on $\alpha$ de la red de pol\'imeros resulta en:
 
-	\begin{align}
-		\int_0^\infty{drG(r) \left<\rho_q(r)\right>} = 0
-	\end{align}
-	
-	
-Para que las condiciones de electroneutralidad y ecuaci\'on se cumplan, es necesario el uso de ciertas condiciones de contorno:	
 
-	\begin{align}
-		\begin{aligned}
-			&i)  \lim_{r\to\infty}\psi(r) = 0 \\
-			&ii) \left.\frac{d\psi(r)}{dr}\right|_{r=0} = 0
-			\label{eq:esf:contorno}
-		\end{aligned}
+\begin{align}
+	\begin{aligned}
+		\tilde{p}(\alpha)&=\exp\left[- \sum_i{\int_0^\infty{dr\beta\Pi(r)\phi^i_r(\alpha,r)}}\right] \\
+		& \times \exp \left[ -\int_0^\infty dr \beta \Psi(r)\frac{\phi^{MAA}_r(\alpha,r)}{v_{MAA}} q_{MAA}  \right] \\
+		& \times \exp\left[ -\int_0^\infty{ dr\ln(f(r))\frac{\phi^{MAA}_r(\alpha,r)}{v_{MAA}}}\right] \\
+	\end{aligned}
+	\label{eq:esf:proba-alfa}
+\end{align}
+
+Donde $Q = \sum_\alpha {\tilde{p}(\alpha)}$. $Q$ es una constante que asegura que $\sum_\alpha P(\alpha) = 1$.
+
+
+La variaci\'on de $\Omega_{NG}$ con respecto al potencial electrost\'atico da lugar a la ecuaci'on de Poisson:
+
+\begin{align}
+	\epsilon\nabla^2\Psi(r) = -\left<\rho_q(r)\right>
+	%\label{si:eq:poisson}
+\end{align}
+
+Considerando las simetr\'ias de nuestro problema:
+
+\begin{align}
+	\epsilon ~ \frac{1}{r^2} \frac{\partial}{\partial r}\left(\frac{\partial \Psi(r)}{\partial r}\right) = -\left<\rho_q(r)\right>
+	\label{eq:esf:poisson}
+\end{align}
+
+Otra restricci\'on f\'isica a tener en cuenta en este punto es la electroneutralidad del sistema, que es:
+
+\begin{align}
+	\int_0^\infty{drG(r) \left<\rho_q(r)\right>} = 0
+\end{align}
+
+Esta restricci\'on se satisface imponiendo la condici\'on de contorno adecuada al resolver \ref{eq:esf:poisson}. Estas condiciones de contorno son:
+\begin{align}
+	%\begin{aligned}
+	&  \lim_{r\to\infty}\Psi(r) = 0 \\
+	&  \left.\frac{d\Psi(r)}{dr}\right|_{r=0} = 0
+	\label{eq:esf:contorno}
+	% \end{aligned}
 	\end{align}
 	
-Al observar las expresiones de todos los funcionales presentados en ec. \ref{eq:esf:funcionales-omega}
-notamos que  todos son definidos por dos potenciales locales: Electrost\'atico $\Psi(r)$ y Presi\'on osm\'otica $\Pi(r)$. Entre otros par\'ametros como las actividades de cada especie y otras cantidades proporcionadas con el modelo molecular a usar.
-En la siguiente secci\'on veremos como las actividades de cada componente quedan determinadas con las condiciones iniciales del bulk de la soluci\'on: pH, temperatura, y concentraci\'on de adsorbatos y sal.
-Con la determinaci\'on de las activdades es posible resolver el sistema completo haciendo uso de las ecuaciones \ref{eq:esf:constraint} y \ref{eq:esf:poisson} por sustituci\'on de cada una de las expresiones para las densidades locales y el grado de disociaci\'on, as\'i como tambi\'en de la probabilidad de la conformaci\'on de la red polim\'erica. 
+
+Ahora todas las funciones que componen el potencial termodin\'amico $\Omega_{NG}$ se han expresado en t\'erminos del potencial electrost\'atico local $\Psi(r)$, la presi\'on osm\'otica dependiente de la posici\'on $\Pi(r)$ y algunas cantidades de entrada que incluyen las actividades de las especies libres.
+Dada la concentraci\'on de sal, el pH y la concentraci\'on de prote\'inas en la soluci\'on bulk, todas estas actividades se pueden calcular imponiendo la incompresibilidad y la neutralidad de carga a dicha soluci\'on y utilizando la condici\'on de equilibrio de la auto-disoluci\'on del agua.
+Entonces, las \'inicas inc\'ognitas restantes son $\Psi(r)$ y $\Pi(r)$ en cada $r$.
+Estas funciones locales se calculan resolviendo num\'ericamente las ecuaciones \ref{eq:esf:constraint} y \ref{eq:esf:poisson} en cada capa $r$.
+ 
 
 \subsection{Soluci\'on Bulk}\label{sec:esf:bulk}
 
@@ -380,7 +434,7 @@ Finalmente, la densidad de la prote\'ina $\rho_{pro}^b(\theta)$ es:
 \begin{align}
 	\begin{aligned}
 		\rho^b_{pro}(\theta)v_w = &\tilde{a}_{pro} \prod_\tau\exp\left[-C_{n,\tau} \ln f^b_\tau\right] \\
-		&\prod_\lambda \exp \left[-C_{n,\lambda} (v_\lambda\beta\Pi^b ) \right]
+		&\prod_\lambda \exp \left[-C_{n,\lambda} (\beta\Pi^b v_\lambda + \beta\Psi^b q_\lambda ) \right]
 	\end{aligned}
 	\label{eq:esf:bulk-protein}
 \end{align}
@@ -440,8 +494,8 @@ Para las especies libres, su densidad local se escribe ahora:
 
 \begin{align}
 	\begin{aligned}
-		\rho_{pro}(\theta, i_r)v_w = &\tilde{a}_{pro} \prod_\tau\exp\left[- \delta \sum^{n_r}_{j_r = 1} G(j_r) n_\tau(\theta,i_r,j_r) \ln f_\tau(j_r)\right] \\
-		& \prod_\lambda \exp \left[- \delta \sum^{n_r}_{j_r = 1} G(j_r) n_\lambda(\theta,i_r, j_r)[v_\lambda\beta\Pi(j_r) + q_\lambda \Psi(j_r)] \right]
+		\rho_{pro}(\theta, i_r)v_w = &\tilde{a}_{pro} \prod_\tau\exp\left[ \sum^{n_r}_{j_r = 1} \tilde{m}_\tau(\theta,i_r,j_r) \ln f_\tau(j_r)\right] \\
+		& \hspace{1em} \times \prod_\lambda \exp \left[ \sum^{n_r}_{j_r = 1} \tilde{m}_\lambda(\theta,i_r, j_r)\left(\beta\Pi(j_r) v_\lambda+ \beta \Psi(j_r)q_\lambda\right) \right]
 	\end{aligned}
 \end{align}
 
@@ -449,9 +503,16 @@ La probabilidad de las configuraciones de la red polim\'erica $P(\alpha)T$:
 
 \begin{align}
 	\begin{aligned}
-		P(\alpha)&=\frac{1}{Q}\exp\left[- \delta\sum_i{\sum_{i_r =1}^{n_r}{G(i_r)\beta\Pi(i_r)\phi_i(\alpha,i_r)}}\right] \\
-		& \exp\left[\delta\sum_{i_r =1}^{n_r}{G(i_r)\ln(1-f(i_r))\frac{\phi(\alpha,i_r)}{v_{MAA}}}\right]
+		\tilde{p}(\alpha)&= \prod_{r_j}\prod_i \exp\left[{- {\beta\Pi(r_j) \tilde{\phi}^i_r(\alpha,r_j)}}\right] \\
+		& \times \prod_{r_j} \exp \left[ - \beta \Psi(r_j)\frac{\tilde{ \phi}^{MAA}_r(\alpha,r_j)}{v_{MAA}} q_{MAA}  \right] \\
+		& \times \prod_{r_j} \exp\left[ - { \ln(f(r_j))\frac{\tilde{ \phi}^{MAA}_r(\alpha,r_j)}{v_{MAA}}}\right] \\
 	\end{aligned}
+\end{align}
+
+\noindent donde:
+
+\begin{align}
+	\tilde{ \phi}^{MAA}_r(\alpha,r_j) = \int_{r_j -\delta/2}^{r_j + \delta/2} dr \, \phi^{MAA}_r(\alpha,r_j)
 \end{align}
 
 La ecuaci\'on de Poisson se escribe:
@@ -472,7 +533,7 @@ Nuestras condicones de contorno se reescriben:
 	\frac{\Psi(1) - \Psi(0)}{\delta} = 0
 \end{align}
 
-Como se definio en el cap\'itulo donde hablamos sobre los films polim\'ericos,\ref{Chapter2}, definiendo  el pH, concentraci\'on de sal y prote\'ina. temperatura, es posible calcular las variables restantes  $\Pi(i_r)$ y $\Psi(i_r)$ para cada capal $i_r$.
+Como se definio en el cap\'itulo donde hablamos sobre los films polim\'ericos, capitulo \ref{Chapter-film}, definiendo  el pH, concentraci\'on de sal y prote\'ina. temperatura, es posible calcular las variables restantes  $\Pi(i_r)$ y $\Psi(i_r)$ para cada capal $i_r$.
 Variables que pueden ser obtenidas al resolver en cada capa las ecuaciones \ref{eq:esf:pi-ir}) y (\ref{eq:esf:poisson-ir}. \ref{eq:film:discreto-poisson}.
 De esta forma el n\'umero de ecuaciones totales a resolver es $2n_r$ (dos por cada capa). 
 Este sistema de ecuaciones es resuelto usando el m\'etodo de Newton con Jacobiano libre, implementado en c\'odigos FORTRAN desarrollados en el grupo de trabajo.
