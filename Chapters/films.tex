@@ -581,39 +581,42 @@ Este sistema de ecuaciones es resuelto usando el m\'etodo de Newton con Jacobian
 \section{resultados} \label{sec:film:resultados}
 
 
+Los hidrogeles (geles polim\'ercios en general) compuestos por cadenas de protonables son sensibles a los cambios de pH. Esta respuesta se debe al equilibrio qu\'imico de protonaci\'on/desprotonaci\'on de las unidades \'acidas o b'asicas que componen la red. Cuando se varía el pH del entorno en el que se encuentra el gel, se producen cambios en la carga el\'ectrica de las unidades titulables, lo que a su vez afecta las propiedades  del material.
 
-Hidrogeles  compuestos por cadenas de poli\'acidos son sensibles a los cambios de pH. Esta respuesta se debe a la equilibrio qu\'imico de protonaci\'on/desprotonaci\'on de las unidades \'acidas que componen la red. 
-Para enteneder el funcionamiento de esta respuesta recordaremos algunos conceptos sobre el comportamiento \'acido/base de moleculas bajo condiciones ideales. 
-Estos conceptos nos serviran para entener el equilibrio que ocurre cuando se confinan los monomeros en una red polim\'erica. Los mismos principios ser\'a utilizados para los sistemas  de estudio de los pr\'oximos capitulos.
+Para comprender en detalle el funcionamiento de esta respuesta, es necesario recordar algunos conceptos fundamentales sobre el comportamiento \'acido/base de las mol\'eculas bajo condiciones ideales. El pH, que representa la concentraci\'on de iones de hidr\'ogeno en una soluci\'on, desempe\~na un papel crucial en la protonaci\'on/desprotonaci\'on de los grupos titulables presentes en el gel. En condiciones \'acidas, los grupos \'acidos se protonan, lo que lleva a un aumento en la carga el\'ectrica y una mayor retención de agua por parte del gel. Por otro lado, en condiciones alcalinas, los grupos \'acidos se desprotonan, disminuyendo la carga el\'ectrica y resultando en una disminuci\'on en la capacidad de retenci\'on de agua. Este efecto es el contrario cuando los mon\'omeros son b\'asicos y el pH del medio es alcalino.
+
+Estos conceptos sobre el comportamiento \'acido/base son fundamentales para comprender el equilibrio que ocurre cuando los mon\'omeros se confinan en una red polim\'erica. Al introducir los mon\'omeros \'acidos en la red, se establece un equilibrio din\'amico entre las formas protonadas y desprotonadas de los grupos protonables. Este equilibrio depende tanto del pH del entorno como de las caracter\'isticas intrí\'isecas de los mon\'omeros y la red polim\'erica. Al comprender y controlar este equilibrio, es posible modular las propiedades f\'isicas y qu\'imicas del gel, como su capacidad de hinchamiento, solubilidad, y liberaci\'on de f\'armacos.
+
+Estos principios ser\'an utilizados en los sistemas de estudio que se explorar\'an en los pr\'oximos cap\'itulos, donde se investigar\'a la respuesta de geles polim\'ericos a diferentes est\'imulos, incluyendo pH, temperatura y fuerzas externas. El estudio de estos sistemas sensibles permitir\'a avanzar en el dise\~no y desarrollo de materiales inteligentes con aplicaciones en campos como la medicina, la bioingenier\'ia y la ciencia de materiales.
+
 
 \subsection{Respuesta al pH} \label{sec:film:respuesta-pH}
 
-Si consideramos una soluci\'on diluida de moleculas titulables, estas pueden exhibir dos estados posibles: protonado o desprotonado. En este sentido se define el grado de disoción, $f$, el cual  proporciona la fraci\'on de moleculas que se encuentran en estado desprotonado:
-
+Si consideramos una soluci\'on diluida de mol\'eculas titulables, estas pueden exhibir dos estados posibles: protonado o desprotonado. En este sentido, se define el grado de disociaci\'on, $f$, el cual proporciona la fracci\'on de mol\'eculas que se encuentran en estado desprotonado:
 
 \begin{equation}
-    f = \frac{1}{1+10^{pk_a -pH}}
-    \label{eq:film:diso-ideal}
+	f = \frac{1}{1+10^{pK_a -pH}}
+	\label{eq:film:diso-ideal}
 \end{equation}
 
-si consideramos moleculas \'acidas su estado protonado no posee carga, es  neutro, por otro lado su estado desprotonado posee carga. 
-Al considerar esto el grado de disociaci\'on, adem\'as nos indica el grado de carga de estas moleculas, $f_c$.
-Para molecualas b\'asicas su estado de carga es contrario a las moleculas \'acidas, en consecuencia el grado de carga viene dado por: $f_c =1- f$.
+Para las mol\'eculas \'acidas, su estado protonado no posee carga y es neutro, mientras que su estado desprotonado posee carga. Adem\'as, el grado de disociaci\'on tambi\'en nos indica el grado de carga de estas mol\'eculas, $f_c$. 
+En el caso de mol\'eculas b\'asicas, su estado de carga es contrario al de las mol\'eculas \'acidas, por lo tanto, el grado de carga viene dado por: $f_c = 1 -f$
 
-En soluciones diluidas el grado de disociaci\'on $f$ (y el de carga $f_c$) son completamente determinados por el pH de la soluci\'on y el $pK_a$ intrinseco del par \'acido/base. 
-Cuando el pH =$pK_a$ la mitad de los grupos titulables se encuentran en disosiados ($f = 0.5$). Para valores de $\pm 1$ coresponden a estados con 90\% y 10\% de disociaci\'on respectivamente.
-Es decir, cuando el pH aumenta alrededor del pKa, la transici\'on del 10 al 90 \% de desprotonaci\'on ocurre dentro de dos unidades de pH de la soluci\'on ideal. 
 
-Estas consideraciones de soluci\'on ideal usualmente se utilizan para estimar el grado de carga de las unidades \'acidas dentro de cadenas pol\'imerias. Sin embargo, este comportamiento es diferente para sistemas  en confinamiento. Las unidades  protonables que forman parte de una red polim\'erica son un ejemplo de ello, lo cual modifica significativamente su comportamiento de protonaci\'on.
+En soluciones diluidas, el grado de disociaci\'on $f$ ( y el de carga $f_c$) son completamente determinados por el pH de la soluci\'on y el $pK_a$ intr\'inseco del par \'acido/base. Cuando el $pH = pK_a$, la mitad de los grupos titulables se encuentran disociados ( $f = 0.5$).  Para valores de pH de $1/,\pm$ corresponden a estados con un $90\%$ y $10\%$de disociaci\'on, respectivamente. Es decir, cuando el pH se encuentra cerca del $pK_a$, la transici\'on del $10\%$ al $90\%$ de desprotonaci\'on ocurre dentro de dos unidades de pH de la soluci\'on ideal.
+
+Estas consideraciones de soluci\'on ideal se utilizan com\'unmente para estimar el grado de carga de las unidades \'acidas dentro de cadenas polim\'ericas. Sin embargo, este comportamiento es diferente para sistemas en confinamiento. Las unidades protonables que forman parte de una red polim\'erica son un ejemplo de ello, lo cual modifica significativamente su comportamiento de protonaci\'on.
 
 
 \textbf{Red polim\'erica} \\
 
-A continuaci\'on describiremos el comportamiento de estos sistemas confinados, hidrogeles sensibles al pH. 
-Haciendo uso de la teor\'ia planteada anteriormente. 
+A continuaci\'on, describiremos el comportamiento de estos sistemas confinados, es decir, hidrogeles sensibles al pH, haciendo uso de la teor\'ia planteada anteriormente.
 
-A diferencia de las soluciones diluidas, las unidades \'acidas en una red de pol\'imeros experimentan repulsiones electrost\'aticas cuando estas se encuentran cargadas. Para reducir la fuerza de las repulsiones dentro de la red, estos grupos se disocian significativamente menos que en condiciones ideales. 
-En la figura \ref{fig:film:degree-film} se ilustra este comportamiento y muestra el grado medio de carga de los segmentos de un un film compuesto por una red cadenas de \'acido poli(metacr\'ilico) (PMAA), que est\'a en contacto con soluciones que tienen diferentes concentraciones de sal.
+A diferencia de las soluciones diluidas, las unidades \'acidas en una red de pol\'imeros experimentan repulsiones electrost\'aticas cuando est\'an cargadas. Esto conduce a una disminuci\'on significativa en la disociaci\'on de estos grupos en comparaci\'on con las condiciones ideales, con el objetivo de reducir la fuerza de las repulsiones dentro de la red polim\'erica.
+
+La figura \ref{fig:film:degree-film} ilustra este comportamiento y muestra el grado medio de carga de los segmentos de un film compuesto por una red de cadenas de \'acido poli(metacrílico) (PMAA) en contacto con soluciones que tienen diferentes concentraciones de sal.
+
+
 
 \begin{figure}
     \centering
@@ -622,27 +625,27 @@ En la figura \ref{fig:film:degree-film} se ilustra este comportamiento y muestra
     \label{fig:film:degree-film}
 \end{figure}
 
+A un pH dado, es significativamente menos probable que una unidad \'acida de la red polim\'erica se cargue en comparaci\'on con las consideraciones ideales. La concentraci\'on de sal en la soluci\'on resulta ser una variable cr\'itica que modula este comportamiento de regulaci\'on de carga.
 
+A una salinidad relativamente alta, la cantidad de contraiones dentro del film aumenta, lo que resulta en el apantallamiento de las interacciones electrost\'aticas. Estas interacciones se vuelven de corto alcance. Este apantallamiento de repulsiones dentro de la red permite que el pol\'imero aumente su grado de carga. En esta observaci\'on inicial, vemos que un aumento en la salinidad genera una protonaci\'on que se aproxima al comportamiento ideal.
 
-A un pH dado es significativamente menos probable que se cargue una unidad \'acida de la red polim\'erica de lo que se espera seg\'un las consideraciones ideales. La concentraci\'on de sal de la soluci\'on resulta ser una variable cr\'itica que modula este comportamiento de regulaci\'on de carga.
+En condiciones de baja concentraci\'on de sal, solo hay suficientes contraiones dentro de la red para neutralizar la carga el\'ectrica del pol\'imero. Bajo estas condiciones, el efecto de apantallamiento de los iones de sal se debilita y las interacciones electrost\'aticas efectivamente tienen un mayor alcance. Como resultado, la red se carga menos para prevenir o reducir las repulsiones dentro de la red.
 
-A una salinidad relativamente alta, la cantidad de los contraiones dentro del film crece, lo que da como resultado el apantallamiento de interacciones electrost\'aticas. Las interacciones son ahora de corto alcance. Este apantallamiento de repulsiones dentro de la red permite que el pol\'imero aumente su grado de carga. En esta primera observaci\'on vemos que un aumento en la salinidad genera una protonaci\'on que se aproxima al comportamiento ideal. 
+En la figura \ref{fig:film:degree-film}, se observa que el grado de carga de los films polim\'ericos difiere del comportamiento de los mon\'omeros aislados. Esto nos lleva a pensar que las condiciones en este entorno son diferentes a las que se esperar\'ian en la soluci\'on. Existe una regulaci\'on de carga, lo que sugiere una regulaci\'on del pH.
 
-En condiciones de baja concentraci\'on de sal solo se encuentran los suficientes contraiones dentro de la red para neutralizar la carga el\'ectrica del pol\'imero. Bajo tales condiciones, el efecto de apantallamiento de los iones de sal se debilita y las interacciones electrost\'aticas se vuelven efectivamente de mayor alcance. Como resultado, la red se carga menos para prevenir o reducir las repulsiones dentro de la red.
+Definimos as\'i el pH local, que nos proporciona la concentración de protones en una posición espacial $z$
 
-
-En la figura \ref{fig:film:degree-film} vemos que el grado de carga de los film polim\'ericos cambia respecto a monomeros aislados. Esto nos induce a pensar que las condiciones de ese entorno son diferentes a las que se esperar\'ia para el seno de la soluci\'on. Existe una una regualci\'on de carga, lo que conlleva a pensar en una regulaci\'on del pH.
-Definimos as\'i el pH local que nos proporciona la concentraci\'on de protones  en la posici\'on espacial $z$:
 \begin{equation}
-    pH(z) = -\log_{10}([H^+](z))
-    \label{eq:film:pH-local}
+	pH(z) = -\log_{10}(H^+)
+	\label{eq:film:pH-local}
 \end{equation}
 
-Una baja disociaci\'on (un nivel de protonaci\'on alto) de las unidades \'acidas de las unidadades de $MAA$ en nuestra red polim\'erica puede explicarse en terminos del pH local dentro del material. Se define el $pH_{gel}$ como el promedio del pH local dentro del film. Resultados previos han mostrado que esta cantidad esta bien definida \addcite. 
+Una baja disociaci\'on (un alto nivel de protonaci\'on) de las unidades \'acidas de las unidades de MAA en nuestra red polim\'erica puede explicarse en t\'erminos del pH local dentro del material. Definimos el pH del gel ($pH_{gel}$) como el promedio del pH local dentro del film. Resultados previos han mostrado que esta cantidad est\'a bien definida \addcite.
 
-Enfatizaremos la importancia de estos dos terminos $pH_{gel}$ y $pH(z)$ por la informaci\'on que proveen: el estado de carga/protonaci\'on de las unidades titulables en la red polim\'erica. 
+Enfatizamos la importancia de estos dos t\'erminos, $pH_{gel}$ y $pH(z)$, por la informaci\'on que proporcionan: el estado de carga/protonaci\'on de las unidades titulables en la red polim\'erica.
 
-Haciendo uso de la eq. \ref{eq:film:diso-ideal} es posible calcular el grado de disoci\'on de la estructura polim\'erica de nuestro hidrogel. El uso del $pH_{gel}$ es indispensable en condiciones donde el pH es distinto al  del seno de la soluci\'on \addcite. El mismo procedimiento se realiza para calcular el estado de protonaci\'on local de las unidades titulables de las especies que se adsorben en el film (ver figura \ref{fig:film:protein-charge}).
+Haciendo uso de la ecuaci\'on \ref{eq:film:diso-ideal}, es posible calcular el grado de disociaci\'on de la estructura polim\'erica de nuestro hidrogel. El uso de $pH_{gel}$ es indispensable en condiciones en las que el pH difiere del pH de la soluci\'on \addcite. El mismo procedimiento se realiza para calcular el estado de protonaci\'on local de las unidades titulables de las especies que se adsorben en el film (ver figura \ref{fig:film:protein-charge}).
+
 
 \begin{figure}
     \centering
@@ -652,13 +655,12 @@ Haciendo uso de la eq. \ref{eq:film:diso-ideal} es posible calcular el grado de 
 \end{figure}
 
 
+Sin embargo, aunque esto parece simplificar el problema de establecer la carga neta de cualquier especie del sistema, en nuestro caso la red polim\'erica y las prote\'inas adsorbidas, determinar los cambios en el pH local tiene la misma complejidad que el problema original (es decir, la de determinar la carga del film). El pH local que se establece dentro del material, as\'i como su valor en la interfaz entre el film polim\'erico y la soluci\'on acuosa, es el resultado de la compleja interacci\'on entre la organizaci\'on molecular, los equilibrios qu\'imicos y las interacciones f\'isicas que determinan el equilibrio termodin\'amico en las condiciones impuestas externamente (pH, concentraci\'on de sal). Todas las variables expuestas se describen en la secci\'on \ref{sec:film-teoria}.
 
-Sin embargo, aunque esto parece simplificar el problema de establecer la carga neta de cualquier especie de nuestro sistema:
-en nuestro caso la red polim\'erica y las prote\'inas adsorbidas. 
-Determinar los cambios en el pH local tiene la misma complejidad que el problema original (es decir, determinar la carga del film). El pH local que se establece dentro del material, as\'i como su valor en la interfaz entre el film polim\'erico y la soluci\'on acuosa, es el resultado de la compleja interacci\'on entre la organizaci\'on molecular, los equilibrios qu\'imicos y las interacciones f\'isicas que determinan el equilibrio termodin\'amico a las condiciones impuestas externamente (pH, concentraci\'on de sal).
-Todas las variables expuestas en la secci\'on \ref{sec:film-teoria}.
+Para ejemplificar c\'omo varí\'i el pH en relaci\'on con el pH y la concentraci\'on salina dada en el bulk de la soluci\'on, se puede observar la figura \ref{fig:film:pH-local}, que muestra el pH dentro de nuestro film de cadenas de 
+PMAA
+PMAA como funci\'on del pH. Cada curva hace referencia a una concentraci\'on de sal diferente. Se agrega, a rayas, el comportamiento ``ideal" en el que el pH del bulk es igual al pH local, en particular al del film, calculado usando teor\'ia molecular.
 
-Para ejemplificar como es esta variaci\'on del pH respecto al pH y concentraci\'on salina dadas para el bulk de la soluci\'on, se puede observar la figura \ref{fig:film:pH-local} que muestra el pH dentro de nuestro film de cadenas de $PMAA$ como una funci\'on del pH, cada curva hace referencia a una concentraci\'on de sal diferente. Se agrega, a rayas, el comportamiento ``ideal" en donde el pH del bulk es igual al pH local, en particular al del film. calculado usando teor\'ia molecular.
 
 \begin{figure}
     \centering
@@ -675,6 +677,14 @@ Para ello nos valdremos de la teor\'ia molecular ya expuesta y haciendlo uso de 
 
 Para cuantificar la cantidad de prote\'ina adsrobida en el film utilizamos la expresi\'on:
 
+
+El uso de hidrogeles como transportadores de adsorbatos con fines terap\'euticos ha despertado un gran inter\'es en la comunidad cient\'ifica. Sin embargo, para aprovechar al m\'aximo su potencial, es fundamental poder cuantificar y cualificar la adsorci\'on de mol\'eculas y prote\'inas en estos sistemas.
+
+En este sentido, recurrimos a la teor\'ia molecular previamente expuesta, la cual nos brinda herramientas para comprender y predecir la interacci\'on entre las prote\'inas y el hidrogel polim\'erico. Para estos  modelos te\'oricos, seleccionamos prote\'inas modelo con estabilidad en un amplio rango de pH, como el citocromo c y la mioglobina. Estas prote\'inas han sido ampliamente estudiadas en sistemas polim\'ericos similares, lo que nos permite aprovechar la experiencia acumulada de estas investigaciones previas.
+
+Para cuantificar la cantidad de prote\'ina adsorbida en el film de hidrogel, empleamos la siguiente  expresi\'on:
+
+\textcolor{red}{aqui}
 \begin{align}
 \Gamma_{pro} = \int^\infty_0 {dz(\rho_{pro}(z) -\rho^b_{pro}}  
 \label{eq:film:adsor-exceso}
