@@ -4,6 +4,14 @@
 \section{Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Los nanogeles polim\'ericos son sistemas polim\'ericos que presentan una estructura tridimensional en forma de red. Estos nanogeles se forman mediante la reticulaci\'on de pol\'imeros (o copol\'imeros), lo que da lugar a una matriz de pol\'imero tridimensional que puede retener grandes cantidades de agua o solventes.
+
+Estos nanogeles han demostrado ser de gran inter\'es en una amplia gama de aplicaciones, incluyendo el encapsulado y la liberaci\'on  de fármacos, la ingenier\'ia de tejidos y la bioimagen.
+
+
+
+Los nanogeles representan una plataforma vers\'atil y prometedora para diversas aplicaciones biom\'edicas. Su capacidad para retener agua y solventes, su tama\~no nanom\'etrico y su capacidad de funcionalizaci\'on los convierten en sistemas atractivos para la entrega de f\'armacos.
+
 
 En estas secci\'on... geles polim\'ericos... 
 Se aborda una perspectiva diferente con informaci\'on a la que no era posible acceder con el modelo anterior.
@@ -96,20 +104,13 @@ La fracci\'on en volumen de estos segmentos puede expresarse como:
 
 %%%%%% modificacion 1
 \begin{align}
-	\left< \phi^i(r)\right> = \sum_\alpha{P(\alpha)\phi^i_r(\alpha,r)} 
+	\left< \phi^i(r)\right> = \frac{1}{G(r)} \sum_\alpha{P(\alpha)\phi^i_r(\alpha,r)} 
 	\label{eq:esf:ensamble-gel}
 \end{align}
 
-\noindent en donde $\frac{\phi^i_r(\alpha,r)}{v_i}$ define la densidad de segmentos entre las esferas de radio $\textbf{r}$ y $\textbf{r} + d\textbf{r}$. Este volumen de integraci\'on se denota por $VS_r$
+En donde el superindice $i$ indica el tipo de semgmento ($i = MAA/VA/crosslink$), y la notaci\'on entre brackets, $\left<\right>$,   hace referencia al promedio de ensamble sobre las conformaciones de la red polim\'ercia. 
+$\frac{\phi^i_r(\alpha,r)}{G(r)}$  nos proporciona la fracci\'on de volumen que ocupan los segmentos de tipo $i$ entre las esferas conc\'entricas de radio $r$ y $r + dr$, cuando la red est\'a en la configuraci\'on $\alpha$.
 
-\begin{align}
-	\frac{\phi^i_r(\alpha,r)}{v_i} dr	=  \int_{VS_r} d^3\textbf{r}  \frac{\phi^i(\alpha,\textbf{r})}{v_i}
-	\label{eq:esf:vector-densidad}
-\end{align}
-
-En estas dos ultimas ecuaciones el indice $i$ indica el tipo de semgmento ($i = MAA/VA/crosslink$), y la notaci\'on entre brackets, $\left<\right>$,   hace referencia al promedio de ensamble sobre las conformaciones de la red polim\'ercia. 
-$\phi_i(\alpha,\textbf{r})$ es una variable de entrada que nos proporciona la fracci\'on de volumen local, $\textbf{r}$, ocupado por un segmento $i$ cuando la red polim\'erica se encuentra en la conformaci\'on $\alpha$.
-%%%% Fin modificacion 1
 %%%%%%%%%%%%%%%%
 
 
@@ -151,15 +152,8 @@ El cual es definido como:
 \end{align}
 
 
-\noindent donde $m_\tau(\theta,r^\prime,r)$ es definida como la densidad de segmentos es definida de forma similiar que en eq. \ref{eq:esf:vector-densidad}, expresandose: 
+\noindent where $m_\tau(\theta,r^\prime,r) dr$  nos da el n\'umero de segmetos $\tau$  de una prote\'ina en su conformaci\'on $\theta$ con su centro de masa en $r^\prime$, que ocupan el volumen entre las esferas conc\'entricas de radios $r$ y $r + dr$.
 
-\begin{align}
-	m_\tau(\theta, r^\prime, r)dr = \int_{VS_r} n(\theta,\textbf{r}^\prime, \textbf{r})d^3\textbf{r}
-\end{align}
-
-\noindent en esta expresi\'on $\textbf{r}$ y $\textbf{r}^\prime$ denotan la posici\'on del vector posici\'on $r$ y la del centro de masa de la prote\'ina $r^\prime$ respectivamente. Las diferentes conformaciones $\theta$ son consideradas de tal forma que $n(\theta,\textbf{r}^\prime, \textbf{r})$, es decir hay una simetria sobre los angulos s\'olidos de nuestro sistema.
-
-En estas expresiones $ n(\theta,\textbf{r}^\prime, \textbf{r})$ es el par\'ametro de entrada que nos da el n\'umero de segmentos $\tau$ de una prote\'ina en su configuraci\'on $theta$ y cuyo centro de masa se encuentra en $\textbf{r}^\prime$  entre las capaz $\textbf{r}$ and $\textbf{r}+d\textbf{r}$. 
 
 
 Notese ue el sub\'indice  $\tau$ hace referencia a las unidades/residuos titulables de la prote\'ina, pero estas expresiones son validas para todos los segmentos de la prote\'ina:
@@ -351,14 +345,14 @@ La optimizaci\'on con respecto a la probabilidad de una configuraci\'on $\alpha$
 
 \begin{align}
 	\begin{aligned}
-		\tilde{p}(\alpha)&=\exp\left[- \sum_i{\int_0^\infty{dr\beta\Pi(r)\phi^i_r(\alpha,r)}}\right] \\
+		P(\alpha)&=\frac{1}{Q}\exp\left[- \sum_i{\int_0^\infty{dr\beta\Pi(r)\phi^i_r(\alpha,r)}}\right] \\
 		& \times \exp \left[ -\int_0^\infty dr \beta \Psi(r)\frac{\phi^{MAA}_r(\alpha,r)}{v_{MAA}} q_{MAA}  \right] \\
 		& \times \exp\left[ -\int_0^\infty{ dr\ln(f(r))\frac{\phi^{MAA}_r(\alpha,r)}{v_{MAA}}}\right] \\
 	\end{aligned}
 	\label{eq:esf:proba-alfa}
 \end{align}
 
-Donde $Q = \sum_\alpha {\tilde{p}(\alpha)}$. $Q$ es una constante que asegura que $\sum_\alpha P(\alpha) = 1$.
+\noindent Donde $Q$ es una constante que asegura que $\sum_\alpha P(\alpha) = 1$.
 
 
 La variaci\'on de $\Omega_{NG}$ con respecto al potencial electrost\'atico da lugar a la ecuaci'on de Poisson:
@@ -499,11 +493,11 @@ Para las especies libres, su densidad local se escribe ahora:
 	\end{aligned}
 \end{align}
 
-La probabilidad de las configuraciones de la red polim\'erica $P(\alpha)T$: 
+La probabilidad de las configuraciones de la red polim\'erica $P(\alpha)$: 
 
 \begin{align}
 	\begin{aligned}
-		\tilde{p}(\alpha)&= \prod_{r_j}\prod_i \exp\left[{- {\beta\Pi(r_j) \tilde{\phi}^i_r(\alpha,r_j)}}\right] \\
+		P(\alpha)&= \frac{1}{Q}\prod_{r_j}\prod_i \exp\left[{- {\beta\Pi(r_j) \tilde{\phi}^i_r(\alpha,r_j)}}\right] \\
 		& \times \prod_{r_j} \exp \left[ - \beta \Psi(r_j)\frac{\tilde{ \phi}^{MAA}_r(\alpha,r_j)}{v_{MAA}} q_{MAA}  \right] \\
 		& \times \prod_{r_j} \exp\left[ - { \ln(f(r_j))\frac{\tilde{ \phi}^{MAA}_r(\alpha,r_j)}{v_{MAA}}}\right] \\
 	\end{aligned}
@@ -512,7 +506,7 @@ La probabilidad de las configuraciones de la red polim\'erica $P(\alpha)T$:
 \noindent donde:
 
 \begin{align}
-	\tilde{ \phi}^{MAA}_r(\alpha,r_j) = \int_{r_j -\delta/2}^{r_j + \delta/2} dr \, \phi^{MAA}_r(\alpha,r_j)
+	\tilde{ \phi}^{MAA}_r(\alpha,r_i) = \int_{r_i -\delta/2}^{r_i + \delta/2} dr \, \phi^{MAA}_r(\alpha,r)
 \end{align}
 
 La ecuaci\'on de Poisson se escribe:
@@ -684,16 +678,17 @@ We consider different pH-responsive nanogels, containing either acid (MAA) or ba
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Caraterizaci\'on del nanogel}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-En esta primera instancia  examinaremos  el comportamiento (la respuesta) de los nanogeles en funci\'on del pH en ausencia de  prote\'inas. 
 
-Para cuantificar el tama\~no de un nanogel, usaremos el radio  de la partí\'icula, $R$, que se puede calcular usando:
+En esta primera instancia, examinaremos el comportamiento (la respuesta) de los nanogeles en funci\'on del pH en ausencia de prote\'inas.
+
+Para cuantificar el tama\~no de un nanogel, utilizaremos el radio medio de la part\'icula, $R$, que se puede calcular utilizando la siguiente fórmula:
 \begin{align}
-    R= \frac{4}{3}\frac{\int_0^\infty{dr\,G(r)\,r \left<\phi(r)\right>}}{\int_0^\infty{dr\,G(r)\left<\phi(r)\right>}}
+	R = \frac{4}{3}\frac{\int_0^\infty{dr\,G(r)\,r \left<\phi(r)\right>}}{\int_0^\infty{dr\,G(r)\left<\phi(r)\right>}}
 \end{align}
-donde $r$ es la distancia desde el centro de masa de la red polim\'erica (en nuestra teor\'ia asume simetr\'ia radial);
-$\left<\phi(r)\right>$ es la fracci\'on de volumen local del pol\'imero (incluye todos los tipos de segmentos);
-los corchetes angulares indican el promedio de ensamble sobre las diferentes conformaciones de la red (ver ecuaci\'on \ref{eq:esf:ensamble-gel});
-$G(r)=4\pi r^2$ es el  \'area de la supercie de una esfera de radio $r$.
+\noindent donde $r$ es la distancia desde el centro de masa de la red polim\'erica ( como se ha mencionado en la sec. \ref{sec:esf:tm} se asume simetr\'ia radial);
+$\left<\phi(r)\right>$ es la fracción de volumen local de la red polim\'erica;
+los corchetes angulares indican el promedio de ensamble sobre las diferentes conformaciones de la red (ver ecuación \ref{eq:esf:ensamble-gel});
+$G(r)=4\pi r^2$ es el \'area de la superficie de una esfera de radio $r$.
 
 \begin{figure}[!htb]
      \centering
