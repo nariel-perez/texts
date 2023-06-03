@@ -59,7 +59,6 @@
 \if@spanish
   \RequirePackage[activeacute,spanish]{babel}
 \fi
-
 %% fields
 \def\author#1{\gdef\insertauthor{#1}\gdef\@author{#1}}
 \def\title#1{\gdef\inserttitle{#1}\gdef\@title{#1}}
