@@ -535,7 +535,7 @@ Este sistema de ecuaciones es resuelto usando el m\'etodo de Newton con Jacobian
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Molecular Model: Proteins}\label{sect:protein}
+\subsection{Molecular Model: Proteins}%\label{sect:protein}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -612,52 +612,29 @@ the values in parentheses are the pI of the proteins reported experimentally.
 \subsection{Molecular model: Nanogel Network}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Besides the protein model presented in sec.  \ref{sect:protein},   we need to specify a molecular model to describe the polymer network that makes the nanogel backbone.
-Such model must provide  a set of molecular configurations of the polymer network that is representative of the whole conformational space.
-A particular network conformation is given by the spacial position of all its segments.
+Adem\'as del modelo de prote\'ina presentado en la secci\'on anterior, necesitamos especificar un modelo molecular para describir la red que compone a nuestro nanogel. Este modelo debe proporcionar un conjunto representativo de configuraciones moleculares de la red polim\'erica. Una conformaci\'on particular de la red se da por la posici\'on espacial de todos sus segmentos.
+La red del nanogel est\'a compuesta por cadenas polim\'ericas entrecruzadas de 25 segmentos de longitud. En total, esta red contiene 10054 segmentos. Cada segmento es una representaci\'on simplificada de una unidad neutra (VA), un mon\'omero \'acido/b\'asico (MAA/AH) o un segmento entrecruzante. La \ref{table:Coarse-grain} incluye el volumen y el pKa (si la unidad es titulable) utilizados para describir estas unidades simplificadas.
 
+La red del nanogel posee una topolog\'ia tipo diamante, donde los segmetos entrecruzantes se colocan en la posici\'on original de los \'atomos de carbono. Los entrecruzantes se conectan a 4 cadenas polim\'ericas. La construcci\'on de esta red se realiz\'o en primera instancia por la traslaci\'on tridimencional de la celda unidad en donde todas las cadenas polim\'ericas se encuentran alargadas, como segunod paso se realiz\'o un corte esferico de radio $R_{cut}$ medido desde el centro de masa de la estrucutura. El valor de $R_{cut}$ se hace de tal manera de obtener aproximadamente 10000 segmentos en total. 
 
-The nanogel network is composed of 25 segment-long  crosslinked polymer chains. 
-In total this network contains 10054 segments.
-Each segment is a coarse-grained   representation of either a crosslink, a charge neutral unit (VA) or an acid/basic monomer (MAA/AH). 
-tabla \ref{table:Coarse-grain} includes the volume and pKa (if the unit is titratable) used to describe these coarse-grained units.
-
-The polymer network has diamond-like topology, where  crosslinks are placed at the original position of carbon atoms and connected to four polymer chains.
-To build this network, we first construct a three-dimensional structure where all the polymer chains are elongated, to then only keep the segments contained within a sphere of radius $R_{cut}$ placed at the center of mass of the structure; $R_{cut}$ is selected such that the network will have 10000 segments approximately.
-Originally, all polymer chains connect two crosslinks, but as a result of this procedure some will be left dangling on the network surface,  connected to a single crosslink.
-Most of these superficial \emph{dangling} chains are shorter than 25 segments.
-Altogether these chains contain 22\% of the total number of segments.
-To generate the different molecular conformations of the polymer network, we have performed Molecular Dynamics simulations using GROMACS 5.1.2 \addcite[indahl2001gromacs] (details are given in the SI).
+Originalmente, todas las cadenas polim\'ericas se  conectan a dos entrecruzantes, pero como resultado de este procedimiento, el corte esferico, algunascadenas resultan quedar colgando en la superficie de la red, es decir  conectadas a un solo entrecruzante. La mayor\'ia de estas cadenas \emph{colgantes} superficiales son m\'as cortas que 25 segmentos. En conjunto, estas cadenas contienen el 22\% del n\'umero total de segmentos. Para generar las diferentes conformaciones moleculares de la red del pol\'imero, se ha realizado simulaciones de din\'amica molecular usando GROMACS 5.1.2 \addcite[lindahl2001gromacs].
 
  \begin{figure}[!htb]
      \centering
      \includegraphics[width=0.99\textwidth]{Figures/graphs-gel2/ideal-charge-model.pdf}
-     \caption{A: The nanogel network consists of crosslinked copolymer chains of a charge-neutral segment (VA: vinyl alcohol) and a functional unit (either MAA: methacrylic acid or AH: allylamine).
-    This scheme illustrates the three different comonomer distributions considered;  from left to right: RF: a random distribution of functional groups throughout the network; CF: the functional units occupy the center/core of the network; SF: only the free-end dangling chains on the network surface are functionalized with pH-responsive units.
-B: Plot of the ideal pH-dependent degree of charge of the isolated functional unit in dilute solution.}
+     \caption{A: La red de nanogeles consiste en cadenas de copol\'imeros entrecruzadas con un segmento de carga neutral (VA: alcohol vin\'ilico) y una unidad funcional (ya sea MAA: \'acido metacr\'ilico o AH: alilamina).
+     	Este esquema ilustra las tres distribuciones de de los comon\'omeros consideradas; de izquierda a derecha: RF: una distribuci\'on aleatoria de grupos funcionales en toda la red; CF: las unidades funcionales ocupan el centro/n\'ucleo de la red; SF: solo las cadenas colgantes libres en la superficie de la red est\'an funcionalizadas con unidades sensibles al pH.
+     	B: Gr\'afico del grado de carga ideal dependiente del pH de la unidad funcional aislada en soluci\'on diluida.}
      \label{fig:esf:gel-topologies}
  \end{figure}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-We consider different pH-responsive nanogels, containing either acid (MAA) or basic (AH) groups, and evaluate three different topologies for the spatial distribution of these functional  segments, which are schematized in figura \ref{fig:esf:gel-topologies}: 
-(i) a \emph{randomly functionalized} (RF) structure where the pH-responsive segments are spread throughout the network  at random,
-(ii) a \emph{core functionalized} (CF) structure, where the  pH-sensitive units occupy the center of the network, and 
-(iii) a \emph{surface functionalized} (SF) structure in which only the dangling chains on the network surface  are ionizable. 
-
  
  
+ Consideramos diferentes nanogeles sensibles al pH que contienen grupos \'acidos (MAA) o b\'asicos (AH), y evaluamos tres topolog\'ias diferentes para la distribuci\'on espacial de estos segmentos funcionales, que se esquematizan en la Figura \ref{fig:gel-topologies}:
+ (i) una estructura \emph{aleatoriamente funcionalizada} (RF) donde los segmentos sensibles al pH se distribuyen aleatoriamente en toda la red,
+ (ii) una estructura \emph{funcionalizada en el n\'ucleo} (CF), donde las unidades sensibles al pH ocupan el centro del nanogel, y
+ (iii) una estructura \emph{funcionalizada en la superficie} (SF) en la cual solo las cadenas colgantes en la superficie de la red son ionizables.
   
 
 
@@ -667,7 +644,7 @@ We consider different pH-responsive nanogels, containing either acid (MAA) or ba
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Results and discussion}
+\section{Resultados y discusi\'on}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -763,7 +740,7 @@ Finalmente en la figura \ref{fig:esf:allr-distribution} se muestra la distribuci
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Protein adsorption to MAA-based nanogels}\label{sec:MAA-NGs}
+\subsection{Adsorci\'on de prote\'inas en nanogeles basados en MAA}\label{sec:MAA-NGs}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -897,7 +874,7 @@ Para estas condiciones, la funcionalizaci\'on aleatoria podr\'a liberar toda su 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Insulin adsorption AH-based nanogels} 
+\subsection{Adsorci\'on de insulina en nanogeles basados en  AH} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 La insulina no se adsorbe a los nanogeles de MAA de la secci\'on \ref{sec:MAA-NGs} %(ver \cref*{fig:adsoprtion-vs-pH-insulinMAA_si} en SI).
