@@ -539,18 +539,19 @@ Este sistema de ecuaciones es resuelto usando el m\'etodo de Newton con Jacobian
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-We consider three different proteins:  cytochrome c, insulin and myoglobin.
-To describe these molecules we use a coarse-grained model where each amino acid residue is described by a single particle centered at the position of the $\alpha$-carbon.
-The sequence and position of all $\alpha$-carbons are taken from the crystallographic structure in the corresponding protein data bank entry \addcite[berman2000protein]: 2B4Z for cytochrome c \addcite[mirkin2008high], IZNI for insulin \addcite[bentley1976structure], and 3RGK for myoglobin \addcite[hubbard1990x]. 
- 
- 
 
-The coarse-grained particles in this model are each assigned a volume and a pKa (if the unit is titratable) according to the amino acid that they represent; 
-this is summarized in  tabla \ref{table:Coarse-grain}.
-These pKa's are taken from experimental data and represent average values over a large number of proteins \addcite[grimsley2009summary].
-In most occurrences of a residue, its pKa does not significantly deviate from the average value.
-In  specific instances, however, some residues display a different pKa;
-these special cases are described in the SI.
+Consideramos tres prote\'inas diferentes: citocromo c, insulina y mioglobina.
+Para describir estas mol\'eculas, utilizamos un modelo de grano grueso donde cada residuo de amino\'acido se representa mediante una \'unica part\'icula centrada en la posici\'on del carbono $\alpha$.
+La secuencia y posici\'on de todos los carbonos $\alpha$ se toman de la estructura cristalogr\'afica obtenida de la base de datos de prote\'inas \addcite[berman2000protein]: 2B4Z para el citocromo c \addcite[mirkin2008high], IZNI para la insulina \addcite[bentley1976structure] y 3RGK para la mioglobina \addcite[hubbard1990x].
+
+Las part\'iculas de grano grueso en este modelo se les asigna un volumen y un pKa (si la unidad es titulable) seg\'un el amino\'acido que representan; esto se resume en la Tabla \ref{table:Coarse-grain}.
+Estos pKa se toman de datos experimentales y representan valores promedio sobre un gran n\'umero de proteínas \addcite[grimsley2009summary].
+En la mayor\'ia de los casos, el pKa de un residuo no se desv\'ia significativamente del valor promedio.
+Sin embargo, en casos espec\'ificos, algunos residuos muestran un pKa diferente;
+estos casos especiales se describen en el ap\'endice. 
+
+
+
 
 
 \begin{table}
@@ -576,7 +577,7 @@ Met & 0.124 & & MAA & 0.085 & $4.65(-)$\\
 Phe & 0.135 &   & VA & 0.085 & \\
 \hline
 \end{tabular}
-\caption{Volume and pKa of the coarse-grained particles (amino acid residues, small ions, solvent molecules and polymer segments)  considered in our molecular model.}
+\caption{Volumen y pKa (si corresponde) de las part\'iculas de grano grueso (residuos de amino\'acidos, iones peque\~nos, mol\'eculas de solvente y segmentos polim\'ericos) considerados en nuestro modelo molecular.}
 \label{table:Coarse-grain} 
 \end{table}
 
@@ -587,24 +588,21 @@ From the graph, we obtain the values  9.65 (9.6 \addcite[hristova2019isoelectric
 the values in parentheses are the pI of the proteins reported experimentally. 
 
 
+Utilizando este modelo molecular, la figura \ref{fig:esf:protein-charge} muestra la carga (n\'umero) de las tres prote\'inas en soluci\'on diluida en funci\'on del pH.
+El punto isoel\'ectrico (pI) es el pH en el cual la carga neta de una prote\'ina es cero.
+A partir del gr\'afico, obtenemos los valores 9.65 (9.6 \addcite[hristova2019isoelectric]), 5.5 (5.3 \addcite[guckeisen2019isoelectric]), 7.15 (7.2 \addcite[batys2020myoglobin]) para el pI del citocromo c, insulina y mioglobina respectivamente;
+los valores entre par\'entesis son los pI de las prote\'inas reportados experimentalmente.
+
+
  \begin{figure}[!htb]
      \centering
      \includegraphics[width=0.65\textwidth]{Figures/graphs-gel2/protein-model.pdf}
-     \caption{Left: Charge number of the proteins in a dilute solution as a function of  pH (solid-line curves);
-     filled circles mark  the isoelectric point,
-     where the net charge of the protein is zero.
-     The coarse-grained representation of the proteins is illustrated on the right, where amino acid residues are represented by a single sphere (red: acidic; blue: basic; gray: charge-neutral residues).}
+     \caption{Izquierda: N\'umero de carga de las prote\'inas en una soluci\'on diluida en funci\'on del pH (curvas s\'olidas);
+     	los c\'irculos llenos marcan el punto isoel\'ectrico,
+     	donde la carga neta de la prote\'ina es cero.
+     	La representaci\'on de grano grueso de las prote\'inas se ilustra a la derecha, donde los residuos de amino\'acidos se representan mediante una esfera \'unica (rojo: \'acido; azul: b\'asico; gris: residuos de carga neutral).}
      \label{fig:esf:protein-charge}
  \end{figure}
-
-
-
-
-
-
- 
-
-
 
 
 
