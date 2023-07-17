@@ -14,37 +14,42 @@ Estudio sobre las soluciones coloidales de nanogeles polimericos....
 
 \section{M\'etodo: Simulaci\'on Monte Carlo}
 
-Para modelar la soluci\'on de nanogeles se utiliz\'o el m\'etodo Monte Carlo, espec\'ificamente el algoritmo de Metropolis-Monte Carlo. Este m\'etodo se basa en la generaci\'on aleatoria de n\'umeros y la evaluaci\'on de diferentes estados o configuraciones del sistema de trabajo. En cada paso, se selecciona aleatoriamente una configuraci\'on y se calcula su energ\'ia o probabilidad de acuerdo a un modelo predefinido. Se aplican reglas para la aceptaci\'on o rechazo de dicha configuraci\'on. Este proceso se repite muchas veces para obtener resultados estad\'isticamente significativos y se utilizan para estimar propiedades macrosc\'opicas del sistema.
 
-En el caso espec\'ifico de la soluci\'on de nanogeles, una configuraci\'on consiste en el movimiento y aumento de tama\~no de una part\'icula (nanogel) seleccionada al azar. El m\'etodo Metropolis Monte Carlo se utiliza para simular estas configuraciones y obtener resultados estad\'isticos significativos.
-
-La probabilidad de acetar o no dichos cambios en el sistema biene dado por:
+La simulaci\'on de sistemas de nanogeles en soluci\'on es una herramienta invaluable para comprender su comportamiento y sus propiedades termodin\'amicas. En este estudio, se emple\'o el m\'etodo Monte Carlo, en particular el algoritmo de Metropolis-Monte Carlo, para modelar la soluci\'on de nanogeles.
+El m\'etodo de Metropolis-Monte Carlo se fundamenta en la generaci\'on aleatoria de n\'umeros y la evaluaci\'on de distintos estados o configuraciones del sistema en estudio. En cada paso de la simulaci\'on, se selecciona de manera aleatoria una configuraci\'on y se calcula su energ\'ia o probabilidad seg\'un un modelo predefinido que describe las interacciones entre las part\'iculas de nanogeles y el solvente.
+La simulaci\'on Monte Carlo, mediante el algoritmo de Metropolis-Monte Carlo, ofrece una perspectiva \'unica para explorar las propiedades de los nanogeles en soluci\'on y su comportamiento en diferentes condiciones. 
+En el caso espec\'ifico de nuestra soluci\'on de nanogeles, una configuraci\'on consiste en el movimiento y aumento de tama\~no de una part\'icula (nanogel) seleccionada al azar. 
+En este sentido la probabilidad de acetar o no dichos cambios en el sistema biene dado por:
 
 \begin{align}
-	P = min \{e^{-(\Delta U_{inter} + \Delta U_{intra})},1\}
+	P(s) = min \{e^{-(\Delta U^s_{inter} + \Delta U^s_{intra})},1\}
 \end{align}
 
-En donde $\Delta U_{intra}$ corresponde a la energ\'ia interna de cada nanogel obtenida usando una teor\'ia termodin\'amica detallada en el cap\'itulo  \ref{Chapter-geles}. De esta ultima teor\'ia se obtiene la termodinamica necesarioa para explicar el comportamiento de una nanogel aislado.
+En donde $P(s)$ indica la probabilidad de aceptaci\'on del estado $s$, como mencionamos este consta de un cambio en el tama\~no y posici\'on de una nanogel. $\Delta U^s_{intra}$ corresponde al cambio en la energ\'ia interna de cada nanogel, debido a un cambio en su tama\~no, la energ\'ia de estos estados es obtenida usando una teor\'ia termodin\'amica detallada en el cap\'itulo  \ref{Chapter-geles}. Como moestramos en ese cap\'itulo el modelo de dos fases nos permite obtener la informaci\'on termodin\'amica necesarioa para explicar el comportamiento de una nanogel aislado.
 El costo energetico de adsorber solvente, con sus respectivo iones, energ\'ia el\'astica... 
 Por otro lado la energ\'ia intermolecular, $\Delta U_{inter}$, viene dada por la interacci\'ion de a pares de todos los nanogeles en soluci\'on. 
 Para esta interacci\'on de a pares se ha utilizado un potencial combinado: Hertz-Yukawa. Este potencial fue previamente utilzado en \addcite[weyer2018concentration], en los cuales \addcite[weyer2018concentration] 
 estudiaron la hinchaz\'on y las propiedades estructurales de suspensiones de microgeles i\'onicos su teor\'ia inlcuye las interacciones el\'asticas efectivas de Hertz y una teor\'ia de interacciones electrost\'aticas efectivas dependientes de la densidad (Yukawa). 
-
-Podemos resumir nuestro potencial de trabajo como:
+(un poco m\'as de los potenciales)
+Porque los podemso usar para nuestro sistema..
+materiales blandos que son deformables, por tando es posible modelarlos usando un potencial de Hertz, en el cual se considera la superposici\'on de las part\'iculas involucradas.
+Yukawa por su parte es un potencial del tipo columbico mediado por el medio dilectrico en el que se encuentra. Se ven invlucradas las cargas que envuelven a cada nanogel considerando la longitud de Debye. 
+Podemos resumir nuestro potencial total de trabajo como:
 
 \begin{align}
 	U_{inter}(r) = \begin{cases} U_H + U_Y & \text{if } r \leq a_i + a_j \\ U_Y & \text{if } r > a_i + a_j \end{cases} 
 	\label{eq:HY-potential}
 \end{align}
 
-para lo que se define:
+en donde $r$ es la distancia entre dos nanogeles, definida como la distancia de sus centros. 
+$a_i$ y $a_j$ representan los radios de el nanogel $i$ y $j$ respectivamente. Por ello la condici\'on $r \leq a_i +a_j$ representa la superposici\'on de estas particulas, deformandose y entrando en juego el potencial de Hertz.
+Para mayores distancia a la suma de los radios de cada nanogel se pone en juego el potencial de Yukawa. Para el cual se define:
 \begin{align}
 	\beta u_Y(r) = q_i q_j \frac{e^{\kappa(a_i + a_j)}}{(1 +\kappa a_i)(1 + \kappa a_j)} \frac{e^{-\kappa r}}{r} 
 	\label{eq:yukawa}
 \end{align}
 
-En donde $q_i$ y $q_j$ son las cargas netas que poseen los nanogeles $i$ y $j$ respectivamente. De mismo modo se define el radio de cada part\'icula como $a_i$. El valor $\kappa$ corresponde a la constante de apantallamiento de Debye y $r$ es definido como la distancia entre los centros de masa de cada nanogel.
-
+En donde $q_i$ y $q_j$ son las cargas netas que poseen los nanogeles $i$ y $j$ respectivamente. El valor $\kappa$ corresponde a la constante de apantallamiento de Debye. 
 El pontecial de Hertz, $U_H$, se define como:
 \begin{align}
 	\begin{aligned}
