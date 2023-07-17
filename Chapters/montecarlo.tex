@@ -1,0 +1,56 @@
+\chapter{Soluciones coloidales}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introducci\'on}
+
+en estos ultimos capitulos hemos hecho incapie en la importancia y potencial uso que tienes los geles polimericos. Haciendo enfasis en sus uso para el secuestro de proteinas y/o farmacos de interes terapeutico.
+En ese sentido en los dos ultimos capitulos hemos presentados dos tipos de modelos con los cuales es posible hacer un estudio de la fisicoquimica que involucra a un nano/microgel aislado en solucion.
+En un primer capitulo, \ref{Chapter-geles} hicimos referencia a un modelos robusto con el cual pudimos explicar la respuesta de microgeles con respuesta multiestimulo... 
+En el siguiente capitulo, \ref{Chapter-esfericas}, complejisamos nuestro modelo para investigar como afecta la estructura interna a la respuesta de estos geles, demostrando que el dise\~no  y sintesis,  es un factor importante para optimizar los procesos de encapsulacion y liberacion....
+En este ultimo capitulo presentamos el comportamiento de la solucion de estos nano/microgeles en solucion. 
+
+
+Estudio sobre las soluciones coloidales de nanogeles polimericos....
+
+\section{M\'etodo: Simulaci\'on Monte Carlo}
+
+Para modelar la soluci\'on de nanogeles se utiliz\'o el m\'etodo Monte Carlo, espec\'ificamente el algoritmo de Metropolis-Monte Carlo. Este m\'etodo se basa en la generaci\'on aleatoria de n\'umeros y la evaluaci\'on de diferentes estados o configuraciones del sistema de trabajo. En cada paso, se selecciona aleatoriamente una configuraci\'on y se calcula su energ\'ia o probabilidad de acuerdo a un modelo predefinido. Se aplican reglas para la aceptaci\'on o rechazo de dicha configuraci\'on. Este proceso se repite muchas veces para obtener resultados estad\'isticamente significativos y se utilizan para estimar propiedades macrosc\'opicas del sistema.
+
+En el caso espec\'ifico de la soluci\'on de nanogeles, una configuraci\'on consiste en el movimiento y aumento de tama\~no de una part\'icula (nanogel) seleccionada al azar. El m\'etodo Metropolis Monte Carlo se utiliza para simular estas configuraciones y obtener resultados estad\'isticos significativos.
+
+La probabilidad de acetar o no dichos cambios en el sistema biene dado por:
+
+\begin{align}
+	P = min \{e^{-(\Delta U_{inter} + \Delta U_{intra})},1\}
+\end{align}
+
+En donde $\Delta U_{intra}$ corresponde a la energ\'ia interna de cada nanogel obtenida usando una teor\'ia termodin\'amica detallada en el cap\'itulo  \ref{Chapter-geles}. De esta ultima teor\'ia se obtiene la termodinamica necesarioa para explicar el comportamiento de una nanogel aislado.
+El costo energetico de adsorber solvente, con sus respectivo iones, energ\'ia el\'astica... 
+Por otro lado la energ\'ia intermolecular, $\Delta U_{inter}$, viene dada por la interacci\'ion de a pares de todos los nanogeles en soluci\'on. 
+Para esta interacci\'on de a pares se ha utilizado un potencial combinado: Hertz-Yukawa. Este potencial fue previamente utilzado en \addcite[weyer2018concentration], en los cuales \addcite[weyer2018concentration] 
+estudiaron la hinchaz\'on y las propiedades estructurales de suspensiones de microgeles i\'onicos su teor\'ia inlcuye las interacciones el\'asticas efectivas de Hertz y una teor\'ia de interacciones electrost\'aticas efectivas dependientes de la densidad (Yukawa). 
+
+Podemos resumir nuestro potencial de trabajo como:
+
+\begin{align}
+	U_{inter}(r) = \begin{cases} U_H + U_Y & \text{if } r \leq a_i + a_j \\ U_Y & \text{if } r > a_i + a_j \end{cases} 
+	\label{eq:HY-potential}
+\end{align}
+
+para lo que se define:
+\begin{align}
+	\beta u_Y(r) = q_i q_j \frac{e^{\kappa(a_i + a_j)}}{(1 +\kappa a_i)(1 + \kappa a_j)} \frac{e^{-\kappa r}}{r} 
+	\label{eq:yukawa}
+\end{align}
+
+En donde $q_i$ y $q_j$ son las cargas netas que poseen los nanogeles $i$ y $j$ respectivamente. De mismo modo se define el radio de cada part\'icula como $a_i$. El valor $\kappa$ corresponde a la constante de apantallamiento de Debye y $r$ es definido como la distancia entre los centros de masa de cada nanogel.
+
+El pontecial de Hertz, $U_H$, se define como:
+\begin{align}
+	\begin{aligned}
+		& \beta u_H (r) = \left(\frac{1-r}{a_i + a_j}\right)^{5/2}\times b_{ij} \\
+		& b_{ij} = \frac{6}{5\pi}\frac{N_{chains}}{\frac{4}{3}\pi R_0^3}(a_i + a_j)^2(a_ia_j)^{1/2}(a_i^3 + a_j^3) 
+	\end{aligned}
+\end{align}
+
+En donde $b_{ij}$ es la constante de interacci\'on entre la part\'icula $i$ y $j$ la cual tiene en cuanta el n\'umero de cadenas que compone al nanogel: $N_{chains}$, los radios de las part\'iculas interactuantes $a_i$ y $a_j$ respectivamente y el valor de $r$ que determina la distancia al centro de masa del par interactuante. 
