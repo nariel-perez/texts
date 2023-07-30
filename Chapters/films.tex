@@ -478,7 +478,7 @@ Como se mencion\'o al inicio de esta secci\'on la resoluci\'on del bulk de la so
 
 Hay que tener en cuenta que las densidades en el bulk de la soluci\'on son p\'arametro de entrada en cada c\'alculo. Una vez que se establecen el pH, la concentraci\'on de sal y la concentraci\'on de nuestra prote\'ina, estas densidades se determinan completamente (usando la electroneutralidad de la soluci\'on del bulk y la autodisociaci\'on de equilibrio del agua).
 
-\section{resoluci\'on num\'erica}\label{sec:film:reso-numerica}
+\section{Resoluci\'on num\'erica}\label{sec:film:reso-numerica}
 
 La obtenci\'on de resultados a partir de la teor\'ia planteada en estas secciones requiere la soluci\'on n\'umerica de ecuaciones integro-diferenciales. Para tal prop\'osito es conveniente pasar de un sistema continuo a uno discreto. 
 La discretizaci\'on del sistema se realiza en capaz de espesor $\delta$. La suma sobre cada uno de estas capaz reemplazan a las integrales a lo largo del eje $z$.
@@ -571,7 +571,7 @@ En resumen dadas las condiciones del bulk de la soluci\'on, o condiciones de lab
 De esta forma el n\'umero de ecuaciones totales a resolver es $2n_z$ (dos por cada capa). el n\'umero de t\'erminos de cada ecuaci\'on es dependiente de la cantidad de especies involucradas con sus respectivas conformaciones. 
 Este sistema de ecuaciones es resuelto usando el m\'etodo de Newton con Jacobiano libre, implementado en c\'odigos FORTRAN desarrollados en el grupo de trabajo.
 
-\section{resultados} \label{sec:film:resultados}
+\section{Resultados} \label{sec:film:resultados}
 
 
 Los hidrogeles (geles polim\'ercios en general) compuestos por cadenas de protonables son sensibles a los cambios de pH. Esta respuesta se debe al equilibrio qu\'imico de protonaci\'on/desprotonaci\'on de las unidades \'acidas o b'asicas que componen la red. Cuando se varía el pH del entorno en el que se encuentra el gel, se producen cambios en la carga el\'ectrica de las unidades titulables, lo que a su vez afecta las propiedades  del material.
@@ -597,14 +597,10 @@ En el caso de mol\'eculas b\'asicas, su estado de carga es contrario al de las m
 
 
 En soluciones diluidas, el grado de disociaci\'on $f$ ( y el de carga $f_c$) son completamente determinados por el pH de la soluci\'on y el $pK_a$ intr\'inseco del par \'acido/base. Cuando el $pH = pK_a$, la mitad de los grupos titulables se encuentran disociados ( $f = 0.5$).  Para valores de pH de $1/,\pm$ corresponden a estados con un $90\%$ y $10\%$de disociaci\'on, respectivamente. Es decir, cuando el pH se encuentra cerca del $pK_a$, la transici\'on del $10\%$ al $90\%$ de desprotonaci\'on ocurre dentro de dos unidades de pH de la soluci\'on ideal.
-
 Estas consideraciones de soluci\'on ideal se utilizan com\'unmente para estimar el grado de carga de las unidades \'acidas dentro de cadenas polim\'ericas. Sin embargo, este comportamiento es diferente para sistemas en confinamiento. Las unidades protonables que forman parte de una red polim\'erica son un ejemplo de ello, lo cual modifica significativamente su comportamiento de protonaci\'on.
 
 
-\textbf{Red polim\'erica} \\
-
 A continuaci\'on, describiremos el comportamiento de estos sistemas confinados, es decir, hidrogeles sensibles al pH, haciendo uso de la teor\'ia planteada anteriormente.
-
 A diferencia de las soluciones diluidas, las unidades \'acidas en una red de pol\'imeros experimentan repulsiones electrost\'aticas cuando est\'an cargadas. Esto conduce a una disminuci\'on significativa en la disociaci\'on de estos grupos en comparaci\'on con las condiciones ideales, con el objetivo de reducir la fuerza de las repulsiones dentro de la red polim\'erica.
 
 La figura \ref{fig:film:degree-film} ilustra este comportamiento y muestra el grado medio de carga de los segmentos de un film compuesto por una red de cadenas de \'acido poli(metacrílico) (PMAA) en contacto con soluciones que tienen diferentes concentraciones de sal.
