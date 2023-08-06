@@ -57,11 +57,26 @@ Para mayores distancia a la suma de los radios de cada nanogel se pone en juego 
 
 En donde $q_i$ y $q_j$ son las cargas netas que poseen los nanogeles $i$ y $j$ respectivamente. El valor $\kappa$ corresponde a la constante de apantallamiento de Debye. 
 El pontecial de Hertz, $U_H$, se define como:
+ 
+
 \begin{align}
 	\begin{aligned}
-		& \beta u_H (r) = \left(\frac{1-r}{a_i + a_j}\right)^{5/2}\times b_{ij} \\
-		& b_{ij} = \frac{6}{5\pi}\frac{N_{chains}}{\frac{4}{3}\pi R_0^3}(a_i + a_j)^2(a_ia_j)^{1/2}(a_i^3 + a_j^3) 
+		& \beta u_H (r) = \left(\frac{1-r}{a_i + a_j}\right)^{5/2}\times b_{12} \\
 	\end{aligned}
 \end{align}
 
-En donde $b_{ij}$ es la constante de interacci\'on entre la part\'icula $i$ y $j$ la cual tiene en cuanta el n\'umero de cadenas que compone al nanogel: $N_{chains}$, los radios de las part\'iculas interactuantes $a_i$ y $a_j$ respectivamente y el valor de $r$ que determina la distancia al centro de masa del par interactuante. 
+
+En donde $b_{12}$ es la constante de interacci\'on entre las part\'iculas la cual depende de las propiedades el\'asticas del nanogel a trav\'es del m\'odulo de Young $\Lambda$ y el radio de Poisson $\nu$. \addcite[landau] La teor\'ia de escalado en sistemas de redes polim\'ericas predice que en buenos solventes \addcite que el m\'odulo de Young  escala linealmente con la temperatura y la densidad de los entrecruzamientos (o n\'umero de cadenas): $\Lambda \approx TN_{ch}/v$. Cuanto m\'as densos sean los entrecruzamientos, m\'as r\'igido ser\'a el gel.
+Con lo cual podemos definir $b_{12}^\ast = \beta b_{12}$ el cual nos independiza de la temperatura y solo tenemos la dependencia con el n\'umero de cadenas ($N_{ch}$) y grado de entrecruzamiento de nuestro nanogel. 
+
+
+\section{Resultados}
+
+
+\begin{figure*}[!tb]
+	\centering
+	\includegraphics[width=1\linewidth]{Figures/graph-mc/sizes.png}
+	\caption{Gr\'afico del probabilidad de tama\~no de la soluci\'on de  nanogeles en funci\'on de la densidad... fracci\'on de volumen ocupada.}
+	\label{fig:mc:sizes-phi}
+\end{figure*}
+
