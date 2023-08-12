@@ -13,7 +13,7 @@ Para estos microgeles se usaron drogas modelos, ampliamente utilizadas para trat
 En este cap\'itulo damos un paso m\'as en el estudio de estos sistemas dejamos atr\'as el modelo homogeneo de gel y damos estructura interna, definida, a nuestros geles. En particular trabajamos con nanogeles. 
 El uso de la teor\'ia molecular aplicada para films polim\'ericos en el cap\'itulo \ref{Chapter-film} es utilizada y de esta manera se incorpora la informaci\'on molecular que le da la estructura a todo el sistema polim\'erico.
 Para lograr esto se necesit\'o de diferentes configuraciones para nuestra part\'icula principal de nuestro sistema: nanogel.
-La generación de estas configuraciones representaron una metodolog\'ia diferente y un desafio en s\'i. \textcolor{red}{agregar en anexo}.
+La generación de estas configuraciones representaron una metodolog\'ia diferente y un desafio en s\'i. Vease el anexo \ref{anexo-configuraciones}.
 La informaci\'on molecular obtenida con la generaci\'on de configuraciones nos permite acceder al comportamiento en el interior del nanogel. 
 En este cap\'itulo presentamos informaci\'on sobre el reordenamiento interno de los nanogeles  como respuesta a cambios en el pH y concentraci\'on de sal. Se mostrar\'a estudios de adsorci\'on sobre prote\'inas modelo, insulina, mioglobina y citocromo c; de cuyos estudios se extrae nueva informaci\'on, adsorci\'on  localizada, con lo cual es posible pensar no solo en el tipo de nanogel sino en el tipo de sintes\'is necesaria para obtener un  dise\~no que se adecue a las necesidades de transportador que se requiere.
 Esto ultimo es un nuevo paso en la investigaci\'on de estos sistemas polim\'ericos, informaci\'on que no era posible obtener con el modelo anterior, cap. \ref{Chapter-geles}.
@@ -538,10 +538,10 @@ Este sistema de ecuaciones es resuelto usando el m\'etodo de Newton con Jacobian
 
 Consideramos tres prote\'inas diferentes: citocromo c, insulina y mioglobina.
 Para describir estas mol\'eculas, utilizamos un modelo de grano grueso donde cada residuo de amino\'acido se representa mediante una \'unica part\'icula centrada en la posici\'on del carbono $\alpha$.
-La secuencia y posici\'on de todos los carbonos $\alpha$ se toman de la estructura cristalogr\'afica obtenida de la base de datos de prote\'inas \addcite[berman2000protein]: 2B4Z para el citocromo c \addcite[mirkin2008high], IZNI para la insulina \addcite[bentley1976structure] y 3RGK para la mioglobina \addcite[hubbard1990x].
+La secuencia y posici\'on de todos los carbonos $\alpha$ se toman de la estructura cristalogr\'afica obtenida de la base de datos de prote\'inas \cite{berman2000protein}: 2B4Z para el citocromo c \cite{mirkin2008high}, IZNI para la insulina \cite{bentley1976structure} y 3RGK para la mioglobina \cite{hubbard1990x}.
 
 Las part\'iculas de grano grueso en este modelo se les asigna un volumen y un pKa (si la unidad es titulable) seg\'un el amino\'acido que representan; esto se resume en la Tabla \ref{table:Coarse-grain}.
-Estos pKa se toman de datos experimentales y representan valores promedio sobre un gran n\'umero de proteínas \addcite[grimsley2009summary].
+Estos pKa se toman de datos experimentales y representan valores promedio sobre un gran n\'umero de proteínas \cite{grimsley2009summary}.
 En la mayor\'ia de los casos, el pKa de un residuo no se desv\'ia significativamente del valor promedio.
 Sin embargo, en casos espec\'ificos, algunos residuos muestran un pKa diferente;
 estos casos especiales se describen en el ap\'endice. 
@@ -578,15 +578,9 @@ Phe & 0.135 &   & VA & 0.085 & \\
 \end{table}
 
 
-Using this molecular model,  figura \ref{fig:esf:protein-charge} shows the charge (number) of the three proteins in dilute solution as a function of  pH.
-The isoelectric point (pI) is the pH at which the net charge of a protein is zero.
-From the graph, we obtain the values  9.65 (9.6 \addcite[hristova2019isoelectric]), 5.5 (5.3 \addcite[guckeisen2019isoelectric]), 7.15 (7.2 \addcite[batys2020myoglobin]) for the pI of cytochrome c, insulin, and myoglobin respectively;
-the values in parentheses are the pI of the proteins reported experimentally. 
-
-
 Utilizando este modelo molecular, la figura \ref{fig:esf:protein-charge} muestra la carga (n\'umero) de las tres prote\'inas en soluci\'on diluida en funci\'on del pH.
 El punto isoel\'ectrico (pI) es el pH en el cual la carga neta de una prote\'ina es cero.
-A partir del gr\'afico, obtenemos los valores 9.65 (9.6 \addcite[hristova2019isoelectric]), 5.5 (5.3 \addcite[guckeisen2019isoelectric]), 7.15 (7.2 \addcite[batys2020myoglobin]) para el pI del citocromo c, insulina y mioglobina respectivamente;
+A partir del gr\'afico, obtenemos los valores 9.65 (9.6 \cite{hristova2019isoelectric]}, 5.5 (5.3 \cite{guckeisen2019isoelectric}), 7.15 (7.2 \cite{batys2020myoglobin}) para el pI del citocromo c, insulina y mioglobina respectivamente;
 los valores entre par\'entesis son los pI de las prote\'inas reportados experimentalmente.
 
 
@@ -611,7 +605,7 @@ La red del nanogel est\'a compuesta por cadenas polim\'ericas entrecruzadas de 2
 
 La red del nanogel posee una topolog\'ia tipo diamante, donde los segmetos entrecruzantes se colocan en la posici\'on original de los \'atomos de carbono. Los entrecruzantes se conectan a 4 cadenas polim\'ericas. La construcci\'on de esta red se realiz\'o en primera instancia por la traslaci\'on tridimencional de la celda unidad en donde todas las cadenas polim\'ericas se encuentran alargadas, como segunod paso se realiz\'o un corte esferico de radio $R_{cut}$ medido desde el centro de masa de la estrucutura. El valor de $R_{cut}$ se hace de tal manera de obtener aproximadamente 10000 segmentos en total. 
 
-Originalmente, todas las cadenas polim\'ericas se  conectan a dos entrecruzantes, pero como resultado de este procedimiento, el corte esferico, algunascadenas resultan quedar colgando en la superficie de la red, es decir  conectadas a un solo entrecruzante. La mayor\'ia de estas cadenas \emph{colgantes} superficiales son m\'as cortas que 25 segmentos. En conjunto, estas cadenas contienen el 22\% del n\'umero total de segmentos. Para generar las diferentes conformaciones moleculares de la red del pol\'imero, se ha realizado simulaciones de din\'amica molecular usando GROMACS 5.1.2 \addcite[lindahl2001gromacs].
+Originalmente, todas las cadenas polim\'ericas se  conectan a dos entrecruzantes, pero como resultado de este procedimiento, el corte esferico, algunascadenas resultan quedar colgando en la superficie de la red, es decir  conectadas a un solo entrecruzante. La mayor\'ia de estas cadenas \emph{colgantes} superficiales son m\'as cortas que 25 segmentos. En conjunto, estas cadenas contienen el 22\% del n\'umero total de segmentos. Para generar las diferentes conformaciones moleculares de la red del pol\'imero, se ha realizado simulaciones de din\'amica molecular usando GROMACS 5.1.2\cite{lindahl2001gromacs}.
 
  \begin{figure}[!htb]
      \centering
