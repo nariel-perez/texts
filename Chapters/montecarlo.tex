@@ -3,26 +3,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introducci\'on}
 
-En los \'ultimos cap\'itulos, hemos hecho hincapi\'e en la importancia y el potencial uso de los geles polim\'ericos. Nos hemos enfocado especialmente en su aplicaci\'on para el secuestro de prote\'inas y/o f\'armacos de inter\'es terap\'eutico.
+En los \'ultimos cap\'itulos, hemos hecho hincapi\'e en la importancia y el potencial uso de los geles polim\'ericos. Dado el tema de investigaci\'on de esta tesis nos hemos enfocado especialmente en su aplicaci\'on para el secuestro de prote\'inas y/o f\'armacos de inter\'es terap\'eutico.
 En este sentido, en los dos \'ultimos cap\'itulos hemos presentado dos tipos de modelos que permiten estudiar la fisicoqu\'imica de un nano/microgel aislado en soluci\'on.
-En el cap\'itulo  \ref{Chapter-geles} hemos hecho referencia a un modelo robusto en el cual se ha modelado el sistema como uno de dos fases con el cual logramos explicar la respuesta de los microgeles con respuesta a  m\'ultiples est\'imulos. Como los cambios en pH, temperatura o concetraci\'on de sal afectan a la capacidad de adsorber y liberar distintas moleculas, as\'i como sus cambios de tama\~no y carga. 
-En el siguiente cap\'itulo,\ref{Chapter-esfericas} , hemos complejizado nuestro modelo para investigar c\'omo la estructura interna afecta la respuesta de estos geles. Así como la obtención de información que no era accesible con el modelo anterior: localización de la adsorci\'on y reordenamiendo de la estructura interna de los geles debido a est\'imulos externos.
-Con el modelado propuesto en este cap\'itulo  se ha podido  demostrar  que el dise\~no de la estructura de los nanogeles,  pensar en distintas estrateg\'ias de  s\'intesis, son factores importantes para optimizar los procesos de encapsulaci\'on y liberaci\'on de prote\'inas. 
-Para poder acercanos más a los modelos experimentales damos un paso hacia las soluciones de nanogeles, las cuales son las que se utilizan para el desarrolo tecnologico que nos proporcionan estos sistemas polim\'ericos.
+En el cap\'itulo  \ref{Chapter-geles} hemos hecho referencia a un modelo robusto, un modelo de dos fases, con el cual logramos explicar la respuesta de los microgeles con respuesta a  m\'ultiples est\'imulos. Como los cambios en pH, temperatura o concetraci\'on de sal afectan a la capacidad de adsorber y liberar distintas moleculas, as\'i como sus cambios de tama\~no y carga. 
+En el siguiente cap\'itulo,\ref{Chapter-esfericas} , se ha complejizado nuestro modelo para investigar c\'omo la estructura interna afecta la respuesta de estos geles. Al hacer esto obtuvimos nueva informaci\'on que no era accesible con el modelo anterior: localizaci\'on de la adsorci\'on y reordenamiendo de la estructura interna de los geles debido a est\'imulos externos.
+Con el modelado propuesto en cap\'itulo \ref{Chapter-esfericas}  se ha podido  demostrar  que el dise\~no de la estructura de los nanogeles,  pensar en distintas estrateg\'ias de  s\'intesis, son factores importantes para optimizar los procesos de encapsulaci\'on y liberaci\'on de prote\'inas. 
+Siendo este uno de los primeros pasos, a nivel experimental, para el dise\~no de trasnportadores de drogas.
 
-En este \'ultimo cap\'itulo,  indagaremos la fisicoqu\'imica de las soluciones de nanogeles. Como se ven afectados los comportamientos individuales, ya reportados en los cap\'itulos anteriores, ahora en funci\'on de la cantidad de ellos en soluci\'on, su concentraci\'on.
-En esta primera aproximaci\'on usamos como m\'etodo de estudio simulaciones del tipo MonteCarlo y como referencia se utiliza el modelo y teor\'ia del sistema de dos fases presentado en el cap\'itulo \ref{Chapter-geles}. La combinaci'on de estos estudios nos permite tener informaci\'on que logra explicar comportamientos reportados experimentalmente como lo son ...
-\textcolor{red}{agregar citas de algunos resultados experimentales}
-
-
-
-Estudio sobre las soluciones coloidales de nanogeles polimericos....
+Para poder acercanos m\'as a estos modelos experimentales damos un paso hacia las soluciones de nanogeles. En los cap\'itulos previos se han consideras geles aislados, o en un dilusi\'on infinita.
+En este \'ultimo cap\'itulo,  indagaremos la fisicoqu\'imica de las soluciones de nanogeles. Como se ven afectados los comportamientos individuales, ya reportados en los cap\'itulos anteriores, ahora en funci\'on de la cantidad de ellos en soluci\'on, es decir que tan concentrados se encuentren la soluci\'on.
+En esta primera aproximaci\'on usamos como m\'etodo de estudio simulaciones del tipo MonteCarlo y como referencia se utiliza el modelo y teor\'ia del sistema de dos fases presentado en el cap\'itulo \ref{Chapter-geles}. En la siguiente secci\'on mostraremos c\'omo lo incorporamos y hablamos de ``modelo de referencia''. 
 
 \section{M\'etodo: Simulaci\'on Monte Carlo}
 
 
 La simulaci\'on de sistemas de nanogeles en soluci\'on es una herramienta invaluable para comprender su comportamiento y sus propiedades termodin\'amicas. En este estudio, se emple\'o el m\'etodo Monte Carlo, en particular el algoritmo de Metropolis-Monte Carlo, para modelar la soluci\'on de nanogeles.
-El m\'etodo de Metropolis-Monte Carlo se fundamenta en la generaci\'on aleatoria de n\'umeros y la evaluaci\'on de distintos estados o configuraciones del sistema en estudio. En cada paso de la simulaci\'on, se selecciona de manera aleatoria una configuraci\'on y se calcula su energ\'ia o probabilidad seg\'un un modelo predefinido que describe las interacciones entre las part\'iculas de nanogeles y el solvente.
+El m\'etodo de Metropolis-Monte Carlo \addcite se fundamenta en la generaci\'on aleatoria de n\'umeros y la evaluaci\'on de distintos estados o configuraciones del sistema en estudio. En cada paso de la simulaci\'on, se selecciona de manera aleatoria una configuraci\'on y se calcula su energ\'ia o probabilidad seg\'un un modelo predefinido que describe las interacciones entre las part\'iculas de nanogeles y el solvente.
 La simulaci\'on Monte Carlo, mediante el algoritmo de Metropolis-Monte Carlo, ofrece una perspectiva \'unica para explorar las propiedades de los nanogeles en soluci\'on y su comportamiento en diferentes condiciones. 
 En el caso espec\'ifico de nuestra soluci\'on de nanogeles, una configuraci\'on consiste en el movimiento y aumento de tama\~no de una part\'icula (nanogel) seleccionada al azar. 
 En este sentido la probabilidad de acetar o no dichos cambios en el sistema biene dado por:
@@ -31,8 +27,8 @@ En este sentido la probabilidad de acetar o no dichos cambios en el sistema bien
 	P(s) = min \{e^{-(\Delta U^s_{inter} + \Delta U^s_{intra})},1\}
 \end{align}
 
-En donde $P(s)$ indica la probabilidad de aceptaci\'on del estado $s$, como mencionamos este consta de un cambio en el tama\~no y posici\'on de una nanogel. $\Delta U^s_{intra}$ corresponde al cambio en la energ\'ia interna de cada nanogel, debido a un cambio en su tama\~no, la energ\'ia de estos estados es obtenida usando una teor\'ia termodin\'amica detallada en el cap\'itulo  \ref{Chapter-geles}. Como moestramos en ese cap\'itulo el modelo de dos fases nos permite obtener la informaci\'on termodin\'amica necesarioa para explicar el comportamiento de una nanogel aislado.
-El costo energetico de adsorber solvente, con sus respectivo iones, energ\'ia el\'astica... 
+En donde $P(s)$ indica la probabilidad de aceptaci\'on del estado $s$, este estado consta de un cambio en el tama\~no y posici\'on de una nanogel. $\Delta U^s_{intra}$ corresponde al cambio en la energ\'ia interna de cada nanogel, debido a un cambio en su tama\~no, la energ\'ia de estos estados es obtenida usando una teor\'ia termodin\'amica detallada en el cap\'itulo  \ref{Chapter-geles}. El modelo de dos fases nos permite obtener la informaci\'on termodin\'amica necesarioa para explicar el comportamiento de una nanogel aislado.
+El costo energetico de adsorber solvente, con sus respectivo iones, energ\'ia el\'astica, entrop\'ias de mezcla, entre otros.
 Por otro lado la energ\'ia intermolecular, $\Delta U_{inter}$, viene dada por la interacci\'ion de a pares de todos los nanogeles en soluci\'on. 
 Para esta interacci\'on de a pares se ha utilizado un potencial combinado: Hertz-Yukawa. Este potencial fue previamente utilzado en \addcite[weyer2018concentration], en los cuales \addcite[weyer2018concentration] 
 estudiaron la hinchaz\'on y las propiedades estructurales de suspensiones de microgeles i\'onicos su teor\'ia inlcuye las interacciones el\'asticas efectivas de Hertz y una teor\'ia de interacciones electrost\'aticas efectivas dependientes de la densidad (Yukawa). 
