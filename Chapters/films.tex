@@ -1,17 +1,14 @@
 % Chapter 2
 
-\chapter{Antecedentes} % Main chapter title
+\chapter{Films polim\'ericos} % Main chapter title
 
 \label{Chapter-film} % For referencing the chapter elsewhere, use \ref{Chapter1}
 
-Para estudiar todos los sistemas que presentaremos en cada cap\'itulo, aplicaremos una teor\'ia molecular.
-Este enfoque te\'orico permite describir el tama\~no, la forma, la distribuci\'on de carga, el estado de protonaci\'on y la conformaci\'on de todas las especies moleculares que constituyen al sistema. 
-Mediante el uso de teor\'ia a nivel molecular, se ha logrado estudiar la termodin\'amica de hidrogeles de cadenas de poli\'acido reticuladas, incluyendo pel\'iculas delgadas depositadas en superficies \cite{longo2012molecular} y pel\'iculas grafteadas en superficies \cite{longo2014non} en estos trabajos se ha investigado el rol que cumple los cambios en el pH y la concetranci\'on de sal respectivamente. En otros trabajos se ha aplicado este marco te\'orico para considerar la adsorci\'on de p\'eptidos y prote\'inas en nanofilmes de hidrogel de cadenas de poli\'acido entrecruzadas \cite{longo2014equilibrium,narambuena2015lysozyme,longo2016adsorption} observadose el trabajo no trivial que tiene el pH al momento de protonar/deprotonar a los distintos adsorbatos. El m\'etodo que usaremos representa una extensi\'on de las teor\'ias moleculares desarrolladas por Szleifer y colaboradores para investigar la adsorci\'on de prote\'inas en capas de pol\'imeros \cite{hagemann2018use,szleifer1997protein,fang2005kinetics}, y el comportamiento de capas de polielectrolitos d\'ebiles \cite{nap2006weak}. Las predicciones de esta teor\'ia se han demostrado estar en excelente acuerdo cuantitativo con observaciones experimentales para una variedad de sistemas polim\'ericos \cite{tagliazucchi2010responsive,wu2007behavior}.
-Estos resultados se lograron mediante la formulaci\'on de una energ\'ia libre general que incluye todas las contribuciones relevantes de estos sistemas polim\'ericos: el equilibrio \'acido-base, la p\'erdida entr\'opica de confinamiento molecular, los grados de libertad conformacionales de la red y las prote\'inas (o adsorbatos en general), y las interacciones electrost\'aticas, de Van der Waals y est\'ericas. En estos trabajos se ha buscado comprender c\'omo la adsorci\'on en estas pel\'iculas de hidrogel depende del pH y la concentraci\'on de sal, tanto en soluciones de prote\'inas individuales como en mezclas. En este m\'etodo, el estado de protonaci\'on de los residuos de prote\'inas y de los segmentos de la red no se asume a priori en funci\'on del pH de la soluci\'on (el seno o bulk), sino que se predice localmente como resultado de la posici\'on del grupo y su entorno local. Nuestros estudios resaltan el papel no trivial que desempe\~na la protonaci\'on de los amino\'acidos en la adsorci\'on de prote\'inas. 
+\section{Introducci\'on/Motivaci\'on}
 
 En esta secci\'on nos valdremos de una  red polim\'erica que da estructura a un film polim\'erico. Este sistema nos ayudar\'a a introducirnos en la teor\'ia molecular, as\'i como tambi\'en a eplicar algunos concentos que nos ser\'an de suma importancia en los pr\'oximos cap\'itulos.
 
-\section{Te\'oria Molecular en sistemas polim\'ericos: films} \label{sec:film-teoria}
+\section{Te\'oria Molecular } \label{sec:film-teoria}
 
 El m\'etodo propuesto consiste en minimizar una energ\'ia libre generalizada que incluye toda la termodinamica relevante que engloba los procesos del sistema polim\'erico con una soluci\'on.
 Para tal fin se usamos  una descripci\'on molecular de grano grueso de las diferentes especies qu\'imicas que componen el sistema.
@@ -571,6 +568,8 @@ En resumen dadas las condiciones del bulk de la soluci\'on, o condiciones de lab
 De esta forma el n\'umero de ecuaciones totales a resolver es $2n_z$ (dos por cada capa). el n\'umero de t\'erminos de cada ecuaci\'on es dependiente de la cantidad de especies involucradas con sus respectivas conformaciones. 
 Este sistema de ecuaciones es resuelto usando el m\'etodo de Newton con Jacobiano libre, implementado en c\'odigos FORTRAN desarrollados en el grupo de trabajo.
 
+\textcolor{red}{esquema TM}
+\includegraphics[width=10cm]{example-image-c} 
 \section{Resultados} \label{sec:film:resultados}
 
 
