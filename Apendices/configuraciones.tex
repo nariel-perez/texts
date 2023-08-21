@@ -19,7 +19,7 @@ Para construir esta red, primero definimos una estructura tridimensional donde t
 
 Originalmente, todas las cadenas de pol\'imeros conectan dos entrecruzamientos, pero como resultado del procedimiento mencionado anteriormente, algunas quedan colgando en la superficie de la red y se conectan solo a un entrecruzamiento. Estas cadenas colgantes contienen el 22\% del n\'umero total de segmentos.
 
-Para obtener configuraciones de esta estructura, hemos realizado simulaciones de Din\'amica Molecular utilizando GROMACS 5.1.2 \addcite[lindahl2001gromacs].
+Para obtener configuraciones de esta estructura, hemos realizado simulaciones de Din\'amica Molecular utilizando GROMACS 5.1.2 \cite{lindahl2001gromacs}
 Para describir las interacciones no enlazadas entre los segmentos de la red, utilizamos un potencial de Leonard-Jones puramente repulsivo con un desplazamiento.
 
 \begin{equation}
@@ -48,7 +48,7 @@ De manera simplificada, la energ\'ia potencial asociada con esta fuerza externa 
 
 Donde $r_i$ es la distancia entre la posici\'on del segmento entrecruzador $i$ y el centro de masa de la red, y $k_{fb}$ es la constante de fuerza.
 
-Un enfoque similar puede utilizarse para generar conformaciones de red elongadas (hinchadas). En este caso, aplicamos un potencial arm\'onico que restringe las part\'iculas fuera de una regi\'on esférica espec\'ifica. Esta situaci\'on se describe utilizando valores negativos de $r_{fb}$, y este potencial solo se aplica a los entrecruzamientos m\'as superficiales de la red. M\'as detalles sobre estos potenciales con fondo plano se pueden encontrar en la referencia \addcite[GROMACSRestraints].
+Un enfoque similar puede utilizarse para generar conformaciones de red elongadas (hinchadas). En este caso, aplicamos un potencial arm\'onico que restringe las part\'iculas fuera de una regi\'on esférica espec\'ifica. Esta situaci\'on se describe utilizando valores negativos de $r_{fb}$, y este potencial solo se aplica a los entrecruzamientos m\'as superficiales de la red. M\'as detalles sobre estos potenciales con fondo plano se pueden encontrar en la referencia \cite{GROMACSRestraints}.
 
 Para generar conformaciones compactas, hemos realizado simulaciones de Din\'amica Molecular utilizando $r_{fb} = 17.5$, 20, 22.5 y 25 en unidades de $\sigma$.
 
