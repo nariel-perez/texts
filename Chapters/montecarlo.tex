@@ -84,17 +84,25 @@ El potencial zeta es una medida de la carga el\'ectrica neta en la superficie de
 En los nanogeles, el potencial zeta se genera por las cargas el\'ectricas de las cadenas polim\'ericas que forman la red del gel. Las cadenas  pueden tener carga positiva o negativa, dependiendo de los grupos funcionales que contengan. De este modo el potencial zeta puede ser positivo, negativo o neutro.
 
 El potencial zeta de un nanogel afecta su estabilidad de varias maneras. Cuando el potencial zeta es positivo, los nanogel se repelen entre s\'i, lo que hace m\'as estable en soluci\'o. Cuando el potencial zeta es negativo, las part\'iculas del nanogel se atraen entre s\'i, lo que puede hacer que los nanogeles se aglomeren.
-Las cargas negativas de las superficies de los nanogeles no est\'an directamente en contacto entre s\'i. Estas cargan se ecuentran  separadas por una capa de agua. El agua tiene una carga positiva neta, por lo que las cargas negativas de los nanogeles son atra\'idas por la capa de agua. Esta atracción es m\'as fuerte que la repulsi\'on entre las cargas negativas, por lo que los nanogeles se aglomeran.
+Las cargas negativas de las superficies de los nanogeles no est\'an directamente en contacto entre s\'i. Estas cargan se ecuentran  separadas por una capa de agua. El agua tiene una carga positiva neta, por lo que las cargas negativas de los nanogeles son atra\'idas por la capa de agua. Esta atracci\'on es m\'as fuerte que la repulsi\'on entre las cargas negativas, por lo que los nanogeles se aglomeran.
+
+Luego el potencial zeta puede definirse como: \addcite[libro S\&C]
 
 \begin{align}
-	Z_{net}(a) = (1 + ka)e^{-ka} \frac{3Z}{k^2a^2}\left(\cosh(ka) - \frac{\sinh(ka)}{ka}\right)
+	\zeta (a) \propto \frac{Z_{net}}{a} \frac{1}{1 +ka}
 	\label{eq:mc:potzeta}
 \end{align}
 
 
-\noindent en donde  $k$ es la inversa de la lingitud de Debye, $a$ es el radio del nanogel y $Z$ es la carga dada por los segmentos cargados de la red polim\'erica.
-\section{Resultados}
+\noindent en donde  $k$ es la inversa de la lingitud de Debye, $a$ es el radio del nanogel y $Z_{net}$ es la carga neta que se observa del nanogel al considerarlo como un nano-ion \addcite[Denton 2003]. Esta carga se deriva de la interacci\'on electrost\'atica que ocurre con la part\'icula y los contraiones que lo rodean:
+\begin{align}
+	Z_{net}(a) = (1 + ka)e^{-ka} \frac{3Z}{k^2a^2}\left(\cosh(ka) - \frac{\sinh(ka)}{ka}\right)
+	\label{eq:mc:znet}
+\end{align}
 
+\noindent en donde $Z$ es definida como la carga orginada por el grado de carga de los segmentos cargados que componen al nanogel.
+
+\section{Resultados}
 
 \begin{figure*}[!tb]
 	\centering
