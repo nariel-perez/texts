@@ -1,0 +1,50 @@
+
+\section{Entrop\'ia de mezcla}
+Consideremos un sistema en la cual solo hay traslaciones.
+En un sistema gran can\'onico la funci\'on de partici\'on viene dada por \textcolor{red}{(agregar cita libro Hill)}:
+\begin{align}
+	Q=\frac{q^N}{N !} && \text{, donde $q=\frac{Vz_n}{\Lambda^3}$} 
+\end{align}
+En donde $z_n$ corresponde al par\'ametro de  interacci\'on entre las distintas mol\'eculas. $\Lambda$ es $\frac{h}{(2\pi mkT)^{1/2}}$ .... y  $N!$  es un factor de correcci\'on para no repetir interacciones.
+
+La energ\'ia asociada a la mezcla (entrop\'ia en fin...?) se expresa de la siguiente forma:
+
+\begin{align}
+	\begin{aligned}
+		\beta F_{mix}=&-\ln Q =-\ln\frac{1}{N!}\left(\frac{VZ_n}{\Lambda^3}\right)^N \\
+		&= N\ln N -N -N\ln\left(\frac{VZ_n}{\Lambda^3}\right) \\
+		&=N\left[\ln\frac{N\Lambda^3}{VZ_n} -1\right]= N\left[\ln\frac{N\Lambda^3v_w}{VZ_nv_w} -1\right] \\
+		&=N\left[\ln\rho v_w + \ln\frac{\Lambda^3}{Z_nv_w} -1\right] \\
+		&=N\left[\ln\rho v_w + \ln\mu^0 -1\right], & \mu^0=\frac{\Lambda^3}{Z_nv_w}
+	\end{aligned}
+\end{align}
+Es posible definir $f_{mix}=F_{mix}$ obteniendo: 
+\begin{align}
+	\beta f_{mix}=\rho(r)\left[\ln\rho(r) v_w + \ln\mu^0 -1\right] 
+\end{align}
+La expresi\'on anterior es v\'alida para un diferencial de volumen, es decir, que para obtener la energ\'ia total obtenemos:
+
+\begin{align}
+	\beta F_{mix}=\int_V{d^3r\beta f_{mix}}=\int_V{d^3r\rho(r)\left[\ln\rho(r) v_w + \ln\mu^0 -1\right]} 
+\end{align}
+
+
+\section{Energ\'ia qu\'imica y de mezcla del gel}
+
+El segundo t\'ermino de la ecuaci\'on \textcolor{red}{energia} consiste en la energ\'ia qu\'imca debido a la protonaci\'on de los segmentos \'acidos del gel; adem\'as se considera la entrop\'ia de mezcla de las cadenas del mismo.
+
+Separandolos se obtiene:
+
+\begin{align}    
+	\int_S drG(r)\frac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}\left[ f(r)\beta\mu^0_{MAA^-} -(1-f(r))\beta\mu^0_{MAAH} \right]
+	\label{eq-B:qca}
+\end{align}
+
+\begin{align}
+	\int_S drG(r)\frac{\left<\phi_{MAA}(r)\right>}{v_{MAA}} \left[f(r)(\ln f(r)+(1-f(r))(\ln(1-f(r))\right] 
+	\label{eq-B:traslacion}
+\end{align}    
+
+En donde en la \ref{eq-B:qca} $\int_S drG(r)\frac{\left<\phi_{MAA}(r)\right>}{v_{MAA}}$ multiplicado por $f(r)$ o $1-f(r)$ corresponden a $N_{MAA^-}$ y $N_{MAAH}$ respectivamente.
+Falta hablar sobre el cambio de ensamble...es decir: $F= W -N\mu$.
+Luego se tiene el la energ\'ia dada por potencial electrost\'atico... y finalmente los constraints... o restricciones a cumplirse por el sistema...   
