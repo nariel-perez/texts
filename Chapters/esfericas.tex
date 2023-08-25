@@ -445,89 +445,9 @@ En esta ocaci\'on, dado que $\psi^b = 0$, se observa que los funcionales en el b
 
 Lo que se puede calcular utilizando las ecuaciones de densidad de las especies libres en soluci\'on, ec.  \ref{eq:esf:free-bulk} y la prote\'ina ec. \ref{eq:esf:bulk-protein} en la nueva restricci\'on, \ref{eq:esf:bulk-constraint}.
 
-
-\subsection{Resoluci\'on num\'erica}
-
-
-Para obtener resultados de la minimizaci\'on de la energ\'ia, las ecuaciones integro-diferenciales no lineales descritas anteriormente ( secciones \ref{sec:esf:tm} y \ref{sec:esf:bulk}) deben resolverse num\'ericamente. Para lograr esto, el volumen del sistema se divide en capas de espesor $\delta = 0.5$. En esta divisi\'on se ha considerado una simetr\'ia radial 
-
- En las ecuaciones presentadas, las sumas sobre capas reemplazan las integrales a lo largo de la coordenada $r$, mientras que las diferencias finitas reemplazan las derivadas.
-
-Reescribiendo, la restricci\'on de incomprensibilidad se expresa como:
-
-\begin{align}
-	\begin{aligned}
-		1=  {\sum_{\gamma}\rho_\gamma(i_r) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(i_r)\right>v_\lambda} + \sum_i{\left<\phi_i(i_r)\right>}}
-		\label{eq:esf:pi-ir}
-	\end{aligned}
-\end{align}
-
-Lo que nos da una ecuaci\'on para cada capa $i_r$, en donde cada posici\'on es descrita por la coordenada $r_i = (i_r -0.5)\delta$. 
-La variable $i_r$ toma valores de $1$ a $n)r$, en donde $n_r$ es un n\'umero suficientemente grande de capas para que se satisfagan las restricciones impuestas en nuestro sistema. Entre ellas
- $\rho_\gamma(n_r) \approx \rho_\gamma^b$, $\rho_{pro}(\theta,n_r) \approx \rho_{pro}^b(\theta)$ and $\psi(n_r) \approx \psi^b = 0$.
-
-Con estas consideraciones podemos reescribir:
-
-
-\begin{align}
-	\frac{f(j_r)}{1-f(j_r)}= \left(\frac{a_{H^+}}{k^0_{a,j}}\right)^{\mp 1} e^{-\beta q_{MAA^-}\psi(i_r)}
-\end{align}
-
-
-For the free species:
-
-\begin{align}
-	\rho_\gamma(i_r)v_w = a_\gamma \exp{[-\beta \psi(i_r)q_\gamma]} \exp{[-\beta\pi(i_r) v_w]}
-\end{align}
-
-Para las especies libres, su densidad local se escribe ahora:
-
-\begin{align}
-	\begin{aligned}
-		\rho_{pro}(\theta, i_r)v_w = &\tilde{a}_{pro} \prod_\tau\exp\left[ \sum^{n_r}_{j_r = 1} \tilde{m}_\tau(\theta,i_r,j_r) \ln f_\tau(j_r)\right] \\
-		& \hspace{1em} \times \prod_\lambda \exp \left[ \sum^{n_r}_{j_r = 1} \tilde{m}_\lambda(\theta,i_r, j_r)\left(\beta\pi(j_r) v_\lambda+ \beta \psi(j_r)q_\lambda\right) \right]
-	\end{aligned}
-\end{align}
-
-La probabilidad de las configuraciones de la red polim\'erica $P(\alpha)$: 
-
-\begin{align}
-	\begin{aligned}
-		P(\alpha)&= \frac{1}{Q}\prod_{r_j}\prod_i \exp\left[{- {\beta\pi(r_j) \tilde{\phi}^i_r(\alpha,r_j)}}\right] \\
-		& \times \prod_{r_j} \exp \left[ - \beta \psi(r_j)\frac{\tilde{ \phi}^{MAA}_r(\alpha,r_j)}{v_{MAA}} q_{MAA}  \right] \\
-		& \times \prod_{r_j} \exp\left[ - { \ln(f(r_j))\frac{\tilde{ \phi}^{MAA}_r(\alpha,r_j)}{v_{MAA}}}\right] \\
-	\end{aligned}
-\end{align}
-
-\noindent donde:
-
-\begin{align}
-	\tilde{ \phi}^{MAA}_r(\alpha,r_i) = \int_{r_i -\delta/2}^{r_i + \delta/2} dr \, \phi^{MAA}_r(\alpha,r)
-\end{align}
-
-La ecuaci\'on de Poisson se escribe:
-
-\begin{align}
-	\epsilon \frac{\psi(i_r +1) -2 \psi(i_r) + \psi(i_r -1)}{\delta ^2} + 2\epsilon \frac{\psi(i_r +1) -\psi(i_r)}{(i_r -0.5)\delta ^2}= -\left<\rho_q(i_r)\right>
-	\label{eq:esf:poisson-ir}
-\end{align}
-
-\noindent en donde la densidad de carga se define:
-
-\begin{align}
-	\left<\rho_q(i_r)\right> = \sum_{\gamma } {\rho_\gamma(i_r) q_\gamma + \sum_\tau{f_\tau(i_r) \left<\rho_{pro,\tau}(i_r)\right> q_\tau} +  f(i_r)\dfrac{\left<\phi_{MAA}(i_r)\right>}{v_{MAA}}q_{MAA}}
-\end{align}
-
-Nuestras condicones de contorno se reescriben:
-\begin{align}
-	\frac{\psi(1) - \psi(0)}{\delta} = 0
-\end{align}
-
-Como se definio en el cap\'itulo donde hablamos sobre los films polim\'ericos, capitulo \ref{Chapter-film}, definiendo  el pH, concentraci\'on de sal y prote\'ina. temperatura, es posible calcular las variables restantes  $\pi(i_r)$ y $\psi(i_r)$ para cada capal $i_r$.
-Variables que pueden ser obtenidas al resolver en cada capa las ecuaciones \ref{eq:esf:pi-ir}) y (\ref{eq:esf:poisson-ir}. \ref{eq:film:discreto-poisson}.
-De esta forma el n\'umero de ecuaciones totales a resolver es $2n_r$ (dos por cada capa). 
-Este sistema de ecuaciones es resuelto usando el m\'etodo de Newton con Jacobiano libre, implementado en c\'odigos FORTRAN desarrollados en el grupo de trabajo.
-
+%%%%%%%%%%%%
+%%% Aqui estba la resolución numérica
+%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
