@@ -29,16 +29,19 @@ Un \textbf{hidrogel polim\'erico} es un material reticulado en forma de red trid
 Podemos distinguir entre un  \textbf{film polim\'erico} el cual consiste en una capa delgada y plana de material polim\'erico que puede tener diferentes espesores. La  matriz de pol\'imeros que la componen se encuentra anclada a la superficie. Los pol\'imeros son cadenas largas de mol\'eculas que pueden ser naturales o sint\'eticas. Los films polim\'ericos se utilizan en una variedad de aplicaciones, incluyendo la construcci\'on, la electr\'onica, y la medicina \addcite.
 El film polim\'erico  tiene una alta capacidad de absorci\'on de agua. 
 
-Otras particulas que componen el mundo de los hidrogeles son los \textbf{microgeles} al igual que los films que definimos anteriormente son redes tridimensionales de pol\'imeros entrecruzados que pueden adsorber grandes cantidades de agua o solventes, lo que les permite hincharse considerablemente. Estos geles tienen dimensiones en una escala de 1 a 200 micrometros. Los microgeles encuentran aplicaciones en \'areas como la ingenier\'ia de tejidos, la liberaci\'on controlada de f\'armacos, la agricultura y la fabricaci\'on de materiales absorbentes. 
-En cambio los  \textbf{nanogeles} son estructuras similares a los microgeles, pero su tama\~no se encuentra en la escala nanom\'etrica. Por definici\'on IUPAC este tama\~no debe ser menor a 200 nm \addcite. Los nanogeles son conocidos por sus propiedades de absorci\'on de agua y su capacidad para encapsular mol\'eculas en su interior. Debido a su peque\~no tama\~no y propiedades \'unicas, los nanogeles son ampliamente investigados para aplicaciones biom\'edicas y de entrega de f\'armacos. %% Redundantes (pensar en sacarlo)%%
+Otras part\'iculas que componen el mundo de los hidrogeles son los \textbf{microgeles} al igual que los films que definimos anteriormente son redes tridimensionales de pol\'imeros entrecruzados que pueden adsorber grandes cantidades de agua o solventes, lo que les permite hincharse considerablemente. Estos geles tienen dimensiones en una escala de 1 a 200 micrometros. Los microgeles encuentran aplicaciones en \'areas como la ingenier\'ia de tejidos, la liberaci\'on controlada de f\'armacos, la agricultura y la fabricaci\'on de materiales absorbentes. 
+En cambio los  \textbf{nanogeles} son estructuras similares a los microgeles, pero su tama\~no se encuentra en la escala nanom\'etrica. Por definici\'on IUPAC este tama\~no debe ser menor a 200 nm \addcite. Los nanogeles son conocidos por sus propiedades, al igual que los microgeles, de absorci\'on de agua y su capacidad para encapsular mol\'eculas en su interior. %% Redundantes (pensar en sacarlo)%%
 El entorno acuoso dentro de los hidrogeles puede proteger a las prote\'inas de la desnaturalizaci\'on y agregaci\'on, mientras que estas se mantienen activas y estructuradas cuando se liberan de los hidrogeles. 
 En la administraci\'on oral de medicamentos, los hidrogeles con respuesta al pH han sido ampliamente investigados como veh\'iculos funcionales que pueden encapsular y liberar prote\'inas, evitando su degradaci\'on en el entorno gastrointestinal.
 Este comportamiento de respuesta es  generalmente reversible y depende de la composici\'on qu\'imica de la red polim\'erica.
 
 
-\section{Respuesta a estimulo pH, sal y Temperatura}
+\section{Respuesta a est\'imulo pH, sal y Temperatura}
 
-Los microgeles, compuestos por cadenas polim\'ericas que contienen segmentos \'acidos como el \'acido acrí\'ilico o metacr\'ilico (AA y MAA, respectivamente), suelen hincharse o deshincharse en respuesta a cambios en el pH de la soluci\'on en la que se encuentran  \cite{snowden1996colloidal}.
+Los microgeles, compuestos por cadenas polim\'ericas que contienen segmentos \'acidos como el \'acido acrí\'ilico o metacr\'ilico (AA y MAA, respectivamente), suelen hincharse o deshincharse en respuesta a cambios en el pH de la soluci\'on en la que se encuentran. \cite{snowden1996colloidal}.
+
+En la figura \ref{fig:intro:acidos-aa-maa} se muestra los diferentes mon\'omeros que pueden contener las cadenas polim\'ericas que componen la red de los nanogeles. Los primero tres muestran respuesta al pH y a la concentraci\'on salina(alilamina, \'acido metacr\'ilico y \'acido acr\'ilico) la \'ultima mol\'ecula es la N-isopropilacrilamida (NIPAm) la cual presenta respuesta a la temperatura. 
+Estas 4 mol\'eculas son las que conforman los modelos moleculares que usaremos para las simulaciones computacionales presentadas en esta tesis.
 
 \begin{figure*}[!tb]
 	\centering
@@ -49,7 +52,7 @@ Los microgeles, compuestos por cadenas polim\'ericas que contienen segmentos \'a
 \end{figure*}
 
 
-El pH en el cual se marca el inicio y caracteriza esta transici\'on es el pKa aparente del microgel, que depende de la concentraci\'on de sal de la soluci\'on y frecuentemente difiere del pKa intrí\'iseco del mon\'omero \'acido.
+El pH en el cual se marca el inicio y caracteriza esta transici\'on es el pKa aparente del microgel, que depende de la concentraci\'on de sal de la soluci\'on y frecuentemente difiere del pKa intr\'inseco del mon\'omero \'acido. Esto se debe al comportamiento deferente mon\'omero como componente de la red poim\'erica respecto a su estado aislado en soluci\'on. En el cap\'itulo \ref{Chapter-film} se dar\'a una explicaci\'on m\'as detallada de esto.
 Estos microgeles tambi\'en ajustan su tama\~no en respuesta a cambios en la concentraci\'on de sal de la soluci\'on \cite{snowden1996colloidal}.
 	
 An\'alogamente, los microgeles de algunos pol\'imeros termosensibles experimentan una transici\'on de fase de volumen (VPT por sus siglas en ingl\'es) cuando se calientan por encima de una temperatura caracter\'istica (VPTT o $T_{pt}$) \cite{Pelton1986,Pelton2000}.
@@ -68,7 +71,8 @@ El VPTT de estos microgeles de respuesta m\'ultiple depende del pH de la soluci\
 
 \section{Encapsulado y Liberaci\'on de medicamentos}
 
-El inter\'es en hidrogeles en especial aquellos con di\'ametros menores a 200 nm ha crecido rotudamente debido a su tiempo m\'as prolongado de circulaci\'on en el sistema circulatorio. La naturaleza incipientemente hidrof\'ilica de estas estructuras, los nanogeles son generalmente biocompatibles y poseen una gran capacidad para incorporar mol\'eculas hu\'esped o analitos, tanto org\'anicos como inorg\'anicos, y prevenir su degradaci\'on por el medio externo. El ambiente acuoso dentro de los hidrogeles puede proteger a las prote\'inas de la desnaturalizaci\'on y la agregaci\'on \cite{asayama2008comparison,sawada2010nano,beierle2014polymer}, mientras permanecen activas y estructuradas cuando se liberan de los hidrogeles \cite{vermonden2012hydrogels}. En la administraci\'on oral de f\'armacos, los hidrogeles con respuesta de pH se han investigado en gran medida como veh\'iculos funcionales que pueden encapsular y administrar prote\'inas, evitando su degradaci\'on en el entorno gastrointestinal \cite{malmsten2010biomacromolecules,renukuntla2013approaches,koetting2014ph}.
+El inter\'es en hidrogeles en especial aquellos con di\'ametros menores a 200 nm ha crecido rotudamente debido a su tiempo m\'as prolongado de circulaci\'on en el sistema circulatorio. \textcolor{red}{agregar m\'as}
+ La naturaleza incipientemente hidrof\'ilica de estas estructuras, los nanogeles son generalmente biocompatibles y poseen una gran capacidad para incorporar mol\'eculas hu\'esped o analitos, tanto org\'anicos como inorg\'anicos, y prevenir su degradaci\'on por el medio externo. El ambiente acuoso dentro de los hidrogeles puede proteger a las prote\'inas de la desnaturalizaci\'on y la agregaci\'on \cite{asayama2008comparison,sawada2010nano,beierle2014polymer}, mientras permanecen activas y estructuradas cuando se liberan de los hidrogeles \cite{vermonden2012hydrogels}. En la administraci\'on oral de f\'armacos, los hidrogeles con respuesta de pH se han investigado en gran medida como veh\'iculos funcionales que pueden encapsular y administrar prote\'inas, evitando su degradaci\'on en el entorno gastrointestinal \cite{malmsten2010biomacromolecules,renukuntla2013approaches,koetting2014ph}.
 Adem\'as, su escaso tama\~no les permite responder r\'apidamente luego de recibir el est\'imulo \cite{tanaka1979kinetics} . Por todas estas razones, los nanogeles polim\'ericos son hoy en d\'ia una de las primeras opciones consideradas al dise\~nar biomateriales con funciones espec\'ificas \cite{soni2016nanogels, sabir2019polymeric}. El est\'imulo que dispara la respuesta de los nanogeles puede ser suministrado por un gradiente en la composici\'on fisiol\'ogica, ya sea natural o inducido por un estado patol\'ogico. La versatilidad de estos materiales dif\'icilmente puede ser alcanzada con otro tipo de nanopart\'iculas, incapaces de responder a cambios en las condiciones del medio que pueden ser relativamente moderados. El desaf\'io en la actualidad es aprender a controlar esta respuesta para canalizarla en diferentes aplicaciones.
 
 
@@ -117,6 +121,21 @@ Mediante el uso de teor\'ia a nivel molecular, se ha logrado estudiar la termodi
 Estos resultados se lograron mediante la formulaci\'on de una energ\'ia libre general que incluye todas las contribuciones relevantes de estos sistemas polim\'ericos: el equilibrio \'acido-base, la p\'erdida entr\'opica de confinamiento molecular, los grados de libertad conformacionales de la red y las prote\'inas (o adsorbatos en general), y las interacciones electrost\'aticas, de Van der Waals y est\'ericas. En estos trabajos se ha buscado comprender c\'omo la adsorci\'on en estas pel\'iculas de hidrogel depende del pH y la concentraci\'on de sal, tanto en soluciones de prote\'inas individuales como en mezclas. En este m\'etodo, el estado de protonaci\'on de los residuos de prote\'inas y de los segmentos de la red no se asume a priori en funci\'on del pH de la soluci\'on (el seno o bulk), sino que se predice localmente como resultado de la posici\'on del grupo y su entorno local. Nuestros estudios resaltan el papel no trivial que desempe\~na la protonaci\'on de los amino\'acidos en la adsorci\'on de prote\'inas. 
 
 En esta secci\'on nos valdremos de una  red polim\'erica que da estructura a un film polim\'erico. Este sistema nos ayudar\'a a introducirnos en la teor\'ia molecular, as\'i como tambi\'en a eplicar algunos concentos que nos ser\'an de suma importancia en los pr\'oximos cap\'itulos.
+
+
+\section{Objetivos}
+
+Los {\bf objetivos específicos} del presente plan de trabajo son los siguientes:
+%
+\begin{enumerate}
+	\item Desarrollar un modelo mecano-estadístico utilizando TM para describir la respuesta a cambios de pH, temperatura y concentración de sal en microgeles formados por homopolímeros.%\label{objetivo_1}
+	\item Extender dicho modelo para investigar el comportamiento de microgeles de copolímeros con respuesta a múltiples estímulos.%\label{objetivo_2}
+	\item Estudiar los mecanismos de adsorción de diferentes biomoléculas en los microgeles en función de las condiciones del medio y la estructura/composición química de las cadenas poliméricas.%\label{objetivo_3}
+	\item Desarrollar un modelo combinando simulaciones de TM y Dinámica Molecular (DM) para estudiar el comportamiento de estos microgeles en soluciones relativamente concentradas.%\label{objetivo_4}
+\end{enumerate}
+%
+
+Finalmente el \textbf{objetivo general} de esta tesis consiste en \emph{desarrollar una descripción comprensiva del comportamiento y respuesta a estímulo de los microgeles poliméricos mediante el uso de modelos teóricos y computacionales basados en las interacciones moleculares.}
 
 
 
@@ -190,16 +209,3 @@ Esta metodolog\'ia la usaremos para la generaci\'on de configuraciones descrita 
 %-----------------------------------
 %	SUBSECTION 1
 %-----------------------------------
-\section{Objetivos}
-
-Los {\bf objetivos específicos} del presente plan de trabajo son los siguientes:
-%
-\begin{enumerate}
-\item Desarrollar un modelo mecano-estadístico utilizando TM para describir la respuesta a cambios de pH, temperatura y concentración de sal en microgeles formados por homopolímeros.%\label{objetivo_1}
-\item Extender dicho modelo para investigar el comportamiento de microgeles de copolímeros con respuesta a múltiples estímulos.%\label{objetivo_2}
-\item Estudiar los mecanismos de adsorción de diferentes biomoléculas en los microgeles en función de las condiciones del medio y la estructura/composición química de las cadenas poliméricas.%\label{objetivo_3}
-\item Desarrollar un modelo combinando simulaciones de TM y Dinámica Molecular (DM) para estudiar el comportamiento de estos microgeles en soluciones relativamente concentradas.%\label{objetivo_4}
-\end{enumerate}
-%
-
-Finalmente el \textbf{objetivo general} de esta tesis consiste en \emph{desarrollar una descripción comprensiva del comportamiento y respuesta a estímulo de los microgeles poliméricos mediante el uso de modelos teóricos y computacionales basados en las interacciones moleculares.}
