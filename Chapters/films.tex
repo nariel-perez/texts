@@ -12,19 +12,28 @@ La respuesta a est\'imulo y su capacidad para adsorber grandes cantidades de sol
 Este sistema adem\'as de poder explicar la fisicoqu\'imica que lo envuelve, y poder responder respuestas a comportamientos observados experimentalmente \addcite fue una introducci\'on  en la teor\'ia molecular.
 La derivaci\'on de cada componente energ\'etico, la confecci\'on de los modelos moleculares as\'i como tambi\'en la escritura de los c\'odigos forman parte de este primer cap\'itulo. Son el puntap\'ie para poder aplicarlo a los sistemas de micro y nano geles.
 La importancia de este primer cap\'itulo tambi\'en radica en el entendimiento de algunos conceptos que ser\'an aplicados a lo largo de esta tesis. La respuesta a pH y sus cambios en ambientes confinados, el ambiente de un hidrogel, y la regulaci\'on de carga de las diferentes especies presentes en el sistema son detalladas a continuaci\'on.
- 
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figures/graph-film/film_model.pdf}
+	\caption{Esquema de simulaci\'on de un film polim\'erico compuesto por MAA. Se muestra adem\'as las prote\'inas usadas y el modelo de grano grueso. En la tabla se ven los segmentos que componen al modelo y la informaci\'on de los pKa asociadas a cada una de ellas.}
+	\label{fig:film:model_film}
+\end{figure}
+
+
+
 \section{Te\'oria Molecular } \label{sec:film-teoria}
 
 El m\'etodo propuesto consiste en minimizar una energ\'ia libre generalizada que incluye toda la termodinamica relevante que engloba los procesos del sistema polim\'erico con una soluci\'on.
 Para tal fin se usamos  una descripci\'on molecular de grano grueso de las diferentes especies qu\'imicas que componen el sistema.
 Dicha descripci\'on incluye forma, tama\~no, distribuci\'on de carga (si los hubiese) y estado de protonaci\'on de cada componente molecular en los casos que corresponda.
-En esta primera instancia describiremos la fisicoqu\'imica de un film  se encuentra en  equilibrio con una solución acuosa, la tiene una composición  definida externamente.
+En esta primera instancia describiremos la fisicoqu\'imica de un film  se encuentra en  equilibrio con una soluci\'on acuosa, la tiene una composici\'on  definida externamente (ba\~no de la soluci\'on).
 Es decir, el pH, la concentración de sal y la concentraci\'on de adsorbatos son variables independientes.
 
 
 Nuestro film que posee distintos tipos de segmentos: una unidad sensible al pH, en particular consideraremos un film polim\'erico compuesto por unidades \'acidad de \'acido metacr\'ilico ($MAA$).
-Este film est\'a  se encuentra en equilibrio con una soluci\'on con una temperatura, pH y concentraci\'on de sal definidas. Adem\'as vamos a considerar que en dicha soluci\'on hayun adsorbato: una prote\'ina.
-El uso de una prote\'ina modelo como adsorbato nos beneficia dado que poseen disitinto tipos de amino\'acidos con lo cual la descripci\'on de la misma puede ser usada para otros adsorbatos. 
+Este film est\'a  se encuentra en equilibrio con una soluci\'on con una temperatura, pH y concentraci\'on de sal definidas. Adem\'as vamos a considerar que en dicha soluci\'on hay un adsorbato, en este cap\'itulo usaremos una prote\'ina, la cual puede ser cictocromo c o mioglobina. 
 Considerando los aspectos anteriores es posible definir una energ\'ia libre:
 
 \begin{align}
@@ -384,7 +393,7 @@ Con esta cantidad es posible cuantificar la adsorci\'on de la prote\'ina en el f
 
 \section{Soluci\'on Bulk}\label{sec:film:bulk-solution}
 
-Como mencionamos en la secci\'on anterior, el potencial usado es un potencial gran canonico el cual proviene de un ensamble gran canonico, en el cual el sistema de estudio  esta en equilibrio con un ``ba\~no t\'ermico". Traducido a nuestro trabajo significa que el film y sus alrededores se encuentran en constante equilibrioi con el bulk de la soluci\'on en la que estan bien definidas las variables como pH, temperatura y concentraci\'on de sal y/o prote\'ina. 
+Como mencionamos en la secci\'on anterior, el potencial usado es un potencial gran canonico el cual proviene de un ensamble gran canonico, en el cual el sistema de estudio  esta en equilibrio con un ``ba\~no de  la soluci\'on". Traducido a nuestro trabajo significa que el film y sus alrededores se encuentran en constante equilibrioi con el bulk de la soluci\'on en la que estan bien definidas las variables como pH, temperatura y concentraci\'on de sal y/o prote\'ina. 
 Dadas estas condiciones la resoluci\'on del bulk de la soluci\'on es indispensable para llevar a cabo nuestras simulaciones. Las soluciones nos proporcionan la informaci\'on de las actividades de las especies mobiles, y con ella sus potenciales qu\'imicos. Informaci\'on que como vimo anteriormente es necesaria para la resolución de las ecuaciones de incompresibilidad y de Poisson.
 
 El procedimiento te\'orico es en esencia el mismo: escritura de la energ\'ia libre (y su respectivo potencial) y minimizaci\'on respecto de las funcionales  que lo componen.
@@ -479,6 +488,20 @@ Como se mencion\'o al inicio de esta secci\'on la resoluci\'on del bulk de la so
 
 
 Hay que tener en cuenta que las densidades en el bulk de la soluci\'on son p\'arametro de entrada en cada c\'alculo. Una vez que se establecen el pH, la concentraci\'on de sal y la concentraci\'on de nuestra prote\'ina, estas densidades se determinan completamente (usando la electroneutralidad de la soluci\'on del bulk y la autodisociaci\'on de equilibrio del agua).
+
+\section{Modelo Molecular}
+
+Para poder llevar a cabo.. desarrollar la teor\'ia molecular es necesario contar con un modelo con el cual puedan ser introducidas todas las caracter\'isticas molecular del sistema, y por lo cual la teor\'ia recibe su nombre.
+El tipo de modelado a usar es crucial dado que puede definir diferentes variables.... tiempos de calculos, que tipos de interacciones tienen prioridad sobre mi sistema... etc
+Uso de modelos de grano grueso en los cuales una \textbf{unidad de grano grueso} esta compuesta por un grupo de \'atomos, la elecci\'on de cuantos depende de las caracter\'isticas a modelar.... ejemplo... martini tiene por regla que 4 \'atomos pesados componen una unidad de grano grueso.
+Para nuestros modelos utilizamos una definición diferente, en donde no es la cantidad sino de la importancia qu\'imica y relevante para responder las preguntar que se plantean en el sistema.
+
+
+
+%%%%%%%%% RED
+
+Las diferentes conformaciones moleculares de la red de polim\'erica tambi\'en son una entrada necesaria para evaluar esta teor\'ia. Esta red est\'a compuesta por cadenas de pol\'imero de 50 segmentos entrelazados, donde cada segmento es una representaci\'on de grano grueso de una unidad de MAA, con una longitud de segmento de 0.5 nm. La mayoría de estas cadenas conectan dos segmentos de entrelazado, excepto aquellas cadenas en la parte superior, que tienen sus extremos libres en el lado de la soluci\'on, y algunas cadenas que est\'an conectadas por uno de sus extremos a un segmento enlazado a la superficie. Las unidades de entrelazado tienen una coordinaci\'on cuatro y la estructura tiene una topolog\'ia similar a un diamante. Para generar las conformaciones de la red, hemos realizado simulaciones de din\'amica molecular (MD) utilizando GROMACS 5.1.2, donde la red es una mol\'ecula peri\'odica compuesta por 30 segmentos de entrelazado, 2 puntos de injerto y 64 cadenas con un total de 3200 unidades de MAA. La superficie de soporte en la caja de simulaci\'on de MD tiene un \'area de $33 nm^2$; se imponen condiciones peri\'odicas de contorno en las direcciones x e y. El campo de fuerzas utilizado en esta simulación de MD ha sido descrito en otros trabajos. \addcite
+
 
 %%%%%%
 %%%% Aquí estaba la resolución numerica
