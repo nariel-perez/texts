@@ -6,10 +6,10 @@
 
 \section{Introducci\'on/Motivaci\'on}
 
-En esta secci\'on nos valdremos de una  red polim\'erica que da estructura de un  film polim\'erico entrecruzado, un hidrogel. 
-Como se mencion\'o antes los films son materiales ampliamente investigados para aplicaciones biom\'edicas. \addcite 
+En esta secci\'on nos valdremos de una  red polim\'erica entrecruzada que da estructura a un  film polim\'erico , un hidrogel. 
+Como se mencion\'o anteriormente los films son materiales ampliamente investigados para aplicaciones biom\'edicas. \addcite 
 La respuesta a est\'imulo y su capacidad para adsorber grandes cantidades de solventes los hace muy atractivos al momento de adsorber drogas/prote\'inas de interes terapeutico. \addcite
-Este sistema adem\'as de poder explicar la fisicoqu\'imica que lo envuelve, y poder responder respuestas a comportamientos observados experimentalmente \addcite fue una introducci\'on  en la teor\'ia molecular.
+Este sistema adem\'as de poder explicar la fisicoqu\'imica que lo envuelve, y poder de respuesta a comportamientos observados experimentalmente \addcite fue una introducci\'on  en la teor\'ia molecular.
 La derivaci\'on de cada componente energ\'etico, la confecci\'on de los modelos moleculares as\'i como tambi\'en la escritura de los c\'odigos forman parte de este primer cap\'itulo. Son el puntap\'ie para poder aplicarlo a los sistemas de micro y nano geles.
 La importancia de este primer cap\'itulo tambi\'en radica en el entendimiento de algunos conceptos que ser\'an aplicados a lo largo de esta tesis. La respuesta a pH y sus cambios en ambientes confinados, el ambiente de un hidrogel, y la regulaci\'on de carga de las diferentes especies presentes en el sistema son detalladas a continuaci\'on.
 
@@ -25,15 +25,15 @@ La importancia de este primer cap\'itulo tambi\'en radica en el entendimiento de
 
 \section{Te\'oria Molecular } \label{sec:film-teoria}
 
-El m\'etodo propuesto consiste en minimizar una energ\'ia libre generalizada que incluye toda la termodinamica relevante que engloba los procesos del sistema polim\'erico con una soluci\'on.
-Para tal fin se usamos  una descripci\'on molecular de grano grueso de las diferentes especies qu\'imicas que componen el sistema.
+El m\'etodo propuesto consiste en minimizar una energ\'ia libre generalizada que incluye toda la termodin\'amica relevante que engloba los procesos del sistema polim\'erico con una soluci\'on.
+Para tal fin  usamos  una descripci\'on molecular de grano grueso de las diferentes especies qu\'imicas que componen el sistema.
 Dicha descripci\'on incluye forma, tama\~no, distribuci\'on de carga (si los hubiese) y estado de protonaci\'on de cada componente molecular en los casos que corresponda.
-En esta primera instancia describiremos la fisicoqu\'imica de un film  se encuentra en  equilibrio con una soluci\'on acuosa, la tiene una composici\'on  definida externamente (ba\~no de la soluci\'on).
+En esta primera instancia describiremos la fisicoqu\'imica de un film  que  se encuentra en  equilibrio con una soluci\'on acuosa, la cual  tiene una composici\'on  definida externamente (ba\~no de la soluci\'on).
 Es decir, el pH, la concentración de sal y la concentraci\'on de adsorbatos son variables independientes.
 
 
-Nuestro film que posee distintos tipos de segmentos: una unidad sensible al pH, en particular consideraremos un film polim\'erico compuesto por unidades \'acidad de \'acido metacr\'ilico ($MAA$).
-Este film est\'a  se encuentra en equilibrio con una soluci\'on con una temperatura, pH y concentraci\'on de sal definidas. Adem\'as vamos a considerar que en dicha soluci\'on hay un adsorbato, en este cap\'itulo usaremos una prote\'ina, la cual puede ser cictocromo c o mioglobina. 
+Nuestro film que posee distintos tipos de segmentos: un segmento que sirve como entrecruzante entre las cadenas polim\'ericas, el cual es considerado neutro, y  una unidad sensible al pH,  para esta ultima, en particular consideraremos un film polim\'erico compuesto por unidades \'acidad de \'acido metacr\'ilico ($MAA$).
+Este film  se encuentra en equilibrio con una soluci\'on con una temperatura, pH y concentraci\'on de sal definidas. Adem\'as vamos a considerar que en dicha soluci\'on hay un adsorbato, en este cap\'itulo usaremos una prote\'ina, la cual puede ser cictocromo c o mioglobina. 
 Considerando los aspectos anteriores es posible definir una energ\'ia libre:
 
 \begin{align}
@@ -44,11 +44,11 @@ Considerando los aspectos anteriores es posible definir una energ\'ia libre:
 \noindent En donde $S_{mez}$ es la entrop\'ia de traslaci\'on ( y de mezcla) de las especies libres en la soluci\'on: mol\'eculas de agua (H$_2$O), y sus respectivos iones:  hidronio (H$_3$O$^+$), e hidr\'oxido (OH$^- $), cationes y aniones de sal y nuestra prote\'ina modelo.
 Aqu\'i, consideramos una sal monovalente, NaCl, la cual est\'a completamente disociada en sus  iones cloruro (Cl$^-$) y sodio ($Na^+$). 
 
-$S_{conf,nw}$ representa la entrop\'ia conformacional que resulta de la flexibilidad de la red de polim\'erica, la cual viene dada por todas las conformaciones diferentes que puede asumir la misma.
+$S_{conf,nw}$ representa la entrop\'ia conformacional que resulta de la flexibilidad de la red polim\'erica, la cual viene dada por todas las conformaciones diferentes que puede asumir la misma.
 
 $F_{qca,net}$, es la energ\'ia qu\'imica libre que describe el equilibrio entre las especies protonadas y desprotonadas de unidades funcionales (\'acidas/b\'asicas), para nuestro film solo se consideran unidades \'acidas.
 
-De manera similar, $F_{qca,net}$ describe la protonaci\'on de residuos titulables de la prote\'ina.
+De manera similar, $F_{qca,pro}$ describe la protonaci\'on de residuos titulables de la prote\'ina.
 
 $U_{elec}$ y $U_{ste}$ representan, respectivamente, las interacciones electrost\'aticas y las repulsiones est\'ericas.
 Las interacciones de Van der Waals son representadas en $U_{VdW}$.
@@ -56,7 +56,7 @@ Las interacciones de Van der Waals son representadas en $U_{VdW}$.
 
 Las expresiones explicitas de la ecuaci\'on \ref{eq:film:libre-film} las describimos acontinuaci\'on.
 
-Como primer termino tenemos la entrop\'ia de mezcla de  las especies mobiles, entre ellas consideramos a nuestra prote\'ina modelo:
+Como primer t\'ermino tenemos la entrop\'ia de mezcla de  las especies m\'oviles, entre ellas consideramos a nuestra prote\'ina modelo:
 
 \begin{align}
 	\begin{aligned}
@@ -65,8 +65,8 @@ Como primer termino tenemos la entrop\'ia de mezcla de  las especies mobiles, en
 	\end{aligned}
 \end{align}
 
-\noindent en donde $\frac{1}{k_B T}$, y $k_B$ es la constante de Boltzmann, $T$ es la temperatura absoluta del sistema. La variable $z$ es la coordenada que mide la distancia a la superficie de soporte de nuestro film, el \'ara total de esta superficies es $A$. $\rho_\gamma(z)$ y $\mu_\gamma$ es densidad local, a un $z$ dado, y potencial qu\'imico estadar de la especie $\gamma$ respectivamente.
-El subinidice $\gamma$ toma en cuenta la mol\'ecula de agua y sus respectivos ione (hidronio e hidr\'oxido), adem'as de los iones provenientes de la sal ($Na^+$ y $Cl^-$). 
+\noindent en donde $\frac{1}{k_B T}$, y $k_B$ es la constante de Boltzmann, $T$ es la temperatura absoluta del sistema. La variable $z$ es la coordenada que mide la distancia a la superficie de soporte de nuestro film, el \'area total de esta superficies es $A$. $\rho_\gamma(z)$ y $\mu_\gamma$ es densidad local, a un $z$ dado, y potencial qu\'imico estadar de la especie $\gamma$ respectivamente.
+El sub\'indice $\gamma$ toma en cuenta la mol\'ecula de agua y sus respectivos iones (hidronio e hidr\'oxido), adem'as de los iones provenientes de la sal ($Na^+$ y $Cl^-$). 
 
 
 El segundo t\'ermino de esta ecuaci\'on corresponde a la entrop\'ia de mezcla de la prote\'ina. $\rho_{pro}(\theta,z)$ es la densidad local de la prote\'ina en la conformaci\'on $\theta$. Es decir $\theta$ recorre sobre las configuraciones de la misma.
@@ -79,7 +79,7 @@ De este modo la densidad local media de la prote\'ia puede expresarse como:
 \end{align}
 
 
-La entrop\'ia conformational que resutla de la flexibilidad de la red polim\'erica de nuestro film se representa en $S_{conf, nw}$, esta tiene en cuenta todas las configuraciones de un set $\{\alpha\}$.
+La entrop\'ia conformacional que resulta de la flexibilidad de la red polim\'erica de nuestro film se representa en $S_{conf, nw}$, esta tiene en cuenta todas las configuraciones de un set $\{\alpha\}$.
 
 \begin{equation}
 	\frac{S_{conf,net}}{k_B} = - \sum_{\alpha}{P(\alpha)\ln P(\alpha)}
@@ -103,7 +103,7 @@ Adem\'as se define:
 \begin{align}
 	\left< \rho_i(z)\right> = \sum_\alpha{P(\alpha)\rho_i(\alpha,z)}
 \end{align}
-\noindent en el cual $\rho_i(\alpha,z)$  es el ensamble de densidad  promedio local del film. El cual es una variable de entrada que cuantifica la desnidad de segmentos del film que  ocupan una capa $z$ cuando la red se encuentra en la conformaci\'on $\alpha$.
+\noindent en el cual $\rho_i(\alpha,z)$  es el ensamble de densidad  promedio local del film. El cual es una variable de entrada que cuantifica la densidad de segmentos del film que  ocupan una capa $z$ cuando la red se encuentra en la conformaci\'on $\alpha$.
 
 
 %%%%%%%%%%%%%%%%%%%
@@ -125,15 +125,15 @@ Que se define como:
 \end{align}
 \noindent en donde $n_\tau(\theta,r^\prime, r)$ es un par\'ametro de entrada que nos da el n\'umero de segmentos $\tau$ entre las capas $z$ and $z+ dz$ cuando el centro de masa de la prote\'ina se encuentra en el a configuraci\'on $\theta$ y en la posici\'on $z^\prime$.
 
-Las unidades titulables pueden estar en esta protonado $\tau, p$ o desprotonado $\tau, d$, los cuales poseen su potenciales qu\'imicos est\'andar $\mu^0_{\tau,p}$ y $\mu^0_{\tau,d}$ respectivamente. 
-Adm\'as definimos el grado de asociaci\'on $g_\tau$ para segmento $\tau$ como:
+Las unidades titulables pueden estar en estado protonado $\tau, p$ o desprotonado $\tau, d$, los cuales poseen su potenciales qu\'imicos est\'andar $\mu^0_{\tau,p}$ y $\mu^0_{\tau,d}$ respectivamente. 
+Adem\'as definimos el grado de asociaci\'on $g_\tau$ para segmento $\tau$ como:
 
 
 \begin{enumerate}
 	\item para unidades \'acidas: $g_\tau(r) = 1-f_\tau(r)$ ( las unidades $\tau$ se cargan negativamente)
 	\item para unidades b\'asicas: $g_\tau(r) = f_\tau(r)$ (las  unidades $\tau$ se cargan positivamente  )
 \end{enumerate}
-en donde  $f_\tau(r)$ es el grado de disosiac\'on de cada segmento $\tau$.
+en donde  $f_\tau(r)$ es el grado de disociaci\'on de cada segmento $\tau$.
 %%%%%%%%%%
 
 La energ\'ia electr\'ostatica se define como:
@@ -143,7 +143,7 @@ La energ\'ia electr\'ostatica se define como:
 	\end{aligned}
 \end{align} 
 
-\noindent en donde $\Psi(z)$ es el potencial elestr\'ostatico dependiente de la posici\'on, $\epsilon$ es la constante de permitividad del medio, $q_\gamma$ es la carga correspondiente a la especiel m\'obil $\gamma$, $q_\tau$ es la carga que adquieren los segmentos titulables de la prote\'ina. Finalmente $q_{MAA}$ es la carga que adquiere el segmento de $MAA$ al desprotonarse.
+\noindent en donde $\Psi(z)$ es el potencial electrost\'atico dependiente de la posici\'on, $\epsilon$ es la constante de permitividad del medio, $q_\gamma$ es la carga correspondiente a la especie m\'ovil $\gamma$, $q_\tau$ es la carga que adquieren los segmentos titulables de la prote\'ina. Finalmente $q_{MAA}$ es la carga que adquiere el segmento de $MAA$ al desprotonarse.
 
 
 En este contexto, la densidad de carga media es:
@@ -154,7 +154,7 @@ En este contexto, la densidad de carga media es:
 \end{align}
 %%%%%%%%%%%%%%%%
 
-La contribuci\'on siguiente en la energ\'ia libre viene dada por la repulsi\'on esterica entre  todos los segmentos que componen  el sistema. Esta contribuci\'on se incorpora a travez del siguiente restricci\'on:  
+La contribuci\'on siguiente en la energ\'ia libre viene dada por la repulsi\'on esterica entre  todos los segmentos que componen  el sistema. Esta contribuci\'on se incorpora a trav\'es del siguiente restricci\'on:  
 
 \begin{align}
 	\begin{aligned}
@@ -162,14 +162,14 @@ La contribuci\'on siguiente en la energ\'ia libre viene dada por la repulsi\'on 
 	\end{aligned}
 	\label{eq:film:constraint}
 \end{align}
-\noindent en donde $v_\gamma$ , $v_\lambda$ y $v_{MAA}$ son los volumenes moleculares de los segmentos $\gamma$ de las especiesl libres, $\lambda$  en la prote\'ina y los segmentos de $MAA$ del film respectivamente.
+\noindent en donde $v_\gamma$ , $v_\lambda$ y $v_{MAA}$ son los vol\'umenes moleculares de los segmentos $\gamma$ de las especiesl libres, $\lambda$  en la prote\'ina y los segmentos de $MAA$ del film respectivamente.
 $\left<\rho_{pro,\lambda}(z)\right>$ es definimo de la misma forma que en la eq.  \ref{eq:film:segments_pro_si}.
 Cabe destacar que el subidice $\lambda$ considera a todos los segmentos de la prote\'ina, es decir $ \tau \in \lambda$.
 
 %%%%%%%%%%%%%%%
-La energ\'ia proveniente de las interacciones de Van der Waals se expresa en el t\'ermino $U_{VdW}$. En este trabajo se ha considerado que todos los segmentos del sistema poseen un caracter hidrofilico. Es decir la interacci\'on entre cada par de segmentos es similar a su interacci\'on con las mol\'eculas de agua. Como resultado la energ\'ia de interacci\'on de $VdW$ se considera una constante aditiva a la energ\'ia libre, por lo cual puede ser ignorada.
+La energ\'ia proveniente de las interacciones de Van der Waals se expresa en el t\'ermino $U_{VdW}$. En este trabajo se ha considerado que todos los segmentos del sistema poseen un car\'acter hidrofilico. Es decir la interacci\'on entre cada par de segmentos es similar a su interacci\'on con las mol\'eculas de agua. Como resultado la energ\'ia de interacci\'on de $VdW$ se considera una constante aditiva a la energ\'ia libre, por lo cual puede ser ignorada.
 
-En este punto la energ\'ia libre, eq \ref{eq:film:libre-film}, puede escribir como una funcional de funciones, esta ultimas est\'an compuesta por la probabilidad de distribuci\'on de segmentos de nuestra red polim\'erica. las densidades locales de cada una de las especies libres, incluidas la densidad de conformaciones de la prote\'ina, los grados de protonaci\'on/disociaci\'on y el potencial elestrost\'atico local. Es decir:
+En este punto la energ\'ia libre, eq \ref{eq:film:libre-film}, puede escribir como una funcional de funciones, esta ultimas est\'an compuesta por la probabilidad de distribuci\'on de segmentos de nuestra red polim\'erica. las densidades locales de cada una de las especies libres, incluidas la densidad de conformaciones de la prote\'ina, los grados de protonaci\'on/disociaci\'on y el potencial electrost\'atico local. Es decir:
 
 \begin{align}
 	F = \sum_\alpha \sum_\theta \int_0^\infty dz f(\alpha, \theta,z)
