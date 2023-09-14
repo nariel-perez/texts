@@ -511,6 +511,21 @@ En la figura \ref{fig:film:model_film} se puede observar una representaci\'on de
 
 \subsection{Prote\'inas}
 
+En este cap\'itulo se han considerado dos prote\'inas diferentes: citocromo c y mioglobina.
+Para describir estas mol\'eculas, utilizamos un modelo de grano grueso donde cada residuo de amino\'acido se representa mediante una \'unica part\'icula centrada en la posici\'on del carbono $\alpha$.
+La secuencia de todos los carbonos $\alpha$ se toman de la estructura cristalogr\'afica obtenida de la base de datos de prote\'inas \cite{berman2000protein}: 2B4Z para el citocromo c \cite{mirkin2008high},  3RGK para la mioglobina \cite{hubbard1990x}.
+Las part\'iculas de grano grueso en este modelo se les asigna un volumen y un pKa (si la unidad es titulable) seg\'un el amino\'acido que representan.
+En la secci\'on \ref{subsec:protein} se hace una descripci\'on m\'as detallada del modelo usado para el modelado de los adsorbatos usados.  Se presenta la tabla \ref{table:Coarse-grain} en donde se vuelca la informaci\'on molecular atribuida a cada unidad de CG.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figures/modelos/cg_proteinas.png}
+	\caption{Esquema del uso de modelado de grano grueso para la construcci\'on de modelos de prote\'inas. Se muestra la estructura cristalogr\'afica de la prote\'ina  a la cual se les identifica los carbonos alfas de cada amino\'acido y con ello la posici\'on del segmento de grano grueso.}
+	\label{fig:film:cg_protein}
+\end{figure}
+
+
+
 
 %%%%%%
 %%%% Aquí estaba la resolución numerica
@@ -518,9 +533,9 @@ En la figura \ref{fig:film:model_film} se puede observar una representaci\'on de
 \section{Resultados} \label{sec:film:resultados}
 
 
-Los hidrogeles (geles polim\'ercios en general) compuestos por cadenas de protonables son sensibles a los cambios de pH. Esta respuesta se debe al equilibrio qu\'imico de protonaci\'on/desprotonaci\'on de las unidades \'acidas o b'asicas que componen la red. Cuando se varía el pH del entorno en el que se encuentra el gel, se producen cambios en la carga el\'ectrica de las unidades titulables, lo que a su vez afecta las propiedades  del material.
+Los hidrogeles (geles polim\'ercios en general) compuestos por cadenas de protonables son sensibles a los cambios de pH. Esta respuesta se debe al equilibrio qu\'imico de protonaci\'on/desprotonaci\'on de las unidades \'acidas o b\'asicas que componen la red. Cuando se var\'ia el pH del entorno en el que se encuentra el gel, se producen cambios en la carga el\'ectrica de las unidades titulables, lo que a su vez afecta las propiedades  del material.
 
-Para comprender en detalle el funcionamiento de esta respuesta, es necesario recordar algunos conceptos fundamentales sobre el comportamiento \'acido/base de las mol\'eculas bajo condiciones ideales. El pH, que representa la concentraci\'on de iones de hidr\'ogeno en una soluci\'on, desempe\~na un papel crucial en la protonaci\'on/desprotonaci\'on de los grupos titulables presentes en el gel. En condiciones \'acidas, los grupos \'acidos se protonan, lo que lleva a un aumento en la carga el\'ectrica y una mayor retención de agua por parte del gel. Por otro lado, en condiciones alcalinas, los grupos \'acidos se desprotonan, disminuyendo la carga el\'ectrica y resultando en una disminuci\'on en la capacidad de retenci\'on de agua. Este efecto es el contrario cuando los mon\'omeros son b\'asicos y el pH del medio es alcalino.
+Para comprender en detalle el funcionamiento de esta respuesta, es necesario recordar algunos conceptos fundamentales sobre el comportamiento \'acido/base de las mol\'eculas bajo condiciones ideales. El pH, que representa la concentraci\'on de iones de hidr\'ogeno en una soluci\'on, desempe\~na un papel crucial en la protonaci\'on/desprotonaci\'on de los grupos titulables presentes en el gel. En condiciones \'acidas, los grupos \'acidos se protonan, lo que lleva a un aumento en la carga el\'ectrica y una mayor retenci\'on de agua por parte del gel. Por otro lado, en condiciones alcalinas, los grupos \'acidos se desprotonan, disminuyendo la carga el\'ectrica y resultando en una disminuci\'on en la capacidad de retenci\'on de agua. Este efecto es el contrario cuando los mon\'omeros son b\'asicos y el pH del medio es alcalino.
 
 Estos conceptos sobre el comportamiento \'acido/base son fundamentales para comprender el equilibrio que ocurre cuando los mon\'omeros se confinan en una red polim\'erica. Al introducir los mon\'omeros \'acidos en la red, se establece un equilibrio din\'amico entre las formas protonadas y desprotonadas de los grupos protonables. Este equilibrio depende tanto del pH del entorno como de las caracter\'isticas intrí\'isecas de los mon\'omeros y la red polim\'erica. Al comprender y controlar este equilibrio, es posible modular las propiedades f\'isicas y qu\'imicas del gel, como su capacidad de hinchamiento, solubilidad, y liberaci\'on de f\'armacos.
 
