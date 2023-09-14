@@ -376,15 +376,15 @@ Esta restricci\'on se satisface en la ecuaci\'on de Poisson al considerar las co
 	\end{aligned}
 \end{align}
 
-Estas condiciones significan que el potencial electrost\'atico se desvanece a medida que nos alejamos de nuestro film polim\'ercio,  y que el medio dielectrico en el cual se encuentra el film  se extiende desde su superficie de soporte, respectivamente. 
+Estas condiciones significan que el potencial electrost\'atico se desvanece a medida que nos alejamos de nuestro film polim\'erico,  y que el medio diel\'ectrico en el cual se encuentra el film  se extiende desde su superficie de soporte, respectivamente. 
 
 En este punto hemos mostrados las expresiones que optimizan a nuestro gran potencial, y c\'omo cada uno de estos funcionales: $P(\alpha), \rho_\gamma(z),\rho_{pro}(z), f_\tau(z), f(z), \psi(z) $ a su vez  terminan siendo definidos por dos potenciales locales: Electrost\'atico $\psi(z)$ y Presi\'on osm\'otica $\pi(z)$. 
-Como primera conclusi\'on de esta teor\'ia es que es posible calcular y describir la termodin\'amica del sistema dadas las condiciones de laboratorio: pH, concentraci\'on de sal y adsorbatos, temperatura. Utilizando y resolviendo las ecuaciones de incompresibilidad y de electroneutralidad, adem\'as de otros par\'ametros de entrada: volumenes moleculares, cargas y constantes de disociaci\'on. as\'i como la distintas conformaci\'on que pueden adquirir cada elemento del sistema, es decir la distribuci\'on espacial de cada segemento cada una conformaci\'on.
+Como primera conclusi\'on de esta teor\'ia es que es posible calcular y describir la termodin\'amica del sistema dadas las condiciones de laboratorio: pH, concentraci\'on de sal y adsorbatos, temperatura. Utilizando y resolviendo las ecuaciones de incompresibilidad y  electro-neutralidad, adem\'as de otros par\'ametros impuestos en la entrada: vol\'umenes moleculares, cargas y constantes de disociaci\'on. as\'i como la distintas conformaci\'on que pueden adquirir cada elemento del sistema, es decir la distribuci\'on espacial de cada segmentos en sus conformaciones
 Estas par\'ametros de entrada son provisto al c\'odigo mediante el uso de un modelo molecular. 
 
-La forma de obtener estas variables desconocidas, $\psi(z)$ y $\pi(z)$  es realizando una soluci\'on n\'umerica por sustituci\'on en la diferentes ecuaciones en las que interactuan: la densidad de las especies libres eq. \ref{eq:film:free-species}, los grados de disociaci\'on de los segmentos del film y de los segmentos titulables de la prote\'ina ecuaciones \ref{eq:film:degree-film} y \ref{eq:film:degree-protein} respectivamente, la probabilidad de las conformaciones de la red polim\'erica ecu. \ref{eq:film:probabilidad} y la densidad local de la prote\'ina ecu. \ref{eq:film:proteina}.
+La forma de obtener estas variables desconocidas, $\psi(z)$ y $\pi(z)$  es realizando una soluci\'on num\'erica (puede verse en el anexo \ref{sec:film:reso-numerica}) por sustituci\'on en la diferentes ecuaciones en las que interact\'uan: la densidad de las especies libres ecu. \ref{eq:film:free-species}, los grados de disociaci\'on de los segmentos del film y de los  titulables de la prote\'ina ecuaciones \ref{eq:film:degree-film} y \ref{eq:film:degree-protein} respectivamente, la probabilidad de las conformaciones de la red polim\'erica ecu. \ref{eq:film:probabilidad} y la densidad local de la prote\'ina ecu. \ref{eq:film:proteina}.
 
-Una vez obtendos los potenciales $\pi(z)$ y $\psi(z)$ es posible derivar  cualquier cantidad termodin\'amica de inter\'es  a partir de la energ\'ia libre o haciendo uso de alguna expresi\'on explicita. 
+Una vez obtenidos los potenciales $\pi(z)$ y $\psi(z)$ es posible derivar  cualquier cantidad termodin\'amica de inter\'es  a partir de la energ\'ia libre o haciendo uso de alguna expresi\'on explicita. 
 
 Por ejemplificar la fracci\'on de volumen local ocupada por la prote\'ina puede ser calculada como:
 
@@ -396,8 +396,8 @@ Con esta cantidad es posible cuantificar la adsorci\'on de la prote\'ina en el f
 
 \section{Soluci\'on Bulk}\label{sec:film:bulk-solution}
 
-Como mencionamos en la secci\'on anterior, el potencial usado es un potencial gran canonico el cual proviene de un ensamble gran canonico, en el cual el sistema de estudio  esta en equilibrio con un ``ba\~no de  la soluci\'on". Traducido a nuestro trabajo significa que el film y sus alrededores se encuentran en constante equilibrioi con el bulk de la soluci\'on en la que estan bien definidas las variables como pH, temperatura y concentraci\'on de sal y/o prote\'ina. 
-Dadas estas condiciones la resoluci\'on del bulk de la soluci\'on es indispensable para llevar a cabo nuestras simulaciones. Las soluciones nos proporcionan la informaci\'on de las actividades de las especies mobiles, y con ella sus potenciales qu\'imicos. Informaci\'on que como vimo anteriormente es necesaria para la resolución de las ecuaciones de incompresibilidad y de Poisson.
+Como mencionamos en la secci\'on anterior, la energ\'ia del sistema es expresada como un potencial gran can\'onico el cual proviene de un ensamble gran can\'onico, en el cual el sistema de estudio  esta en equilibrio con un ``ba\~no de  la soluci\'on". Traducido a nuestro trabajo significa que el film y sus alrededores se encuentran en constante equilibrio con el bulk de la soluci\'on en la que est\'an bien definidas las variables como pH, temperatura y concentraci\'on de sal y/o prote\'ina. 
+Dadas estas condiciones la resoluci\'on del bulk de la soluci\'on es indispensable para llevar a cabo nuestras simulaciones. Las soluciones nos proporcionan la informaci\'on de las actividades de las especies m\'oviles, y con ella sus potenciales qu\'imicos. Informaci\'on que como vimos anteriormente es necesaria para la resolución de las ecuaciones de incompresibilidad y de Poisson.
 
 El procedimiento te\'orico es en esencia el mismo: escritura de la energ\'ia libre (y su respectivo potencial) y minimizaci\'on respecto de las funcionales  que lo componen.
 
@@ -420,8 +420,8 @@ De esta forma el potencial dado por el bulk de la soluci\'on se escribe:
 	\label{eq:film:pot-bulk}
 \end{align}
 
-\noindent en donde El superidice $b$ denota el Bulk de la soluci\'on. 
- Los ensambles, expresiones entre brackets ($\left<\rho\right>$)se definen de la misma forma que en la secci\'on anterior. Teniendo las salvedades que no hay dependencia sobre la coordenada $z$:
+\noindent en donde el super\'indice $b$ denota el Bulk de la soluci\'on. 
+ Los ensambles, expresiones entre brackets ($\left<\rho\right>$) se definen de la misma forma que en la secci\'on anterior. Teniendo las salvedades que no hay dependencia sobre la coordenada $z$:
  \begin{align}
  	\left<\rho^b_{pro}\right> = \sum_{\theta}\rho^b_{pro}(\theta)
  \end{align}
@@ -461,11 +461,11 @@ finalmente para la densidad de prote\'ina se obtiene:
 
 \noindent en donde $\tilde{a}_{pro}$ y $cn_\tau$ (y $cn_\lambda$) son definidos en las ecuaciones  \ref{eq:film:actividad-pro} y \ref{eq:film:n-coord} respectivamente. 
 
-Podemos observar nuevamebte que nuestros funcionales quedan en funci\'on, valga la redundancia, por la presi\'on osm\'otica $\pi^b$ y el potencial electrost\'atico $\psi^b$
-Sin embargo si consideramo las condiciones de contorno dada en la ec. \ref{eq:film:contorno} para la ecuaci\'on de Poisson, vemos que en la soluci\'on bulk se debe cumplir: $\psi^b = 0$. 
+Podemos observar nuevamente que nuestros funcionales quedan en funci\'on, valga la redundancia, por la presi\'on osm\'otica $\pi^b$ y el potencial electrost\'atico $\psi^b$
+Sin embargo si consideramos las condiciones de contorno dada en la ecu. \ref{eq:film:contorno} para la ecuaci\'on de Poisson, vemos que en la soluci\'on bulk se debe cumplir: $\psi^b = 0$. 
 
-Esto nos muestra que para nuestro ba\~no t\'ermico la principal inc\'ognicta es la presi\'on osm\'otica: $\pi^b$.
-La cual es posible obtenerla por resoluci\'on num\'erica al sustituir las ecuaciones  \ref{eq:film:rhofree-bulk} ,  \ref{eq:film:rhopro-bulk}  y sus respectivas actividades (ecuaciones \ref{eq:film:act-bulk-free} y \ref{eq:film:act-bulk-pro} ) en la nueva condici\'on de incompresibilidad dada por:
+Esto  muestra que para nuestro ba\~no de soluci\'on la principal inc\'ognicta es la presi\'on osm\'otica: $\pi^b$.
+La cual es posible obtenerla por resoluci\'on num\'erica al sustituir las ecuaciones  \ref{eq:film:rhofree-bulk} ,  \ref{eq:film:rhopro-bulk}  y sus respectivas actividades (ecu. \ref{eq:film:act-bulk-free} y \ref{eq:film:act-bulk-pro} ) en la nueva condici\'on de incompresibilidad dada por:
 
 \begin{align}
 	\sum_\gamma \rho^b_\gamma v_\gamma + \sum_\lambda\left< \rho^b_{pro,\lambda}\right> v_\lambda = 1
@@ -490,20 +490,26 @@ Como se mencion\'o al inicio de esta secci\'on la resoluci\'on del bulk de la so
 \end{align}
 
 
-Hay que tener en cuenta que las densidades en el bulk de la soluci\'on son p\'arametro de entrada en cada c\'alculo. Una vez que se establecen el pH, la concentraci\'on de sal y la concentraci\'on de nuestra prote\'ina, estas densidades se determinan completamente (usando la electroneutralidad de la soluci\'on del bulk y la autodisociaci\'on de equilibrio del agua).
+Hay que tener en cuenta que las densidades en el bulk de la soluci\'on son par\'ametros de entrada en cada c\'alculo. Una vez que se establecen el pH, la concentraci\'on de sal y de nuestra prote\'ina, estas densidades se determinan completamente (usando la electro-neutralidad de la soluci\'on del bulk y la aut- disociaci\'on de equilibrio del agua).
 
 \section{Modelo Molecular}
 
-Para poder llevar a cabo.. desarrollar la teor\'ia molecular es necesario contar con un modelo con el cual puedan ser introducidas todas las caracter\'isticas molecular del sistema, y por lo cual la teor\'ia recibe su nombre.
-El tipo de modelado a usar es crucial dado que puede definir diferentes variables.... tiempos de calculos, que tipos de interacciones tienen prioridad sobre mi sistema... etc
-Uso de modelos de grano grueso en los cuales una \textbf{unidad de grano grueso} esta compuesta por un grupo de \'atomos, la elecci\'on de cuantos depende de las caracter\'isticas a modelar.... ejemplo... martini tiene por regla que 4 \'atomos pesados componen una unidad de grano grueso.
-Para nuestros modelos utilizamos una definición diferente, en donde no es la cantidad sino de la importancia qu\'imica y relevante para responder las preguntar que se plantean en el sistema.
+Para poder desarrollar la teor\'ia molecular es necesario contar con un modelo en el cual puedan ser introducidas todas las caracter\'isticas molecular del sistema, y por lo cual la teor\'ia recibe su nombre.
+El tipo de modelado a usar es crucial dado que puede definir diferentes variables, tiempos de c\'alculos, tipos de interacciones, entre otros. 
+En esta tesis hacemos uso de modelos de grano grueso en los cuales una \textbf{unidad de grano grueso} esta compuesta por un grupo de \'atomos con los cuales  se busca hacer una representaci\'on simplificada de un sistema complejo que tiene como objetivo simular su comportamiento.
+La elecci\'on de cuantos \'atomos conforman una unidad de grano grueso depende de las caracter\'isticas a modelar. 
+Para nuestros modelos utilizamos una definici\'on en donde no es la cantidad sino de la importancia qu\'imica y relevante para responder las preguntar que se plantean en el sistema. Nos enfocamos en segmentos de mol\'eculas que posean carga o puedan ser titulables, as\'i como aquellos que posean alg\'un tipo de interacci\'on que es considerada en las ecuaciones de potencial qu\'imico usado.
 
 
 
-%%%%%%%%% RED
+%%%%%%%%% RED POLIM'ERICA
+\subsection{Red polim\'erica}
 
-Las diferentes conformaciones moleculares de la red de polim\'erica tambi\'en son una entrada necesaria para evaluar esta teor\'ia. Esta red est\'a compuesta por cadenas de pol\'imero de 50 segmentos entrelazados, donde cada segmento es una representaci\'on de grano grueso de una unidad de MAA, con una longitud de segmento de 0.5 nm. La mayoría de estas cadenas conectan dos segmentos de entrelazado, excepto aquellas cadenas en la parte superior, que tienen sus extremos libres en el lado de la soluci\'on, y algunas cadenas que est\'an conectadas por uno de sus extremos a un segmento enlazado a la superficie. Las unidades de entrelazado tienen una coordinaci\'on cuatro y la estructura tiene una topolog\'ia similar a un diamante. Para generar las conformaciones de la red, hemos realizado simulaciones de din\'amica molecular (MD) utilizando GROMACS 5.1.2, donde la red es una mol\'ecula peri\'odica compuesta por 30 segmentos de entrelazado, 2 puntos de injerto y 64 cadenas con un total de 3200 unidades de MAA. La superficie de soporte en la caja de simulaci\'on de MD tiene un \'area de $33 nm^2$; se imponen condiciones peri\'odicas de contorno en las direcciones x e y. El campo de fuerzas utilizado en esta simulación de MD ha sido descrito en otros trabajos. \addcite
+Las diferentes conformaciones moleculares de la red de polim\'erica tambi\'en son una entrada necesaria para evaluar esta teor\'ia. Esta red est\'a compuesta por cadenas de pol\'imero de 50 segmentos entrelazados, donde cada segmento es una representaci\'on de grano grueso de una unidad de MAA, con una longitud de segmento de 0.5 nm. La mayor\'ia de estas cadenas conectan dos segmentos de entrelazado (crosslink), excepto aquellas que se ubican en la parte superior, que tienen sus extremos libres en el lado de la soluci\'on, y algunas cadenas que est\'an conectadas por uno de sus extremos a un segmento enlazado a la superficie. Las unidades de crosslink tienen una coordinaci\'on cuatro y la estructura tiene una topolog\'ia similar a un diamante. Para generar las conformaciones de la red, se realizaron simulaciones de din\'amica molecular (MD) utilizando GROMACS 5.1.2, donde la red es una mol\'ecula peri\'odica compuesta por 30 segmentos de crosslink, 2 puntos de injerto y 64 cadenas con un total de 3200 unidades de MAA. La superficie de soporte en la caja de simulaci\'on de MD tiene un \'area de $33\, nm^2$; se imponen condiciones peri\'odicas de contorno en las direcciones x e y. 
+En la figura \ref{fig:film:model_film} se puede observar una representaci\'on del film utilizado para realizar los estudios presentados en este cap\'itulo.
+
+
+\subsection{Prote\'inas}
 
 
 %%%%%%
