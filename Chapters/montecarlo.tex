@@ -137,7 +137,7 @@ Para el pH 3 el grado de carga del gel es pr\'acticamente nulo, ver figura \ref{
 
 A pH 4.65 y 7 el sistema posee carga por tanto al agregarle energ\'ia al sistema (aumento de temperatura) las fluctuaciones aumentan. Esto ocurre hasta llegar a la temperatura caracter\'istica de transici\'on volum\'etrica del NIPAm, figura \ref{fig:gel:R-T}, por arriba de los $32 ^\circ$C. Despu\'es de este punto hay un colapso en la estructura del nanogel con lo cual es poco probable que se de un cambio de su tama\~no en un punto en part\'icular. ase observa un decaimiento de las fluctuaciones. 
 
-\subsection{Simulaci\'on MC: Cambios en el radio}
+\subsection{Simulaci\'on Monte Carlo}
 
 
 En esta parte presentaremos los resultados de la simulaci\'on MC. En esta primera instancia se mostrar\'an resultados incluyendo los cambios en el volumen de los nanogeles.
@@ -189,8 +189,18 @@ Luego el potencial zeta puede definirse como: \addcite[libro S\&C]
 \subsection{Simulaci\'on MC: tama\~no constante}
 
 En esta secci\'on presentamos los resultados de las simulaciones MonteCarlo considerando solo el cambio en las posiciones de los nanogeles. Esto es debido a la nulas o bajas fluctuaciones que se encontraron en su tama\~no.
-En la figura \ref{fig:mc:redf-gels-r} se muestra la densidad de  distribuci\'on radial para tres diferentes radios de nanogeles , pero todo provenientes de una misma curva de simulaci\'on. 
-En el panel A y C se tratan nanogeles con el menor y mayor de los tama\~nos posibles $R_{min}$ y $R_{max}$ respectivamente. En cambio el panel B muestra a una soluci\'on con el radio de equilibrio $R_0$.
+En la figura \ref{fig:mc:redf-gels-r} se muestra la densidad de  distribuci\'on radial para tres diferentes radios de nanogeles , pero todo provenientes de una misma curva de simulaci\'on. Los resultados presentados son a pH 4.65, correspondiente al pka del MAA, la temperatura es de 25 $^\circ$C por lo que no hay efecto hidrofobico por parte del NIPAm. La concentraci\'on salina es de 1 mM.
+
+En el panel A y C se tratan nanogeles con el menor y mayor de los tama\~nos posibles $R_{min}$ y $R_{max}$ respectivamente.  Es decir los puntos extremo de las curvas de energ\'ia presentada en la figura \ref{fig:mc:omega}. En cambio el panel B muestra a una soluci\'on con el radio de equilibrio $R_0$ el m\'inimo energ\'etico de fig. \ref{fig:mc:omega}.
+
+Se puede observar que en condiciones de part\'iculas peque\~nas, panel A, no hay efecto de la fracci\'on en volumen ocupada por los nanogeles. El comportamiento de esta soluci\'on es similar al de una fase gaseosa en donde las part\'iculas se encuentran homog\'eneamente distribuidas y la probabilidad de encontrar un nanogel es igual a todas las direcciones.
+Por otro lado en los paneles B y C si hay una fuerte correlaci\'on entre el grado de empaquetamiento de la soluci\'on.
+En el radio de equilibrio y en condiciones de baja concentraci\'on de part\'iculas el comportamiento en el mismo que en el panel A. Una distribuci\'on uniforme de la soluci\'on. Cuando la fracci\'on en volumen aumenta a 0.5 se puede apreciar un pico de concentraci\'on de part\'iculas a una distancia de 4 nm, se puede observa un pico de menor intensidad alrededor de $r = 7$nm, aumentar la distancia de muestreo nos conduce a la misma situaci\'on que el panel A.
+Este comportamiento se ve aumentado al aumentar la concentraci\'on de part\'iculas en la soluci\'on $\phi = 1.0$ en donde los picos secundarios son más pronunciados.
+Estos resultados nos indican una transici\'on de un estado m\'as ``gaseoso'' a un ordenamiento caracter\'istico de un l\'iquido. 
+El aumento de la fracci\'on en volumen se traduce en un mayor acercamiento de los nanogeles y con ello un aumento en su interacci\'on. 
+\textcolor{red}{GRAFICAR POTENCIALES POR SEPARADO}
+
 
 \begin{figure*}[!tb]
 	\centering

@@ -38,18 +38,21 @@
 %%   \insertsubmitdate
 
 \begin{titlepage}
-  \TitleBlock{\includegraphics[scale = 0.5]{Figures/unlp-logo2}}
-  \TitleBlock{\scshape\insertinstitution}
+  \TitleBlock{\includegraphics[scale = 1.5]{Figures/escudo}}
+ % \TitleBlock{\Huge\scshape\insertinstitution}
+   \TitleBlock{\Large\scshape\insertinstitution}
   \TitleBlock[\bigskip]{\scshape\insertfaculty}
    \TitleBlock[\bigskip]{\insertdepartment}
-   \TitleBlock{\textbf{Trabajo de Tesis Doctoral}}
- %  \TitleBlock{\hline}
-  \TitleBlock{\Huge\scshape\inserttitle}
-  \TitleBlock{\scshape
-    Tesis presentada por \insertauthor \\
-    para obtener el grado de \insertdegree\\
-dirigado por:\\
-\insertsupervisor}
+    %\hline
+   \TitleBlock{\textbf{\underline{Trabajo de Tesis Doctoral}}}
+  \TitleBlock{\scshape\inserttitle}
+  %\hline
+  \TitleBlock{
+    \underline{\textbf{Tesista:}} \scshape\insertauthor \\
+%    para obtener el grado de \insertdegree\\
+%dirigado por:\\
+}
+\TitleBlock{\insertsupervisor}
 
   \TitleBlock{\insertsubmitdate}
   %\TitleBlock[\bigskip]{\insertdepartment}
