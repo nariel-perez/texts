@@ -1,25 +1,84 @@
 % Chapter 2
 
-\chapter{Films polim\'ericos} % Main chapter title
-
+\chapter{Films de hidrogeles polim\'ericos: Encapsaludo de prote\'inas, poliaminas y drogas}
 \label{Chapter-film} % For referencing the chapter elsewhere, use \ref{Chapter1}
 
 \section{Introducci\'on/Motivaci\'on}
 
-En esta secci\'on nos valdremos de una  red polim\'erica entrecruzada que da estructura a un  film polim\'erico , un hidrogel. 
-Como se mencion\'o anteriormente los films son materiales ampliamente investigados para aplicaciones biom\'edicas. \addcite 
-La respuesta a est\'imulo y su capacidad para adsorber grandes cantidades de solventes los hace muy atractivos al momento de adsorber drogas/prote\'inas de interes terapeutico. \addcite
-Este sistema adem\'as de poder explicar la fisicoqu\'imica que lo envuelve, y poder de respuesta a comportamientos observados experimentalmente \addcite fue una introducci\'on  en la teor\'ia molecular.
-La derivaci\'on de cada componente energ\'etico, la confecci\'on de los modelos moleculares as\'i como tambi\'en la escritura de los c\'odigos forman parte de este primer cap\'itulo. Son el puntap\'ie para poder aplicarlo a los sistemas de micro y nano geles.
-La importancia de este primer cap\'itulo tambi\'en radica en el entendimiento de algunos conceptos que ser\'an aplicados a lo largo de esta tesis. La respuesta a pH y sus cambios en ambientes confinados, el ambiente de un hidrogel, y la regulaci\'on de carga de las diferentes especies presentes en el sistema son detalladas a continuaci\'on.
+Debido a sus propiedades altamente ajustables y biocompatibles, los hidrogeles de pol\'imero han sido de gran inter\'es como materiales para aplicaciones biom\'edicas. En la administraci\'on oral de medicamentos, estos hidrogeles han sido intensamente investigados como portadores que pueden encapsular y liberar prote\'inas medicinales, protegi\'endolas a trav\'es de la barrera f\'isica y qu\'imica que impone el entorno gastrointestinal. (1) Dentro del microentorno acuoso similar a tejido dentro de la red de pol\'imeros entrecruzados, las prote\'inas son menos susceptibles a la desnaturalizaci\'on y agregaci\'on. (2,3) Adem\'as, las prote\'inas conservan su estructura y actividad cuando se liberan de los hidrogeles de pol\'imero. (4) Adem\'as de la administraci\'on de f\'armacos, los hidrogeles de pol\'imero son de gran inter\'es como componente sensible en muchas otras aplicaciones biom\'edicas (5,6), incluyendo la ingenier\'ia de tejidos, (7) la biosensibilizaci\'on, (8,9) y el dise\~no de materiales biomim\'eticos funcionales. (10)
+
+El uso de hidrogeles u otros materiales en dispositivos biom\'edicos requiere una comprensi\'on profunda de su interacci\'on con las prote\'inas. Por ejemplo, las lentes de contacto basadas en geles de poli(metacrilato de \'acido) (PMAA) adsorben prote\'inas de la l\'agrima, lo que tiene implicaciones para la comodidad de uso y la aparición de complicaciones inflamatorias. (11,12) Sin embargo, la adsorci\'on selectiva de prote\'inas con propiedades antibacterianas y/o antiinflamatorias, como la lisozima, podr\'ia ser beneficiosa en este y otros contextos. (12) Cuando se aplican en entornos biol\'ogicos, el gel est\'a expuesto a mezclas multicomponentes, y la adsorci\'on de prote\'inas en el material est\'a gobernada por una interacci\'on compleja entre la red de pol\'imeros y las diferentes especies moleculares presentes en el entorno. La presencia de otras prote\'inas o biomol\'eculas puede influir en la adsorci\'on de prote\'inas de manera no trivial; la adsorci\'on de mezclas de prote\'inas no se puede predecir a partir del comportamiento de soluciones de prote\'inas individuales. (13) Por lo tanto, comprender la qu\'imica f\'isica que rige la adsorci\'on de prote\'inas es esencial.
+
+\subsection{Adsorci\'on de prote\'inas}
+
+En este capitulo, presentamos un avance en esa dirección y aplicamos una teoría molecular para investigar las condiciones de equilibrio de la adsorción  de proteínas en películas de hidrogel sensibles al pH. Este enfoque permite una descripción a nivel molecular del tamaño, forma, distribución de carga y grados de libertad conformacionales de todos los componentes del sistema, incluyendo las diferentes proteínas y la red de polímeros que forma la estructura de la película. Aquí mostramos que, además del esperado e importante papel de la carga de la proteína, la protonación de aminoácidos es un factor decisivo para determinar la adsorción selectiva.
+
+La adsorción de proteínas en materiales poliméricos sensibles al pH ha sido objeto de diversos estudios experimentales. Utilizando calorimetría isotérmica, Welsch et al. (17) consideraron la adsorción de lisozima en microgeles núcleo-corteza basados en unidades de poli(acrilato) (PAA). De acuerdo con los estudios teóricos mencionados anteriormente, este trabajo destaca el importante papel de la protonación de proteínas en la adsorción en el microgel. Además, Zhang et al. (18) estudiaron la influencia del pH en la cinética de adsorción y liberación de proteínas del suero lácteo a partir de cuentas de hidrogel basadas en alginato. La adsorción competitiva de proteínas en diversas superficies, desde hidrofílicas hasta con diferentes grados de hidrofobicidad, también se ha estudiado utilizando diversas técnicas experimentales. (13,19-21) Recientemente, Moerz y Huber (22) estudiaron la adsorción de citocromo c, mioglobina y lisozima en películas delgadas mesoporosas para proponer que estos materiales pueden aplicarse a la separación de proteínas en mezclas binarias mediante el ajuste del pH de la solución. En dicho estudio, el cambio de pH permitió la separación efectiva de mioglobina y lisozima; una proteína puede evitar la adsorción de la otra, incluso cuando esta última se adsorbería fuertemente en soluciones puras. (22) Saxena et al. (23) prepararon membranas híbridas orgánico-inorgánicas cargadas positiva y negativamente para mostrar la separación de proteínas en mezclas de lisozima y albúmina sérica bovina dependiendo del signo de la carga de la membrana y del pH.
 
 
-\begin{figure}
+Además de estos estudios experimentales, se han realizado varios estudios teóricos y de simulación sobre la adsorción de proteínas. Mediante simulaciones de dinámica molecular (MD), se ha investigado extensamente la adsorción de proteínas individuales en diferentes superficies (24,25) y en nanopartículas (26-29). Basándose en la misma técnica, se ha considerado la unión competitiva de proteínas a nanopartículas de oro. (30) Además, la interacción entre polímeros cargados en solución y proteínas ha sido objeto de estudios teóricos y simulaciones moleculares. (31,32) Sin embargo, la adsorción de proteínas en materiales poliméricos o superficies modificadas con polímeros ha sido considerada con menos frecuencia. Yigit et al. (33) desarrollaron diferentes modelos de unión de Langmuir para investigar la adsorción de lisozima en microgeles núcleo-corteza, donde el estado de carga de los microgeles puede ser modificado por el adsorbato. Angioletti-Uberti et al. (34) desarrollaron un enfoque de teoría dinámica de la densidad para describir la adsorción de lisozima en nanopartículas cargadas recubiertas de polímero. Sun et al. (35) realizaron simulaciones de MD en diferentes valores de pH de la adsorción y complejación del fragmento de unión al antígeno de trastuzumab en un hidrogel de poli(vinil alcohol). Szleifer y colaboradores desarrollaron una teoría molecular para investigar la adsorción de proteínas en capas de polímero injertado. (36,37) En cuanto a la adsorción competitiva, solo podemos mencionar el modelo de unión cooperativa multicomponente desarrollado por Oberle et al. (38) para investigar la adsorción competitiva de proteínas en una capa polimérica suave.
+
+
+
+\begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.9\textwidth]{Figures/graph-film/film_model.pdf}
 	\caption{Esquema de simulaci\'on de un film polim\'erico compuesto por MAA. Se muestra adem\'as las prote\'inas usadas y el modelo de grano grueso. En la tabla se ven los segmentos que componen al modelo y la informaci\'on de los pKa asociadas a cada una de ellas.}
 	\label{fig:film:model_film}
 \end{figure}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Poliaminas y adsorci\'on de drogas}
+
+Putrescina, espermidina y espermina son poliaminas que tienen dos, tres y cuatro grupos amino, respectivamente, y que est\'an presentes en todas las c\'elulas vivas.
+Las poliaminas son indispensables para el crecimiento celular y son necesarias en muchos procesos intracelulares e intercelulares.
+Participan en diversas funciones metab\'olicas, como la replicaci\'on del ADN, la regulaci\'on de canales i\'onicos, la fosforilaci\'on de prote\'inas y la se\~nalizaci\'on extracelular \addcite[Igarashi2010,Soda2011].
+Adem\'as, las poliaminas interact\'uan fuertemente con los fosfol\'ipidos de las membranas y, por lo tanto, pueden desempe\~nar un papel importante en la regulaci\'on de las enzimas vinculadas a las membranas \addcite[Moinard2005].
+La s\'intesis de estas mol\'eculas esenciales comienza cuando la enzima ornitina decarboxilasa (ODC) cataliza la producción de putrescina \addcite[Soda2011,Casero2009,Pegg2010].
+
+En el entorno de las c\'elulas sanas, las poliaminas se encuentran en concentraciones altas de micromolares a bajas milimolares \addcite[Porter1983, Russell].
+Sin embargo, cerca de las c\'elulas tumorales, su concentraci\'on es relativamente mayor.
+Numerosos estudios han demostrado que los pacientes con c\'ancer presentan concentraciones elevadas de poliaminas tanto en la sangre como en la orina \addcite[Russell1971], lo que se debe a la mayor actividad de la ornitina decarboxilasa (ODC) \addcite[Soda2011, Agostinelli2010Polyamines, Nowotarski2013].
+Concentraciones an\'omalas de poliaminas pueden indicar la presencia de una c\'elula tumoral \addcite[Park2013, Gerner2004], pero tambi\'en un exceso de disponibilidad de poliaminas puede aumentar la velocidad a la que los tumores se propagan y metastatizan \addcite[Soda2011].
+Al mismo tiempo, dicho exceso puede inhibir los mecanismos inmunitarios que las c\'elulas tienen para evitar la propagaci\'on del tumor \addcite[Soda2011, Jasnis1994Polyamines].
+De hecho, los pacientes con niveles elevados de poliaminas generalmente tienen un pron\'ostico m\'as desfavorable \addcite[Soda2011, Ikeda2011Montmorillonite].
+Actualmente, existe un gran inter\'es en terapias contra el c\'ancer que puedan regular/reducir la cantidad de poliaminas en las cercan\'ias de las c\'elulas tumorales para evitar su propagaci\'on \addcite[Soda2011, Aziz1996Potential, Chen2006Combination, Bachrach2004Polyamines].
+En este capitulo, proponemos y exploramos tanto te\'oricamente como experimentalmente el concepto de un biomaterial funcional capaz de absorber poliaminas, pero al mismo tiempo utilizar la concentraci\'on excesiva de estos marcadores cerca de las c\'elulas tumorales como un desencadenante para la liberaci\'on de un medicamento terap\'eutico.
+
+Los hidrogeles de cadenas polim\'ericas entrecruzadas actualmente se consideran para diversas aplicaciones en la investigaci\'on biom\'edica \addcite[Wang2019].
+Por ejemplo, se han explorado biomateriales basados en hidrogeles sensibles al pH como veh\'iculos de administraci\'on oral de medicamentos que tienen el potencial de encapsular y transportar un agente terap\'eutico a trav\'es del tracto gastrointestinal, protegiendo la carga del medio \'acido del est\'omago y liber\'andola en el ambiente neutral del intestino delgado \addcite[Lowman1999,Zhao2019,Qindeel2019,Li2019].
+Estos hidrogeles son sensibles a cambios de pH debido a que contienen un n\'umero significativo de grupos \'acidos d\'ebiles.
+En este contexto, consideraremos un filme de hidrogel de poli(metacrilato de \'acido) (MAA).
+Los hidrogeles de PMAA son capaces de responder a diversos est\'imulos biol\'ogicos, incluyendo cambios en el pH fisiol\'ogico \addcite[Kanamala2016Mechanisms].
+En este sentido, nuestra contribuci\'on actual aborda una pregunta fundamental: ¿Es posible aprovechar las propiedades sensibles al entorno de los hidrogeles de poli\'acido d\'ebil en el desarrollo de un biomaterial que pueda incorporar y atrapar poliaminas al mismo tiempo que libera un medicamento terap\'eutico en respuesta?
+
+La doxorrubicina es una antraciclina que se utiliza com\'unmente en la quimioterapia debido a su eficacia en la lucha contra una amplia gama de c\'anceres, como carcinomas, sarcomas y c\'anceres hematol\'ogicos \addcite[Panis2012].
+Es uno de los f\'armacos antineopl\'asicos más potentes y tiene la ventaja experimental de que se puede monitorear mediante fluorescencia y/o absorbancia \addcite[Serpe2005Doxorubicin].
+Utilizada sola o en combinaci\'on con otros agentes terap\'euticos, la doxorrubicina es actualmente el compuesto de su clase con el espectro de actividad m\'as amplio \addcite[Carvalho2009].
+Adem\'as, debido a que tiene carga positiva, la doxorrubicina puede encapsularse en nanogeles ani\'onicos \addcite[Li2019] o inmovilizarse en la superficie de superficies nanoh\'ibridas cargadas negativamente \addcite[Kazempour2019].
+
+El objetivo de este estudio es caracterizar los hidrogeles de PMAA como materiales capaces de capturar poliaminas y liberar simult\'aneamente doxorrubicina en respuesta.
+Para lograr este objetivo, aplicamos una teor\'ia molecular recientemente desarrollada para investigar la absorci\'on de poliaminas y doxorrubicina en pel\'iculas de hidrogel de PMAA desde soluciones.
+Esta teorí\'i se formula sobre la base de un potencial termodin\'amico general que tiene en cuenta el costo de energ\'ia libre de protonaci\'on/deprotonaci\'on de unidades titulables, la p\'erdida entr\'opica de confinamiento molecular, los grados de libertad conformacionales y translacionales tanto de la capa polim\'erica como de los absorbentes, y las interacciones electrost\'aticas y est\'ericas.
+Para poder aplicar esta teor\'ia es necesario contar con un modelo molecular que incluye una descripci\'on del tama\~no, la forma, la configuraci\'on y el estado de carga local de todas las especies qu\'imicas presentes en el sistema (espermidina, espermina, putrescina, doxorrubicina y la red de PMAA).
+
+Finalmente, se sintetizaron pel\'iculas de PMAA y, eligiendo un conjunto de condiciones representativas de toda la colecci\'on explorada te\'oricamente, llevamos a cabo experimentos de absorci\'on de poliaminas y doxorrubicina seguidos de la t\'ecnica de UV-Vis.
+Estos experimentos demuestran la idoneidad del enfoque actual para explorar nuevos biomateriales y su respuesta en el contexto de aplicaciones relacionadas con el c\'ancer.
+En resumen, aqu\'i exploramos el comportamiento fisicoqu\'imico de los hidrogeles desde una perspectiva te\'orica, lo que permite un estudio sistem\'atico de su respuesta a cambios en el pH, la concentraci\'on de sal y poliaminas, y tambi\'en desde una perspectiva experimental para comprobar los puntos clave encontrados en nuestros c\'alculos.
+
+
+\section{Metodolog\'ia}
+
+En este trabajo investigamos la adsorción de proteínas en películas de hidrogel de poliácido. Centramos nuestra atención en una red de poli(metacrilato de ácido), pero también consideramos redes que contienen otro polímero ácido o un polímero neutro. Nuestro objetivo es demostrar que estas películas pueden usarse para separar y localizar proteínas con precisión nanométrica. La composición química de la red puede modificarse para prevenir o mejorar la adsorción selectiva en diferentes regiones dentro de la película o en la interfaz película-solución. Además, el pH de la solución proporciona un control externo sensible de tal separación y localización. Como proteínas modelo, estudiamos mezclas de proteínas globulares de tamaño similar, utilizando mioglobina (16,7 kDa), lisozima (14,4 kDa) y citocromo c (12,4 kDa). Sobre la base de nuestro estudio teórico, analizamos los principales factores fisicoquímicos que impulsan la adsorción selectiva de proteínas a partir de estas mezclas en diferentes entornos.
+
+
+
+
 
 
 

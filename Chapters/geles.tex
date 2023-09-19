@@ -1,6 +1,6 @@
 % Chapter 3
 
-\chapter{Geles polim\'ericos} % Main chapter title
+\chapter{Microgeles polim\'ericos: Respuesta a est\'imulo y encapsulado/liberaci\'on de f\'armacos} % Main chapter title
 
 \label{Chapter-geles} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
@@ -21,22 +21,49 @@
 \section{Introducci\'on/Motivaci\'on}
 
 
-Como hemos mencionado en la introducci\'on de este tesis los micro-nanogeles polim\'ericos son sistemas polim\'ericos que presentan una estructura tridimensional en forma de red. Estos geles se forman mediante la reticulaci\'on de pol\'imeros (o copol\'imeros), lo que da lugar a una matriz de pol\'imero tridimensional que puede retener grandes cantidades de agua o solventes.
-Estos sitemas  representan una plataforma vers\'atil y prometedora para diversas aplicaciones biom\'edicas. Su capacidad para retener agua y solventes, su tama\~no nanom\'etrico y su capacidad de funcionalizaci\'on los convierten en sistemas atractivos para la entrega de f\'armacos
-Este sistema de delivery requiero el entendimiento de la fisicoqu\'imica que engloba todo el proceso.
-Desde el proceso de encapsaludo hasta posibles mecanismos de liberaci\'on en los lugares deseseados.
-Con esto nos referimos a entender que tipo de interacciones existen y predominan y hacen que el proceso se lleve a cabo.
+Los microgeles son part\'iculas blandas formadas por cadenas de pol\'imero entrecruzadas que pueden mostrar tanto un comportamiento coloidal como macromolecular\cite{plamper2017functional,lyon2012polymer}.
+Inmersas en soluciones acuosas, estas part\'iculas incorporan y retienen grandes cantidades de agua dentro de su estructura polim\'erica.
+Normalmente, sus di\'ametros var\'ian desde decenas de nan\'ometros (\emph{nanogeles}) hasta varios micrones.
+Sin embargo, la caracter\'istica m\'as sorprendente de estas part\'iculas es su capacidad para absorber o liberar solvente y cambiar de tama\~no en respuesta a una variedad de est\'imulos externos.
+Este comportamiento sensible es reversible y depende de la composici\'on qu\'imica de la red de pol\'imeros.
 
-En este cap\'itulo mostramos el desarrollo de una teor\'ia de equilibrio de dos fases y realizamos una investigaci\'on sistem\'atica del comportamiento termodin\'amico de microgeles compuestos de copol\'imeros aleatorios de NIPAm y un comon\'omero \'acido (MAA).
-Este modelo describe la qu\'imica f\'isica detr\'as de todos los fen\'omenos de hinchamiento del microgel impulsado por el pH, la dependencia no monot\'onica del tama\~no de part\'icula de la concentraci\'on de sal y el colapso de la red al aumentar la temperatura por encima del VPTT.
-Las predicciones que mostramos brindan una imagen clara de los efectos de la composici\'on de la soluci\'on (pH, concentración de sal) y la qu\'imica del pol\'imero (contenido de MAA, grado de entrecruzamiento) en el VPT.
-Tambi\'en investigamos las mejores condiciones para la encapsulaci\'on de doxorrubicina y daunorrubicina dentro de estos microgeles.
-Los c\'alculos  ac\'a mostrados son espec\'ificos para el \'acido metacr\'ilico con $pKa = 4,65$, pero el comportamiento fisicoqu\'imico informado puede describir cualitativamente una variedad de microgeles basados en NIPAm que se han modificado con otros mon\'omeros \'acidos que tienen diferente pka y diferente solubilidad a pH bajo.
+Los microgeles compuestos por cadenas de pol\'imero que contienen segmentos \'acidos como \'acido acr\'ilico o metacr\'ilico (AA y MAA, respectivamente) se hinchan o deshinchan muchas veces en respuesta a cambios en el pH de la solución\cite{snowden1996colloidal,Zhou1998}.
+El pH particular que marca el inicio y caracteriza esta transición es el pKa aparente del microgel, que depende de la concentraci\'on de sal en la soluci\'on y a menudo difiere del pKa intr\'inseco del mon\'omero \'acido.
+Estos microgeles tambi\'en ajustan su tama\~no en respuesta a cambios en la concentraci\'on de sal en la soluci\'on\cite{snowden1996colloidal}.
 
-El nivel de teor\'ia usado en este cap\'itulo corresponde a un sitema de dos fases, del tipo Donnan \cite{overbeek1956donnan}, en el cual la fase polim\'erica es considera homogenea. La fase soluci\'on con la que se encuentra en contacto contiene los iones y adsorbatos lso cuales pueden permear en la fase polim\'erica. En cambio nuestro gel no puede pasar a la fase soluci\'on. 
-El sistema termodinamicamente hablando corresponde a un sistema semi-gran canonico que incluye todas las los terminos energeticos necesarios para una descripci\'on detallada del mismo. 
-En las siguientes secciones se har\'a rese\~na sobre las ecuaciones que describen la fisicoqu\'imica del sistema. La descripci\'on se har\'a para cada una de las fases. En una tercera parte se mostrará como se ve modificada el potencial termodin\'amico del sistema cuando se consideran adsorbatos.  Los adsorbatos elegidos corresponden a dos drogas Doxorubucina y Daunorubicina. La elecci\'on de estas drogas debido a su alto uso en terapias anticancerigenas. Las mismas cuentan con estudios experimentales en microgeles de poli(NIPAm-co-MAA) para la encapsulaci\'on/liberaci\'on de estos f\'armacos. \addcite[drogas]
-Se har\'a enfasis en la optimización para su encapsulado en estos geles polimericos.  
+An\'alogamente, los microgeles de algunos pol\'imeros termosensibles experimentan una transici\'on de fase volum\'etrica (VPT, por sus siglas en ingl\'es) cuando se calientan por encima de una temperatura caracter\'istica (VPTT o Tpt)\cite{Pelton1986,Pelton2000}.
+Este comportamiento se origina porque tales pol\'imeros son insolubles en agua por encima de cierta temperatura cr\'itica de soluci\'on inferior (LCST, por sus siglas en ingl\'es)\cite{Kawaguchi2020}.
+Normalmente, la LCST del pol\'imero y la VPTT de la red entrecruzada son aproximadamente id\'enticas.
+Este es el caso de las part\'iculas de microgel de poli(N-isopropilacrilamida) entrecruzado (PNIPAm)\cite{Pelton1986}, cuyo colapso de volumen ocurre por encima de aproximadamente $32 ^\circ C$, que es la LCST del pol\'imero lineal\cite{Schild1992}.
+
+Dado que la VPTT de los microgeles de PNIPAm se encuentra alrededor de la temperatura corporal, han generado un gran inter\'es en aplicaciones biom\'edicas\cite{Guan2011}.
+Las estrategias para controlar la VPTT de los microgeles incluyen la síntesis de nuevos mon\'omeros termosensibles\cite{Cai2007,Macchione2019}, as\'i como la copolimerizaci\'on con un mon\'omero i\'onico o ionizable\cite{Hirose1987,Lopez2020}.
+Este \'ultimo enfoque produce microgeles multiresponsivos que son susceptibles a cambios en la temperatura, pH y concentración de sal\cite{snowden1996colloidal,Farooqi2017}.
+Los microgeles de N-isopropilacrilamida (NIPAm) y \'acido acr\'ilico (AA) han sido ampliamente estudiados\cite{Morris1997,Jones2000,Bradley2005,Begum2016}; tambi\'en se han investigado microgeles de copol\'imeros de NIPAm y \'acido metacr\'ilico (MAA) \cite{Dowding2000,Hoare2004,Giussi2015}.
+La VPTT de estos microgeles multiresponsivos depende del pH de la soluci\'on, la concentraci\'on de sal y la fracci\'on de mon\'omero ionizable en las cadenas de polímero\cite{Morris1997,Jones2000,Hoare2004,Bradley2005,Lee2008,Wong2009,Hamzavi2016}.
+Adem\'as, la incorporaci\'on del co-mon\'omero \'acido proporciona un mecanismo controlado por el pH para la absorci\'on/liberaci\'on de mol\'eculas cargadas de manera opuesta, lo que hace que los microgeles multiresponsivos sean atractivos para el dise\~no de sistemas de administraci\'on de medicamentos funcionales\cite{Liu2017}.
+
+Las aplicaciones basadas en microgeles de pol\'imero est\'an volvi\'endose cada vez m\'as diversas y de mayor importancia en diferentes \'areas de la tecnolog\'ia\cite{plamper2017functional}.
+Nanocompuestos hechos de microgeles de poli(NIPAm-\emph{co}-MAA) que incorporan nanopart\'iculas de oro o plata o estructuras metal-org\'anicas tienen aplicaciones potenciales en el desarrollo de materiales con actividad catal\'itica ajustable para la degradaci\'on de contaminantes industriales\cite{Khan2013synthesis,Shi2014,Allegretto2020}.
+Estos microgeles tambi\'en se pueden aplicar en el desarrollo de emulsiones sensibles al pH, salinidad y temperatura \cite{Ngai2005,Ngai2006,Brugger2008,Schmidt2011}, o como plantillas para el ensamblaje de nanomateriales\cite{Wong2009}.
+Los nano/microgeles de pol\'imero multiresponsivos son excelentes candidatos para el desarrollo de aplicaciones biom\'edicas m\'inimamente invasivas, incluyendo andamios granulares para la ingenier\'ia de tejidos\cite{Daly2020}.
+\citet{Culver2017A} han utilizado nanogeles funcionalizados de poli(NIPAm-\emph{co}-MAA) para la uni\'on y detecci\'on de diferentes prote\'inas.
+Recientemente, se han investigado dispositivos basados en microgeles de poli(NIPAm-\emph{co}-MAA) para la encapsulaci\'on/liberaci\'on del f\'armaco quimioterap\'eutico Doxorubicina \cite{Giussi2020,MartinezMoro2020,Pergushov2020}.
+
+En este contexto, aqu\'i derivamos una teor\'ia de equilibrio de dos fases y realizamos una investigaci\'on sistem\'atica del comportamiento termodin\'amico de microgeles compuestos por copol\'imeros aleatorios de NIPAm y un co-mon\'omero \'acido.
+Este modelo describe la qu\'imica y f\'isica detr\'as de todos los siguientes fen\'omenos: la hinchaz\'on de los microgeles impulsada por el pH, la dependencia no mon\'otona del tama\~no de part\'icula con la concentraci\'on de sal y el colapso de la red al aumentar la temperatura por encima de la VPTT.
+Nuestras predicciones proporcionan una imagen clara de los efectos de la composici\'on de la soluci\'on (pH, concentraci\'on de sal) y la qu\'imica del pol\'imero (contenido de MAA, grado de entrecruzamiento) en la VPT.
+Tambi\'en investigamos las mejores condiciones para la encapsulaci\'on de Doxorubicina y Daunorubicina dentro de estos microgeles.
+Los  c\'alculos son espec\'ificos para el \'acido metacr\'ilico con un pKa = 4.65, pero el comportamiento fisicoqu\'imico reportado puede describir cualitativamente una variedad de microgeles basados en NIPAm que han sido modificados con otros mon\'omeros \'acidos que tienen diferentes pKa y diferentes solubilidades a pH bajo.
+
+
+El comportamiento de los microgeles de poli(NIPAm-\emph{co}-MAA), incluyendo su VPT y la interacci\'on con pol\'imeros de carga opuesta, ha sido descrito utilizando una variedad de t\'ecnicas experimentales \cite{Hoare2004,Dowding2000,Kleinen2008,Kleinen2010,Giussi2015,Su2016,Giussi2020}.
+Tambi\'en se han aplicado teor\'ias y simulaciones moleculares de grano grueso para investigar el comportamiento de microgeles de pol\'imeros sensibles a est\'imulos \cite{quesada2011gel,ahualli2016coarse,Landsgesell2019SM}.
+Estos trabajos se han centrado principalmente en la hinchaz\'on y otras propiedades de part\'iculas que tienen una red de pol\'imero permanentemente cargada \cite{Levin2002,Claudio2009,Colla2014,Jha2011,jha2012understanding,QuesadaPerez2013,QuesadaPerez2014,Kobayashi2014,Kobayashi2016,Rizzi2016,moncho-jorda2016a,Kobayashi2017,AdroherBenitez2017PCCP}, y algunos han abordado el efecto de la temperatura y la calidad del solvente \cite{Jha2011,QuesadaPerez2013,QuesadaPerez2014,moncho-jorda2016a,ahualli2016coarse,AdroherBenitez2017PCCP}.
+Recientemente, los estudios de simulaci\'on han considerado la respuesta al pH de los microgeles compuestos por pol\'imeros reguladores de carga\cite{Schroeder2015,Rudov2017,Sean2018,Hofzumahaus2018,Lu2019}.
+Sin embargo, solo unos pocos trabajos te\'oricos han investigado las propiedades de microgeles multiresponsivos en funci\'on de la temperatura, el pH y la concentraci\'on de sal \cite{CaprilesGonzalez2008,polotsky2013collapse}.
+
+
 
 \subsection{Teor\'ia: Fase Microgel}\label{sec:gel:theory}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
