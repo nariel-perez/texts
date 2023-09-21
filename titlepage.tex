@@ -40,21 +40,22 @@
 \begin{titlepage}
   \TitleBlock{\includegraphics[scale = 1.5]{Figures/escudo}}
  % \TitleBlock{\Huge\scshape\insertinstitution}
-   \TitleBlock{\Large\scshape\insertinstitution}
-  \TitleBlock[\bigskip]{\scshape\insertfaculty}
-   \TitleBlock[\bigskip]{\insertdepartment}
-    %\hline
-   \TitleBlock{\textbf{\underline{Trabajo de Tesis Doctoral}}}
-  \TitleBlock{\scshape\inserttitle}
-  %\hline
+  \TitleBlock{\Large\scshape\textbf{\insertinstitution}}
+  \TitleBlock[\bigskip]{\scshape\textbf{\insertfaculty}}
+   \TitleBlock[\bigskip]{\textbf{\insertdepartment}}
+%   \TitleBlock{\hline }
+   \TitleBlock{\textbf{\underline{\textit{Trabajo de Tesis Doctoral:}}}}
+  \TitleBlock{\scshape\inserttitle }
+%   \TitleBlock{\hline }
+
   \TitleBlock{
-    \underline{\textbf{Tesista:}} \scshape\insertauthor \\
+    \underline{\textbf{\textit{Tesista:}}} \scshape\insertauthor \\
 %    para obtener el grado de \insertdegree\\
 %dirigado por:\\
-}
-\TitleBlock{\insertsupervisor}
+\insertsupervisor}
+%\TitleBlock{\insertsupervisor}
 
-  \TitleBlock{\insertsubmitdate}
+  \TitleBlock{\underline{\textbf{\textit{A\~no:}}} \insertsubmitdate}
   %\TitleBlock[\bigskip]{\insertdepartment}
 \end{titlepage}
 
