@@ -579,7 +579,7 @@ Para nuestros modelos utilizamos una definici\'on en donde no es la cantidad sin
 	\includegraphics[width=0.5\textwidth]{Figures/graph-film/chargeAds.png}
 	\caption{Average net charge number of doxorubicin and the polyamines as a function of pHin dilute solutions.
 	The right-hand side axis gives the degree of charge of an isolated methacrylic acid unit. The vertical dash-dotted line indicates physiological pH. (Theoretical predictions.)}
-	\label{fig:model}
+	\label{fig:film:model}
 \end{figure}
 
 
@@ -664,168 +664,204 @@ Los films  de PMAA se obtuvieron mediante la t\'ecnica de Polimerizaci\'on Radic
  Las pel\'iculas entrecruzadas de PtBMA se sumergieron en una soluci\'on de \'acido trifluoroac\'etico (Aldrich 99\%) en CH$_2$Cl$_2$ (50\% v/v) durante una hora a temperatura ambiente. Luego, los sustratos se lavaron varias veces con agua y se dejaron sumergidos en agua durante 10 minutos antes de secarlos con N$_2$. El \'angulo de contacto medido utilizando agua disminuy\'o con el tiempo, desde un valor inicial de alrededor de 69$^\circ$ hasta 63$^\circ$; este comportamiento indica una exitosa hidr\'olisis de la película de PtBMA en una pel\'icula de PMAA m\'as hidrofílica, exponiendo grupos carbox\'ilicos, que se hinchan/hidratan con el tiempo.
 
 
-
-
-
-%%%%%%%%% RED POLIM'ERICA
-\subsection{Red polim\'erica}
-
-Las diferentes conformaciones moleculares de la red de polim\'erica tambi\'en son una entrada necesaria para evaluar esta teor\'ia. Esta red est\'a compuesta por cadenas de pol\'imero de 50 segmentos entrelazados, donde cada segmento es una representaci\'on de grano grueso de una unidad de MAA, con una longitud de segmento de 0.5 nm. La mayor\'ia de estas cadenas conectan dos segmentos de entrelazado (crosslink), excepto aquellas que se ubican en la parte superior, que tienen sus extremos libres en el lado de la soluci\'on, y algunas cadenas que est\'an conectadas por uno de sus extremos a un segmento enlazado a la superficie. Las unidades de crosslink tienen una coordinaci\'on cuatro y la estructura tiene una topolog\'ia similar a un diamante. Para generar las conformaciones de la red, se realizaron simulaciones de din\'amica molecular (MD) utilizando GROMACS 5.1.2, donde la red es una mol\'ecula peri\'odica compuesta por 30 segmentos de crosslink, 2 puntos de injerto y 64 cadenas con un total de 3200 unidades de MAA. La superficie de soporte en la caja de simulaci\'on de MD tiene un \'area de $33\, nm^2$; se imponen condiciones peri\'odicas de contorno en las direcciones x e y. 
-En la figura \ref{fig:film:model_film} se puede observar una representaci\'on del film utilizado para realizar los estudios presentados en este cap\'itulo.
-
-
-\subsection{Prote\'inas}
-
-En este cap\'itulo se han considerado dos prote\'inas diferentes: citocromo c y mioglobina.
-Para describir estas mol\'eculas, utilizamos un modelo de grano grueso donde cada residuo de amino\'acido se representa mediante una \'unica part\'icula centrada en la posici\'on del carbono $\alpha$.
-La secuencia de todos los carbonos $\alpha$ se toman de la estructura cristalogr\'afica obtenida de la base de datos de prote\'inas \cite{berman2000protein}: 2B4Z para el citocromo c \cite{mirkin2008high},  3RGK para la mioglobina \cite{hubbard1990x}.
-Las part\'iculas de grano grueso en este modelo se les asigna un volumen y un pKa (si la unidad es titulable) seg\'un el amino\'acido que representan.
-En la secci\'on \ref{subsec:protein} se hace una descripci\'on m\'as detallada del modelo usado para el modelado de los adsorbatos usados.  Se presenta la tabla \ref{table:Coarse-grain} en donde se vuelca la informaci\'on molecular atribuida a cada unidad de CG.
-
-\begin{figure}[!htb]
+\begin{figure*}[htb]
 	\centering
-	\includegraphics[width=0.9\textwidth]{Figures/modelos/cg_proteinas.png}
-	\caption{Esquema del uso de modelado de grano grueso para la construcci\'on de modelos de prote\'inas. Se muestra la estructura cristalogr\'afica de la prote\'ina  a la cual se les identifica los carbonos alfas de cada amino\'acido y con ello la posici\'on del segmento de grano grueso.}
-	\label{fig:film:cg_protein}
-\end{figure}
+	\includegraphics[width=0.7\textwidth]{Figures/graph-film/exp_doxo_load_scheme.png}
+	\caption{Scheme showing doxorubicin loading to the PMAA hydrogel film and release in presence of spermidine$^{\ast\ast}$.}
+	\label{fig:film:exp_doxo_scheme}
+\end{figure*}
+
+
+
+\subsubsection{Captura y liberación de doxorrubicina en presencia de poliaminas}
+
+
+La carga de doxorrubicina (Doxo, Aldrich 98.0-102.0\% en clorhidrato de doxorrubicina) se realiz\'o sumergiendo las pel\'iculas de PMAA en una soluci\'on de la droga al $10^-2$ M en agua ultrapura \textit{Milli-Q} ($18.2 M \Omega cm$) durante 24 horas en el refrigerador (ver figura \ref{fig:film:exp_doxo_scheme}). Se utilizaron las bandas de absorci\'on de Doxo en el rango de 450-550 nm para caracterizar su carga en el film utilizando un espectrofot\'ometro Lambda 35 de Perkin Elmer. Para ello, despu\'es de la carga, los sustratos se sumergieron durante unos segundos en agua ultrapura para eliminar las mol\'eculas adheridas a la superficie y se secaron con un flujo de N2. Finalmente, los sustratos se colocaron verticalmente en el camino \'optico del espectrofot\'ometro y se realizaron los an\'alisis, abarcando el rango de 200-800 nm, con una velocidad de escaneo de 480 nm/min y un ancho de ranura de 1 nm.
+
+La liberaci\'on se realiz\'o sumergiendo los sustratos cargados en agua o en soluciones de espermidina (Aldrich$ >$ 99\%) o espermina (Aldrich $>$ 97\%), cada una al 2.8\% en peso/volumen (ver figura \ref{fig:film:exp_doxo_scheme}) en diferentes momentos. La liberaci\'on se sigui\'o de la misma manera que la carga. Estas soluciones de poliaminas se neutralizaron con hidr\'oxido de sodio al 0.1 M, lo que aument\'o la fuerza i\'onica desde el agua pura y llev\'o a un pH final de 7. Todos los experimentos se realizaron utilizando agua ultrapura \textit{Milli-Q}. La concentraci\'on de poliamina se eligi\'o para explorar un r\'egimen de saturaci\'on, equivalente al extremo de la regi\'on explorada en las predicciones te\'oricas (ver más abajo). De esta manera, se pueden comparar cualitativamente las cantidades de carga de amina equivalentes.
+
+%%%%%%%%%%%%%%%%%%
 
 
 
 
-%%%%%%
-%%%% Aquí estaba la resolución numerica
+
 %%%%
 \section{Resultados} \label{sec:film:resultados}
 
+\subsection{Theoretical Results}
 
-Los hidrogeles (geles polim\'ercios en general) compuestos por cadenas de protonables son sensibles a los cambios de pH. Esta respuesta se debe al equilibrio qu\'imico de protonaci\'on/desprotonaci\'on de las unidades \'acidas o b\'asicas que componen la red. Cuando se var\'ia el pH del entorno en el que se encuentra el gel, se producen cambios en la carga el\'ectrica de las unidades titulables, lo que a su vez afecta las propiedades  del material.
-
-Para comprender en detalle el funcionamiento de esta respuesta, es necesario recordar algunos conceptos fundamentales sobre el comportamiento \'acido/base de las mol\'eculas bajo condiciones ideales. El pH, que representa la concentraci\'on de iones de hidr\'ogeno en una soluci\'on, desempe\~na un papel crucial en la protonaci\'on/desprotonaci\'on de los grupos titulables presentes en el gel. En condiciones \'acidas, los grupos \'acidos se protonan, lo que lleva a un aumento en la carga el\'ectrica y una mayor retenci\'on de agua por parte del gel. Por otro lado, en condiciones alcalinas, los grupos \'acidos se desprotonan, disminuyendo la carga el\'ectrica y resultando en una disminuci\'on en la capacidad de retenci\'on de agua. Este efecto es el contrario cuando los mon\'omeros son b\'asicos y el pH del medio es alcalino.
-
-Estos conceptos sobre el comportamiento \'acido/base son fundamentales para comprender el equilibrio que ocurre cuando los mon\'omeros se confinan en una red polim\'erica. Al introducir los mon\'omeros \'acidos en la red, se establece un equilibrio din\'amico entre las formas protonadas y desprotonadas de los grupos protonables. Este equilibrio depende tanto del pH del entorno como de las caracter\'isticas intrí\'isecas de los mon\'omeros y la red polim\'erica. Al comprender y controlar este equilibrio, es posible modular las propiedades f\'isicas y qu\'imicas del gel, como su capacidad de hinchamiento, solubilidad, y liberaci\'on de f\'armacos.
-
-Estos principios ser\'an utilizados en los sistemas de estudio que se explorar\'an en los pr\'oximos cap\'itulos, donde se investigar\'a la respuesta de geles polim\'ericos a diferentes est\'imulos, incluyendo pH, temperatura y fuerzas externas. El estudio de estos sistemas sensibles permitir\'a avanzar en el dise\~no y desarrollo de materiales inteligentes con aplicaciones en campos como la medicina, la bioingenier\'ia y la ciencia de materiales.
-
-
-\subsection{Respuesta al pH} \label{sec:film:respuesta-pH}
-
-Si consideramos una soluci\'on diluida de mol\'eculas titulables, estas pueden exhibir dos estados posibles: protonado o desprotonado. En este sentido, se define el grado de disociaci\'on, $f$, el cual proporciona la fracci\'on de mol\'eculas que se encuentran en estado desprotonado:
-
-\begin{equation}
-	f = \frac{1}{1+10^{pK_a -pH}}
-	\label{eq:film:diso-ideal}
-\end{equation}
-
-Para las mol\'eculas \'acidas, su estado protonado no posee carga y es neutro, mientras que su estado desprotonado posee carga. Adem\'as, el grado de disociaci\'on tambi\'en nos indica el grado de carga de estas mol\'eculas, $f_c$. 
-En el caso de mol\'eculas b\'asicas, su estado de carga es contrario al de las mol\'eculas \'acidas, por lo tanto, el grado de carga viene dado por: $f_c = 1 -f$
-
-
-En soluciones diluidas, el grado de disociaci\'on $f$ ( y el de carga $f_c$) son completamente determinados por el pH de la soluci\'on y el $pK_a$ intr\'inseco del par \'acido/base. Cuando el $pH = pK_a$, la mitad de los grupos titulables se encuentran disociados ( $f = 0.5$).  Para valores de pH de $1 \, ,\pm$ corresponden a estados con un $90\%$ y $10\%$de disociaci\'on, respectivamente. Es decir, cuando el pH se encuentra cerca del $pK_a$, la transici\'on del $10\%$ al $90\%$ de desprotonaci\'on ocurre dentro de dos unidades de pH de la soluci\'on ideal.
-Estas consideraciones de soluci\'on ideal se utilizan com\'unmente para estimar el grado de carga de las unidades \'acidas dentro de cadenas polim\'ericas. Sin embargo, este comportamiento es diferente para sistemas en confinamiento. Las unidades protonables que forman parte de una red polim\'erica son un ejemplo de ello, lo cual modifica significativamente su comportamiento de protonaci\'on.
-
-
-A continuaci\'on, describiremos el comportamiento de estos sistemas confinados, es decir, hidrogeles sensibles al pH, haciendo uso de la teor\'ia planteada anteriormente.
-A diferencia de las soluciones diluidas, las unidades \'acidas en una red de pol\'imeros experimentan repulsiones electrost\'aticas cuando est\'an cargadas. Esto conduce a una disminuci\'on significativa en la disociaci\'on de estos grupos en comparaci\'on con las condiciones ideales, con el objetivo de reducir la fuerza de las repulsiones dentro de la red polim\'erica.
-
-La figura \ref{fig:film:degree-film} ilustra este comportamiento y muestra el grado medio de carga de los segmentos de un film compuesto por una red de cadenas de \'acido poli(metacrílico) (PMAA) en contacto con soluciones que tienen diferentes concentraciones de sal.
-
-
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{Figures/graph-film/charge_degree-film.png}
-    \caption{Grado de carga del gel como funci\'on del pH. Grado de carga para un monomero aislado en presentado en curva a rayas, se compara para diferentes concentraciones de sal, a mayor concentraci\'on salina m\'as nos acercamos al sistema ideal.}
-    \label{fig:film:degree-film}
-\end{figure}
-
-A un pH dado, es significativamente menos probable que una unidad \'acida de la red polim\'erica se cargue en comparaci\'on con las consideraciones ideales. La concentraci\'on de sal en la soluci\'on resulta ser una variable cr\'itica que modula este comportamiento de regulaci\'on de carga.
-
-A una salinidad relativamente alta, la cantidad de contraiones dentro del film aumenta, lo que resulta en el apantallamiento de las interacciones electrost\'aticas. Estas interacciones se vuelven de corto alcance. Este apantallamiento de repulsiones dentro de la red permite que el pol\'imero aumente su grado de carga. En esta observaci\'on inicial, vemos que un aumento en la salinidad genera una protonaci\'on que se aproxima al comportamiento ideal.
-
-En condiciones de baja concentraci\'on de sal, solo hay suficientes contraiones dentro de la red para neutralizar la carga el\'ectrica del pol\'imero. Bajo estas condiciones, el efecto de apantallamiento de los iones de sal se debilita y las interacciones electrost\'aticas efectivamente tienen un mayor alcance. Como resultado, la red se carga menos para prevenir o reducir las repulsiones dentro de la red.
-
-En la figura \ref{fig:film:degree-film}, se observa que el grado de carga de los films polim\'ericos difiere del comportamiento de los mon\'omeros aislados. Esto nos lleva a pensar que las condiciones en este entorno son diferentes a las que se esperar\'ian en la soluci\'on. Existe una regulaci\'on de carga, lo que sugiere una regulaci\'on del pH.
-
-Definimos as\'i el pH local, que nos proporciona la concentración de protones en una posición espacial $z$
-
-\begin{equation}
-	pH(z) = -\log_{10}(H^+)
-	\label{eq:film:pH-local}
-\end{equation}
-
-Una baja disociaci\'on (un alto nivel de protonaci\'on) de las unidades \'acidas de las unidades de MAA en nuestra red polim\'erica puede explicarse en t\'erminos del pH local dentro del material. Definimos el pH del gel ($pH_{gel}$) como el promedio del pH local dentro del film. Resultados previos han mostrado que esta cantidad est\'a bien definida \cite{longo2014non}.
-
-Enfatizamos la importancia de estos dos t\'erminos, $pH_{gel}$ y $pH(z)$, por la informaci\'on que proporcionan: el estado de carga/protonaci\'on de las unidades titulables en la red polim\'erica.
-
-Haciendo uso de la ecuaci\'on \ref{eq:film:diso-ideal}, es posible calcular el grado de disociaci\'on de la estructura polim\'erica de nuestro hidrogel. El uso de $pH_{gel}$ es indispensable en condiciones en las que el pH difiere del pH de la soluci\'on . El mismo procedimiento se realiza para calcular el estado de protonaci\'on local de las unidades titulables de las especies que se adsorben en el film (ver figura \ref{fig:film:protein-charge}).
-
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{Figures/graph-film/carga-proteinas.png}
-    \caption{N\'umero de carga de las proteinas cytocromo c y myoglobina como  funci\'on del pH en el seno de la soluci\'on (bulk). La l\'inea a trazos muestra el cambio en el signo de la carga.}
-    \label{fig:film:protein-charge}
-\end{figure}
-
-
-Sin embargo, aunque esto parece simplificar el problema de establecer la carga neta de cualquier especie del sistema, en nuestro caso la red polim\'erica y las prote\'inas adsorbidas, determinar los cambios en el pH local tiene la misma complejidad que el problema original (es decir, la de determinar la carga del film). El pH local que se establece dentro del material, as\'i como su valor en la interfaz entre el film polim\'erico y la soluci\'on acuosa, es el resultado de la compleja interacci\'on entre la organizaci\'on molecular, los equilibrios qu\'imicos y las interacciones f\'isicas que determinan el equilibrio termodin\'amico en las condiciones impuestas externamente (pH, concentraci\'on de sal). Todas las variables expuestas se describen en la secci\'on \ref{sec:film-teoria}.
-
-Para ejemplificar c\'omo varí\'i el pH en relaci\'on con el pH y la concentraci\'on salina dada en el bulk de la soluci\'on, se puede observar la figura \ref{fig:film:pH-local}, que muestra el pH dentro de nuestro film de cadenas de 
-PMAA
-PMAA como funci\'on del pH. Cada curva hace referencia a una concentraci\'on de sal diferente. Se agrega, a rayas, el comportamiento ``ideal" en el que el pH del bulk es igual al pH local, en particular al del film, calculado usando teor\'ia molecular.
-
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{Figures/graph-film/pH-local.png}
-    \caption{pH local del gel como funci\'on del pH en el seno de la soluci\'on (bulk). Cada curva corresponde a una concentraci\'on de sal diferente.}
-    \label{fig:film:pH-local}
-\end{figure}
-
-\subsection{Adsorci\'on}\label{sec:film:resu-absorcion}
-
-El uso estos sistemas de hidrogeles como transportadores de adsrobatos de utilidad terap\'eutica, involucra el poder cuantificar y cualificar esta adsorci\'on.
- 
-Para ello nos valdremos de la teor\'ia molecular ya expuesta y haciendlo uso de ciertas prote\'inas modelo como lo son el citocromo c y la mioglobina. El uso de estas dos porte\'inas presentan gran estabilidad en un amplio rango de pH, y contar con estudios experimentales en sistemas polim\'ericos similares.
-
-El uso de hidrogeles como transportadores de adsorbatos con fines terap\'euticos ha despertado un gran inter\'es en la comunidad cient\'ifica. Sin embargo, para aprovechar al m\'aximo su potencial, es fundamental poder cuantificar y cualificar la adsorci\'on de mol\'eculas y prote\'inas en estos sistemas.
-
-En este sentido, recurrimos a la teor\'ia molecular previamente expuesta, la cual nos brinda herramientas para comprender y predecir la interacci\'on entre las prote\'inas y el hidrogel polim\'erico. Para estos  modelos te\'oricos, seleccionamos prote\'inas modelo con estabilidad en un amplio rango de pH, como el citocromo c y la mioglobina. Estas prote\'inas han sido ampliamente estudiadas en sistemas polim\'ericos similares, lo que nos permite aprovechar la experiencia acumulada de estas investigaciones previas.
-
-Para cuantificar la cantidad de prote\'ina adsorbida en el film de hidrogel, empleamos la siguiente  expresi\'on:
+La primera pregunta que abordamos es c\'omo responden los hidrogeles de PMAA a las soluciones de poliaminas. El enfoque termodin\'amico permite considerar la absorci\'on dentro de la red polim\'erica a partir de soluciones que contienen estas aminas. Definimos la absorci\'on como:
 
 \begin{align}
-\Gamma_{pro} = \int^\infty_0 {dz(\rho_{pro}(z) -\rho^b_{pro}}  
-\label{eq:film:adsor-exceso}
+	\begin{aligned}
+		\Gamma_i= \int_0^\infty{(\rho_i(z) -\rho_i^{bulk})dz}
+	\end{aligned}
+	\label{eq:film:adsorption}
 \end{align}
 
 
-En donde $\rho_{\text{pro}}(z)$ y $\rho^b_{\text{pro}}$ son las densidades locales y en el bulk de la soluci\'on de la prote\'ina, respectivamente.
-$\Gamma_{\text{pro}}$ proporciona la cantidad de adsorbato por unidad de \'area en exceso dentro del material, recibiendo tambi\'en contribuciones de la interfaz de soluci\'on de pol\'imero.
+\noindent Donde la coordenada $z$ mide la distancia desde la superficie que sostiene el film, y el sub\'indice $i$ se refiere al absorbato de inter\'es. 
+La funci\'on local $\rho_i(z)$ es la densidad del absorbato, y $\rho_i^{bulk}=\lim_{z\to\infty} \rho_i(z)$ es la densidad en la soluci\'on a granel, lejos del film  de hidrogel. 
 
-Para estas prote\'inas, la adsorci\'on es una funci
-'on no mon\'otona del pH de la soluci\'on (ver Figura \ref{fig:film:ad-pro}). A pH bajo, estas prote\'inas tienen una carga alta y positiva, pero la red de poli\'acidos ($PMAA$) solo est\'a d\'ebilmente ionizada (v\'eanse las Figuras \ref{fig:film:degree-film} y \ref{fig:film:protein-charge}). A un pH suficientemente alto, por otro lado, el pol\'imero est\'a fuertemente cargado negativamente, pero las prote\'inas tienen una carga d\'ebilmente positiva o incluso negativa. Bajo tales condiciones (muy) \'acidas o alcalinas, las interacciones electrost\'aticas son d\'ebilmente atractivas o repulsivas, respectivamente. No hay fuerza impulsora para la adsorci\'on. A valores de pH intermedios, por el contrario, donde tanto la prote\'ina como la red polim\'erica tienen cargas fuertes y opuestas, se produce una adsorci\'on significativa con un m\'aximo necesario en tales condiciones.
+Esta definici\'on de $\Gamma$ cuantifica la masa de mol\'eculas absorbidas por unidad de \'area en exceso de la contribuci\'on impuesta por la soluci\'on a granel. 
 
-La adsorci\'on de prote\'inas depende cr\'iticamente de la concentraci\'on de sal de la soluci\'on. Este comportamiento se ilustra en la figura \ref{fig:film:ad-pro}, que muestra la adsorci\'on de citocromo c y mioglobina en un film compuesto por cadenas polim\'ericas de $PMAA$. La disminuci\'on de las concentraciones de sal mejora la adsorci\'on y ampl\'ia el rango de pH de la adsorci\'on.
-Por ejemplo, ambos paneles de la figura \ref{fig:film:ad-pro} muestran una disminuci\'on de aproximadamente un orden de magnitud en la adsorci\'on cuando se comparan soluciones de NaCl 1 mM y 10 mM.
-El pH de m\'axima adsorci\'on tambi\'en depende de la salinidad de la soluci\'on. Este comportamiento es a\'un m\'as interesante cuando se considera que una concentraci\'on de sal m\'as baja conduce a una red con carga m\'as d\'ebil, como describimos anteriormente, fig. \ref{fig:film:degree-film}.
-En otras palabras, a medida que disminuye la concentraci\'on de sal, m\'as prote\'ina es adsorbida. Esta \'ultima afirmaci\'on es cierta en las concentraciones de prote\'ina ($10 \mu M$) y sal de la figura \ref{fig:film:ad-pro}, donde la adsorci\'on solo modifica ligeramente el grado de carga de la red.
-
-Esta dependencia de la adsorci\'on de la concentraci\'on de sal tiene tres razones principales: en primer lugar, existe el apantallamiento de las atracciones electrost\'aticas de la red hacia las prote\'inas por parte de los iones de sal.
-Cuanto menor sea la concentraci\'on de sal, m\'as d\'ebil ser\'a el apantallamiento de las interacciones prote\'ina-red, lo que mejora la adsorci\'on.
+La expresi\'on dada por la ecu. \ref{eq:film:adsorption} describe la absorci\'on de cada una de las aminas, pero tambi\'en es v\'alida para la doxorrubicina.
 
 
+\begin{figure*}[!htb]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Figures/graph-film/amines_ads.png}
+	\caption{Plot of the absorption, $\Gamma$, of spermine (A), spermidine (B) and putrescine (C) as a function of its (bulk) solution concentration.
+		The various curves in each panel  correspond to different pH values (around $7$) and physiological salt conditions, $[NaCl]=100 \,mM$. Shaded regions indicate the range of healthy polyamine concentrations\addcite[Soda2011] 
+		There is no doxorubicin in these solutions. (Theoretical predictions.)}
+	\label{fig:film:amines-ads}
+\end{figure*}
 
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.99\textwidth]{Figures/graph-film/ad-proteins.png}
-    \caption{Adsorci\'on de proteinas: cytocromo c y myoglobina en panel A y B respectivamente. La concentraci\'on de los adsorbatos es $10 \mu M$}
-    \label{fig:film:ad-pro}
+
+
+La figura  \ref{fig:film:amines-ads} muestra las isotermas de absorci\'on para cada una de las poliaminas en funci\'on de su concentraci\'on en la soluci\'on en el bulk. Debido a que existen informes que indican que los alrededores de las c\'elulas tumorales son \'acidos \addcite[vaupel1989blood, Tannock1989, Raghunand1999, rofstad2006acidic, schmaljohann2006thermo, Koltai2016], se incluyen isotermas de absorci\'on para diferentes valores de pH. Enfatizamos que el primer objetivo es investigar la capacidad de los hidrogeles de PMAA para secuestrar poliaminas en condiciones fisiol\'ogicas; luego, los resultados de la figura \ref{fig:film:amines-ads} corresponden a soluciones en ausencia de doxorrubicina y con $100 \, mM$ de $[NaCl]$. Como era de esperar, la absorci\'on aumenta con la concentraci\'on creciente de poliaminas. Esto indica que se alcanza un r\'egimen no saturado con la concentraci\'on explorada, como se puede ver f\'acilmente en las isotermas de absorci\'on.
+
+M\'as cerca de las células sanas, la concentraci\'on de poliaminas se encuentra en el rango de $10^{-4}$ a $10^{-3}\, M$, lo que puede aumentar en un orden de magnitud o m\'as alrededor de los tumores \addcite[Soda2011]. Los resultados de la figura \ref{fig:film:amines-ads} sugieren que los hidrogeles de PMAA pueden responder a estas condiciones capturando cantidades crecientes de aminas. En particular, la putrescina muestra un comportamiento aparentemente de encendido/apagado en torno al inicio de las concentraciones saludables a patol\'ogicas. Adem\'as, excepto para las soluciones m\'as ácidas (pH 5), este comportamiento de absorci\'on se mantiene para diferentes valores de pH en torno a las condiciones fisiol\'ogicas, lo que apunta a la capacidad del hidrogel para adaptarse a peque\~nos cambios de pH causados por c\'elulas da\~nadas.
+
+Las poliaminas absorbidas se distribuyen de manera m\'as o menos homog\'enea dentro de la película de hidrogel . Sin embargo, esta distribuci\'on est\'a correlacionada con la densidad del pol\'imero: se encuentran concentraciones m\'as altas de poliamina en las regiones de fracci\'on de volumen localmente alta de PMAA. Por lo tanto, las poliaminas tienen una mayor probabilidad de encontrarse cerca de las intersecciones de la red, donde ocurre la mayor densidad de pol\'imero. Un comportamiento similar ha sido predicho por \addcite[Sai2020] mediante simulaciones de din\'amica molecular, quienes sugirieron que los anfífilos de crom\'oforos se autoensamblan en los nodos de hidrogeles polielectrol\'iticos cruzados qu\'imicamente.
+
+
+En condiciones similares, el hidrogel absorbe m\'as espermina que espermidina y putrescina (compare los paneles A, B y C de la fig.  \ref{fig:film:amines-ads}, respectivamente), lo que se puede explicar sobre la base de la carga positiva neta de las poliaminas: cuanto m\'as cargada se encuentre la amina, m\'as se absorber\'a en lel film porque una carga positiva m\'as alta reduce el costo entr\'opico de la confinaci\'on del contrai\'on al tiempo que permite las atracciones electrost\'aticas con el pol\'imero MAA.
+
+\addcite[citet: Schimka2017] han estudiado la interacci\'on entre microgeles de pol\'imero y surfactantes fotosensibles con poliaminas sint\'eticas como grupos principales. Estos surfactantes tienen diferentes n\'umeros de grupos amino con cargas entre $+1$ y $+3$. Los microgeles ani\'onicos se deshinchan cuando se exponen a una concentraci\'on suficientemente alta de surfactante (dependiendo del estado de isomerizaci\'on del surfactante). Su estudio muestra tanto experimental como te\'oricamente que se necesita una mayor concentraci\'on de surfactante para desencadenar el deshinchamiento de los microgeles cuando se reduce la carga del grupo principal de poliamina. Este comportamiento indica que aumentar el n\'umero de grupos amino facilita la captaci\'on del surfactante por parte del microgel, en acuerdo con los resultados aquí presentados.
+
+
+
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.35\textwidth]{Figures/graph-film/doxo_load.png}
+	\caption{Color map showing the absorption of doxorubicin (see \ref{eq:film:adsorption}) as function of the composition of the solution that embeds the hydrogel, \emph{i.e.}, pH and $[NaCl]$;
+		the concentration of the drug in the solution is $[Doxo]=1\, mM$. (Theoretical predictions.)}
+	\label{fig:film:doxo-load}
 \end{figure}
+
+
+A continuaci\'on, consideramos la capacidad de las pel\'iculas de hidrogel de PMAA para incorporar doxorrubicina (Doxo). Los hidrogeles de cadenas de poli\'acido entrecruzadas son sensibles a cambios en la fuerza i\'onica de la soluci\'on o la concentraci\'on de sal \addcite[Zhang2000]. Este comportamiento puede no ser relevante en entornos biol\'ogicos con una concentraci\'on de iones altamente regulada, pero controlar la concentraci\'on de sal es fundamental en el laboratorio para aumentar la carga del agente terap\'eutico dentro del material. Por lo tanto, hemos considerado la absorci\'on de doxorrubicina en condiciones de laboratorio t\'ipicas, abarcando un amplio rango de pH y $[NaCl]$, en contraposici\'on a las condiciones fisiol\'ogicas.
+
+La figura  \ref{fig:film:doxo-load} muestra la absorci\'on en exceso de Doxo, calculada utilizando la ecu. \ref{eq:film:adsorption}. Esta figura resalta el efecto de la disminuci\'on de la salinidad para aumentar la absorci\'on del f\'armaco. Debido a que la carga de la doxorrubicina es $+1$ (a bajo pH), su absorci\'on compite con la de los iones de sodio para neutralizar la carga del pol\'imero. Por lo tanto, las mejores condiciones para su incorporaci\'on en la pel\'icula corresponden a la reducci\'on de la disponibilidad de contrai\'on de sal.
+
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.35\textwidth]{Figures/graph-film/doxo-charge.png}
+	\caption{Plot showing doxorubicin charge number inside the PMAA network as a function of pH, for different salt concentrations (solid lines) as well as the average charge of the molecule in the bulk solution (dashed line);
+		$[Doxo]=1\, mM$. (Theoretical predictions.)}
+	\label{fig:film:doxo-charge}
+\end{figure}
+
+En este modelo, la doxorrubicina tiene su punto isoeléctrico (pI) a pH $7.8$. Se puede observar que en  la figura  \ref{fig:film:doxo-load} se muestra que las condiciones \'optimas para la absorci\'on impulsada electrost\'aticamente ocurren en valores de pH cercanos al pI. Este resultado se puede explicar considerando que el pH disminuye dentro del film (ver SI), un efecto que se ha predicho para el interior de una variedad de sistemas polim\'ericos cargados, desde cadenas individuales, capas de pol\'imero injertado, polielectrolitos con estructura de estrella, hasta geles con diferentes topologías \addcite[Nap2006, Borisov2011, Longo2011, Polotsky2013, Murmiliuk2018]. Este efecto resulta en una regulaci\'on de la carga, especialmente por parte del grupo difen\'olico de la doxorrubicina (ver D2 en la fig. \ref{fig:film:model_poliamines} con pKa~$7.3$), que se protona al absorberse. Dentro del film , las mol\'eculas de Doxo absorbidase stán, en promedio, m\'as cargadas positivamente que en la soluci\'on; este comportamiento se describe en la figura \ref{fig:film:doxo-charge}. A un pH fijo, el efecto de reducir las concentraciones de sal de la soluci\'on es aumentar la carga promedio de las mol\'eculas absorbidas. En particular, el pI (aparente) de la Doxo absorbida puede aumentar varias unidades de esta manera.
+
+\begin{figure*}[!htb]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Figures/graph-film/doxo_release-amines.png}
+	\caption{Plot of the absorption of doxorubicin (see ecu.\ref{eq:film:adsorption})as a function of pH for solutions containing spermine (A), spermidine (B) and putrescine (C).
+		In each panel, the various solid-line curves correspond to solutions having different concentration of the polyamine, while the dashed-line curve corresponds to a solution without polyamines. All results correspond to $1\, mM$ Doxo and $100\, mM$ $NaCl$ solutions. (Theoretical predictions.)}
+	\label{fig:film:doxo-release}
+\end{figure*}
+
+
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.35\textwidth]{Figures/graph-film/DG67.png}
+	\caption{Plot showing Doxo retention, $\Gamma_{ret}$ (see  ecu. \ref{eq:film:doxo-DG}),  as a function of the concentration of amines for solutions having $100\, mM$~$NaCl$ and $ pH 6$ (top panel) $ pH 7$ (bottom panel). (Theoretical predictions.)}
+	\label{fig:film:doxo-DG}
+\end{figure}
+
+A continuaci\'on, evaluamos si la doxorrubicina puede liberarse del hidrogel cuando el material es\'a en contacto con soluciones de poliaminas. La figura \ref{fig:film:doxo-release} muestra la absorci\'on de Doxo en el film a partir de soluciones que contienen diferentes concentraciones de poliaminas. Como referencia, los gr\'aficos tambi\'en incluyen la absorci\'on de doxorrubicina a partir de soluciones que no contienen poliaminas. Nuevamente, consideramos una $[NaCl]$ fisiol\'ogica de $100\, mM$, pero ampliamos el rango de valores de pH para describir las condiciones que podr\'ian ocurrir alrededor de tejidos enfermos \'acidos. La absorci\'on de doxorrubicina es una funci\'on no mon\'otona del pH de la soluci\'on, con un m\'aximo entre $6$ y $7$. Este comportamiento no mon\'otono era de esperar, ya que la carga neta negativa del pol\'imero es una funci\'on creciente del pH de la soluci\'on (ver figura \ref{fig:film:model}), mientras que la carga positiva promedio de la Doxo disminuye hasta volverse negativa eventualmente a valores de pH lo suficientemente altos (ver figura  \ref{fig:film:doxo-charge}).
+
+
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.45\textwidth]{Figures/graph-film/Release_water_2.png}
+	\caption{Doxorubicin loading to and release from PMAA films in water, represented as the change in absorbance (at $\lambda=490\:nm$) relative to the initial loading at different release times.
+		Inset: Plot of the UV-Vis spectra of PMAA films after 24 h in contact with Doxo (red; $t=0$).
+		The various curves illustrate drug release after different release times to water.
+		The black curve is included as a reference and corresponds to the signal of the bare glass support. $A_G$: Glass substrate absorbance; $A_0$: Fully loaded hydrogel absorbance.}
+	\label{fig:film:exp_doxo-water}
+\end{figure}
+
+
+
+La absorci\'on de doxorrubicina disminuye cuando las poliaminas est\'an presentes en la soluci\'on (compare las diferentes curvas de l\'inea s\'olida en la figura \ref{fig:film:doxo-release} con la curva de l\'inea discontinua en cada panel), lo cual se debe a la captura de poliaminas como se describe en la figura \ref{fig:film:amines-ads}. Esta disminuci\'on en la absorci\'on de Doxo en comparaci\'on con las soluciones sin el f\'armaco se puede interpretar como una liberaci\'on del material. Dado que la espermina es la m\'as cargada, es la m\'as eficiente en prevenir la absorci\'on de Doxo (ver panel A de la figura \ref{fig:film:doxo-release}).
+
+
+
+\begin{figure*}[!ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Figures/graph-film/fig11.png}
+	\caption{Schematic representation of Doxo release by polyamine uptake (A). Doxorubicin loading to and release from PMAA films in spermine (B) and spermidine (C) solutions represented as the change in absorbance (at $\lambda=490\:$nm) relative to the initial loading at different release times. $A_G$: Glass substrate absorbance; $A_0$: Fully loaded hydrogel absorbance.}
+	\label{fig:film:exp_doxo-amines}
+\end{figure*}
+
+Para cuantificar a\'un m\'as c\'omo el f\'armaco se desorbe de la pel\'icula de hidrogel cuando se incorporan aminas en la soluci\'on, definimos la reducci\'on relativa en la absorci\'on de doxorrubicina:
+
+
+\begin{align}
+	\begin{aligned}
+		\Gamma_{ret}= \dfrac{\Gamma_\text{Doxo}([Amine])}{\Gamma_\text{Doxo}^0}
+	\end{aligned}
+	\label{eq:film:doxo-DG}
+\end{align}
+
+
+\noindent donde $\Gamma_{ret}$ es la retenci\'on de Doxo, $\Gamma_\text{Doxo}([Amina])$ es la absorci\'on de doxorrubicina para soluciones de amina (ver curvas de l\'inea s\'olida en la figura \ref{fig:film:doxo-release}), y $\Gamma_\text{Doxo}^0=\Gamma_\text{Doxo}([Amina]=0)$ es la absorci\'on en soluciones sin poliaminas (ver la figura \ref{fig:film:doxo-load} y las curvas de línea discontinua en la figura \ref{fig:film:doxo-release}).
+
+La figura \ref{fig:film:doxo-DG} muestra la retenci\'on de Doxo en presencia de cada una de las poliaminas en condiciones fisiol\'ogicas y a un pH de aproximadamente 6. Si todo el f\'armaco se mantiene dentro de la pel\'icula para una soluci\'on de poliamina, entonces $\Gamma_{ret}\approx 1$; mientras que $\Gamma_{ret}\approx 0$ indica que todo el f\'armaco ha sido liberado. Los valores negativos de $\Gamma_{ret}$ pueden ocurrir porque $\Gamma_\text{Doxo}([Amina])$, que es una cantidad en exceso en el bulk, puede tomar valores negativos, lo que indica que en esas condiciones las aminas evitan la absorci\'on de Doxo en la pel\'icula.
+
+La retenci\'on de doxorrubicina en el hidrogel disminuye a medida que aumenta la concentraci\'on de poliamina. Esto es cierto para todas las aminas y para pH 7 y 6 (ver figura \ref{fig:film:doxo-DG}). Como se mencion\'o anteriormente, la espermina es la m\'as eficiente en promover la liberaci\'on de Doxo del hidrogel. Sin embargo, a altas concentraciones de amina, todas las poliaminas pueden impulsar la liberaci\'on de cantidades significativas de doxorrubicina.
+
+
+\subsection{Espectro UV-Visible}
+
+La carga de doxorrubicina en el hidrogel se caracteriz\'o mediante experimentos de UV-Vis, analizando la absorbancia a $\lambda=490\:$nm. Para abordar la liberaci\'on de Doxo despu\'es de la exposici\'on al agua, los datos de absorbancia se normalizaron en consecuencia, restando la absorbancia del sustrato de vidrio ($A_G$) y luego dividiendo por la absorbancia del hidrogel completamente cargado ($A_0$), tambi\'en con la resta de $A_G$. La figura \ref{fig:film:exp_doxo-water} muestra el cambio relativo en la absorbancia despu\'es de un tiempo de liberaci\'on dado para un hidrogel previamente cargado durante 24 h. El inset muestra los espectros UV-Vis despu\'es de diferentes tiempos de liberaci\'on en agua. Los resultados experimentales en $t=0$ (los espectros rojos mostrados en el inset de la figura \ref{fig:film:exp_doxo-water}) evidencian que las pel\'iculas de PMAA incorporan doxorrubicina dentro de su red polim\'erica. La absorbancia a $\lambda=490\, nm$ para ese espectro corresponde a la barra roja en la figura principal. Despu\'es de un tiempo de exposici\'on suficientemente largo al agua, la liberaci\'on de las pel\'iculas es solo parcial, lo que demuestra la afinidad del f\'armaco por la pel\'icula. Sin embargo, existe una clara y significativa liberaci\'on inicial del f\'armaco en los primeros 10 minutos, un comportamiento que no se observa en las etapas posteriores de liberaci\'on, donde las medidas se reducen a los mismos espectros (ver el inset de la figura \ref{fig:film:exp_doxo-water}).
+
+
+La liberaci\'on de Doxo puede ser desencadenada al exponer la pel\'icula de hidrogel a poliaminas, como se representa en la figura \ref{fig:film:exp_doxo-amines}A. Para evaluar este comportamiento, se realizaron experimentos de liberaci\'on utilizando spermidina y espermina como poliaminas modelo. La  figura \ref{fig:film:exp_doxo-amines} muestra los cambios en la absorbancia relativa para las pel\'iculas de PMAA cargadas con Doxo y su liberaci\'on en contacto con soluciones de spermidina (panel B) y spermina (panel C) en diferentes tiempos de exposici\'on. La putrescina no se consider\'o en los experimentos debido a su baja absorci\'on en comparaci\'on con la spermina y la spermidina (ver figura \ref{fig:film:amines-ads}). Los resultados muestran que la liberaci\'on del f\'armaco en presencia de estas poliaminas es m\'as r\'apida que en agua, lo que respalda las predicciones de nuestra teor\'ia y modelado molecular: los hidrogeles de PMAA act\'uan como plataformas de absorci\'on para las poliaminas, y tal incorporaci\'on puede desencadenar la liberaci\'on de un f\'armaco previamente cargado.
+
+
+
+
+La figura \ref{fig:film:exp_doxo-amines} B y C muestran que la liberaci\'on en presencia de espermina es más r\'apida que con la incorporaci\'on de spermidina: despu\'es de una exposici\'on de 15 segundos a la espermina, ya no hay se\~nal UV de Doxo, mientras que se requiere un contacto tres veces m\'as largo con spermidina para alcanzar la misma etapa de liberaci\'on. Adem\'as, la magnitud de la liberaci\'on de Doxo utilizando spermidina es menos significativa en comparaci\'on con la liberaci\'on casi completa inducida por la spermina. Estos resultados indican que el n\'umero de grupos amino determina su retenci\'on en la pel\'icula de hidrogel, lo que concuerda con las predicciones de nuestra teor\'ia molecular (ver figur \ref{fig:film:doxo-DG}) y el trabajo de \addcite[citet: Schimka2017].
+
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.45\textwidth]{Figures/graph-film/fig12.png}
+	\caption{(A) Schematic representation of Doxo re-loading/release after polyamine absorption. (B) The change in absorbance (at $\lambda=490\:$nm) relative to the initial Doxo loading in the hydrogel film (dashed line). $A_G$: Glass substrate absorbance; $A_h$: Absorbance for the initial Doxo loading in the hydrogel film (before polyamine absorption).}
+	\label{fig:film:exp_doxo-reload}
+\end{figure}
+
+
+Despu\'es de la carga de poliaminas y la liberaci\'on concomitante de Doxo, las pel\'iculas de PMAA se expusieron a una nueva soluci\'on de Doxo para evaluar si la absorci\'on de poliaminas impediría o no la reabsorci\'on de doxorrubicina, como se muestra en la figur \ref{fig:film:exp_doxo-reload}A. En otras palabras, estos experimentos tienen como objetivo responder si una vez liberada por la absorci\'on de poliaminas, la doxorrubicina se volver\'ia a absorber en el hidrogel, disminuyendo su concentraci\'on en el medio. En l\'inea con el comportamiento esperado, la retenci\'on de espermina por la pel\'icula de hidrogel dificulta significativamente la reabsorci\'on de Doxo dentro de la red polim\'erica \textcolor{red}{(ver Fig. S6 en el SI)}. Por otro lado, los films de hidrogel cargadas con spermidina en contacto con Doxo muestran la posibilidad de recargar el f\'armaco, lo que sugiere una interacci\'on diferente, dependiendo de la poliamina. Como se muestra en el panel B de la figura \ref{fig:film:exp_doxo-reload}, la spermidina permite una recarga inicial de Doxo en el film, pero esta carga se libera f\'acilmente al medio, en comparaci\'on con los resultados de la figura \ref{fig:film:exp_doxo-water}, donde incluso despu\'es de 1 hora de exposici\'on al agua, el Doxo no se libera. Estos resultados tambi\'en resaltan la interacci\'on m\'as fuerte de la espermina (en comparaci\'on con la spermidina) con la red polim\'erica.
+
+En resumen, nuestros resultados experimentales y te\'oricos muestran el potencial de los films de hidrogel basadas en PMAA para cargar f\'armacos terap\'euticos, que se explor\'o utilizando la Doxorrubicina como f\'armaco modelo. Si bien el hidrogel funciona como una plataforma de liberaci\'on controlada, la presencia de altas concentraciones de poliaminas en el medio circundante puede desencadenar la liberaci\'on del f\'armaco al interactuar con la red polim\'erica.
+
 
 
 \section{Conclusiones}
 
+Las poliaminas son esenciales para el metabolismo celular, ya que est\'an involucradas en diferentes procesos celulares y sirven como nutrientes para el crecimiento celular. En c\'elulas da\~nadas que muestran un crecimiento descontrolado, como los tumores, hay un aumento en la necesidad de nutrientes, lo que provoca un exceso medible en las concentraciones de poliaminas en los compartimentos extracelulares. Este aumento en la concentraci\'on de poliaminas juega un papel clave en la aceleraci\'on de la diseminaci\'on de tumores y puede servir como indicador de c\'elulas cancerosas. Concentraciones an\'omalas de poliaminas pueden ser la base para terapias que se centren en la eliminaci\'on de nutrientes y la prevenci\'on de met\'astasis, así\'i como para evaluar el avance de la quimioterapia.
 
-Los hidrogeles de polim\'ericos sensibles al pH son prometedores candidatos para biomateriales inteligentes y responsivos, lo cual impone la necesidad de comprender su compleja interacción fisicoqu\'imica con las prote\'inas. Las simulaciones moleculares pueden proporcionar informaci\'on perspicaz para comprender los mecanismos detr\'as de la adsorci\'on de prote\'inas en geles sensibles al pH, lo cual puede ser dif\'icil o imposible de obtener mediante experimentos. En este cap\'itulo se ha tratado de  entender y explicar el estado de protonaci\'on de la red polim\'erica de los filmes de hidrogel y el de los diferentes residuos de amino\'acidos de las prote\'inas afectan o modulan su interacci\'on. Hemos demostrado que un comportamiento rico emerge de la capacidad de la prote\'ina para regular su carga el\'ectrica en el entorno de pH m\'as bajo que ocurre dentro del material. Este comportamiento se puede utilizar para la separaci\'on o localizaci\'on de prote\'inas dentro de regiones espaciales de tama\~no nanom\'etrico dentro del material. Imaginamos, por ejemplo, el desarrollo de materiales multifuncionales basados en hidrogel donde diferentes proteínas son activas en diferentes regiones de la red polim\'erica. Exploraremos te\'oricamente estos conceptos en los pr\'oximos cap\'itulos cuando los traslados a los microgeles y nanogles cap\'itulos  \ref{Chapter-geles}  y \ref{Chapter-esfericas} respectivamente.
+En este contexto, nuestro objetivo en este trabajo fue demostrar el siguiente concepto: ¿se pueden emplear hidrogeles basados en PMAA para desarrollar biomateriales capaces de capturar poliaminas y liberar un f\'armaco terap\'eutico en respuesta? Hemos desarrollado un modelo molecular de grano grueso para describir la doxorrubicina, la putrescina, la espermidina y la espermina. Utilizando este modelo molecular y una teor\'ia termodin\'amica, nuestros resultados proporcionan información sobre la absorci\'on de poliaminas y doxorrubicina en pel\'iculas de hidrogel de PMAA.
+
+Estos resultados predicen la capacidad de los hidrogeles de PMAA para capturar cantidades crecientes de poliaminas a medida que aumenta la concentraci\'on del medio en condiciones de sal fisiol\'ogica. Esta absorci\'on aumenta con el n\'umero de grupos amino; la espermina muestra la preferencia m\'as fuerte por el hidrogel. Este comportamiento resulta de la interacci\'on entre la carga positiva de los grupos amino y los segmentos de MAA desprotonados (cargados negativamente).
+
+
+
+Hemos considerado la carga de un f\'armaco contra el c\'ancer como la doxorrubicina en el hidrogel de PMAA. Las condiciones \'optimas de encapsulaci\'on en el laboratorio corresponden a una baja concentraci\'on de sal y un pH entre 6 y 7. Este resultado es contrario a la intuici\'on, ya que el punto isoelectroel\'ectrico de la doxorrubicina se encuentra alrededor de un pH neutro, lo que puede explicarse por la protonaci\'on del f\'armaco al absorberse en el medio de pH m\'as bajo dentro del hidrogel.
+
+Cuando tanto la doxorrubicina como una poliamina est\'an presentes en la soluci\'on en contacto con el hidrogel, las poliaminas dificultan significativamente la absorci\'on del f\'armaco (en comparaci\'on con las soluciones que contienen solo doxorrubicina). Este efecto se intensifica a medida que aumenta la concentraci\'on de poliaminas en la soluci\'on. La eficiencia para excluir el f\'armaco de la pel\'icula aumenta con la carga de la poliamina (es decir, el n\'umero de grupos amino); la espermina es la m\'as eficiente de las tres aminas consideradas para lograr esta respuesta. Como hemos demostrado, este comportamiento se puede interpretar como la liberaci\'on de doxorrubicina al capturar poliaminas.
+
+Los films  de PMAA se sintetizaron mediante polimerizaci\'on radical de transferencia de \'atomos y se caracterizaron en condiciones espec\'ificas para respaldar nuestras predicciones te\'oricas. La absorci\'on y liberaci\'on de doxorrubicina en agua, soluciones de espermidina y espermina se estudiaron mediante espectroscopía UV-Vis. Estos resultados experimentales respaldan claramente el concepto propuesto de encapsulaci\'on de doxorrubicina dentro de estos films y la liberaci\'on de f\'armacos dependiente de poliaminas. % Utilizando las predicciones te\'oricas de este trabajo como gu\'ia, estamos trabajando actualmente en una caracterización sistemática del sistema experimental.
+
+En resumen, nuestros estudios combinados te\'oricos y experimentales indican que los hidrogeles basados en \'acido polimetacr\'ilico tienen un gran potencial para servir como componente funcional en biomateriales que pueden capturar poliaminas y liberar un f\'armaco terap\'eutico en respuesta.
