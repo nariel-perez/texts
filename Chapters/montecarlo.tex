@@ -141,58 +141,39 @@ Para el pH 3 el grado de carga del gel es pr\'acticamente nulo, ver figura \ref{
 
 A pH 4.65 y 7 el sistema posee carga por tanto al agregarle energ\'ia al sistema (aumento de temperatura) las fluctuaciones aumentan. Esto ocurre hasta llegar a la temperatura caracter\'istica de transici\'on volum\'etrica del NIPAm, figura \ref{fig:gel:R-T}, por arriba de los $32 ^\circ$C. Despu\'es de este punto hay un colapso en la estructura del nanogel con lo cual es poco probable que se de un cambio de su tama\~no en un punto en part\'icular. ase observa un decaimiento de las fluctuaciones. 
 
-\subsection{Simulaci\'on Monte Carlo}
+
+%\subsection{Potencial zeta ($\zeta$)}
 
 
-En esta parte presentaremos los resultados de la simulaci\'on MC. En esta primera instancia se mostrar\'an resultados incluyendo los cambios en el volumen de los nanogeles.
-Estos resultados preliminares har\'an \'enfasis en las fluctuaciones nulas en el sistema.
+%Adem\'as de poder observar las fluctuasiones en los cambio de tamaño de los nanogeles es posible el calculo de ciertas propiedades de las mismas. Entre ellas estan el potencial zeta ($\zeta$).
+%Este potencial se define como...
+%El potencial zeta es una medida de la carga el\'ectrica neta en la superficie de una part\'icula coloidal, en este caso un nanogel. El potencial zeta afecta la estabilidad de las part\'iculas coloidales, su viscosidad y su interacci\'on con otras part\'iculas.
+%En los nanogeles, el potencial zeta se genera por las cargas el\'ectricas de las cadenas polim\'ericas que forman la red del gel. Las cadenas  pueden tener carga positiva o negativa, dependiendo de los grupos funcionales que contengan. De este modo el potencial zeta puede ser positivo, negativo o neutro.
 
-En la figura \ref{fig:mc:dentos-sizes} se muestra la densidad de probabilidad de los radios de tres diferentes soluciones de nanogeles. La diferencia en estas tres soluciones es la fracci\'on en volumen que ocupan.  
-Si bien pareciera que que hay una peque\~na distribuci\'on de tama\~no en cada curva esto es efecto de la escala elegida, dado que el ancho de estar curvas corresponde a la discretizaci\'on usada para el rango de radios usados en la simulaci\'on. 
-En ese sentido una mejor descripci\'on ser\'ia considerarlas como deltas de Dirac. 
-Otra observaci\'on de estos resultados es la disminuci\'on del tama\~no al aumentar la fracci\'on en volumen. Esto puede explicarse con los potenciales de interacci\'on mostrados en la ecuaci\'on \ref{eq:HY-potential} el mayor volumen ocupado por los nanogeles implica una disminuci\'on de su radio para disminuir la energ\'ia debida a la interacci\'on entre pares.
-Se puede ver que para una fracci\'on en volumen baja $\phi =$ 0.002 la delta Dirac se encuentra sobre el radio de equilibrio para un nanogel aislado (51 nm).
+%El potencial zeta de un nanogel afecta su estabilidad de varias maneras. Cuando el potencial zeta es positivo, los nanogel se repelen entre s\'i, lo que hace m\'as estable en soluci\'o. Cuando el potencial zeta es negativo, las part\'iculas del nanogel se atraen entre s\'i, lo que puede hacer que los nanogeles se aglomeren.
+%Las cargas negativas de las superficies de los nanogeles no est\'an directamente en contacto entre s\'i. Estas cargan se ecuentran  separadas por una capa de agua. El agua tiene una carga positiva neta, por lo que las cargas negativas de los nanogeles son atra\'idas por la capa de agua. Esta atracci\'on es m\'as fuerte que la repulsi\'on entre las cargas negativas, por lo que los nanogeles se aglomeran.
 
+%Luego el potencial zeta puede definirse como: \addcite[libro S\&C]
 
-\begin{figure*}[!tb]
-	\centering
-	\includegraphics[width=1\linewidth]{Figures/graph-mc/sizes.png}
-	\caption{Gr\'afico de densidad de probabilidad de tama\~no de la soluci\'on de  nanogeles... fracci\'on de volumen ocupada. nanogel m\'as flexible... 200 monomeros por cadena. 2e5 monomeros totales. radio medio aislado = 51 nm, pH de la soluci\'on es  }
-	\label{fig:mc:dentos-sizes}
-\end{figure*}
-
-\subsection{Potencial zeta ($\zeta$)}
+%\begin{align}
+%	\zeta (a) = \propto \frac{Z_{net}}{a} \exp{(-\kappa a)} \approx  \frac{Z_{net}}{a} \frac{1}{1 +ka}
+%	\label{eq:mc:potzeta}
+%\end{align}
 
 
-Adem\'as de poder observar las fluctuasiones en los cambio de tamaño de los nanogeles es posible el calculo de ciertas propiedades de las mismas. Entre ellas estan el potencial zeta ($\zeta$).
-Este potencial se define como...
-El potencial zeta es una medida de la carga el\'ectrica neta en la superficie de una part\'icula coloidal, en este caso un nanogel. El potencial zeta afecta la estabilidad de las part\'iculas coloidales, su viscosidad y su interacci\'on con otras part\'iculas.
-En los nanogeles, el potencial zeta se genera por las cargas el\'ectricas de las cadenas polim\'ericas que forman la red del gel. Las cadenas  pueden tener carga positiva o negativa, dependiendo de los grupos funcionales que contengan. De este modo el potencial zeta puede ser positivo, negativo o neutro.
+%\noindent en donde  $k$ es la inversa de la lingitud de Debye, $a$ es el radio del nanogel y $Z_{net}$ es la carga neta que se observa del nanogel al considerarlo como un nano-ion \addcite[Denton 2003]. Esta carga se deriva de la interacci\'on electrost\'atica que ocurre con la part\'icula y los contraiones que lo rodean:
+%\begin{align}
+%	Z_{net}(a) = (1 + ka)e^{-ka} \frac{3Z}{k^2a^2}\left(\cosh(ka) - \frac{\sinh(ka)}{ka}\right)
+%	\label{eq:mc:znet}
+%\end{align}
 
-El potencial zeta de un nanogel afecta su estabilidad de varias maneras. Cuando el potencial zeta es positivo, los nanogel se repelen entre s\'i, lo que hace m\'as estable en soluci\'o. Cuando el potencial zeta es negativo, las part\'iculas del nanogel se atraen entre s\'i, lo que puede hacer que los nanogeles se aglomeren.
-Las cargas negativas de las superficies de los nanogeles no est\'an directamente en contacto entre s\'i. Estas cargan se ecuentran  separadas por una capa de agua. El agua tiene una carga positiva neta, por lo que las cargas negativas de los nanogeles son atra\'idas por la capa de agua. Esta atracci\'on es m\'as fuerte que la repulsi\'on entre las cargas negativas, por lo que los nanogeles se aglomeran.
-
-Luego el potencial zeta puede definirse como: \addcite[libro S\&C]
-
-\begin{align}
-	\zeta (a) = \propto \frac{Z_{net}}{a} \exp{(-\kappa a)} \approx  \frac{Z_{net}}{a} \frac{1}{1 +ka}
-	\label{eq:mc:potzeta}
-\end{align}
-
-
-\noindent en donde  $k$ es la inversa de la lingitud de Debye, $a$ es el radio del nanogel y $Z_{net}$ es la carga neta que se observa del nanogel al considerarlo como un nano-ion \addcite[Denton 2003]. Esta carga se deriva de la interacci\'on electrost\'atica que ocurre con la part\'icula y los contraiones que lo rodean:
-\begin{align}
-	Z_{net}(a) = (1 + ka)e^{-ka} \frac{3Z}{k^2a^2}\left(\cosh(ka) - \frac{\sinh(ka)}{ka}\right)
-	\label{eq:mc:znet}
-\end{align}
-
-\noindent en donde $Z$ es definida como la carga orginada por el grado de carga de los segmentos cargados que componen al nanogel.
+%\noindent en donde $Z$ es definida como la carga orginada por el grado de carga de los segmentos cargados que componen al nanogel.
 
 
 
-\subsection{Simulaci\'on MC: tama\~no constante}
+\subsection{Simulaci\'on MC}
 
-En esta secci\'on presentamos los resultados de las simulaciones MonteCarlo considerando solo el cambio en las posiciones de los nanogeles. Esto es debido a la nulas o bajas fluctuaciones que se encontraron en su tama\~no.
+En esta secci\'on presentamos los resultados de las simulaciones MonteCarlo....
 En la figura \ref{fig:mc:redf-gels-r} se muestra la densidad de  distribuci\'on radial para tres diferentes radios de nanogeles , pero todo provenientes de una misma curva de simulaci\'on. Los resultados presentados son a pH 4.65, correspondiente al pka del MAA, la temperatura es de 25 $^\circ$C por lo que no hay efecto hidrofobico por parte del NIPAm. La concentraci\'on salina es de 1 mM.
 
 En el panel A y C se tratan nanogeles con el menor y mayor de los tama\~nos posibles $R_{min}$ y $R_{max}$ respectivamente.  Es decir los puntos extremo de las curvas de energ\'ia presentada en la figura \ref{fig:mc:omega}. En cambio el panel B muestra a una soluci\'on con el radio de equilibrio $R_0$ el m\'inimo energ\'etico de fig. \ref{fig:mc:omega}.
