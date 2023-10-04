@@ -77,7 +77,7 @@ El pontecial de Hertz, $U_H$, se define como:
 
 \begin{align}
 	\begin{aligned}
-		& \beta u_H (r) = \left(\frac{1-r}{a_i + a_j}\right)^{5/2}\times b_{12} \\
+		& \beta u_H (r) = \left(1-\frac{r}{a_i + a_j}\right)^{5/2}\times b_{12} \\
 	\end{aligned}
 \end{align}
 
@@ -186,10 +186,23 @@ Estos resultados nos indican una transici\'on de un estado m\'as ``gaseoso'' a u
 El aumento de la fracci\'on en volumen se traduce en un mayor acercamiento de los nanogeles y con ello un aumento en su interacci\'on. 
 \textcolor{red}{GRAFICAR POTENCIALES POR SEPARADO}
 
+Como se ve afectado el rdf de los geles con el pH ??
 
-\begin{figure*}[!tb]
+\begin{figure}[!tb]
 	\centering
 	\includegraphics[width=1\linewidth]{Figures/graph-mc/rdf-gels.pdf}
 	\caption{Densidad de distribuci\'on radial para diferentes tama\~nos de gel. Los paneles muestran tres radios de partida para la simulaci\'on MonteCarlo. Se utilizan el menor radio posible $R_{min}$ en el panel A, el radio de equilibrio $R_0$ en el panel B y finalmente el el panel C el mayor tama\~no que pueden tener estos nanogeles $R_{max}$}
 	\label{fig:mc:redf-gels-r}
-\end{figure*}
+\end{figure}
+
+
+
+La figura \ref{fig:mc:rdf-phs-0} nos muestra la densidad de distribuci\'on radial para una soluci\'on de nanogeles a 25 $^\circ$C y una concentraci\'on de sal de 1 mM. El tama\~no de cada nanogel esta determinado con el valor de R que minimiza al potencial termodin\'amico del cual proviene. ver capitulo \ref{Chapter-geles}.  Es decir el $R_0$ para cada panel es distinto. Valores de 60 nm, 66.2 nm y 100 nm para los panles A,B y C respectivamente. Esta diferencia se debe al cambio en el pH de la soluci\'on. C\'omo se demostr\'o en capitulos anteriores el pH determina el grado de carga de los hidrogeles que poseen segmentos protonables, en este caso el mon\'omero de MAA.
+
+
+\begin{figure}[!tb]
+	\centering
+	\includegraphics[width=1\linewidth]{Figures/graph-mc/rdf0-pHs.pdf}
+	\caption{Densidad de distribuci\'on radial para diferentes condiciones de pH. Se han considerados nanogeles en un radio de equilibrio termodin\'amico: R =$R_0$.  La concentraci\'on salina en todos los paneles es de 1 mM y la temperatura es de 25 $^\circ$C.}
+	\label{fig:mc:rdf-phs-0}
+\end{figure}
