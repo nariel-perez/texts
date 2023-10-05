@@ -183,30 +183,26 @@ En el panel A y C se tratan nanogeles con el menor y mayor de los tama\~nos posi
 
 Se puede observar que en condiciones de part\'iculas peque\~nas, panel A, no hay efecto notable de la fracci\'on en volumen ocupada por los nanogeles. El comportamiento de esta soluci\'on es similar al de una fase gaseosa en donde las part\'iculas se encuentran homog\'eneamente distribuidas y la probabilidad de encontrar un nanogel vecino es igual a todas las distancias.
 Por otro lado en los paneles B y C si hay una fuerte correlaci\'on entre el grado de empaquetamiento de la soluci\'on.
-En el radio de equilibrio y en condiciones de baja concentraci\'on de part\'iculas el comportamiento es el mismo que en el panel A, una distribuci\'on uniforme de la soluci\'on. Cuando la fracci\'on en volumen aumenta a 0.5 se puede apreciar un pico de concentraci\'on de part\'iculas a una distancia de 4 nm lo que corresponde a nanogeles cuyos centros de masa est\'an separados por una distancia de 138.8 nm. Considerando que el radio de estas part\'iculas es de 66.2 nm es de esperarse que se encuentren muy cercanas, una al lado de la otra. el segundo pico a valores cercanos a los 8 nm indica una segunda capa de nanogeles. El conjunto de toda la curva muestra el comportamiento esperado para una soluci\'on.
+En el radio de equilibrio y en condiciones de baja concentraci\'on de part\'iculas el comportamiento es el mismo que en el panel A, una distribuci\'on uniforme de la soluci\'on. Cuando la fracci\'on en volumen aumenta a 0.5 se puede apreciar un pico de concentraci\'on de part\'iculas a una distancia de 4 nm lo que corresponde a nanogeles cuyos centros de masa est\'an separados por una distancia de 138.8 nm. Considerando que el radio de estas part\'iculas es de 66.2 nm es de esperarse que se encuentren muy cercanas, una al lado de la otra. el segundo pico a valores cercanos a los 8 nm indica una segunda capa de nanogeles. El conjunto de toda la curva muestra el comportamiento esperado para part\'iculas es estados l\'iquido. 
+Si se sigue aumentando la concentraci\'on de nanogeles al doble, hasta llegar a un fracci\'on en volumen de 1.0, encontramos un comportamiento similar que la curva anterior pero con un corrimiento a valores m\'as peque\~nos de $r$, indicando que las part\'iculas se encuentran a\'un m\'as cercanas entre s\'i. 
+Finalmente en el panel C se tienen los nanogeles con el m\'aximo valor de radio que se obtiene dada la curva de energ\'ia de la figura \ref{fig:mc:omega}. Bajo estas condiciones observamos un comportamiento similiar al panel B: a densidad de soluci\'on baja el comportamiento de un sistema gaseoso y a altas densidades un l\'iquido m\'as o menos comprimido. La principal diferencia corresponde a una densidad de probabilidad m\'as homog\'enea en los picos observables. Esto \'ultimo corresponde a una posible transici\'on a un estado cristalino del sistema.
 
 
- se puede observa un pico de menor intensidad alrededor de $r = 7$nm, aumentar la distancia de muestreo nos conduce a la misma situaci\'on que el panel A.
-Este comportamiento se ve aumentado al aumentar la concentraci\'on de part\'iculas en la soluci\'on $\phi = 1.0$ en donde los picos secundarios son más pronunciados.
-Estos resultados nos indican una transici\'on de un estado m\'as ``gaseoso'' a un ordenamiento caracter\'istico de un l\'iquido. 
-El aumento de la fracci\'on en volumen se traduce en un mayor acercamiento de los nanogeles y con ello un aumento en su interacci\'on. 
-\textcolor{red}{GRAFICAR POTENCIALES POR SEPARADO}
 
-Como se ve afectado el rdf de los geles con el pH ??
-
-\begin{figure}[!tb]
+\begin{figure}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{Figures/graph-mc/rdf-gels.pdf}
 	\caption{Densidad de distribuci\'on radial para diferentes tama\~nos de gel. Los paneles muestran tres radios de partida para la simulaci\'on MonteCarlo. Se utilizan el menor radio posible $R_{min}$ en el panel A, el radio de equilibrio $R_0$ en el panel B y finalmente el el panel C el mayor tama\~no que pueden tener estos nanogeles $R_{max}$}
 	\label{fig:mc:redf-gels-r}
 \end{figure}
 
+Los nanogeles que componen la soluci\'on est\'an compuestos por mon\'omeros de MAA los cuales le dan la capacidad de responder al pH, entre las respuesta esta poder cambiar su tama\~no.
+En ese contexto se explor\'o como se comportan las soluciones de estas part\'iculas para 3 diferentes valores de pH. Al pKa del MAA, pH 4.65, y por abajo, pH 3, y por arriba de este valor, pH 7.
+La figura \ref{fig:mc:rdf-phs-0} nos muestra la densidad de distribuci\'on radial para una soluci\'on de nanogeles a 25 $^\circ$C y una concentraci\'on de sal de 1 mM. El tama\~no de cada nanogel esta determinado con el valor de R que minimiza al potencial termodin\'amico del cual proviene. ver capitulo \ref{Chapter-geles}.  Es decir el $R_0$ para cada panel es distinto. Valores de 60 nm, 66.2 nm y 100 nm para los panles A,B y C respectivamente. 
+Todos los paneles poseen comportamiento similar cambio la posici\'on de los picos de densidad a mayores valores de $r$. Este cambio es debido al aumento del tama\~no de las part\'iculas de cada soluci\'on. A mayor radio mayor en la distancia a la que se encontrar\'a en centro de masa del nanogel vecino m\'as pr\'oximo. 
 
 
-La figura \ref{fig:mc:rdf-phs-0} nos muestra la densidad de distribuci\'on radial para una soluci\'on de nanogeles a 25 $^\circ$C y una concentraci\'on de sal de 1 mM. El tama\~no de cada nanogel esta determinado con el valor de R que minimiza al potencial termodin\'amico del cual proviene. ver capitulo \ref{Chapter-geles}.  Es decir el $R_0$ para cada panel es distinto. Valores de 60 nm, 66.2 nm y 100 nm para los panles A,B y C respectivamente. Esta diferencia se debe al cambio en el pH de la soluci\'on. C\'omo se demostr\'o en capitulos anteriores el pH determina el grado de carga de los hidrogeles que poseen segmentos protonables, en este caso el mon\'omero de MAA.
-
-
-\begin{figure}[!tb]
+\begin{figure}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{Figures/graph-mc/rdf0-pHs.pdf}
 	\caption{Densidad de distribuci\'on radial para diferentes condiciones de pH. Se han considerados nanogeles en un radio de equilibrio termodin\'amico: R =$R_0$.  La concentraci\'on salina en todos los paneles es de 1 mM y la temperatura es de 25 $^\circ$C.}
