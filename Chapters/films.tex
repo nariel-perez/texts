@@ -213,7 +213,7 @@ La energ\'ia electr\'ostatica se define como:
 	\end{aligned}
 \end{align} 
 
-\noindent en donde $\Psi(z)$ es el potencial electrost\'atico dependiente de la posici\'on, $\epsilon$ es la constante de permitividad del medio, $q_\gamma$ es la carga correspondiente a la especie m\'ovil $\gamma$, $q_\tau$ es la carga que adquieren los segmentos titulables del adsorbato. Finalmente $q_{MAA}$ es la carga que adquiere el segmento de $MAA$ al desprotonarse.
+\noindent en donde $\psi(z)$ es el potencial electrost\'atico dependiente de la posici\'on, $\epsilon$ es la constante de permitividad del medio, $q_\gamma$ es la carga correspondiente a la especie m\'ovil $\gamma$, $q_\tau$ es la carga que adquieren los segmentos titulables del adsorbato. Finalmente $q_{MAA}$ es la carga que adquiere el segmento de $MAA$ al desprotonarse.
 
 
 En este contexto, la densidad de carga media es:
@@ -279,8 +279,8 @@ De esta forma al considerar esta condici\'on de equilibrio nuestra energ\'ia lib
 \begin{align}
 	\begin{aligned}
 		\Omega = &F - \sum_\gamma \mu_\gamma N_\gamma -  \mu_{ads} N_{ads} \\
-			= &F -\sum_\gamma A\int_0^\infty dz \mu_\gamma \rho_\gamma(z) -  \mu_{ads} N_{pro}  \\
-			& \qquad -A\int_0^\infty \mu_{H^+} \left( \sum_\tau\left< \rho_{pro,\tau}(z) \right>g_\tau(z) + (1-f(z))\left< \rho_{MAA}(z) \right> \right )
+			= &F -\sum_\gamma A\int_0^\infty dz \mu_\gamma \rho_\gamma(z) -  \mu_{ads} N_{ads}  \\
+			& \qquad -A\int_0^\infty \mu_{H^+} \left( \sum_\tau\left< \rho_{ads,\tau}(z) \right>g_\tau(z) + (1-f(z))\left< \rho_{MAA}(z) \right> \right )
 			\end{aligned}
 		\label{eq:film:equil-qco}
 \end{align}
@@ -295,7 +295,7 @@ Adicionalmente las condiciones de equilibrio deben satisfacer la condici\'on de 
 \end{align}
 
 
-\noindent en donde $\Pi(z)$ es un multiplicador local de Lagrange.  Este multiplicar se traduce en un potencial que define la presi\'on osm\'otica local. Finalmente se obtiene un nuevo potencial termodin\'amico para nuestro sistema, el cual se escribe de forma explicita como:
+\noindent en donde $\pi(z)$ es un multiplicador local de Lagrange.  Este multiplicar se traduce en un potencial que define la presi\'on osm\'otica local. Finalmente se obtiene un nuevo potencial termodin\'amico para nuestro sistema, el cual se escribe de forma explicita como:
  
 \begin{align}
 	\begin{aligned}
@@ -552,7 +552,7 @@ Como se mencion\'o al inicio de esta secci\'on la resoluci\'on del bulk de la so
 
 \begin{align}
 	\begin{aligned}
-		\tilde{a}_{pro} = & \rho_{ads}(\theta)v_w\exp\left[cn_\tau \ln f^b_\tau\right] \\
+		\tilde{a}_{ads} = & \rho_{ads}(\theta)v_w\exp\left[cn_\tau \ln f^b_\tau\right] \\
 		& \exp \left[cn_\lambda (v_\lambda\beta\pi^b + q_\lambda \psi^b) \right]
 	\end{aligned}
 \label{eq:film:act-bulk-pro}
