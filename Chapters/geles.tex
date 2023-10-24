@@ -353,7 +353,7 @@ Una vez que se establece la composici\'on de la soluci\'on (pH y concentraci\'on
 %
 \begin{align}
 \sum_{\gamma  } \rho_\gamma^s v_\gamma  &=1\label{eq:gel:bulk-packing}\\
-\sum_{\gamma  } \rho_\gamma^s q_\gamma  &=0
+\sum_{\gamma  } \rho_\gamma^s q_\gamma  &=0 \label{eq:gel:bulk-neutralidad}
 \end{align}
 
 \noindent con
@@ -376,7 +376,7 @@ Los resultados de la minimizaci\'on de la energ\'ia con un dado valor de R es pr
 \begin{figure*}[!htb]
 \centering
 \includegraphics[width=1.\linewidth]{Figures/graph-gel/graph-min.pdf}
-\caption{Potencial termodin\'amico en funci\'on del radio del microgel a diferentes temperaturas, $pH~4.65$ y $[KCl]=10^{-2}M$.
+\caption{Potencial termodin\'amico en funci\'on del radio del microgel a diferentes temperaturas, $pH~$4.65 y $[KCl]=10^{-2}M$.
 	Cada panel corresponde a un microgel MG100 diferente (longitud de cadena, $n_{ch}=100$) con $10\%$ (A), $35\%$ (B) y $50\%$ (C) MAA.
 	Las curvas presentan el potencial termodin\'amico en exceso de la contribuci\'on de la soluci\'on, $\Omega=\Omega_{MG}-\Omega_s$, en unidades convenientes, donde $V_0=\frac{4}{3}\pi R_0^3$ es el volumen de la part\'icula polim\'erica seca.
 	En el panel B, los puntos  marcan el radio \'optimo para cada temperatura, que es el m\'inimo local/global de la curva correspondiente (ver tabla \ref{table:gel:optimal-R}).}
@@ -388,7 +388,7 @@ Las variables independientes en este c\'alculo son la temperatura, el pH y la co
 El n\'umero de segmentos en la red de pol\'imero $N_{seg}$, la longitud de la cadena $n_{ch}$ y la fracci\'on de segmentos MAA, $x_{MAA}$, caracterizan completamente a nuestro microgel, es decir son variables de entrada pre-establecidas.
 
 
-Consideramos microgeles con $N_{seg}=10^7$ segmentos y $n_{ch}=50$, $100$ y $200$, que tienen $x_{MAA}=$ $0.1$, $0.35$ o $0.5$.
+Consideramos microgeles con $N_{seg}=10^7$ segmentos y $n_{ch}=50$, $100$ y $200$, que tienen $x_{MAA}=$ 0.1, 0.35 o 0.5.
 En esta primera instancia evaluamos el efecto de aumentar o reducir la cantidad de mon\'omero \'acido con respecto a los microgeles de poli(NIPAm-\emph{co}-MAA) que tienen $35\%$ MAA.
 
 Estos microgeles est\'an etiquetados como MG$n_{ch}$-$p_{MAA}$, donde $p_{MAA}$ es el porcentaje de MAA.
@@ -417,7 +417,7 @@ Los resultados obtenidos de la minimizaci\'on de las curvas figura \ref{fig:gel:
     \hline
   \end{tabular}
  \caption{Minimizaci\'on de las curvas de la  figura \ref{fig:gel:graph-min}.
- 	Esta tabla resume los radios \'optimos de tres microgeles MG100 a diferentes temperaturas, pH $4.65$ y $[KCl]=10^{-2}M$.}
+ 	Esta tabla resume los radios \'optimos de tres microgeles MG100 a diferentes temperaturas, pH 4.65 y $[KCl]=10^{-2}M$.}
 \label{table:gel:optimal-R} 
 \end{table}
 
@@ -425,7 +425,7 @@ Los resultados obtenidos de la minimizaci\'on de las curvas figura \ref{fig:gel:
 \subsection{Adsorci\'on de drogas}\label{sec:gel:adsorcion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Nuestro objetivo es poder utilizar estos microgeles como dispositivos inteligentes, entre los que se destaca su uso como trasnportadores de medicamentos. Para ello es necesario analizar su factibiliad de su adsorci\'on de algunas drogas terap\'euticas. En el presente cap\'itulo realizamos el an\'alisis usando como droga modelo a la Doxorubicina y un derivado de ella: Daunorubicina. Ambas drogas muy fuertemente empleadas en tratamientos anticancerigenos. 
+Nuestro objetivo es poder utilizar estos microgeles como dispositivos inteligentes, entre los que se destaca su uso como transportadores de medicamentos. Para ello es necesario analizar su factibilidad de su adsorci\'on de algunas drogas terap\'euticas. En el presente cap\'itulo realizamos el an\'alisis usando como droga modelo a la Doxorubicina y un derivado de ella: Daunorubicina. Ambas drogas muy fuertemente empleadas en tratamientos anticancerigenos. 
 
 Para describir la adsorci\'on de un analito a la fase de microgel,
 al potencial termodin\'amico de la ec. \ref{eq:gel:free-energy} se le adicionan los siguientes t\'erminos:
@@ -527,6 +527,7 @@ y
 
 \begin{align}
 	\sum_\gamma \rho_\gamma q_\gamma + \rho_a \sum_\tau n_\tau f_\tau q_\tau = 0
+	\label{eq:gel:bulk-neu-total}
 \end{align}
 
 
@@ -550,7 +551,7 @@ Para la densidad del analito obtenemos:
 \end{align}
 %
 
-\noindent donde esta \'ultima ecuaci\'on requiere una re-definici\'on de la actividad del analito $\tilde{a}_a$. De forma similar como se hizo con los adsorbatos del capitulo anterior en la ecuaci\'on \ref{eq:film:actividad-pro}.
+\noindent donde esta \'ultima ecuaci\'on requiere una re-definici\'on de la actividad del analito $\tilde{a}_a$. (De forma similar como se hizo con los adsorbatos del cap\'itulo anterior en la ecuaci\'on \ref{eq:film:actividad-pro}).
 
 Expresiones similares a la ec. \ref{eq:gel:rho_ads} y ec. \ref{eq:gel:f_ads} se derivan para la fase de soluci\'on; y con ellas la obtenci\'on de las actividades  de los analitos y especies libres. 
 
@@ -565,7 +566,7 @@ Expresiones similares a la ec. \ref{eq:gel:rho_ads} y ec. \ref{eq:gel:f_ads} se 
 \end{figure}
 
 
-Consideraremos la absorci\'on de los f\'armacos quimioterap\'euticos Daunorrubicina (Dauno) y Doxorrubicina (Doxo) en nuestros microgeles P(NIPAm-MAA) en diferentes condiciones.
+Consideraremos la adsorci\'on de los f\'armacos quimioterap\'euticos Daunorrubicina (Dauno) y Doxorrubicina (Doxo) en nuestros microgeles P(NIPAm-MAA) en diferentes condiciones.
 El modelo molecular aplicado para describir estos analitos se ilustra en la figura \ref{fig:gel:dauno-doxo} y la parametrizaci\'on se presenta en la tabla \ref{table:gel:drugs} \cite{PerezChavez2020}.
 
 \begin{table}
@@ -606,7 +607,7 @@ $D4$ (Dauno) & - & 0 & 0.035 \\
 \includegraphics[width=0.55\linewidth]{Figures/graph-gel/R-pH.pdf}
 \caption{Gr\'afico de tama\~no de microgel (A) y grado de carga (B) en funci\'on del pH para soluciones que tienen diferentes concentraciones de sal y $T=25 ^\circ C$.
 	Las cadenas de pol\'imero en el microgel MG100-35 son $n_{ch}=100$-long. y tienen $35\% $ MAA.
-	La curva de  punteada en el panel B es la disociaci\'on ideal del \'acido metacr\'ilico ($pKa=4.65$).
+	La curva de  punteada en el panel B es la disociaci\'on ideal del \'acido metacr\'ilico ($pKa=$ 4.65).
 	Los c\'irculos de color en las curvas del panel A marcan el pKa aparente del microgel.}
 \label{fig:gel:R-pH}
 \end{figure}
@@ -666,7 +667,7 @@ El precio a pagar es aumentar la energ\'ia qu\'imica libre, cuya contribuci\'on 
 
 
 La Figura \ref{fig:gel:R-cs} ilustra c\'omo el tama\~no de los microgeles de P(NIPAm-MAA) depende de la concentraci\'on de sal para diferentes valores de pH.
-A una salinidad relativamente alta, estos microgeles se hinchan con el aumento de la concentraci\'on de sal, lo que es consistente con los resultados de dispersi\'on de luz din\'amica (DLS) reportados por \citet{Wong2009} para microgeles P(NIPAm-MAA) y concentraciones de KCl en el rango de $0.1-0.5\,M$.
+A una salinidad relativamente alta, estos microgeles se hinchan con el aumento de la concentraci\'on de sal, lo que es consistente con los resultados de dispersi\'on de luz din\'amica (DLS) reportados por \citet{Wong2009} para microgeles P(NIPAm-MAA) y concentraciones de KCl en el rango de 0.1-0.5 $M$.
 
 Las curvas de la Figura \ref{fig:gel:R-cs} muestran un comportamiento reentrante, en el que el tama\~no primero aumenta y luego disminuye al aumentar la concentraci\'on de sal.
 Esta respuesta no monot\'onica es m\'as acentuada cuando la carga del pol\'imero aumenta debido a un mayor contenido de unidades de $MAA$ (observado en los diferentes paneles de la Figura \ref{fig:gel:R-cs}).
@@ -747,7 +748,7 @@ A diferencia de este comportamiento, el VPTT de los microgeles basados en PNIPAm
 \begin{figure}[!tb]
 	\centering
 	\includegraphics[width=0.55\linewidth]{Figures/graph-gel/Tpt-pH_MAA.png}
-	\caption{(A) Gr\'afico de temperatura de transici\'on $T_{TV}$ en funci\'on del pH para microgeles MG-100 (longitud de cadena de pol\'imero, $n_{ch}=100$ segmentos) que tienen diferentes contenidos de MAA; $[KCl]=0.01 M$;
+	\caption{(A) Gr\'afico de temperatura de transici\'on $T_{TV}$ en funci\'on del pH para microgeles MG-100 (longitud de cadena de pol\'imero, $n_{ch}=100$ segmentos) que tienen diferentes contenidos de MAA; $[KCl]=$ 0.01 M;
 	(B) Fracci\'on de segmentos cargados $x_{MAA^-}=\frac{N_{MAA^-}}{N_{seg}}$ en funci\'on del pH para las mismas condiciones del panel A (\emph{i.e.} , en el $T_{TV}$); $x_{MAA^-}$ es proporcional a la carga total del pol\'imero; $N_{seg}$ es el mismo para todos los microgeles.}
 	\label{fig:gel:Tpt_MAA}
 \end{figure}
@@ -819,9 +820,9 @@ La figura \ref{fig:gel:drug_ads} ilustra el n\'umero de mol\'eculas de Dauno (pa
 	\label{fig:gel:carga-drug_ads}
 \end{figure}
 
-Como resultado, la adsorci\'on de Dauno y Doxo tiene que competir con la adsorci\'on de iones de potasio para neutralizar la carga negativa de la red del pol\'imero (\citet{PerezChavez2020}). En la figura \ref{fig:gel:f-cs}, se observa que en ausencia de un f\'armaco disuelto, la carga del microgel disminuye a medida que se reduce la concentraci\'on de sal, lo que aparentemente entra en conflicto con la mejora de la adsorci\'on observada en la figura \ref{fig:gel:drug_ads} bajo estas condiciones. Sin embargo, despu\'es de la absorci\'on del f\'armaco, el grado de carga de los segmentos de MAA aumenta significativamente, especialmente en condiciones de baja concentraci\'on de sal. Adem\'as, es importante destacar que este comportamiento est\'a particularmente asociado con la relativamente alta concentraci\'on de f\'armaco considerada en estos resultados ($1\, mM$).
+Como resultado, la adsorci\'on de Dauno y Doxo tiene que competir con la adsorci\'on de iones de potasio para neutralizar la carga negativa de la red del pol\'imero (\citet{PerezChavez2020}). En la figura \ref{fig:gel:f-cs}, se observa que en ausencia de un f\'armaco disuelto, la carga del microgel disminuye a medida que se reduce la concentraci\'on de sal, lo que aparentemente entra en conflicto con la mejora de la adsorci\'on observada en la figura \ref{fig:gel:drug_ads} bajo estas condiciones. Sin embargo, despu\'es de la adsorci\'on del f\'armaco, el grado de carga de los segmentos de MAA aumenta significativamente, especialmente en condiciones de baja concentraci\'on de sal. Adem\'as, es importante destacar que este comportamiento est\'a particularmente asociado con la relativamente alta concentraci\'on de f\'armaco considerada en estos resultados ($1\, mM$).
 
-La fracci\'on de segmentos de $MAA$ cargados negativamente en el pol\'imero aumenta con el pH, lo que explica por qu\'e tambi\'en aumenta la adsorci\'on de Dauno/Doxo en condiciones \'acidas. Sin embargo, en condiciones alcalinas, la carga neta positiva de estos f\'armacos disminuye con el aumento del pH, lo que desfavorece su absorci\'on. Por lo tanto, la adsorci\'on de Dauno/Doxo es una funci\'on no monot\'onica del pH.
+La fracci\'on de segmentos de $MAA$ cargados negativamente en el pol\'imero aumenta con el pH, lo que explica por qu\'e tambi\'en aumenta la adsorci\'on de Dauno/Doxo en condiciones \'acidas. Sin embargo, en condiciones alcalinas, la carga neta positiva de estos f\'armacos disminuye con el aumento del pH, lo que desfavorece su adsorci\'on. Por lo tanto, la adsorci\'on de Dauno/Doxo es una funci\'on no monot\'onica del pH.
 
 En nuestro modelo, los puntos isoel\'ectricos de Dauno y Doxo son 8.4 y 7.9, respectivamente ver fig. \ref{fig:gel:carga-drug_ads}. La figura \ref{fig:gel:drug_ads} muestra que la adsorci\'on de ambas mol\'eculas puede ser significativa alrededor y por encima de estos valores de pH. En otras palabras, hay una adsorci\'on considerable de mol\'eculas con carga negativa dentro de la red de nuestro gel con carga similar. Aunque estas mol\'eculas est\'an cargadas negativamente en la fase de soluci\'on, la adsorci\'on ocurre porque el pH disminuye dentro del microgel, lo que permite que los f\'armacos regulen su carga el\'ectrica y permanezcan cargados positivamente dentro del microgel (fig. \ref{fig:gel:drug_pH}).
 
@@ -830,7 +831,7 @@ En nuestro modelo, los puntos isoel\'ectricos de Dauno y Doxo son 8.4 y 7.9, res
 	\centering
 	\includegraphics[width=0.55\linewidth]{Figures/graph-gel/drug_pH.pdf}
 	\caption{Mapas en color que muestran el cambio en el pH dentro del microgel, $\Delta pH = pH - pH_{GEL}$ en funci\'on de sal y el pH de la soluci\'on para daunorrubicina (A) y doxorrubicina (B). Estos cambios son reportados para las mismas condiciones de \ref{fig:gel:drug_ads}, es decir:
-		La concentraci\'on de f\'armaco en soluci\'on es $1mM$ y $T=25 ^\circ C$.
+		La concentraci\'on de f\'armaco en soluci\'on es 1 $mM$ y $T=25 ^\circ C$.
 		el microgel P(NIPAm-MAA) tiene $n_{ch}=100$ de longitud de cadena y $35\%$ MAA (MG100-35).}
 	\label{fig:gel:drug_pH}
 \end{figure}
