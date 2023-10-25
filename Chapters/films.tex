@@ -59,13 +59,13 @@ En resumen, este cap\'itulo presenta el comportamiento fisicoqu\'imico de los hi
 
 
 El sistema que estudiamos est\'a esquematizado en la figura \ref{fig:film:model_poliamines}.
-Este consta de una  red de PMAA entrecruzado e injertado en una superficie  la cual est\'a en equilibrio con una soluci\'on que contiene mol\'eculas de agua, iones hidronio e hidr\'oxido, y cloruro de sodio, este \'ultimo est\'a completamente disociado en iones cloruro y sodio.
+Consta de una  red de PMAA entrecruzado y anclado en una superficie  la cual est\'a en equilibrio con una soluci\'on que contiene mol\'eculas de agua, iones hidronio e hidr\'oxido, y cloruro de sodio, este \'ultimo est\'a completamente disociado en iones cloruro y sodio.
 Adem\'as, esta soluci\'on contiene tanto doxorubicina como una poliamina o ambas especies.
 Las poliaminas que hemos considerado son putrescina, espermidina y espermina.
 
-Para estudiar este sistema, aplicamos una teor\'ia molecular que se desarroll\'o recientemente para investigar la absorci\'on en films de hidrogel sensibles al pH y poder resolver mezclas de prote\'inas \cite{Hagemann2018, longo2019protonation}.
-El enfoque se basa en el trabajo de Szleifer y colaboradores para estudiar el comportamiento de capas de polielectrolitos d\'ebiles injertados  \cite{Nap2006, Gong2007PRL}.
-El m\'etodo empleado aqu\'i es general y flexible; por ejemplo, se ha aplicado para el estudio de la captura de glifosato en hidrogeles de poli(alilamina) \cite{PerezChavez2018}.
+Para estudiar este sistema, aplicamos una teor\'ia molecular que se desarroll\'o recientemente para investigar la absorci\'on en films de hidrogel sensibles al pH de mezclas de prote\'inas \cite{Hagemann2018, longo2019protonation}.
+%El enfoque se basa en el trabajo de Szleifer y colaboradores para estudiar el comportamiento de capas de polielectrolitos d\'ebiles injertados  \cite{Nap2006, Gong2007PRL}.
+El m\'etodo empleado aqu\'i es general y se puede extender a otros \'ambitos. Por ejemplo, lo hemos aplicado al estudio de la captura de glifosato en hidrogeles de poli(alilamina) \cite{PerezChavez2018} con fines de remediaci\'on ambiental.
 
 A continuaci\'on, presentaremos una descripci\'on de la teor\'ia con \'enfasis en el modelo molecular introducido para describir la doxorubicina, la putrescina, la espermidina y la espermina.
 
@@ -74,34 +74,31 @@ A continuaci\'on, presentaremos una descripci\'on de la teor\'ia con \'enfasis e
 
 El m\'etodo propuesto consiste en minimizar una energ\'ia libre generalizada que incluye toda la termodin\'amica relevante que engloba los procesos del sistema polim\'erico con una soluci\'on.
 Para tal fin  usamos  una descripci\'on molecular de grano grueso de las diferentes especies qu\'imicas que componen el sistema.
-Dicha descripci\'on incluye forma, tama\~no, distribuci\'on de carga (si los hubiese) y estado de protonaci\'on de cada componente molecular en los casos que corresponda.
-En esta primera instancia describiremos la fisicoqu\'imica de un film  que  se encuentra en  equilibrio con una soluci\'on acuosa, la cual  tiene una composici\'on  definida externamente (ba\~no de la soluci\'on).
-Es decir, el pH, la concentración de sal y la concentraci\'on de adsorbatos son variables independientes.
+Dicha descripci\'on incluye forma, tama\~no, distribuci\'on de carga  y estado de protonaci\'on de cada componente molecular.
+Describiremos la fisicoqu\'imica de un film  que  se encuentra en  equilibrio con una soluci\'on acuosa, la cual  tiene una composici\'on  definida externamente (ba\~no de la soluci\'on).
+Es decir, el pH, la concentraci\'on de sal y la concentraci\'on de adsorbatos son variables independientes.
 
-
-Nuestro film que posee distintos tipos de segmentos: un segmento que sirve como entrecruzante entre las cadenas polim\'ericas, el cual es considerado neutro, y  una unidad sensible al pH,  para esta ultima, en particular consideraremos un film polim\'erico compuesto por unidades \'acidad de \'acido metacr\'ilico ($MAA$).
-Este film  se encuentra en equilibrio con una soluci\'on con una temperatura, pH y concentraci\'on de sal definidas. Adem\'as vamos a considerar que en dicha soluci\'on hay un adsorbato, denominado \textit{ads}, la cual puede ser la doxorubicina, o alguna de las poliaminas.
-Considerando los aspectos anteriores es posible definir una energ\'ia libre:
+\subsection{Formalismo Te\'orico}
+Nuestro film que posee distintos tipos de segmentos: un segmento que sirve como entrecruzante entre las cadenas polim\'ericas, el cual es considerado electro-neutral, y  una unidad sensible al pH:  \'acido metacr\'ilico.
+Este film  se encuentra en equilibrio con una soluci\'on a temperatura, pH y concentraci\'on de sal definidas. Adem\'as vamos a considerar que en dicha soluci\'on hay un adsorbato, denominado \textit{ads}, el cual puede ser la doxorubicina, o alguna de las poliaminas.
+La generalizaci\'on del m\'etodo para incorporar dos o m\'as adsorbatos es relativamente sencilla.
+Considerando los aspectos anteriores es posible definir la energ\'ia libre de Helmoholtz:
 
 \begin{align}
  	F = -TS_{mez} -TS_{conf,net} + F_{qca,net} + F_{qca,ads} + U_{elec} + U_{ste} + U_{VDW}
  	\label{eq:film:libre-film}
 \end{align}
  
-\noindent En donde $S_{mez}$ es la entrop\'ia de traslaci\'on ( y de mezcla) de las especies libres en la soluci\'on: mol\'eculas de agua (H$_2$O), y sus respectivos iones:  hidronio (H$_3$O$^+$), e hidr\'oxido (OH$^- $), cationes y aniones de sal y nuestra prote\'ina modelo.
+\noindent En donde $S_{mez}$ es la entrop\'ia de traslaci\'on (y de mezcla) de las especies libres: mol\'eculas de agua (H$_2$O), iones:  hidronio (H$_3$O$^+$), e hidr\'oxido (OH$^- $), cationes y aniones de sal y nuestro adsorbato modelo.
 Aqu\'i, consideramos una sal monovalente, NaCl, la cual est\'a completamente disociada en sus  iones cloruro (Cl$^-$) y sodio ($Na^+$). 
-
-$S_{conf,nw}$ representa la entrop\'ia conformacional que resulta de la flexibilidad de la red polim\'erica, la cual viene dada por todas las conformaciones diferentes que puede asumir la misma.
-
-$F_{qca,net}$, es la energ\'ia qu\'imica libre que describe el equilibrio entre las especies protonadas y desprotonadas de unidades funcionales (\'acidas/b\'asicas), para nuestro film solo se consideran unidades \'acidas.
-
+$S_{conf,net}$ representa la entrop\'ia conformacional que resulta de la flexibilidad de la red polim\'erica, la cual viene dada por todas las conformaciones diferentes que puede asumir.
+$F_{qca,net}$, es la energ\'ia qu\'imica libre que describe el equilibrio entre las especies protonadas y desprotonadas de unidades \'acidas. Provenientes de las cadenas de PMAA que forman la red polim\'erica.
 De manera similar, $F_{qca,ads}$ describe la protonaci\'on de residuos titulables del adsorbato.
-
 $U_{elec}$ y $U_{ste}$ representan, respectivamente, las interacciones electrost\'aticas y las repulsiones est\'ericas.
 Las interacciones de Van der Waals son representadas en $U_{VdW}$.
 
 
-Las expresiones explicitas de la ecuaci\'on \ref{eq:film:libre-film} las describimos acontinuaci\'on.
+Las expresiones explicitas de la ecuaci\'on \ref{eq:film:libre-film} las describimos a continuaci\'on.
 
 Como primer t\'ermino tenemos la entrop\'ia de mezcla de  las especies m\'oviles, entre ellas consideramos a nuestro adsorbato: 
 
@@ -109,32 +106,34 @@ Como primer t\'ermino tenemos la entrop\'ia de mezcla de  las especies m\'oviles
 	\begin{aligned}
 		-\frac{S_{mez}}{k_B}= &A\sum_{\gamma}\int_0^\infty{dz\rho_\gamma(z)\left(\ln \left(\rho_\gamma (z)v_w\right) -1 + \beta\mu^0_\gamma\right)} \\
 		&+ A\sum_{\theta}\int_0^\infty{dz\rho_{ads}(\theta,z)\left(\ln \left(\rho_{ads}(\theta,z)\right) -1 + \beta\mu^0_{ads} \right)}
+			\label{eq:film:entropia-mezcla}
 	\end{aligned}
 \end{align}
 
-\noindent en donde $\frac{1}{k_B T}$, y $k_B$ es la constante de Boltzmann, $T$ es la temperatura absoluta del sistema. La variable $z$ es la coordenada que mide la distancia a la superficie de soporte de nuestro film, el \'area total de esta superficies es $A$. $\rho_\gamma(z)$ y $\mu_\gamma$ es densidad local, a un $z$ dado, y potencial qu\'imico estadar de la especie $\gamma$ respectivamente.
-El sub\'indice $\gamma$ toma en cuenta la mol\'ecula de agua y sus respectivos iones (hidronio e hidr\'oxido), adem'as de los iones provenientes de la sal ($Na^+$ y $Cl^-$). 
+\noindent en donde $\beta = \frac{1}{k_B T}$, y $k_B$ es la constante de Boltzmann, $T$ es la temperatura absoluta del sistema. La variable $z$ es la coordenada que mide la distancia a la superficie de soporte de nuestro film, el \'area total de esta superficies es $A$. $\rho_\gamma(z)$ y $\mu^0_\gamma$ es densidad local, a un $z$ dado, y potencial qu\'imico estadar de la especie $\gamma$ respectivamente.
+El sub\'indice $\gamma$ toma en cuenta la mol\'ecula de agua e iones hidronio e hidr\'oxido, iones sodio y cloruro.  
 
 
-El segundo t\'ermino de esta ecuaci\'on corresponde a la entrop\'ia de mezcla del adsorbato. $\rho_{ads}(\theta,z)$ es la densidad local del mismo en la conformaci\'on $\theta$. Es decir $\theta$ recorre sobre las configuraciones del adsorbato.
+El segundo t\'ermino de la ecuaci\'on \ref{eq:film:entropia-mezcla} corresponde a la entrop\'ia de mezcla del adsorbato. $\rho_{ads}(\theta,z)$ es la densidad local del mismo en la conformaci\'on $\theta$. Es decir, $\theta$ recorre sobre las configuraciones del adsorbato.
 Esta conformaciones incluyen rotaciones espaciales de la droga/poliamina.
 De este modo la densidad local media del adsorbato  puede expresarse como:
 
 
 \begin{align}
 	\left<\rho_{ads}(z)\right> = \sum_\theta{\rho_{ads}(\theta,z)}
+	\label{eq:film:ads-z-theta}
 \end{align}
 
-
-La entrop\'ia conformacional que resulta de la flexibilidad de la red polim\'erica de nuestro film se representa en $S_{conf, nw}$, esta tiene en cuenta todas las configuraciones de un set $\{\alpha\}$.
+\noindent donde $<>$ indica promedio de ensamble sobre configuraciones del adsorbato.
+La entrop\'ia conformacional que resulta de la flexibilidad de la red polim\'erica de nuestro film se representa en:
 
 \begin{equation}
 	\frac{S_{conf,net}}{k_B} = - \sum_{\alpha}{P(\alpha)\ln P(\alpha)}
 \end{equation}
 
-\noindent en donce $P(\alpha)$ denota la probabilidad de que el film se encuentre en la configuraci\'on $\alpha$.
+\noindent en donce $P(\alpha)$ denota la probabilidad de que el film se encuentre en la configuraci\'on $\alpha$. Una configuraci\'on viene dada por el conjunto de posiciones de cada uno de los segmentos de la red polim\'erica. 
 
-El siguiente t\'ermino de eq \ref{eq:film:libre-film} describe  la energ\'ia libre dada por  el equilibrio \'acido-base de los segmentos de MAA que componen nuestra red. 
+El siguiente t\'ermino de la ecuaci\'on \ref{eq:film:libre-film} describe  la energ\'ia libre dada por  el equilibrio \'acido-base de los segmentos de MAA que componen la red. 
 
 \begin{align}
 	\begin{aligned}
@@ -143,18 +142,18 @@ El siguiente t\'ermino de eq \ref{eq:film:libre-film} describe  la energ\'ia lib
 	\end{aligned}
 \end{align} 
 
-\noindent en donde $f(z)$ es el grado de carga de los segmentos de MAA entre las capaz $z$ y $z + dz$. 
-$\mu^0_{MAA^-}$ y $\mu^0_{MAAH}$ son los potenciales qu\'imico estandar  de las especies protonadas y desprotonadas respectivamente.
+\noindent en donde $f(z)$ es el grado de carga de los segmentos de MAA entre  $z$ y $z + dz$. 
+$\mu^0_{MAA^-}$ y $\mu^0_{MAAH}$ son los potenciales qu\'imico estandar  de las especies  desprotonadas y protonadas respectivamente.
 Adem\'as se define:
 
 \begin{align}
-	\left< \rho_i(z)\right> = \sum_\alpha{P(\alpha)\rho_i(\alpha,z)}
+	\left< \rho_{MAA}(z)\right> = \sum_\alpha{P(\alpha)\rho_{MAA}(\alpha,z)}
 \end{align}
-\noindent en el cual $\rho_i(\alpha,z)$  es el ensamble de densidad  promedio local del film. El cual es una variable de entrada que cuantifica la densidad de segmentos del film que  ocupan una capa $z$ cuando la red se encuentra en la conformaci\'on $\alpha$.
+\noindent donde $\left< \rho_{MAA}(z)\right>$ es la densidad local de segmentos de MAA en promedio de ensamble. $\rho_{MAA}(\alpha,z)$ es la densidad de estos segmentos cuando el pol\'imero se encuentra en una configuraci\'on $\alpha$. Esta \'ultima cantidad es un input de nuestros c\'alculos (para cada configuraci\'on) que debe ser suplido por un modelo molecular complementario al formalismo te\'orico.
 
 
 %%%%%%%%%%%%%%%%%%%
-El equilibrio qu\'imico de las unidades titulables del adsorbato  es considerada en el siguiente t\'ermino de la energ\'ia libre:
+El equilibrio qu\'imico de las unidades titulables del adsorbato  es considerado en el siguiente t\'ermino de la energ\'ia libre:
 
 \begin{align}
 	\begin{aligned}
@@ -163,24 +162,23 @@ El equilibrio qu\'imico de las unidades titulables del adsorbato  es considerada
 	\end{aligned}
 \end{align} 
 
-\noindent en donde $\left<\rho_{ads,\tau}(z)\right>$ representa la densidad local promedio del segmento protonable $\tau$ del adsorbato
+\noindent en donde $\left<\rho_{ads,\tau}(z)\right>$ representa la densidad local promedio del segmento protonable $\tau$ del adsorbato que se define como:
 
-Que se define como:
 \begin{align}
 	\left<\rho_{ads,\tau}(z)\right> = A\sum_\theta \int dz^\prime  \rho_{ads}(\theta,z^\prime)n_\tau(\theta,z^\prime, z)
 	\label{eq:film:segments_pro_si}
 \end{align}
-\noindent en donde $n_\tau(\theta,z^\prime, z)$ es un par\'ametro de entrada que nos da el n\'umero de segmentos $\tau$ entre las capas $z$ and $z+ dz$ cuando el centro de masa del adsorbato se encuentra en el a configuraci\'on $\theta$ y en la posici\'on $z^\prime$.
+\noindent en donde $n_\tau(\theta,z^\prime, z)$ es el n\'umero de segmentos $\tau$ entre  $z$ and $z+ dz$ cuando el adsorbato se encuentra en la configuraci\'on $\theta$ y su centro de masa en la posici\'on $z^\prime$.
 
-Las unidades titulables pueden estar en estado protonado $\tau, p$ o desprotonado $\tau, d$, los cuales poseen su potenciales qu\'imicos est\'andar $\mu^0_{\tau,p}$ y $\mu^0_{\tau,d}$ respectivamente. 
-Adem\'as definimos el grado de asociaci\'on $g_\tau$ para segmento $\tau$ como:
+La unidad titulable puede estar en estado protonado $\tau, p$ o desprotonado $\tau, d$, los cuales poseen su potenciales qu\'imicos est\'andar $\mu^0_{\tau,p}$ y $\mu^0_{\tau,d}$ respectivamente. 
+$g_\tau (z)$ es el grado de protonaci\'on de la unidad $\tau$ en $z$. Si $f_\tau (z)$ es el grado de carga local de la unidad, entonces:
 
 
 \begin{enumerate}
 	\item para unidades \'acidas: $g_\tau(z) = 1-f_\tau(z)$ ( las unidades $\tau$ se cargan negativamente)
 	\item para unidades b\'asicas: $g_\tau(z) = f_\tau(z)$ (las  unidades $\tau$ se cargan positivamente  )
 \end{enumerate}
-en donde  $f_\tau(r)$ es el grado de disociaci\'on de cada segmento $\tau$.
+
 %%%%%%%%%%
 
 La energ\'ia electr\'ostatica se define como:
@@ -196,12 +194,12 @@ La energ\'ia electr\'ostatica se define como:
 En este contexto, la densidad de carga media es:
 
 \begin{align}
-	\left<\rho_q(z)\right> = \sum_{\gamma } {\rho_\gamma(z) q_\gamma + \sum_\tau{f_\tau(z) \left<\rho_{ads,\tau}(z)\right> q_\tau} +  f(z)\dfrac{\left<\phi_{MAA}(z)\right>}{v_{MAA}}q_{MAA}}
+	\left<\rho_q(z)\right> = \sum_{\gamma } {\rho_\gamma(z) q_\gamma + \sum_\tau{f_\tau(z) \left<\rho_{ads,\tau}(z)\right> q_\tau} +  f(z)\left<\rho_{MAA}(z)\right>}q_{MAA}
 	\label{eq:film:rho_charge}
 \end{align}
 %%%%%%%%%%%%%%%%
 
-La contribuci\'on siguiente en la energ\'ia libre viene dada por la repulsi\'on esterica entre  todos los segmentos que componen  el sistema. Esta contribuci\'on se incorpora a trav\'es del siguiente restricci\'on:  
+La contribuci\'on siguiente en la energ\'ia libre viene dada por la repulsi\'on est\'erica entre  todos los segmentos que componen  el sistema. Esta contribuci\'on se incorpora a trav\'es de la siguiente restricci\'on:  
 
 \begin{align}
 	\begin{aligned}
@@ -209,14 +207,14 @@ La contribuci\'on siguiente en la energ\'ia libre viene dada por la repulsi\'on 
 	\end{aligned}
 	\label{eq:film:constraint}
 \end{align}
-\noindent en donde $v_\gamma$ , $v_\lambda$ y $v_{MAA}$ son los vol\'umenes moleculares de los segmentos $\gamma$ de las especies libres, $\lambda$  en el adsorbato y los segmentos de $MAA$ del film respectivamente.
+\noindent en donde $v_\gamma$ , $v_\lambda$ y $v_{MAA}$ son los vol\'umenes moleculares de los segmentos $\gamma$ de las especies libres, $\lambda$  en el adsorbato y los segmentos de $MAA$ del pol\'imero respectivamente.
 $\left<\rho_{ads,\lambda}(z)\right>$ es definido de la misma forma que en la ecu.  \ref{eq:film:segments_pro_si}.
-Cabe destacar que el sub\'indice $\lambda$ considera a todos los segmentos del adsorbato, es decir $ \tau \in \lambda$.
+Cabe destacar que el sub\'indice $\lambda$ considera a todos los segmentos del adsorbato, no solo aquellos titulables, es decir $ \{\tau \}  \in \{\lambda \}$.
 
 %%%%%%%%%%%%%%%
-La energ\'ia proveniente de las interacciones de Van der Waals se expresa en el t\'ermino $U_{VdW}$. En este trabajo se ha considerado que todos los segmentos del sistema poseen un car\'acter hidrofilico. Es decir la interacci\'on entre cada par de segmentos es similar a su interacci\'on con las mol\'eculas de agua. Como resultado la energ\'ia de interacci\'on de $VdW$ se considera una constante aditiva a la energ\'ia libre, por lo cual puede ser ignorada. En el cap\'itulo \ref{Chapter-geles} mostraremos un ejemplo en donde las interacciones de $VdW$ son tenidas en cuenta muy fuertemente. 
+La energ\'ia proveniente de las interacciones de Van der Waals se expresa en el t\'ermino $U_{VdW}$. En este trabajo se ha considerado que todos los segmentos del sistema poseen un car\'acter hidrofilico. Es decir la interacci\'on entre cada par de segmentos es similar a su interacci\'on con las mol\'eculas de agua. Como resultado la energ\'ia de interacci\'on de $VdW$ se considera una constante aditiva a la energ\'ia libre, por lo cual puede ser ignorada. En el cap\'itulo \ref{Chapter-geles} mostraremos un ejemplo en donde las interacciones de $VdW$ son tenidas en cuenta y su efecto es considerable . 
 
-En este punto la energ\'ia libre, ecu. \ref{eq:film:libre-film}, se puede escribir como una funcional de funciones. Esta ultimas est\'an compuesta por la probabilidad de distribuci\'on de segmentos de nuestra red polim\'erica, las densidades locales de cada una de las especies libres, incluidas la densidad de conformaciones de la droga y/o polimamina, los grados de protonaci\'on/disociaci\'on y el potencial electrost\'atico local. Es decir:
+En este punto la energ\'ia libre, ecuaci\'on \ref{eq:film:libre-film}, se puede escribir como una funcional de la probabilidad de distribuci\'on de segmentos de nuestra red polim\'erica, las densidades locales de cada una de las especies libres, incluidas la densidad de conformaciones de la droga y/o polimamina, los grados de protonaci\'on/disociaci\'on y el potencial electrost\'atico local. Es decir:
 
 \begin{align}
 	F = \sum_\alpha \sum_\theta \int_0^\infty dz f(\alpha, \theta,z)
@@ -225,22 +223,22 @@ En este punto la energ\'ia libre, ecu. \ref{eq:film:libre-film}, se puede escrib
 \noindent en donde:
 
 \begin{align}
-	 f=  f \left( P(\alpha), \rho_\gamma(z),\rho_{ads}(z), f_\tau(z), f(z), \psi(z)  \right)
+	 f=  f \left( P(\alpha), \{\rho_\gamma(z)\},\rho_{ads}(\theta, z), \{f_\tau(z)\}, f(z), \psi(z)  \right)
 	 \label{eq:film:funcionales}
  \end{align}
 
-de forma m\'as explicita:
+\noindent de forma m\'as explicita:
 
 \begin{align}
 	\begin{aligned}
 		\beta F=  & A\sum_{\gamma}\int_0^\infty{dz\rho_\gamma(z)\left(\ln \left(\rho_\gamma (z)v_w\right) -1 + \beta\mu^0_\gamma\right)} \\
 		%%%%%
-		&+ A\sum_{\theta}\int_0^\infty{dz\rho_{ads}(\theta,z)\left(\ln \left(\rho_{pro}(\theta,z)\right) -1 + \beta\mu^0_{ads} \right)} \\
+		&+ A\sum_{\theta}\int_0^\infty{dz\rho_{ads}(\theta,z)\left(\ln \left(\rho_{ads}(\theta,z)\right) -1 + \beta\mu^0_{ads} \right)} \\
 		%%%%%
 		&+ \sum_\alpha{P(\alpha)\ln P(\alpha)} \\
 		%%%%
 		& + A\int_0^\infty dz \left<\rho_{MAA}(z)\right> \left[f(z)(\ln f(z)+ \beta\mu^0_{MAA^-})\right.\\
-		& \qquad\qquad\qquad \left.+(1-f(z))(\ln (1-f(z))+\beta\mu^0_{MAAH})\right] \\
+		& \qquad\qquad\qquad \left.+(1-f(z))\left(\ln (1-f(z))+\beta\mu^0_{MAAH}\right)\right] \\
 		%%%%%
 		& + A\int_0^\infty dz \sum_\tau \left<\rho_{ads,\tau}(z)\right> \left[g_\tau(z)(\ln g_\tau(z)+ \beta\mu^0_{\tau p})\right.\\
 		&\qquad \qquad \qquad\qquad \qquad\quad \left.+(1-g_\tau(z))(\ln (1-g_\tau(z))+\beta\mu^0_{\tau d})\right]   \\
@@ -250,8 +248,7 @@ de forma m\'as explicita:
 \end{align}
 
 
-Para completar el sistema de estudio, nuestro film esta el equilibrio con el bulk de la soluci\'on. Este bulk  posee una composici\'on bien definida (pH, Temperatura, concentraci\'on salina y de adsorbatos). Estas cantidades proveen un reservorio con el cual se crea un potencial qu\'imico el cual debe estar en equilibrio con nuestro sistema polim\'erico. En particular estos potenciales corresponden a las especies libres, $\mu_\gamma$, y del adsorbato, $\mu_{ads}$.
-De esta forma al considerar esta condici\'on de equilibrio nuestra energ\'ia libre se convierte un gran potencial termodin\'amico:
+El film est\'a el equilibrio con el bulk de la soluci\'on. Esta soluci\'on posee una composici\'on bien definida (pH, concentraci\'on salina y de adsorbatos) adem\'as de una temperatura absoluta de trabajo. Lo que implica que el sistema est\'a en contacto con un reservorio de part\'iculas libres, lo cual fija los potenciales qu\'imicos de estas especies. Estos potenciales corresponden a las especies libres peque\~nas, $\mu_\gamma$ y del adsorbato, $\mu_{ads}$. Al considerar esta condici\'on de equilibrio qu\'imico el potencial termodin\'amico relevante en el gran potencial: 
 
 \begin{align}
 	\begin{aligned}
@@ -262,17 +259,17 @@ De esta forma al considerar esta condici\'on de equilibrio nuestra energ\'ia lib
 		\label{eq:film:equil-qco}
 \end{align}
 
-\noindent $N_\gamma$ y $ N_{ads}$ son el n\'umero total de mol\'eculas de las especies libres y adsorbato respectivamente. En la \'ultima linea de la expresi\'on ecu. \ref{eq:film:equil-qco} se tiene en cuenta los protones asociados que  provienen de las especies con segmentos titulables: adsorbato y red polim\'erica respectivamente.
+\noindent $N_\gamma$ y $ N_{ads}$ son el n\'umero total de mol\'eculas de la especie libre $\gamma$ y adsorbato respectivamente. En la \'ultima linea de la expresi\'on, ecuaci\'on \ref{eq:film:equil-qco}, se tiene en cuenta los protones asociados a las especies con segmentos titulables: adsorbato y red polim\'erica respectivamente.
 
 
-Adicionalmente las condiciones de equilibrio deben satisfacer la condici\'on de incompresibilidad del sistema: ecu. \ref{eq:film:constraint}.  Esta restricci\'on se incorpora como:
+Se impone una restricci\'on f\'isica adicional a nuestro sistema fluido: las condiciones de equilibrio deben satisfacer la condici\'on de incompresibilidad del sistema: ecu. \ref{eq:film:constraint}.  Esta restricci\'on se incorpora como:
 
 \begin{align}
 	\Phi = \Omega +A \int_0^\infty dz\pi(z){\left[\sum_{\gamma}\rho_\gamma(z) v_\gamma + \sum_\lambda{\left<\rho_{ads,\lambda}(z)\right>v_\lambda} + \left<\rho_{MAA}(z)\right>v_{MAA} -1 \right]}
 \end{align}
 
 
-\noindent en donde $\pi(z)$ es un multiplicador local de Lagrange.  Este multiplicar se traduce en un potencial que define la presi\'on osm\'otica local. Finalmente se obtiene un nuevo potencial termodin\'amico para nuestro sistema, el cual se escribe de forma explicita como:
+\noindent en donde $\pi(z)$ es un multiplicador local de Lagrange.  Esta funci\'on puede interpretarse como la presi\'on osm\'otica local. Finalmente, se obtiene un nuevo potencial termodin\'amico para nuestro sistema, el cual se escribe de forma explicita como:
  
 \begin{align}
 	\begin{aligned}
@@ -292,16 +289,21 @@ Adicionalmente las condiciones de equilibrio deben satisfacer la condici\'on de 
 		%%%%%%%%
 		& +A \int_0^\infty dz\beta\pi(z){\left[\sum_{\gamma}\rho_\gamma(z) v_\gamma + \sum_\lambda{\left<\rho_{ads,\lambda}(z)\right>v_\lambda} + \left<\rho_{MAA}(z)\right>v_{MAA} -1 \right]} \\
 		%%%%%%%%%%%
-		&   -\sum_\gamma A\int_0^\infty dz \left(\beta \mu_\gamma \rho_\gamma(z) - \beta \mu_{ads} \left<\rho_{ads}(z)\right> \right)  \\
+		&   -\sum_\gamma A\int_0^\infty dz \left(\beta \mu_\gamma \rho_\gamma(z) + \beta \mu_{ads} \left<\rho_{ads}(z)\right> \right)  \\
 		&  -A\int_0^\infty \beta\mu_{H^+} \left( \sum_\tau\left< \rho_{ads,\tau}(z) \right>g_\tau(z) + (1-f(z)) \left< \rho_{MAA}(z) \right> \right )
 	\end{aligned}
 \end{align}
  
-Obtenido la expresi\'on que define la energ\'ia del sistema es necesario encontrar las condiciones en las cuales se minimiza la misma. Para ello se deriva este potencial respecto a los funcionales que lo componen.
+Obtenido la expresi\'on que define el potencial termodin\'amico del sistema es necesario encontrar las condiciones en las cuales se minimiza el mismo. Para ello se deriva este potencial respecto a los funcionales que lo componen.
 A continuaci\'on se mostrara la optimizaci\'on de este gran potencial respecto de los funcionales presentados en  ecu. \ref{eq:film:funcionales}.
 
-En part\'icular la optimizaci\'on respecto a la densidad de las especies libres, $\rho_\gamma$ resulta en:
+En part\'icular la optimizaci\'on respecto a la densidad de las especies libres, $\rho_\gamma (z)$ resulta en:
 
+\begin{align}
+	\frac{\partial\beta\Phi}{\partial\rho_\gamma(z)} = 0
+\end{align}
+
+Obteni\'endose:
 \begin{align}
 	\rho_\gamma(z)v_w = a_\gamma \exp\left[-\beta q_\gamma\psi(z)\right] \exp\left[-\beta v_\gamma\pi(z)\right]
 	\label{eq:film:free-species}
@@ -312,23 +314,23 @@ En part\'icular la optimizaci\'on respecto a la densidad de las especies libres,
 	a_\gamma = \exp[\beta\mu_\gamma - \beta\mu^0_\gamma]
 \end{align}
 
-En esta expresi\'on se ve la influencia de los potenciales qu\'imicos de las especies libres,  $\mu_\gamma$, los cuales  deben estar en equilibrio con el bulk de la soluci\'on. Las actividades qu\'imicas est\'an completamente determinadas por la composici\'on (pH, T, concentraci\'on salina) del seno de la soluci\'on.
+En esta expresi\'on se ve la influencia de los potenciales qu\'imicos de las especies libres,  $\mu_\gamma$, los cuales  deben estar en equilibrio con el bulk de la soluci\'on. Las actividades qu\'imicas est\'an completamente determinadas por la composici\'on (pH, concentraci\'on salina) del seno de la soluci\'on.
  
-El grado de disociaci\'on de los segmentos de $MAA$ viene dado por:
+Luego de su correspondiente optimizaci\'on el grado de disociaci\'on de los segmentos de $MAA$ viene dado por:
 
 \begin{align}
-	\frac{f(z)}{1-f(z)} = \frac{K^0_a}{a_{H^+}} \exp[-\beta q_{MAA}\psi(z)]
+	\frac{f(z)}{1-f(z)} = \frac{K^0_{a,MAA}}{a_{H^+}} \exp[-\beta q_{MAA}\psi(z)]
 	\label{eq:film:degree-film}
 \end{align}
 
-\noindent en donde se define la constante termodin\'amica del equilibrio \'acido-base para los segmentos de $MAA$ como:
+\noindent en donde se la constante termodin\'amica del equilibrio \'acido-base para los segmentos de $MAA$ es:
 
 \begin{align}
 	K_{a,MAA}^0 = \exp[-\beta\mu^0_{MAAH} -\beta\mu^0_{MAA^-} -\beta\mu^0_{H^+}]
 	\label{eq:film:ka-acido-base}
 \end{align}
 
-Del mismo modo el grado de disociaci\'on de los segmentos titulables $\tau$:
+Del mismo modo para el grado de carga de los segmentos titulables $\tau$, se obtiene:
 
 \begin{align}
 	\frac{f_\tau(z)}{1-f_\tau(z)} = \left(\frac{a_{H^+}}{K^0_{a,\tau}}\right)^{\mp 1} \exp[-\beta q_\tau \psi(z)]
@@ -336,7 +338,14 @@ Del mismo modo el grado de disociaci\'on de los segmentos titulables $\tau$:
 \end{align}
 
 
-\noindent la constante termodin\'amica para el equilibrio de los segmentos $\tau$ se define de igual forma que en ecu. \ref{eq:film:ka-acido-base}, el exponente,$\mp 1$, cambia si se trata de segmentos \'acidos o b\'asicos respectivamente.
+\noindent la constante termodin\'amica para el equilibrio de los segmentos $\tau$ se define:
+
+\begin{align}
+	K_{a,\tau}^0 = \exp[-\beta\mu^0_{\tau p} -\beta\mu^0_{\tau d} -\beta\mu^0_{H^+}]
+	\label{eq:film:tau-acido-base}
+\end{align}
+
+\noindent adem\'as el exponente,$\mp 1$, en la ecuaci\'on \ref{eq:film:degree-protein}, cambia si se trata de segmentos \'acidos ($-$) o b\'asicos ($+$) respectivamente.
 
 Optimizando respecto a la probabilidad de las conformaciones de la red polim\'erica se obtiene:
 
@@ -361,42 +370,48 @@ Optimizando respecto a la probabilidad de las conformaciones de la red polim\'er
 	\end{aligned}
 \end{align}
 
-Constante con la cual se tiene en cuenta que la sumatoria de las probabilidades de cada conformaci\'on de la red polim\'erica sea 1:
+\noindent es la constante con la cual se tiene en cuenta que la sumatoria de las probabilidades de cada conformaci\'on de la red polim\'erica sea 1:
 
 \begin{align}
 	\sum_\alpha P(\alpha) = 1                 
 \end{align}
 
-La densidad local del adsorbato en una conformaci\'on $\theta$ se deriva de la expresi\'on:
+Para la densidad local del adsorbato en una conformaci\'on $\theta$ se deriva la siguiente expresi\'on:
 
 \begin{align}
 	\begin{aligned}
 	\rho_{ads}(\theta, z)v_w = &\tilde{a}_{ads} \prod_\tau\exp\left[-A\int_0^\infty dz^\prime n_\tau(\theta,z,z^\prime) \ln f_\tau(z^\prime)\right] \\
-	& \prod_\lambda \exp \left[-A\int^\infty_0 dz^\prime n_\lambda(\theta,z, z^\prime)[v_\lambda\beta\pi(z^\prime) + q_\lambda \psi(z^\prime)] \right]
+	& \prod_\lambda \exp \left[-A\int^\infty_0 dz^\prime n_\lambda(\theta,z, z^\prime)[v_\lambda\beta\pi(z^\prime) + \beta q_\lambda \psi(z^\prime)] \right]
 	\end{aligned}
 \label{eq:film:proteina}
 \end{align}
 
-En esta expresi\'on se ha redefinido el potencial qu\'imico est\'andar del adsorbato y si los segmentos son de naturaleza \'acida $\tau, a$ o b\'asica $\tau,b$:
+En esta expresi\'on se ha redefinido el potencial qu\'imico est\'andar del adsorbato:
+
+\begin{align}
+	\tilde{a}^0_{ads} = \exp[\beta\mu_{ads} - \beta\tilde{\mu}^0_{ads}]
+	\label{eq:film:actividad-pro}
+\end{align}
+
+\noindent en donde se hace la distinci\'on si los segmentos son de naturaleza \'acida $\tau, a$ o b\'asica $\tau,b$:
 
 \begin{align}
 	\beta\tilde{\mu}^0_{ads} =  \beta \mu^0_{ads}  + \sum_{\tau,a} C_{n,\tau}\beta\mu^0_{\tau,d} 
 	+ \sum_{\tau,b} C_{n,\tau}\beta(\mu_{H^+} - \mu^0_{\tau,p})
 \end{align}
 
-\noindent en donde se define el n\'umero de composici\'on, $C_{n,j}$, para un segmento $j$:
+
+
+\noindent se define el n\'umero de composici\'on, $C_{n,j}$, para un segmento $j$:
 \begin{align}
 	C_{n,j} = A\int_0^\infty dz \, n_j(\theta, z^\prime, z), \forall z^\prime
 	\label{eq:film:n-coord}
 \end{align}
 
- resultando:
-\begin{align}
-	\tilde{a}^0_{ads} = \exp[\beta\mu_{ads} - \beta\tilde{\mu}^0_{ads}]
-	\label{eq:film:actividad-pro}
-\end{align}
 
-La variaci\'on de nuestra energ\'ia respecto del potencial electrost\'atico que da origen a la ecuaci\'on de Poisson:
+
+
+La variaci\'on del gran potencial respecto del potencial electrost\'atico que da origen a la ecuaci\'on de Poisson:
 
 \begin{align}
 	\epsilon \nabla^2 \Psi(z) = - \left< \rho_q (z)\right>
@@ -407,48 +422,46 @@ La variaci\'on de nuestra energ\'ia respecto del potencial electrost\'atico que 
 En esta expresi\'on podemos observar  el acoplamiento local entre las interacciones f\'isicas, la organizaci\'on molecular, los grados de libertad, conformaciones y equilibrios qu\'imcos. Para ello hay que tener en cuenta la densidad de carga definida en ecu. \ref{eq:film:rho_charge} 
 %%%%
 
-Para la resoluci\'on de nuestro sistema, es decir que el mismo  se encuentre en equilibrio, se han impuesto ciertas restricciones, como la incompresibilidad o equilibrio de potenciales qu\'imicos ecuaciones \ref{eq:film:constraint} y \ref{eq:film:equil-qco} respectivamente. Otra restricci\'on que se impone es la electro neutralidad de la soluci\'on: 
+Para la resoluci\'on de nuestro sistema, es decir que el mismo  se encuentre en equilibrio, se han impuesto ciertas restricciones, como la incompresibilidad o equilibrio de potenciales qu\'imicos ecuaciones \ref{eq:film:constraint} y \ref{eq:film:equil-qco} respectivamente. Otra restricci\'on que se impone es la electro neutralidad global del sistema. Es decir:
 
 \begin{align}
 	\int_0^\infty dz \left< \rho_q (z)\right> = 0
 \end{align}
 
-Esta restricci\'on se satisface en la ecuaci\'on de Poisson al considerar las condiciones de contorno adecuadas, las cuales definimos:
+Esta restricci\'on se satisface en la soluci\'on a la ecuaci\'on de Poisson al considerar las condiciones de contorno adecuadas, las cuales definimos:
 
 \begin{align}
 	\begin{aligned}
 		&i)  \lim_{z\to\infty}\psi(z) = 0 \\
-		&ii) \left.\frac{d\psi(z)}{dr}\right|_{z=0} = 0
+		&ii) \left.\frac{d\psi(z)}{dz}\right|_{z=0} = 0
 		\label{eq:film:contorno}
 	\end{aligned}
 \end{align}
 
-Estas condiciones significan que el potencial electrost\'atico se desvanece a medida que nos alejamos de nuestro film polim\'erico,  y que el medio diel\'ectrico en el cual se encuentra el film  se extiende desde su superficie de soporte, respectivamente. 
+Estas condiciones significan que el potencial electrost\'atico se desvanece a medida que nos alejamos de nuestro film polim\'erico.
 
-En este punto hemos mostrados las expresiones que optimizan a nuestro gran potencial, y c\'omo cada uno de estos funcionales: $P(\alpha), \rho_\gamma(z),\rho_{ads}(z), f_\tau(z), f(z), \psi(z) $ a su vez  terminan siendo definidos por dos potenciales locales: Electrost\'atico $\psi(z)$ y Presi\'on osm\'otica $\pi(z)$. 
-Como primera conclusi\'on de esta teor\'ia es que es posible calcular y describir la termodin\'amica del sistema dadas las condiciones de laboratorio: pH, concentraci\'on de sal y adsorbatos, temperatura. Utilizando y resolviendo las ecuaciones de incompresibilidad y  electro-neutralidad, adem\'as de otros par\'ametros impuestos en la entrada: vol\'umenes moleculares, cargas y constantes de disociaci\'on. as\'i como la distintas conformaci\'on que pueden adquirir cada elemento del sistema, es decir la distribuci\'on espacial de cada segmentos en sus conformaciones
-Estas par\'ametros de entrada son provisto al c\'odigo mediante el uso de un modelo molecular. 
+En este punto hemos mostrados las expresiones que optimizan a nuestro gran potencial, y c\'omo cada uno de estas funciones: $P(\alpha), \rho_\gamma(z),\rho_{ads}(z), f_\tau(z), f(z), \psi(z) $ a su vez  terminan siendo definidos por dos potenciales locales: Electrost\'atico $\psi(z)$ y Presi\'on osm\'otica $\pi(z)$, las actividades de las especies libres y algunas otras cantidades, que son variables conocidas del sistema.
+Con las condiciones del ba\~no de la soluci\'on: concentraci\'on de sal, el pH, y concentraci\'on de adsorbato es posible calcular las actividades de todas las especies libres considerando las incompresibilidad del sistema y su eletro-neutralidad, as\'i como tambi\'en la auto-disociaci\'on del agua.  
+Las variables conocidas del sistema incluyen el volumen molecular y carga de cada una de las especies libres presentes, las constantes de disociaci\'on de los segmentos titulables, as\'i como tambi\'en la distribuci\'on espacial de todos los segmentos para cada una de las conformaciones que tome el film y/o adsorbatos. Todas estas cantidades son provistas por un modelo molecular. Este modelo molecular ser\'a descrito m\'as adelante en la secc\'on \ref{sub:film:modelo-molecular}.
 
-La forma de obtener estas variables desconocidas, $\psi(z)$ y $\pi(z)$  es realizando una soluci\'on num\'erica (puede verse en el anexo \ref{sec:film:reso-numerica}) por sustituci\'on en la diferentes ecuaciones en las que interact\'uan: la densidad de las especies libres ecu. \ref{eq:film:free-species}, los grados de disociaci\'on de los segmentos del film y de los  titulables del adsorbato ecuaciones \ref{eq:film:degree-film} y \ref{eq:film:degree-protein} respectivamente, la probabilidad de las conformaciones de la red polim\'erica ecu. \ref{eq:film:probabilidad} y la densidad local del adsorbato  ecu. \ref{eq:film:proteina}.
+Con esas consideraciones vemos que nuestras funciones desconocidas son  $\psi(z)$ y $\pi(z)$ las cuales pueden ser determinadas por sustituci\'on en la diferentes ecuaciones en las que interact\'uan: la densidad de las especies libres ecuaci\'on  \ref{eq:film:free-species}, los grados de disociaci\'on de los segmentos del film y de los  titulables del adsorbato ecuaciones \ref{eq:film:degree-film} y \ref{eq:film:degree-protein} respectivamente, la probabilidad de las conformaciones de la red polim\'erica ecu. \ref{eq:film:probabilidad} y la densidad local del adsorbato  ecuaci\'on \ref{eq:film:proteina}.
 
-Una vez obtenidos los potenciales $\pi(z)$ y $\psi(z)$ es posible derivar  cualquier cantidad termodin\'amica de inter\'es  a partir de la energ\'ia libre o haciendo uso de alguna expresi\'on explicita. 
+Una vez obtenidos los potenciales $\pi(z)$ y $\psi(z)$ es posible derivar  cualquier cantidad termodin\'amica de inter\'es  a partir de la energ\'ia libre o haciendo uso de alguna expresi\'on explicita en base a las funciones definidas anteriormente.
 
 Por ejemplificar la fracci\'on de volumen local ocupada por un adsorbato puede ser calculada como:
 
 \begin{align}
-	\left< \phi_{ads}(z) \right> = A\int_0^\infty dz^\prime \sum_\theta \rho(\theta, z^\prime)\sum_\lambda n_\lambda(\theta, z^\prime, z)v_\lambda
+	\left< \phi_{ads}(z) \right> = A\int_0^\infty dz^\prime \sum_\theta \rho_{ads}(\theta, z^\prime)\sum_\lambda n_\lambda(\theta, z^\prime, z)v_\lambda
 \end{align}
 
-Con esta cantidad es posible cuantificar la adsorci\'on de la prote\'ina en el film. 
+Con esta cantidad es posible cuantificar la adsorci\'on del adsrobato en el film. 
 
-\section{Soluci\'on Bulk}\label{sec:film:bulk-solution}
+\subsection{Soluci\'on Bulk}\label{sec:film:bulk-solution}
 
-Como mencionamos en la secci\'on anterior, la energ\'ia del sistema es expresada como un potencial gran can\'onico el cual proviene de un ensamble gran can\'onico, en el cual el sistema de estudio  esta en equilibrio con un ``ba\~no de  la soluci\'on" :  un reservorio de pH, temperatura y concentraci\'on de las especies libres (incluido el adsorbato). Es decir  nuestro film y sus alrededores se encuentran en constante equilibrio con el bulk de la soluci\'on en la que est\'an bien definidas las variables como pH, temperatura y concentraci\'on de sal y/o prote\'ina. 
-Dadas estas condiciones la resoluci\'on del bulk de la soluci\'on es indispensable para llevar a cabo nuestras simulaciones. Las soluciones nos proporcionan la informaci\'on de las actividades de las especies m\'oviles, y con ella sus potenciales qu\'imicos. Informaci\'on que como vimos anteriormente es necesaria para la resoluci\'on de las ecuaciones de incompresibilidad y de Poisson.
+Como mencionamos en la secci\'on anterior, el sistema de estudio est\'a en equilibrio con un reservorio de pH, temperatura y concentraci\'on de las especies libres (incluido el adsorbato). La composici\'on de la soluci\'on bulk nos proporciona la informaci\'on de las actividades de las especies m\'oviles, y con ellas sus potenciales qu\'imicos.
 
-El procedimiento te\'orico es en esencia el mismo: escritura de la energ\'ia libre (y su respectivo potencial) y minimizaci\'on respecto de las funcionales  que lo componen.
+El potencial termodin\'amico que describe a la soluci\'on bulk puede expresarse de la siguiente manera: 
 
-De esta forma el potencial dado por el bulk de la soluci\'on se escribe:
 
 \begin{align}
 	\begin{aligned}
@@ -458,30 +471,32 @@ De esta forma el potencial dado por el bulk de la soluci\'on se escribe:
 		%%%%%%
 		& + \sum_\tau \left<\rho^b_{ads,\tau}\right> \left[g^b_\tau(\ln g^b_\tau+ \beta\mu^0_{\tau p}) +(1-g^b_\tau)(\ln (1-g^b_\tau)+\beta\mu^0_{\tau d})\right]   \\
 		%%%%%%%
-		& +\left[\left(\sum_{\gamma } {\rho^b_\gamma q_\gamma + \sum_\tau{f^b_\tau \left<\rho^b_{ads,\tau}\right> q_\tau} }\right)\beta\psi^b -\frac{1}{2}\beta\epsilon(\nabla\psi^b)^2 \right] \\ 
+		& +\left[\left(\sum_{\gamma } {\rho^b_\gamma q_\gamma + \sum_\tau{f^b_\tau \left<\rho^b_{ads,\tau}\right> q_\tau} }\right)\beta\psi^b  \right] \\ 
 		%%%%%%%%
 		& +\beta\pi^b{\left[\sum_{\gamma}\rho^b_\gamma v_\gamma + \sum_\lambda{\left<\rho^b_{ads,\lambda}\right>v_\lambda}  -1 \right]} \\
 		%%%%%%%%%%%
-		&   -\sum_\gamma \left(\beta \mu_\gamma \rho^b_\gamma - \beta \mu_{ads} \left<\rho^b_{ads}\right> \right)   -\beta\mu_{H^+} \left( \sum_\tau\left< \rho^b_{ads,\tau} \right>g_\tau  \right )
+		&   -\sum_\gamma \left(\beta \mu_\gamma \rho^b_\gamma + \beta \mu_{ads} \left<\rho^b_{ads}\right> \right)   -\beta\mu_{H^+} \left( \sum_\tau\left< \rho^b_{ads,\tau} \right>g_\tau  \right )
 	\end{aligned}
 	\label{eq:film:pot-bulk}
 \end{align}
 
 \noindent en donde el super\'indice $b$ denota el Bulk de la soluci\'on. 
- Los ensambles, expresiones entre brackets ($\left<\rho\right>$) se definen de la misma forma que en la secci\'on anterior. Teniendo las salvedades que no hay dependencia sobre la coordenada $z$:
- \begin{align}
- 	\left<\rho^b_{ads}\right> = \sum_{\theta}\rho^b_{ads}(\theta)
- \end{align}
- Adem\'as se ha considerado las condiciones a $z \to \infty$:
+Las densidades de cada una de las especies libres es obtenida del limite  $z \to \infty$:
 
 \begin{align}
 	\begin{aligned}
-		& i)\rho^b_i =\rho_i (z \rightarrow \infty)   \\
+		& i)\rho^b_\gamma =\rho_\gamma (z \rightarrow \infty)   \\
+		& i)\rho^b_{ads} =\rho_{ads} (z \rightarrow \infty)   \\
 		& ii)  \pi^b = \pi(z \rightarrow \infty) \\
 		& iii) g_\tau^b = g_\tau(z \rightarrow \infty)  
 	\end{aligned}
 \end{align}
 \noindent en donde $i$ hace referencia a las especies libres y al adsorbato. 
+
+Adem\'as el promedio de ensamble de la densidad del adsorbato definido en la ecuaci\'on \ref{eq:film:ads-z-theta} se convierte en:
+\begin{align}
+	\left<\rho^b_{ads}\right> = \sum_{\theta}\rho^b_{ads}(\theta)
+\end{align}
 
 en consecuencia para las especies libres $\gamma$ resulta:
 \begin{align}
@@ -499,15 +514,16 @@ finalmente para la densidad del adsorbato se obtiene:
 
 \begin{align}
 	\begin{aligned}
-		\rho_{ads}(\theta)v_w = &\tilde{a}_{ads} \prod_\tau \exp\left[-cn_\tau \ln f^b_\tau\right] \\
+		\rho_{ads}(\theta)v_w = &\tilde{a}_{ads} \prod_\tau \exp\left[-Cn_\tau \ln f^b_\tau\right] \\
 		& \prod_\lambda \exp \left[-cn_\lambda (v_\lambda\beta\pi^b + q_\lambda \psi^b) \right]
 	\end{aligned}
 	\label{eq:film:rhopro-bulk}
 \end{align}
 
-\noindent en donde $\tilde{a}_{ads}$ y $cn_\tau$ (y $cn_\lambda$) son definidos en las ecuaciones  \ref{eq:film:actividad-pro} y \ref{eq:film:n-coord} respectivamente. 
+\noindent en donde $\tilde{a}_{ads}$ y $C_{n,\tau}$ (y $C_{n,\lambda}$) son definidos en las ecuaciones  \ref{eq:film:actividad-pro} y \ref{eq:film:n-coord} respectivamente. 
 
-Podemos observar nuevamente que nuestros funcionales quedan en funci\'on, valga la redundancia, por la presi\'on osm\'otica $\pi^b$ y el potencial electrost\'atico $\psi^b$
+Podemos observar nuevamente que estas cantidades  quedan en funci\'on de la presi\'on osm\'otica $\pi^b$ y el potencial electrost\'atico $\psi^b$ del bulk.
+
 Sin embargo si consideramos las condiciones de contorno dada en la ecu. \ref{eq:film:contorno} para la ecuaci\'on de Poisson, vemos que en la soluci\'on bulk se debe cumplir: $\psi^b = 0$. 
 
 Esto  muestra que para nuestro ba\~no de soluci\'on la principal inc\'ognita es la presi\'on osm\'otica: $\pi^b$.
@@ -547,7 +563,8 @@ Hay que tener en cuenta que las densidades en el bulk de la soluci\'on son par\'
 %Para nuestros modelos utilizamos una definici\'on en donde no es la cantidad sino de la importancia qu\'imica y relevante para responder las preguntar que se plantean en el sistema. Nos enfocamos en segmentos de mol\'eculas que posean carga o puedan ser titulables, as\'i como aquellos que posean alg\'un tipo de interacci\'on que es considerada en las ecuaciones de potencial qu\'imico usado.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Modelo molecular}
+\subsection{Modelo molecular}
+\label{sub:film:modelo-molecular}
 
 
 \begin{figure}[ht]
