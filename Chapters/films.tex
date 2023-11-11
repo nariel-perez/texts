@@ -186,7 +186,7 @@ La energ\'ia electr\'ostatica se define como:
 	\end{aligned}
 \end{align} 
 
-\noindent en donde $\psi(z)$ es el potencial electrost\'atico dependiente de la posici\'on, $\epsilon$ es la constante de permitividad del medio, $q_\gamma$ es la carga correspondiente a la especie m\'ovil $\gamma$, $q_\tau$ es la carga que adquieren los segmentos titulables del adsorbato. Finalmente $q_{MAA}$ es la carga que adquiere el segmento de $MAA$ al desprotonarse.
+\noindent en donde $\psi(z)$ es el potencial electrost\'atico dependiente de la posici\'on, $\epsilon$ es la constante de permitividad del medio, $q_\gamma$ es la carga correspondiente a la especie m\'ovil $\gamma$, $q_\tau$ es la carga que adquieren los segmentos titulables del adsorbato. Finalmente $q_{MAA}$ es la carga que adquiere el segmento de MAA al desprotonarse.
 
 
 En este contexto, la densidad de carga media es:
@@ -205,12 +205,12 @@ La contribuci\'on siguiente en la energ\'ia libre viene dada por la repulsi\'on 
 	\end{aligned}
 	\label{eq:film:constraint}
 \end{align}
-\noindent en donde $v_\gamma$ , $v_\lambda$ y $v_{MAA}$ son los vol\'umenes moleculares de los segmentos $\gamma$ de las especies libres, $\lambda$  en el adsorbato y los segmentos de $MAA$ del pol\'imero respectivamente.
-$\left<\rho_{ads,\lambda}(z)\right>$ es definido de la misma forma que en la ecu.  \ref{eq:film:segments_pro_si}.
+\noindent en donde $v_\gamma$ , $v_\lambda$ y $v_{MAA}$ son los vol\'umenes moleculares de los segmentos $\gamma$ de las especies libres, $\lambda$  en el adsorbato y los segmentos de MAA del pol\'imero respectivamente.
+$\left<\rho_{ads,\lambda}(z)\right>$ es definido de la misma forma que en la ecuaci\'on  \ref{eq:film:segments_pro_si}.
 Cabe destacar que el sub\'indice $\lambda$ considera a todos los segmentos del adsorbato, no solo aquellos titulables, es decir $ \{\tau \}  \in \{\lambda \}$.
 
 %%%%%%%%%%%%%%%
-La energ\'ia proveniente de las interacciones de Van der Waals se expresa en el t\'ermino $U_{VdW}$. En este trabajo se ha considerado que todos los segmentos del sistema poseen un car\'acter hidrofilico. Es decir la interacci\'on entre cada par de segmentos es similar a su interacci\'on con las mol\'eculas de agua. Como resultado la energ\'ia de interacci\'on de $VdW$ se considera una constante aditiva a la energ\'ia libre, por lo cual puede ser ignorada. En el cap\'itulo \ref{Chapter-geles} mostraremos un ejemplo en donde las interacciones de $VdW$ son tenidas en cuenta y su efecto es considerable . 
+La energ\'ia proveniente de las interacciones de Van der Waals se expresa en el t\'ermino $U_{VdW}$. En este trabajo se ha considerado que todos los segmentos del sistema poseen un car\'acter hidrof\'ilico. Es decir la interacci\'on entre cada par de segmentos es similar a su interacci\'on con las mol\'eculas de agua. Como resultado la energ\'ia de interacci\'on de $VdW$ se considera una constante aditiva a la energ\'ia libre, por lo cual puede ser ignorada. En el cap\'itulo \ref{Chapter-geles} mostraremos un ejemplo en donde las interacciones de $VdW$ son tenidas en cuenta y su efecto es considerable . 
 
 En este punto la energ\'ia libre, ecuaci\'on \ref{eq:film:libre-film}, se puede escribir como una funcional de la probabilidad de distribuci\'on de segmentos de nuestra red polim\'erica, las densidades locales de cada una de las especies libres, incluidas la densidad de conformaciones de la droga y/o polimamina, los grados de protonaci\'on/disociaci\'on y el potencial electrost\'atico local. Es decir:
 
@@ -314,14 +314,14 @@ Obteni\'endose:
 
 En esta expresi\'on se ve la influencia de los potenciales qu\'imicos de las especies libres,  $\mu_\gamma$, los cuales  deben estar en equilibrio con el bulk de la soluci\'on. Las actividades qu\'imicas est\'an completamente determinadas por la composici\'on (pH, concentraci\'on salina) del seno de la soluci\'on.
  
-Luego de su correspondiente optimizaci\'on el grado de disociaci\'on de los segmentos de $MAA$ viene dado por:
+Luego de su correspondiente optimizaci\'on el grado de disociaci\'on de los segmentos de MAA viene dado por:
 
 \begin{align}
 	\frac{f(z)}{1-f(z)} = \frac{K^0_{a,MAA}}{a_{H^+}} \exp[-\beta q_{MAA}\psi(z)]
 	\label{eq:film:degree-film}
 \end{align}
 
-\noindent en donde la constante termodin\'amica del equilibrio \'acido-base para los segmentos de $MAA$ es:
+\noindent en donde la constante termodin\'amica del equilibrio \'acido-base para los segmentos de MAA es:
 
 \begin{align}
 	K_{a,MAA}^0 = \exp[-\beta\mu^0_{MAAH} -\beta\mu^0_{MAA^-} -\beta\mu^0_{H^+}]
@@ -394,8 +394,8 @@ En esta expresi\'on se ha redefinido el potencial qu\'imico est\'andar del adsor
 \noindent en donde se hace la distinci\'on si los segmentos son de naturaleza \'acida $\tau, a$ o b\'asica $\tau,b$:
 
 \begin{align}
-	\beta\tilde{\mu}^0_{ads} =  \beta \mu^0_{ads}  + \sum_{\tau,a} C_{n,\tau}\beta\mu^0_{\tau,d} 
-	+ \sum_{\tau,b} C_{n,\tau}\beta(\mu_{H^+} - \mu^0_{\tau,p})
+	\beta\tilde{\mu}^0_{ads} =  \beta \mu^0_{ads}  + \sum_{\tau,a} C_{n,\tau}\beta\mu^0_{\tau d} 
+	+ \sum_{\tau,b} C_{n,\tau}\beta(\mu_{H^+} - \mu^0_{\tau p})
 \end{align}
 
 
@@ -610,7 +610,7 @@ Con el esquema de pKa descrito anteriormente, la figura \ref{fig:film:model} mue
 			$Na^+$ & - & +1 & 0.033\\ 
 			$Cl^-$ & - & -1 & 0.033\\ \hline
 		\end{tabular}		
-		\caption{Modelo de grano grueso. Los valores de pKa asignados a las diferentes unidades de grano grueso se obtuvieron todos de la literatura \cite{agostinelli2010polyamines,casero2009recent,puchem}, y los vol\'umenes moleculares corresponden a los valores de Van der Waals. Valores entre paracentesis \footnotesize{()} indican la carga de las especies qu\'imicas ionizadas.}
+		\caption{Modelo de grano grueso. Los valores de pKa asignados a las diferentes unidades de grano grueso se obtuvieron todos de la literatura \cite{agostinelli2010polyamines,casero2009recent,puchem}, y los vol\'umenes moleculares corresponden a los valores de Van der Waals. Valores entre paracentesis () indican la carga de las especies qu\'imicas ionizadas.}
 		\label{table:CG}
 	\end{centering}
 \end{table}
@@ -641,8 +641,8 @@ Los resultados aqu\'i presentados se realizaron en colaboraci\'on con el grupo d
 Los films  de PMAA se obtuvieron mediante la t\'ecnica de Polimerizaci\'on Radical por Transferencia de \'Atomo (ATRP por sus siglas en ingl\'es ), que permite la polimerizaci\'on iniciada en la superficie.
 La s\'intesis completa de la pel\'icula de PMAA consta de tres pasos principales, como se representa en la figura \ref{fig:film:synthesis_scheme}. Estos pasos son los siguientes:
 1) Inmovilizaci\'on del iniciador de ATRP en los sustratos (portaobjetos de vidrio y obleas de silicio de un solo pulido).
-2)Procedimiento de ATRP utilizando ter-butil metacrilato (t-BMA) y N,N'-Metilenbisacrilamida (BIS) como agente de entrecruzante
-3)Hidr\'olisis de los films resultantes de ter-butil metacrilato entrecruzado con \'acido trifluoroac\'etico para obtener las pel\'iculas de PMAA.
+2) Procedimiento de ATRP utilizando ter-butil metacrilato (t-BMA) y N,N'-Metilenbisacrilamida (BIS) como agente de entrecruzante
+3) Hidr\'olisis de los films resultantes de ter-butil metacrilato entrecruzado con \'acido trifluoroac\'etico para obtener las pel\'iculas de PMAA.
 
 
 \emph{1) Inmovilizaci\'on del iniciador de ATRP en los sustratos.}
@@ -670,9 +670,9 @@ La s\'intesis completa de la pel\'icula de PMAA consta de tres pasos principales
 \subsection{Captura y liberaci\'on de doxorrubicina en presencia de poliaminas}
 
 
-La carga de doxorrubicina (Doxo, Aldrich 98.0-102.0\% en clorhidrato de doxorrubicina) se realiz\'o sumergiendo las pel\'iculas de PMAA en una soluci\'on de la droga al $10^{-2}$ M en agua ultrapura \textit{Milli-Q} ($18.2 M \Omega \, cm$) durante 24 horas en el refrigerador (ver figura \ref{fig:film:exp_doxo_scheme}). Se utilizaron las bandas de absorci\'on de Doxo en el rango de 450-550 nm para caracterizar su carga en el film utilizando un espectrofot\'ometro Lambda 35 de Perkin Elmer. Para ello, despu\'es de la carga, los sustratos se sumergieron durante unos segundos en agua ultrapura para eliminar las mol\'eculas adheridas a la superficie y se secaron con un flujo de N2. Finalmente, los sustratos se colocaron verticalmente en el camino \'optico del espectrofot\'ometro y se realizaron los an\'alisis, abarcando el rango de 200-800 nm, con una velocidad de escaneo de 480 nm/min y un ancho de ranura de 1 nm.
+La carga de doxorrubicina (Doxo, Aldrich 98.0-102.0\% en clorhidrato de doxorrubicina) se realiz\'o sumergiendo las pel\'iculas de PMAA en una soluci\'on de la droga al $10^{-2}$ M en agua ultrapura \textit{Milli-Q} ($18.2 M \Omega \, cm$) durante 24 horas en el refrigerador (ver figura \ref{fig:film:exp_doxo_scheme}). Se utilizaron las bandas de absorci\'on de Doxo en el rango de 450-550 nm para caracterizar su carga en el film utilizando un espectrofot\'ometro Lambda 35 de Perkin Elmer. Para ello, despu\'es de la carga, los sustratos se sumergieron durante unos segundos en agua ultrapura para eliminar las mol\'eculas adheridas a la superficie y se secaron con un flujo de $N_2$. Finalmente, los sustratos se colocaron verticalmente en el camino \'optico del espectrofot\'ometro y se realizaron los an\'alisis, abarcando el rango de 200-800 nm, con una velocidad de escaneo de 480 nm/min y un ancho de ranura de 1 nm.
 
-La liberaci\'on se realiz\'o sumergiendo los sustratos cargados en agua o en soluciones de espermidina (Aldrich$ >$ 99\%) o espermina (Aldrich $>$ 97\%), cada una al 2.8\% en peso/volumen (ver figura \ref{fig:film:exp_doxo_scheme}) en diferentes momentos. La liberaci\'on se sigui\'o de la misma manera que la carga. Estas soluciones de poliaminas se neutralizaron con hidr\'oxido de sodio al 0.1 M, lo que aument\'o la fuerza i\'onica desde el agua pura y llev\'o a un pH final de 7. Todos los experimentos se realizaron utilizando agua ultrapura \textit{Milli-Q}. La concentraci\'on de poliamina se eligi\'o para explorar un r\'egimen de saturaci\'on, equivalente al extremo de la regi\'on explorada en las predicciones te\'oricas (ver m\'as abajo). De esta manera, se pueden comparar cualitativamente las cantidades de carga de amina equivalentes.
+La liberaci\'on se realiz\'o sumergiendo los sustratos cargados en agua o en soluciones de espermidina (Aldrich$ >$ 99\%) o espermina (Aldrich $>$ 97\%), cada una al 2.8\% en peso/volumen (ver figura \ref{fig:film:exp_doxo_scheme}) en diferentes momentos. La liberaci\'on se sigui\'o de la misma manera que la carga. Estas soluciones de poliaminas se neutralizaron con hidr\'oxido de sodio al 0.1 M, lo que aument\'o la fuerza i\'onica desde el agua pura y llev\'o a un pH final de 7. Todos los experimentos se realizaron utilizando agua ultrapura \textit{Milli-Q}. La concentraci\'on de poliamina se eligi\'o para explorar un r\'egimen de saturaci\'on, equivalente al extremo de la regi\'on explorada en las predicciones te\'oricas (ver en secciones siguientes). De esta manera, se pueden comparar cualitativamente las cantidades de carga de amina equivalentes.
 
 %%%%%%%%%%%%%%%%%%
 
@@ -707,7 +707,7 @@ La expresi\'on dada por la ecuaci\'on \ref{eq:film:adsorption} describe la adsor
 	\centering
 	\includegraphics[width=0.99\textwidth]{Figures/graph-film/amines_ads.pdf}
 	\caption{Gr\'afico de la adsorci\'on, $\Gamma$, de espermina (A), espermidina (B) y putrescina (C) en funci\'on de su concentraci\'on en la soluci\'on bulk.
-		Las diversas curvas en cada panel corresponden a diferentes valores de pH (alrededor de $7$) y condiciones de sal fisiol\'ogica, $[NaCl]=100 \, mM$. Las regiones sombreadas indican el rango de concentraciones saludables de poliaminas \cite{Soda2011}.
+		Las diversas curvas en cada panel corresponden a diferentes valores de pH (alrededor de $7$) y condiciones de sal fisiol\'ogica, $[NaCl]=100$ mM. Las regiones sombreadas indican el rango de concentraciones saludables de poliaminas \cite{Soda2011}.
 		No hay doxorrubicina en estas soluciones.}
 	\label{fig:film:amines-ads}
 \end{figure}
@@ -715,9 +715,9 @@ La expresi\'on dada por la ecuaci\'on \ref{eq:film:adsorption} describe la adsor
 
 
 
-La figura  \ref{fig:film:amines-ads} muestra las isotermas de adsorci\'on para cada una de las poliaminas en funci\'on de su concentraci\'on en la soluci\'on en el bulk. Debido a que existen informes que indican que los alrededores de las c\'elulas tumorales son \'acidos \cite{vaupel1989blood,Tannock1989,Raghunand1999, rofstad2006acidic, schmaljohann2006thermo, Koltai2016}, se incluyen isotermas de adsorci\'on para diferentes valores de pH. Enfatizamos que el primer objetivo es investigar la capacidad de los hidrogeles de PMAA para secuestrar poliaminas en condiciones fisiol\'ogicas; luego, los resultados de la figura \ref{fig:film:amines-ads} corresponden a soluciones en ausencia de doxorrubicina y con $100 \, mM$ de $[NaCl]$. La adsorci\'on aumenta con la concentraci\'on creciente de poliaminas. %Esto indica que se alcanza un r\'egimen no saturado con la concentraci\'on explorada, como se puede ver f\'acilmente en las isotermas de absorci\'on.
+La figura  \ref{fig:film:amines-ads} muestra las isotermas de adsorci\'on para cada una de las poliaminas en funci\'on de su concentraci\'on en la soluci\'on en el bulk. Debido a que existen informes que indican que los alrededores de las c\'elulas tumorales son \'acidos \cite{vaupel1989blood,Tannock1989,Raghunand1999, rofstad2006acidic, schmaljohann2006thermo, Koltai2016}, se incluyen isotermas de adsorci\'on para diferentes valores de pH. Enfatizamos que el primer objetivo es investigar la capacidad de los hidrogeles de PMAA para secuestrar poliaminas en condiciones fisiol\'ogicas; luego, los resultados de la figura \ref{fig:film:amines-ads} corresponden a soluciones en ausencia de doxorrubicina y con $100$ mM de $[NaCl]$. La adsorci\'on aumenta con la concentraci\'on creciente de poliaminas. %Esto indica que se alcanza un r\'egimen no saturado con la concentraci\'on explorada, como se puede ver f\'acilmente en las isotermas de absorci\'on.
 
-En la cercania de las c\'elulas sanas, la concentraci\'on de poliaminas se encuentra en el rango de $10^{-4}$ a $10^{-3}\, M$, lo que puede aumentar en un orden de magnitud m\'as alrededor de los tumores \cite{Soda2011}. Los resultados de la figura \ref{fig:film:amines-ads} sugieren que los hidrogeles de PMAA pueden responder a estas condiciones capturando cantidades crecientes de aminas. En particular, la putrescina muestra un comportamiento aparentemente de encendido/apagado en torno a la transici\'on entre las concentraciones saludables a patol\'ogicas. Adem\'as, excepto para las soluciones m\'as \'acidas (pH 5), este comportamiento de adsorci\'on se mantiene para diferentes valores de pH en torno a las condiciones fisiol\'ogicas, lo que se\~nala  la capacidad del hidrogel para adaptarse a peque\~nos cambios de pH causados por c\'elulas da\~nadas.
+En la cercania de las c\'elulas sanas, la concentraci\'on de poliaminas se encuentra en el rango de $10^{-4}$ a $10^{-3}\, M$, lo que puede aumentar en un orden de magnitud m\'as alrededor de los tumores \cite{Soda2011}. Los resultados de la figura \ref{fig:film:amines-ads} sugieren que los hidrogeles de PMAA pueden responder a estas condiciones capturando cantidades crecientes de aminas. En particular, la putrescina muestra un comportamiento aparentemente de encendido/apagado en torno a la transici\'on entre las concentraciones saludables a patol\'ogicas. No hay adsorci\'on apreciable hasta concentraciones por arriba de $10^{-3}$ M. Adem\'as, excepto para las soluciones m\'as \'acidas (pH 5), este comportamiento de adsorci\'on se mantiene para diferentes valores de pH en torno a las condiciones fisiol\'ogicas, lo que se\~nala  la capacidad del hidrogel para adaptarse a peque\~nos cambios de pH causados por c\'elulas da\~nadas.
 
 Las poliaminas adsorbidas se distribuyen de manera m\'as o menos homog\'enea dentro de la pel\'icula de hidrogel. Sin embargo, esta distribuci\'on est\'a correlacionada con la densidad del pol\'imero: se encuentran concentraciones m\'as altas de poliamina en las regiones de fracci\'on de volumen localmente alta de PMAA. Por lo tanto, las poliaminas tienen una mayor probabilidad de encontrarse cerca de las intersecciones de la red, donde ocurre la mayor densidad de pol\'imero. Un comportamiento similar ha sido predicho por  \citet{Sai2020} mediante simulaciones de din\'amica molecular, quienes sugirieron que los anf\'ifilos de crom\'oforos se autoensamblan en los nodos de hidrogeles polielectrol\'iticos entrecruzados qu\'imicamente.
 
@@ -732,20 +732,20 @@ En condiciones similares, el hidrogel adsorbe m\'as espermina que espermidina y 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.5\textwidth]{Figures/graph-film/doxo_load.pdf}
-	\caption{Mapa de color que muestra la adsorci\'on de la doxorrubicina (ver ecuaci\'on \ref{eq:film:adsorption}) en funci\'on de la composici\'on de la soluci\'on, es decir, el pH y $[NaCl]$; la concentraci\'on del f\'armaco en la soluci\'on es $[Doxo]=1 \, mM$.}
+	\caption{Mapa de color que muestra la adsorci\'on de la doxorrubicina (ver ecuaci\'on \ref{eq:film:adsorption}) en funci\'on de la composici\'on de la soluci\'on, es decir, el pH y $[NaCl]$; la concentraci\'on del f\'armaco en la soluci\'on es $[Doxo]=1$ mM.}
 	\label{fig:film:doxo-load}
 \end{figure}
 
 
 A continuaci\'on, consideramos la capacidad de las pel\'iculas de hidrogel de PMAA para incorporar doxorrubicina (Doxo). Los hidrogeles de cadenas de poli\'acido entrecruzadas son sensibles a cambios en la fuerza i\'onica de la soluci\'on o la concentraci\'on de sal \cite{zhang2000}. Este comportamiento puede no ser relevante en entornos biol\'ogicos con una concentraci\'on de iones altamente regulada. Sin embargo, controlar la concentraci\'on de sal es fundamental en el laboratorio para aumentar la carga del agente terap\'eutico dentro del material. Por lo tanto, hemos considerado la adsorci\'on de doxorrubicina en condiciones de laboratorio t\'ipicas, abarcando un amplio rango de pH y $[NaCl]$. 
 
-La figura  \ref{fig:film:doxo-load} muestra la adsorci\'on en exceso de Doxo, calculada utilizando la ecu. \ref{eq:film:adsorption}. Esta figura resalta el efecto de la disminuci\'on de la salinidad para aumentar la adsorci\'on del f\'armaco. Debido a que la carga de la doxorrubicina es $+1$ (a bajo pH), su adsorci\'on compite con la de los iones de sodio para neutralizar la carga del pol\'imero. Por lo tanto, las mejores condiciones para su incorporaci\'on en la pel\'icula corresponden a la reducci\'on de la disponibilidad de iones  de sal.
+La figura  \ref{fig:film:doxo-load} muestra la adsorci\'on en exceso de Doxo, calculada utilizando la ecuaci\'on \ref{eq:film:adsorption}. Esta figura resalta el efecto de la disminuci\'on de la salinidad para aumentar la adsorci\'on del f\'armaco. Debido a que la carga de la doxorrubicina es $+1$ (a bajo pH), su adsorci\'on compite con la de los iones de sodio para neutralizar la carga del pol\'imero. Por lo tanto, las mejores condiciones para su incorporaci\'on en la pel\'icula corresponden a la reducci\'on de la disponibilidad de iones  de sal.
 
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.45\textwidth]{Figures/graph-film/doxo-charge.png}
-	\caption{Gr\'afico que muestra el n\'umero de carga de la doxorrubicina dentro de la red de PMAA en funci\'on del pH, para diferentes concentraciones de sal (l\'ineas s\'olidas), as\'i como la carga promedio de la mol\'ecula en la soluci\'on bulk (l\'inea discontinua); $[Doxo]=1\, mM$. }
+	\caption{Gr\'afico que muestra el n\'umero de carga de la doxorrubicina dentro de la red de PMAA en funci\'on del pH, para diferentes concentraciones de sal (l\'ineas s\'olidas), as\'i como la carga promedio de la mol\'ecula en la soluci\'on bulk (l\'inea discontinua); $[Doxo]=1$ mM. }
 	\label{fig:film:doxo-charge}
 \end{figure}
 
@@ -755,7 +755,7 @@ En nuestro modelo, la doxorrubicina tiene su punto isoel\'ectrico (pI) a pH 7.8.
 	\centering
 	\includegraphics[width=0.99\textwidth]{Figures/graph-film/doxo_release-amines.pdf}
 	\caption{Gr\'afico de la adsorci\'on de la doxorrubicina (ver ecuaci\'on \ref{eq:film:adsorption}) en funci\'on del pH para soluciones que contienen espermina (A), espermidina (B) y putrescina (C).
-		En cada panel, las diversas curvas s\'olidas corresponden a soluciones con diferentes concentraciones de poliamina, mientras que la curva discontinua corresponde a una soluci\'on sin poliaminas. Todos los resultados corresponden a soluciones de $1  \, mM$ de Doxo y $100\, mM$ de $NaCl$.}
+		En cada panel, las diversas curvas s\'olidas corresponden a soluciones con diferentes concentraciones de poliamina, mientras que la curva discontinua corresponde a una soluci\'on sin poliaminas. Todos los resultados corresponden a soluciones de $1$  mM de Doxo y $100$ mM de $NaCl$.}
 	\label{fig:film:doxo-release}
 \end{figure}
 
@@ -764,11 +764,11 @@ En nuestro modelo, la doxorrubicina tiene su punto isoel\'ectrico (pI) a pH 7.8.
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.40\textwidth]{Figures/graph-film/DG67.pdf}
-	\caption{Gr\'afico que muestra la retenci\'on de Doxo, $\Gamma_{ret}$ (ver ecuaci\'on \ref{eq:film:doxo-DG}), en funci\'on de la concentraci\'on de aminas para soluciones con $100\, mM$ de $NaCl$ y un pH de 6 (panel superior) y pH de 7 (panel inferior). }
+	\caption{Gr\'afico que muestra la retenci\'on de Doxo, $\Gamma_{ret}$ (ver ecuaci\'on \ref{eq:film:doxo-DG}), en funci\'on de la concentraci\'on de aminas para soluciones con $100$ mM de $NaCl$ y un pH de 6 (panel superior) y pH de 7 (panel inferior). }
 	\label{fig:film:doxo-DG}
 \end{figure}
 
-A continuaci\'on, evaluamos si la doxorrubicina puede liberarse del hidrogel cuando el material es\'a en contacto con soluciones de poliaminas. La figura \ref{fig:film:doxo-release} muestra la adsorci\'on de Doxo en el film a partir de soluciones que contienen diferentes concentraciones de poliaminas. Como referencia, los gr\'aficos tambi\'en incluyen la adsorci\'on de doxorrubicina a partir de soluciones que no contienen poliaminas. Nuevamente, consideramos una concentraci\'on de sal fisiol\'ogica de $100\, mM$, pero ampliamos el rango de valores de pH para describir las condiciones que podr\'ian ocurrir alrededor de tejidos enfermos \'acidos. La adsorci\'on de doxorrubicina es una funci\'on no monot\'onica del pH de la soluci\'on, con un m\'aximo entre $6$ y $7$. Este comportamiento no monot\'onico  era de esperar, ya que la carga neta negativa del pol\'imero es una funci\'on creciente del pH de la soluci\'on (ver figura \ref{fig:film:model}), mientras que la carga positiva promedio de la Doxo disminuye hasta volverse negativa eventualmente a valores de pH lo suficientemente altos (ver figura  \ref{fig:film:doxo-charge}).
+A continuaci\'on, evaluamos si la doxorrubicina puede liberarse del hidrogel cuando el material est\'a en contacto con soluciones de poliaminas. La figura \ref{fig:film:doxo-release} muestra la adsorci\'on de Doxo en el film a partir de soluciones que contienen diferentes concentraciones de poliaminas. Como referencia, los gr\'aficos tambi\'en incluyen la adsorci\'on de doxorrubicina a partir de soluciones que no contienen poliaminas. Nuevamente, consideramos una concentraci\'on de sal fisiol\'ogica de $100$ mM, pero ampliamos el rango de valores de pH para describir las condiciones que podr\'ian ocurrir alrededor de tejidos enfermos \'acidos. La adsorci\'on de doxorrubicina es una funci\'on no monot\'onica del pH de la soluci\'on, con un m\'aximo entre $6$ y $7$. Este comportamiento no monot\'onico  era de esperar, ya que la carga neta negativa del pol\'imero es una funci\'on creciente del pH de la soluci\'on (ver figura \ref{fig:film:model}), mientras que la carga positiva promedio de la Doxo disminuye hasta volverse negativa eventualmente a valores de pH lo suficientemente altos (ver figura  \ref{fig:film:doxo-charge}).
 
 
 
@@ -851,7 +851,7 @@ Estos resultados predicen la capacidad de los hidrogeles de PMAA para capturar c
 
 
 
-Hemos considerado la carga de un f\'armaco contra el c\'ancer como la doxorrubicina en el hidrogel de PMAA. Las condiciones \'optimas de encapsulaci\'on en el laboratorio corresponden a una baja concentraci\'on de sal y un pH entre 6 y 7. Este resultado es contrario a la intuici\'on, ya que el punto isoelectroel\'ectrico de la doxorrubicina se encuentra alrededor de pH neutro. Este enfoque puede explicarse por la protonaci\'on del f\'armaco al adsorberse en el hidrogel en el medio de pH m\'as bajo.
+Hemos considerado la carga de un f\'armaco contra el c\'ancer como la doxorrubicina en el hidrogel de PMAA. Las condiciones \'optimas de encapsulaci\'on en el laboratorio corresponden a una baja concentraci\'on de sal y un pH entre 6 y 7. Este resultado es contrario a la intuici\'on, ya que el punto isoel\'ectrico de la doxorrubicina se encuentra alrededor de pH neutro. Este enfoque puede explicarse por la protonaci\'on del f\'armaco al adsorberse en el hidrogel en el medio de pH m\'as bajo.
 
 Cuando tanto la doxorrubicina como una poliamina est\'an presentes en la soluci\'on en contacto con el hidrogel, las poliaminas dificultan significativamente la adsorci\'on del f\'armaco (en comparaci\'on con las soluciones que contienen solo doxorrubicina). Este efecto se intensifica a medida que aumenta la concentraci\'on de poliaminas en la soluci\'on. La eficiencia para excluir el f\'armaco de la pel\'icula aumenta con la carga el\'ectrica  de la poliamina (es decir, el n\'umero de grupos amino); la espermina es la m\'as eficiente de las tres aminas consideradas para lograr esta respuesta. Como hemos demostrado, este comportamiento se puede interpretar como la liberaci\'on de doxorrubicina al capturar poliaminas.
 
