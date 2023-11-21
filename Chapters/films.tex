@@ -25,7 +25,7 @@ En este cap\'itulo, proponemos y exploramos tanto te\'orica como experimentalmen
 Los hidrogeles de cadenas polim\'ericas entrecruzadas actualmente se consideran para diversas aplicaciones en la investigaci\'on biom\'edica \cite{wang2019}.
 Por ejemplo, se han explorado biomateriales basados en hidrogeles sensibles al pH como veh\'iculos de administraci\'on oral de medicamentos que tienen el potencial de encapsular y transportar un agente terap\'eutico a trav\'es del tracto gastrointestinal, protegiendo la carga del medio \'acido del est\'omago y liber\'andola en el ambiente neutral del intestino delgado  \cite{lowman1999,zhao2019,qindeel2019,li2019}.
 Estos hidrogeles son sensibles a cambios de pH debido a que contienen un n\'umero significativo de grupos \'acidos d\'ebiles.
-En este contexto, consideraremos un film de hidrogel de \'acido poli(metacrilato) (PMAA).
+En este contexto, consideraremos un film de hidrogel de \'acido poli(metacr\'ilato) (PMAA).
 Los hidrogeles de PMAA son capaces de responder a diversos est\'imulos biol\'ogicos, incluyendo cambios en el pH fisiol\'ogico \cite{kanamala2016mechanisms}.
 Nuestra contribuci\'on aborda una pregunta fundamental: ?`Es posible aprovechar las propiedades sensibles al entorno de los hidrogeles de poli\'acido d\'ebil en el desarrollo de un biomaterial que pueda incorporar y atrapar poliaminas al mismo tiempo que libera un medicamento terap\'eutico en respuesta?
 
@@ -92,7 +92,7 @@ Considerando los aspectos anteriores es posible definir la energ\'ia libre de He
 $S_{conf,net}$ representa la entrop\'ia conformacional que resulta de la flexibilidad de la red polim\'erica, la cual viene dada por todas las conformaciones diferentes que puede asumir.
 $F_{qca,net}$, es la energ\'ia qu\'imica libre que describe el equilibrio entre las especies protonadas y desprotonadas de unidades \'acidas. Provenientes de las cadenas de PMAA que forman la red polim\'erica.
 De manera similar, $F_{qca,ads}$ describe la protonaci\'on de residuos titulables del adsorbato.
-$U_{elec}$ y $U_{ste}$ representan, respectivamente, las interacciones electrost\'aticas y las repulsiones est\'ericas.
+$U_{elec}$ y $U_{ste}$ representan, respectivamente, las energ\'ias dadas por las interacciones electrost\'aticas y las repulsiones est\'ericas.
 Las interacciones de Van der Waals son representadas en $U_{VdW}$.
 
 
@@ -163,7 +163,7 @@ El equilibrio qu\'imico de las unidades titulables del adsorbato  es considerado
 \noindent en donde $\left<\rho_{ads,\tau}(z)\right>$ representa la densidad local promedio del segmento protonable $\tau$ del adsorbato que se define como:
 
 \begin{align}
-	\left<\rho_{ads,\tau}(z)\right> = A\sum_\theta \int dz^\prime  \rho_{ads}(\theta,z^\prime)n_\tau(\theta,z^\prime, z)
+	\left<\rho_{ads,\tau}(z)\right> = A\sum_\theta \int^\infty_0 dz^\prime  \rho_{ads}(\theta,z^\prime)n_\tau(\theta,z^\prime, z)
 	\label{eq:film:segments_pro_si}
 \end{align}
 \noindent en donde $n_\tau(\theta,z^\prime, z)$ es el n\'umero de segmentos $\tau$ entre  $z$ y $z+ dz$ cuando el adsorbato se encuentra en la configuraci\'on $\theta$ y su centro de masa en la posici\'on $z^\prime$.
@@ -267,7 +267,7 @@ Se impone una restricci\'on f\'isica adicional a nuestro sistema fluido: las con
 \end{align}
 
 
-\noindent en donde $\pi(z)$ es un multiplicador local de Lagrange.  Esta funci\'on puede interpretarse como la presi\'on osm\'otica local. Finalmente, se obtiene un nuevo potencial termodin\'amico para nuestro sistema, el cual se escribe de forma exp\'icita como:
+\noindent en donde $\pi(z)$ es un multiplicador local de Lagrange.  Esta funci\'on puede interpretarse como la presi\'on osm\'otica local. Finalmente, se obtiene un nuevo potencial termodin\'amico para nuestro sistema, el cual se escribe de forma expl\'icita como:
  
 \begin{align}
 	\begin{aligned}
@@ -444,7 +444,7 @@ Las variables conocidas del sistema incluyen el volumen molecular y carga de cad
 
 Con esas consideraciones vemos que nuestras funciones desconocidas son  $\psi(z)$ y $\pi(z)$ las cuales pueden ser determinadas por sustituci\'on en la diferentes ecuaciones en las que interact\'uan: la densidad de las especies libres ecuaci\'on  \ref{eq:film:free-species}, los grados de disociaci\'on de los segmentos del film y de los  titulables del adsorbato ecuaciones (\ref{eq:film:degree-film} y \ref{eq:film:degree-protein}) respectivamente, la probabilidad de las conformaciones de la red polim\'erica ecuaci\'on \ref{eq:film:probabilidad} y la densidad local del adsorbato (ecuaci\'on \ref{eq:film:proteina}).
 
-Una vez obtenidos los potenciales $\pi(z)$ y $\psi(z)$ es posible derivar  cualquier cantidad termodin\'amica de inter\'es  a partir de la energ\'ia libre o haciendo uso de alguna expresi\'on explicita en base a las funciones definidas anteriormente.
+Una vez obtenidos los potenciales $\pi(z)$ y $\psi(z)$ es posible derivar  cualquier cantidad termodin\'amica de inter\'es  a partir de la energ\'ia libre o haciendo uso de alguna expresi\'on expl\'icita en base a las funciones definidas anteriormente.
 
 Por ejemplificar la fracci\'on de volumen local ocupada por un adsorbato puede ser calculada como:
 
@@ -582,7 +582,7 @@ La red polim\'erica est\'a compuesta por cadenas entrecruzadas de 50 segmentos d
 
 
 
-Con el esquema de pKa descrito anteriormente, la figura \ref{fig:film:model} muestra la carga el\'ectrica promedio de cada poliamina y la de la doxorubicina. El gr\'afico tambi\'en muestra el grado de carga de un mon\'omero de MAA aislado en una soluci\'on diluida. La fuerza impulsora para la adsorci\'on, de nuestros adsorbatos en el film,  son las atracciones electrost\'aticas entre la poliamina/droga y el MAA. La carga positiva de todos los adsorbatos disminuye con el aumento del pH. El pol\'imero incremente su carga el\'ectrica negativa  a medida que aumenta el pH. Por lo tanto, esperamos que la adsorci\'on sea una funci\'on no monot\'onica del pH de la soluci\'on. Adem\'as, el punto isoel\'ectrico de la doxorubicina se encuentra alrededor del pH neutro, lo que implica que el f\'armaco es neutro en cuanto a carga en condiciones fisiol\'ogicas y tiene carga negativa a valores de pH m\'as altos.
+Con el esquema de pKa descrito anteriormente, la figura \ref{fig:film:model} muestra la carga el\'ectrica promedio de cada poliamina y la de la doxorubicina. El gr\'afico tambi\'en muestra el grado de carga de un mon\'omero de MAA aislado en una soluci\'on diluida. La fuerza impulsora para la adsorci\'on, de nuestros adsorbatos en el film,  son las atracciones electrost\'aticas entre la poliamina/droga y el MAA. La carga positiva de todos los adsorbatos disminuye con el aumento del pH. El pol\'imero incrementa su carga el\'ectrica negativa  a medida que aumenta el pH. Por lo tanto, esperamos que la adsorci\'on sea una funci\'on no monot\'onica del pH de la soluci\'on. Adem\'as, el punto isoel\'ectrico de la doxorubicina se encuentra alrededor del pH neutro, lo que implica que el f\'armaco es neutro en cuanto a carga en condiciones fisiol\'ogicas y tiene carga negativa a valores de pH m\'as altos.
 
 
 
@@ -646,13 +646,13 @@ La s\'intesis completa de la pel\'icula de PMAA consta de tres pasos principales
 
 
 \emph{1) Inmovilizaci\'on del iniciador de ATRP en los sustratos.}
- Despu\'es de limpiar con agua jabonosa, etanol y acetona en un ba\~no ultras\'onico, los portaobjetos de vidrio y las obleas de silicio se modificaron mediante inmersi\'on en una soluci\'on al 2\% v/v de 2-bromo-2-metil-N-(3-(tri-etoxisilil)propil)propenamida (preparada seg\'un lo informado previamente en la referencia \cite{Yameen2008}) en etanol seco durante 1 hora a $30^\circ C$. Luego, los sustratos se lavaron con etanol y se curaron durante 2 horas en un horno $60^\circ C$ bajo vac\'io. El \'angulo de contacto medido (goni\'ometro de \'angulo de contacto Ramè-Hart modelo 290) utilizando agua fue de alrededor de $63.6^\circ \pm 0.1^\circ$ sin cambios con el tiempo, ligeramente menor que el del portaobjetos de vidrio ($64.7^\circ \pm 0.2^\circ$).% El conjunto completo de mediciones se muestra en el \SuppInfo (\SI).
+ Despu\'es de limpiar con agua jabonosa, etanol y acetona en un ba\~no ultras\'onico, los portaobjetos de vidrio y las obleas de silicio se modificaron mediante inmersi\'on en una soluci\'on al 2\% v/v de 2-bromo-2-metil-N-(3-(tri-etoxisilil)propil)propenamida (preparada seg\'un lo informado previamente en la referencia \cite{Yameen2008}) en etanol seco durante 1 hora a $30^\circ C$. Luego, los sustratos se lavaron con etanol y se curaron durante 2 horas en un horno $60^\circ C$ bajo vac\'io. El \'angulo de contacto medido (goni\'ometro de \'angulo de contacto Ramè-Hart modelo 290) utilizando agua fue de alrededor de 63.6$^\circ \pm $0.1$^\circ$ sin cambios con el tiempo, ligeramente menor que el del portaobjetos de vidrio (64.7$^\circ \pm$ 0.2$^\circ$).% El conjunto completo de mediciones se muestra en el \SuppInfo (\SI).
 
 
 
 
 \emph{2) Crecimiento de la pel\'icula de ter-butil metacrilato.}
- Las polimerizaciones de ATRP se llevaron a cabo de acuerdo con la referencia \cite{Brown2009}. Se prepar\'o una soluci\'on de t-BMA (15 ml, 92 mmol, Aldrich 98\%), BIS (422 mg, 2.76 mmol, Aldrich 99\%), CuBr$_2$ (4.1 mg, 0.018 mmol, Aldrich 99.999\%), y N,N,N,N,N-Pentametildietilentriamina (PMDETA, 0.12 ml, 0.55 mmol, Aldrich, 99\%) disuelta en DMSO (15 ml) y se desgasific\'o mediante burbujeo de N$_2$ durante una hora a temperatura ambiente. Luego, se agreg\'o CuBr (26.5 mg, 0.18 mmol, Aldrich 99.999\%) y la mezcla se dej\'o bajo N$_2$ durante 15 minutos. Simult\'aneamente, los sustratos con iniciador se sellaron en tubos Schlenk y se desgasificaron mediante ciclos de vac\'io/N$_2$. Luego, la mezcla de reacci\'on se inyect\'o en estos tubos Schlenk para cubrir completamente las muestras. La mezcla se dej\'o reposar durante 24 horas bajo N$_2$, y luego se retiraron los sustratos y se lavaron con DMSO, acetona y se secaron con N$_2$. El \'angulo de contacto medido fue de $89.3^\circ \pm 0.1^\circ$ sin cambios con el tiempo.
+ Las polimerizaciones de ATRP se llevaron a cabo de acuerdo con la referencia \cite{Brown2009}. Se prepar\'o una soluci\'on de t-BMA (15 ml, 92 mmol, Aldrich 98\%), BIS (422 mg, 2.76 mmol, Aldrich 99\%), CuBr$_2$ (4.1 mg, 0.018 mmol, Aldrich 99.999\%), y N,N,N,N,N-Pentametildietilentriamina (PMDETA, 0.12 ml, 0.55 mmol, Aldrich, 99\%) disuelta en DMSO (15 ml) y se desgasific\'o mediante burbujeo de N$_2$ durante una hora a temperatura ambiente. Luego, se agreg\'o CuBr (26.5 mg, 0.18 mmol, Aldrich 99.999\%) y la mezcla se dej\'o bajo N$_2$ durante 15 minutos. Simult\'aneamente, los sustratos con iniciador se sellaron en tubos Schlenk y se desgasificaron mediante ciclos de vac\'io/N$_2$. Luego, la mezcla de reacci\'on se inyect\'o en estos tubos Schlenk para cubrir completamente las muestras. La mezcla se dej\'o reposar durante 24 horas bajo N$_2$, y luego se retiraron los sustratos y se lavaron con DMSO, acetona y se secaron con N$_2$. El \'angulo de contacto medido fue de 89.3$^\circ \pm$ 0.1$^\circ$ sin cambios con el tiempo.
 
 \emph{3) Hidr\'olisis del ter-butil metacrilato entrecruzado obtenido.}
  Las pel\'iculas entrecruzadas de PtBMA se sumergieron en una soluci\'on de \'acido trifluoroac\'etico (Aldrich 99\%) en CH$_2$Cl$_2$ (50\% v/v) durante una hora a temperatura ambiente. Luego, los sustratos se lavaron varias veces con agua y se dejaron sumergidos en agua durante 10 minutos antes de secarlos con N$_2$. El \'angulo de contacto medido utilizando agua disminuy\'o con el tiempo, desde un valor inicial de alrededor de 69$^\circ$ hasta 63$^\circ$; este comportamiento indica una exitosa hidr\'olisis de la pel\'icula de PtBMA en una pel\'icula de PMAA m\'as hidrofílica, exponiendo grupos carbox\'ilicos, que se hinchan/hidratan con el tiempo.
@@ -749,7 +749,7 @@ La figura  \ref{fig:film:doxo-load} muestra la adsorci\'on en exceso de Doxo, ca
 	\label{fig:film:doxo-charge}
 \end{figure}
 
-En nuestro modelo, la doxorrubicina tiene su punto isoel\'ectrico (pI) a pH 7.8. Se puede observar que en  la figura  \ref{fig:film:doxo-load} se muestra que las condiciones \'optimas para la adsorci\'on impulsada electrost\'aticamente ocurre en valores de pH cercanos al pI. Este resultado se puede explicar considerando que el pH disminuye dentro del film, un efecto que se ha predicho para el interior de una variedad de sistemas polim\'ericos cargados, desde cadenas individuales, capas de pol\'imero injertado, polielectrolitos con estructura de estrella, hasta geles con diferentes topolog\'ias  \cite{Nap2006,Borisov2011,Longo2011,Polotsky2013,Murmiliuk2018}. Este efecto resulta en una regulaci\'on de la carga, especialmente por parte del grupo difen\'olico de la doxorrubicina (ver D2 en la fig. \ref{fig:film:model_poliamines} con pKa~$7.3$), que se protona al adsorberse. Dentro del film , las mol\'eculas de Doxo adsorbidas est\'an, en promedio, m\'as cargadas positivamente que en la soluci\'on; este comportamiento se describe en la figura \ref{fig:film:doxo-charge}. A un pH fijo, el efecto de reducir las concentraciones de sal de la soluci\'on es aumentar la carga promedio de las mol\'eculas adsorbidas. En particular, el pI aparente (en donde la carga del adsorbato es cero) de la Doxo adsorbida, puede aumentar varias unidades de esta manera.
+En nuestro modelo, la doxorrubicina tiene su punto isoel\'ectrico (pI) a pH 7.8. Se puede observar que en  la figura  \ref{fig:film:doxo-load} se muestra que las condiciones \'optimas para la adsorci\'on impulsada electrost\'aticamente ocurre en valores de pH cercanos al pI. Este resultado se puede explicar considerando que el pH disminuye dentro del film, un efecto que se ha predicho para el interior de una variedad de sistemas polim\'ericos cargados, desde cadenas individuales, capas de pol\'imero injertado, polielectrolitos con estructura de estrella, hasta geles con diferentes topolog\'ias  \cite{Nap2006,Borisov2011,Longo2011,Polotsky2013,Murmiliuk2018}. Este efecto resulta en una regulaci\'on de la carga, especialmente por parte del grupo difen\'olico de la doxorrubicina (ver D2 en la fig. \ref{fig:film:model_poliamines} con pKa~ 7.3), que se protona al adsorberse. Dentro del film , las mol\'eculas de Doxo adsorbidas est\'an, en promedio, m\'as cargadas positivamente que en la soluci\'on; este comportamiento se describe en la figura \ref{fig:film:doxo-charge}. A un pH fijo, el efecto de reducir las concentraciones de sal de la soluci\'on es aumentar la carga promedio de las mol\'eculas adsorbidas. En particular, el pI aparente (en donde la carga del adsorbato es cero) de la Doxo adsorbida, puede aumentar varias unidades de esta manera.
 
 \begin{figure}[!htb]
 	\centering
@@ -809,7 +809,7 @@ Para cuantificar a\'un m\'as c\'omo el f\'armaco se desorbe de la pel\'icula de 
 
 \noindent donde $\Gamma_{ret}$ es la retenci\'on de Doxo, $\Gamma_\text{Doxo}([Amina])$ es la adsorci\'on de doxorrubicina para soluciones de amina (ver curvas de l\'inea s\'olida en la figura \ref{fig:film:doxo-release}), y $\Gamma_\text{Doxo}^0=\Gamma_\text{Doxo}([Amina]=0)$ es la adsorci\'on en soluciones sin poliaminas (ver la figura \ref{fig:film:doxo-load} y las curvas de l\'inea discontinua en la figura \ref{fig:film:doxo-release}).
 
-La figura \ref{fig:film:doxo-DG} muestra la retenci\'on de Doxo en presencia de cada una de las poliaminas en condiciones fisiol\'ogicas y a un pH de 6. Si todo el f\'armaco se mantiene dentro de la pel\'icula para una soluci\'on de poliamina, entonces $\Gamma_{ret}\approx 1$; mientras que $\Gamma_{ret}\approx 0$ indica que todo el f\'armaco ha sido liberado. Los valores negativos de $\Gamma_{ret}$ pueden ocurrir porque $\Gamma_\text{Doxo}([Amina])$, que es una cantidad en exceso en el bulk, puede tomar valores negativos, lo que indica que en esas condiciones las aminas evitan la absorci\'on de Doxo en la pel\'icula.
+La figura \ref{fig:film:doxo-DG} muestra la retenci\'on de Doxo en presencia de cada una de las poliaminas en condiciones fisiol\'ogicas y a un pH de 6. Si todo el f\'armaco se mantiene dentro de la pel\'icula para una soluci\'on de poliamina, entonces $\Gamma_{ret}\approx 1$; mientras que $\Gamma_{ret}\approx 0$ indica que todo el f\'armaco ha sido liberado. Los valores negativos de $\Gamma_{ret}$ pueden ocurrir porque $\Gamma_\text{Doxo}([Amina])$, que es una cantidad en exceso en el bulk, puede tomar valores negativos, lo que indica que en esas condiciones las aminas evitan la adsorci\'on de Doxo en la pel\'icula.
 
 La retenci\'on de doxorrubicina en el hidrogel disminuye a medida que aumenta la concentraci\'on de poliamina. Esto es cierto para todas las aminas y para pH 7 y 6 (ver figura \ref{fig:film:doxo-DG}). Como se mencion\'o anteriormente, la espermina es la m\'as eficiente en promover la liberaci\'on de Doxo del hidrogel. Sin embargo, a altas concentraciones de amina, todas las poliaminas pueden impulsar la liberaci\'on de cantidades significativas de doxorrubicina.
 
