@@ -3,24 +3,28 @@
 	\section{Introducci\'on}
 	
 	Los nanogeles y microgeles son materiales que combinan las propiedades de los pol\'imeros y de los coloides. Son part\'iculas blandas, deformables y penetrables con una estructura formada por una red polim\'erica. En soluci\'on, pueden absorber el solvente y encontrarse en un estado swelling \cite{karg2019nanogels,perez2021thermodynamic,lyon2012polymer}
-	La flexibilidad y la capacidad de responder a est\'imulos externos como la temperatura, la presi\'on, el pH, la fuerza i\'onica y la presencia de diferentes analitos, los convierten en objetos de inter\'es en diferentes aplicaciones como biosensores \cite{zhang2012ultrathin,islam2014responsive}, ingenier\'ia de tejidos \cite{matricardi2013interpenetrating,van2011biopolymer}, regeneraci\'on \'osea \cite{bai2018bioactive}, materiales biomim\'eticos \cite{green2016mimicking,wu2010multifunctional}, entre muchas otras aplicaciones biom\'edicas.\cite{Daly2020}. 
+	La flexibilidad y la capacidad de responder a est\'imulos externos como la temperatura, la presi\'on, el pH, la fuerza i\'onica y la presencia de diferentes analitos, los convierten en objetos de inter\'es en diferentes aplicaciones como biosensores \cite{zhang2012ultrathin,islam2014responsive}, ingenier\'ia de tejidos \cite{matricardi2013interpenetrating,van2011biopolymer}, regeneraci\'on \'osea \cite{bai2018bioactive}, materiales biomim\'eticos \cite{green2016mimicking,wu2010multifunctional}, entre muchas otras aplicaciones biom\'edicas \cite{Daly2020}. 
 	
 	Los nanogeles compuestos por cadenas de pol\'imero que contienen segmentos \'acidos como \'acido acr\'ilico o metacr\'ilico (AA y MAA, respectivamente) se expanden o comprimen  en respuesta a cambios en el pH de la soluci\'on \cite{snowden1996colloidal,Zhou1998}.
-	De la misma forma, nanogles compuestos pol\'imeros termosensibles experimentan una transici\'on de fase volum\'etrica cuando se calientan por encima de una temperatura caracter\'istica \cite{Pelton1986,Pelton2000}.
+	De la misma forma, nanogeles compuestos pol\'imeros termosensibles experimentan una transici\'on de fase volum\'etrica cuando se calientan por encima de una temperatura caracter\'istica \cite{Pelton1986,Pelton2000}.
 	Este comportamiento se origina porque estos pol\'imeros son insolubles en agua por encima de cierta temperatura cr\'itica m\'inima  de soluci\'on (LCST, por sus siglas en ingl\'es) \cite{Kawaguchi2020}.
-	La incorporaci\'on de co-mon\'omeros termosensibles y con respuesta al pH permiten la obtenci\'on de nanogeles multiresponsivos los cuales son atractivos para el dise\~no de sistemas intelegintes que funciones entre tantas cosas como administradores de medicamentos \cite{Liu2017}.
-	
-	Los recientes avances significativos en su s\'intesis han abierto el acceso a sistemas con arquitecturas y composiciones complejas, lo que permite adaptar estas part\'iculas  con propiedades espec\'ificas. Simult\'aneamente, enfoques te\'oricos y de simulaci\'on de vanguardia ofrecen una comprensi\'on m\'as profunda del comportamiento y la estructura de nanogeles y microgeles bajo influencias externas y confinamiento. En su estado de hinchamiento, se representan como esferas suaves y compresibles, en equilibrio osm\'otico con la fase solvente y otros microgeles \cite{scheffold2020pathways}. 
-	Con estos modelos se ha encontrado que estos sistemas a concentraciones altas, las part\'iculas se empaquetan densamente y forman una fase cristalina o amorfa, con detalles que tienen un impacto significativo en las interacciones efectivas entre pares y en las propiedades macrosc\'opicas de la soluci\'on. Esta capacidad de comprimirse y formar diferentes fases de los nano/microgeles se convierte en un aspecto clave que influye en las interacciones a nivel macrosc\'opica \cite{scotti2022softness,scheffold2020pathways}.
-	La complejidad de la expansi\'on de estas part\'iculas, a su vez, genera una mayor complejidad en cualquier dispersi\'on compuesta por ellas \cite{lyon2012polymer}. Las soluciones de nanogeles muestran un comportamiento mucho m\'as rico que el de las esferas duras tradicionales y pueden ajustarse mediante cambios en las variables que afectan el tama\~no de las part\'iculas o la solvataci\'on. Adem\'as, tanto las caracter\'isticas coloidales como las polim\'ericas de los microgeles en dispersiones contribuyen a su fenomenolog\'ia. Estos dos aspectos complementarios de las suspensiones de microgeles ofrecenuna amplia gama de posibilidades.
-	%%%%%%%%%
-	
-	Estudios sobre soluciones coloidales muestran a los nano/microgeles como part\'iculas esf\'ericas que interact\'uan \'unicamente con un potencial de n\'ucleo duro, es decir, esferas duras \cite{karg2019nanogels}. Encontrandose como variable termodin\'amica de relevanca la fracci\'on de volumen, lo que subraya la importancia de comprender y manipular estas interacciones en el dise\~no y aplicaci\'on de nanogeles y microgeles.
-	\citet{alziyadi2023osmotic} utlizaron simulaciones de din\'amica molecuar con una teor\'ia de Posisson-Boltzmann para estudiar microgeles cargados superficialmente, los cuales se expanden al aumentar la concentraci\'on de microgeles y la concentraci\'on de sal.% Este comportamiento es sensible a la distribución de carga fija dentro del gel de red polimérica y depende de las concentraciones a granel tanto de los microgeles como de los iones de sal.
-	
+	La incorporaci\'on de co-mon\'omeros termosensibles y con respuesta al pH permiten la obtenci\'on de nanogeles multiresponsivos los cuales son atractivos para el dise\~no de sistemas inteligentes que funciones en diferentes \'areas de la tecnolog\'ia \cite{plamper2017functional}..
 	
 	En este cap\'itulo mostramos un estudio sistematico de soluciones coloidales compuestos por nanogeles de poli-(N-isopropilacrialaminda). Para ello se har\'a uso de una metodolog\'ia basada en algoritmos MonteCarlos en las cuales se combinan potenciales de interacci\'on part\'icula-part\'icula  y un potencial termdin\'amico desarrollado en \cite{perez2021thermodynamic}. En en este potencial termodin\'amico \citet{perez2021thermodynamic} describen la qu\'imica y f\'isica detr\'as de todos los fen\'omenos de swelling de sus microgeles impulsada por el pH, la dependencia no mon\'otona del tama\~no de part\'icula con la concentraci\'on de sal y el colapso de la red al aumentar la temperatura por encima de una temperatura caracter\'istica de transici\'on.
 	Por otro lado los potenciales de Hertz-Yukawa consideran la naturaleza de los nanogeles, su capacidad de deformarse, moderado por el potencial de Hertz y adquirir carga el\'ectrica, regulado por el potencial de Yukawa.
+	
+	
+	Recientes avances en la s\'intesis han abierto el acceso a sistemas con arquitecturas y composiciones complejas, lo que permite adaptar estas part\'iculas  con propiedades espec\'ificas. 
+	Simult\'aneamente, enfoques te\'oricos y de simulaci\'on de vanguardia ofrecen una comprensi\'on m\'as profunda del comportamiento y la estructura de nanogeles y microgeles bajo influencias externas y confinamiento. 
+	Estudios te\'oricos sobre soluciones coloidales muestran a los nano/microgeles como part\'iculas esf\'ericas que interact\'uan \'unicamente con un potencial de n\'ucleo duro, es decir, esferas duras \cite{karg2019nanogels}. Encontrandose como variable termodin\'amica de relevanca la fracci\'on de volumen, lo que subraya la importancia de comprender y manipular estas interacciones en el dise\~no y aplicaci\'on de nanogeles y microgeles. Por otro lado
+	\citet{alziyadi2023osmotic} utlizaron simulaciones de din\'amica molecuar con una teor\'ia de Posisson-Boltzmann para estudiar microgeles cargados superficialmente. En estos sistemas se incluyeron potenciales que permiten la deformaci\'on de los microgeles.
+	En otros estudios, \cite{scotti2022softness,scheffold2020pathways}, se ha hecho \'enfasis en soluciones con concentraciones altas de microgeles, en las cuales  las part\'iculas se empaquetan densamente y forman una fase cristalina o amorfa. Esta capacidad de comprimirse y formar diferentes fases de los nano/microgeles se convierte en un aspecto clave que influye en las interacciones a nivel macrosc\'opica.
+	La complejidad de la respuesta a est\'imulo de estas part\'iculas, a su vez, genera una mayor complejidad en cualquier dispersi\'on compuesta por ellas \cite{lyon2012polymer}. Las soluciones de nanogeles muestran un comportamiento mucho m\'as rico que el de las esferas duras tradicionales y pueden ajustarse mediante cambios en las variables que afectan el tama\~no de las part\'iculas o la solvataci\'on. Adem\'as, tanto las caracter\'isticas coloidales como las polim\'ericas de los microgeles en dispersiones contribuyen a su fenomenolog\'ia. Estos dos aspectos complementarios de las suspensiones de microgeles ofrecen una amplia gama de posibilidades.
+	%%%%%%%%%
+	
+
+	
+	
 	
 	
 	
@@ -49,7 +53,7 @@
 	%
 	
 	
-	\noindent En donde $S_{mez}$ es la entrop\'ia de traslaci\'on (y mezcla) de las especies libres en la fase del microgel: mol\'eculas de agua ($w$), hidronio ($H_3O^+$) e iones de hidr\'oxido ($OH^-$), y cationes de sal ($+$) y aniones ($-$).
+	\noindent En donde $S_{mez}$ es la entrop\'ia de traslaci\'on (y mezcla) de las especies libres en la fase del nanogel: mol\'eculas de agua ($w$), hidronio ($H_3O^+$) e iones de hidr\'oxido ($OH^-$), y cationes de sal ($+$) y aniones ($-$).
 	Hemos considerado una sal monovalente, $KCl$,  completamente disociada en iones de potasio y cloruro.
 	
 	\begin{align}
@@ -79,8 +83,8 @@
 	\end{align}
 	
 	En donde $N_{seg}$ es el n\'umero total de segmentos en la red de pol\'imero y $n_{ch}$ es el n\'umero de segmentos por cadena de pol\'imero o \emph{longitud de cadena}.
-	La constante de elasticidad en esta energ\'ia es proporcional al cociente $\dfrac{N_{seg}}{n_{ch}}$, que representa el n\'umero total de cadenas de pol\'imero en el microgel.
-	El radio del microgel seco es $R_0$, lo que satisface:
+	La constante de elasticidad en esta energ\'ia es proporcional al cociente $\dfrac{N_{seg}}{n_{ch}}$, que representa el n\'umero total de cadenas de pol\'imero en el nanogel.
+	El radio del nanogel seco es $R_0$, lo que satisface:
 	
 	%
 	%
@@ -91,9 +95,9 @@
 	\end{align}
 	
 	
-	\noindent donde $V_0$ es el volumen de la part\'icula seca; $x_{MAA}$ y $x_{NIPAm}$ son la fracci\'on de los segmentos MAA y NIPAm en el microgel, respectivamente.
+	\noindent donde $V_0$ es el volumen de la part\'icula seca; $x_{MAA}$ y $x_{NIPAm}$ son la fracci\'on de los segmentos MAA y NIPAm en el nanogel, respectivamente.
 	Entonces, el n\'umero total de segmentos MAA es $x_{MAA}N_{seg}$ y el de unidades NIPAm es $x_{NIPAm}N_{seg}$, estos \'ultimos con un volumen $v_{NIPAm}$.
-	Los microgeles que consideramos aqu\'i satisfacen $x_{NIPAm}=1-x_{MAA}$.
+	Los nanogeles que consideramos aqu\'i satisfacen $x_{NIPAm}=1-x_{MAA}$.
 	
 	
 	$U_{elec}$ y $U_{ste}$ representan respectivamente las energ\'ias que resultan de las interacciones electrost\'aticas y las repulsiones est\'ericas.
@@ -103,7 +107,7 @@
 	\end{align}
 	
 	\noindent donde $q_\gamma$ y $q_{MAA}$ son la carga el\'ectrica de las moléculas $\gamma$ y de los segmentos de MAA, respectivamente.
-	El potencial electrost\'atico dentro de la fase de microgel es $\psi_{NG}$. Fuera de esta fase el potencial es nulo $\psi_s = 0$
+	El potencial electrost\'atico dentro de la fase de nanogel es $\psi_{NG}$. Fuera de esta fase el potencial es nulo $\psi_s = 0$
 	
 	Se impone una restricci\'on de electro-neutralidad del microgel, que puede expresarse como:
 	%
@@ -115,7 +119,7 @@
 		\label{eq:mc:charge-neutrality}
 	\end{align}
 	
-	Las interacciones est\'ericas se incorporan como una segunda restricci\'on al sistema, la cual consiste en que el volumen de la fase microgel est\'a completamente ocupado por los segmentos de la red y las especies qu\'imicas libres.
+	Las interacciones est\'ericas se incorporan como una segunda restricci\'on al sistema, la cual consiste en que el volumen de la fase nanogel est\'a completamente ocupado por los segmentos de la red y las especies qu\'imicas libres.
 	
 	%
 	\begin{align}
@@ -181,7 +185,7 @@
 	
 	Finalmente, la suma sobre  $\gamma$ expresa el equilibrio qu\'imico con la fase de soluci\'on, donde $\mu_\gamma$ y $N_\gamma$ son el potencial qu\'imico y el n\'umero de mol\'eculas de la especie $\gamma$, respectivamente.
 	%Aqu\'i, el subíndice $\gamma$ identifica  las especies qu\'imicas libres, $\gamma \in \left\{ w, H_3O^+, OH^-, +,- \right\}$.
-	Hay que tener en cuenta que $\Omega_{NG}$ es un semi-gran potencial porque la fase del nanocrogel puede intercambiar cada una de estas mol\'eculas con la fase de soluci\'on, mientras que la red de pol\'imero est\'a confinada dentro de la primera.
+	Hay que tener en cuenta que $\Omega_{NG}$ es un semi-gran potencial porque la fase del nanogel puede intercambiar cada una de estas mol\'eculas con la fase de soluci\'on, mientras que la red de pol\'imero est\'a confinada dentro de la primera.
 	
 	
 	\begin{align}
@@ -189,7 +193,7 @@
 		+ \beta\mu_{H^+}(1-f)\dfrac{\phi_{MAA}}{v_{MAA}}
 	\end{align}
 	
-	Esta contribuci\'on muestra el equilibrio qu\'imico entre el microgel y la fase de soluci\'on, donde el segundo t\'ermino en la derecha representa a los protones asociados a unidades de MAA;
+	Esta contribuci\'on muestra el equilibrio qu\'imico entre el nanogel y la fase de soluci\'on, donde el segundo t\'ermino en la derecha representa a los protones asociados a unidades de MAA;
 	a saber, $\mu_{H^+}\equiv\mu_{H_3O^+}$ se conjuga con el n\'umero total de protones,
 	
 	\begin{align}
@@ -256,7 +260,7 @@
 	Si se considera  un valor de  $R$, las \'unicas inc\'ognitas restantes para determinar $\Omega_{NG}(R)$ son la presi\'on osm\'otica, $\pi_{NG}$ y el potencial electrost\'atico, $\psi_{NG}$.
 	Estas dos cantidades se pueden calcular resolviendo num\'ericamente la incompresibilidad y la electro-neutralidad de la fase nanogel, ecuaci\'on \ref{eq:mc:packing} y ecuaci\'on \ref{eq:mc:charge-neutrality}, respectivamente.
 	Para resolver estas ecuaciones utilizamos un m\'etodo h\'ibrido de Powell sin jacobiano y un c\'odigo FORTRAN desarrollado en el grupo de investigaci\'on.
-	En resumen, es posible calcular la variaci\'on de  $\Omega_{NG}(R)$ en funci\'on del radio del nanogel $R$, y con ello calcular el valor del radio \'optimo del gel para unas condiciones dadas (pH, temperatura, concentraci\'on de sal).
+	En resumen, es posible calcular la variaci\'on de  $\Omega_{NG}(R)$ en funci\'on del radio del nanogel $R$, y con ello calcular el valor del radio \'optimo del nanogel para unas condiciones dadas (pH, temperatura, concentraci\'on de sal).
 	
 	Una descripci\'on m\'as detallada del calculo del potencial termodin\'amico intramolecular puede encontrarse en \cite{perez2021thermodynamic}
 	
@@ -439,7 +443,7 @@
 	En donde V corresponde al volumen de la caja de simulación, $N_p$ el n\'umero de part\'iculas de la soluci\'on y $r$ es un valor de referencia.
 	Para todas las simulaciones se ha considerado $r= 2D_0$, en donde $D_0$ es el di\'ametro de un nanogel seco. Es decir, solo se considera el volumen molecular de todos los segmentos que lo componen.
 	Con un n\'umero de part\'iculas y el valor de $r$ fijos, sabemos que un valor de $\zeta$ grande corresponde a un volumen m\'as peque\~no. Es decir, una soluci\'on m\'as concentrada.
-	De forma similar, para un $\zeta$ peque\'~no obtenemos una soluci\'on m\'as diluida.
+	De forma similar, para un $\zeta$ peque\~no obtenemos una soluci\'on m\'as diluida.
 	
 	\begin{figure}
 		\centering
@@ -450,7 +454,7 @@
 	
 	Se puede observar en la figura \ref{fig:mc:densidad-probabilidad} que a soluciones m\'as concentradas hay una mayor dispersi\'on en los tama\~nos de cada part\'icula. La cercan\'ia de las part\'iculas en estas soluciones permite que interact\'uen m\'as y haya en juego una mayor variabilidad de tama\~nos que logren minimizar la energ\'a del sistema.
 	Para las soluciones diluidas, $\zeta =$ 0.01, los nanogeles tienden a estabilizarse a un \'unico valor de radio. La baja probabilidad de interacción entre part\'iculas resulta en un sistema aislado y, por tanto, la fluctuaci\'on en su volumen ser\'a menor.
-	Tambi\'en en esta soluci\'on m\'as diluida vemos que el m\'aximo de la distribuci\'on tienda al radio de m\'inima energ\'ia dado en la curva \ref{fig:energy-intra} a concentración de 1 mM en  $[KCl]$. Es decir, se tiende a un sistema aislado.
+	Tambi\'en en esta soluci\'on m\'as diluida vemos que el m\'aximo de la distribuci\'on tienda al radio de m\'inima energ\'ia dado en la curva \ref{fig:mc:energy-intra} a concentración de 1 mM en  $[KCl]$. Es decir, se tiende a un sistema aislado.
 	
 	%%%%%%%
 	En la tabla \ref{tabla:mc:R-optimos} se muestran los valores de $R$ correspondientes al pico m\'aximo de probabilidad. Se observa que a mayor concentraci\'on de nanogeles, su radio medio disminuye, y a medida que diluimos m\'as la soluci\'on, el radio medio se acerca al radio que minimiza el potencial termodin\'amico de un nanogel aislado.
@@ -526,14 +530,14 @@
 	
 	En la transici\'on de estos extremos de pH, vemos como el aumento del pH y, por tanto, el aumento de carga el\'etrica del nanogel, origina un aumento en el tama\~no. Este aumento es m\'as pronunciado a concentraciones diluidas, $\zeta = $0.01, en donde el nanogel expande su estructura para relajar las repulsiones internas con un menor costo energ\'etico por la interacci\'on con otro nanogel. En las soluciones m\'as concentradas, $\zeta = $1.0 y 0.5, el aumento de tama\~no es menor debido a la energ\'ia extra de la interacci\'on de a pares.
 	Otro efecto que se observa es el desplazamiento del punto de inflexi\'on de estas curvas a valores m\'as altos de pH.
-	Se asocia el punto de inflexi\'on con el pKa aparente, que se define como el pH en el cual se alcanza un $\angle f \rangle= $0.5. Ver figura \ref{fig:mc:fvspH}.
+	Se asocia el punto de inflexi\'on con el pKa aparente, que se define como el pH en el cual se alcanza un $\left< f\right> = $0.5. Ver figura \ref{fig:mc:fvspH}.
 	
 	Las part\'iculas, en un sistema aislado, al cargarse el\'ectricamente aumentan su tama\~no para disminuir sus repulsiones internas. En las soluciones, la presencia de m\'as nanogeles pone en juego un costo energ\'etico extra al aumento de tama\~no, la interacci\'on dada por los potenciales de Hertz y Yukawa. En consecuencia, los segmentos de MAA no se desprotonan (adquieren carga positiva). Para lograr la desprotonaci\'on se requiere mayor energ\'ia para desplazar el equilibrio qu\'imico \'acido-base. Lo que se observa en un desplazamiento a mayores valores de pH.
 	
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.45\linewidth]{Figures/graph-mc/fvspH.png}
-		\caption{Grado de carga medio, $<f>$, de la soluci\'on de nanogeles en funci\'on del pH del medio. Se consideran tren densidades dadas por el factor de empaquetamiento $\zeta =$ 1.0, 0.5 y 0.01. La temperatura del sistema es 25$^\circ$C y la concentrac\'on de sal 1 mM.}
+		\caption{Grado de carga medio, $\left<f\right>$, de la soluci\'on de nanogeles en funci\'on del pH del medio. Se consideran tren densidades dadas por el factor de empaquetamiento $\zeta =$ 1.0, 0.5 y 0.01. La temperatura del sistema es 25$^\circ$C y la concentrac\'on de sal 1 mM.}
 		\label{fig:mc:fvspH}
 	\end{figure}
 	
