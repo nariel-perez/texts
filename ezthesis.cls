@@ -47,7 +47,7 @@
 \DeclareOption{nofancyhdr}{\@fancyhdrfalse}
 \DeclareOption{nocolors}{\@colorsfalse}
 \DeclareOption{nographicx}{\@graphicxfalse}
-\DeclareOption{nonatbib}{\@natbibfalse}
+%\DeclareOption{nonatbib}{\@natbibfalse}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 
 \ExecuteOptions{final,twoside,letterpaper,onehalfspace,12pt,authoryear}
@@ -173,7 +173,7 @@
     \RequirePackage[sort&compress,round,authoryear]{natbib}
   \fi
   \if@spanish
-    \bibliographystyle{ezspanish}
+    \bibliographystyle{plainnat}%eezspanish
   \else
     \bibliographystyle{plainnat}
   \fi
