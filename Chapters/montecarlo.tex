@@ -1,4 +1,4 @@
-\chapter{Nanogel solution: thermodynamic theory} \label{cap:mc:soluciones}
+\chapter{Soluciones coloidales} \label{cap:mc:soluciones}
 	
 	\section{Introducci\'on}
 	
@@ -316,7 +316,17 @@
 	El modelado de las soluciones se realiz\'o utilizando el m\'etodo de Monte Carlo. Este se basa en la evaluaci\'on de diferentes estados o configuraciones del sistema de trabajo a trav\'es de la generaci\'on de n\'umeros aleatorios.
 	En cada paso de la simulaci\'on, un estado del sistema es tomado y se intenta cambiar por una nueva configuraci\'on. Es decir, se pondera la probabilidad de que el sistema cambie a este nuevo estado. La ponderaci\'on de este cambio se realiza a trav\'es de la energ\'ia correspondiente al estado inicial y el estado nuevo al que se desea acceder.
 	Este proceso se repite cierta cantidad de veces, este n\'umero es dependiente de la energ\'ia del sistema. Al finalizar, es posible obtener resultados estad\'isticamente significativos los cuales se utilizan para estimar propiedades macrosc\'opicas del sistema.
-	En este cap\'itulo, se trata de una soluci\'on de nanogeles en el cual un cambio de configuraci\'on consiste en el movimiento y aumento/disminuci\'on de tama\~no de una part\'icula seleccionado al azar.
+	En este cap\'itulo, se trata de una soluci\'on de nanogeles en el cual un cambio de configuraci\'on consiste en el movimiento y aumento/disminuci\'on de tama\~no de una part\'icula seleccionado al azar. Este esquema de trabajo puede visualizarse en la figura \ref{fig:mc:pasos_mc} en la cual se muestra un paso del algoritmo propuesto. Una part\'icula, en el estado \textbf{A}, de todas las presentes en la soluci\'on es cambiada de posici\'on, y en este caso, se disminuye su tama\~no, obteni\'endose el estado \textbf{B}.
+	
+	\begin{figure}[!htb]
+		\centering
+		\includegraphics[width=0.65\textwidth]{Figures/modelos/mc_model.pdf}
+		\caption{Esquema de un paso en el algoritmo de Metropolis-MonteCarlo. El paso de un estado \textbf{A} a uno \textbf{B} esta mediado por el cambio de energ\'ia entre ambas configuraciones. }
+		\label{fig:mc:pasos_mc}
+	\end{figure}
+	
+	
+	
 	
 	La probabilidad de aceptar o no dichos cambios en el sistema viene dado por:
 	
