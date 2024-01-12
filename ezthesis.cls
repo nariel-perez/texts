@@ -165,7 +165,7 @@
 \def\prefacesection#1{\clearpage\phantomsection
 	\addcontentsline{toc}{chapter}{#1}\chapter*{#1}\markboth{#1}{}}
 
-%% Bibliography - natbib
+% Bibliography - natbib
 \if@natbib
   \if@bibnumbers
     \RequirePackage[sort&compress,square,numbers]{natbib}
@@ -173,9 +173,9 @@
     \RequirePackage[sort&compress,round,authoryear]{natbib}
   \fi
   \if@spanish
-    \bibliographystyle{plainnat}%eezspanish
+    \bibliographystyle{unsrtnat}%eezspanish %decia plainnat 
   \else
-    \bibliographystyle{plainnat}
+    \bibliographystyle{unsrtnat}
   \fi
   \let\cite\citep
 \fi
