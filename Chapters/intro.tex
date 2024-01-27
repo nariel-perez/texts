@@ -64,9 +64,9 @@ En la figura \ref{fig:intro:acidos-aa-maa} se muestran ejemplos de mon\'omeros, 
 En esta tesis estudiaremos redes polim\'ericas compuestas con estos mon\'omeros, en particular se investiga si es posible utilizar sus hidrogeles polim\'ericos como dispositivos para aplicaciones biom\'edicas.  
 
 
-\begin{figure*}[!tb]
+\begin{figure*}[!htb]
 	\centering
-	\includegraphics[width=0.8\linewidth]{Figures/modelos/hidrogeles.pdf}
+	\includegraphics[width=0.75\linewidth]{Figures/modelos/hidrogeles.pdf}
 	\caption{Mol\'eculas  que conforman los diferentes mon\'omeros de las redes polim\'ericas que dan respuesta a los hidrogeles. Con respuesta al pH y concentraci\'on de sal: alilamina (base),  \'acido metacr\'ilico y \'acido acr\'ilico. con respuesta a la temperatura: N-isopropilacrilamida.
 		Estas mol\'eculas son las utilizadas para los hidrogeles usados en esta tesis. Modelado molecular hace referencia a la construcci\'on  de modelos que representen las propiedades moleculares de estos sistemas. En particular se muestra que cada uno de estos mon\'omeros se presenta como una esfera. En cada cap\'itulo se dar\'a detalle de como se da la construcci\'on de esto modelado. }
 	\label{fig:intro:acidos-aa-maa}
@@ -128,9 +128,7 @@ El objetivo general de esta tesis es \textbf{desarrollar una descripci\'on compr
 Este objetivo nos lleva a determinar si es posible utilizar hidrogeles polim\'ericos, ya sea en forma de films o micro/nanogeles, como dispositivos inteligentes para el desarrollo de nuevas tecnolog\'ias en biomedicina. En particular, el cap\'itulo \ref{Chapter-film} se dedica al estudio de films de hidrogeles polim\'ericos compuestos por mon\'omeros de \'acido metacr\'ilico, enfoc\'andose en la captura de poliaminas y la administraci\'on de drogas terap\'euticas, como la doxorubicina. Se analiza c\'omo interact\'uan estos films con diversas biomol\'eculas y/o drogas y c\'omo responden a cambios en el pH, concentraci\'on salina y concentraci\'on de adsorbatos, as\'i como los mecanismos subyacentes en la liberaci\'on de biomol\'eculas capturadas.
 Para abordar estas cuestiones, desarrollamos un m\'etodo mecano-estad\'istico que denominamos Teor\'ia Molecular (TM).
 
-En el cap\'itulo \ref{Chapter-geles}, se introduce otro m\'etodo mecano-estad'istico para estudiar microgeles de P(NIPAm-MAA) con respuesta a la temperatura.
-Planteandonos si estos  microgeles polim\'ericos que incorporan un pol\'imero sensible a la temperatura (PNIPAm)  mejora su eficacia como transportadores de medicamentos. En el cap\'itulo \ref{Chapter-esfericas} profundiza en la TM, investigando c\'omo la estructura interna de nanogeles de PMAA y/o PAH afecta la adsorci\'on de prote\'inas terap\'euticas.
-
+En el cap\'itulo \ref{Chapter-geles}, se deriva una teor\'ia termodin\'amica para estudiar el comportamiento de microgeles de P(NIPAm-MAA) en respuesta a cambios de pH, concentraci\'on de sal y temperatura, se evalu\'a la actuaci\'on de estos microgeles para encapsular y liberar medicamentos en relaci\'on a las propiedades del medio. En el cap\'itulo \ref{Chapter-esfericas} se extiende la TM para investigar c\'omo la distribuci\'on del m\'onomero con respuesta al pH condiciona la adsorci\'on de prote\'inas terap\'euticas en nanogeles de PMAA y PAH.
 Finalmente, el cap\'itulo \ref{chapter:mc:soluciones} aborda c\'omo los cambios en la concentraci\'on de nanogeles de P(NIPAm-MAA) afectan las propiedades de soluciones coloidales, en particular su respuesta al pH, concentraci\'on salina y temperatura. Para ello, integramos simulaciones de Monte Carlo con el modelo te\'orico desarrollado en el  cap\'itulo \ref{Chapter-geles}.
 
 
@@ -149,26 +147,25 @@ Las predicciones de esta teor\'ia han demostrado estar en excelente acuerdo cuan
 
 %%%%
 \textbf{Teor\'ia Molecular}\\
-Los objetivos planteados en la presente tesis se abordaran principalmente con el desarrollo de una teor\'ia molecular con la cual poder describir la termodin\'amica de los sistemas de inter\'es.
-Este enfoque te\'orico nos permite describir el tama\~no, la forma, la distribuci\'on de carga, el estado de protonaci\'on y la conformaci\'on de todas las especies moleculares que constituyen al sistema. Para nuestra red polim\'erica, que forma la estrucutura de nuestros films o micro/nanogeles, significa considerar el pKa de los mon\'omeros sensibles al pH (ya sea MAA o AH), las ecuaciones que describen la termosensibilidad del PNIPAm, as\'i como tambi\'en la posici\'on de cada uno de los mon\'omeros que componen la red para cada configuraci\'on de la red.\\
-Para tal fin se usa una descripci\'on molecular de grano grueso de las diferentes especies qu\'imicas que componen el sistema. 
-La TM se deriva al escribir la energía libre del sistema como un funcional de las densidades de las especies en soluci\'on, las conformaciones de la red polim\'erica y el potencial electrost\'atico.
+En base a los antecendes metodol\'ogicos, los objetivos planteados en la presente tesis se abordaran principalmente con el desarrollo de una teor\'ia molecular con la cual poder describir la termodin\'amica de los sistemas de inter\'es.
+Este enfoque te\'orico nos permite describir el tama\~no, la forma, la distribuci\'on de carga, el estado de protonaci\'on y la conformaci\'on de todas las especies moleculares que constituyen al sistema.  Para tal fin se usa una descripci\'on molecular de grano grueso de las diferentes especies qu\'imicas que componen el sistema. 
+
+La TM se deriva al escribir la energ\'ia libre del sistema como un funcional de las densidades de las especies en soluci\'on, las conformaciones de la red polim\'erica y el potencial electrost\'atico.
 %considerando expl\'icitamente los equilibrios \'acido-base.
-Conocer la energ\'ia libre total del sistema es la que nos permite describir la fisicoqu\'imica del mismo. La minimizaci\'on de esta energ\'ia respecto a las densidades que componen los funcionales del sistema permiten obtener el estado de menor energ\'ia que estabiliza al sistema.
+La minimizaci\'on de esta energ\'ia respecto a los funcionales del sistema permite describir la termodin\'amica del sistema.
 De esta manera, se puede estudiar c\'omo las variaciones en las condiciones de la soluci\'on: la fuerza i\'onica, el pH, la temperatura, concentraci\'on de alg\'un an\'alito de inter\'es, cambian las propiedades termodin\'amicas.
 
-A lo largo de esta tesis se mostrar\'a como la TM fue extendida, en primera instancia, para el estudio de film de hidrogel  de poli\'acido para la captura de poliaminas, las cuales, como se demostrar\'a, funcionan como est\'imulo para la liberaci\'on de drogas terape\'uticas, en particular la doxorubicina, cap\'itulo \ref{Chapter-film}.
+A lo largo de esta tesis se extiende la TM, en primera instancia, para el estudio de film de hidrogel  de poli\'acido para la captura de poliaminas, las cuales, como se demostrar\'a, funcionan como est\'imulo para la liberaci\'on de drogas terape\'uticas, en particular la doxorubicina (cap\'itulo \ref{Chapter-film}).
 El uso de estos film en este cap\'itulo tuvo la finalidad de comprender los desarrollos te\'oricos planteados para los sistemas mencionados en los antecedentes metodol\'ogicos, secci\'on \ref{sec:intro:metodologicos}.
-Comprendidas estas primeras bases, fue posible el estudio de la adsorci\'on de prote\'inas en nanogeles basados en PAH y PMAA, cap\'itulo \ref{Chapter-esfericas},  el cual necesit\'o de un nuevo desarrollo de teor\'ia molecular capaz de adaptarse a la nueva descripci\'on del sistema.  Cambios en las configuraciones del hidrogel, sistema de coordenadas, interacci\'on analito-red polim\'erica, entre otros.
-La complejidad de este nuevo esquema requiri\'o el uso de simulaciones por din\'amica molecuar (DM)  para la obtenci\'on de las configuraciones de los nanogeles  polim\'ericos.
+Comprendidas estas primeras bases, fue posible el estudio de la adsorci\'on de prote\'inas en nanogeles basados en PAH y PMAA, cap\'itulo \ref{Chapter-esfericas},  el cual necesit\'o de un nuevo desarrollo de teor\'ia molecular 
+La complejidad de este nuevo estudio requiri\'o el uso de simulaciones por din\'amica molecular (DM)  para la obtenci\'on de las configuraciones de la red polim\'erica  los nanogeles.
 
 %La teor\'ia molecular es un enfoque de funcional de la densidad en el cual los campos de interacci\'on se determinan  al considerar modelos detallados para cada uno de los componentes moleculares del sistema.
 %Obtenemos la termodin\'amica que describe el sistema, adem\'as de informaci\'on estructural. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\textbf{Modelo dos fases} \\
-
-Se han descrito y aplicado teor\'ias y simulaciones moleculares en varios niveles de resoluci\'on para investigar el comportamiento de los microgeles polim\'ericos sensibles a est\'imulos.
+\textbf{Modelo termodin\'amico dos fases} \\
+Se han descrito y aplicado teor\'ias y simulaciones moleculares en varios niveles de resoluci\'on para investigar el comportamiento de los hidrogeles polim\'ericos sensibles a est\'imulos.
 \citet{quesada2011gel} han simulado el comportamiento de geles compuestos por polielectrolitos y termosensibles utilizando simulaciones de Monte Carlo, logrando explicar el comportamiento de hinchamiento de estas part\'iculas. Por otro lado, \citet{ahualli2016coarse} emplearon simulaciones de grano grueso para el modelado de geles polielectrol\'iticos. Estos trabajos se han centrado principalmente en el hinchamiento y otras propiedades de hidrogeles que tienen una red de pol\'imero permanentemente cargada. Algunos autores han tambi\'en abordado el efecto de la temperatura y la calidad del solvente \cite{Jha2011, QuesadaPerez2013, moncho-jorda2016a, ahualli2016coarse, AdroherBenitez2017PCCP}.
 
 Recientemente, estudios mediante simulaciones cmputacionales han considerado la respuesta al pH de microgeles compuestos de pol\'imeros reguladores de carga \cite{Schroeder2015,Rud2017,Sean2018, Hofzumahaus2018,Lu2019}.
@@ -176,7 +173,7 @@ Sin embargo, solo unos pocos trabajos te\'oricos han investigado las propiedades
 
 \citet{polotsky2013collapse} basa su teor\'ia en equilibrios osm\'oticos, teniendo en cuenta expl\'icitamente el equilibrio de ionizaci\'on dentro de sus microgeles. Estos estudios predicen patrones complejos en la dependencia de las dimensiones de las part\'iculas de microgel, es decir, sus par\'ametros de control: tama\~no y composici\'on.
 
-En el cap\'itulo \ref{Chapter-geles} derivamos una teor\'ia de equilibrio entre dos fases y realizamos una investigaci\'on sistem\'atica del comportamiento termodin\'amico de microgeles compuestos por copol\'imeros aleatorios de NIPAm y un comon\'omero \'acido, MAA. Este modelo describe la qu\'imica-f\'isica detr\'as de diversos fen\'omenos: a saber la expanci\'on del microgel impulsada por el pH, la dependencia del tama\~no de part\'icula en la concentraci\'on de sal, y el efecto de los cambios en la temperatura.\\ La finalidad de esta metolog\'ia es obtener las condiciones, dado el pH, temperatura, concentraci\'on salina, y tama\~no del microgel, que minimizan la energ\'ia  del sistema. Esto se logra a  trav\'es de escribir un potencial termodin\'amico que incluya las contribuciones energ\'eticas que hacen al sistema: entrop\'ia de mezcla, energ\'ia libre qu\'imica de las especies protonables, energ\'ia asociada a interacciones electrost\'aticas y del tipo Van der Waals, as\'i  como tambi\'en por las repulsiones estericas.  
+En el cap\'itulo \ref{Chapter-geles} derivamos una teor\'ia de equilibrio entre dos fases y realizamos una investigaci\'on sistem\'atica del comportamiento termodin\'amico de microgeles compuestos por copol\'imeros aleatorios de NIPAm y un comon\'omero \'acido, MAA. Este modelo describe la qu\'imica-f\'isica detr\'as de diversos fen\'omenos: a saber la expanci\'on del microgel impulsada por el pH, la dependencia del tama\~no de part\'icula en la concentraci\'on de sal, y el efecto de los cambios en la temperatura.\\ La finalidad de esta metolog\'ia es obtener las condiciones, dado el pH, temperatura, concentraci\'on salina, y tama\~no del microgel, que minimizan la energ\'ia  del sistema. Esto se logra a  trav\'es de escribir un potencial termodin\'amico que incluya las diferentes contribuciones que hacen al sistema: entrop\'ia de mezcla, energ\'ia libre qu\'imica de las especies protonables, energ\'ia asociada a interacciones electrost\'aticas y del tipo Van der Waals, as\'i  como tambi\'en por las repulsiones estericas.  
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -184,9 +181,8 @@ En el cap\'itulo \ref{Chapter-geles} derivamos una teor\'ia de equilibrio entre 
 
 
 \textbf{Metropolis Monte Carlo}\\
-
 El m\'etodo de Metropolis Monte Carlo (MCMC) es un m\'etodo de muestreo estad\'istico que se utiliza para generar muestras de una distribuci\'on de probabilidad desconocida. El m\'etodo es utilizado en el cap\'itulo \ref{chapter:mc:soluciones} para el estudio de soluciones coloidales de nanogeles basados en P(NIPAm-MAA). En cada paso de estas simulaciones un nanogel de la soluci\'on es seleccionado al azar cambiandolo de posici\'on en la soluci\'on seguido de una expansi\'on/compresi\'on del mismo.
-La probabilidad de aceptar o no este paso es mediado por la energ\'ia total del paso: energ\'ia interna del nanogel y energ\'ia de interacci\'on con los dem\'as nanogeles presentes en la soluci\'on.
+La probabilidad de aceptar o no este paso es mediado por la energ\'ia total del paso: energ\'ia interna del nanogel y energ\'ia de interacci\'on con los dem\'as nanogeles presentes en la soluci\'on. La energ\'ia interna de estos nanogeles es la energ\'ia libre interna obtenida con la metodolog\'ia del modelo termodin\'amico de dos fases presentada en el cap\'itulo \ref{Chapter-geles}. 
 En este cap\'itulo se desarrolla el estudio de las propiedades coloidales de los soluciones de nanogeles y como se ven afectadas a consecuencia de la composici\'on de la soluci\'on, pH, concentraci\'on de sal o por la temperatura a la cual se encuentra la misma.
 
 
