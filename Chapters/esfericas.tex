@@ -439,7 +439,7 @@ Esta restricci\'on se satisface imponiendo las condiciones de contorno adecuadas
 
 Ahora todas las funciones que componen el potencial termodin\'amico $\Omega_{NG}$ se han expresado en t\'erminos del potencial electrost\'atico local $\psi(r)$, la presi\'on osm\'otica dependiente de la posici\'on $\pi(r)$ y algunas cantidades de entrada que incluyen las actividades de las especies libres.
 Dada la concentraci\'on de sal, el pH y la concentraci\'on de prote\'inas en la soluci\'on bulk, todas estas actividades se pueden calcular imponiendo la incompresibilidad y la neutralidad de carga a dicha soluci\'on y utilizando la condici\'on de equilibrio de la auto-disoluci\'on del agua.
-Entonces, las \'unicas inc\'ognitas restantes son $\psi(r)$ y $\pi(r)$ valor de $r$.
+Entonces, las \'unicas inc\'ognitas restantes son $\psi(r)$ y $\pi(r)$ para cada valor de $r$.
 Estas funciones locales se calculan resolviendo num\'ericamente las ecuaciones \ref{eq:esf:constraint} y \ref{eq:esf:poisson}.
  
 
@@ -521,7 +521,7 @@ Consideramos la interacci\'on del nanogeles de P(MAA-VA) o P(AH-VA) con tres pro
 Para describir estas mol\'eculas, utilizamos un modelo de grano grueso donde cada residuo de amino\'acido se representa mediante una \'unica part\'icula centrada en la posici\'on del carbono $\alpha$.
 La secuencia y posici\'on de todos los carbonos $\alpha$ se toman de la estructura cristalogr\'afica obtenida de la base de datos de prote\'inas \cite{berman2000protein}: 2B4Z para el citocromo c \cite{mirkin2008high}, IZNI para la insulina \cite{bentley1976structure} y 3RGK para la mioglobina \cite{hubbard1990x}.
 
-A cada part\'icula de grano grueso en este modelo se le asigna un volumen y un pKa (si la unidad es titulable) seg\'un el amino\'acido que representan; esto se resume en la Tabla \ref{table:Coarse-grain}.
+A cada part\'icula de grano grueso en este modelo se le asigna un volumen y un pKa (si la unidad es titulable) seg\'un el amino\'acido que representan; esto se muestra en la Tabla \ref{table:Coarse-grain}.
 Estos pKa se toman de datos experimentales y representan valores promedio sobre un gran n\'umero de prote\'inas \cite{grimsley2009summary}.
 En la mayor\'ia de los casos, el pKa de un residuo no se desv\'ia significativamente del valor promedio.
 Sin embargo, en casos espec\'ificos, algunos residuos muestran un pKa diferente.
