@@ -6,7 +6,7 @@
 	
 	Las soluciones coloidales de nanogeles polim\'ericos han ganado atenci\'on debido a sus propiedades y aplicaciones en varios campos. Los nanogeles son part\'iculas polim\'ericas reticuladas con dimensiones en el rango coloidal \cite{10.1002/pola.27653}. Estas part\'iculas combinan las propiedades de los pol\'imeros y de los coloides, como su capacidad de dispersar la luz, que les confiere propiedades \'opticas \'unicas o su capacidad de adsorber solvente en el que se encuentran, su estabilidad en medios biol\'ogicos, les permite ser utilizados en aplicaciones biom\'edicas \cite{lyon2012polymer}. Son part\'iculas blandas, deformables y permeables con una estructura formada por una red polim\'erica. \cite{lyon2012polymer}. En soluci\'on, pueden absorber el solvente y expandir su volumen significativamente hacia un estado de baja densidad de pol\'imero \cite{karg2019nanogels, perez2021thermodynamic}. La concentraci\'on de part\'iculas de estas soluciones posee influencia en su estabilidad,  modificando su solubilidad en agua y tama\~no \cite{10.3390/polym13234071}. 
 	
-	Estas soluciones son capaces de responder a diversos est\'imulos externos como la temperatura, la presi\'on, el pH, la fuerza i\'onica y la presencia de diferentes biomoleculas.
+	Estas soluciones son capaces de responder a diversos est\'imulos externos como la temperatura, la presi\'on, el pH, la fuerza i\'onica y la presencia de diferentes biomol\'eculas.
 	La complejidad de esta respuesta a est\'imulo de las soluciones, a su vez, genera una mayor complejidad en cualquier dispersi\'on compuesta por ellas \cite{lyon2012polymer}.
 	En este sentido, adem\'as de conocer como responden los nanogeles a diversos est\'imulos, es necesario estudiar c\'omo se ve modificada la respuesta de estas part\'iculas cuando forman soluciones coloidales. 
 	En particular la  capacidad de responder a diferentes est\'imulos externos viene mediada por la composici\'on de la red polim\'erica. Los nanogeles compuestos por cadenas de pol\'imero que contienen segmentos \'acidos como \'acido acr\'ilico o metacr\'ilico (AA y MAA, respectivamente) se expanden o comprimen en respuesta a cambios en el pH de la soluci\'on \cite{snowden1996colloidal, Zhou1998}. Nanogeles compuestos pol\'imeros termosensibles, por ejemplo PNIPAm, experimentan una transici\'on de fase volum\'etrica cuando se calientan por encima de una temperatura caracter\'istica \cite{Pelton1986, Pelton2000}. Este comportamiento se origina porque estos pol\'imeros son insolubles en agua por encima de cierta temperatura cr\'itica m\'inima de soluci\'on (LCST, por sus siglas en ingl\'es) \cite{Kawaguchi2020}.
@@ -270,22 +270,22 @@
 	Para resolver estas ecuaciones utilizamos un m\'etodo h\'ibrido de Powell sin jacobiano y un c\'odigo FORTRAN desarrollado en nuestro grupo de investigaci\'on.
 	En resumen, es posible calcular la variaci\'on de  $\Omega_{NG}(R)$ en funci\'on del radio del nanogel $R$, y encontrando su m\'inimo calcular el valor del radio \'optimo del nanogel para unas condiciones dadas (pH, temperatura, concentraci\'on de sal).
 	
-	Una descripci\'on m\'as detallada del calculo del potencial termodin\'amico intramolecular puede encontrarse en la referencia  \cite{perez2021thermodynamic} y en el cap\'itulo \ref{Chapter-geles}
+	Una descripci\'on m\'as detallada del c\'alculo del potencial termodin\'amico intramolecular puede encontrarse en la referencia  \cite{perez2021thermodynamic} y en el cap\'itulo \ref{Chapter-geles}
 	
 	\subsection{Energ\'ia intermolecular: Interacci\'on entre nanogeles.}\label{sec:mc:energia_intra}
 	
-	Para el estudio de las soluciones de nanogeles hemos considerado la energ\'ia atribuida a las interacciones entre los mismos. Este aporte aporte energ\'etico originado por la interacci\'on entre las part\'iculas que componen la soluci\'on viene dado por dos tipos de potenciales: el primero de estos toma en cuenta la capacidad de deformaci\'on de los nanogeles, potencial de Hertz, y el segundo que describe la interacción electrost\'atica mediada por la composici\'on de la soluci\'on, potencial de Yukawa.
+	Para el estudio de las soluciones de nanogeles hemos considerado la energ\'ia atribuida a las interacciones entre los mismos. Este aporte energ\'etico originado por la interacci\'on entre las part\'iculas que componen la soluci\'on viene dado por dos tipos de potenciales: el primero de estos toma en cuenta la capacidad de deformaci\'on de los nanogeles, potencial de Hertz, y el segundo que describe la interacci\'on electrost\'atica mediada por la composici\'on de la soluci\'on, potencial de Yukawa.
 	La suma de las energ\'ias dada por estos potenciales se define como $U_{inter}$.
 	\begin{align}
 		U_H + U_Y = U_{inter}
 		\label{eq:mc:u_inter}
 	\end{align}
-	\noindent en donde $U_H$ y $U_Y$ representan al potencial de Hertz y el el potencial de Yukawa respectivamente.
-	En las siguientes líneas describiremos a los dos potenciales considerados que componen a $U_{inter}$.\\
+	\noindent en donde $U_H$ y $U_Y$ representan al potencial de Hertz y el  potencial de Yukawa respectivamente.
+	En las siguientes l\'ineas describiremos a los dos potenciales considerados que componen a $U_{inter}$.\\
 	
 	\textbf{Potencial de Hertz} \\
 	
-	El primer potencial, $U_H$, cuantifica las interacciones el\'asticas efectivas entre cada par de part\'iculas. Es decir la energ\'ia origninada por la deformaci\'on de los nanogeles, cualidad intr\'inseca de nuestras part\'iculas.  El potencial de Hertz permite que los nanogeles puedan deformarse al momento de interaccionar entre ellos, en nuestro modelo implica un peque\~no solapamiento de las part\'iculas, lo cual hace al sistema m\'as flexible respecto a un modelo de esferas duras. 
+	El primer potencial, $U_H$, cuantifica las interacciones el\'asticas efectivas entre cada par de part\'iculas. Es decir la energ\'ia originada por la deformaci\'on de los nanogeles, cualidad intr\'inseca de nuestras part\'iculas.  El potencial de Hertz permite que los nanogeles puedan deformarse al momento de interaccionar entre ellos, en nuestro modelo implica un peque\~no solapamiento de las part\'iculas, lo cual hace al sistema m\'as flexible respecto a un modelo de esferas duras. 
 	
 	\begin{align}
 		\begin{aligned}
@@ -302,9 +302,9 @@
 	\end{align}
 	
 	\noindent en donde $v_i$ y $v_j$ es el radio de Poisson para cada nanogel.
-	El radio de Poisson es una medida de c\'omo se contrae un material cuando se estira. Se define como la raz\'on entre la deformación transversal y la deformación longitudinal, este generalmente oscila entre 0.3 y 0.5. Un valor de $v$ de 0.5 indica que el pol\'imero no experimenta cambios de volumen al ser estirado \cite{bertoldi2010negative}.
+	El radio de Poisson es una medida de c\'omo se contrae un material cuando se estira. Se define como la raz\'on entre la deformaci\'on transversal y la longitudinal, este generalmente oscila entre 0.3 y 0.5. Un valor de $v$ de 0.5 indica que el pol\'imero no experimenta cambios de volumen al ser estirado \cite{bertoldi2010negative}.
 	Por otro lado el m\'odulo de  Young $Y$  es un par\'ametro  que mide la rigidez de un material y se define como la raz\'on entre el esfuerzo y la deformaci\'on longitudinal cuando el material est\'a sometido a una carga \cite{ku2011review}.
-	La teor\'ia de escalado para geles polim\'ericos en buenos solventes \cite{de1979scaling,hu2012polymer} predice que este m\'odulo es proporcional a la temperatura, el tamaño y composici\'on del gel (n\'umero de segmentos, densidad de entrecruzante,etc).
+	La teor\'ia de escalado para geles polim\'ericos en buenos solventes \cite{de1979scaling,hu2012polymer} predice que este m\'odulo es proporcional a la temperatura, el tama\~no y composici\'on del gel (n\'umero de segmentos, densidad de entrecruzante,etc).
 	\begin{align}
 		Y \sim \frac{TN^*}{a^3}
 	\end{align}
@@ -314,7 +314,7 @@
 	\textbf{Potencial de Yukawa} \\
 	
 	El potencial de Yukawa describe las interacciones electrost\'aticas considerando la composici\'on del medio, en particular de la fuerza i\'onica.
-	El potencial de Yukawa fue previamente utilizados para el estudio de las propiedades estructurales de suspensiones de microgeles i\'onicos \citet{weyer2018concentration}, polim\'eros estrellas.\cite{denton2003counterion}. Para nuestro sistema el potencial de Yukawa cuantifica las repulsiones electrost\'aticas originadas por la carga adquirida de los nanogeles debido a la desprotonaci\'on  de los monomeros de MAA que compone a cada part\'icula.
+	El potencial de Yukawa fue previamente utilizados para el estudio de las propiedades estructurales de suspensiones de microgeles i\'onicos \citet{weyer2018concentration}, pol\'imeros estrellas.\cite{denton2003counterion}. Para nuestro sistema el potencial de Yukawa cuantifica las repulsiones electrost\'aticas originadas por la carga adquirida de los nanogeles debido a la desprotonaci\'on  de los mon\'omeros de MAA que compone a cada part\'icula.
 
 	
 	De forma expl\'icita se define el potencial de Yukawa en dos part\'iculas como: 
@@ -325,7 +325,7 @@
 	\end{align}
 	
 	\noindent En donde $q_i$ y $q_j$ son las cargas netas que poseen los nanogeles $i$ y $j$ respectivamente. $a_i$, $a_j$ y $r$ se definen de la misma forma que en la ecuaci\'on \ref{eq:mc:hertz_ij}. El valor $\kappa$ corresponde a la constante de apantallamiento de Debye, y $l_B$ a la constante de Bjrrum, siendo estas \'ultimas dos variables las que consideran las propiedades del medio en la que se encuentran inmersos los nanogeles. 
-	En particular, la constante de apantallamiento de Debye nos dice que una concentraci\'on alta de sal se traduce en un mayor apantallamiento de las cargas el\'ectricas interactuantes de los nanogeles.  Obteniendose interacciones de corto alcance.
+	En particular, la constante de apantallamiento de Debye nos dice que una concentraci\'on alta de sal se traduce en un mayor apantallamiento de las cargas el\'ectricas interactuantes de los nanogeles.  Obteni\'endose interacciones de corto alcance.
 	De forma contraria, a menores concentraciones de iones, las interacciones entre nanogeles se vuelven de largo alcance, debido al menor apantallamiento.\\
 	
 	\textbf{Energ\'ia intermolecular}
@@ -337,14 +337,14 @@
 		\label{eq:mc:HY-potential}
 	\end{align}
 	
-	\noindent en d\'onde el potencial de Hertz solo actua en casos de superposici\'on de part\'iculas $r \leq a_i + a_j$ y Yukawa para interacciones por fuera del solapamiento.
-	Finalmente se definen explicitamente $U_H$ y $U_Y$ como:
+	\noindent en d\'onde el potencial de Hertz solo act\'ua en casos de superposici\'on de part\'iculas $r \leq a_i + a_j$ y Yukawa para interacciones por fuera del solapamiento.
+	Finalmente se definen expl\'icitamente $U_H$ y $U_Y$ como:
 	\begin{align}
 		& U_H =\frac{1}{2} \sum^{Np}_{i,i \neq j} \beta u^H_{ij} \\
 		& U_Y = \frac{1}{2} \sum^{Np}_{i,i \neq j} \beta u^Y_{ij}
 	\end{align}
 	
-	\noindent siendo estos la suma sobre todos los pares de particulas $i$ $j$ que interactuan en la soluci\'on.
+	\noindent siendo estos la suma sobre todos los pares de part\'iculas $i$ $j$ que interact\'uan en la soluci\'on.
 	
 	
 	\subsection{Simulaciones Monte Carlo} \label{sec:mc:mc}
@@ -425,7 +425,7 @@ Finalmente para obtener la probabilidad de aceptar o no un paso de la simulaci\'
 		\Delta V = \sqrt{\langle V^2\rangle - \langle V \rangle^2}
 	\end{align}
 	Adem\'as, $k_B$ es la constante de Boltzmann, $T$ es la temperatura del sistema y $\kappa_T$ es la incompresibilidad isot\'ermica. Es una medida de la resistencia a la compresi\'on del sistema. A mayor $\kappa_T$, mayor rigidez.
-	Se define como la relación entre la variaci\'on de presi\'on y  volumen de un fluido a temperatura constante, considerando nuestro potencial termodin\'amico, $\Omega_{NG}$, se puede obtener la siguiente forma:
+	Se define como la relaci\'on entre la variaci\'on de presi\'on y  volumen de un fluido a temperatura constante, considerando nuestro potencial termodin\'amico, $\Omega_{NG}$, se puede obtener la siguiente forma:
 	
 	
 	\begin{align}
@@ -447,7 +447,7 @@ Finalmente para obtener la probabilidad de aceptar o no un paso de la simulaci\'
 	En base a estas consideraciones, se confeccion\'o la figura \ref{fig:mc:flut-pH}. En esta figura, se observa la fluctuaci\'on de un nanogel aislado en funci\'on del pH de la soluci\'on. Se presentan curvas correspondientes a tres condiciones salinas: 1, 10 y 100 mM en KCl. La temperatura es de 25$^\circ$C, condiciones en las cuales el PNIPAm posee un comportamiento hidrof\'ilico. En estas condiciones, las fluctuaciones mostradas en esta figura no se ven afectadas por la presencia de este co-mon\'omero.
 	En t\'erminos generales, se observa que la fluctuaci\'on del sistema a las diferentes condiciones presentadas es de muy baja magnitud, del orden de $10^{-3}$. Sin embargo, dentro de estos valores, se puede notar un aumento de la fluctuaci\'on al aumentar el pH hasta estabilizarse en valores de pH mayores a 6.
 	A bajos valores de pH, el nanogel no posee carga el\'ectrica, ya que los mon\'omeros de MAA que componen la red polim\'erica se encuentran protonados (estamos por debajo del pKa intr\'inseco del MAA). En estas condiciones, un cambio en el tama\~no del nanogel requiere cambios en la energ\'ia dada por la adsorci\'on de solvente y de los iones presentes en el sistema, adem\'as de la contribuci\'on el\'astica que conlleva el cambio de radio.
-	Con el aumento en el grado de carga de la red polim\'erica se esperar\'ia una entrada de contraiones. A valores por debajo del pka intr\'insico del MAA la red polim\'erica que compone al nanogel no posee carga el\'ectrica, en consecuencia las fluctuacionesson bajas. A pH alto se obtiene el mayor grado de carga posible, sin cambios en la carga las fluctuaciones de estabilizan.
+	Con el aumento en el grado de carga de la red polim\'erica se esperar\'ia una entrada de contraiones. A valores por debajo del pka intr\'inseco del MAA la red polim\'erica que compone al nanogel no posee carga el\'ectrica, en consecuencia las fluctuacionesson bajas. A pH alto se obtiene el mayor grado de carga posible, sin cambios en la carga las fluctuaciones de estabilizan.
 	
 	En particular, altas concentraciones salinas promueven una desprotonaci\'on de los segmentos de MAA para peque\~nos aumentos de pH. Esto se debe a que los iones presentes en la soluci\'on pueden apantallar la carga el\'ectrica adquirida por los grupos carbox\'ilicos de los mon\'omeros de MAA. Como resultado, la entrada de iones favorece la fluctuaci\'on en volumen del nanogel.
 	A medida que aumenta el pH, m\'as unidades de MAA adquieren carga el\'ectrica, por lo cual un cambio en su volumen se ve favorecido. Para minimizar las repulsiones el\'ectricas de la red polim\'erica, el nanogel puede expandirse o adsorber m\'as cantidad de contraiones presentes en la soluci\'on. Como resultado, se observa un aumento en la fluctuaci\'on del sistema, el cual se intensifica con el aumento de la concentraci\'on salina.
@@ -467,7 +467,7 @@ Finalmente para obtener la probabilidad de aceptar o no un paso de la simulaci\'
 	En la misma figura, \ref{fig:mc:fluct-T}, a valores de pH 4.65 y 7, los mon\'omeros de MAA se encuentran mayormente desprotonados, la red polim\'erica adquiere carga el\'ectrica. 
 	A temperatura baja las fluctuaciones son mayores que a pH 3 por efecto de la desprotonaci\'on de la red polim\'erica. En particular son mayores a pH 4.65 dado que es posible una regulaci\'on de carga el\'ectrica, a pH 7 todos los segmentos de MAA se encuentran desprotonados.
 	Con el aumento de temperatura hay un aumento de las fluctuaciones del sistema.
-	Esto ocurre hasta llegar a la temperatura caracter\'istica de transici\'on volum\'etrica del PNIPAm, al seguir aumentando la temperatura se orginia un colapso en la estructura del nanogel, siendo las interacciones entre los segmentos de NIPAm las predominantes y estabilizando un tama\~no espec\'ifico del nanogel.
+	Esto ocurre hasta llegar a la temperatura caracter\'istica de transici\'on volum\'etrica del PNIPAm, al seguir aumentando la temperatura se origina un colapso en la estructura del nanogel, siendo las interacciones entre los segmentos de NIPAm las predominantes y estabilizando un tama\~no espec\'ifico del nanogel.
 	Las fluctuaciones en este cambio de fase volum\'etrico son las mayores. Pasada la transici\'on las fluctuaciones decaen a los valores m\'as bajos posibles.
 	
 	
@@ -484,19 +484,19 @@ Finalmente para obtener la probabilidad de aceptar o no un paso de la simulaci\'
 	%%%%%%%%
 	El estudio de las fluctuaciones en volumen de estos sistemas aislados nos muestran la baja magnitud en las mismas. No hay una fuerza impulsora significativa para que los nanogeles cambien su volumen. Esto puede traducirse en que en una soluci\'on coloidal, diluida, la poblaci\'on de tama\~nos de nanogeles sea \'unica o con muy poca dispersi\'on. 
 	
-	En la siguiente secci\'on se mostraran los resultados de soluciones de nanogeles, desde concentraciones diluidas a una muy concentrada.
+	En la siguiente secci\'on se mostrar\'an los resultados de soluciones de nanogeles, desde concentraciones diluidas a una muy concentrada.
 	Se ver\'a cual es el rol de las interacciones entre las part\'iculas y si se mantiene o no la tendencia de las fluctuaciones en volumen encontradas en esta secci\'on.
 	
 	\section{Resultados: Soluciones}
 	
-	En esta secci\'on mostraremos los resultados obtenidos en el estudio sistem\'atico de tres soluciones de nanogeles compuestos por segmentos de N-isopropilamina y \'acido metacr\'ilico. La red polim\'erica, P(NIPAm-MAA), posee un 35\% de MAA. Para cada una de estas soluciones, se estudiaron su respuesta a cambios en el pH, la temperatura y la concentraci\'on salina. En cada caso, se comparar\'a con un nanogel a diluci\'on infinita, es decir, un sistema aislado. Las soluciones consideras corresponden a 0.10 mg/ml, 1.0 mg/ml y 5.0 mg/ml las cuales fueron seleccionadas en base a la fracción en volumen que ocupar\'ian al alcanzar el tama\~no esperado en un sistema aislado.
+	En esta secci\'on mostraremos los resultados obtenidos en el estudio sistem\'atico de tres soluciones de nanogeles compuestos por segmentos de N-isopropilamina y \'acido metacr\'ilico. La red polim\'erica, P(NIPAm-MAA), posee un 35\% de MAA. Para cada una de estas soluciones, se estudiaron su respuesta a cambios en el pH, la temperatura y la concentraci\'on salina. En cada caso, se comparar\'a con un nanogel a diluci\'on infinita, es decir, un sistema aislado. Las soluciones consideras corresponden a 0.10 mg/ml, 1.0 mg/ml y 5.0 mg/ml las cuales fueron seleccionadas en base a la fracci\'on en volumen que ocupar\'ian al alcanzar el tama\~no esperado en un sistema aislado.
 	
 	Como mencionamos en la secci\'on \ref{sec:mc:mc}, la metodolog\'ia utiliza simulaciones Monte Carlo. Estas se componen de $5\times 10^6$ pasos; cada paso de simulaci\'on se compone de una compresi\'on/expansi\'on y cambio de posici\'on espacial de una part\'icula que compone la soluci\'on. La caja de simulaci\'on est\'a contiene 100 part\'iculas. Los par\'ametros de construcci\'on de cada nanogel han sido especificados en la secci\'on \ref{sec:fluctuacion-volumen}: Nanogeles con $N_{seg} = 10^4$ segmentos y $n_{ch} = 100$ segmentos por cadena. Estas cantidades fueron elegidas en base a un estudio sistem\'atico de las fluctuaciones en volumen de los nanogeles. Estos resultados mostraron que, cuanto m\'as r\'igidos (es decir, cadenas m\'as cortas) son los nanogeles, menores son las fluctuaciones. %En este sentido, para observar efectos en la concentraci\'on de estas part\'iculas, es necesario poseer fluctuaciones lo m\'as grandes posibles.
 	
 	
 	
 	\subsection{Efecto de la concentraci\'on de nanogeles}
-	En la figura \ref{fig:mc:densidad-probabilidad} se muestra la densidad de probabilidad de distribuci\'on de tama\~nos de tres soluciones de nanogeles. Las condiciones del bulk de cada una de las soluciones corresponden a una temperatura de 25$^\circ$C y una concentraci\'on de sal de 1 mM en $[KCl]$, en cada panel se muestra un pH de estudio distinto, 3, 4.65, y 5 y 7 para los paneles A, B, C y D respectivamente. Estos valores son considerados por estar por debajo (pH 3) y por arriba (pH 5) del pKa intr\'inseco de los monomeros de MAA (pH 4.65) y condiciones de neutralidad (pH 7), que son condiciones cercanas al pH fisiol\'ogico. Las diferentes curvas dentro de cada panel representan una concentraci\'on diferente, 0.10, 1.0 y 5.0 mg/ml.
+	En la figura \ref{fig:mc:densidad-probabilidad} se muestra la densidad de probabilidad de distribuci\'on de tama\~nos de tres soluciones de nanogeles. Las condiciones del bulk de cada una de las soluciones corresponden a una temperatura de 25$^\circ$C y una concentraci\'on de sal de 1 mM en $[KCl]$, en cada panel se muestra un pH de estudio distinto, 3, 4.65, y 5 y 7 para los paneles A, B, C y D respectivamente. Estos valores son considerados por estar por debajo (pH 3) y por arriba (pH 5) del pKa intr\'inseco de los mon\'omeros de MAA (pH 4.65) y condiciones de neutralidad (pH 7), que son condiciones cercanas al pH fisiol\'ogico. Las diferentes curvas dentro de cada panel representan una concentraci\'on diferente, 0.10, 1.0 y 5.0 mg/ml.
 	
 	\begin{figure}
 		\centering
@@ -568,7 +568,7 @@ Finalmente para obtener la probabilidad de aceptar o no un paso de la simulaci\'
 	Respecto al efecto de la concentraci\'on de las soluciones, se puede observar que a medida que aumenta la concentraci\'on de nanogeles, menor es la respuesta de estas part\'iculas a cambios en la concentraci\'on salina. Esto \'ultimo se evidencia mejor en la figura \ref{fig:mc:reentrante}B a un pH de 7. Esto se debe a que en estas condiciones, el tama\~no y grado de carga de estas part\'iculas est\'an bien diferenciados, figura \ref{fig:mc:xvspH}A y B. La diferencia se puede atribuir al costo energ\'etico de las interacciones entre nanogeles, el cual es compensado con un menor tama\~no de los mismos. Una mayor vecindad de nanogeles, ver figura \ref{fig:mc:rdf}, hace que interact\'uen a\'un m\'as entre ellos, aumentando la energ\'ia intermolecular del sistema. Al igual que en la figura \ref{fig:mc:xvspH}, es la energ\'ia libre interna de los nanogeles la que aumenta como consecuencia de poder reducir la energ\'ia atribuida a los potenciales de Hertz y Yukawa. A medida que se diluye lo suficiente la soluci\'on, nos acercamos al comportamiento ideal, es decir, un nanogel aislado donde las part\'iculas pueden aumentar su tama\~no para reducir su energ\'ia libre interna sin mayor costo en las interacciones intermoleculares.
 	
 	
-	\textbf{Temperaratura}
+	\textbf{Temperatura}
 
 	A continuaci\'on haremos un an\'alisis sobre la respuesta de nuestras soluciones de nanogeles cuando el est\'imulo que se les aplica son cambios en la temperatura. En este sentido, en la figura \ref{fig:mc:dfs_energy} se muestra la energ\'ia libre interna de un nanogel aislado en funci\'on de su tama\~no y c\'omo es su respuesta con el cambio de la temperatura. En el panel A, con un pH del bulk de 4.65, podemos observar c\'omo al aumentar la temperatura se da la aparici\'on de un nuevo m\'inimo en la energ\'ia libre a valores m\'as peque\~nos de radio. Vemos un desplazamiento de un m\'inimo alrededor de los 60 nm hacia valores de 12 nm. Esto se debe al efecto de hidrofobicidad del PNIPAm que compone la red de las part\'iculas. Este m\'inimo global se va profundizando al aumentar la temperatura. Por lo cual se esperar\'ia un estado colapsado bien definido al aumentar la temperatura de las soluciones de part\'iculas consideradas en este estudio . Por otro lado, en el panel B se considera un pH del bulk de 7, a diferencia del panel A, vemos que la coexistencia de dos m\'inimos en la energ\'ia libre interna, uno correspondiente a bajos valores de radio, un estado colapsado del nanogel, y otro a valores mayores de radio. A temperaturas bajas, el m\'inimo energ\'etico correspondiente al estado colapsado es un m\'inimo local, pasando a ser uno global al aumentar mucho m\'as la temperatura. Esta coexistencia de estados se debe a que a pH 7 existe una buena proporci\'on de segmentos de MAA desprotonados, con lo cual las repulsiones electrost\'aticas entre estos segmentos favorecen, a bajas temperaturas, un estado swelling, mientras que las interacciones del PNIPAm prefieren una estructura colapsada.% En la siguiente figura se presentar\'an los resultados al considerar prioritarios los dos m\'inimos de la energ\'ia libre de los nanogeles.
 
@@ -590,7 +590,7 @@ Finalmente para obtener la probabilidad de aceptar o no un paso de la simulaci\'
 	\begin{figure}[!htb]
 		\centering
 		\includegraphics[width=0.99\linewidth]{Figures/graph-mc/rvsTs.pdf}
-		\caption{Tama\~no medio de la soluci\'on de nanogeles como funci\'on de la temperatura de la soluci\'on. pH 4.65, $[KCl]$ 1m M. Curvas s\'olidas corresponde a concentraciones $\rho =$ 0.10, 1.0 y 5.0 mg/ml de nanogel, a trazos se presenta un sistema con una part\'icula polim\'erica aislada.}
+		\caption{Tama\~no medio de la soluci\'on de nanogeles como funci\'on de la temperatura de la soluci\'on. pH 4.65, $[KCl]$ 1 mM. Curvas s\'olidas corresponde a concentraciones $\rho =$ 0.10, 1.0 y 5.0 mg/ml de nanogel, a trazos se presenta un sistema con una part\'icula polim\'erica aislada.}
 		\label{fig:mc:temperatura-r}
 	\end{figure}
 	
