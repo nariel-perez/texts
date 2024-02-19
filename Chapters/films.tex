@@ -122,7 +122,7 @@ De este modo la densidad local media del adsorbato  puede expresarse como:
 	\label{eq:film:ads-z-theta}
 \end{align}
 
-\noindent donde la notaci\'on $\langle \rangle$ indica promedio de ensamble sobre configuraciones del adsorbato.
+\noindent donde la notaci\'on $\left< \right> $ indica promedio de ensamble sobre configuraciones del adsorbato.
 La entrop\'ia conformacional que resulta de la flexibilidad de la red polim\'erica de nuestro film se representa en:
 
 \begin{equation}
@@ -205,12 +205,12 @@ La contribuci\'on siguiente en la energ\'ia libre viene dada por la repulsi\'on 
 	\end{aligned}
 	\label{eq:film:constraint}
 \end{align}
-\noindent en donde $v_\gamma$ , $v_\lambda$ y $v_{MAA}$ son los vol\'umenes moleculares de los segmentos $\gamma$ de las especies libres, $\lambda$  en el adsorbato y los segmentos de MAA del pol\'imero respectivamente.
+\noindent en donde $v_\gamma$ , $v_\lambda$ y $v_{MAA}$ son los vol\'umenes moleculares de los segmentos $\gamma$ de las especies libres, $\lambda$  en el adsorbato y los segmentos de MAA de la red polim\'erica respectivamente.
 $\left<\rho_{ads,\lambda}(z)\right>$ es definido de la misma forma que en la ecuaci\'on  \ref{eq:film:segments_pro_si}.
 Cabe destacar que el sub\'indice $\lambda$ considera a todos los segmentos del adsorbato, no solo aquellos titulables, es decir $ \{\tau \}  \in \{\lambda \}$.
 
 %%%%%%%%%%%%%%%
-La energ\'ia proveniente de las interacciones de Van der Waals se expresa en el t\'ermino $U_{VdW}$. En este trabajo se ha considerado que todos los segmentos del sistema poseen un car\'acter hidrof\'ilico. Es decir la interacci\'on entre cada par de segmentos es similar a su interacci\'on con las mol\'eculas de agua. Como resultado la energ\'ia de interacci\'on de $VdW$ se considera una constante aditiva a la energ\'ia libre, por lo cual puede ser ignorada. En el cap\'itulo \ref{Chapter-geles} mostraremos un ejemplo en donde las interacciones de $VdW$ son tenidas en cuenta y su efecto es considerable . 
+La energ\'ia proveniente de las interacciones de Van der Waals se expresa en el t\'ermino $U_{VdW}$. En este trabajo se ha considerado que todos los segmentos del sistema poseen un car\'acter hidrof\'ilico. Es decir la interacci\'on entre cada par de segmentos es similar a su interacci\'on con las mol\'eculas de agua. Como resultado la energ\'ia de interacci\'on de $VdW$ se considera una constante aditiva a la energ\'ia libre, por lo cual puede ser ignorada. En el cap\'itulo \ref{Chapter-geles} mostraremos un ejemplo en donde las interacciones de $VdW$ son tenidas en cuenta y su efecto es considerable. 
 
 En este punto la energ\'ia libre, ecuaci\'on \ref{eq:film:libre-film}, se puede escribir como una funcional de la probabilidad de distribuci\'on de segmentos de nuestra red polim\'erica, las densidades locales de cada una de las especies libres, incluidas la densidad de conformaciones de la droga y/o polimamina, los grados de protonaci\'on/disociaci\'on y el potencial electrost\'atico local. Es decir:
 
@@ -246,7 +246,7 @@ En este punto la energ\'ia libre, ecuaci\'on \ref{eq:film:libre-film}, se puede 
 \end{align}
 
 
-El film est\'a en equilibrio con el bulk de la soluci\'on. Esta soluci\'on posee una composici\'on bien definida (pH, concentraci\'on salina y de adsorbatos) adem\'as de una temperatura absoluta de trabajo. Lo que implica que el sistema est\'a en contacto con un reservorio de part\'iculas libres, lo cual fija los potenciales qu\'imicos de estas especies. Estos potenciales corresponden a las especies libres peque\~nas, $\mu_\gamma$ y del adsorbato, $\mu_{ads}$. Al considerar esta condici\'on de equilibrio qu\'imico el potencial termodin\'amico relevante en el gran potencial: 
+El film est\'a en equilibrio con el bulk de la soluci\'on. Esta soluci\'on posee una composici\'on bien definida (pH, concentraci\'on salina y de adsorbatos) adem\'as de una temperatura absoluta de trabajo. Lo que implica que el sistema est\'a en contacto con un reservorio de part\'iculas libres, lo cual fija los potenciales qu\'imicos de estas especies. Estos potenciales corresponden a las especies libres peque\~nas, $\mu_\gamma$ y del adsorbato, $\mu_{ads}$. Al considerar esta condici\'on de equilibrio qu\'imico el potencial termodin\'amico relevante es el gran potencial: 
 
 \begin{align}
 	\begin{aligned}
@@ -257,7 +257,7 @@ El film est\'a en equilibrio con el bulk de la soluci\'on. Esta soluci\'on posee
 		\label{eq:film:equil-qco}
 \end{align}
 
-\noindent $N_\gamma$ y $ N_{ads}$ son el n\'umero total de mol\'eculas de la especie libre $\gamma$ y adsorbato respectivamente. En la \'ultima linea de la expresi\'on, ecuaci\'on \ref{eq:film:equil-qco}, se tiene en cuenta los protones asociados a las especies con segmentos titulables: adsorbato y red polim\'erica respectivamente.
+\noindent $N_\gamma$ y $ N_{ads}$ son el n\'umero total de mol\'eculas de la especie libre $\gamma$ y adsorbato respectivamente. En la \'ultima l\'inea de la expresi\'on, ecuaci\'on \ref{eq:film:equil-qco}, se tiene en cuenta los protones asociados a las especies con segmentos titulables: adsorbato y red polim\'erica respectivamente.
 
 
 Se impone una restricci\'on f\'isica adicional a nuestro sistema fluido: las condiciones de equilibrio deben satisfacer la condici\'on de incompresibilidad del sistema: ecuaci\'on \ref{eq:film:constraint}.  Esta restricci\'on se incorpora como:
@@ -293,7 +293,7 @@ Se impone una restricci\'on f\'isica adicional a nuestro sistema fluido: las con
 \end{align}
  
 Obtenida la expresi\'on que define el potencial termodin\'amico del sistema es necesario encontrar las condiciones en las cuales se minimiza el mismo. Para ello se deriva este potencial respecto a los funcionales que lo componen.
-A continuaci\'on se mostrara la optimizaci\'on de este gran potencial respecto de los funcionales presentados en  ecuaci\'on \ref{eq:film:funcionales}.
+A continuaci\'on se mostrara la optimizaci\'on de este gran potencial respecto de los funcionales presentados en la  ecuaci\'on \ref{eq:film:funcionales}.
 
 En part\'icular la optimizaci\'on respecto a la densidad de las especies libres, $\rho_\gamma (z)$ resulta en:
 
@@ -438,7 +438,7 @@ Esta restricci\'on se satisface en la soluci\'on a la ecuaci\'on de Poisson al c
 
 Estas condiciones significan que el potencial electrost\'atico se desvanece a medida que nos alejamos de nuestro film polim\'erico.
 
-En este punto hemos mostrados las expresiones que optimizan a nuestro gran potencial, y c\'omo cada uno de estas funciones: $P(\alpha), \rho_\gamma(z),\rho_{ads}(z), f_\tau(z), f(z), \psi(z) $ a su vez  terminan siendo definidos por dos potenciales locales: Electrost\'atico $\psi(z)$ y Presi\'on osm\'otica $\pi(z)$, las actividades de las especies libres y algunas otras cantidades, que son variables conocidas del sistema.
+En este punto hemos mostrado las expresiones que optimizan a nuestro gran potencial, y c\'omo cada uno de estas funciones: $P(\alpha), \rho_\gamma(z),\rho_{ads}(z), f_\tau(z), f(z), \psi(z) $ a su vez  terminan siendo definidos por dos potenciales locales: Electrost\'atico $\psi(z)$ y Presi\'on osm\'otica $\pi(z)$, las actividades de las especies libres y algunas otras cantidades, que son variables conocidas del sistema.
 Con las condiciones del ba\~no de la soluci\'on: concentraci\'on de sal, el pH, y concentraci\'on de adsorbato es posible calcular las actividades de todas las especies libres considerando las incompresibilidad del sistema y su eletro-neutralidad, as\'i como tambi\'en la auto-disociaci\'on del agua.  
 Las variables conocidas del sistema incluyen el volumen molecular y carga de cada una de las especies libres presentes, las constantes de disociaci\'on de los segmentos titulables, as\'i como tambi\'en la distribuci\'on espacial de todos los segmentos para cada una de las conformaciones que tome el film y/o adsorbatos. Todas estas cantidades son provistas por un modelo molecular. Este modelo molecular ser\'a descrito m\'as adelante en la secci\'on \ref{sub:film:modelo-molecular}.
 
@@ -631,8 +631,8 @@ Con el esquema de pKa descrito anteriormente, la figura \ref{fig:film:model} mue
 \section{Validaci\'on experimental}
 
 
-Con el fin de respaldar la teor\'ia y el modelado molecular, se prepararon films de hidrogel polim\'ericos de PMAA y se llevaron a cabo experimentos de carga y liberaci\'on de doxorubicina en presencia de espermina y espermidina. %El \'angulo de contacto del film se midi\'o en cada paso para seguir el procedimiento de s\'intesis, presentados en las siguientes secciones.
-Los resultados aqu\'i presentados se realizaron en colaboraci\'on con el grupo de investigaci\'on.
+Con el fin de respaldar la teor\'ia y el modelado molecular, se prepararon films de hidrogel polim\'ericos de PMAA y se llevaron a cabo experimentos de carga y liberaci\'on de doxorubicina en presencia de espermina y espermidina.
+Los resultados experimentales, aqu\'i presentados, fueros realizados por colaboradores de nuestro grupo de investigaci\'on: \textit{Juan A. Allegretto, Victor Nosthas Aguiar, Juan M. Giussi}
 
 
 
