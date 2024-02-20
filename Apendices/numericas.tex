@@ -98,11 +98,11 @@ Y resultando:
 
 En resumen dadas las condiciones del bulk de la soluci\'on, o condiciones de laboratorio, compuestas por el pH, concentraci\'on de sal y adsorbatos, temperatura, restar\'ia conocer las cantidades $\psi(i_z)$ y $\pi(i_z)$ para cada capa $i_z$. Variables que pueden ser obtenidas al resolver en cada capa las ecuaciones \ref{eq:film:discreto-constraint} y \ref{eq:film:discreto-poisson}.
 De esta forma el n\'umero de ecuaciones totales a resolver es $2n_z$ (dos por cada capa). el n\'umero de t\'erminos de cada ecuaci\'on es dependiente de la cantidad de especies involucradas con sus respectivas conformaciones. 
-Este sistema de ecuaciones es resuelto usando el m\'etodo de Newton con Jacobiano libre, implementado en c\'odigos FORTRAN desarrollados en el grupo de trabajo.
+Este sistema de ecuaciones es resuelto usando el m\'etodo de Newton-Krilov con Jacobiano libre, implementado en c\'odigos FORTRAN desarrollados en el grupo de trabajo.
 
 
 
-\section{Nanogeles estructurados}
+\section{Teor\'ia molecular de nanogeles polim\'ericos: simetr\'ia esf\'erica}
 
 
 Para obtener resultados de la minimizaci\'on de la energ\'ia, las ecuaciones integro-diferenciales no lineales descritas en el cap\'itulo \ref{Chapter-esfericas} ( secciones \ref{sec:esf:tm} y \ref{sec:esf:bulk}) deben resolverse num\'ericamente. Para lograr esto, el volumen del sistema se divide en capas de espesor $\delta = $0.5. En esta divisi\'on se ha considerado una simetr\'ia radial 
@@ -182,4 +182,4 @@ Nuestras condiciones de contorno se reescriben:
 Definiendo  el pH, concentraci\'on de sal y prote\'ina. temperatura, es posible calcular las variables restantes  $\pi(i_r)$ y $\psi(i_r)$ para cada capal $i_r$.
 Variables que pueden ser obtenidas al resolver en cada capa las ecuaciones \ref{eq:esf:pi-ir} y \ref{eq:esf:poisson-ir} y \ref{eq:film:discreto-poisson}.
 De esta forma el n\'umero de ecuaciones totales a resolver es $2n_r$ (dos por cada capa). 
-Este sistema de ecuaciones es resuelto usando el m\'etodo de Newton con Jacobiano libre, implementado en c\'odigos FORTRAN desarrollados en el grupo de trabajo.
+Este sistema de ecuaciones es resuelto usando el m\'etodo de Newton-Krilov con Jacobiano libre, implementado en c\'odigos FORTRAN desarrollados en el grupo de trabajo.
