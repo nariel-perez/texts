@@ -280,7 +280,7 @@ Con todo esto la forma expl\'icita del potencial termodin\'amico es:
 \noindent En donde $\pi_{MG}$ es la presi\'on osm\'otica de la fase de microgel, introducido como un multiplicador de Lagrange para imponer la restricci\'on de incompresibilidad, ecuaci\'on \ref{eq:gel:packing}.
 
 
-Nuestro potencial termodin\'amico esta escrito expl\'icitamente en funci\'on de las densidades de todas las especies, el grado de carga del MAA y el radio del microgel, $\Omega_{MG}(R)\equiv\Omega_{MG}(\{\rho_\gamma\},f,R)$.
+Nuestro potencial termodin\'amico esta escrito expl\'icitamente en funci\'on de las densidades de todas las especies, el grado de carga del MAA y el radio del microgel, $\Omega_{MG}(R)\equiv\Omega_{MG}( \{\rho_\gamma\},f,R)$.
 Para obtener las expresiones de $\{\rho_\gamma\}$ y $f$ de tal forma que sean consistentes con el equilibrio termodin\'amico, minimizamos $\Omega_{MG}$ respecto a estas cantidades, y  sujeto a las restricciones ecuaciones  \ref{eq:gel:packing} y  \ref{eq:gel:charge-neutrality}; dicho procedimiento conduce a: 
 %
 %
@@ -420,7 +420,7 @@ Los resultados obtenidos de la minimizaci\'on de las curvas figura \ref{fig:gel:
     \hline
   \end{tabular}
  \caption{Minimizaci\'on de las curvas de la  figura \ref{fig:gel:graph-min}.
- 	Esta tabla resume los radios \'optimos de tres microgeles MG100 a diferentes temperaturas, pH 4.65 y $[KCl]=10^{-2}M$.}
+ 	Esta tabla resume los radios \'optimos de tres microgeles MG100 a diferentes temperaturas, pH 4.65 y [KCl] = $10^{-2}M$.}
 \label{table:gel:optimal-R} 
 \end{table}
 
@@ -438,8 +438,8 @@ al potencial termodin\'amico de la ecuaci\'on \ref{eq:gel:free-energy} se le adi
 \begin{align}
 \begin{aligned}
 \beta&\frac{\Omega_{MG}(R)}{V}= \cdots\\&+ \rho_a\left(\ln\left(\rho_a v_w\right) -1 + \beta\mu^0_a\right) \\
-& + \rho_a \sum_\tau n_\tau  \left[g_\tau(\ln g_\tau+ \beta\mu^0_{\tau,p})\right.\\
-&\qquad\left.+(1-g_\tau)(\ln (1-g_\tau)+\beta\mu^0_{\tau, d})\right] \\
+& + \rho_a \sum_\tau n_\tau  \left[g_\tau(\ln g_\tau+ \beta\mu^0_{\tau p})\right.\\
+&\qquad\left.+(1-g_\tau)(\ln (1-g_\tau)+\beta\mu^0_{\tau d})\right] \\
 & +  \left( \rho_a \sum_\tau n_\tau f_\tau q_\tau\right)\beta\psi_{MG}\\
 & -\rho_a\beta\mu_a
  -\beta\mu_{H^+} \rho_a \sum_\tau n_\tau g_\tau
@@ -452,10 +452,10 @@ donde $\rho_a$ es la densidad num\'erica del analito y $\mu_a^0$ su potencial qu
 Las siguientes dos l\'ineas describen el equilibrio \'acido-base de las unidades titulables del analito;
 el sub\'indice $\tau$ recorre dichas unidades moleculares que tienen un grado de protonaci\'on $g_\tau$ y un volumen $v_\tau$.
 El analito tiene $n_\tau$ de estos segmentos;
-$\mu^0_{\tau, p}$ y $\mu^0_{\tau,d}$ son el potencial qu\'imico est\'andar de las especies protonadas y desprotonadas, respectivamente, que se relacionan con la constante de disociaci\'on \'acida:
+$\mu^0_{\tau p}$ y $\mu^0_{\tau d}$ son el potencial qu\'imico est\'andar de las especies protonadas y desprotonadas, respectivamente, que se relacionan con la constante de disociaci\'on \'acida:
 %
 \begin{align}
-K^0_{a,\tau}= e^{\beta\mu^0_{\tau, p}-\beta\mu^0_{\tau,d}-\beta\mu^0_{H^+}}
+K^0_{a,\tau}= e^{\beta\mu^0_{\tau p}-\beta\mu^0_{\tau d}-\beta\mu^0_{H^+}}
 \end{align}
 %
 
@@ -478,8 +478,8 @@ Para la fase gel:
 		& + \frac{\phi_{MAA}}{v_{MAA}} \left[f(\ln f+ \beta\mu^0_{MAA^-})\right.\\
 		&\qquad\left.+(1-f)(\ln (1-f)+\beta\mu^0_{MAAH})\right] \\
 		%
-		& + \rho_a \sum_\tau n_\tau  \left[g_\tau(\ln g_\tau+ \beta\mu^0_{\tau,p})\right.\\
-		&\qquad\left.+(1-g_\tau)(\ln (1-g_\tau)+\beta\mu^0_{\tau,d})\right] \\
+		& + \rho_a \sum_\tau n_\tau  \left[g_\tau(\ln g_\tau+ \beta\mu^0_{\tau p})\right.\\
+		&\qquad\left.+(1-g_\tau)(\ln (1-g_\tau)+\beta\mu^0_{\tau d})\right] \\
 		%%
 		& + \dfrac{3}{2}\dfrac{N_{seg}}{n_{ch} V}\left[\left(\dfrac{R}{R_0}\right)^2 - \ln\dfrac{R}{R_0} -1\right] \\
 		%
