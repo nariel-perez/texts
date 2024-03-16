@@ -1,11 +1,13 @@
 \chapter{Resoluci\'on num\'erica: Teor\'ia Molecular}\label{sec:film:reso-numerica}
 
 
-\section{Films polim\'ericos}
+\section{Films polim\'ericos: simetr\'ia plana}
 
 La obtenci\'on de resultados a partir de la teor\'ia planteada en los cap\'itulos \ref{Chapter-film} y \ref{Chapter-esfericas} requiere la soluci\'on num\'erica de ecuaciones integro-diferenciales. Para tal prop\'osito es conveniente pasar de un sistema continuo a uno discreto. 
-La discretizaci\'on de nuestro modelo se realiza en capas de espesor $\delta$. 
+Todas las cantidades planteadas en este anexo son definidas en el cap\'itulo \ref{Chapter-film}, secci\'on \ref{sec:film-teoria}, siendo trabajas aqu\'i en un sistema discreto.
+La discretizaci\'on de nuestro problema se realiza en capas de espesor $\delta$. 
 En particular, para el cap\'itulo \ref{Chapter-film}, la suma sobre cada uno de estas capas reemplazan a las integrales a lo largo del eje $z$, esto se debe a la simetr\'ia sobre los ejes $x$ e $y$ que se ha utilizado para el desarrollo de la TM para hidrogeles de films polim\'ericos.
+
 
 Por ejemplificar este cambio, la ecuaci\'on de incompresibilidad expresada en ec. \ref{eq:film:constraint} es reescrita como:
 
@@ -19,7 +21,7 @@ Por ejemplificar este cambio, la ecuaci\'on de incompresibilidad expresada en ec
 
 Esta expresi\'on nos permite resolverla en cada una de las capas $i_z$, cuya posici\'on es descrita usando la coordenada $z_i = (i_z -0.5)\delta$, lo cual las ubica en el centro de cada capa. $i_z$ toma los valores de 1 a $n_z$, donde se toma a $n_z$ lo suficientemente grande para que las densidades de cada una de las especies involucradas, as\'i como tambi\'en el potencial electrost\'atico, converjan a sus valores en el ba\~no de la soluci\'on (el bulk de la soluci\'on).
 Es decir: $\rho_\gamma(n_z) = \rho^b_\gamma$, $\rho_{ads}(\theta,n_z) = \rho^b_{ads}(\theta)$ y $\psi(n_z) = \psi^b =0$.
-Para valores de $n_z \geq 500$ es posible obtener estas condiciones (dado que no son impuestas per se en la teor\'ia).
+Para valores de $n_z \geq 500$ es posible obtener estas condiciones.
 
 Reescribiendo las expresiones de los funcionales de la secci\'on \ref{sec:film-teoria}, obtenemos para la densidad discreta de las especies libres:
 
@@ -31,10 +33,10 @@ Reescribiendo las expresiones de los funcionales de la secci\'on \ref{sec:film-t
 El grado de disociaci\'on para los segmentos de MAA que componen la red polim\'erica de nuestro film, de la ecuaci\'on \ref{eq:film:degree-film}:
 
 \begin{align}
-	\frac{f(i_z)}{1-f(i_z)} = \left(\frac{a_{H^+}}{K^0_{a,MAA}}\right)^{\mp 1} \exp[-\beta q_{MAA} \psi(i_z)]
+	\frac{f(i_z)}{1-f(i_z)} = \left(\frac{a_{H^+}}{K^0_{a,MAA}}\right)^{- 1} \exp[-\beta q_{MAA} \psi(i_z)]
 \end{align}
 
-An\'alogamente para el adsorbato, ecuaci\'on \ref{eq:film:degree-protein}:
+An\'alogamente, para unidades del adsorbato, ecuaci\'on \ref{eq:film:degree-protein}:
 
 \begin{align}
 	\frac{f_\tau(i_z)}{1-f_\tau(i_z)} = \left(\frac{a_{H^+}}{K^0_{a,\tau}}\right)^{\mp 1} \exp[-\beta q_\tau \psi(i_z)]
@@ -59,9 +61,9 @@ En donde se redefine $P(\alpha)$:
 	\end{aligned}
 \end{align}
 
-\noindent en donde $\psi(i_z)$ y $\pi(i_z)$ son los valores discretos de la interacci\'on de estos potenciales. Adem\'as $\rho_{MAA}(\alpha, i_z)$ es la distribuci\'on discreta para una conformaci\'on $\alpha$ la cual son provistas por el tipo de modelo molecular a usar.
+\noindent en donde $\psi(i_z)$ y $\pi(i_z)$ son los valores discretos de estos potenciales de interacci\'on. Adem\'as $\rho_{MAA}(\alpha, i_z)$ es la distribuci\'on discreta para una conformaci\'on $\alpha$, la cual es provista por el modelo molecular a usar.
 
-La densidad discreta del adsorbato  se expresa:
+La densidad discreta del adsorbato  se expresa como:
 
 
 \begin{align}
@@ -74,11 +76,11 @@ La densidad discreta del adsorbato  se expresa:
 Finalmente discretizando la ecuaci\'on de Poisson, para el pontencial electrost\'atico, obtenemos:
 
 \begin{align}
-	\epsilon \frac{\psi(i_z +1) + \Psi(i_z -1) +2\psi(i_z)}{\delta^2} = \left< \rho_q(i_z)\right>
+	\epsilon \frac{\psi(i_z +1) + \Psi(i_z -1) -2\psi(i_z)}{\delta^2} = \left< \rho_q(i_z)\right>
 	\label{eq:film:discreto-poisson}
 \end{align}
 
-\noindent en esta expresi\'on se ha reemplazado la derivada segunda el potencial por su diferencia finita. Adem\'as la densidad discreta de carga se define:
+\noindent en esta expresi\'on se ha reemplazado la derivada segunda del potencial electrost\'atico por su diferencia finita. Adem\'as la densidad discreta de carga se define:
 
 
 \begin{align}
@@ -87,25 +89,24 @@ Finalmente discretizando la ecuaci\'on de Poisson, para el pontencial electrost\
 \end{align}
 
 
-As\'i como fueron definas las condiciones de contorno en la ecuaci\'on \ref{eq:film:contorno} es necesario redefinirla para el sistema discreto. Estas condiciones deben satisfacer el desvanecimiento del potencial electrost\'atico, $\psi(n_z) =0 $. Adem\'as se debe cumplir que la derivada del mismo entre la superficie de soporte y el film se anule.
-Para ello es necesario agregar una capa $i_z = 0$.
-Y resultando:
+As\'i como fueron definas las condiciones de contorno en la ecuaci\'on \ref{eq:film:contorno} es necesario redefinirlas para el sistema discreto. Estas condiciones deben satisfacer el desaparici\'on del potencial electrost\'atico en el bulk, lejos del film polim\'erico,  $\psi(n_z) =0 $. Adem\'as se debe cumplir que la derivada del potencial electrost\'atico entre la superficie de soporte y el film se anule.
+Para ello es necesario agregar una capa $i_z = 0$, resultando en:
 \begin{align}
 	\frac{\psi(1) - \psi(0)}{\delta} = 0
 \end{align}
 
 \noindent lo que implica que $\psi(0) =  \psi(1)$.
 
-En resumen dadas las condiciones del bulk de la soluci\'on, o condiciones de laboratorio, compuestas por el pH, concentraci\'on de sal y adsorbatos, temperatura, restar\'ia conocer las cantidades $\psi(i_z)$ y $\pi(i_z)$ para cada capa $i_z$. Variables que pueden ser obtenidas al resolver en cada capa las ecuaciones \ref{eq:film:discreto-constraint} y \ref{eq:film:discreto-poisson}.
+En resumen, dadas las condiciones del bulk de la soluci\'on, o condiciones de laboratorio, compuestas por el pH, concentraci\'on de sal y adsorbatos, temperatura, restar\'ia conocer las cantidades $\psi(i_z)$ y $\pi(i_z)$ para cada capa $i_z$. Cantidades que pueden ser obtenidas al resolver en cada capa las ecuaciones \ref{eq:film:discreto-constraint} y \ref{eq:film:discreto-poisson}.
 De esta forma el n\'umero de ecuaciones totales a resolver es $2n_z$ (dos por cada capa). el n\'umero de t\'erminos de cada ecuaci\'on es dependiente de la cantidad de especies involucradas con sus respectivas conformaciones. 
-Este sistema de ecuaciones es resuelto usando el m\'etodo de Newton-Krilov con Jacobiano libre, implementado en c\'odigos FORTRAN desarrollados en el grupo de trabajo.
+Este sistema de ecuaciones es resuelto usando un m\'etodo de Newton-Krilov donde el jacobiano es calculado num\'ericamente, implementado en c\'odigos FORTRAN desarrollados en el grupo de trabajo.
 
 
 
 \section{Teor\'ia molecular de nanogeles polim\'ericos: simetr\'ia esf\'erica}
 
 
-Para obtener resultados de la minimizaci\'on de la energ\'ia, las ecuaciones integro-diferenciales no lineales descritas en el cap\'itulo \ref{Chapter-esfericas} ( secciones \ref{sec:esf:tm} y \ref{sec:esf:bulk}) deben resolverse num\'ericamente. Para lograr esto, el volumen del sistema se divide en capas de espesor $\delta = $0.5. En esta divisi\'on se ha considerado una simetr\'ia radial 
+Para obtener resultados de la minimizaci\'on de la energ\'ia, las ecuaciones integro-diferenciales no lineales descritas en el cap\'itulo \ref{Chapter-esfericas} secciones \ref{sec:esf:tm} y \ref{sec:esf:bulk} deben resolverse num\'ericamente. Para lograr esto, el volumen del sistema se divide en coronas de espesor $\delta = $0.5. En esta divisi\'on se ha considerado una simetr\'ia radial 
 
 En las ecuaciones presentadas, las sumas sobre capas reemplazan las integrales a lo largo de la coordenada $r$, mientras que las diferencias finitas reemplazan las derivadas.
 
@@ -113,12 +114,12 @@ Reescribiendo, la restricci\'on de incomprensibilidad se expresa como:
 
 \begin{align}
 	\begin{aligned}
-		1=  {\sum_{\gamma}\rho_\gamma(i_r) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(i_r)\right>v_\lambda} + \sum_i{\left<\phi_i(i_r)\right>}}
+		1=  {\sum_{\gamma}\rho_\gamma(i_r) v_\gamma + \sum_\lambda{\left<\rho_{pro,\lambda}(i_r)\right>v_\lambda} + \sum_i{\left<\phi_i(i_r)\right>}} \quad \forall r
 		\label{eq:esf:pi-ir}
 	\end{aligned}
 \end{align}
 
-Lo que nos da una ecuaci\'on para cada capa $i_r$, en donde cada posici\'on es descrita por la coordenada $r_i = (i_r -0.5)\delta$. 
+Lo que nos da una ecuaci\'on para cada corona $i_r$, en donde cada posici\'on es descrita por la coordenada $r_i = (i_r -0.5)\delta$. 
 La variable $i_r$ toma valores de $1$ a $n_r$, en donde $n_r$ es un n\'umero suficientemente grande de capas para que se satisfagan las restricciones impuestas en nuestro sistema. Entre ellas
 $\rho_\gamma(n_r) \approx \rho_\gamma^b$, $\rho_{pro}(\theta,n_r) \approx \rho_{pro}^b(\theta)$ y $\psi(n_r) \approx \psi^b = 0$.
 
@@ -126,7 +127,7 @@ Con estas consideraciones podemos reescribir:
 
 
 \begin{align}
-	\frac{f(j_r)}{1-f(j_r)}= \left(\frac{a_{H^+}}{k^0_{a,j}}\right)^{\mp 1} e^{-\beta q_{MAA^-}\psi(i_r)}
+	\frac{f(j_r)}{1-f(j_r)}= \left(\frac{a_{H^+}}{k^0_{a,j}}\right)^{-1} e^{-\beta q_{MAA^-}\psi(i_r)}
 \end{align}
 
 
@@ -164,7 +165,7 @@ La probabilidad de las configuraciones de la red polim\'erica $P(\alpha)$:
 La ecuaci\'on de Poisson se escribe:
 
 \begin{align}
-	\epsilon \frac{\psi(i_r +1) -2 \psi(i_r) + \psi(i_r -1)}{\delta ^2} + 2\epsilon \frac{\psi(i_r +1) -\psi(i_r)}{(i_r -0.5)\delta ^2}= -\left<\rho_q(i_r)\right>
+	\epsilon \frac{\psi(i_r +1) -2 \psi(i_r) + \psi(i_r -1)}{\delta ^2} + 2\epsilon \frac{\psi(i_r +1) -\psi(i_r)}{(i_r -\frac{1}{2})\delta ^2}= -\left<\rho_q(i_r)\right>
 	\label{eq:esf:poisson-ir}
 \end{align}
 
@@ -176,10 +177,14 @@ La ecuaci\'on de Poisson se escribe:
 
 Nuestras condiciones de contorno se reescriben:
 \begin{align}
-	\frac{\psi(1) - \psi(0)}{\delta} = 0
+	\psi(n_r) = 0
 \end{align}
 
-Definiendo  el pH, concentraci\'on de sal y prote\'ina. temperatura, es posible calcular las variables restantes  $\pi(i_r)$ y $\psi(i_r)$ para cada capal $i_r$.
-Variables que pueden ser obtenidas al resolver en cada capa las ecuaciones \ref{eq:esf:pi-ir} y \ref{eq:esf:poisson-ir} y \ref{eq:film:discreto-poisson}.
+\begin{align}
+\psi(1) = \psi(0)
+\end{align}
+
+Definiendo  el pH, concentraci\'on de sal y prote\'ina, temperatura, es posible calcular las variables restantes  $\pi(i_r)$ y $\psi(i_r)$ para cada corona $i_r$.
+Cantidades que pueden ser obtenidas al resolver en cada capa las ecuaciones \ref{eq:esf:pi-ir} y \ref{eq:esf:poisson-ir}.
 De esta forma el n\'umero de ecuaciones totales a resolver es $2n_r$ (dos por cada capa). 
-Este sistema de ecuaciones es resuelto usando el m\'etodo de Newton-Krilov con Jacobiano libre, implementado en c\'odigos FORTRAN desarrollados en el grupo de trabajo.
+Este sistema de ecuaciones es resuelto usando el m\'etodo de Newton-Krilov en donde el jacobiano se aproxima num\'ericamente, implementado un c\'odigo FORTRAN desarrollado en el grupo de trabajo.
