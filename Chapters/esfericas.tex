@@ -54,7 +54,7 @@ Espec\'ificamente, investigamos el efecto de la distribuci\'on espacial de unida
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Teor\'ia Molecular}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Para el estudio de estos nanogeles se desarroll\'o un formalismo similar al descrito en el capitulo \ref{Chapter-film} para el estudio de films de hidrogeles polim\'ericos con respuesta a est\'imulo.
+Para el estudio de estos nanogeles se desarroll\'o un formalismo similar al descrito en el cap\'itulo \ref{Chapter-film} para el estudio de films de hidrogeles polim\'ericos con respuesta a est\'imulo.
 En este formalismo  buscamos minimizar una energ\'ia libre del sistema. Se incorpora una caracterizaci\'on molecular usando un modelo de grano grueso de las diversas especies qu\'imicas presentes.
 El sistema en estudio es un nanogel aislado en equilibrio con una soluci\'on acuosa que tiene una composici\'on de bulk definida externamente.
 Es decir, el pH, la concentraci\'on de sal y la concentraci\'on de prote\'ina son nuestras variables independientes.
@@ -158,7 +158,7 @@ $\mu^0_{MAA^-}$ y $\mu^0_{MAAH}$ son los potenciales qu\'imicos est\'andar de la
 
 
 %%%%%%%%%%%%%%%%%%%
-El equilibrio qu\'imico de las unidades prote\'icas titulables se considera en el siguiente t\'ermino del potencial termodin\'amico:
+El equilibrio qu\'imico de las unidades proteicas titulables se considera en el siguiente t\'ermino del potencial termodin\'amico:
 
 \begin{align}
 	\begin{aligned}
@@ -532,7 +532,7 @@ Sin embargo, en casos espec\'ificos, algunos residuos muestran un pKa diferente.
 	\small
 	\begin{tabular}{|lcc|lcc|}
 		\hline
-		grupo& $v$ ($\text{nm}^3$)& pka&  grupo& $v$ ($\text{nm}^3$)& pKa\\
+		grupo& $v$ ($\text{nm}^3$)& $pK_a$&  grupo& $v$ ($\text{nm}^3$)& $pK_a$\\
 		\hline
 		Ala & 0.067 & & Met& 0.124& \\
 		Arg & 0.148 & 12.5$ (+)$& Phe& 0.135& \\
@@ -546,7 +546,7 @@ Sin embargo, en casos espec\'ificos, algunos residuos muestran un pKa diferente.
 		GluB13$^\star$ & 0.109 & 2.20$ (-)$& Hem1& 0.172& 3.8 $(-)$\\ 
 		GluB21$^\star$ & 0.109 & 3.71 $(-)$& Hem2& 0.138& \\
 		Gly & 0.048 & & AH& 0.068& 9.5$(+)$\\
-		His & 0.118 & 6.6 $(+)$& MAA& 0.085& 4.65$(+)$\\ 
+		His & 0.118 & 6.6 $(+)$& MAA& 0.085& 4.65$(-)$\\ 
 		His18* & 0.118 & 2.4 $(+)$& VA& 0.085& \\
 		His26* & 0.118 & 2.9 $(+)$& H$_2$O& 0.033& \\
 		His33*& 0.118& 6.35 $(+)$& OH$^-$& 0.033&\\
@@ -555,7 +555,7 @@ Sin embargo, en casos espec\'ificos, algunos residuos muestran un pKa diferente.
 		Lys& 0.135& 10.5$ (+)$& Cl$^-$& 0.047&\\
 		\hline
 	\end{tabular}
-	\caption{Par\'ametros de las part\'iculas de  grano grueso(residuos de amino\'acidos, iones peque\~nos, mol\'eculas de solvente y segmentos polim\'ericos) considerados en el modelo molecular que describe a nuestro sistema.  se diferencias grupos en los cuales experimentalmente, se ha observado que estos residuos tienen un pKa que difiere significativamente del valor promedio \cite{grimsley2009summary}:  $Cys^\star$ representa un residuo de ciste\'ina en un puente di-sulfuro. Las histidinas con  n\'umero y  $^\ast$ se encuentran en la citocromo c, donde el n\'umero indica el orden en la secuencia en la prote\'ina. De manera similar, las glutaminas indicadas de la misma manera y con diferentes pKa ocurren en la secuencia de la insulina \cite{grimsley2009summary}. N-t y C-t denotan los grupos terminales de la secuencia, que a\~naden un pKa adicional a los primeros y \'ultimos segmentos, respectivamente. El complejo hemo, presente tanto en la citocromo c como en la mioglobina \cite{mirkin2008high,hubbard1990x}, se describe utilizando las unidades de grano grueso Hem1 y Hem2. El complejo contiene dos de cada una de estas unidades.}
+	\caption{Par\'ametros de las part\'iculas de  grano grueso(residuos de amino\'acidos, iones peque\~nos, mol\'eculas de solvente y segmentos polim\'ericos) considerados en el modelo molecular que describe a nuestro sistema.  se diferencias grupos en los cuales experimentalmente, se ha observado que estos residuos tienen un $pK_a$ que difiere significativamente del valor promedio \cite{grimsley2009summary}:  $Cys^\star$ representa un residuo de ciste\'ina en un puente di-sulfuro. Las histidinas con  n\'umero y  $^\ast$ se encuentran en el citocromo c, donde el n\'umero indica el orden en la secuencia en la prote\'ina. De manera similar, las glutaminas indicadas de la misma manera y con diferentes $pK_a$ ocurren en la secuencia de la insulina \cite{grimsley2009summary}. N-t y C-t denotan los grupos terminales de la secuencia, que a\~naden un $pK_a$ adicional a los primeros y \'ultimos segmentos, respectivamente. El complejo hemo, presente tanto en el citocromo c como en la mioglobina \cite{mirkin2008high,hubbard1990x}, se describe utilizando las unidades de grano grueso Hem1 y Hem2. El complejo contiene dos de cada una de estas unidades.}
 	\label{table:Coarse-grain} 
 \end{table}
 
@@ -679,7 +679,7 @@ La Figura \ref{fig:esf:MAA-vs-r-distribution} muestra la distribuci\'on radial d
 
 Como resultado, toda la distribuci\'on del pol\'imero tambi\'en se extiende, incluidas las unidades VA de carga neutra (ver Figura \ref{fig:esf:allr-distribution}). El mismo comportamiento tiene lugar para una funcionalizaci\'on central (Panel B), aunque por dise\~no, los segmentos MAA en esta red, ya sea que est\'en cargados o no, es m\'as probable que ocurran a distancias m\'as cortas del centro del nanogel en comparaci\'on con las otras estructuras. El desplazamiento de segmentos a valores m\'as altos de $r$ observado en los paneles A y B de la Figura \ref{fig:esf:MAA-vs-r-distribution} explica el aumento del tama\~no promedio del nanogel con pH observado en la Figura \ref{fig:esf:gel-charge-MAA-AH}A para las estructuras RF y CF.
 
-Por otro lado, la Figura \ref{fig:esf:MAA-vs-r-distribution}C muestra que la distribuci\'on superficial de segmentos de MAA se desplaza hacia el interior cuando la red se carga con el aumento de pH. Para reducir las repulsiones dentro de la red, las cadenas libres (de la superficie) de PMAA, que se asientan en la superficie del nanogel a un pH bajo, tambi\'en intentan ocupar el volumen dentro de la red cuando est\'an cargadas. Este desplazamiento hacia el interior de la distribuci\'on de pol\'imero (Figura \ref{fig:esf:allr-distribution}C) explica el comportamiento de compresi\'on del nanogel tipo SF con el aumento del pH observado en la Figura \ref{fig:esf:gel-charge-MAA-AH}A. N\'otese, sin embargo, que a pesar de este desplazamiento parcial hacia el interior de la red, la posici\'on m\'as probable de los segmentos MAA siempre es la interfaz pol\'imero-soluci\'on para soluciones de pH alto y bajo. Al empujar toda la estructura hacia el interior del nanogel, los segmentos de MAA quedan igualmente expuestos a la soluci\'on
+Por otro lado, la Figura \ref{fig:esf:MAA-vs-r-distribution}C muestra que la distribuci\'on superficial de segmentos de MAA se desplaza hacia el interior cuando la red se carga con el aumento de pH. Para reducir las repulsiones dentro de la red, las cadenas libres (de la superficie) de PMAA, que se asientan en la superficie del nanogel a un pH bajo, tambi\'en intentan ocupar el volumen dentro de la red cuando est\'an cargadas. Este desplazamiento hacia el interior de la distribuci\'on de pol\'imero (Figura \ref{fig:esf:allr-distribution}C) explica el comportamiento de compresi\'on del nanogel tipo SF con el aumento del pH observado en la Figura \ref{fig:esf:gel-charge-MAA-AH}A. N\'otese, sin embargo, que a pesar de este desplazamiento parcial hacia el interior de la red, la posici\'on m\'as probable de los segmentos MAA siempre es la interfaz pol\'imero-soluci\'on para soluciones de pH alto y bajo. Al empujar toda la estructura hacia el interior del nanogel, los segmentos de MAA quedan igualmente expuestos a la soluci\'on.
 
 
 
@@ -687,7 +687,7 @@ El comportamiento de los nanogeles compuestos por AH es an\'alogo al de las rede
 Los grupos AH se protonan y se cargan positivamente con la disminuci\'on del pH (ver figura \ref{fig:esf:gel-topologies}B).
 Para nanogeles de AH funcionalizados aleatoriamente y en su n\'ucleo, este aumento en la carga el\'ectrica con la disminuci\'on del pH provoca un desplazamiento hacia afuera de la distribuci\'on del segmento. Del mismo modo que se observ\'o para los nanogeles compuestos por MAA% (ver \cref*{fig:AHseg_si}A y B)
 , lo que explica la expansi\'on observada en la figura \ref{fig:esf:gel-charge-MAA-AH}B;
-mientras tanto, para la estructura tipo SF, el deswelling con la disminuci\'on del pH (figura \ref{fig:esf:gel-charge-MAA-AH}B) es consistente con un desplazamiento hacia adentro del pol\'imero %(ver \cref*{fig:AHseg_si}C) .
+mientras tanto, para la estructura tipo SF, el deswelling con la disminuci\'on del pH (figura \ref{fig:esf:gel-charge-MAA-AH}B) es consistente con un desplazamiento hacia adentro del pol\'imero. %(ver \cref*{fig:AHseg_si}C) .
 
 
 La figura \ref{fig:esf:allr-distribution} muestra la distribuci\'on de todos los segmentos que componen la red polim\'erica de los diferentes nanogeles. 
@@ -701,7 +701,7 @@ En la figura \ref{fig:esf:allr-distribution} se muestra la distribuci\'on de tod
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.30\textwidth]{Figures/graphs-gel2/allseg_SI.pdf}
-	\caption{Distribuci\'on radial de todos los segmentos que componen la estructura del nanogel a pH 3 y 7, y $10^{-3}M$ NaCl; cada panel corresponde a una funcionalizaci\'on  diferente de la red polim\'erica.}
+	\caption{Distribuci\'on radial de todos los segmentos que componen la estructura del nanogel a pH 3 y 7, y $10^{-3}M$ NaCl; cada panel corresponde a una funcionalizaci\'on  diferente de la red polim\'erica. Los nanogeles estan funcionalizados con MAA.}
 	\label{fig:esf:allr-distribution}
 \end{figure}
 
@@ -732,7 +732,7 @@ Para estos estudios, se considerar\'a un nanogel polim\'erico  con centro de mas
 \end{align}
 %
 en donde $\left<\rho(r)\right>$ y $\rho^b_{pro}=\lim\limits_{r\to \infty } \langle\rho(r)\rangle$ son respectivamente la densidad (en n\'umero) local y en el bulk de la prote\'ina.
-La integraci\'on de $\langle N(r)\rangle$ produce la \emph{adsorci\'on en exceso} (en adelante, simplemente la adsorci\'on) que cuantifica el n\'umero de prote\'inas incorporadas a la red polim\'erica,
+La integraci\'on de $\langle N(r)\rangle$ produce la \emph{adsorci\'on en exceso} (en adelante, simplemente la adsorci\'on) que cuantifica el n\'umero de prote\'inas incorporadas a la red polim\'erica.
 
 
 %
@@ -868,7 +868,7 @@ Las principales caracter\'isticas de este gr\'afico son cualitativamente similar
 Es decir, la insulina muestra una adsorci\'on no monot\'onica en funci\'on del pH de la soluci\'on.
 Adem\'as, observamos que la distribuci\'on central de los segmentos de AH captura m\'as insulina que las funcionalizaciones aleatorias o superficiales.
 Los nanogeles RF y SF muestran perfiles de adsorci\'on dependientes del pH relativamente similares.
-Finalmente, una mayor concentraci\'on de sal tiene un efecto cr\'itico en la magnitud de la adsorci\'on de insulina, que disminuye significativamente debido al aumento del apantallamiento de las atracciones electrost\'aticas entre la red y la prote\'ina por los iones m\'oviles
+Finalmente, una mayor concentraci\'on de sal tiene un efecto cr\'itico en la magnitud de la adsorci\'on de insulina, que disminuye significativamente debido al aumento del apantallamiento de las atracciones electrost\'aticas entre la red y la prote\'ina por los iones m\'oviles.
 %(las curvas de adsorción para $10^{-2}$,M de NaCl se pueden ver en la figura \ref{fig:esf:adsoprtion-AH-1d-2-insu_si}).
 
 La figura \ref{fig:esf:adsorption-vs-pH-insulin}A muestra que los nanogeles basados en AH son efectivos para encapsular insulina.
@@ -928,7 +928,7 @@ Se consideraron tres configuraciones diferentes, con los segmentos sensibles al 
 
 Se examin\'o el comportamiento de estos nanogeles en funci\'on del pH cuando no hay prote\'inas presentes en la soluci\'on.
 Los resultados muestran que, para los nanogeles basados en \'acido metacr\'ilico, tanto los estructurados con distribuci\'on al azar como los funcionalizados en el n\'ucleo se expanden con el aumento del pH, debido a la desprotonaci\'on y carga de los segmentos de \'acido metacr\'ilico, lo que conduce a repulsiones electrost\'aticas intra-red.
-Por otro lado, la red de \'acido metacr\'ilico funcionalizada en la superficie se comprimen a medida que las unidades titulables se cargan con el aumento del pH.
+Por otro lado, la red de \'acido metacr\'ilico funcionalizada en la superficie se comprime a medida que las unidades titulables se cargan con el aumento del pH.
 Este comportamiento contra-intuitivo se puede explicar al observar la distribuci\'on local de los segmentos que componen la red dentro de estas estructuras en diferentes condiciones.
 La reorganizaci\'on de la red del nanogel en respuesta a cambios en el pH depende de la funcionalizaci\'on espacial espec\'ifica.
 Se realiz\'o el mismo an\'alisis para los nanogeles basados en alilamina y se obtuvieron resultados an\'alogos, con la direcci\'on de los est\'imulos invertida;
