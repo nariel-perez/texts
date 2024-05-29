@@ -48,7 +48,7 @@
 	
 	Para obtener este potencial termodin\'amico, desarrollamos un modelo de dos fases. La primera fase est\'a ocupada por nuestro nanogel, cuya red polim\'erica es compuesta por poli(NIPAm-co-MAA) (P(NIPAm-MAA)). Esta fase se denota por $NG$. La fase nanogel se encuentra en contacto con una soluci\'on acuosa (fase 2, denotada por $s$), en la cual est\'an presentes las mol\'eculas de agua, hidronio e hidr\'oxido, as\'i como tambi\'en los iones de prevenientes de la sal del medio ($K^+$ y $Cl^-$).
 	En este modelo, las variables externas como la temperatura $T$ y la composici\'on de la soluci\'on, es decir, el pH y la concentraci\'on de sal son impuestas externamente. Bajo estas condiciones, un nanogel aislado asume un radio $R$ y, con ello, un volumen $V=\frac{4}{3}\pi R^3$.
-	El potencial termodin\'amico cuyo m\'inimo produce las condiciones de equilibrio del nanogel aisldo es un semi gran potencial.
+	El potencial termodin\'amico cuyo m\'inimo produce las condiciones de equilibrio del nanogel aislado es un semi gran potencial.
 	
 	
 	
@@ -190,7 +190,7 @@
 	\end{align}
 	
 	
-	\noindent para  $k=0,1,2$, los coeficientes son: $g_{00}= -12.947$, $g_{02}=0.044959\,$K$^{-1}$, $g_{10}= 17.920$, $g_{12}= -0.056944$\,K$^{-1}$, $g_{20}= 14.814$, $g_{22}= -0.051419$\,K$^{-1}$  y $g_{k1}\equiv 0$. \cite{afroze2000}
+	\noindent para  $k=0,1,2$, los coeficientes son: $g_{00}=$ -12.947, $g_{02}=$ 0.044959 K $^{-1}$, $g_{10}=$  17.920, $g_{12}=$ -0.056944 K$^{-1}$, $g_{20}=$ 14.814, $g_{22}=$ -0.051419 K$^{-1}$  y $g_{k1}\equiv 0$. \cite{afroze2000}
 	
 	
 	
@@ -275,7 +275,7 @@
 	Para resolver estas ecuaciones utilizamos un m\'etodo h\'ibrido de Powell sin jacobiano y un c\'odigo FORTRAN desarrollado en nuestro grupo de investigaci\'on.
 	En resumen, es posible calcular la variaci\'on de  $\Omega_{NG}(R)$ en funci\'on del radio del nanogel $R$, y encontrando su m\'inimo calcular el valor del radio \'optimo del nanogel para unas condiciones dadas (pH, temperatura, concentraci\'on de sal).
 	
-	Una descripci\'on m\'as detallada del c\'alculo del potencial termodin\'amico intramolecular puede encontrarse en la referencia  \cite{perez2021thermodynamic} y en el cap\'itulo \ref{Chapter-geles}
+	Una descripci\'on m\'as detallada del c\'alculo del potencial termodin\'amico intramolecular puede encontrarse en la referencia  \cite{perez2021thermodynamic} y en el cap\'itulo \ref{Chapter-geles}.
 	
 	\subsection{Energ\'ia intermolecular: Interacci\'on entre nanogeles.}\label{sec:mc:energia_intra}
 	
@@ -309,7 +309,7 @@
 	
 	\noindent en donde $v_i$ y $v_j$ es el radio de Poisson para cada nanogel.
 	El radio de Poisson es una medida de c\'omo se contrae un material cuando se estira. Se define como la raz\'on entre la deformaci\'on transversal y la longitudinal, y generalmente oscila entre 0.3 y 0.5. Un valor de $v$ de 0.5 indica que el pol\'imero no experimenta cambios de volumen al ser estirado \cite{bertoldi2010negative}.
-	Por otro lado el m\'odulo de  Young $Y$  es un par\'ametro  que mide la rigidez de un material y se define como la raz\'on entre el esfuerzo y la deformaci\'on longitudinal cuando el material est\'a sometido a una carga \cite{ku2011review}.
+	Por otro lado el m\'odulo de  Young, $Y$,  es un par\'ametro  que mide la rigidez de un material y se define como la raz\'on entre el esfuerzo y la deformaci\'on longitudinal cuando el material est\'a sometido a una carga \cite{ku2011review}.
 	La teor\'ia de escalado para geles polim\'ericos en buenos solventes \cite{de1979scaling,hu2012polymer} predice que este m\'odulo es proporcional a la temperatura, el tama\~no y composici\'on del gel (n\'umero de segmentos, densidad de entrecruzante,etc).
 	\begin{align}
 		Y \sim \frac{TN^*}{a^3}
@@ -349,7 +349,7 @@
 	\end{align}
 	
 	\noindent en d\'onde $r_{ij}$ es la distancia entre las part\'iculas con radios $a_i$ y $a_j$, respectivamente.
-	El potencial de Hertz solo act\'ua e casos de superposici\'on de part\'iculas ($r_{ij} \leq a_i +a_j$), mientras que Yukawa lo hace para interacciones a distacia ($r_{ij} > a_i + a_j$).
+	El potencial de Hertz solo act\'ua en casos de superposici\'on de part\'iculas ($r_{ij} \leq a_i +a_j$), mientras que Yukawa lo hace para interacciones a distacia ($r_{ij} > a_i + a_j$).
 	
 
 	
@@ -357,7 +357,7 @@
 	\subsection{Simulaciones Monte Carlo} \label{sec:mc:mc}
 	
 	El modelado de las soluciones se realiz\'o utilizando el m\'etodo de Monte Carlo. Este se basa en la evaluaci\'on de diferentes estados o configuraciones del sistema de trabajo a trav\'es de la generaci\'on de n\'umeros aleatorios. En este cap\'itulo, se trabaja con soluciones de nanogeles en las cuales un cambio de configuraci\'on consiste en el desplazamiento y cambio de tama\~no (un aumento o disminuci\'on  del radio) de una part\'icula seleccionada al azar. Este esquema de trabajo puede visualizarse en la figura \ref{fig:mc:pasos_mc} en la cual se muestra un paso del algoritmo propuesto. Una part\'icula, en el estado del sistema \textbf{A}, de todas las presentes en la soluci\'on es cambiada de posici\'on, y en este caso, se disminuye su tama\~no, obteni\'endose el estado \textbf{B} de la soluci\'on.
-	Los cambios de energ\'ia libre entre el estado A y B que se originan son:
+	Los cambios de energ\'ia libre entre el estado \textbf{A} y \textbf{B} que se originan son:
 		\begin{align}
 		\begin{aligned}
 			& \Delta \Omega_{intra} = \Omega(R_B) - \Omega(R_A) \\
@@ -397,7 +397,7 @@
 	%El c\'alculo de su potencial termodin\'amico y c\'omo puede usarse para estudiar las fluctuaciones en volumen de estos sistemas aislados.
 	La respuesta a est\'imulo se estudi\'o en detalle en la referencia \cite{perez2021thermodynamic}, donde adem\'as de observar los cambios en el pH, temperatura y concentraci\'on de sal, se estudia c\'omo son modificadas sus propiedades con la estructura del microgel, es decir la arquitectura de la red polim\'erica: distribuci\'on de los mon\'omeros que poseen respuesta a est\'imulo.
 	
-	El nanogel considerado en este estudio posee $N_{seg} = 5 \times 10^4$ segmentos con $n_{ch} = 500$ segmentos por cadena, las cuales tienen un 35\% de MAA en su estructura polim\'erica, $x_{MAA} = 0.35$. El 65\% restante est\'a compuesto por mon\'omeros de NIPAm.
+	El nanogel considerado en este estudio posee $N_{seg} = 5 \times 10^4$ segmentos con $n_{ch} = 500$ segmentos por cadena, las cuales tienen un 35\% de MAA en su estructura polim\'erica, $x_{MAA} =$ 0.35. El 65\% restante est\'a compuesto por mon\'omeros de NIPAm.
 	
 	En la figura \ref{fig:mc:energy-intra}, se observa el potencial termodin\'amico asociado a un nanogel aislado en funci\'on de su radio. Las curvas presentadas corresponden a tres concentraciones salinas. El pH del sistema es 4.65, el cual coincide con el pKa intr\'inseco del mon\'omero de MAA aislado. La temperatura para este sistema es de $25 ^\circ C$. De cada una de las curvas se obtiene el m\'inimo local/total de la energ\'ia intramolecular de un nanogel aislado. Este m\'inimo energ\'etico corresponde al radio \'optimo del nanogel aislado. Se puede notar que hay un aumento en el radio \'optimo del nanogel a medida que disminuye la concentraci\'on salina.
 	
@@ -407,12 +407,12 @@
 	\begin{figure}[!htb]
 		\centering
 		\includegraphics[width=0.45\textwidth]{Figures/graph-mc/interna.png}
-		\caption{Energ\'ia libre de un nanogel aislado en funci\'on del tama\~no del mismo. Las curvas corresponden a diferentes condiciones salinas. El pH de la soluci\'on es de 4.65 y la temperatura $25 ^\circ C$. $\Omega_{MG}$, esta en unidades convenientes, donde $V_0=\frac{4}{3}\pi R_0^3$ es el volumen de la part\'icula polim\'erica seca y $\beta = \frac{1}{k_B T}$}
+		\caption{Energ\'ia libre de un nanogel aislado en funci\'on del tama\~no del mismo. Las curvas corresponden a diferentes condiciones salinas. El pH de la soluci\'on es de 4.65 y la temperatura $25 ^\circ C$. $\Omega_{NG}$, esta en unidades convenientes, donde $V_0=\frac{4}{3}\pi R_0^3$ es el volumen de la part\'icula polim\'erica seca y $\beta = \frac{1}{k_B T}$}
 		\label{fig:mc:energy-intra}
 	\end{figure}
 	
 	
-	La figura \ref{fig:mc:energy-intra} nos muestra la energ\'ai libre interna de un nanogel aislado  para diferentes concentraciones salinas, el pH corresponde al pKa aparente del MAA, 4.65. 
+	La figura \ref{fig:mc:energy-intra} nos muestra la energ\'ia libre interna de un nanogel aislado  para diferentes concentraciones salinas, el pH corresponde al pKa aparente del MAA, 4.65. 
 	La energ\'ia libre es obtenida a trav\'es de un potencial termodin\'amico descrito en la secci\'on \ref{sub:mc:omega}, el mismo ser\'a usado para el calculo de las fluctuaciones en volumen que presente sistema: nanogel aislado.
 	\subsection{Fluctuaciones en volumen}\label{sec:mc:fluctuacion}
 	
@@ -499,12 +499,12 @@ La fluctuaci\'on de volumen es una variaci\'on del volumen de un sistema, son un
 	
 	
 	\subsection{Efecto de la concentraci\'on de nanogeles}
-	En la figura \ref{fig:mc:densidad-probabilidad} se muestra la densidad de probabilidad de tama\~nos (radios) de tres soluciones de nanogeles. Las condiciones del bulk de cada una de las soluciones corresponden a una temperatura de 25$^\circ$C y una concentraci\'on de $[KCl]$ de 1 mM, en cada panel se muestra un pH de estudio distinto, 3, 4.65, y 5 y 7 para los paneles A, B, C y D respectivamente. Estos valores son considerados por estar por debajo (pH 3) y por arriba (pH 5) del pKa intr\'inseco de los mon\'omeros de MAA (pH 4.65) y condiciones de neutralidad (pH 7), que son condiciones cercanas al pH fisiol\'ogico. Las diferentes curvas dentro de cada panel representan una concentraci\'on de nanogeles diferente, 0.10, 1.0 y 5.0 mg/ml.
+	En la figura \ref{fig:mc:densidad-probabilidad} se muestra la densidad de probabilidad de tama\~nos (radios) de tres soluciones de nanogeles. Las condiciones del bulk de cada una de las soluciones corresponden a una temperatura de 25$^\circ$C y una concentraci\'on de $KCl$ de 1 mM, en cada panel se muestra un pH de estudio distinto, 3, 4.65, y 5 y 7 para los paneles A, B, C y D respectivamente. Estos valores son considerados por estar por debajo (pH 3) y por arriba (pH 5) del pKa intr\'inseco de los mon\'omeros de MAA (pH 4.65) y condiciones de neutralidad (pH 7), que son condiciones cercanas al pH fisiol\'ogico. Las diferentes curvas dentro de cada panel representan una concentraci\'on de nanogeles diferente, 0.10, 1.0 y 5.0 mg/ml.
 	
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.99\linewidth]{Figures/graph-mc/sizes-phs.pdf}
-		\caption{Densidad de probabilidad de tama\~no para tres diferentes soluciones de nanogeles 0.1, 1.0 y 5.0 mg/ml. Cada panel corresponde a un pH de trabajo diferente: 3, 4.65, 5.50 y 7 para los paneles A, B, C, y D respectivamente. Otras condiciones de trabajo son: temperatura 25$^\circ$C y 1 mM  [KCl].}
+		\caption{Densidad de probabilidad de tama\~no para tres diferentes soluciones de nanogeles 0.1, 1.0 y 5.0 mg/ml. Cada panel corresponde a un pH de trabajo diferente: 3, 4.65, 5.50 y 7 para los paneles A, B, C, y D respectivamente. Otras condiciones de trabajo son: temperatura 25$^\circ$C y 1 mM  $KCl$.}
 		\label{fig:mc:densidad-probabilidad}
 	\end{figure}
 	
@@ -558,7 +558,7 @@ La fluctuaci\'on de volumen es una variaci\'on del volumen de un sistema, son un
 	
 	El radio medio de los nanogeles crece con el aumento del pH, independientemente de la concentraci\'on contemplada en nuestro estudio. Esto se explica por la  influencia del pH en la carga el\'ectrica de los segmentos de MAA: a un pH m\'as elevado, m\'as segmentos de MAA se desprotonan, incrementando la carga el\'ectrica negativa del nanogel. En el panel B (\ref{fig:mc:xvspH}B), se observa que el aumento del pH tambi\'en eleva el grado de disociaci\'on de los segmentos de MAA. Este crecimiento en tama\~no es resultado de las repulsiones electrost\'aticas en la red polim\'erica de los nanogeles, como reportaron \citet{perez2021thermodynamic}, donde se indica que estas repulsiones disminuyen al distanciar los centros de carga de la estructura del nanogel.
 	
-	El efecto de la concentraci\'on de los nanogeles se evidencia al examinar las distintas curvas en cada pane. El comportamiento de la soluci\'on m\'as diluida, 0.10 mg/ml, es similar al del sistema aislado en todo el rango de pH. La concentraci\'on intermedia, 1.0 mg/ml, presenta un comportamiento parecido, aunque muestra diferencias alrededor de pH 6. En contraste, la soluci\'on m\'as concentrada, 5.0 mg/ml, solo se asemeja al sistema aislado a pH inferiores a 5, en ausencia de carga el\'ectrica.
+	El efecto de la concentraci\'on de los nanogeles se evidencia al examinar las distintas curvas en cada panel. El comportamiento de la soluci\'on m\'as diluida, 0.10 mg/ml, es similar al del sistema aislado en todo el rango de pH. La concentraci\'on intermedia, 1.0 mg/ml, presenta un comportamiento parecido, aunque muestra diferencias alrededor de pH 6. En contraste, la soluci\'on m\'as concentrada, 5.0 mg/ml, solo se asemeja al sistema aislado a pH inferiores a 5, en ausencia de carga el\'ectrica.
 	
 	En t\'erminos generales, al aumentar la concentraci\'on de nanogeles, se observa una reducci\'on en la respuesta esperada de un sistema aislado, con una disminuci\'on de m\'as del 40\% para la soluci\'on m\'as concentrada. A diferencia de un sistema aislado, las soluciones de nanogeles presentan interacciones energ\'eticas intermoleculares, dadas por los potenciales de Hertz y Yukawa. Estas diferencias en tama\~no o grado de carga se explican por las interacciones entre ellos. Esto se hace evidente al observar la figura \ref{fig:mc:xvspH}C, en la cual se muestra c\'omo cambia la fracci\'on en volumen con respecto al cambio de pH, aumentando r\'apidamente con este y a\'un m\'as para concentraciones m\'as altas. Una fracci\'on en volumen m\'as alta implica una mayor interacci\'on entre las part\'iculas, con las part\'iculas ocupando una mayor fracci\'on en volumen de la soluci\'on, la proximidad entre ellas disminuye, lo que intensifica su interacci\'on.
 	
@@ -577,7 +577,7 @@ La fluctuaci\'on de volumen es una variaci\'on del volumen de un sistema, son un
 		\label{fig:mc:reentrante}
 	\end{figure}
 	
-En la figura \ref{fig:mc:reentrante} se puede observar que a medida que aumenta la concentraci\'on de nanogeles, menor es la respuesta de estas part\'iculas a cambios en la concentraci\'on salina. Esto \'ultimo se evidencia mejor en la figura \ref{fig:mc:reentrante}B a un pH de 7. En estas condiciones, el tama\~no y grado de carga de estas part\'iculas est\'an bien diferenciados, figura \ref{fig:mc:xvspH}A y B. La diferencia se puede atribuir al costo energ\'etico de las interacciones entre nanogeles, el cual es compensado con un menor tama\~no de los mismos. Una mayor vecindad de nanogeles, (ver figura \ref{fig:mc:rdf}), hace que interact\'uen a\'un m\'as entre ellos, aumentando la energ\'ia intermolecular del sistema. Al igual que en la figura \ref{fig:mc:xvspH}, es la energ\'ia libre interna de los nanogeles la que aumenta como consecuencia de poder reducir la energ\'ia atribuida a las interacciones que nos explican losgit p potenciales de Hertz y Yukawa. A medida que se diluye lo suficiente la soluci\'on, nos acercamos al comportamiento ideal, es decir, un nanogel aislado donde las part\'iculas pueden aumentar su tama\~no para reducir su energ\'ia libre interna sin mayor costo en las interacciones intermoleculares.
+En la figura \ref{fig:mc:reentrante} se puede observar que a medida que aumenta la concentraci\'on de nanogeles, menor es la respuesta de estas part\'iculas a cambios en la concentraci\'on salina. Esto \'ultimo se evidencia mejor en la figura \ref{fig:mc:reentrante}B a un pH de 7. En estas condiciones, el tama\~no y grado de carga de estas part\'iculas est\'an bien diferenciados, figura \ref{fig:mc:xvspH}A y B. La diferencia se puede atribuir al costo energ\'etico de las interacciones entre nanogeles, el cual es compensado con un menor tama\~no de los mismos. Una mayor vecindad de nanogeles, (ver figura \ref{fig:mc:rdf}), hace que interact\'uen a\'un m\'as entre ellos, aumentando la energ\'ia intermolecular del sistema. Al igual que en la figura \ref{fig:mc:xvspH}, es la energ\'ia libre interna de los nanogeles la que aumenta como consecuencia de poder reducir la energ\'ia atribuida a las interacciones que nos explican los potenciales de Hertz y Yukawa. A medida que se diluye lo suficiente la soluci\'on, nos acercamos al comportamiento ideal, es decir, un nanogel aislado donde las part\'iculas pueden aumentar su tama\~no para reducir su energ\'ia libre interna sin mayor costo en las interacciones intermoleculares.
 	
 	
 	\textbf{Respuesta a cambios de temperatura}
@@ -598,7 +598,7 @@ Por otro lado, en el panel B se considera un pH de 7, a diferencia del panel A, 
 
 En ambos paneles se puede apreciar c\'omo, superando cierta temperatura, los nanogeles colapsan. Esto es causado por el efecto de la temperatura sobre el PNIPAm que conforma la estructura de las part\'iculas estudiadas. Esta caracter\'istica es propia de los pol\'imeros de PNIPAm \cite{perez2021thermodynamic}, los cuales poseen una temperatura cr\'itica m\'inima de soluci\'on, que siendo superada aumenta la hidrofobicidad del PNIPAm observ\'andose un colapso en la estructura de la que forman parte. Se puede observar que una vez superada esta temperatura cr\'itica todas las concentraciones contempladas tienden al mismo estado colapsad. El radio, de aproximadamente 12 nm, que adquieren las part\'iculas es tan peque\~no que el efecto de las interacciones entre pares desaparece, predominando fuertemente solo la energ\'ia libre intramolecular de los nanogeles.
 
-En la figura \ref{fig:mc:temperatura-r}A vemos que a condiciones de pH 4.65 no hay diferencias apreciables entre las distintas concentraciones de nanogeles y una part\'icula aislada. La diferencia en la temperatura de transici\'on de estos sistemas es insinificante. Bajo estas condiciones, pH 4.65, no hay diferencias apreciables para las tres soluciones consideradas. (v\'ease las figuras \ref{fig:mc:xvspH}A y B). El estado de carga el\'ectrica de los nanogeles en estas condiciones es el mismo. En este sentido, la fuerza impulsora, es decir, la hidrofobicidad del PNIPAm, no tiene ning\'un impedimento para llegar al deswelling del sistema y al disminuir el tama\~no de cada part\'icu, y en consecuencia reduciendo las interacciones entre nanogeles. Estos resultados son consistentes con la existencia de un solo m\'inimo en la energ\'ia libre de los nanogeles, ver figura \ref{fig:mc:dfs_energy}A. Es decir, hay una predominancia en el estado de la estructura colapsada de las part\'iculas.
+En la figura \ref{fig:mc:temperatura-r}A vemos que a condiciones de pH 4.65 no hay diferencias apreciables entre las distintas concentraciones de nanogeles y una part\'icula aislada. La diferencia en la temperatura de transici\'on de estos sistemas es insinificante. Bajo estas condiciones, pH 4.65, no hay diferencias apreciables para las tres soluciones consideradas. (v\'ease las figuras \ref{fig:mc:xvspH}A y B). El estado de carga el\'ectrica de los nanogeles en estas condiciones es el mismo. En este sentido, la fuerza impulsora, es decir, la hidrofobicidad del PNIPAm, no tiene ning\'un impedimento para llegar al deswelling del sistema y al disminuir el tama\~no de cada part\'icula, y en consecuencia reduciendo las interacciones entre nanogeles. Estos resultados son consistentes con la existencia de un solo m\'inimo en la energ\'ia libre de los nanogeles, ver figura \ref{fig:mc:dfs_energy}A. Es decir, hay una predominancia en el estado de la estructura colapsada de las part\'iculas.
 	
 	\begin{figure}[!htb]
 		\centering
