@@ -346,7 +346,7 @@ Para las especies libres, su densidad localizada se expresa como:
 
 
 \begin{align}
-	\rho_\gamma(r)v_w = a_\gamma \exp{\left(-\beta \psi(r)q_\gamma\right)} \exp{\left(-\beta\pi(r) v_w\right)}
+	\rho_\gamma(r)v_w = a_\gamma \exp{\left(-\beta \psi(r)q_\gamma\right)} \exp{\left(-\beta\pi(r) v_\gamma\right)}
 		\label{eq:esf:rho-libres}
 \end{align}
 
@@ -417,7 +417,7 @@ La variaci\'on de $\Omega_{NG}$ con respecto al potencial electrost\'atico da lu
 Considerando la simetr\'ia de nuestro problema:
 
 \begin{align}
-	\epsilon ~ \frac{1}{r^2} \frac{\partial}{\partial r}\left(\frac{\partial \Psi(r)}{\partial r}\right) = -\left<\rho_q(r)\right>
+	\epsilon ~ \frac{1}{r^2} \frac{\partial}{\partial r}\left(\frac{\partial \psi(r)}{\partial r}\right) = -\left<\rho_q(r)\right>
 	\label{eq:esf:poisson}
 \end{align}
 
@@ -427,14 +427,13 @@ Otra restricci\'on f\'isica a tener en cuenta en este punto es la electro-neutra
 	\int_0^\infty{drG(r) \left<\rho_q(r)\right>} = 0
 \end{align}
 
-Esta restricci\'on se satisface imponiendo las condiciones de contorno adecuadas al resolver la ecuaci\'on \ref{eq:esf:poisson}. Estas condiciones de contorno son:
+Esta restricci\'on se satisface imponiendo las condiciones de contorno adecuadas al resolver la ecuaci\'on \ref{eq:esf:poisson}. Estas condiciones de contorno son: 
 \begin{align}
-	%\begin{aligned}
-	&  \lim_{r\to\infty}\psi(r) = 0 \\
+	&  \lim_{r\to\infty}\psi(r) = 0 \label{eq:esf:contorno1} \\
 	&  \left.\frac{d\psi(r)}{dr}\right|_{r=0} = 0
 	\label{eq:esf:contorno}
 	% \end{aligned}
-	\end{align}
+	\end{align}x
 	
 
 Ahora todas las funciones que componen el potencial termodin\'amico $\Omega_{NG}$ se han expresado en t\'erminos del potencial electrost\'atico local $\psi(r)$, la presi\'on osm\'otica dependiente de la posici\'on $\pi(r)$ y algunas cantidades de entrada que incluyen las actividades de las especies libres.
@@ -458,14 +457,14 @@ La soluci\'on bulk  puede considerarse como el l\'imite $r \rightarrow \infty$:
 	\end{aligned}
 \end{align}
 
-Adem\'as, las condiciones de contorno expresadas en la ecuaci\'on \ref{eq:esf:contorno} implican que:
+Adem\'as, las condiciones de contorno expresadas en la ecuaci\'on \ref{eq:esf:contorno1} implican que:
 \begin{align}
 	\psi^b = \psi(r \rightarrow \infty) = 0
 \end{align}
 
 En este contexto, para las especies libres (excluyendo la prote\'ina):
 \begin{align}
-	\rho_\gamma^b v_w = a_\gamma e^{-\beta\pi^bv_w}
+	\rho_\gamma^b v_w = a_\gamma e^{-\beta\pi^bv_\gamma}
 	\label{eq:esf:free-bulk}
 \end{align}
 
