@@ -71,7 +71,7 @@
 %% documento. Leer la documentaci'on de "geometry" para m'as informaci'on.
 
 %\geometry{top=40mm,bottom=33mm,inner=40mm,outer=25mm}
-
+\geometry{top=30mm, bottom=30mm, inner=40mm, outer=30mm}
 %% El siguiente comando agrega ligas activas en el documento para las
 %% referencias cruzadas y citas bibliogr'aficas. Tiene que ser *la 'ultima*
 %% instrucci'on antes de \begin{document}.
@@ -91,12 +91,27 @@
 %% un nuevo archivo e incluirlo aqu'i.
 %% Para m'as detalles y un ejemplo mirar el archivo "gracias.tex".
 \include{Chapters/formal}
+
+
+\clearpage
+\section*{}
+%\addcontentsline{toc}{section}{New Section} % Add this section to the table of contents
+\clearpage
+
+
+
 \include{gracias}
+
+\clearpage
+\section*{}
+%\addcontentsline{toc}{section}{New Section} % Add this section to the table of contents
+\clearpage
 
 \include{Chapters/navegante}
 %% # 'Indices y listas de contenido #
 %% Quitar los comentarios en las lineas siguientes para obtener listas de
 %% figuras y cuadros/tablas.
+
 \tableofcontents
 \clearpage
 \section*{}
@@ -118,6 +133,10 @@
 \include{Chapters/films}
 \include{Chapters/geles}
 \include{Chapters/esfericas}
+\clearpage
+\section*{}
+%\addcontentsline{toc}{section}{New Section} % Add this section to the table of contents
+\clearpage
 \include{Chapters/montecarlo}
 \include{Chapters/conclusiones}
 %\include{conclu}
@@ -130,6 +149,12 @@
 \appendix
 %\include{Apendices/teoria_molecular}
 \include{Apendices/configuraciones}
+
+\clearpage
+\section*{}
+%\addcontentsline{toc}{section}{New Section} % Add this section to the table of contents
+\clearpage
+
 \include{Apendices/numericas}
 %\include{apendiceC}
 
